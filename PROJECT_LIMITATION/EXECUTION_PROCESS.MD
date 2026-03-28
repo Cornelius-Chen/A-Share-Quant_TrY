@@ -1,0 +1,1 @@
+## signal -> constitution_rules -> pretrade_check -> risk_limits -> execution ##

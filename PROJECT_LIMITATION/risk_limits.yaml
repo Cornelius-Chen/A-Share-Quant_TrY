@@ -1,0 +1,222 @@
+risk_profile:
+  id: default_a_share_strict
+  market: CN_A_SHARE
+  environment: small_live
+  version: 1.0.0
+
+account_limits:
+  max_gross_exposure: 0.95
+  max_net_exposure: 0.95
+  max_cash_usage: 0.95
+  max_single_day_turnover: 1.50
+  max_total_open_orders: 100
+  max_total_open_positions: 20
+
+loss_limits:
+  max_daily_loss_pct: 0.02
+  max_daily_loss_amount: null
+  max_weekly_loss_pct: 0.05
+  max_monthly_loss_pct: 0.10
+  max_intraday_drawdown_pct: 0.025
+  max_strategy_drawdown_pct: 0.08
+  max_account_drawdown_pct: 0.12
+
+threshold_actions:
+  warning_threshold_1:
+    pnl_loss_pct: 0.010
+    actions:
+      - alert_only
+      - reduce_order_size
+  warning_threshold_2:
+    pnl_loss_pct: 0.015
+    actions:
+      - block_new_positions
+      - block_adds
+  hard_stop_threshold:
+    pnl_loss_pct: 0.020
+    actions:
+      - stop_all_new_orders
+      - strategy_halt
+      - manual_review_required
+
+strategy_limits:
+  max_strategy_gross_exposure: 0.50
+  max_strategy_net_exposure: 0.50
+  max_strategy_position_count: 10
+  max_strategy_turnover_per_day: 0.80
+  max_strategy_add_times_per_symbol: 2
+  max_strategy_holding_concentration: 0.25
+
+strategy_performance_limits:
+  max_strategy_daily_loss_pct: 0.015
+  max_strategy_consecutive_loss_days: 5
+  max_strategy_intraday_drawdown_pct: 0.020
+  max_live_vs_backtest_slippage_multiplier: 2.0
+  max_live_tracking_error: 0.03
+
+symbol_limits:
+  max_position_pct_of_account: 0.10
+  max_position_pct_of_strategy: 0.20
+  max_position_value: null
+  max_add_count_per_day: 2
+  max_order_count_per_symbol_per_day: 20
+
+liquidity_limits:
+  max_pct_of_adv_5d: 0.05
+  max_pct_of_adv_20d: 0.03
+  max_pct_of_intraday_volume: 0.10
+  min_turnover_threshold: 50000000
+  min_market_cap_threshold: 3000000000
+  min_price_threshold: 3.0
+
+volatility_limits:
+  max_gap_up_allowed_for_new_buy: 0.07
+  max_gap_down_allowed_for_new_buy: 0.05
+  max_intraday_volatility_allowed: 0.12
+
+special_state_limits:
+  block_if_limit_up: true
+  block_if_limit_down: true
+  block_if_near_limit_up: true
+  block_if_near_limit_down: false
+  near_limit_threshold: 0.005
+  block_if_suspended: true
+  block_if_st: true
+  block_if_new_listing_within_n_days: 60
+  block_if_no_reliable_liquidity: true
+
+order_limits:
+  max_order_value: 300000
+  max_order_qty: null
+  min_order_value: 5000
+  max_child_orders_per_parent: 5
+  max_retries_per_order: 2
+  max_price_deviation_from_reference_bps: 30
+  max_passive_wait_time_sec: 120
+  max_order_age_before_cancel_sec: 180
+
+price_protection:
+  reference_price_type: mid
+  max_buy_price_slippage_bps: 20
+  max_sell_price_slippage_bps: 20
+  max_auction_price_deviation_bps: 50
+
+throttle_limits:
+  max_orders_per_second_per_account: 5
+  max_orders_per_second_per_strategy: 3
+  max_orders_per_minute_per_symbol: 10
+  max_cancels_per_minute_per_symbol: 5
+  max_messages_per_day_per_account: 2000
+  max_messages_per_day_per_strategy: 1000
+  max_cancel_ratio: 0.30
+  max_replace_ratio: 0.20
+
+fail_safe:
+  reject_if_duplicate_client_order_id: true
+  reject_if_clock_skew_detected: true
+  reject_if_market_data_stale: true
+  reject_if_position_snapshot_stale: true
+  reject_if_risk_engine_unavailable: true
+  reject_if_broker_ack_timeout: true
+  broker_ack_timeout_ms: 3000
+  market_data_stale_ms: 3000
+  position_snapshot_stale_sec: 10
+
+auction_limits:
+  opening_auction:
+    enabled: true
+    max_order_count: 5
+    max_order_value: 200000
+    max_capital_usage_pct: 0.15
+    cancel_window_rule_checked: true
+  closing_auction:
+    enabled: true
+    max_order_count: 5
+    max_order_value: 200000
+    max_capital_usage_pct: 0.20
+    require_manual_approval_for_large_close_orders: true
+    large_close_order_value: 150000
+
+late_session_limits:
+  max_last_30m_turnover_pct: 0.40
+  max_last_10m_turnover_pct: 0.20
+  max_last_3m_turnover_pct: 0.10
+  prohibit_aggressive_chasing_near_close: true
+
+hft_guardrails:
+  internal_max_messages_per_second: 20
+  internal_max_messages_per_day: 5000
+  internal_max_cancel_ratio: 0.30
+  internal_max_burst_count: 20
+  internal_max_burst_duration_seconds: 2
+
+anomaly_detection:
+  excessive_cancel_burst: true
+  repeated_submit_cancel_pattern: true
+  abnormal_symbol_order_concentration: true
+  abnormal_short_window_message_spike: true
+  abnormal_price_impact_after_our_orders: true
+  order_loop_detection: true
+
+anomaly_actions:
+  - enter_throttle_mode
+  - block_new_parent_orders
+  - freeze_strategy
+  - escalate_manual_review
+
+data_health:
+  max_market_data_delay_ms: 1000
+  max_snapshot_age_ms: 1000
+  max_factor_snapshot_age_sec: 60
+  max_position_snapshot_age_sec: 10
+  require_dual_source_check_for_critical_fields: false
+
+system_health:
+  max_cpu_usage_pct: 85
+  max_memory_usage_pct: 85
+  max_queue_backlog: 1000
+  max_order_ack_latency_ms: 3000
+  max_broker_roundtrip_latency_ms: 5000
+  max_log_drop_count: 0
+  clock_sync_required: true
+
+system_actions:
+  - degrade_to_safe_mode
+  - stop_new_orders
+  - keep_only_reduce_orders
+  - switch_manual
+
+blacklists:
+  st_symbols_blocked: true
+  suspended_symbols_blocked: true
+  low_liquidity_symbols_blocked: true
+  manual_blacklist: []
+
+whitelists:
+  approved_symbols_only: false
+  whitelist_source: null
+  whitelist_refresh_rule: null
+
+manual_controls:
+  allow_pause_strategy: true
+  allow_disable_account: true
+  allow_cancel_all_open_orders: true
+  allow_reduce_only_mode: true
+  allow_disable_symbol: true
+  allow_emergency_flatten_if_policy_allows: true
+
+audit:
+  required_event_fields:
+    - risk_check_timestamp
+    - blocked_order_reason
+    - threshold_value
+    - observed_value
+    - action_taken
+    - operator_if_manual
+    - recovery_timestamp
+
+default_policy:
+  unset_numeric_limit_behavior: reject
+  unknown_symbol_behavior: reject
+  unknown_strategy_behavior: reject
+  risk_engine_unavailable_behavior: reject_new_orders

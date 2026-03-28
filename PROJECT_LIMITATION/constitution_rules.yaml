@@ -1,0 +1,120 @@
+project:
+  name: a_share_quant
+  market: CN_A_SHARE
+  version: 1.0.0
+  constitution_mode: strict
+
+principles:
+  compliance_first: true
+  risk_first: true
+  traceability_required: true
+  conservative_execution: true
+  a_share_native_design: true
+
+market_constraints:
+  stock_t_plus_one: true
+  assume_stock_t0: false
+  etf_stock_t_plus_one_default: true
+  limit_up_down_model_required: true
+  auction_rules_required: true
+  queue_priority_model_required: true
+  shorting_as_core_assumption_allowed: false
+
+forbidden_behaviors:
+  rely_on_frequent_submit_cancel: true
+  rely_on_order_book_spoofing: true
+  rely_on_short_term_price_manipulation: true
+  rely_on_intraday_stock_round_trip: true
+  rely_on_near_hft_threshold_message_rate: true
+  rely_on_abnormal_trading_pattern: true
+
+strategy_boundary:
+  allowed:
+    - daily_factor
+    - weekly_factor
+    - multi_factor_stock_selection
+    - industry_rotation
+    - etf_rotation
+    - event_driven
+    - medium_short_trend
+    - index_enhancement
+    - risk_budgeting
+  cautious:
+    - opening_auction
+    - closing_auction
+    - last_30m_rebalance
+    - convertible_bond_short_cycle
+    - t0_instruments_only
+  prohibited:
+    - stock_hft_market_making
+    - quote_stuffing
+    - cancel_storm_based_alpha
+    - stock_intraday_round_trip
+    - spoofing_like_execution
+    - short_sell_dependent_core_framework
+
+backtest_requirements:
+  require_commission: true
+  require_stamp_tax: true
+  require_slippage: true
+  require_market_impact: true
+  require_liquidity_constraint: true
+  require_limit_up_down_unfillable_model: true
+  require_auction_uncertainty_model: true
+  require_suspension_model: true
+  require_survivorship_bias_control: true
+  require_lookahead_bias_control: true
+  require_conservative_fill_assumption: true
+
+data_requirements:
+  require_registered_data_source: true
+  require_timestamp_validation: true
+  require_adjustment_rule_validation: true
+  require_missing_value_policy: true
+  require_outlier_policy: true
+  require_history_constituent_reconstruction: true
+  require_live_backtest_field_consistency: true
+
+execution_requirements:
+  kill_switch_required: true
+  manual_takeover_required: true
+  throttle_required: true
+  duplicate_order_protection_required: true
+  stale_data_reject_required: true
+  clock_sync_required: true
+  trading_calendar_check_required: true
+  broker_ack_timeout_protection_required: true
+
+traceability:
+  required_order_fields:
+    - strategy_id
+    - model_version
+    - feature_snapshot_id
+    - risk_check_id
+    - execution_session_id
+  required_logs:
+    - market_data_timestamp
+    - signal_timestamp
+    - risk_check_timestamp
+    - order_submit_timestamp
+    - broker_ack_timestamp
+    - fill_timestamp
+    - cancel_timestamp
+    - reject_reason
+    - software_version
+
+pretrade_gates:
+  require_constitution_pass: true
+  require_data_validation_pass: true
+  require_backtest_review_pass: true
+  require_risk_review_pass: true
+  require_paper_trading_pass: true
+  require_small_live_before_full_live: true
+
+failure_policy:
+  on_missing_required_log: reject_deployment
+  on_missing_risk_engine: reject_new_orders
+  on_missing_data_validation: reject_deployment
+  on_unknown_strategy_type: reject_deployment
+  on_stale_market_data: reject_new_orders
+  on_position_snapshot_stale: reject_new_orders
