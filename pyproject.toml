@@ -16,6 +16,9 @@ dependencies = [
 dev = [
   "pytest>=8.2",
 ]
+free-data = [
+  "akshare>=1.18.40",
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

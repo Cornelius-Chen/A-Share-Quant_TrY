@@ -1,0 +1,330 @@
+{
+  "source_report": "reports\\20260329T050713Z_259349ba_comparison.json",
+  "candidate_overview": [
+    {
+      "candidate_name": "balanced_compromise",
+      "composite_rank_score": 209.416666,
+      "mean_total_return": 0.00086,
+      "mean_mainline_capture_ratio": 0.203516,
+      "mean_max_drawdown": 0.005519,
+      "positive_total_return_rows": 13,
+      "best_total_return_slice_count": 5,
+      "best_capture_slice_count": 1,
+      "lowest_drawdown_slice_count": 3,
+      "best_total_return_datasets": [
+        "baseline_research_v1",
+        "market_research_v0"
+      ],
+      "best_capture_datasets": [
+        "baseline_research_v1"
+      ],
+      "lowest_drawdown_datasets": [
+        "baseline_research_v1",
+        "market_research_v0",
+        "theme_research_v2"
+      ]
+    },
+    {
+      "candidate_name": "baseline_expansion_branch",
+      "composite_rank_score": 214.638889,
+      "mean_total_return": 0.000114,
+      "mean_mainline_capture_ratio": 0.229548,
+      "mean_max_drawdown": 0.006341,
+      "positive_total_return_rows": 14,
+      "best_total_return_slice_count": 4,
+      "best_capture_slice_count": 6,
+      "lowest_drawdown_slice_count": 1,
+      "best_total_return_datasets": [
+        "baseline_research_v1",
+        "theme_research_v2"
+      ],
+      "best_capture_datasets": [
+        "baseline_research_v1",
+        "market_research_v0",
+        "theme_research_v2"
+      ],
+      "lowest_drawdown_datasets": [
+        "baseline_research_v1"
+      ]
+    },
+    {
+      "candidate_name": "shared_default",
+      "composite_rank_score": 219.361111,
+      "mean_total_return": 0.000234,
+      "mean_mainline_capture_ratio": 0.215129,
+      "mean_max_drawdown": 0.005976,
+      "positive_total_return_rows": 13,
+      "best_total_return_slice_count": 0,
+      "best_capture_slice_count": 3,
+      "lowest_drawdown_slice_count": 0,
+      "best_total_return_datasets": [],
+      "best_capture_datasets": [
+        "baseline_research_v1",
+        "theme_research_v2"
+      ],
+      "lowest_drawdown_datasets": []
+    },
+    {
+      "candidate_name": "theme_strict_quality_branch",
+      "composite_rank_score": 226.583333,
+      "mean_total_return": -0.000459,
+      "mean_mainline_capture_ratio": 0.163162,
+      "mean_max_drawdown": 0.005803,
+      "positive_total_return_rows": 13,
+      "best_total_return_slice_count": 3,
+      "best_capture_slice_count": 2,
+      "lowest_drawdown_slice_count": 8,
+      "best_total_return_datasets": [
+        "market_research_v0",
+        "theme_research_v2"
+      ],
+      "best_capture_datasets": [
+        "market_research_v0",
+        "theme_research_v2"
+      ],
+      "lowest_drawdown_datasets": [
+        "baseline_research_v1",
+        "market_research_v0",
+        "theme_research_v2"
+      ]
+    }
+  ],
+  "environment_winners": [
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "best_total_return": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_a"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_b"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "best_total_return": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_b"
+      },
+      "best_capture": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_b"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "best_total_return": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_b"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_a"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q4",
+      "slice_start": "2024-10-01",
+      "slice_end": "2024-12-31",
+      "best_total_return": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_a"
+      },
+      "best_capture": {
+        "candidate_name": "shared_default",
+        "strategy_name": "mainline_trend_b"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "best_total_return": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_a"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "best_total_return": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_b"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "best_total_return": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_b"
+      },
+      "best_capture": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_b"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "slice_start": "2024-10-01",
+      "slice_end": "2024-12-31",
+      "best_total_return": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "theme_research_v2",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "best_total_return": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "best_capture": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "theme_research_v2",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "best_total_return": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      },
+      "best_capture": {
+        "candidate_name": "shared_default",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "balanced_compromise",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "theme_research_v2",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "best_total_return": {
+        "candidate_name": "baseline_expansion_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "best_capture": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    },
+    {
+      "dataset_name": "theme_research_v2",
+      "slice_name": "2024_q4",
+      "slice_start": "2024-10-01",
+      "slice_end": "2024-12-31",
+      "best_total_return": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_b"
+      },
+      "best_capture": {
+        "candidate_name": "shared_default",
+        "strategy_name": "mainline_trend_c"
+      },
+      "lowest_drawdown": {
+        "candidate_name": "theme_strict_quality_branch",
+        "strategy_name": "mainline_trend_a"
+      }
+    }
+  ],
+  "boundary_summary": {
+    "slice_count": 12,
+    "most_stable_candidate": {
+      "candidate_name": "balanced_compromise",
+      "composite_rank_score": 209.416666
+    },
+    "capture_specialist": {
+      "candidate_name": "baseline_expansion_branch",
+      "best_capture_slice_count": 6
+    },
+    "drawdown_specialist": {
+      "candidate_name": "theme_strict_quality_branch",
+      "lowest_drawdown_slice_count": 8
+    },
+    "interpretation": [
+      "Most stable candidate is the best broad shared-default contender, not necessarily the specialist winner in every environment.",
+      "Capture specialist is the candidate that wins the most slice-level capture environments.",
+      "Drawdown specialist is the candidate that wins the most slice-level lowest-drawdown environments."
+    ]
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "summary": {
+    "symbol": "300750",
+    "strategy_count": 3,
+    "missed_buy_date": "2024-02-05",
+    "position_gap_date": "2024-02-06",
+    "complete_chain_count": 3,
+    "complete_chain_ratio": 1.0,
+    "incumbent_missed_cycle_total_pnl": 1969.137,
+    "mean_incumbent_missed_cycle_pnl": 656.379,
+    "dominant_rule": "Permission-loss only matters when it suppresses a buy and propagates into a later position-gap exit on the incumbent side."
+  },
+  "chain_rows": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "missed_buy_date": "2024-02-05",
+      "position_gap_date": "2024-02-06",
+      "missed_buy_triggered": true,
+      "position_gap_triggered": true,
+      "complete_chain": true,
+      "missed_buy_split": {
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": false,
+        "incumbent_approved_sector_id": "BK1173",
+        "challenger_approved_sector_id": null,
+        "incumbent_emitted_actions": [
+          "buy"
+        ],
+        "challenger_emitted_actions": []
+      },
+      "position_gap_split": {
+        "incumbent_position_qty": 100,
+        "challenger_position_qty": 0,
+        "incumbent_emitted_actions": [
+          "sell"
+        ],
+        "challenger_emitted_actions": [],
+        "incumbent_exit_reason": "new_sector_approved",
+        "challenger_exit_reason": null
+      },
+      "path_rows": {
+        "missed_buy_path": {
+          "strategy_name": "mainline_trend_a",
+          "trade_date": "2024-02-05",
+          "difference_types": [
+            "permission",
+            "approved_sector",
+            "emitted_actions"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": false,
+          "incumbent_approved_sector_id": "BK1173",
+          "challenger_approved_sector_id": null,
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "buy"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 0,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": null,
+          "challenger_exit_reason": null
+        },
+        "position_gap_path": {
+          "strategy_name": "mainline_trend_a",
+          "trade_date": "2024-02-06",
+          "difference_types": [
+            "emitted_actions",
+            "position_qty",
+            "exit_reason"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": true,
+          "incumbent_approved_sector_id": "BK0895",
+          "challenger_approved_sector_id": "BK0895",
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "sell"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 100,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": "new_sector_approved",
+          "challenger_exit_reason": null
+        }
+      },
+      "incumbent_unique_trade": {
+        "entry_date": "2024-02-06",
+        "exit_date": "2024-02-07",
+        "quantity": 100,
+        "entry_price": 139.4,
+        "exit_price": 146.21,
+        "pnl": 656.379,
+        "holding_days": 1
+      },
+      "challenger_unique_trade": null,
+      "incumbent_unique_trade_pnl": 656.379,
+      "challenger_unique_trade_pnl": 0.0,
+      "net_chain_pnl_delta": -656.379
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "missed_buy_date": "2024-02-05",
+      "position_gap_date": "2024-02-06",
+      "missed_buy_triggered": true,
+      "position_gap_triggered": true,
+      "complete_chain": true,
+      "missed_buy_split": {
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": false,
+        "incumbent_approved_sector_id": "BK1173",
+        "challenger_approved_sector_id": null,
+        "incumbent_emitted_actions": [
+          "buy"
+        ],
+        "challenger_emitted_actions": []
+      },
+      "position_gap_split": {
+        "incumbent_position_qty": 100,
+        "challenger_position_qty": 0,
+        "incumbent_emitted_actions": [
+          "sell"
+        ],
+        "challenger_emitted_actions": [],
+        "incumbent_exit_reason": "new_sector_approved",
+        "challenger_exit_reason": null
+      },
+      "path_rows": {
+        "missed_buy_path": {
+          "strategy_name": "mainline_trend_b",
+          "trade_date": "2024-02-05",
+          "difference_types": [
+            "permission",
+            "approved_sector",
+            "emitted_actions"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": false,
+          "incumbent_approved_sector_id": "BK1173",
+          "challenger_approved_sector_id": null,
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "buy"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 0,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": null,
+          "challenger_exit_reason": null
+        },
+        "position_gap_path": {
+          "strategy_name": "mainline_trend_b",
+          "trade_date": "2024-02-06",
+          "difference_types": [
+            "emitted_actions",
+            "position_qty",
+            "exit_reason"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": true,
+          "incumbent_approved_sector_id": "BK0895",
+          "challenger_approved_sector_id": "BK0895",
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "sell"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 100,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": "new_sector_approved",
+          "challenger_exit_reason": null
+        }
+      },
+      "incumbent_unique_trade": {
+        "entry_date": "2024-02-06",
+        "exit_date": "2024-02-07",
+        "quantity": 100,
+        "entry_price": 139.4,
+        "exit_price": 146.21,
+        "pnl": 656.379,
+        "holding_days": 1
+      },
+      "challenger_unique_trade": null,
+      "incumbent_unique_trade_pnl": 656.379,
+      "challenger_unique_trade_pnl": 0.0,
+      "net_chain_pnl_delta": -656.379
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "missed_buy_date": "2024-02-05",
+      "position_gap_date": "2024-02-06",
+      "missed_buy_triggered": true,
+      "position_gap_triggered": true,
+      "complete_chain": true,
+      "missed_buy_split": {
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": false,
+        "incumbent_approved_sector_id": "BK1173",
+        "challenger_approved_sector_id": null,
+        "incumbent_emitted_actions": [
+          "buy"
+        ],
+        "challenger_emitted_actions": []
+      },
+      "position_gap_split": {
+        "incumbent_position_qty": 100,
+        "challenger_position_qty": 0,
+        "incumbent_emitted_actions": [
+          "sell"
+        ],
+        "challenger_emitted_actions": [],
+        "incumbent_exit_reason": "new_sector_approved",
+        "challenger_exit_reason": null
+      },
+      "path_rows": {
+        "missed_buy_path": {
+          "strategy_name": "mainline_trend_c",
+          "trade_date": "2024-02-05",
+          "difference_types": [
+            "permission",
+            "approved_sector",
+            "emitted_actions"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": false,
+          "incumbent_approved_sector_id": "BK1173",
+          "challenger_approved_sector_id": null,
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "buy"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 0,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": null,
+          "challenger_exit_reason": null
+        },
+        "position_gap_path": {
+          "strategy_name": "mainline_trend_c",
+          "trade_date": "2024-02-06",
+          "difference_types": [
+            "emitted_actions",
+            "position_qty",
+            "exit_reason"
+          ],
+          "incumbent_permission_allowed": true,
+          "challenger_permission_allowed": true,
+          "incumbent_approved_sector_id": "BK0895",
+          "challenger_approved_sector_id": "BK0895",
+          "incumbent_assignment_layer": "leader",
+          "challenger_assignment_layer": "leader",
+          "incumbent_assignment_reason": "highest_leader_score",
+          "challenger_assignment_reason": "highest_leader_score",
+          "incumbent_emitted_actions": [
+            "sell"
+          ],
+          "challenger_emitted_actions": [],
+          "incumbent_position_qty": 100,
+          "challenger_position_qty": 0,
+          "incumbent_exit_reason": "new_sector_approved",
+          "challenger_exit_reason": null
+        }
+      },
+      "incumbent_unique_trade": {
+        "entry_date": "2024-02-06",
+        "exit_date": "2024-02-07",
+        "quantity": 100,
+        "entry_price": 139.4,
+        "exit_price": 146.21,
+        "pnl": 656.379,
+        "holding_days": 1
+      },
+      "challenger_unique_trade": null,
+      "incumbent_unique_trade_pnl": 656.379,
+      "challenger_unique_trade_pnl": 0.0,
+      "net_chain_pnl_delta": -656.379
+    }
+  ],
+  "interpretation": [
+    "The dominant chain is not just a threshold-edge permission split; it is the combination of a missed buy and the later absence of a position that the incumbent still exits.",
+    "If the challenger loses permission on the re-entry day but the later position state stays matched, the split remains mostly latent.",
+    "The highest-value repair target is therefore the date pair where permission loss directly removes the incumbent-only re-entry cycle."
+  ]
+}

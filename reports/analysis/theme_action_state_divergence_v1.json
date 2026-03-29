@@ -1,0 +1,279 @@
+{
+  "summary": {
+    "case_count": 3,
+    "triggered_symbol_count": 1,
+    "triggered_symbols": [
+      "300750"
+    ],
+    "core_rule": "A repeated split becomes action-state relevant only when it changes emitted actions or active position state on a repeated shift date."
+  },
+  "symbol_summaries": [
+    {
+      "symbol": "300750",
+      "repeated_shift_date_count": 5,
+      "triggered_date_count": 4,
+      "triggered_dates": [
+        "2024-01-19",
+        "2024-01-22",
+        "2024-02-05",
+        "2024-02-06"
+      ],
+      "has_action_state_trigger": true,
+      "trigger_strategy_count": 3
+    },
+    {
+      "symbol": "002466",
+      "repeated_shift_date_count": 4,
+      "triggered_date_count": 0,
+      "triggered_dates": [],
+      "has_action_state_trigger": false,
+      "trigger_strategy_count": 0
+    },
+    {
+      "symbol": "002902",
+      "repeated_shift_date_count": 3,
+      "triggered_date_count": 0,
+      "triggered_dates": [],
+      "has_action_state_trigger": false,
+      "trigger_strategy_count": 0
+    }
+  ],
+  "trigger_date_rows": [
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-01-19",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-01-22",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-02-05",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-02-06",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-01-19",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-01-22",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-02-05",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-02-06",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-01-19",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-01-22",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-02-05",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-02-06",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    }
+  ],
+  "interpretation": [
+    "Permission or assignment splits are necessary but not sufficient; the next useful boundary is whether they also change emitted actions or position state.",
+    "Action-state trigger dates are the best candidates for explaining real trade-path divergence.",
+    "Symbols with repeated structural splits but zero action-state trigger dates should be treated as latent cases, not immediate repair targets."
+  ]
+}

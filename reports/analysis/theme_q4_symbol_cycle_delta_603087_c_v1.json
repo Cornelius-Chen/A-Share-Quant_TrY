@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "incumbent_only_cycle_count": 1,
+    "challenger_only_cycle_count": 0,
+    "matched_cycle_count": 1,
+    "incumbent_only_total_pnl": -138.627,
+    "challenger_only_total_pnl": 0
+  },
+  "incumbent_only_cycles": [
+    {
+      "entry_date": "2024-10-17",
+      "exit_date": "2024-10-18",
+      "quantity": 100,
+      "entry_price": 47.51,
+      "exit_price": 46.27,
+      "pnl": -138.627,
+      "holding_days": 1
+    }
+  ],
+  "challenger_only_cycles": [],
+  "matched_cycles": [
+    {
+      "entry_date": "2024-12-16",
+      "exit_date": "2024-12-17",
+      "incumbent_pnl": 49.435,
+      "challenger_pnl": 49.435,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    }
+  ],
+  "interpretation": [
+    "Incumbent-only negative cycles are the cleanest evidence that a specialist branch reduced churn or filtered low-quality re-entries.",
+    "Challenger-only cycles matter too, but for drawdown pockets the first question is usually which bad cycles disappeared.",
+    "Exact-cycle matching is intentionally strict; unmatched but nearby cycles should be replayed separately if they still matter."
+  ]
+}

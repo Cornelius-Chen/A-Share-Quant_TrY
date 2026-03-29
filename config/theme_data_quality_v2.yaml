@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  security_master_csv: data/reference/security_master/akshare_security_master_theme_research_v1.csv
+  concept_mapping_csv: data/reference/concept_mapping_daily/theme_research_concept_mapping_v2.csv
+  sector_mapping_csv: data/reference/sector_mapping_daily/theme_research_sector_mapping_daily_v1.csv
+  reports_dir: reports/data_quality
+
+report:
+  name: theme_research_data_quality_v2

@@ -1,0 +1,237 @@
+{
+  "source_report": "300390",
+  "summary": {
+    "strategy_count": 3,
+    "shift_row_count": 6,
+    "most_repeated_shift_date": {
+      "trade_date": "2024-01-19",
+      "strategy_count": 3
+    },
+    "interpretation": [
+      "Repeated shift dates across strategies are the strongest evidence of a real path-sequence difference.",
+      "Approval-sector and emitted-action changes are usually more actionable than passive score differences.",
+      "A symbol-level replay becomes promotion-relevant only when the same shift pattern repeats across multiple strategies."
+    ]
+  },
+  "strategy_shift_summary": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "shift_count": 2,
+      "first_shift_date": "2024-01-19",
+      "largest_shift": {
+        "strategy_name": "mainline_trend_a",
+        "trade_date": "2024-01-19",
+        "difference_types": [
+          "approved_sector"
+        ],
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": true,
+        "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+        "challenger_approved_sector_id": "BK1173",
+        "incumbent_assignment_layer": "junk",
+        "challenger_assignment_layer": "junk",
+        "incumbent_assignment_reason": "low_composite_or_low_resonance",
+        "challenger_assignment_reason": "low_composite_or_low_resonance",
+        "incumbent_emitted_actions": [],
+        "challenger_emitted_actions": [],
+        "incumbent_position_qty": 0,
+        "challenger_position_qty": 0,
+        "incumbent_exit_reason": null,
+        "challenger_exit_reason": null
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "shift_count": 2,
+      "first_shift_date": "2024-01-19",
+      "largest_shift": {
+        "strategy_name": "mainline_trend_b",
+        "trade_date": "2024-01-19",
+        "difference_types": [
+          "approved_sector"
+        ],
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": true,
+        "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+        "challenger_approved_sector_id": "BK1173",
+        "incumbent_assignment_layer": "junk",
+        "challenger_assignment_layer": "junk",
+        "incumbent_assignment_reason": "low_composite_or_low_resonance",
+        "challenger_assignment_reason": "low_composite_or_low_resonance",
+        "incumbent_emitted_actions": [],
+        "challenger_emitted_actions": [],
+        "incumbent_position_qty": 0,
+        "challenger_position_qty": 0,
+        "incumbent_exit_reason": null,
+        "challenger_exit_reason": null
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "shift_count": 2,
+      "first_shift_date": "2024-01-19",
+      "largest_shift": {
+        "strategy_name": "mainline_trend_c",
+        "trade_date": "2024-01-19",
+        "difference_types": [
+          "approved_sector"
+        ],
+        "incumbent_permission_allowed": true,
+        "challenger_permission_allowed": true,
+        "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+        "challenger_approved_sector_id": "BK1173",
+        "incumbent_assignment_layer": "junk",
+        "challenger_assignment_layer": "junk",
+        "incumbent_assignment_reason": "low_composite_or_low_resonance",
+        "challenger_assignment_reason": "low_composite_or_low_resonance",
+        "incumbent_emitted_actions": [],
+        "challenger_emitted_actions": [],
+        "incumbent_position_qty": 0,
+        "challenger_position_qty": 0,
+        "incumbent_exit_reason": null,
+        "challenger_exit_reason": null
+      }
+    }
+  ],
+  "repeated_shift_dates": [
+    {
+      "trade_date": "2024-01-19",
+      "strategy_count": 3
+    },
+    {
+      "trade_date": "2024-02-05",
+      "strategy_count": 3
+    }
+  ],
+  "detailed_shifts": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-01-19",
+      "difference_types": [
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": true,
+      "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+      "challenger_approved_sector_id": "BK1173",
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    },
+    {
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-02-05",
+      "difference_types": [
+        "permission",
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": false,
+      "incumbent_approved_sector_id": "BK1173",
+      "challenger_approved_sector_id": null,
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-01-19",
+      "difference_types": [
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": true,
+      "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+      "challenger_approved_sector_id": "BK1173",
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-02-05",
+      "difference_types": [
+        "permission",
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": false,
+      "incumbent_approved_sector_id": "BK1173",
+      "challenger_approved_sector_id": null,
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-01-19",
+      "difference_types": [
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": true,
+      "incumbent_approved_sector_id": "计算机、通信和其他电子设备制造业",
+      "challenger_approved_sector_id": "BK1173",
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-02-05",
+      "difference_types": [
+        "permission",
+        "approved_sector"
+      ],
+      "incumbent_permission_allowed": true,
+      "challenger_permission_allowed": false,
+      "incumbent_approved_sector_id": "BK1173",
+      "challenger_approved_sector_id": null,
+      "incumbent_assignment_layer": "junk",
+      "challenger_assignment_layer": "junk",
+      "incumbent_assignment_reason": "low_composite_or_low_resonance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0,
+      "incumbent_exit_reason": null,
+      "challenger_exit_reason": null
+    }
+  ]
+}

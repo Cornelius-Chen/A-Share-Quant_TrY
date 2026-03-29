@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "case_name": "theme_q2_002466_c",
+    "row_count": 2,
+    "current_boost": 0.08,
+    "current_band_lower": 0.55,
+    "current_band_upper": 0.6,
+    "cap_enabled": true,
+    "max_required_boost_coef": 0.098829,
+    "min_required_boost_coef": 0.051378,
+    "rows_needing_band_extension": 1,
+    "rows_blocked_by_cap": 2,
+    "recommended_variant": {
+      "concept_support_late_quality_boost": 0.1,
+      "concept_support_band_lower": 0.58,
+      "concept_support_band_upper": 0.65,
+      "concept_support_cap_to_band_upper": false
+    }
+  },
+  "bridge_rows": [
+    {
+      "trigger_date": "2024-05-09",
+      "mechanism_type": "entry_suppression_avoidance",
+      "late_mover_quality": 0.623358,
+      "concept_support": 0.518548,
+      "primary_concept_weight": 0.526497,
+      "concept_concentration_ratio": 0.526497,
+      "late_threshold": 0.65,
+      "required_uplift": 0.026642,
+      "implied_boost_coef": 0.051378,
+      "within_current_band": false,
+      "requires_band_extension": true,
+      "blocked_by_cap": true
+    },
+    {
+      "trigger_date": "2024-06-26",
+      "mechanism_type": "entry_suppression_avoidance",
+      "late_mover_quality": 0.597313,
+      "concept_support": 0.533114,
+      "primary_concept_weight": 0.547305,
+      "concept_concentration_ratio": 0.547305,
+      "late_threshold": 0.65,
+      "required_uplift": 0.052687,
+      "implied_boost_coef": 0.098829,
+      "within_current_band": true,
+      "requires_band_extension": false,
+      "blocked_by_cap": true
+    }
+  ],
+  "interpretation": [
+    "The key quantity is not just whether concept support exists, but how much late-quality uplift is required to cross the challenger threshold.",
+    "If the needed rows already sit above the current band upper, the next refinement must widen the band instead of only increasing the boost coefficient.",
+    "If a narrow variant can target only the late-mover band rows, it is preferable to a broad concept boost across the full distribution."
+  ]
+}

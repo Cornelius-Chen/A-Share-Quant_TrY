@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_and_accept_residual_cost",
+    "residual_drawdown_gap_to_threshold": -0.000496,
+    "relief_increment_vs_frozen_branch": 5e-06,
+    "is_localized_theme_pocket": true,
+    "dominant_chain_total_pnl": 1969.137
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "broad_challenger_gain",
+      "actual": {
+        "composite_rank_improvement": 16.444445,
+        "mean_total_return_delta": 0.004154,
+        "mean_capture_delta": 0.00193
+      },
+      "reading": "The challenger remains broadly superior on rank and return, and does not suffer a broad capture problem anymore."
+    },
+    {
+      "evidence_name": "residual_gate_gap",
+      "actual": {
+        "mean_max_drawdown_improvement": 0.002504,
+        "required_threshold": 0.003,
+        "gap_to_threshold": -0.000496
+      },
+      "reading": "The only remaining strict-gate blocker is a small drawdown-improvement shortfall."
+    },
+    {
+      "evidence_name": "localization",
+      "actual": {
+        "weakest_dataset_strategy": {
+          "dataset_name": "theme_research_v4",
+          "strategy_name": "mainline_trend_a",
+          "slice_count": 4,
+          "mean_drawdown_improvement": 8.8e-05,
+          "mean_total_return_delta": 0.000135,
+          "mean_capture_delta": -0.009266,
+          "negative_drawdown_slices": 1,
+          "weak_drawdown_slices": 4
+        },
+        "weakest_slice": {
+          "dataset_name": "theme_research_v4",
+          "slice_name": "2024_q1",
+          "slice_start": "2024-01-01",
+          "slice_end": "2024-03-31",
+          "strategy_count": 3,
+          "mean_drawdown_improvement": -0.000354,
+          "mean_total_return_delta": -0.00053,
+          "mean_capture_delta": 0.0
+        }
+      },
+      "reading": "The remaining blocker is localized to a theme-side pocket rather than spread across all packs."
+    },
+    {
+      "evidence_name": "dominant_chain_cost",
+      "actual": {
+        "complete_chain_ratio": 1.0,
+        "incumbent_missed_cycle_total_pnl": 1969.137
+      },
+      "reading": "The local damage is real and economically meaningful, but it is concentrated in one repeated missed re-entry chain."
+    },
+    {
+      "evidence_name": "cheap_local_relief_test",
+      "actual": {
+        "relief_mean_max_drawdown_improvement": 0.002509,
+        "increment_vs_frozen_branch": 5e-06,
+        "relief_passed": false
+      },
+      "reading": "The obvious cheap local threshold fix was tested and still failed; this suggests the remaining blocker is not cheaply repairable."
+    }
+  ],
+  "interpretation": [
+    "A residual blocker is more acceptable when the challenger already wins broadly, the remaining gap is numerically small, and the problem localizes to one pack and one slice.",
+    "A residual blocker is less acceptable when a cheap local repair clearly closes the gap. That did not happen here.",
+    "The current evidence therefore supports a freeze posture more than another round of narrow threshold tuning."
+  ]
+}

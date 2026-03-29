@@ -1,0 +1,328 @@
+{
+  "summary": {
+    "pocket_count": 9,
+    "group_count": 7,
+    "feature_gap_suspect_count": 2,
+    "classification_counts": {
+      "mixed_existing_families": 4,
+      "single_row_baseline_reuse": 4,
+      "stacked_family_pocket": 1
+    },
+    "thinning_signal": true
+  },
+  "pocket_rows": [
+    {
+      "report_name": "baseline_q3_cycle_mechanism_000333_c_v1",
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "000333",
+      "row_count": 7,
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "classification": "mixed_existing_families",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": true
+    },
+    {
+      "report_name": "market_q4_cycle_mechanism_002371_c_v1",
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002371",
+      "row_count": 1,
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "classification": "single_row_baseline_reuse",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": false
+    },
+    {
+      "report_name": "market_q4_cycle_mechanism_000858_c_v1",
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "000858",
+      "row_count": 2,
+      "families": [
+        "entry_suppression_opportunity_cost",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "classification": "mixed_existing_families",
+      "has_baseline_family": false,
+      "has_nonbaseline_family": true,
+      "has_toxic_family": true
+    },
+    {
+      "report_name": "market_q4_cycle_mechanism_603259_c_v1",
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "603259",
+      "row_count": 1,
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "classification": "single_row_baseline_reuse",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": false
+    },
+    {
+      "report_name": "theme_q2_cycle_mechanism_002466_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002466",
+      "row_count": 4,
+      "families": [
+        "delayed_entry_basis_advantage",
+        "entry_suppression_avoidance",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "classification": "stacked_family_pocket",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": true,
+      "has_toxic_family": false
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_002902_b_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002902",
+      "row_count": 4,
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "classification": "mixed_existing_families",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": true
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_002902_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002902",
+      "row_count": 4,
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "classification": "mixed_existing_families",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": true
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_603087_b_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "603087",
+      "row_count": 1,
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "classification": "single_row_baseline_reuse",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": false
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_603087_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "603087",
+      "row_count": 1,
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "classification": "single_row_baseline_reuse",
+      "has_baseline_family": true,
+      "has_nonbaseline_family": false,
+      "has_toxic_family": false
+    }
+  ],
+  "grouped_rows": [
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "symbol": "000333",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "mixed_existing_families"
+      ],
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "cross_strategy": false
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "symbol": "000858",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "mixed_existing_families"
+      ],
+      "families": [
+        "entry_suppression_opportunity_cost",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "cross_strategy": false
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "symbol": "002371",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "single_row_baseline_reuse"
+      ],
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "cross_strategy": false
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "symbol": "603259",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "single_row_baseline_reuse"
+      ],
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "cross_strategy": false
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "symbol": "002466",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "stacked_family_pocket"
+      ],
+      "families": [
+        "delayed_entry_basis_advantage",
+        "entry_suppression_avoidance",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "cross_strategy": false
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "symbol": "002902",
+      "strategy_count": 2,
+      "strategies": [
+        "mainline_trend_b",
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "mixed_existing_families"
+      ],
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "cross_strategy": true
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "symbol": "603087",
+      "strategy_count": 2,
+      "strategies": [
+        "mainline_trend_b",
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "single_row_baseline_reuse"
+      ],
+      "families": [
+        "entry_suppression_avoidance"
+      ],
+      "cross_strategy": true
+    }
+  ],
+  "feature_gap_suspects": [
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "symbol": "002902",
+      "strategy_count": 2,
+      "strategies": [
+        "mainline_trend_b",
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "mixed_existing_families"
+      ],
+      "families": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "cross_strategy": true,
+      "reason": "cross_strategy_mixed_repeat"
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "symbol": "002466",
+      "strategy_count": 1,
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "classifications": [
+        "stacked_family_pocket"
+      ],
+      "families": [
+        "delayed_entry_basis_advantage",
+        "entry_suppression_avoidance",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "cross_strategy": false,
+      "reason": "stacked_known_families"
+    }
+  ],
+  "interpretation": [
+    "A replay loop is likely thinning when most newly replayed pockets collapse into single-row baseline reuse, baseline-family reuse, or repeated mixed pockets.",
+    "Cross-strategy mixed repeats and stacked-family pockets are plausible feature-gap suspects: the mechanism is recurring, but current features may be collapsing richer structure into known families.",
+    "This audit does not prove that a new family exists. It only identifies where more expressive features may be worth trying before spending more replay budget."
+  ]
+}

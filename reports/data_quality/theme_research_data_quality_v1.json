@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "security_symbol_count": 13,
+    "concept_covered_symbol_count": 12,
+    "concept_symbol_coverage_ratio": 0.923077,
+    "unique_concept_count": 4,
+    "mean_concepts_per_covered_symbol": 1.083333,
+    "static_primary_symbol_ratio": 1.0,
+    "multi_concept_symbol_ratio": 0.083333,
+    "top_primary_concept_share": 0.752592,
+    "warning_count": 4,
+    "sector_override_ratio": 0.922832
+  },
+  "missing_concept_symbols": [
+    "002902"
+  ],
+  "primary_concept_distribution": [
+    {
+      "concept_name": "锂矿概念",
+      "primary_row_count": 2178
+    },
+    {
+      "concept_name": "CRO",
+      "primary_row_count": 242
+    },
+    {
+      "concept_name": "减肥药",
+      "primary_row_count": 242
+    },
+    {
+      "concept_name": "创新药",
+      "primary_row_count": 232
+    }
+  ],
+  "symbol_concept_profiles": [
+    {
+      "symbol": "000155",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002176",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002460",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002466",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300390",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300518",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300750",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300759",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "CRO"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "CRO"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300765",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "创新药"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "创新药"
+      ],
+      "primary_date_count": 232,
+      "total_mapping_rows": 232,
+      "primary_weight_sum": 232.0
+    },
+    {
+      "symbol": "600338",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "603087",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "减肥药",
+        "创新药"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "减肥药"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 484,
+      "primary_weight_sum": 161.333414
+    },
+    {
+      "symbol": "603799",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    }
+  ],
+  "warnings": [
+    {
+      "type": "coverage_gap",
+      "detail": "Not every security in the theme pack has concept coverage.",
+      "value": 0.923077
+    },
+    {
+      "type": "static_primary_concepts",
+      "detail": "Primary concept assignments are nearly static across all dates, which suggests time-invariant mapping and potential lookahead contamination.",
+      "value": 1.0
+    },
+    {
+      "type": "concept_concentration",
+      "detail": "One primary concept dominates the mapping too heavily, reducing theme diversity.",
+      "value": 0.752592
+    },
+    {
+      "type": "low_multi_concept_coverage",
+      "detail": "Very few symbols carry multiple concepts, which may understate real A-share theme overlap.",
+      "value": 0.083333
+    }
+  ],
+  "extras": {
+    "config_path": "config\\theme_data_quality.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

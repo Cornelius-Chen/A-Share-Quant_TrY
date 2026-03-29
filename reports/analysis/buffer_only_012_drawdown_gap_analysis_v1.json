@@ -1,0 +1,353 @@
+{
+  "source_report": "time_slice_validation",
+  "summary": {
+    "row_count": 36,
+    "dataset_count": 3,
+    "slice_count": 12,
+    "weakest_dataset_strategy": {
+      "dataset_name": "theme_research_v4",
+      "strategy_name": "mainline_trend_a",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 8.8e-05,
+      "mean_total_return_delta": 0.000135,
+      "mean_capture_delta": -0.009266,
+      "negative_drawdown_slices": 1,
+      "weak_drawdown_slices": 4
+    },
+    "weakest_slice": {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": -0.000354,
+      "mean_total_return_delta": -0.00053,
+      "mean_capture_delta": 0.0
+    },
+    "interpretation": [
+      "Rows with the smallest or negative drawdown improvement are the most likely blockers for promotion.",
+      "Dataset-strategy pairs with persistently weak drawdown improvement are better repair targets than global threshold search.",
+      "If the weakest rows are concentrated in one dataset pack, the next cycle should focus there instead of reopening cross-pack tuning."
+    ]
+  },
+  "dataset_strategy_summary": [
+    {
+      "dataset_name": "theme_research_v4",
+      "strategy_name": "mainline_trend_a",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 8.8e-05,
+      "mean_total_return_delta": 0.000135,
+      "mean_capture_delta": -0.009266,
+      "negative_drawdown_slices": 1,
+      "weak_drawdown_slices": 4
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "strategy_name": "mainline_trend_a",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.000108,
+      "mean_total_return_delta": 0.000228,
+      "mean_capture_delta": 0.035275,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 4
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "strategy_name": "mainline_trend_c",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.000154,
+      "mean_total_return_delta": 0.000554,
+      "mean_capture_delta": -0.015023,
+      "negative_drawdown_slices": 1,
+      "weak_drawdown_slices": 3
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "strategy_name": "mainline_trend_b",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.000213,
+      "mean_total_return_delta": 0.000488,
+      "mean_capture_delta": -0.011064,
+      "negative_drawdown_slices": 1,
+      "weak_drawdown_slices": 3
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "strategy_name": "mainline_trend_a",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.00029,
+      "mean_total_return_delta": 0.000537,
+      "mean_capture_delta": 0.02277,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 3
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "strategy_name": "mainline_trend_b",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.000977,
+      "mean_total_return_delta": 0.000603,
+      "mean_capture_delta": 0.050537,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 3
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "strategy_name": "mainline_trend_c",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.000977,
+      "mean_total_return_delta": 0.000603,
+      "mean_capture_delta": 0.050537,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 3
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "strategy_name": "mainline_trend_b",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.001298,
+      "mean_total_return_delta": 0.001386,
+      "mean_capture_delta": 0.022541,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 2
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "strategy_name": "mainline_trend_c",
+      "slice_count": 4,
+      "mean_drawdown_improvement": 0.001589,
+      "mean_total_return_delta": 0.001772,
+      "mean_capture_delta": 0.000796,
+      "negative_drawdown_slices": 0,
+      "weak_drawdown_slices": 1
+    }
+  ],
+  "weakest_slices": [
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": -0.000354,
+      "mean_total_return_delta": -0.00053,
+      "mean_capture_delta": 0.0
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 9e-06,
+      "mean_total_return_delta": 5.3e-05,
+      "mean_capture_delta": 0.127968
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000143,
+      "mean_total_return_delta": 0.000242,
+      "mean_capture_delta": -0.005211
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000258,
+      "mean_total_return_delta": 0.000392,
+      "mean_capture_delta": -0.014274
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q4",
+      "slice_start": "2024-10-01",
+      "slice_end": "2024-12-31",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000305,
+      "mean_total_return_delta": -0.000908,
+      "mean_capture_delta": 0.0
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000311,
+      "mean_total_return_delta": 0.000556,
+      "mean_capture_delta": -0.000247
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000357,
+      "mean_total_return_delta": 0.000754,
+      "mean_capture_delta": -0.020853
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "strategy_count": 3,
+      "mean_drawdown_improvement": 0.000411,
+      "mean_total_return_delta": 0.000143,
+      "mean_capture_delta": 0.053797
+    }
+  ],
+  "weakest_rows": [
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_c",
+      "drawdown_improvement": -0.000407,
+      "total_return_delta": -0.00053,
+      "capture_delta": 0.0,
+      "incumbent_max_drawdown": 0.002015,
+      "challenger_max_drawdown": 0.002422
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_b",
+      "drawdown_improvement": -0.000406,
+      "total_return_delta": -0.00053,
+      "capture_delta": 0.0,
+      "incumbent_max_drawdown": 0.001878,
+      "challenger_max_drawdown": 0.002284
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": -0.000249,
+      "total_return_delta": -0.00053,
+      "capture_delta": 0.0,
+      "incumbent_max_drawdown": 0.001489,
+      "challenger_max_drawdown": 0.001738
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_b",
+      "drawdown_improvement": 0.0,
+      "total_return_delta": 5.3e-05,
+      "capture_delta": 0.127968,
+      "incumbent_max_drawdown": 0.004992,
+      "challenger_max_drawdown": 0.004992
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_c",
+      "drawdown_improvement": 0.0,
+      "total_return_delta": 5.3e-05,
+      "capture_delta": 0.127968,
+      "incumbent_max_drawdown": 0.004992,
+      "challenger_max_drawdown": 0.004992
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q1",
+      "slice_start": "2024-01-01",
+      "slice_end": "2024-03-31",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": 2.8e-05,
+      "total_return_delta": 5.3e-05,
+      "capture_delta": 0.127968,
+      "incumbent_max_drawdown": 0.001408,
+      "challenger_max_drawdown": 0.00138
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q4",
+      "slice_start": "2024-10-01",
+      "slice_end": "2024-12-31",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": 4.2e-05,
+      "total_return_delta": 0.000447,
+      "capture_delta": 0.0,
+      "incumbent_max_drawdown": 0.00758,
+      "challenger_max_drawdown": 0.007538
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": 7.4e-05,
+      "total_return_delta": 0.000254,
+      "capture_delta": 0.004582,
+      "incumbent_max_drawdown": 0.001367,
+      "challenger_max_drawdown": 0.001293
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "strategy_name": "mainline_trend_b",
+      "drawdown_improvement": 8e-05,
+      "total_return_delta": 0.000228,
+      "capture_delta": -0.006978,
+      "incumbent_max_drawdown": 0.001431,
+      "challenger_max_drawdown": 0.001351
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q3",
+      "slice_start": "2024-07-01",
+      "slice_end": "2024-09-30",
+      "strategy_name": "mainline_trend_c",
+      "drawdown_improvement": 8.4e-05,
+      "total_return_delta": 0.000176,
+      "capture_delta": -0.006978,
+      "incumbent_max_drawdown": 0.001785,
+      "challenger_max_drawdown": 0.001701
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": 8.9e-05,
+      "total_return_delta": 8.8e-05,
+      "capture_delta": 0.0,
+      "incumbent_max_drawdown": 0.003242,
+      "challenger_max_drawdown": 0.003153
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "slice_start": "2024-04-01",
+      "slice_end": "2024-06-30",
+      "strategy_name": "mainline_trend_a",
+      "drawdown_improvement": 9.7e-05,
+      "total_return_delta": 0.000508,
+      "capture_delta": -0.020853,
+      "incumbent_max_drawdown": 0.001259,
+      "challenger_max_drawdown": 0.001162
+    }
+  ]
+}

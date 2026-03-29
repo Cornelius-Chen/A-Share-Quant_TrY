@@ -1,0 +1,37 @@
+project:
+  protocol_version: protocol_v1.0
+
+provider:
+  name: akshare
+  adjust: qfq
+  pause_seconds: 0.2
+
+paths:
+  raw_dir: data/raw
+  reference_dir: data/reference
+
+time_range:
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+
+universe:
+  stock_symbols:
+    - "000155"
+    - "002176"
+    - "002902"
+    - "300390"
+    - "300518"
+    - "600338"
+    - "603087"
+    - "603799"
+  index_symbols:
+    - "000001"
+    - "000300"
+    - "399006"
+
+outputs:
+  daily_bars_filename: akshare_daily_bars_theme_bootstrap.csv
+  index_daily_bars_filename: akshare_index_daily_bars_bootstrap.csv
+  trading_calendar_filename: akshare_trading_calendar_bootstrap.csv
+  security_master_filename: akshare_security_master_theme_bootstrap.csv
+  adjustment_factors_filename: akshare_adjustment_factors_theme_bootstrap.csv

@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "incumbent_only_cycle_count": 4,
+    "challenger_only_cycle_count": 3,
+    "matched_cycle_count": 5,
+    "incumbent_only_total_pnl": -233.472,
+    "challenger_only_total_pnl": -81.258
+  },
+  "incumbent_only_cycles": [
+    {
+      "entry_date": "2024-10-31",
+      "exit_date": "2024-11-04",
+      "quantity": 100,
+      "entry_price": 25.08,
+      "exit_price": 23.1,
+      "pnl": -210.31,
+      "holding_days": 4
+    },
+    {
+      "entry_date": "2024-11-29",
+      "exit_date": "2024-12-02",
+      "quantity": 100,
+      "entry_price": 23.3,
+      "exit_price": 23.3,
+      "pnl": -12.33,
+      "holding_days": 3
+    },
+    {
+      "entry_date": "2024-10-23",
+      "exit_date": "2024-10-28",
+      "quantity": 100,
+      "entry_price": 23.72,
+      "exit_price": 23.78,
+      "pnl": -6.378,
+      "holding_days": 5
+    },
+    {
+      "entry_date": "2024-12-27",
+      "exit_date": "2024-12-30",
+      "quantity": 100,
+      "entry_price": 24.46,
+      "exit_price": 24.54,
+      "pnl": -4.454,
+      "holding_days": 3
+    }
+  ],
+  "challenger_only_cycles": [
+    {
+      "entry_date": "2024-10-23",
+      "exit_date": "2024-10-24",
+      "quantity": 100,
+      "entry_price": 23.72,
+      "exit_price": 23.0,
+      "pnl": -84.3,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-10-25",
+      "exit_date": "2024-10-28",
+      "quantity": 100,
+      "entry_price": 24.22,
+      "exit_price": 23.78,
+      "pnl": -56.378,
+      "holding_days": 3
+    },
+    {
+      "entry_date": "2024-10-31",
+      "exit_date": "2024-11-01",
+      "quantity": 100,
+      "entry_price": 25.08,
+      "exit_price": 25.8,
+      "pnl": 59.42,
+      "holding_days": 1
+    }
+  ],
+  "matched_cycles": [
+    {
+      "entry_date": "2024-12-17",
+      "exit_date": "2024-12-19",
+      "incumbent_pnl": -181.35,
+      "challenger_pnl": -181.35,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-12-12",
+      "exit_date": "2024-12-16",
+      "incumbent_pnl": 35.607,
+      "challenger_pnl": 35.607,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-10-18",
+      "exit_date": "2024-10-21",
+      "incumbent_pnl": 41.875,
+      "challenger_pnl": 41.875,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-11-08",
+      "exit_date": "2024-11-11",
+      "incumbent_pnl": -78.613,
+      "challenger_pnl": -78.613,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-12-20",
+      "exit_date": "2024-12-23",
+      "incumbent_pnl": -48.476,
+      "challenger_pnl": -48.476,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    }
+  ],
+  "interpretation": [
+    "Incumbent-only negative cycles are the cleanest evidence that a specialist branch reduced churn or filtered low-quality re-entries.",
+    "Challenger-only cycles matter too, but for drawdown pockets the first question is usually which bad cycles disappeared.",
+    "Exact-cycle matching is intentionally strict; unmatched but nearby cycles should be replayed separately if they still matter."
+  ]
+}

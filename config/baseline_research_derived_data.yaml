@@ -1,0 +1,29 @@
+protocol_version: protocol_v1.0
+mapping_source: akshare_cninfo
+mapping_version: cninfo_baseline_research_v1
+
+paths:
+  bars_csv: data/raw/daily_bars/akshare_daily_bars_baseline_research_v1.csv
+  mapping_input_csv: data/reference/sector_mapping_daily/baseline_research_sector_mapping_cninfo_v1.csv
+  concept_mapping_input_csv:
+  mapping_output_csv: data/reference/sector_mapping_daily/baseline_research_sector_mapping_daily_v1.csv
+  sector_snapshots_output_csv: data/derived/sector_snapshots/baseline_research_sector_snapshots_v1.csv
+  stock_snapshots_output_csv: data/derived/stock_snapshots/baseline_research_stock_snapshots_v1.csv
+  mainline_windows_output_csv: data/derived/mainline_windows/baseline_research_mainline_windows_v1.csv
+
+rules:
+  lookback: 5
+  top_sector_score_threshold: 0.52
+  top_sector_rank_limit: 1
+  min_window_length: 2
+
+sector_assignments:
+  "000001":
+    sector_id: FINANCE
+    sector_name: Finance
+  "000333":
+    sector_id: CONSUMER
+    sector_name: Consumer
+  "600519":
+    sector_id: CONSUMER
+    sector_name: Consumer

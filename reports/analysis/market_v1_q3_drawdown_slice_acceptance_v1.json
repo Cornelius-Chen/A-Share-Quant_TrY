@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_q3_drawdown_slice_as_cross_strategy_baseline_style_reuse",
+    "top_positive_symbols_by_strategy": [
+      "300308",
+      "300308"
+    ],
+    "shared_top_driver": "300308",
+    "same_top_driver": true,
+    "identical_negative_cycle_map": true,
+    "shared_negative_mechanism_count": 3,
+    "do_continue_q3_drawdown_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_driver_alignment",
+      "actual": {
+        "per_strategy_rows": [
+          {
+            "strategy_name": "None",
+            "top_positive_symbol": "300308",
+            "top_positive_pnl_delta": 1781.321,
+            "positive_symbol_count": 5
+          },
+          {
+            "strategy_name": "None",
+            "top_positive_symbol": "300308",
+            "top_positive_pnl_delta": 1781.321,
+            "positive_symbol_count": 12
+          }
+        ],
+        "shared_top_driver": "300308"
+      },
+      "reading": "If the same symbol dominates the positive drawdown delta in both B and C, the slice is more likely to be structurally coherent rather than strategy-specific noise."
+    },
+    {
+      "evidence_name": "cross_strategy_cycle_consistency",
+      "actual": {
+        "identical_negative_cycle_map": true,
+        "shared_negative_mechanism_count": 3,
+        "shared_mechanisms": [
+          {
+            "mechanism_type": "entry_suppression_avoidance",
+            "entry_date": "2024-08-02",
+            "exit_date": "2024-08-05",
+            "shared_strategy_count": 2
+          },
+          {
+            "mechanism_type": "entry_suppression_avoidance",
+            "entry_date": "2024-08-14",
+            "exit_date": "2024-08-15",
+            "shared_strategy_count": 2
+          },
+          {
+            "mechanism_type": "earlier_exit_loss_reduction",
+            "entry_date": "2024-08-19",
+            "exit_date": "2024-08-21",
+            "shared_strategy_count": 2
+          }
+        ]
+      },
+      "reading": "An identical negative-cycle map means later replay is unlikely to change the family boundary; it will mostly add more examples of the same drawdown template."
+    }
+  ],
+  "interpretation": [
+    "A q3 drawdown slice should continue only if a later symbol is likely to break the current cross-strategy mechanism map.",
+    "If both B and C are driven by the same symbol and share the same negative-cycle signatures, the correct default is to close the slice as cross-strategy stable.",
+    "Under that condition, new replay effort should move to other slices or other family frontiers instead of re-explaining the same q3 pocket."
+  ]
+}

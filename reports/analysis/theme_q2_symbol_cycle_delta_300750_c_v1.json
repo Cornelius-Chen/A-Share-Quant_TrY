@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "incumbent_only_cycle_count": 2,
+    "challenger_only_cycle_count": 3,
+    "matched_cycle_count": 3,
+    "incumbent_only_total_pnl": -482.3657,
+    "challenger_only_total_pnl": 320.2064
+  },
+  "incumbent_only_cycles": [
+    {
+      "entry_date": "2024-05-20",
+      "exit_date": "2024-05-22",
+      "quantity": 100,
+      "entry_price": 200.44,
+      "exit_price": 195.74,
+      "pnl": -501.4594,
+      "holding_days": 2
+    },
+    {
+      "entry_date": "2024-04-30",
+      "exit_date": "2024-05-09",
+      "quantity": 100,
+      "entry_price": 199.0,
+      "exit_price": 199.51,
+      "pnl": 19.0937,
+      "holding_days": 9
+    }
+  ],
+  "challenger_only_cycles": [
+    {
+      "entry_date": "2024-05-21",
+      "exit_date": "2024-05-22",
+      "quantity": 100,
+      "entry_price": 196.91,
+      "exit_price": 195.74,
+      "pnl": -148.3535,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-05-07",
+      "exit_date": "2024-05-09",
+      "quantity": 100,
+      "entry_price": 199.42,
+      "exit_price": 199.51,
+      "pnl": -22.9189,
+      "holding_days": 2
+    },
+    {
+      "entry_date": "2024-04-30",
+      "exit_date": "2024-05-06",
+      "quantity": 100,
+      "entry_price": 199.0,
+      "exit_price": 204.24,
+      "pnl": 491.4788,
+      "holding_days": 6
+    }
+  ],
+  "matched_cycles": [
+    {
+      "entry_date": "2024-05-23",
+      "exit_date": "2024-05-24",
+      "incumbent_pnl": -171.4084,
+      "challenger_pnl": -171.4084,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-05-10",
+      "exit_date": "2024-05-13",
+      "incumbent_pnl": -1340.7194,
+      "challenger_pnl": -1340.7194,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    },
+    {
+      "entry_date": "2024-04-02",
+      "exit_date": "2024-04-09",
+      "incumbent_pnl": -439.2766,
+      "challenger_pnl": -439.2766,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    }
+  ],
+  "interpretation": [
+    "Incumbent-only negative cycles are the cleanest evidence that a specialist branch reduced churn or filtered low-quality re-entries.",
+    "Challenger-only cycles matter too, but for drawdown pockets the first question is usually which bad cycles disappeared.",
+    "Exact-cycle matching is intentionally strict; unmatched but nearby cycles should be replayed separately if they still matter."
+  ]
+}

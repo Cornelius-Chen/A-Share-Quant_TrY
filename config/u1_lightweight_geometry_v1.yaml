@@ -1,0 +1,20 @@
+report:
+  name: u1_lightweight_geometry_v1
+
+paths:
+  reports_dir: reports/analysis
+  recheck_report: reports/analysis/feature_pack_a_recheck_v1.json
+
+features:
+  names:
+    - challenger_margin_gap
+    - fallback_reason_score
+    - top_score_gap
+    - challenger_top_score_gap
+    - challenger_late_quality_margin
+    - challenger_non_junk_margin
+    - challenger_resonance_margin
+    - concept_support
+    - primary_concept_weight
+    - concept_count
+    - concept_concentration_ratio

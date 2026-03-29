@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "feature_gap_suspect_count": 2,
+    "thinning_signal": true,
+    "track_a_closed": true,
+    "track_b_closed": true,
+    "recommended_next_phase": "feature_pack_c_local_causal_edges",
+    "do_restart_replay_queue": false,
+    "recommended_track_count": 2,
+    "recommended_feature_count": 4
+  },
+  "track_rows": [
+    {
+      "track_name": "track_a_hierarchy_approval",
+      "case_name": "theme_q4_002902_b",
+      "status": "closed_negative_informative",
+      "dominant_edge": {
+        "hierarchy": "late_mover_quality",
+        "approval": "score_margin_threshold"
+      },
+      "repair_result": {
+        "best_local_repair_candidate": "theme_coupled_relief_000_058",
+        "best_local_repair_profile": "permission_led",
+        "best_local_repair_total_pnl": -464.429
+      },
+      "reading": "Hierarchy and approval edges are real, but local repairs degraded or failed to improve the pocket economics."
+    },
+    {
+      "track_name": "track_b_concept_to_late",
+      "case_name": "theme_q2_002466_c",
+      "status": "close_track_b_as_negative_informative",
+      "dominant_edge": {
+        "bridge": "concept_to_late_mover",
+        "late_quality_straddles": 2,
+        "concept_supported_late_rows": 2
+      },
+      "repair_result": {
+        "best_variant_name": "v2_broad_concept_late_bridge",
+        "best_variant_alpha_retention_ratio": 0.175228,
+        "best_variant_repair_completion_ratio": 0.5
+      },
+      "reading": "Concept-aware late-mover variants repaired one trigger row but retained too little alpha to justify continued widening."
+    }
+  ],
+  "recommended_features": [
+    {
+      "feature_name": "fallback_reason_decomposition",
+      "priority": 1,
+      "why_now": "Both tracks terminate at junk/fallback boundaries, but the current fallback score is too compressed to distinguish cheap repairs from structural failures.",
+      "target_pockets": [
+        "theme_q4 / 002902 / B",
+        "theme_q2 / 002466 / C"
+      ]
+    },
+    {
+      "feature_name": "late_quality_residual_components",
+      "priority": 2,
+      "why_now": "Late-mover admission is the recurring bottleneck across both tracks, but only the scalar margin is visible today.",
+      "target_pockets": [
+        "theme_q4 / 002902 / B",
+        "theme_q2 / 002466 / C"
+      ]
+    },
+    {
+      "feature_name": "approval_threshold_history",
+      "priority": 3,
+      "why_now": "Approval edges appear near thresholds and may depend on short hysteresis sequences rather than same-day gaps alone.",
+      "target_pockets": [
+        "theme_q4 / 002902 / B"
+      ]
+    },
+    {
+      "feature_name": "concept_support_excess_to_late_threshold",
+      "priority": 4,
+      "why_now": "Track B suggests that raw concept support is insufficient; what matters is support relative to the late-mover admission deficit.",
+      "target_pockets": [
+        "theme_q2 / 002466 / C"
+      ]
+    }
+  ],
+  "interpretation": [
+    "Feature-pack-c should begin only after both feature-pack-b tracks are treated as closed, so the next pack does not inherit the old local-parameter loop.",
+    "The next features should be causal and local, not broader thresholds: the current evidence says we are under-observing why pockets fall into junk or miss late-mover admission.",
+    "Replay queue expansion should remain paused until at least one feature-pack-c recheck changes a pocket boundary more cleanly than the current feature-pack-b variants did."
+  ]
+}

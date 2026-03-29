@@ -1,0 +1,5116 @@
+{
+  "summary": {
+    "dataset_name": "baseline_research_v1",
+    "symbol": "000333",
+    "start_date": "2024-07-01",
+    "end_date": "2024-09-30",
+    "strategy_count": 1,
+    "candidate_count": 3,
+    "comparison_count": 1
+  },
+  "candidate_records": [
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000333",
+      "daily_records": [
+        {
+          "trade_date": "2024-07-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.611348,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.477025,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491235,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-04",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.577151,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-05",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.460511,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.714113,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.562714,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.490796,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.525267,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.532963,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-15",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.520806,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.478687,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-17",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.440497,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-18",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.515667,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.44175,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.48063,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.587907,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.368254,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.411641,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.768385,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-29",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.672579,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-30",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.460485,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.922335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-01",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.663043,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "normal_pullback",
+          "exit_reason": "price_soft_but_structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-02",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.49974,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.403069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.311609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.463187,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.4284,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.415609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.761165,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.693148,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-14",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.503602,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-15",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.565612,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.727021,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-19",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.738925,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.773142,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-21",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.746085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.787031,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.831354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.805897,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-27",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.732085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "normal_pullback",
+          "exit_reason": "price_soft_but_structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.520884,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.417144,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.459191,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491644,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.745829,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.551018,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": false,
+          "exit_category": "normal_pullback",
+          "exit_reason": "price_soft_but_structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-05",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.58035,
+          "assignment_reason": "fallback_to_junk",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563244,
+          "assignment_reason": "fallback_to_junk",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.394394,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.452858,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.486972,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.676737,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.789061,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-18",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.879771,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-19",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.778072,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.818324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-23",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.853438,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.510506,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-25",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.532778,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.494743,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-27",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.430815,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "normal_pullback",
+          "exit_reason": "price_soft_but_structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-30",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.443228,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-07-05",
+          "action": "buy",
+          "quantity": 100,
+          "price": 60.53,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.63,
+          "fees": 10.963
+        },
+        {
+          "trade_date": "2024-07-15",
+          "action": "buy",
+          "quantity": 100,
+          "price": 60.81,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-16",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.66,
+          "fees": 11.066
+        },
+        {
+          "trade_date": "2024-07-29",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.33,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-31",
+          "action": "sell",
+          "quantity": 100,
+          "price": 56.76,
+          "fees": 10.676
+        },
+        {
+          "trade_date": "2024-08-01",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.83,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 58.57,
+          "fees": 10.857
+        },
+        {
+          "trade_date": "2024-08-19",
+          "action": "buy",
+          "quantity": 100,
+          "price": 57.72,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-20",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.51,
+          "fees": 10.951
+        },
+        {
+          "trade_date": "2024-08-21",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.74,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-22",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.16,
+          "fees": 10.916
+        },
+        {
+          "trade_date": "2024-08-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.97,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.45,
+          "fees": 11.045
+        },
+        {
+          "trade_date": "2024-09-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.89,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-06",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.63,
+          "fees": 10.963
+        },
+        {
+          "trade_date": "2024-09-18",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.65,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-20",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.94,
+          "fees": 11.094
+        },
+        {
+          "trade_date": "2024-09-23",
+          "action": "buy",
+          "quantity": 100,
+          "price": 62.49,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-24",
+          "action": "sell",
+          "quantity": 100,
+          "price": 63.63,
+          "fees": 11.363
+        },
+        {
+          "trade_date": "2024-09-25",
+          "action": "buy",
+          "quantity": 100,
+          "price": 64.24,
+          "fees": 5.0
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-07-05",
+          "exit_date": "2024-07-08",
+          "quantity": 100,
+          "entry_price": 60.53,
+          "exit_price": 59.63,
+          "pnl": -105.963,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-07-15",
+          "exit_date": "2024-07-16",
+          "quantity": 100,
+          "entry_price": 60.81,
+          "exit_price": 60.66,
+          "pnl": -31.066,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-07-31",
+          "quantity": 100,
+          "entry_price": 58.33,
+          "exit_price": 56.76,
+          "pnl": -172.676,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-08-05",
+          "quantity": 100,
+          "entry_price": 59.83,
+          "exit_price": 58.57,
+          "pnl": -141.857,
+          "holding_days": 4
+        },
+        {
+          "entry_date": "2024-08-19",
+          "exit_date": "2024-08-20",
+          "quantity": 100,
+          "entry_price": 57.72,
+          "exit_price": 59.51,
+          "pnl": 163.049,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-21",
+          "exit_date": "2024-08-22",
+          "quantity": 100,
+          "entry_price": 58.74,
+          "exit_price": 59.16,
+          "pnl": 26.084,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-26",
+          "exit_date": "2024-08-29",
+          "quantity": 100,
+          "entry_price": 61.97,
+          "exit_price": 60.45,
+          "pnl": -168.045,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-09-04",
+          "exit_date": "2024-09-06",
+          "quantity": 100,
+          "entry_price": 61.89,
+          "exit_price": 59.63,
+          "pnl": -241.963,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-09-18",
+          "exit_date": "2024-09-20",
+          "quantity": 100,
+          "entry_price": 59.65,
+          "exit_price": 60.94,
+          "pnl": 112.906,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-09-23",
+          "exit_date": "2024-09-24",
+          "quantity": 100,
+          "entry_price": 62.49,
+          "exit_price": 63.63,
+          "pnl": 97.637,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-25",
+          "exit_date": "2024-10-09",
+          "quantity": 100,
+          "entry_price": 64.24,
+          "exit_price": 74.43,
+          "pnl": 1001.557,
+          "holding_days": 14
+        }
+      ]
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000333",
+      "daily_records": [
+        {
+          "trade_date": "2024-07-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.611348,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.477025,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491235,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-04",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.577151,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-05",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.460511,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.714113,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.562714,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.490796,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.525267,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.532963,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-15",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.520806,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.478687,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-17",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.440497,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-18",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.515667,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.44175,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.48063,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.587907,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.368254,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.411641,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.768385,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-29",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.672579,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-30",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.460485,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.922335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-01",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.663043,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "normal_pullback",
+          "exit_reason": "price_soft_but_structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-02",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.49974,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.403069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.311609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.463187,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.4284,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.415609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.761165,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.693148,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-14",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.503602,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-15",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.565612,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.727021,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-19",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.738925,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.773142,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-21",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.746085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.787031,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.831354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.805897,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "mainline_decay",
+          "exit_reason": "attack_permission_removed",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.732085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-28",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.520884,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.417144,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.459191,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491644,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.745829,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.55537,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.58035,
+          "assignment_reason": "fallback_to_junk",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.563244,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.394394,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.452858,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.486972,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.676737,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.789061,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-18",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.879771,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-19",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.778072,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.818324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-23",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.853438,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-24",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563553,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.532778,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.494743,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-27",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.565408,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.443228,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-07-05",
+          "action": "buy",
+          "quantity": 100,
+          "price": 60.53,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.63,
+          "fees": 10.963
+        },
+        {
+          "trade_date": "2024-07-15",
+          "action": "buy",
+          "quantity": 100,
+          "price": 60.81,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-16",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.66,
+          "fees": 11.066
+        },
+        {
+          "trade_date": "2024-07-29",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.33,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-31",
+          "action": "sell",
+          "quantity": 100,
+          "price": 56.76,
+          "fees": 10.676
+        },
+        {
+          "trade_date": "2024-08-01",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.83,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 58.57,
+          "fees": 10.857
+        },
+        {
+          "trade_date": "2024-08-19",
+          "action": "buy",
+          "quantity": 100,
+          "price": 57.72,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-20",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.51,
+          "fees": 10.951
+        },
+        {
+          "trade_date": "2024-08-21",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.74,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-22",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.16,
+          "fees": 10.916
+        },
+        {
+          "trade_date": "2024-08-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.97,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-27",
+          "action": "sell",
+          "quantity": 100,
+          "price": 62.03,
+          "fees": 11.203
+        },
+        {
+          "trade_date": "2024-09-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.89,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.98,
+          "fees": 11.098
+        },
+        {
+          "trade_date": "2024-09-18",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.65,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-20",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.94,
+          "fees": 11.094
+        },
+        {
+          "trade_date": "2024-09-23",
+          "action": "buy",
+          "quantity": 100,
+          "price": 62.49,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-25",
+          "action": "sell",
+          "quantity": 100,
+          "price": 64.24,
+          "fees": 11.424
+        },
+        {
+          "trade_date": "2024-09-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 66.03,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-30",
+          "action": "sell",
+          "quantity": 100,
+          "price": 69.19,
+          "fees": 11.919
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-07-05",
+          "exit_date": "2024-07-08",
+          "quantity": 100,
+          "entry_price": 60.53,
+          "exit_price": 59.63,
+          "pnl": -105.963,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-07-15",
+          "exit_date": "2024-07-16",
+          "quantity": 100,
+          "entry_price": 60.81,
+          "exit_price": 60.66,
+          "pnl": -31.066,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-07-31",
+          "quantity": 100,
+          "entry_price": 58.33,
+          "exit_price": 56.76,
+          "pnl": -172.676,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-08-05",
+          "quantity": 100,
+          "entry_price": 59.83,
+          "exit_price": 58.57,
+          "pnl": -141.857,
+          "holding_days": 4
+        },
+        {
+          "entry_date": "2024-08-19",
+          "exit_date": "2024-08-20",
+          "quantity": 100,
+          "entry_price": 57.72,
+          "exit_price": 59.51,
+          "pnl": 163.049,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-21",
+          "exit_date": "2024-08-22",
+          "quantity": 100,
+          "entry_price": 58.74,
+          "exit_price": 59.16,
+          "pnl": 26.084,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-26",
+          "exit_date": "2024-08-27",
+          "quantity": 100,
+          "entry_price": 61.97,
+          "exit_price": 62.03,
+          "pnl": -10.203,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-04",
+          "exit_date": "2024-09-05",
+          "quantity": 100,
+          "entry_price": 61.89,
+          "exit_price": 60.98,
+          "pnl": -107.098,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-18",
+          "exit_date": "2024-09-20",
+          "quantity": 100,
+          "entry_price": 59.65,
+          "exit_price": 60.94,
+          "pnl": 112.906,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-09-23",
+          "exit_date": "2024-09-25",
+          "quantity": 100,
+          "entry_price": 62.49,
+          "exit_price": 64.24,
+          "pnl": 158.576,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-09-26",
+          "exit_date": "2024-09-30",
+          "quantity": 100,
+          "entry_price": 66.03,
+          "exit_price": 69.19,
+          "pnl": 299.081,
+          "holding_days": 4
+        }
+      ]
+    },
+    {
+      "candidate_name": "theme_strict_quality_branch",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000333",
+      "daily_records": [
+        {
+          "trade_date": "2024-07-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.611348,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.477025,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491235,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-04",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.577151,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.460511,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.714113,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.573142,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.490796,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.525267,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.583915,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-15",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.520806,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.478687,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-17",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "junk",
+          "assignment_score": 0.440497,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-18",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.515667,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.44175,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.48063,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.587907,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.368254,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.411641,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.768385,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-07-29",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.672579,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-07-30",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.460485,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.0,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-07-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.922335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-01",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.663043,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "mainline_decay",
+          "exit_reason": "attack_permission_removed",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.49974,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.403069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.311609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.463187,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.4284,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.415609,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.761165,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.693148,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-14",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.503602,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-15",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.588576,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-16",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.727021,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.738925,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.773142,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-21",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.746085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.787031,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.831354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-08-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.805897,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "mainline_decay",
+          "exit_reason": "attack_permission_removed",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-08-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.732085,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-28",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.520884,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.417144,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-08-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.459191,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.491644,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-03",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.745829,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.55537,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.58035,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.563244,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-09",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.394394,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-10",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.452858,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-11",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.486972,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-12",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.676737,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-13",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.789061,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-18",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.879771,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-19",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "FINANCE",
+          "assignment_layer": "leader",
+          "assignment_score": 0.778072,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-20",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "leader",
+          "assignment_score": 0.818324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-23",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "leader",
+          "assignment_score": 0.853438,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "mainline_decay",
+          "exit_reason": "attack_permission_removed",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563553,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.532778,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-09-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.494743,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 3.5,
+          "exit_should_exit": false,
+          "exit_category": "hold",
+          "exit_reason": "structure_intact",
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-09-27",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "junk",
+          "assignment_score": 0.565408,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-09-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "CONSUMER",
+          "assignment_layer": "core",
+          "assignment_score": 0.443228,
+          "assignment_reason": "highest_core_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-07-29",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.33,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-07-31",
+          "action": "sell",
+          "quantity": 100,
+          "price": 56.76,
+          "fees": 10.676
+        },
+        {
+          "trade_date": "2024-08-01",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.83,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-02",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.33,
+          "fees": 10.933
+        },
+        {
+          "trade_date": "2024-08-21",
+          "action": "buy",
+          "quantity": 100,
+          "price": 58.74,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-22",
+          "action": "sell",
+          "quantity": 100,
+          "price": 59.16,
+          "fees": 10.916
+        },
+        {
+          "trade_date": "2024-08-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.97,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-08-27",
+          "action": "sell",
+          "quantity": 100,
+          "price": 62.03,
+          "fees": 11.203
+        },
+        {
+          "trade_date": "2024-09-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 61.89,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.98,
+          "fees": 11.098
+        },
+        {
+          "trade_date": "2024-09-18",
+          "action": "buy",
+          "quantity": 100,
+          "price": 59.65,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-20",
+          "action": "sell",
+          "quantity": 100,
+          "price": 60.94,
+          "fees": 11.094
+        },
+        {
+          "trade_date": "2024-09-23",
+          "action": "buy",
+          "quantity": 100,
+          "price": 62.49,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-24",
+          "action": "sell",
+          "quantity": 100,
+          "price": 63.63,
+          "fees": 11.363
+        },
+        {
+          "trade_date": "2024-09-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 66.03,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-09-30",
+          "action": "sell",
+          "quantity": 100,
+          "price": 69.19,
+          "fees": 11.919
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-07-29",
+          "exit_date": "2024-07-31",
+          "quantity": 100,
+          "entry_price": 58.33,
+          "exit_price": 56.76,
+          "pnl": -172.676,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-08-02",
+          "quantity": 100,
+          "entry_price": 59.83,
+          "exit_price": 59.33,
+          "pnl": -65.933,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-21",
+          "exit_date": "2024-08-22",
+          "quantity": 100,
+          "entry_price": 58.74,
+          "exit_price": 59.16,
+          "pnl": 26.084,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-08-26",
+          "exit_date": "2024-08-27",
+          "quantity": 100,
+          "entry_price": 61.97,
+          "exit_price": 62.03,
+          "pnl": -10.203,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-04",
+          "exit_date": "2024-09-05",
+          "quantity": 100,
+          "entry_price": 61.89,
+          "exit_price": 60.98,
+          "pnl": -107.098,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-18",
+          "exit_date": "2024-09-20",
+          "quantity": 100,
+          "entry_price": 59.65,
+          "exit_price": 60.94,
+          "pnl": 112.906,
+          "holding_days": 2
+        },
+        {
+          "entry_date": "2024-09-23",
+          "exit_date": "2024-09-24",
+          "quantity": 100,
+          "entry_price": 62.49,
+          "exit_price": 63.63,
+          "pnl": 97.637,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-09-26",
+          "exit_date": "2024-09-30",
+          "quantity": 100,
+          "entry_price": 66.03,
+          "exit_price": 69.19,
+          "pnl": 299.081,
+          "holding_days": 4
+        }
+      ]
+    }
+  ],
+  "comparison_records": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_fill_count": 21,
+      "challenger_fill_count": 16,
+      "incumbent_trade_count": 11,
+      "challenger_trade_count": 8,
+      "incumbent_total_pnl": 539.663,
+      "challenger_total_pnl": 179.798,
+      "pnl_delta": -359.865
+    }
+  ]
+}

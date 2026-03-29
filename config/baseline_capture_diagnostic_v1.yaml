@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  comparison_report: reports/20260329T050714Z_c0ed1f58_comparison.json
+  slice_report: reports/20260329T050713Z_259349ba_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: baseline_capture_diagnostic_v1
+
+diagnostic:
+  dataset_name: baseline_research_v1
+  incumbent_name: shared_default
+  challenger_name: balanced_compromise

@@ -1,0 +1,159 @@
+{
+  "summary": {
+    "symbol": "300750",
+    "trade_date": "2024-02-05",
+    "top_sector": {
+      "sector_id": "BK1173",
+      "sector_name": "锂矿概念",
+      "rank": 1,
+      "composite_score": 2.583525
+    },
+    "second_sector": {
+      "sector_id": "BK1658",
+      "sector_name": "创新医疗服务",
+      "rank": 2,
+      "composite_score": 1.616182
+    },
+    "candidate_count": 2,
+    "action_row_count": 6,
+    "dominant_rule": "A permission split is promotion-relevant only when the top sector stays investable for the incumbent, fails the challenger threshold or path rule, and suppresses a real buy."
+  },
+  "ranked_sector_scores": [
+    {
+      "sector_id": "BK1173",
+      "sector_name": "锂矿概念",
+      "rank": 1,
+      "composite_score": 2.583525
+    },
+    {
+      "sector_id": "BK1658",
+      "sector_name": "创新医疗服务",
+      "rank": 2,
+      "composite_score": 1.616182
+    },
+    {
+      "sector_id": "BK0895",
+      "sector_name": "维生素",
+      "rank": 3,
+      "composite_score": 0.852007
+    },
+    {
+      "sector_id": "BK1146",
+      "sector_name": "减肥药",
+      "rank": 4,
+      "composite_score": 0.663452
+    },
+    {
+      "sector_id": "计算机、通信和其他电子设备制造业",
+      "sector_name": "计算机、通信和其他电子设备制造业",
+      "rank": 5,
+      "composite_score": 0.455145
+    }
+  ],
+  "candidate_evaluations": [
+    {
+      "candidate_name": "shared_default",
+      "role": "incumbent",
+      "min_top_score": 2.5,
+      "min_score_margin": 0.0,
+      "switch_margin_buffer": 0.0,
+      "permission_allowed": true,
+      "permission_reason": "approved",
+      "approved_sector_id": "BK1173",
+      "approved_sector_name": "锂矿概念",
+      "approved_score": 2.583525,
+      "previous_approved_sector_id": "计算机、通信和其他电子设备制造业",
+      "score_minus_top_threshold": 0.083525,
+      "top_vs_second_margin": 0.967343,
+      "top_vs_previous_margin": 2.12838,
+      "symbol_assignment_layer": "leader",
+      "symbol_assignment_reason": "highest_leader_score"
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "role": "challenger",
+      "min_top_score": 2.6,
+      "min_score_margin": 0.05,
+      "switch_margin_buffer": 0.12,
+      "permission_allowed": false,
+      "permission_reason": "top_score_below_threshold",
+      "approved_sector_id": null,
+      "approved_sector_name": null,
+      "approved_score": 2.583525,
+      "previous_approved_sector_id": "计算机、通信和其他电子设备制造业",
+      "score_minus_top_threshold": -0.016475,
+      "top_vs_second_margin": 0.967343,
+      "top_vs_previous_margin": 2.12838,
+      "symbol_assignment_layer": "leader",
+      "symbol_assignment_reason": "highest_leader_score"
+    }
+  ],
+  "action_rows": [
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_a",
+      "permission_allowed": true,
+      "approved_sector_id": "BK1173",
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": [
+        "buy"
+      ]
+    },
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_b",
+      "permission_allowed": true,
+      "approved_sector_id": "BK1173",
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": [
+        "buy"
+      ]
+    },
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_c",
+      "permission_allowed": true,
+      "approved_sector_id": "BK1173",
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": [
+        "buy"
+      ]
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_a",
+      "permission_allowed": false,
+      "approved_sector_id": null,
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": []
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_b",
+      "permission_allowed": false,
+      "approved_sector_id": null,
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": []
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_c",
+      "permission_allowed": false,
+      "approved_sector_id": null,
+      "assignment_layer": "leader",
+      "assignment_reason": "highest_leader_score",
+      "emitted_actions": []
+    }
+  ],
+  "interpretation": [
+    "This report is about one date edge, not the whole strategy. The key question is whether the challenger loses permission because the sector score falls below its own threshold, because the margin is too small, or because the regime path is held elsewhere.",
+    "If the incumbent still emits a buy while the challenger does not, the permission edge is no longer abstract; it has crossed into a tradable state difference.",
+    "A later position-gap exit should be treated as downstream evidence from this missed buy edge rather than as an independent first cause.",
+    "On this date the incumbent keeps the top sector investable while the challenger rejects it; this is the exact permission-loss edge the next repair cycle should study."
+  ]
+}

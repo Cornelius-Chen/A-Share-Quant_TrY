@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "slice_count": 3,
+    "bucket_counts": {
+      "interaction_high": 1,
+      "sector_heat_led": 1,
+      "turnover_led_theme_light": 1
+    },
+    "interaction_spread": 0.179943,
+    "heat_spread": 0.126929,
+    "breadth_spread": 0.005463,
+    "recommended_next_feature_branch": "conditioned_late_quality_on_theme_turnover_context",
+    "defer_sector_heat_branch": true
+  },
+  "slice_rows": [
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q2",
+      "slice_role": "capture",
+      "acceptance_posture": "close_market_q2_capture_slice_as_mixed_opening_plus_persistence",
+      "top_symbols": [
+        "300502",
+        "002371",
+        "603259"
+      ],
+      "row_count": 177,
+      "theme_density_mean": 0.181592,
+      "turnover_concentration_mean": 0.467039,
+      "theme_turnover_interaction_mean": 0.295771,
+      "sector_heat_mean": 0.523707,
+      "sector_breadth_mean": 0.463936,
+      "context_bucket": "interaction_high"
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q3_drawdown_slice_as_cross_strategy_baseline_style_reuse",
+      "top_symbols": [
+        "300308"
+      ],
+      "row_count": 64,
+      "theme_density_mean": 0.0,
+      "turnover_concentration_mean": 0.28957,
+      "theme_turnover_interaction_mean": 0.115828,
+      "sector_heat_mean": 0.643542,
+      "sector_breadth_mean": 0.467187,
+      "context_bucket": "sector_heat_led"
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q4_drawdown_slice_as_avoidance_plus_reduced_loss_mix",
+      "top_symbols": [
+        "002371",
+        "000977",
+        "000858"
+      ],
+      "row_count": 183,
+      "theme_density_mean": 0.0,
+      "turnover_concentration_mean": 0.523379,
+      "theme_turnover_interaction_mean": 0.209352,
+      "sector_heat_mean": 0.516613,
+      "sector_breadth_mean": 0.469399,
+      "context_bucket": "turnover_led_theme_light"
+    }
+  ],
+  "interpretation": [
+    "Context-feature-pack-a is only useful if explicit context fields still separate already-closed slices strongly enough to guide the next feature branch.",
+    "If theme-density plus turnover concentration separates q2/q3/q4 more strongly than sector heat or breadth, the next branch should condition late-quality logic on that interaction first.",
+    "This remains a conditioned-global path, not evidence for direct per-sector training."
+  ]
+}

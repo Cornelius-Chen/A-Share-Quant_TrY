@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "symbol": "300750",
+    "strategy_count": 3,
+    "incumbent_unique_total_pnl": 1969.137,
+    "challenger_unique_total_pnl": 377.037,
+    "net_unique_cycle_delta": -1592.1,
+    "top_priority_family": {
+      "trigger_family": "missed_buy_trigger",
+      "owner": "incumbent",
+      "count": 3,
+      "aligned_unique_cycle_pnl": 1969.137,
+      "priority_reason": "Incumbent-only profitable or less-damaging cycles are the clearest missed-opportunity damage."
+    }
+  },
+  "strategy_cycle_rows": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "incumbent_unique_trade_count": 1,
+      "challenger_unique_trade_count": 1,
+      "incumbent_unique_total_pnl": 656.379,
+      "challenger_unique_total_pnl": 125.679,
+      "incumbent_unique_trades": [
+        {
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "quantity": 100,
+          "entry_price": 139.4,
+          "exit_price": 146.21,
+          "pnl": 656.379,
+          "holding_days": 1
+        }
+      ],
+      "challenger_unique_trades": [
+        {
+          "entry_date": "2024-01-22",
+          "exit_date": "2024-01-23",
+          "quantity": 100,
+          "entry_price": 141.71,
+          "exit_price": 143.21,
+          "pnl": 125.679,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_unique_trade_count": 1,
+      "challenger_unique_trade_count": 1,
+      "incumbent_unique_total_pnl": 656.379,
+      "challenger_unique_total_pnl": 125.679,
+      "incumbent_unique_trades": [
+        {
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "quantity": 100,
+          "entry_price": 139.4,
+          "exit_price": 146.21,
+          "pnl": 656.379,
+          "holding_days": 1
+        }
+      ],
+      "challenger_unique_trades": [
+        {
+          "entry_date": "2024-01-22",
+          "exit_date": "2024-01-23",
+          "quantity": 100,
+          "entry_price": 141.71,
+          "exit_price": 143.21,
+          "pnl": 125.679,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "incumbent_unique_trade_count": 1,
+      "challenger_unique_trade_count": 1,
+      "incumbent_unique_total_pnl": 656.379,
+      "challenger_unique_total_pnl": 125.679,
+      "incumbent_unique_trades": [
+        {
+          "entry_date": "2024-02-06",
+          "exit_date": "2024-02-07",
+          "quantity": 100,
+          "entry_price": 139.4,
+          "exit_price": 146.21,
+          "pnl": 656.379,
+          "holding_days": 1
+        }
+      ],
+      "challenger_unique_trades": [
+        {
+          "entry_date": "2024-01-22",
+          "exit_date": "2024-01-23",
+          "quantity": 100,
+          "entry_price": 141.71,
+          "exit_price": 143.21,
+          "pnl": 125.679,
+          "holding_days": 1
+        }
+      ]
+    }
+  ],
+  "trigger_family_priority": [
+    {
+      "trigger_family": "missed_buy_trigger",
+      "owner": "incumbent",
+      "count": 3,
+      "aligned_unique_cycle_pnl": 1969.137,
+      "priority_reason": "Incumbent-only profitable or less-damaging cycles are the clearest missed-opportunity damage."
+    },
+    {
+      "trigger_family": "position_gap_exit_trigger",
+      "owner": "incumbent",
+      "count": 3,
+      "aligned_unique_cycle_pnl": 1969.137,
+      "priority_reason": "Position-gap exits are the paired exit-side expression of missed incumbent-only cycles."
+    },
+    {
+      "trigger_family": "early_buy_trigger",
+      "owner": "challenger",
+      "count": 3,
+      "aligned_unique_cycle_pnl": 377.037,
+      "priority_reason": "Challenger-only early entry cycles add path variance, but may be net positive or offsetting."
+    },
+    {
+      "trigger_family": "forced_sell_trigger",
+      "owner": "challenger",
+      "count": 3,
+      "aligned_unique_cycle_pnl": 377.037,
+      "priority_reason": "Forced sell is the unwind side of challenger-only extra cycles."
+    }
+  ],
+  "interpretation": [
+    "Unique incumbent-side cycles indicate trigger families that caused the challenger to miss profitable or less-damaging participation.",
+    "Unique challenger-side cycles indicate trigger families that added extra path variance, but they are not necessarily the largest source of net damage.",
+    "The repair priority should go first to the trigger family that aligns with the larger unique-cycle pnl disadvantage."
+  ]
+}

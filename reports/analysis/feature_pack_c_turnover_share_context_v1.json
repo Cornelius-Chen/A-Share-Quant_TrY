@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 3,
+    "local_turnover_context_counts": {
+      "sector_peer_dominance": 1,
+      "broad_attention_deficit": 0,
+      "balanced_share_weakness": 2
+    },
+    "recommended_fourth_feature_group": "late_quality_balanced_turnover_context"
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-05-09",
+      "symbol": "002466",
+      "mechanism_type": "entry_suppression_avoidance",
+      "market_turnover_share": 0.111384,
+      "sector_turnover_share": 0.130391,
+      "sector_top_turnover_share": 0.4076,
+      "sector_mean_turnover_share": 0.111111,
+      "sector_turnover_share_gap": 0.277209,
+      "turnover_rank": 0.75,
+      "local_turnover_context": "sector_peer_dominance"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-23",
+      "symbol": "002902",
+      "mechanism_type": "other_worse_loss_shift",
+      "market_turnover_share": 0.091061,
+      "sector_turnover_share": 1.0,
+      "sector_top_turnover_share": 1.0,
+      "sector_mean_turnover_share": 1.0,
+      "sector_turnover_share_gap": 0.0,
+      "turnover_rank": 0.5,
+      "local_turnover_context": "balanced_share_weakness"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-11-28",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "market_turnover_share": 0.028662,
+      "sector_turnover_share": 1.0,
+      "sector_top_turnover_share": 1.0,
+      "sector_mean_turnover_share": 1.0,
+      "sector_turnover_share_gap": 0.0,
+      "turnover_rank": 0.5,
+      "local_turnover_context": "balanced_share_weakness"
+    }
+  ],
+  "interpretation": [
+    "Turnover-share-led rows should be split by whether they are suppressed by a dominant sector peer or by low broad attention.",
+    "Sector-peer dominance suggests a relative attention feature inside the sector; broad-attention deficit suggests a market-level participation feature.",
+    "If both appear together, the next feature pack step should stay descriptive and avoid another threshold lane."
+  ]
+}

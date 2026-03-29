@@ -1,0 +1,16 @@
+protocol_version: protocol_v1.0
+
+paths:
+  output_path: reports/data/bootstrap_data_audit.json
+
+tables:
+  daily_bars: data/raw/daily_bars/akshare_daily_bars_bootstrap.csv
+  index_daily_bars: data/raw/index_daily_bars/akshare_index_daily_bars_bootstrap.csv
+  security_master: data/reference/security_master/akshare_security_master_lite_bootstrap.csv
+  trading_calendar: data/reference/trading_calendar/akshare_trading_calendar_bootstrap.csv
+  adjustment_factors: data/reference/adjustment_factors/akshare_adjustment_factors_bootstrap.csv
+  sector_mapping_daily: data/reference/sector_mapping_daily/bootstrap_sector_mapping_daily.csv
+  concept_mapping_daily: data/reference/concept_mapping_daily/bootstrap_concept_mapping_daily.csv
+  sector_snapshots: data/derived/sector_snapshots/bootstrap_sector_snapshots.csv
+  stock_snapshots: data/derived/stock_snapshots/bootstrap_stock_snapshots.csv
+  mainline_windows: data/derived/mainline_windows/bootstrap_mainline_windows.csv

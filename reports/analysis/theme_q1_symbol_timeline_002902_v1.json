@@ -1,0 +1,4839 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v4",
+    "symbol": "002902",
+    "start_date": "2024-01-20",
+    "end_date": "2024-03-10",
+    "strategy_count": 3,
+    "candidate_count": 2,
+    "comparison_count": 3
+  },
+  "candidate_records": [
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_a",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.553797,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.563354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.553797,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.563354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "candidate_name": "shared_default",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.553797,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.563354,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_a",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.553797,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563354,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.553797,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563354,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002902",
+      "daily_records": [
+        {
+          "trade_date": "2024-01-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.28138,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.553797,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-24",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.368849,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-25",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.688468,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-01-26",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.621335,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-01-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.339083,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-30",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.246299,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-01-31",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.160069,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "junk",
+          "assignment_score": 0.45622,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-02",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.281762,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": false,
+          "approved_sector_id": null,
+          "assignment_layer": "junk",
+          "assignment_score": 0.193992,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0895",
+          "assignment_layer": "junk",
+          "assignment_score": 0.409656,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-07",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0676",
+          "assignment_layer": "junk",
+          "assignment_score": 0.156052,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.504414,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-19",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.793093,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-20",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1146",
+          "assignment_layer": "leader",
+          "assignment_score": 0.744741,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": true,
+          "holding_health_score": 2.5,
+          "exit_should_exit": true,
+          "exit_category": "replaced_by_new_mainline",
+          "exit_reason": "new_sector_approved",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-21",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.716815,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-22",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.742926,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-23",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.809324,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-26",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.694816,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-02-27",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.806896,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-02-28",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.563354,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": true,
+          "holding_health_score": 1.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-02-29",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "leader",
+          "assignment_score": 0.759944,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-01",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.708796,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "strict_short_term_bullish",
+            "medium_term_uptrend",
+            "loose_uptrend"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "mid_trend_follow"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-04",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK0899",
+          "assignment_layer": "junk",
+          "assignment_score": 0.47469,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [
+            "loose_uptrend"
+          ],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-05",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.38363,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": []
+        },
+        {
+          "trade_date": "2024-03-06",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.696191,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        },
+        {
+          "trade_date": "2024-03-07",
+          "position_qty": 100,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "BK1173",
+          "assignment_layer": "junk",
+          "assignment_score": 0.251194,
+          "assignment_reason": "low_composite_or_low_resonance",
+          "passed_filters": [],
+          "triggered_entries": [],
+          "holding_should_hold": false,
+          "holding_health_score": 0.5,
+          "exit_should_exit": true,
+          "exit_category": "stock_fell_out_of_core_hierarchy",
+          "exit_reason": "assignment_became_junk",
+          "emitted_actions": [
+            "sell"
+          ]
+        },
+        {
+          "trade_date": "2024-03-08",
+          "position_qty": 0,
+          "pending_buy": false,
+          "pending_sell": false,
+          "permission_allowed": true,
+          "approved_sector_id": "计算机、通信和其他电子设备制造业",
+          "assignment_layer": "leader",
+          "assignment_score": 0.71949,
+          "assignment_reason": "highest_leader_score",
+          "passed_filters": [
+            "medium_term_uptrend",
+            "loose_uptrend",
+            "pullback_repair"
+          ],
+          "triggered_entries": [
+            "confirmation_entry",
+            "pullback_then_restrengthening",
+            "second_breakout"
+          ],
+          "holding_should_hold": null,
+          "holding_health_score": null,
+          "exit_should_exit": null,
+          "exit_category": null,
+          "exit_reason": null,
+          "emitted_actions": [
+            "buy"
+          ]
+        }
+      ],
+      "fills": [
+        {
+          "trade_date": "2024-01-26",
+          "action": "buy",
+          "quantity": 100,
+          "price": 20.98,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-01-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 20.5,
+          "fees": 7.05
+        },
+        {
+          "trade_date": "2024-02-20",
+          "action": "buy",
+          "quantity": 100,
+          "price": 18.19,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-21",
+          "action": "sell",
+          "quantity": 100,
+          "price": 18.32,
+          "fees": 6.832
+        },
+        {
+          "trade_date": "2024-02-28",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.64,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-02-29",
+          "action": "sell",
+          "quantity": 100,
+          "price": 22.34,
+          "fees": 7.234
+        },
+        {
+          "trade_date": "2024-03-04",
+          "action": "buy",
+          "quantity": 100,
+          "price": 24.4,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-05",
+          "action": "sell",
+          "quantity": 100,
+          "price": 23.89,
+          "fees": 7.389
+        },
+        {
+          "trade_date": "2024-03-07",
+          "action": "buy",
+          "quantity": 100,
+          "price": 25.5,
+          "fees": 5.0
+        },
+        {
+          "trade_date": "2024-03-08",
+          "action": "sell",
+          "quantity": 100,
+          "price": 25.86,
+          "fees": 7.586
+        }
+      ],
+      "closed_trades": [
+        {
+          "entry_date": "2024-01-26",
+          "exit_date": "2024-01-29",
+          "quantity": 100,
+          "entry_price": 20.98,
+          "exit_price": 20.5,
+          "pnl": -60.05,
+          "holding_days": 3
+        },
+        {
+          "entry_date": "2024-02-20",
+          "exit_date": "2024-02-21",
+          "quantity": 100,
+          "entry_price": 18.19,
+          "exit_price": 18.32,
+          "pnl": 1.168,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-02-28",
+          "exit_date": "2024-02-29",
+          "quantity": 100,
+          "entry_price": 24.64,
+          "exit_price": 22.34,
+          "pnl": -242.234,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-04",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 24.4,
+          "exit_price": 23.89,
+          "pnl": -63.389,
+          "holding_days": 1
+        },
+        {
+          "entry_date": "2024-03-07",
+          "exit_date": "2024-03-08",
+          "quantity": 100,
+          "entry_price": 25.5,
+          "exit_price": 25.86,
+          "pnl": 23.414,
+          "holding_days": 1
+        }
+      ]
+    }
+  ],
+  "comparison_records": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "incumbent_fill_count": 10,
+      "challenger_fill_count": 10,
+      "incumbent_trade_count": 5,
+      "challenger_trade_count": 5,
+      "incumbent_total_pnl": -341.091,
+      "challenger_total_pnl": -341.091,
+      "pnl_delta": 0.0
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_fill_count": 10,
+      "challenger_fill_count": 10,
+      "incumbent_trade_count": 5,
+      "challenger_trade_count": 5,
+      "incumbent_total_pnl": -341.091,
+      "challenger_total_pnl": -341.091,
+      "pnl_delta": 0.0
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "incumbent_fill_count": 10,
+      "challenger_fill_count": 10,
+      "incumbent_trade_count": 5,
+      "challenger_trade_count": 5,
+      "incumbent_total_pnl": -341.091,
+      "challenger_total_pnl": -341.091,
+      "pnl_delta": 0.0
+    }
+  ]
+}

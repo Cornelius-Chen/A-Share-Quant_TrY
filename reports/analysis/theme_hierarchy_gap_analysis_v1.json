@@ -1,0 +1,662 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v2",
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "balanced_targeted_timing_repair",
+    "impacted_window_count": 13,
+    "gap_day_count": 17,
+    "unique_symbol_count": 7,
+    "windows_with_gap_days": 12,
+    "top_blocker": "late_quality_below_challenger_threshold",
+    "top_reason_transition": "late_mover_quality_fallback -> fallback_to_junk",
+    "mean_late_mover_quality": 0.57922,
+    "mean_challenger_late_score": 0.656727
+  },
+  "blocker_summary": {
+    "late_quality_below_challenger_threshold": 17,
+    "late_quality_in_incumbent_only_band": 17,
+    "incumbent_used_late_mover_fallback": 16,
+    "fallback_to_junk_path": 15,
+    "composite_below_challenger_threshold": 2,
+    "composite_in_incumbent_only_band": 2,
+    "low_composite_or_low_resonance_path": 2
+  },
+  "reason_transition_summary": {
+    "late_mover_quality_fallback -> fallback_to_junk": 14,
+    "late_mover_quality_fallback -> low_composite_or_low_resonance": 2,
+    "highest_late_mover_score -> fallback_to_junk": 1
+  },
+  "top_gap_days": [
+    {
+      "window_id": "002176_25",
+      "symbol": "002176",
+      "trade_date": "2024-09-26",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.335404,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.756995,
+      "challenger_layer_score": 0.861138,
+      "incumbent_late_score": 0.756995,
+      "challenger_late_score": 0.756995,
+      "late_mover_quality": 0.59799,
+      "resonance": 0.813495,
+      "expected_upside": 0.9125,
+      "stability": 0.567096,
+      "liquidity": 0.213282,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "603799_23",
+      "symbol": "603799",
+      "trade_date": "2024-09-30",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.366934,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.752699,
+      "challenger_layer_score": 0.876357,
+      "incumbent_late_score": 0.752699,
+      "challenger_late_score": 0.752699,
+      "late_mover_quality": 0.591112,
+      "resonance": 0.808346,
+      "expected_upside": 0.9125,
+      "stability": 0.430564,
+      "liquidity": 0.294392,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "603799_23",
+      "symbol": "603799",
+      "trade_date": "2024-09-27",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.366934,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.741977,
+      "challenger_layer_score": 0.890382,
+      "incumbent_late_score": 0.741977,
+      "challenger_late_score": 0.741977,
+      "late_mover_quality": 0.569136,
+      "resonance": 0.801909,
+      "expected_upside": 0.9125,
+      "stability": 0.34371,
+      "liquidity": 0.283717,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "002460_26",
+      "symbol": "002460",
+      "trade_date": "2024-10-25",
+      "start_date": "2024-10-21",
+      "end_date": "2024-10-28",
+      "capturable_return": 0.083889,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.722625,
+      "challenger_layer_score": 0.818815,
+      "incumbent_late_score": 0.722625,
+      "challenger_late_score": 0.722625,
+      "late_mover_quality": 0.590344,
+      "resonance": 0.798662,
+      "expected_upside": 0.822962,
+      "stability": 0.483198,
+      "liquidity": 0.292735,
+      "passed_filters": [
+        "medium_term_uptrend",
+        "loose_uptrend",
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "002466_25",
+      "symbol": "002466",
+      "trade_date": "2024-09-24",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.411953,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.719224,
+      "challenger_layer_score": 0.892947,
+      "incumbent_late_score": 0.719224,
+      "challenger_late_score": 0.719224,
+      "late_mover_quality": 0.565493,
+      "resonance": 0.786372,
+      "expected_upside": 0.85705,
+      "stability": 0.258705,
+      "liquidity": 0.452163,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend",
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "600338_5",
+      "symbol": "600338",
+      "trade_date": "2024-02-26",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.20339,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "highest_late_mover_score",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.701546,
+      "challenger_layer_score": 0.758638,
+      "incumbent_late_score": 0.701546,
+      "challenger_late_score": 0.701546,
+      "late_mover_quality": 0.561052,
+      "resonance": 0.77614,
+      "expected_upside": 0.814278,
+      "stability": 0.866193,
+      "liquidity": 0.143676,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "300518_25",
+      "symbol": "300518",
+      "trade_date": "2024-09-27",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.355107,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.677951,
+      "challenger_layer_score": 0.723512,
+      "incumbent_late_score": 0.677951,
+      "challenger_late_score": 0.677951,
+      "late_mover_quality": 0.58366,
+      "resonance": 0.744123,
+      "expected_upside": 0.7375,
+      "stability": 0.492278,
+      "liquidity": 0.003959,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "002466_17",
+      "symbol": "002466",
+      "trade_date": "2024-07-11",
+      "start_date": "2024-07-10",
+      "end_date": "2024-07-11",
+      "capturable_return": 0.060172,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.656848,
+      "challenger_layer_score": 0.790861,
+      "incumbent_late_score": 0.656848,
+      "challenger_late_score": 0.656848,
+      "late_mover_quality": 0.590919,
+      "resonance": 0.759434,
+      "expected_upside": 0.642166,
+      "stability": 0.481401,
+      "liquidity": 0.388092,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "000155_25",
+      "symbol": "000155",
+      "trade_date": "2024-09-27",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.278835,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.656521,
+      "challenger_layer_score": 0.718892,
+      "incumbent_late_score": 0.656521,
+      "challenger_late_score": 0.656521,
+      "late_mover_quality": 0.563816,
+      "resonance": 0.742897,
+      "expected_upside": 0.69375,
+      "stability": 0.497085,
+      "liquidity": 0.107068,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "603799_25",
+      "symbol": "603799",
+      "trade_date": "2024-10-25",
+      "start_date": "2024-10-21",
+      "end_date": "2024-11-06",
+      "capturable_return": 0.186653,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.62878,
+      "challenger_layer_score": 0.718824,
+      "incumbent_late_score": 0.62878,
+      "challenger_late_score": 0.62878,
+      "late_mover_quality": 0.598634,
+      "resonance": 0.738162,
+      "expected_upside": 0.559593,
+      "stability": 0.42241,
+      "liquidity": 0.356795,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend",
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "300518_25",
+      "symbol": "300518",
+      "trade_date": "2024-09-26",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.355107,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.623911,
+      "challenger_layer_score": 0.623911,
+      "incumbent_late_score": 0.623911,
+      "challenger_late_score": 0.623911,
+      "late_mover_quality": 0.558293,
+      "resonance": 0.648485,
+      "expected_upside": 0.686826,
+      "stability": 0.493234,
+      "liquidity": 0.005424,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "000155_25",
+      "symbol": "000155",
+      "trade_date": "2024-09-26",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.278835,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.615442,
+      "challenger_layer_score": 0.643376,
+      "incumbent_late_score": 0.615442,
+      "challenger_late_score": 0.615442,
+      "late_mover_quality": 0.554455,
+      "resonance": 0.719809,
+      "expected_upside": 0.59239,
+      "stability": 0.655873,
+      "liquidity": 0.056251,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "002460_26",
+      "symbol": "002460",
+      "trade_date": "2024-10-21",
+      "start_date": "2024-10-21",
+      "end_date": "2024-10-28",
+      "capturable_return": 0.083889,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.603729,
+      "challenger_layer_score": 0.647171,
+      "incumbent_late_score": 0.603729,
+      "challenger_late_score": 0.603729,
+      "late_mover_quality": 0.597855,
+      "resonance": 0.677526,
+      "expected_upside": 0.537765,
+      "stability": 0.575878,
+      "liquidity": 0.283113,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "000155_5",
+      "symbol": "000155",
+      "trade_date": "2024-02-23",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.079922,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.601027,
+      "challenger_layer_score": 0.611805,
+      "incumbent_late_score": 0.601027,
+      "challenger_late_score": 0.601027,
+      "late_mover_quality": 0.581394,
+      "resonance": 0.730081,
+      "expected_upside": 0.498152,
+      "stability": 0.809974,
+      "liquidity": 0.076992,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "000155_5",
+      "symbol": "000155",
+      "trade_date": "2024-02-21",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.079922,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "fallback_to_junk",
+      "incumbent_layer_score": 0.587558,
+      "challenger_layer_score": 0.587558,
+      "incumbent_late_score": 0.587558,
+      "challenger_late_score": 0.587558,
+      "late_mover_quality": 0.558456,
+      "resonance": 0.640405,
+      "expected_upside": 0.573513,
+      "stability": 0.467817,
+      "liquidity": 0.076101,
+      "passed_filters": [
+        "medium_term_uptrend",
+        "loose_uptrend",
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening"
+      ],
+      "blocker_flags": [
+        "fallback_to_junk_path",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band"
+      ]
+    },
+    {
+      "window_id": "603799_28",
+      "symbol": "603799",
+      "trade_date": "2024-11-29",
+      "start_date": "2024-11-29",
+      "end_date": "2024-12-02",
+      "capturable_return": 0.014757,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "low_composite_or_low_resonance",
+      "incumbent_layer_score": 0.564235,
+      "challenger_layer_score": 0.564235,
+      "incumbent_late_score": 0.564235,
+      "challenger_late_score": 0.564235,
+      "late_mover_quality": 0.591867,
+      "resonance": 0.630941,
+      "expected_upside": 0.460685,
+      "stability": 0.669666,
+      "liquidity": 0.28971,
+      "passed_filters": [
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening"
+      ],
+      "blocker_flags": [
+        "composite_below_challenger_threshold",
+        "composite_in_incumbent_only_band",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band",
+        "low_composite_or_low_resonance_path"
+      ]
+    },
+    {
+      "window_id": "002466_28",
+      "symbol": "002466",
+      "trade_date": "2024-11-04",
+      "start_date": "2024-11-04",
+      "end_date": "2024-11-05",
+      "capturable_return": 0.027094,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "low_composite_or_low_resonance",
+      "incumbent_layer_score": 0.55329,
+      "challenger_layer_score": 0.55329,
+      "incumbent_late_score": 0.55329,
+      "challenger_late_score": 0.55329,
+      "late_mover_quality": 0.592259,
+      "resonance": 0.57484,
+      "expected_upside": 0.479781,
+      "stability": 0.615417,
+      "liquidity": 0.359894,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "composite_below_challenger_threshold",
+        "composite_in_incumbent_only_band",
+        "incumbent_used_late_mover_fallback",
+        "late_quality_below_challenger_threshold",
+        "late_quality_in_incumbent_only_band",
+        "low_composite_or_low_resonance_path"
+      ]
+    }
+  ],
+  "extras": {
+    "dataset_name": "theme_research_v2",
+    "strategy_name": "mainline_trend_c",
+    "candidate_names": [
+      "shared_default",
+      "balanced_targeted_timing_repair"
+    ]
+  }
+}

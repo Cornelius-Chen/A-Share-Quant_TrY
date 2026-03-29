@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "case_count": 2,
+    "classification_counts": {
+      "concept_supported_hierarchy_edge": 1,
+      "hierarchy_approval_edge": 1
+    },
+    "next_step": "split_feature_pack_b_by_case_type",
+    "recommended_tracks": [
+      "feature_pack_b_concept_supported_hierarchy",
+      "feature_pack_b_hierarchy_approval"
+    ]
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "row_count": 4,
+      "datasets": [
+        "theme_research_v4"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "002466"
+      ],
+      "mechanism_types": [
+        "delayed_entry_basis_advantage",
+        "entry_suppression_avoidance",
+        "preemptive_loss_avoidance_shift"
+      ],
+      "late_quality_straddles": 2,
+      "non_junk_straddles": 2,
+      "top_score_straddles": 0,
+      "permission_split_rows": 0,
+      "zero_concept_rows": 0,
+      "concept_active_rows": 4,
+      "avg_concept_support": 0.550029,
+      "max_concept_count": 2,
+      "max_concept_concentration_ratio": 0.60604,
+      "triage_classification": "concept_supported_hierarchy_edge",
+      "recommended_track": "feature_pack_b_concept_supported_hierarchy",
+      "next_focus_features": [
+        "primary_concept_support_margin",
+        "secondary_concept_support_margin",
+        "concept_rotation_pressure",
+        "concept_concentration_ratio",
+        "late_mover_quality_margin"
+      ]
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "row_count": 4,
+      "datasets": [
+        "theme_research_v4"
+      ],
+      "strategies": [
+        "mainline_trend_b"
+      ],
+      "symbols": [
+        "002902"
+      ],
+      "mechanism_types": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "other_worse_loss_shift"
+      ],
+      "late_quality_straddles": 3,
+      "non_junk_straddles": 2,
+      "top_score_straddles": 0,
+      "permission_split_rows": 2,
+      "zero_concept_rows": 4,
+      "concept_active_rows": 0,
+      "avg_concept_support": 0.0,
+      "max_concept_count": 0,
+      "max_concept_concentration_ratio": 0.0,
+      "triage_classification": "hierarchy_approval_edge",
+      "recommended_track": "feature_pack_b_hierarchy_approval",
+      "next_focus_features": [
+        "fallback_reason_score",
+        "approval_hysteresis_state",
+        "switch_buffer_pressure",
+        "late_mover_quality_margin",
+        "non_junk_composite_margin"
+      ]
+    }
+  ],
+  "interpretation": [
+    "A hierarchy/approval-edge case should not be advanced with more concept features first.",
+    "A concept-supported hierarchy case deserves concept-aware hierarchy features before replay resumes.",
+    "The purpose of triage is to split the next feature cycle, not to reopen the replay queue."
+  ]
+}

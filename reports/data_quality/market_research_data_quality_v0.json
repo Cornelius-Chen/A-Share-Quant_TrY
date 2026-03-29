@@ -1,0 +1,393 @@
+{
+  "summary": {
+    "security_symbol_count": 34,
+    "concept_covered_symbol_count": 16,
+    "concept_symbol_coverage_ratio": 0.470588,
+    "unique_concept_count": 19,
+    "mean_concepts_per_covered_symbol": 2.4375,
+    "static_primary_symbol_ratio": 0.25,
+    "multi_concept_symbol_ratio": 0.8125,
+    "top_primary_concept_share": 0.418954,
+    "warning_count": 1,
+    "sector_override_ratio": 0.0
+  },
+  "missing_concept_symbols": [
+    "000002",
+    "000063",
+    "000333",
+    "000651",
+    "000858",
+    "000977",
+    "002902",
+    "300308",
+    "300502",
+    "600031",
+    "600036",
+    "600048",
+    "600519",
+    "601012",
+    "601166",
+    "601318",
+    "601688",
+    "601985"
+  ],
+  "primary_concept_distribution": [
+    {
+      "concept_name": "锂矿概念",
+      "primary_row_count": 1618
+    },
+    {
+      "concept_name": "CRO",
+      "primary_row_count": 393
+    },
+    {
+      "concept_name": "刀片电池",
+      "primary_row_count": 257
+    },
+    {
+      "concept_name": "稀缺资源",
+      "primary_row_count": 253
+    },
+    {
+      "concept_name": "创新药",
+      "primary_row_count": 233
+    },
+    {
+      "concept_name": "单抗概念",
+      "primary_row_count": 220
+    },
+    {
+      "concept_name": "减肥药",
+      "primary_row_count": 194
+    },
+    {
+      "concept_name": "化工原料",
+      "primary_row_count": 193
+    },
+    {
+      "concept_name": "光刻机(胶)",
+      "primary_row_count": 166
+    },
+    {
+      "concept_name": "中芯概念",
+      "primary_row_count": 76
+    },
+    {
+      "concept_name": "维生素",
+      "primary_row_count": 70
+    },
+    {
+      "concept_name": "环氧丙烷",
+      "primary_row_count": 49
+    },
+    {
+      "concept_name": "CAR-T细胞疗法",
+      "primary_row_count": 48
+    },
+    {
+      "concept_name": "动力电池回收",
+      "primary_row_count": 32
+    },
+    {
+      "concept_name": "独家药品",
+      "primary_row_count": 23
+    },
+    {
+      "concept_name": "小金属概念",
+      "primary_row_count": 18
+    },
+    {
+      "concept_name": "AI制药（医疗）",
+      "primary_row_count": 9
+    },
+    {
+      "concept_name": "创新医疗服务",
+      "primary_row_count": 7
+    },
+    {
+      "concept_name": "超级真菌",
+      "primary_row_count": 3
+    }
+  ],
+  "symbol_concept_profiles": [
+    {
+      "symbol": "000155",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002176",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "稀缺资源",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 483,
+      "primary_weight_sum": 139.18225
+    },
+    {
+      "symbol": "002371",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "中芯概念",
+        "光刻机(胶)"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "中芯概念",
+        "光刻机(胶)"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 484,
+      "primary_weight_sum": 126.393342
+    },
+    {
+      "symbol": "002460",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 93.171336
+    },
+    {
+      "symbol": "002466",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "刀片电池",
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "刀片电池",
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 92.47722
+    },
+    {
+      "symbol": "002594",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "刀片电池"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "刀片电池"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300750",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 480,
+      "primary_weight_sum": 138.06927
+    },
+    {
+      "symbol": "300759",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "AI制药（医疗）",
+        "CRO",
+        "创新医疗服务"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "AI制药（医疗）",
+        "CRO",
+        "创新医疗服务"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 104.390025
+    },
+    {
+      "symbol": "300765",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "创新药",
+        "维生素"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "创新药",
+        "维生素"
+      ],
+      "primary_date_count": 232,
+      "total_mapping_rows": 464,
+      "primary_weight_sum": 119.477968
+    },
+    {
+      "symbol": "600276",
+      "all_concept_count": 4,
+      "all_concepts": [
+        "减肥药",
+        "创新药",
+        "单抗概念",
+        "超级真菌"
+      ],
+      "primary_concept_count": 4,
+      "primary_concepts": [
+        "减肥药",
+        "创新药",
+        "单抗概念",
+        "超级真菌"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 967,
+      "primary_weight_sum": 65.07226
+    },
+    {
+      "symbol": "600309",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "化工原料",
+        "环氧丙烷"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "化工原料",
+        "环氧丙烷"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 484,
+      "primary_weight_sum": 124.659021
+    },
+    {
+      "symbol": "601088",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "稀缺资源"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "稀缺资源"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "601899",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "小金属概念",
+        "稀缺资源",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "小金属概念",
+        "稀缺资源",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 724,
+      "primary_weight_sum": 92.26347
+    },
+    {
+      "symbol": "603087",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "减肥药",
+        "创新药",
+        "独家药品"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "减肥药",
+        "创新药",
+        "独家药品"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 84.213056
+    },
+    {
+      "symbol": "603259",
+      "all_concept_count": 4,
+      "all_concepts": [
+        "CAR-T细胞疗法",
+        "CRO",
+        "创新医疗服务",
+        "创新药"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "CAR-T细胞疗法",
+        "CRO",
+        "创新药"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 730,
+      "primary_weight_sum": 77.794112
+    },
+    {
+      "symbol": "603799",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 92.144778
+    }
+  ],
+  "warnings": [
+    {
+      "type": "coverage_gap",
+      "detail": "Not every security in the theme pack has concept coverage.",
+      "value": 0.470588
+    }
+  ],
+  "extras": {
+    "config_path": "config\\market_research_data_quality_v0.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

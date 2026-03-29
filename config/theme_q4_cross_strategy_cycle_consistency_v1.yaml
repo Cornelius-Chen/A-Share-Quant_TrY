@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  mechanism_reports:
+    - reports/analysis/theme_q4_cycle_mechanism_300750_b_v1.json
+    - reports/analysis/theme_q4_cycle_mechanism_300750_c_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: theme_q4_cross_strategy_cycle_consistency_v1

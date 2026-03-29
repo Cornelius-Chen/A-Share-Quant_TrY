@@ -1,0 +1,37 @@
+paths:
+  timeline_config_path: config/theme_q4_symbol_timeline_002902_quality_b_v1.yaml
+  case_report_path: reports/analysis/feature_pack_b_hierarchy_approval_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: feature_pack_b_hierarchy_approval_sweep_v1
+
+analysis:
+  control_candidate_name: theme_strict_quality_branch
+  candidates:
+    - candidate_name: theme_strict_quality_branch
+      from_base: theme_strict_quality_branch
+      description: Track-A control candidate.
+      override: {}
+    - candidate_name: theme_margin_relief_005
+      from_base: theme_strict_quality_branch
+      description: Narrow approval-edge relief only.
+      override:
+        regime:
+          min_score_margin: 0.05
+    - candidate_name: theme_nonjunk_relief_058
+      from_base: theme_strict_quality_branch
+      description: Narrow non-junk relief only.
+      override:
+        trend:
+          hierarchy:
+            min_composite_for_non_junk: 0.58
+    - candidate_name: theme_coupled_relief_005_058
+      from_base: theme_strict_quality_branch
+      description: Combined narrow approval and non-junk relief.
+      override:
+        regime:
+          min_score_margin: 0.05
+        trend:
+          hierarchy:
+            min_composite_for_non_junk: 0.58

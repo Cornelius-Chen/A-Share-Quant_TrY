@@ -2,6 +2,15 @@ __pycache__/
 .pytest_cache/
 *.pyc
 
+data/raw/**
+!data/raw/.gitkeep
+data/reference/**
+!data/reference/.gitkeep
+data/derived/**
+!data/derived/.gitkeep
+data/external/**
+!data/external/.gitkeep
+
 experiments/runs/*.json
 !experiments/runs/.gitkeep
 

@@ -1,0 +1,15 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  timeline_report: reports/analysis/baseline_q3_symbol_timeline_600519_quality_c_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: baseline_q3_symbol_cycle_delta_600519_c_v1
+
+analysis:
+  strategy_name: mainline_trend_c
+  incumbent_candidate: shared_default
+  challenger_candidate: theme_strict_quality_branch

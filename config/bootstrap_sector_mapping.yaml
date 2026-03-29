@@ -1,0 +1,7 @@
+bars_csv: data/raw/daily_bars/akshare_daily_bars_bootstrap.csv
+output_csv: data/reference/sector_mapping_daily/bootstrap_sector_mapping_cninfo.csv
+mapping_source: akshare_cninfo
+mapping_version: cninfo_bootstrap_v1
+classification_field: 行业大类
+fallback_sector_name: UNKNOWN
+fallback_sector_id: UNKNOWN

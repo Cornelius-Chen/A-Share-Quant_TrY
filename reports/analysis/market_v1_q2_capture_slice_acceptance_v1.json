@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_q2_capture_slice_as_mixed_opening_plus_persistence",
+    "top_positive_symbols": [
+      "300502",
+      "002371",
+      "603259"
+    ],
+    "mixed_mechanism_confirmed": true,
+    "top_pair_covers_slice": true,
+    "do_continue_q2_capture_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_positive_symbol_rank",
+      "actual": {
+        "top_positive_symbols": [
+          "300502",
+          "002371",
+          "603259"
+        ],
+        "top_positive_count": 9
+      },
+      "reading": "If the first two positive symbols already explain the slice, further replay is less likely to change the phase boundary."
+    },
+    {
+      "evidence_name": "persistence_case",
+      "actual": {
+        "specialist_preserved_window": true,
+        "persistence_trade_date": "2024-06-17",
+        "exit_reason_seen": [
+          "assignment_became_junk",
+          "assignment_became_junk"
+        ]
+      },
+      "reading": "The first dominant q2 symbol established a clean persistence edge against both anchors."
+    },
+    {
+      "evidence_name": "opening_case",
+      "actual": {
+        "specialist_opened_window": true,
+        "opening_trade_date": "2024-06-05",
+        "anchor_assignment_layers": [
+          "junk",
+          "junk"
+        ]
+      },
+      "reading": "The second dominant q2 symbol established a clean opening edge with shared permission and entry alignment but different hierarchy admission."
+    }
+  ],
+  "interpretation": [
+    "A q2 capture slice should continue only if later symbols are likely to change the current mechanism boundary rather than add more examples of the same two edge types.",
+    "The current evidence already shows both clean persistence and clean opening behavior inside the same slice.",
+    "So the correct default is to close the slice as a mixed capture pocket unless a later symbol is expected to add a third mechanism or materially rebalance the current reading."
+  ]
+}

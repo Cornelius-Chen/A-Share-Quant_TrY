@@ -20,6 +20,13 @@ from a_share_quant.trend.trend_filters import TrendFilters
 @dataclass(frozen=True, slots=True)
 class StrategyConfig:
     buy_quantity: int = 100
+    enable_late_mover_entry_override: bool = False
+    late_mover_entry_override_min_layer_score: float = 1.10
+    late_mover_entry_override_min_late_score: float = 1.10
+    late_mover_entry_override_allowed_reasons: tuple[str, ...] = (
+        "fallback_to_junk",
+        "low_composite_or_low_resonance",
+    )
 
 
 class BaseMainlineTrendStrategy:
@@ -101,7 +108,7 @@ class BaseMainlineTrendStrategy:
             return signals
 
         for assignment in sorted(assignments_today, key=lambda item: item.layer_score, reverse=True):
-            if assignment.layer not in self.allowed_layers:
+            if not self._can_open_long_from_assignment(assignment):
                 continue
             if assignment.sector_id != permission.approved_sector_id:
                 continue
@@ -127,6 +134,21 @@ class BaseMainlineTrendStrategy:
                     )
                 )
         return signals
+
+    def _can_open_long_from_assignment(self, assignment: HierarchyAssignment) -> bool:
+        if assignment.layer in self.allowed_layers:
+            return True
+        return self._is_late_mover_entry_override(assignment)
+
+    def _is_late_mover_entry_override(self, assignment: HierarchyAssignment) -> bool:
+        return (
+            "late_mover" in self.allowed_layers
+            and self.config.enable_late_mover_entry_override
+            and assignment.layer == "junk"
+            and assignment.reason in self.config.late_mover_entry_override_allowed_reasons
+            and assignment.layer_score >= self.config.late_mover_entry_override_min_layer_score
+            and assignment.late_score >= self.config.late_mover_entry_override_min_late_score
+        )
 
     def _has_buy_confirmation(
         self,

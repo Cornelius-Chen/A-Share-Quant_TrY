@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "dataset_name": "baseline_research_v1",
+    "incumbent_name": "shared_default",
+    "challenger_name": "balanced_compromise",
+    "strategy_count": 3,
+    "slice_count": 4,
+    "mean_capture_regression": 0.052659,
+    "worst_strategy": {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_capture": 0.477081,
+      "challenger_capture": 0.398093,
+      "capture_delta": -0.078988,
+      "capture_regression": 0.078988,
+      "incumbent_total_return": 0.002196,
+      "challenger_total_return": 0.012412,
+      "total_return_delta": 0.010216,
+      "missed_mainline_delta": 0
+    },
+    "worst_slice": {
+      "slice_name": "2024_q4",
+      "mean_capture_delta": -0.14483,
+      "capture_regression": 0.14483,
+      "worst_strategy_name": "mainline_trend_b",
+      "worst_strategy_capture_regression": 0.217245
+    },
+    "top_window_regression_count": 4
+  },
+  "strategy_deltas": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "incumbent_capture": 0.354106,
+      "challenger_capture": 0.354106,
+      "capture_delta": 0.0,
+      "capture_regression": 0.0,
+      "incumbent_total_return": 0.011058,
+      "challenger_total_return": 0.013608,
+      "total_return_delta": 0.00255,
+      "missed_mainline_delta": 0
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_capture": 0.477081,
+      "challenger_capture": 0.398093,
+      "capture_delta": -0.078988,
+      "capture_regression": 0.078988,
+      "incumbent_total_return": 0.002196,
+      "challenger_total_return": 0.012412,
+      "total_return_delta": 0.010216,
+      "missed_mainline_delta": 0
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "incumbent_capture": 0.477081,
+      "challenger_capture": 0.398093,
+      "capture_delta": -0.078988,
+      "capture_regression": 0.078988,
+      "incumbent_total_return": 0.002196,
+      "challenger_total_return": 0.012412,
+      "total_return_delta": 0.010216,
+      "missed_mainline_delta": 0
+    }
+  ],
+  "slice_deltas": [
+    {
+      "slice_name": "2024_q1",
+      "mean_capture_delta": 0.0,
+      "capture_regression": 0.0,
+      "worst_strategy_name": "mainline_trend_a",
+      "worst_strategy_capture_regression": 0.0
+    },
+    {
+      "slice_name": "2024_q2",
+      "mean_capture_delta": 3.3e-05,
+      "capture_regression": 0.0,
+      "worst_strategy_name": "mainline_trend_a",
+      "worst_strategy_capture_regression": 0.0
+    },
+    {
+      "slice_name": "2024_q3",
+      "mean_capture_delta": 0.040665,
+      "capture_regression": 0.0,
+      "worst_strategy_name": "mainline_trend_a",
+      "worst_strategy_capture_regression": 0.0
+    },
+    {
+      "slice_name": "2024_q4",
+      "mean_capture_delta": -0.14483,
+      "capture_regression": 0.14483,
+      "worst_strategy_name": "mainline_trend_b",
+      "worst_strategy_capture_regression": 0.217245
+    }
+  ],
+  "top_window_regressions": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "600519_23",
+      "symbol": "600519",
+      "start_date": "2024-12-04",
+      "end_date": "2024-12-12",
+      "capturable_return": 0.031705,
+      "incumbent_capture_ratio": 0.994315,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.994315
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "600519_23",
+      "symbol": "600519",
+      "start_date": "2024-12-04",
+      "end_date": "2024-12-12",
+      "capturable_return": 0.031705,
+      "incumbent_capture_ratio": 0.994315,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.994315
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "000333_19",
+      "symbol": "000333",
+      "start_date": "2024-09-18",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.176403,
+      "incumbent_capture_ratio": 1.0,
+      "challenger_capture_ratio": 0.452641,
+      "capture_regression": 0.547359
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "000333_19",
+      "symbol": "000333",
+      "start_date": "2024-09-18",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.176403,
+      "incumbent_capture_ratio": 1.0,
+      "challenger_capture_ratio": 0.452641,
+      "capture_regression": 0.547359
+    }
+  ],
+  "extras": {
+    "config_path": "config\\baseline_capture_diagnostic_v1.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

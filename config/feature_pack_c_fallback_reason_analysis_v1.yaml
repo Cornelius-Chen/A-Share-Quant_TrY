@@ -1,0 +1,11 @@
+report:
+  name: feature_pack_c_fallback_reason_analysis_v1
+
+paths:
+  recheck_report: reports/analysis/feature_pack_a_recheck_v1.json
+  reports_dir: reports/analysis
+
+analysis:
+  case_names:
+    - theme_q4_002902_b
+    - theme_q2_002466_c

@@ -1,0 +1,320 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v2",
+    "incumbent_name": "shared_default",
+    "challenger_name": "balanced_targeted_timing_repair",
+    "strategy_count": 3,
+    "slice_count": 4,
+    "mean_capture_regression": 0.040649,
+    "worst_strategy": {
+      "strategy_name": "mainline_trend_c",
+      "incumbent_capture": 0.358937,
+      "challenger_capture": 0.252488,
+      "capture_delta": -0.106449,
+      "capture_regression": 0.106449,
+      "incumbent_total_return": 1.1e-05,
+      "challenger_total_return": 0.002169,
+      "total_return_delta": 0.002158,
+      "missed_mainline_delta": 8
+    },
+    "worst_slice": {
+      "slice_name": "2024_q4",
+      "mean_capture_delta": -0.027597,
+      "capture_regression": 0.027597,
+      "worst_strategy_name": "mainline_trend_c",
+      "worst_strategy_capture_regression": 0.051833
+    },
+    "top_window_regression_count": 20
+  },
+  "strategy_deltas": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "incumbent_capture": 0.119855,
+      "challenger_capture": 0.113524,
+      "capture_delta": -0.006331,
+      "capture_regression": 0.006331,
+      "incumbent_total_return": -0.002748,
+      "challenger_total_return": -0.002336,
+      "total_return_delta": 0.000412,
+      "missed_mainline_delta": 1
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "incumbent_capture": 0.182877,
+      "challenger_capture": 0.173709,
+      "capture_delta": -0.009168,
+      "capture_regression": 0.009168,
+      "incumbent_total_return": -0.000277,
+      "challenger_total_return": 0.001571,
+      "total_return_delta": 0.001848,
+      "missed_mainline_delta": 1
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "incumbent_capture": 0.358937,
+      "challenger_capture": 0.252488,
+      "capture_delta": -0.106449,
+      "capture_regression": 0.106449,
+      "incumbent_total_return": 1.1e-05,
+      "challenger_total_return": 0.002169,
+      "total_return_delta": 0.002158,
+      "missed_mainline_delta": 8
+    }
+  ],
+  "slice_deltas": [
+    {
+      "slice_name": "2024_q1",
+      "mean_capture_delta": -0.017223,
+      "capture_regression": 0.017223,
+      "worst_strategy_name": "mainline_trend_c",
+      "worst_strategy_capture_regression": 0.051669
+    },
+    {
+      "slice_name": "2024_q2",
+      "mean_capture_delta": -0.020853,
+      "capture_regression": 0.020853,
+      "worst_strategy_name": "mainline_trend_a",
+      "worst_strategy_capture_regression": 0.020853
+    },
+    {
+      "slice_name": "2024_q3",
+      "mean_capture_delta": 0.005491,
+      "capture_regression": 0.002885,
+      "worst_strategy_name": "mainline_trend_b",
+      "worst_strategy_capture_regression": 0.006978
+    },
+    {
+      "slice_name": "2024_q4",
+      "mean_capture_delta": -0.027597,
+      "capture_regression": 0.027597,
+      "worst_strategy_name": "mainline_trend_c",
+      "worst_strategy_capture_regression": 0.051833
+    }
+  ],
+  "top_window_regressions": [
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "300518_25",
+      "symbol": "300518",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.355107,
+      "incumbent_capture_ratio": 0.99998,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.99998
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "000155_25",
+      "symbol": "000155",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.278835,
+      "incumbent_capture_ratio": 0.997497,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.997497
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002466_28",
+      "symbol": "002466",
+      "start_date": "2024-11-04",
+      "end_date": "2024-11-05",
+      "capturable_return": 0.027094,
+      "incumbent_capture_ratio": 0.679937,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.679937
+    },
+    {
+      "strategy_name": "mainline_trend_a",
+      "window_id": "300759_14",
+      "symbol": "300759",
+      "start_date": "2024-09-19",
+      "end_date": "2024-09-20",
+      "capturable_return": 0.016183,
+      "incumbent_capture_ratio": 0.471099,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.471099
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "300759_14",
+      "symbol": "300759",
+      "start_date": "2024-09-19",
+      "end_date": "2024-09-20",
+      "capturable_return": 0.016183,
+      "incumbent_capture_ratio": 0.471099,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.471099
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "300759_14",
+      "symbol": "300759",
+      "start_date": "2024-09-19",
+      "end_date": "2024-09-20",
+      "capturable_return": 0.016183,
+      "incumbent_capture_ratio": 0.471099,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.471099
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002460_26",
+      "symbol": "002460",
+      "start_date": "2024-10-21",
+      "end_date": "2024-10-28",
+      "capturable_return": 0.083889,
+      "incumbent_capture_ratio": 0.421254,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.421254
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "002466_17",
+      "symbol": "002466",
+      "start_date": "2024-07-10",
+      "end_date": "2024-07-11",
+      "capturable_return": 0.060172,
+      "incumbent_capture_ratio": 0.400144,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.400144
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002466_17",
+      "symbol": "002466",
+      "start_date": "2024-07-10",
+      "end_date": "2024-07-11",
+      "capturable_return": 0.060172,
+      "incumbent_capture_ratio": 0.400144,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.400144
+    },
+    {
+      "strategy_name": "mainline_trend_a",
+      "window_id": "300765_4",
+      "symbol": "300765",
+      "start_date": "2024-04-23",
+      "end_date": "2024-04-25",
+      "capturable_return": 0.09835,
+      "incumbent_capture_ratio": 0.39283,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.39283
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "300765_4",
+      "symbol": "300765",
+      "start_date": "2024-04-23",
+      "end_date": "2024-04-25",
+      "capturable_return": 0.09835,
+      "incumbent_capture_ratio": 0.39283,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.39283
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "300765_4",
+      "symbol": "300765",
+      "start_date": "2024-04-23",
+      "end_date": "2024-04-25",
+      "capturable_return": 0.09835,
+      "incumbent_capture_ratio": 0.39283,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.39283
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002176_25",
+      "symbol": "002176",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.335404,
+      "incumbent_capture_ratio": 0.361608,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.361608
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "600338_5",
+      "symbol": "600338",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.20339,
+      "incumbent_capture_ratio": 0.300453,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.300453
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "window_id": "603799_25",
+      "symbol": "603799",
+      "start_date": "2024-10-21",
+      "end_date": "2024-11-06",
+      "capturable_return": 0.186653,
+      "incumbent_capture_ratio": 0.826416,
+      "challenger_capture_ratio": 0.540587,
+      "capture_regression": 0.285829
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "603799_25",
+      "symbol": "603799",
+      "start_date": "2024-10-21",
+      "end_date": "2024-11-06",
+      "capturable_return": 0.186653,
+      "incumbent_capture_ratio": 0.826416,
+      "challenger_capture_ratio": 0.540587,
+      "capture_regression": 0.285829
+    },
+    {
+      "strategy_name": "mainline_trend_a",
+      "window_id": "603799_25",
+      "symbol": "603799",
+      "start_date": "2024-10-21",
+      "end_date": "2024-11-06",
+      "capturable_return": 0.186653,
+      "incumbent_capture_ratio": 0.436815,
+      "challenger_capture_ratio": 0.169284,
+      "capture_regression": 0.267531
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "603799_28",
+      "symbol": "603799",
+      "start_date": "2024-11-29",
+      "end_date": "2024-12-02",
+      "capturable_return": 0.014757,
+      "incumbent_capture_ratio": 0.187401,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.187401
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "000155_5",
+      "symbol": "000155",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.079922,
+      "incumbent_capture_ratio": 0.176401,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.176401
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "603799_23",
+      "symbol": "603799",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.366934,
+      "incumbent_capture_ratio": 0.531876,
+      "challenger_capture_ratio": 0.415273,
+      "capture_regression": 0.116603
+    }
+  ],
+  "extras": {
+    "config_path": "config\\targeted_timing_theme_capture_diagnostic.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

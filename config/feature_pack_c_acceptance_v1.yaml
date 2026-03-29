@@ -1,0 +1,10 @@
+report:
+  name: feature_pack_c_acceptance_v1
+
+paths:
+  reports_dir: reports/analysis
+  fallback_report: reports/analysis/feature_pack_c_fallback_reason_analysis_v1.json
+  residual_report: reports/analysis/feature_pack_c_late_quality_residuals_v1.json
+  stability_liquidity_report: reports/analysis/feature_pack_c_stability_liquidity_context_v1.json
+  turnover_report: reports/analysis/feature_pack_c_turnover_share_context_v1.json
+  balanced_turnover_report: reports/analysis/feature_pack_c_balanced_turnover_weakness_v1.json

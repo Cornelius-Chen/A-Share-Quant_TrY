@@ -1,0 +1,23 @@
+protocol_version: protocol_v1.0
+mapping_source: akshare_cninfo
+mapping_version: cninfo_theme_bootstrap_v1
+
+paths:
+  bars_csv: data/raw/daily_bars/akshare_daily_bars_theme_bootstrap.csv
+  mapping_input_csv: data/reference/sector_mapping_daily/theme_bootstrap_sector_mapping_cninfo.csv
+  concept_mapping_input_csv: data/reference/concept_mapping_daily/theme_bootstrap_concept_mapping_daily.csv
+  mapping_output_csv: data/reference/sector_mapping_daily/theme_bootstrap_sector_mapping_daily.csv
+  sector_snapshots_output_csv: data/derived/sector_snapshots/theme_bootstrap_sector_snapshots.csv
+  stock_snapshots_output_csv: data/derived/stock_snapshots/theme_bootstrap_stock_snapshots.csv
+  mainline_windows_output_csv: data/derived/mainline_windows/theme_bootstrap_mainline_windows.csv
+
+rules:
+  lookback: 5
+  top_sector_score_threshold: 0.52
+  top_sector_rank_limit: 1
+  min_window_length: 2
+
+sector_assignments:
+  "000155":
+    sector_id: ENERGY
+    sector_name: Energy

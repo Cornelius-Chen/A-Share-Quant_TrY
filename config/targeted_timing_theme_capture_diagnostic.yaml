@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  comparison_report: reports/20260329T053023Z_cad7a54b_comparison.json
+  slice_report: reports/20260329T053133Z_a592137c_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: targeted_timing_theme_capture_diagnostic
+
+diagnostic:
+  incumbent_name: shared_default
+  challenger_name: balanced_targeted_timing_repair
+  dataset_name: theme_research_v2

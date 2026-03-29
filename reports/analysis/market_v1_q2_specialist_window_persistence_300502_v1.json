@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "specialist_candidate": "baseline_expansion_branch",
+    "anchor_candidates": [
+      "shared_default",
+      "buffer_only_012"
+    ],
+    "window_start": "2024-06-14",
+    "window_end": "2024-06-19",
+    "specialist_preserved_window": true,
+    "persistence_trade_date": "2024-06-17"
+  },
+  "persistence_edge": {
+    "trade_date": "2024-06-17",
+    "specialist_candidate": "baseline_expansion_branch",
+    "specialist_position_qty": 100,
+    "specialist_holding_should_hold": true,
+    "specialist_holding_health_score": 3.5,
+    "specialist_exit_should_exit": false,
+    "specialist_exit_reason": "structure_intact",
+    "specialist_assignment_layer": "late_mover",
+    "specialist_assignment_reason": "highest_late_mover_score"
+  },
+  "anchor_divergence": [
+    {
+      "candidate_name": "shared_default",
+      "trade_date": "2024-06-17",
+      "position_qty": 100,
+      "holding_should_hold": true,
+      "holding_health_score": 2.5,
+      "exit_should_exit": true,
+      "exit_reason": "assignment_became_junk",
+      "emitted_actions": [
+        "sell"
+      ],
+      "assignment_layer": "junk",
+      "assignment_reason": "fallback_to_junk"
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "trade_date": "2024-06-17",
+      "position_qty": 100,
+      "holding_should_hold": true,
+      "holding_health_score": 2.5,
+      "exit_should_exit": true,
+      "exit_reason": "assignment_became_junk",
+      "emitted_actions": [
+        "sell"
+      ],
+      "assignment_layer": "junk",
+      "assignment_reason": "fallback_to_junk"
+    }
+  ],
+  "interpretation": [
+    "A persistence edge is different from an opening edge: the specialist already has the position and simply refuses to churn out when anchors do.",
+    "The cleanest persistence cases happen when the specialist still says hold while anchors emit sell on the same date.",
+    "If the specialist and anchors all entered the window together, then persistence usually matters more than entry logic for the resulting capture edge."
+  ]
+}

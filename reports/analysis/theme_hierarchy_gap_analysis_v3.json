@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v4",
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "balanced_targeted_timing_repair",
+    "impacted_window_count": 4,
+    "gap_day_count": 2,
+    "unique_symbol_count": 2,
+    "windows_with_gap_days": 2,
+    "top_blocker": "composite_below_challenger_threshold",
+    "top_reason_transition": "late_mover_quality_fallback -> low_composite_or_low_resonance",
+    "mean_late_mover_quality": 0.6,
+    "mean_challenger_late_score": 0.561937
+  },
+  "blocker_summary": {
+    "composite_below_challenger_threshold": 2,
+    "composite_in_incumbent_only_band": 2,
+    "incumbent_used_late_mover_fallback": 2,
+    "low_composite_or_low_resonance_path": 2
+  },
+  "reason_transition_summary": {
+    "late_mover_quality_fallback -> low_composite_or_low_resonance": 2
+  },
+  "top_gap_days": [
+    {
+      "window_id": "603799_28",
+      "symbol": "603799",
+      "trade_date": "2024-11-29",
+      "start_date": "2024-11-29",
+      "end_date": "2024-12-02",
+      "capturable_return": 0.014757,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "low_composite_or_low_resonance",
+      "incumbent_layer_score": 0.567488,
+      "challenger_layer_score": 0.567488,
+      "incumbent_late_score": 0.567488,
+      "challenger_late_score": 0.567488,
+      "late_mover_quality": 0.6,
+      "resonance": 0.630941,
+      "expected_upside": 0.460685,
+      "stability": 0.669666,
+      "liquidity": 0.28971,
+      "passed_filters": [
+        "pullback_repair"
+      ],
+      "triggered_entries": [
+        "confirmation_entry",
+        "pullback_then_restrengthening"
+      ],
+      "blocker_flags": [
+        "composite_below_challenger_threshold",
+        "composite_in_incumbent_only_band",
+        "incumbent_used_late_mover_fallback",
+        "low_composite_or_low_resonance_path"
+      ]
+    },
+    {
+      "window_id": "002466_28",
+      "symbol": "002466",
+      "trade_date": "2024-11-04",
+      "start_date": "2024-11-04",
+      "end_date": "2024-11-05",
+      "capturable_return": 0.027094,
+      "incumbent_layer": "late_mover",
+      "challenger_layer": "junk",
+      "incumbent_reason": "late_mover_quality_fallback",
+      "challenger_reason": "low_composite_or_low_resonance",
+      "incumbent_layer_score": 0.556386,
+      "challenger_layer_score": 0.556386,
+      "incumbent_late_score": 0.556386,
+      "challenger_late_score": 0.556386,
+      "late_mover_quality": 0.6,
+      "resonance": 0.57484,
+      "expected_upside": 0.479781,
+      "stability": 0.615417,
+      "liquidity": 0.359894,
+      "passed_filters": [
+        "strict_short_term_bullish",
+        "medium_term_uptrend",
+        "loose_uptrend"
+      ],
+      "triggered_entries": [
+        "mid_trend_follow"
+      ],
+      "blocker_flags": [
+        "composite_below_challenger_threshold",
+        "composite_in_incumbent_only_band",
+        "incumbent_used_late_mover_fallback",
+        "low_composite_or_low_resonance_path"
+      ]
+    }
+  ],
+  "extras": {
+    "dataset_name": "theme_research_v4",
+    "strategy_name": "mainline_trend_c",
+    "candidate_names": [
+      "shared_default",
+      "balanced_targeted_timing_repair"
+    ]
+  }
+}

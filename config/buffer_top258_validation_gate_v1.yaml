@@ -1,0 +1,22 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  comparison_report: reports/20260329T070422Z_3a231b85_comparison.json
+  reports_dir: reports/gates
+
+report:
+  name: buffer_top258_validation_gate_v1
+
+gate:
+  incumbent_candidate: shared_default
+  challenger_candidate: buffer_top258
+  min_composite_rank_improvement: 5.0
+  min_mean_total_return_delta: 0.003
+  min_mean_max_drawdown_improvement: 0.003
+  max_mean_capture_regression: 0.045
+  min_total_return_row_wins: 2
+  min_dataset_mean_total_return_delta: 0.0005
+  min_dataset_mean_max_drawdown_improvement: 0.0005
+  max_dataset_mean_capture_regression: 0.04

@@ -1,0 +1,14 @@
+{
+  "mechanism_rows": [
+    {
+      "mechanism_type": "preemptive_loss_avoidance_shift",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {"pnl": -120}
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {"pnl": -30}
+    }
+  ]
+}

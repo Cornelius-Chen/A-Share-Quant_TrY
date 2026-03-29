@@ -1,0 +1,96 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: theme_q1_symbol_timeline_000155_capture_v1
+
+dataset:
+  dataset_name: theme_research_v4
+  config_path: config/theme_research_strategy_suite_v4.yaml
+
+backtest:
+  initial_cash: 1000000
+  price_field: open
+
+cost_model:
+  commission_bps: 3.0
+  stamp_tax_bps: 10.0
+  min_commission: 5.0
+
+limit_model:
+  daily_limit_pct: 0.10
+  epsilon: 0.0001
+
+strategy:
+  strategy_names:
+    - mainline_trend_c
+
+candidates:
+  - candidate_name: shared_default
+    description: Current official shared default.
+    override: {}
+  - candidate_name: buffer_only_012
+    description: Current strongest frozen challenger.
+    override:
+      regime:
+        min_top_score: 2.6
+        min_score_margin: 0.05
+        switch_margin_buffer: 0.12
+      trend:
+        hierarchy:
+          min_resonance_for_core: 0.57
+          min_quality_for_late_mover: 0.60
+          min_composite_for_non_junk: 0.57
+        filters:
+          short_window: 2
+          medium_window: 3
+          long_window: 5
+          loose_window: 5
+          repair_window: 3
+        entry_rules:
+          medium_window: 3
+          breakout_lookback: 4
+        holding:
+          medium_window: 3
+          min_health_score_to_hold: 1.0
+        exit_guard:
+          medium_window: 3
+  - candidate_name: baseline_expansion_branch
+    description: Capture specialist branch.
+    override:
+      regime:
+        min_top_score: 2.3
+        min_score_margin: 0.0
+      trend:
+        hierarchy:
+          min_resonance_for_core: 0.50
+          min_quality_for_late_mover: 0.45
+          min_composite_for_non_junk: 0.50
+        filters:
+          short_window: 2
+          medium_window: 3
+          long_window: 4
+          loose_window: 6
+          repair_window: 4
+        entry_rules:
+          confirmation_window: 2
+          medium_window: 2
+          breakout_lookback: 5
+        holding:
+          medium_window: 3
+          min_health_score_to_hold: 0.8
+        exit_guard:
+          medium_window: 3
+
+analysis:
+  symbol: "000155"
+  start_date: 2024-02-19
+  end_date: 2024-03-04
+
+comparison:
+  incumbent_candidate: shared_default
+  challenger_candidate: baseline_expansion_branch

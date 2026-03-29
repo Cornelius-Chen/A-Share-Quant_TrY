@@ -1,0 +1,19 @@
+{
+  "mechanism_rows": [
+    {
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {"pnl": -100}
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {"pnl": -50}
+    },
+    {
+      "mechanism_type": "other_worse_loss_shift",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {"pnl": -10}
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "suspect_count": 2,
+    "thinning_signal": true,
+    "feature_pack_c_closed": true,
+    "u1_case_centroid_distance": 4.080383,
+    "u1_cases_geometrically_separable": true,
+    "u2_ready": false,
+    "recommended_next_phase": "hold_u2_and_wait_for_larger_or_less_separable_suspect_set"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "suspect_set_size",
+      "actual": {
+        "feature_gap_suspect_count": 2,
+        "minimum_for_u2": 4
+      },
+      "reading": "Pocket clustering is only worthwhile if the suspect set is large enough to form more than a trivial split."
+    },
+    {
+      "evidence_name": "pack_c_exit",
+      "actual": {
+        "acceptance_posture": "close_feature_pack_c_as_explanatory_and_prepare_u1_sidecar",
+        "ready_for_u1_lightweight_geometry": true
+      },
+      "reading": "Pack-C has already closed as explanatory, so the next sidecar decision should be based on evidence quality rather than on unfinished pack work."
+    },
+    {
+      "evidence_name": "u1_geometry",
+      "actual": {
+        "case_centroid_distance": 4.080383,
+        "separation_reading": "cases_geometrically_separable"
+      },
+      "reading": "If the current suspects are already cleanly separable, clustering adds less value than simply treating them as different lanes."
+    }
+  ],
+  "interpretation": [
+    "U2 clustering should begin only when there are enough unresolved suspects and the current pockets are still blended enough that clustering can change the next feature-pack decision.",
+    "The current state fails that bar because the suspect set is small and U1 already separated the two active pockets cleanly.",
+    "So the right action is to hold U2, not to force a clustering phase for its own sake."
+  ]
+}

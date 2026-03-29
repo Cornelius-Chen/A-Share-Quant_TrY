@@ -1,0 +1,107 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "cycle_count": 4,
+    "avoided_negative_cycle_count": 1,
+    "reduced_negative_cycle_count": 1,
+    "worsened_negative_cycle_count": 1,
+    "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+  },
+  "mechanism_rows": [
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-01",
+        "exit_date": "2024-08-02",
+        "quantity": 100,
+        "entry_price": 1342.56,
+        "exit_price": 1298.16,
+        "pnl": -4649.0376,
+        "holding_days": 1
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": "2024-07-31",
+      "trigger_reason": "incumbent_opened_cycle_but_challenger_suppressed_entry"
+    },
+    {
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-09",
+        "exit_date": "2024-08-14",
+        "quantity": 100,
+        "entry_price": 1384.59,
+        "exit_price": 1347.57,
+        "pnl": -3918.7218,
+        "holding_days": 5
+      },
+      "bridge_classification": "reduced_loss_nearby_cycle",
+      "closest_challenger_cycle": {
+        "entry_date": "2024-08-09",
+        "exit_date": "2024-08-13",
+        "quantity": 100,
+        "entry_price": 1384.59,
+        "exit_price": 1357.56,
+        "pnl": -2921.0205,
+        "holding_days": 4
+      },
+      "pnl_delta_vs_closest": 997.7013,
+      "trigger_date": "2024-08-12",
+      "trigger_reason": "challenger_exited_before_incumbent"
+    },
+    {
+      "mechanism_type": "later_exit_loss_extension",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-07-03",
+        "exit_date": "2024-07-05",
+        "quantity": 100,
+        "entry_price": 1423.56,
+        "exit_price": 1403.56,
+        "pnl": -2225.1696,
+        "holding_days": 2
+      },
+      "bridge_classification": "worse_nearby_cycle",
+      "closest_challenger_cycle": {
+        "entry_date": "2024-07-03",
+        "exit_date": "2024-07-08",
+        "quantity": 100,
+        "entry_price": 1423.56,
+        "exit_price": 1367.56,
+        "pnl": -5820.4896,
+        "holding_days": 5
+      },
+      "pnl_delta_vs_closest": -3595.32,
+      "trigger_date": "2024-07-04",
+      "trigger_reason": "incumbent_exited_before_challenger"
+    },
+    {
+      "mechanism_type": "entry_suppression_opportunity_cost",
+      "cycle_sign": "positive",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-16",
+        "exit_date": "2024-08-20",
+        "quantity": 100,
+        "entry_price": 1351.35,
+        "exit_price": 1354.46,
+        "pnl": 94.3797,
+        "holding_days": 4
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": "2024-08-15",
+      "trigger_reason": "incumbent_opened_cycle_but_challenger_suppressed_entry"
+    }
+  ],
+  "interpretation": [
+    "Entry-suppression avoidance means the challenger never opened the incumbent's bad cycle.",
+    "Earlier-exit loss reduction means both sides opened the cycle, but the challenger cut risk sooner.",
+    "Later-exit loss extension is the failure case: the challenger held the same bad cycle longer and paid for it."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "close_feature_pack_c_as_explanatory_and_prepare_u1_sidecar",
+    "late_quality_dominant_count": 6,
+    "raw_below_threshold_count": 8,
+    "turnover_share_led_count": 3,
+    "singleton_sector_masking_count": 2,
+    "true_balanced_share_weakness_count": 0,
+    "do_continue_pack_c_turnover_branch": false,
+    "do_restart_replay_queue": false,
+    "ready_for_u1_lightweight_geometry": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "fallback_decomposition",
+      "actual": {
+        "late_quality_dominant": 6,
+        "score_margin_dominant": 2
+      },
+      "reading": "The suspect pockets are still driven primarily by late-quality failure rather than a generic score-margin story."
+    },
+    {
+      "evidence_name": "raw_late_quality_stack",
+      "actual": {
+        "raw_below_threshold_count": 8,
+        "concept_boost_active_count": 1,
+        "dominant_residual_component_counts": {
+          "stability": 3,
+          "liquidity": 3,
+          "sector_strength": 2
+        }
+      },
+      "reading": "The remaining blocker sits inside the raw late-quality stack, with concept boost mostly secondary."
+    },
+    {
+      "evidence_name": "turnover_lane_split",
+      "actual": {
+        "turnover_share_led": 3,
+        "local_turnover_context_counts": {
+          "sector_peer_dominance": 1,
+          "broad_attention_deficit": 0,
+          "balanced_share_weakness": 2
+        }
+      },
+      "reading": "Turnover-share matters locally, but it does not collapse into one global attention feature."
+    },
+    {
+      "evidence_name": "balanced_turnover_resolution",
+      "actual": {
+        "balanced_weakness_counts": {
+          "singleton_sector_masking": 2,
+          "true_balanced_share_weakness": 0
+        }
+      },
+      "reading": "The balanced-share branch is currently explained by singleton-sector masking rather than a reusable balanced-turnover weakness feature."
+    }
+  ],
+  "interpretation": [
+    "Feature-pack-c should continue only if the next lane still promises a reusable local-causal branch rather than one more descriptive split.",
+    "The current evidence says pack-c succeeded as explanation: it localized the pockets to late-quality residual structure and ruled out a generic turnover-attention feature.",
+    "The correct next move is therefore not more turnover-lane refinement. It is to close feature-pack-c as explanatory and, if needed, start a bounded U1 lightweight-geometry sidecar."
+  ]
+}

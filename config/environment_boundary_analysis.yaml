@@ -1,0 +1,10 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  validation_report: reports/20260329T041309Z_0352bb07_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: environment_boundary_analysis_v1

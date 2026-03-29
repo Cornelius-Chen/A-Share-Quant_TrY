@@ -1,0 +1,7 @@
+bars_csv: data/raw/daily_bars/akshare_daily_bars_theme_bootstrap.csv
+output_csv: data/reference/concept_mapping_daily/theme_bootstrap_concept_mapping_daily.csv
+mapping_source: akshare_em_concept
+mapping_version: concept_theme_bootstrap_v1
+max_boards_to_scan: 20
+max_concepts_per_symbol: 3
+board_pause_seconds: 0.0

@@ -1,0 +1,87 @@
+{
+  "summary": {
+    "strategy_count": 2,
+    "shared_negative_mechanism_count": 3,
+    "identical_negative_cycle_map": true,
+    "primary_takeaway": "If multiple strategies share the same negative-cycle map, the drawdown pocket is more likely to be a dataset-level structural effect."
+  },
+  "strategy_rows": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "negative_cycle_count": 3,
+      "mechanism_types": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "later_exit_loss_extension"
+      ],
+      "cycle_signatures": [
+        {
+          "mechanism_type": "earlier_exit_loss_reduction",
+          "entry_date": "2024-08-09",
+          "exit_date": "2024-08-14"
+        },
+        {
+          "mechanism_type": "entry_suppression_avoidance",
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-08-02"
+        },
+        {
+          "mechanism_type": "later_exit_loss_extension",
+          "entry_date": "2024-07-03",
+          "exit_date": "2024-07-05"
+        }
+      ]
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "negative_cycle_count": 3,
+      "mechanism_types": [
+        "earlier_exit_loss_reduction",
+        "entry_suppression_avoidance",
+        "later_exit_loss_extension"
+      ],
+      "cycle_signatures": [
+        {
+          "mechanism_type": "earlier_exit_loss_reduction",
+          "entry_date": "2024-08-09",
+          "exit_date": "2024-08-14"
+        },
+        {
+          "mechanism_type": "entry_suppression_avoidance",
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-08-02"
+        },
+        {
+          "mechanism_type": "later_exit_loss_extension",
+          "entry_date": "2024-07-03",
+          "exit_date": "2024-07-05"
+        }
+      ]
+    }
+  ],
+  "shared_mechanisms": [
+    {
+      "mechanism_type": "later_exit_loss_extension",
+      "entry_date": "2024-07-03",
+      "exit_date": "2024-07-05",
+      "shared_strategy_count": 2
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "entry_date": "2024-08-01",
+      "exit_date": "2024-08-02",
+      "shared_strategy_count": 2
+    },
+    {
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "entry_date": "2024-08-09",
+      "exit_date": "2024-08-14",
+      "shared_strategy_count": 2
+    }
+  ],
+  "interpretation": [
+    "A shared negative-cycle map means the pocket is not just one strategy's accident.",
+    "If the same entry dates and mechanism types repeat across strategies, future replay effort should move to other pockets instead of re-explaining the same one.",
+    "Differences across strategies matter only when the shared map breaks; otherwise the pocket can be treated as structurally stable."
+  ]
+}

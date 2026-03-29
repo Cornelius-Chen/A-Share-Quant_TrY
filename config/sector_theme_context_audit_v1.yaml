@@ -1,0 +1,22 @@
+paths:
+  stock_snapshots_csv: data/derived/stock_snapshots/market_research_stock_snapshots_v1.csv
+  sector_snapshots_csv: data/derived/sector_snapshots/market_research_sector_snapshots_v1.csv
+  reports_dir: reports/analysis
+
+report:
+  name: sector_theme_context_audit_v1
+
+analysis:
+  slices:
+    - dataset_name: market_research_v1
+      slice_name: 2024_q2
+      slice_role: capture
+      acceptance_report_path: reports/analysis/market_v1_q2_capture_slice_acceptance_v1.json
+    - dataset_name: market_research_v1
+      slice_name: 2024_q3
+      slice_role: drawdown
+      acceptance_report_path: reports/analysis/market_v1_q3_drawdown_slice_acceptance_v1.json
+    - dataset_name: market_research_v1
+      slice_name: 2024_q4
+      slice_role: drawdown
+      acceptance_report_path: reports/analysis/market_v1_q4_drawdown_slice_acceptance_v1.json

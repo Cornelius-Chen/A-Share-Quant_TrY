@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "bridge_days": 1,
+    "incumbent_only_cycle_count": 4,
+    "avoided_cycle_count": 2,
+    "reduced_loss_cycle_count": 1,
+    "worse_loss_cycle_count": 1
+  },
+  "bridged_cycles": [
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-08-01",
+        "exit_date": "2024-08-02",
+        "quantity": 100,
+        "entry_price": 1342.56,
+        "exit_price": 1298.16,
+        "pnl": -4649.0376,
+        "holding_days": 1
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-08-09",
+        "exit_date": "2024-08-14",
+        "quantity": 100,
+        "entry_price": 1384.59,
+        "exit_price": 1347.57,
+        "pnl": -3918.7218,
+        "holding_days": 5
+      },
+      "classification": "reduced_loss_nearby_cycle",
+      "challenger_cycles": [
+        {
+          "entry_date": "2024-08-09",
+          "exit_date": "2024-08-13",
+          "quantity": 100,
+          "entry_price": 1384.59,
+          "exit_price": 1357.56,
+          "pnl": -2921.0205,
+          "holding_days": 4
+        }
+      ],
+      "closest_challenger_cycle": {
+        "entry_date": "2024-08-09",
+        "exit_date": "2024-08-13",
+        "quantity": 100,
+        "entry_price": 1384.59,
+        "exit_price": 1357.56,
+        "pnl": -2921.0205,
+        "holding_days": 4
+      },
+      "pnl_delta_vs_closest": 997.7013
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-07-03",
+        "exit_date": "2024-07-05",
+        "quantity": 100,
+        "entry_price": 1423.56,
+        "exit_price": 1403.56,
+        "pnl": -2225.1696,
+        "holding_days": 2
+      },
+      "classification": "worse_nearby_cycle",
+      "challenger_cycles": [
+        {
+          "entry_date": "2024-07-03",
+          "exit_date": "2024-07-08",
+          "quantity": 100,
+          "entry_price": 1423.56,
+          "exit_price": 1367.56,
+          "pnl": -5820.4896,
+          "holding_days": 5
+        }
+      ],
+      "closest_challenger_cycle": {
+        "entry_date": "2024-07-03",
+        "exit_date": "2024-07-08",
+        "quantity": 100,
+        "entry_price": 1423.56,
+        "exit_price": 1367.56,
+        "pnl": -5820.4896,
+        "holding_days": 5
+      },
+      "pnl_delta_vs_closest": -3595.32
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-08-16",
+        "exit_date": "2024-08-20",
+        "quantity": 100,
+        "entry_price": 1351.35,
+        "exit_price": 1354.46,
+        "pnl": 94.3797,
+        "holding_days": 4
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    }
+  ],
+  "interpretation": [
+    "A drawdown-specialist branch is strongest when it either avoids a bad incumbent-only cycle entirely or converts it into a nearby smaller loss.",
+    "A nearby challenger cycle is still useful if it shrinks loss enough; full avoidance is not the only valid drawdown mechanism.",
+    "Worse nearby cycles matter because they show where the specialist pays for its stricter posture."
+  ]
+}

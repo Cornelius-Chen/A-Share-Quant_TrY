@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: feature_pack_c_turnover_share_context_v1
+
+inputs:
+  context_report: reports/analysis/feature_pack_c_stability_liquidity_context_v1.json
+  stock_snapshots_csv: data/derived/stock_snapshots/theme_research_stock_snapshots_v5.csv
+  case_names:
+    - theme_q4_002902_b
+    - theme_q2_002466_c

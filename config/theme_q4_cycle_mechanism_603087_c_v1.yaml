@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  bridge_report: reports/analysis/theme_q4_nearby_cycle_bridge_603087_c_v1.json
+  timeline_report: reports/analysis/theme_q4_symbol_timeline_603087_quality_c_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: theme_q4_cycle_mechanism_603087_c_v1
+
+analysis:
+  strategy_name: mainline_trend_c
+  incumbent_candidate: shared_default
+  challenger_candidate: theme_strict_quality_branch

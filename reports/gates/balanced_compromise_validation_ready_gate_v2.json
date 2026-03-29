@@ -1,0 +1,157 @@
+{
+  "incumbent_name": "shared_default",
+  "challenger_name": "balanced_compromise",
+  "passed": false,
+  "summary": {
+    "composite_rank_improvement": 6.333333,
+    "mean_total_return_delta": 0.003807,
+    "mean_capture_delta": -0.030373,
+    "mean_max_drawdown_improvement": 0.00317,
+    "challenger_total_return_row_wins": 6,
+    "incumbent_total_return_row_wins": 0
+  },
+  "checks": [
+    {
+      "name": "composite_rank_improvement",
+      "actual": 6.333333,
+      "threshold": 5.0,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must improve the cross-pack composite rank score enough to justify further promotion discussion."
+    },
+    {
+      "name": "mean_total_return_delta",
+      "actual": 0.003807,
+      "threshold": 0.003,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must improve mean total return versus the incumbent."
+    },
+    {
+      "name": "mean_max_drawdown_improvement",
+      "actual": 0.00317,
+      "threshold": 0.003,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must improve mean max drawdown versus the incumbent."
+    },
+    {
+      "name": "mean_capture_regression",
+      "actual": 0.030373,
+      "threshold": 0.045,
+      "operator": "<=",
+      "passed": true,
+      "description": "Challenger may give back some capture, but only within the configured tolerance."
+    },
+    {
+      "name": "total_return_row_wins",
+      "actual": 6.0,
+      "threshold": 2.0,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must still own at least a minimum number of row-level total-return wins."
+    },
+    {
+      "name": "min_dataset_mean_total_return_delta",
+      "actual": 0.001031,
+      "threshold": 0.0005,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must improve mean total return by at least the configured amount on every dataset pack."
+    },
+    {
+      "name": "min_dataset_mean_max_drawdown_improvement",
+      "actual": 0.000757,
+      "threshold": 0.0005,
+      "operator": ">=",
+      "passed": true,
+      "description": "Challenger must improve mean max drawdown by at least the configured amount on every dataset pack."
+    },
+    {
+      "name": "max_dataset_mean_capture_regression",
+      "actual": 0.052659,
+      "threshold": 0.04,
+      "operator": "<=",
+      "passed": false,
+      "description": "No single dataset pack may suffer capture regression beyond the configured tolerance."
+    }
+  ],
+  "incumbent_metrics": {
+    "candidate_name": "shared_default",
+    "candidate_description": "Shared default protocol thresholds.",
+    "row_count": 9,
+    "dataset_count": 3,
+    "strategy_count": 3,
+    "mean_total_return": 0.002144,
+    "mean_mainline_capture_ratio": 0.295613,
+    "mean_max_drawdown": 0.015777,
+    "avg_total_return_rank": 16.777778,
+    "avg_capture_rank": 16.333333,
+    "avg_drawdown_rank": 19.444444,
+    "composite_rank_score": 52.555555
+  },
+  "challenger_metrics": {
+    "candidate_name": "balanced_compromise",
+    "candidate_description": "Best current shared-default challenger.",
+    "row_count": 9,
+    "dataset_count": 3,
+    "strategy_count": 3,
+    "mean_total_return": 0.005951,
+    "mean_mainline_capture_ratio": 0.26524,
+    "mean_max_drawdown": 0.012607,
+    "avg_total_return_rank": 11.444444,
+    "avg_capture_rank": 18.555556,
+    "avg_drawdown_rank": 16.222222,
+    "composite_rank_score": 46.222222
+  },
+  "dataset_deltas": [
+    {
+      "dataset_name": "baseline_research_v1",
+      "mean_total_return_delta": 0.007661,
+      "mean_capture_delta": -0.052659,
+      "mean_capture_regression": 0.052659,
+      "mean_max_drawdown_improvement": 0.007979
+    },
+    {
+      "dataset_name": "market_research_v0",
+      "mean_total_return_delta": 0.00273,
+      "mean_capture_delta": -0.003256,
+      "mean_capture_regression": 0.003256,
+      "mean_max_drawdown_improvement": 0.000772
+    },
+    {
+      "dataset_name": "theme_research_v2",
+      "mean_total_return_delta": 0.001031,
+      "mean_capture_delta": -0.035202,
+      "mean_capture_regression": 0.035202,
+      "mean_max_drawdown_improvement": 0.000757
+    }
+  ],
+  "row_win_counts": {
+    "balanced_compromise": {
+      "total_return": 6,
+      "mainline_capture_ratio": 0,
+      "max_drawdown": 3
+    },
+    "baseline_expansion_branch": {
+      "total_return": 0,
+      "mainline_capture_ratio": 6,
+      "max_drawdown": 1
+    },
+    "theme_strict_quality_branch": {
+      "total_return": 3,
+      "mainline_capture_ratio": 0,
+      "max_drawdown": 5
+    },
+    "shared_default": {
+      "total_return": 0,
+      "mainline_capture_ratio": 3,
+      "max_drawdown": 0
+    }
+  },
+  "extras": {
+    "comparison_report": "reports\\20260329T050714Z_c0ed1f58_comparison.json",
+    "config_path": "config\\balanced_compromise_validation_gate_v2.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

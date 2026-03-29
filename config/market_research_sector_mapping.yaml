@@ -1,0 +1,8 @@
+bars_csv: data/raw/daily_bars/akshare_daily_bars_market_research_v0.csv
+output_csv: data/reference/sector_mapping_daily/market_research_sector_mapping_cninfo_v0.csv
+mapping_source: akshare_cninfo
+mapping_version: cninfo_market_research_v0
+classification_field: 鐞涘奔绗熸径褏琚?
+fallback_sector_name: UNKNOWN
+fallback_sector_id: UNKNOWN
+backfill_earliest_known: true

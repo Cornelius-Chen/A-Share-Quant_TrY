@@ -1,0 +1,36 @@
+paths:
+  timeline_config_path: config/theme_q4_symbol_timeline_002902_quality_b_v1.yaml
+  case_report_path: reports/analysis/feature_pack_b_hierarchy_approval_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: feature_pack_b_hierarchy_approval_sweep_v2
+
+analysis:
+  control_candidate_name: theme_strict_quality_branch
+  candidates:
+    - candidate_name: theme_strict_quality_branch
+      from_base: theme_strict_quality_branch
+      description: Track-A control candidate.
+      override: {}
+    - candidate_name: theme_margin_relief_003
+      from_base: theme_strict_quality_branch
+      description: Narrower approval-edge relief.
+      override:
+        regime:
+          min_score_margin: 0.03
+    - candidate_name: theme_margin_relief_000
+      from_base: theme_strict_quality_branch
+      description: Full margin-threshold removal.
+      override:
+        regime:
+          min_score_margin: 0.0
+    - candidate_name: theme_coupled_relief_000_058
+      from_base: theme_strict_quality_branch
+      description: Full margin relief plus non-junk relief.
+      override:
+        regime:
+          min_score_margin: 0.0
+        trend:
+          hierarchy:
+            min_composite_for_non_junk: 0.58

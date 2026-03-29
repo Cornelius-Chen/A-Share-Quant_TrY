@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  divergence_report: reports/analysis/market_v1_q2_trade_divergence_capture_c_v1.json
+  persistence_report: reports/analysis/market_v1_q2_specialist_window_persistence_300502_v1.json
+  opening_report: reports/analysis/market_v1_q2_specialist_window_opening_002371_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: market_v1_q2_capture_slice_acceptance_v1

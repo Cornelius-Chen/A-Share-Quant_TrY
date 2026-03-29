@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "case_count": 3,
+    "damage_case_count": 1,
+    "damage_case_symbols": [
+      "300750"
+    ],
+    "latent_case_symbols": [
+      "002466",
+      "002902"
+    ],
+    "core_rule": "Repeated approval/permission or assignment splits become promotion-relevant only when they also change emitted actions or active-position state."
+  },
+  "symbol_cases": [
+    {
+      "symbol": "300750",
+      "case_class": "damage_case",
+      "repeated_shift_dates": [
+        "2024-01-19",
+        "2024-01-22",
+        "2024-02-02",
+        "2024-02-05",
+        "2024-02-06"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "assignment_layer",
+        "assignment_reason",
+        "emitted_actions",
+        "exit_reason",
+        "permission",
+        "position_qty"
+      ],
+      "has_permission_split": true,
+      "has_approved_sector_split": true,
+      "has_assignment_split": true,
+      "has_action_shift": true,
+      "has_exit_shift": true,
+      "has_trade_path_change": true,
+      "has_trade_damage": true,
+      "max_abs_pnl_delta": 530.7,
+      "comparison_overview": [
+        {
+          "strategy_name": "mainline_trend_a",
+          "incumbent_fill_count": 6,
+          "challenger_fill_count": 6,
+          "incumbent_trade_count": 3,
+          "challenger_trade_count": 3,
+          "incumbent_total_pnl": -425.073,
+          "challenger_total_pnl": -955.773,
+          "pnl_delta": -530.7
+        },
+        {
+          "strategy_name": "mainline_trend_b",
+          "incumbent_fill_count": 7,
+          "challenger_fill_count": 7,
+          "incumbent_trade_count": 4,
+          "challenger_trade_count": 4,
+          "incumbent_total_pnl": -683.06,
+          "challenger_total_pnl": -1213.76,
+          "pnl_delta": -530.7
+        },
+        {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_fill_count": 7,
+          "challenger_fill_count": 7,
+          "incumbent_trade_count": 4,
+          "challenger_trade_count": 4,
+          "incumbent_total_pnl": -683.06,
+          "challenger_total_pnl": -1213.76,
+          "pnl_delta": -530.7
+        }
+      ]
+    },
+    {
+      "symbol": "002466",
+      "case_class": "latent_assignment_permission_case",
+      "repeated_shift_dates": [
+        "2024-01-19",
+        "2024-01-25",
+        "2024-02-05",
+        "2024-02-08"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "assignment_layer",
+        "assignment_reason",
+        "permission"
+      ],
+      "has_permission_split": true,
+      "has_approved_sector_split": true,
+      "has_assignment_split": true,
+      "has_action_shift": false,
+      "has_exit_shift": false,
+      "has_trade_path_change": false,
+      "has_trade_damage": false,
+      "max_abs_pnl_delta": 0.0,
+      "comparison_overview": [
+        {
+          "strategy_name": "mainline_trend_a",
+          "incumbent_fill_count": 3,
+          "challenger_fill_count": 3,
+          "incumbent_trade_count": 2,
+          "challenger_trade_count": 2,
+          "incumbent_total_pnl": -280.18,
+          "challenger_total_pnl": -280.18,
+          "pnl_delta": 0.0
+        },
+        {
+          "strategy_name": "mainline_trend_b",
+          "incumbent_fill_count": 3,
+          "challenger_fill_count": 3,
+          "incumbent_trade_count": 2,
+          "challenger_trade_count": 2,
+          "incumbent_total_pnl": -280.18,
+          "challenger_total_pnl": -280.18,
+          "pnl_delta": 0.0
+        },
+        {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_fill_count": 3,
+          "challenger_fill_count": 3,
+          "incumbent_trade_count": 2,
+          "challenger_trade_count": 2,
+          "incumbent_total_pnl": -280.18,
+          "challenger_total_pnl": -280.18,
+          "pnl_delta": 0.0
+        }
+      ]
+    },
+    {
+      "symbol": "002902",
+      "case_class": "latent_assignment_permission_case",
+      "repeated_shift_dates": [
+        "2024-01-23",
+        "2024-02-05",
+        "2024-02-28"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "assignment_layer",
+        "assignment_reason",
+        "exit_reason",
+        "permission"
+      ],
+      "has_permission_split": true,
+      "has_approved_sector_split": true,
+      "has_assignment_split": true,
+      "has_action_shift": false,
+      "has_exit_shift": true,
+      "has_trade_path_change": false,
+      "has_trade_damage": false,
+      "max_abs_pnl_delta": 0.0,
+      "comparison_overview": [
+        {
+          "strategy_name": "mainline_trend_a",
+          "incumbent_fill_count": 10,
+          "challenger_fill_count": 10,
+          "incumbent_trade_count": 5,
+          "challenger_trade_count": 5,
+          "incumbent_total_pnl": -341.091,
+          "challenger_total_pnl": -341.091,
+          "pnl_delta": 0.0
+        },
+        {
+          "strategy_name": "mainline_trend_b",
+          "incumbent_fill_count": 10,
+          "challenger_fill_count": 10,
+          "incumbent_trade_count": 5,
+          "challenger_trade_count": 5,
+          "incumbent_total_pnl": -341.091,
+          "challenger_total_pnl": -341.091,
+          "pnl_delta": 0.0
+        },
+        {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_fill_count": 10,
+          "challenger_fill_count": 10,
+          "incumbent_trade_count": 5,
+          "challenger_trade_count": 5,
+          "incumbent_total_pnl": -341.091,
+          "challenger_total_pnl": -341.091,
+          "pnl_delta": 0.0
+        }
+      ]
+    }
+  ],
+  "transition_patterns": [
+    {
+      "pattern_name": "300750_damage_transition",
+      "symbol": "300750",
+      "rule": "Repeated approval/permission or assignment splits become real damage when they coincide with action-state divergence.",
+      "evidence": {
+        "difference_types": [
+          "approved_sector",
+          "assignment_layer",
+          "assignment_reason",
+          "emitted_actions",
+          "exit_reason",
+          "permission",
+          "position_qty"
+        ],
+        "repeated_shift_dates": [
+          "2024-01-19",
+          "2024-01-22",
+          "2024-02-02",
+          "2024-02-05",
+          "2024-02-06"
+        ],
+        "max_abs_pnl_delta": 530.7
+      }
+    },
+    {
+      "pattern_name": "002466_latent_transition",
+      "symbol": "002466",
+      "rule": "Repeated path-shift dates can remain latent if they do not alter the executed trade path.",
+      "evidence": {
+        "difference_types": [
+          "approved_sector",
+          "assignment_layer",
+          "assignment_reason",
+          "permission"
+        ],
+        "repeated_shift_dates": [
+          "2024-01-19",
+          "2024-01-25",
+          "2024-02-05",
+          "2024-02-08"
+        ],
+        "max_abs_pnl_delta": 0.0
+      }
+    },
+    {
+      "pattern_name": "002902_latent_transition",
+      "symbol": "002902",
+      "rule": "Repeated path-shift dates can remain latent if they do not alter the executed trade path.",
+      "evidence": {
+        "difference_types": [
+          "approved_sector",
+          "assignment_layer",
+          "assignment_reason",
+          "exit_reason",
+          "permission"
+        ],
+        "repeated_shift_dates": [
+          "2024-01-23",
+          "2024-02-05",
+          "2024-02-28"
+        ],
+        "max_abs_pnl_delta": 0.0
+      }
+    }
+  ],
+  "interpretation": [
+    "Repeated path-shift dates alone are not enough; the key question is whether they alter fills, trades, or realized pnl.",
+    "Approval-sector and permission splits often appear before damage, but they can remain economically silent if both candidates keep the same executed trade path.",
+    "The first real damage case is the one where repeated path shifts cross an active tradable boundary and force a different action sequence."
+  ]
+}

@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  gate_report: reports/gates/buffer_only_012_validation_gate_v1.json
+  drawdown_gap_report: reports/analysis/buffer_only_012_drawdown_gap_analysis_v1.json
+  chain_report: reports/analysis/theme_missed_reentry_chain_300750_v1.json
+  relief_gate_report: reports/gates/buffer_top258_validation_gate_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: residual_cost_acceptance_v1

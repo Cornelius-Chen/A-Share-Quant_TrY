@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_q4_drawdown_slice_as_avoidance_plus_reduced_loss_mix",
+    "top_positive_symbols": [
+      "002371",
+      "000977",
+      "000858"
+    ],
+    "first_symbol_is_clean_avoidance": true,
+    "second_symbol_expands_beyond_avoidance": true,
+    "top_pair_covers_slice": true,
+    "do_continue_q4_drawdown_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_positive_symbol_rank",
+      "actual": {
+        "top_positive_symbols": [
+          "002371",
+          "000977",
+          "000858"
+        ],
+        "top_positive_count": 12
+      },
+      "reading": "If the first two positive symbols already split into different mechanism shapes, further replay is less likely to change the slice-level boundary."
+    },
+    {
+      "evidence_name": "first_symbol_mechanism",
+      "actual": {
+        "mechanism_types": [
+          "entry_suppression_avoidance"
+        ],
+        "summary": {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_name": "shared_default",
+          "challenger_name": "theme_strict_quality_branch",
+          "cycle_count": 1,
+          "avoided_negative_cycle_count": 1,
+          "reduced_negative_cycle_count": 0,
+          "worsened_negative_cycle_count": 0,
+          "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+        }
+      },
+      "reading": "The first q4 symbol should be read as a pure avoidance probe."
+    },
+    {
+      "evidence_name": "second_symbol_mechanism",
+      "actual": {
+        "mechanism_types": [
+          "earlier_exit_loss_reduction",
+          "preemptive_loss_avoidance_shift"
+        ],
+        "summary": {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_name": "shared_default",
+          "challenger_name": "theme_strict_quality_branch",
+          "cycle_count": 3,
+          "avoided_negative_cycle_count": 0,
+          "reduced_negative_cycle_count": 2,
+          "worsened_negative_cycle_count": 0,
+          "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+        }
+      },
+      "reading": "The second q4 symbol should widen q4 beyond pure avoidance if it carries reduced-loss structure."
+    }
+  ],
+  "interpretation": [
+    "A q4 drawdown slice should continue only if later symbols are likely to break the current two-part reading.",
+    "If one top symbol is pure avoidance and the next top symbol adds reduced-loss structure, q4 has already changed from a single-mechanism read into a mixed drawdown slice.",
+    "Under that condition, further replay should stop unless a later symbol is expected to add a genuinely new family rather than one more example of the same mixed slice."
+  ]
+}

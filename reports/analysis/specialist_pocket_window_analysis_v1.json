@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v4",
+    "slice_name": "2024_q1",
+    "strategy_name": "mainline_trend_c",
+    "specialist_candidate": "baseline_expansion_branch",
+    "anchor_candidates": [
+      "shared_default",
+      "buffer_only_012"
+    ],
+    "improved_window_count": 4,
+    "both_anchors_missed_window_count": 2,
+    "top_symbol": "002466"
+  },
+  "top_window_edges": [
+    {
+      "window_id": "002466_2",
+      "symbol": "002466",
+      "capturable_return": 0.054354,
+      "specialist_capture_ratio": 0.937549,
+      "anchor_capture_ratios": [
+        0.0,
+        0.0
+      ],
+      "min_capture_edge": 0.937549,
+      "both_anchors_missed": true
+    },
+    {
+      "window_id": "000155_5",
+      "symbol": "000155",
+      "capturable_return": 0.079922,
+      "specialist_capture_ratio": 0.584912,
+      "anchor_capture_ratios": [
+        0.176401,
+        0.176401
+      ],
+      "min_capture_edge": 0.408511,
+      "both_anchors_missed": true
+    },
+    {
+      "window_id": "600338_5",
+      "symbol": "600338",
+      "capturable_return": 0.20339,
+      "specialist_capture_ratio": 0.4992,
+      "anchor_capture_ratios": [
+        0.300453,
+        0.300453
+      ],
+      "min_capture_edge": 0.198747,
+      "both_anchors_missed": false
+    },
+    {
+      "window_id": "300518_7",
+      "symbol": "300518",
+      "capturable_return": 0.045637,
+      "specialist_capture_ratio": 0.7146,
+      "anchor_capture_ratios": [
+        0.660339,
+        0.660339
+      ],
+      "min_capture_edge": 0.054261,
+      "both_anchors_missed": false
+    }
+  ],
+  "symbol_summary": [
+    {
+      "symbol": "002466",
+      "improved_window_count": 1,
+      "both_anchors_missed_count": 1,
+      "total_capture_edge": 0.937549,
+      "total_capturable_return": 0.054354
+    },
+    {
+      "symbol": "000155",
+      "improved_window_count": 1,
+      "both_anchors_missed_count": 1,
+      "total_capture_edge": 0.408511,
+      "total_capturable_return": 0.079922
+    },
+    {
+      "symbol": "600338",
+      "improved_window_count": 1,
+      "both_anchors_missed_count": 0,
+      "total_capture_edge": 0.198747,
+      "total_capturable_return": 0.20339
+    },
+    {
+      "symbol": "300518",
+      "improved_window_count": 1,
+      "both_anchors_missed_count": 0,
+      "total_capture_edge": 0.054261,
+      "total_capturable_return": 0.045637
+    }
+  ],
+  "interpretation": [
+    "A specialist pocket is most actionable when it improves windows that both broad anchors miss entirely.",
+    "Window-level edges are stronger research leads than aggregate pocket scores because they tell the repo which symbols and dates to replay next.",
+    "If a specialist only improves already-partially-captured windows, it may be less valuable than a branch that opens entirely new windows."
+  ]
+}

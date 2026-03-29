@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "case_name": "theme_q2_002466_c",
+    "baseline_variant_name": "v1_control",
+    "baseline_challenger_name": "theme_strict_quality_branch",
+    "baseline_pnl_delta": 536.724,
+    "bridge_trigger_count": 2,
+    "best_variant_name": "v2_broad_concept_late_bridge",
+    "best_variant_pnl_delta": 94.049,
+    "best_variant_alpha_retention_ratio": 0.175228,
+    "best_variant_repair_completion_ratio": 0.5,
+    "all_tested_variants_degrade_alpha": true,
+    "all_tested_variants_remain_partial": true,
+    "acceptance_posture": "close_track_b_as_negative_informative"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "v2_broad_concept_late_bridge",
+      "challenger_name": "theme_strict_quality_branch",
+      "incumbent_total_pnl": -562.237,
+      "challenger_total_pnl": -468.188,
+      "pnl_delta": 94.049,
+      "alpha_retention_ratio_vs_baseline": 0.175228,
+      "challenger_trade_count": 4,
+      "challenger_fill_count": 8,
+      "extra_trade_count_vs_baseline": 2,
+      "extra_fill_count_vs_baseline": 4,
+      "repaired_trigger_dates": [
+        "2024-05-09"
+      ],
+      "repaired_buy_dates": [
+        "2024-05-09"
+      ],
+      "repaired_trigger_count": 1,
+      "repair_completion_ratio": 0.5
+    },
+    {
+      "variant_name": "v3_narrow_concept_late_bridge",
+      "challenger_name": "theme_strict_quality_branch",
+      "incumbent_total_pnl": -562.237,
+      "challenger_total_pnl": -491.188,
+      "pnl_delta": 71.049,
+      "alpha_retention_ratio_vs_baseline": 0.132375,
+      "challenger_trade_count": 4,
+      "challenger_fill_count": 8,
+      "extra_trade_count_vs_baseline": 2,
+      "extra_fill_count_vs_baseline": 4,
+      "repaired_trigger_dates": [
+        "2024-05-09"
+      ],
+      "repaired_buy_dates": [
+        "2024-05-09"
+      ],
+      "repaired_trigger_count": 1,
+      "repair_completion_ratio": 0.5
+    }
+  ],
+  "trigger_rows": [
+    {
+      "trigger_date": "2024-05-09",
+      "baseline_assignment_layer": "junk",
+      "baseline_assignment_reason": "fallback_to_junk",
+      "baseline_emitted_actions": [],
+      "v2_broad_concept_late_bridge_assignment_layer": "late_mover",
+      "v2_broad_concept_late_bridge_assignment_reason": "late_mover_quality_fallback",
+      "v2_broad_concept_late_bridge_emitted_actions": [
+        "buy"
+      ],
+      "v3_narrow_concept_late_bridge_assignment_layer": "late_mover",
+      "v3_narrow_concept_late_bridge_assignment_reason": "late_mover_quality_fallback",
+      "v3_narrow_concept_late_bridge_emitted_actions": [
+        "buy"
+      ]
+    },
+    {
+      "trigger_date": "2024-06-26",
+      "baseline_assignment_layer": "junk",
+      "baseline_assignment_reason": "fallback_to_junk",
+      "baseline_emitted_actions": [],
+      "v2_broad_concept_late_bridge_assignment_layer": "junk",
+      "v2_broad_concept_late_bridge_assignment_reason": "fallback_to_junk",
+      "v2_broad_concept_late_bridge_emitted_actions": [],
+      "v3_narrow_concept_late_bridge_assignment_layer": "junk",
+      "v3_narrow_concept_late_bridge_assignment_reason": "fallback_to_junk",
+      "v3_narrow_concept_late_bridge_emitted_actions": []
+    }
+  ],
+  "interpretation": [
+    "Track B should only stay open if concept-to-late variants preserve a meaningful share of the incumbent-relative alpha while also repairing the targeted trigger rows.",
+    "Here the tested variants repaired only one of the two bridge rows, and the best alpha-retention ratio stayed well below a durable threshold.",
+    "That is strong evidence for an explanatory-but-not-promotable conclusion, not for another round of broad concept-to-late widening."
+  ]
+}

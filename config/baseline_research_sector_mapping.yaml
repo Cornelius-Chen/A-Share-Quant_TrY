@@ -1,0 +1,8 @@
+bars_csv: data/raw/daily_bars/akshare_daily_bars_baseline_research_v1.csv
+output_csv: data/reference/sector_mapping_daily/baseline_research_sector_mapping_cninfo_v1.csv
+mapping_source: akshare_cninfo
+mapping_version: cninfo_baseline_research_v1
+classification_field: 琛屼笟澶х被
+fallback_sector_name: UNKNOWN
+fallback_sector_id: UNKNOWN
+backfill_earliest_known: true

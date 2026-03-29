@@ -168,6 +168,7 @@ class StrategyExperimentRunner:
                     min_top_score=float(regime_config.get("min_top_score", 4.0)),
                     min_score_margin=float(regime_config.get("min_score_margin", 0.2)),
                     require_active_segment=True,
+                    switch_margin_buffer=float(regime_config.get("switch_margin_buffer", 0.0)),
                 )
             ),
             hierarchy_ranker=LeaderHierarchyRanker(
@@ -179,6 +180,22 @@ class StrategyExperimentRunner:
             ),
             strategy_config=StrategyConfig(
                 buy_quantity=int(strategy_config.get("buy_quantity", 100)),
+                enable_late_mover_entry_override=bool(
+                    strategy_config.get("enable_late_mover_entry_override", False)
+                ),
+                late_mover_entry_override_min_layer_score=float(
+                    strategy_config.get("late_mover_entry_override_min_layer_score", 1.10)
+                ),
+                late_mover_entry_override_min_late_score=float(
+                    strategy_config.get("late_mover_entry_override_min_late_score", 1.10)
+                ),
+                late_mover_entry_override_allowed_reasons=tuple(
+                    str(item)
+                    for item in strategy_config.get(
+                        "late_mover_entry_override_allowed_reasons",
+                        ["fallback_to_junk", "low_composite_or_low_resonance"],
+                    )
+                ),
             ),
             trend_filters=TrendFilters(
                 TrendFilterConfig(
@@ -205,6 +222,9 @@ class StrategyExperimentRunner:
             exit_guard=ExitGuard(
                 ExitGuardConfig(
                     medium_window=int(exit_config.get("medium_window", 3)),
+                    junk_grace_min_health_score=float(
+                        exit_config.get("junk_grace_min_health_score", 99.0)
+                    ),
                 )
             ),
             segmentation_method=segmentation_method_override

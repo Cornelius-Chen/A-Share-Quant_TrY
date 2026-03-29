@@ -1,0 +1,8 @@
+report:
+  name: u2_pocket_clustering_readiness_v1
+
+paths:
+  reports_dir: reports/analysis
+  feature_gap_report: reports/analysis/specialist_feature_gap_audit_v1.json
+  feature_pack_c_acceptance_report: reports/analysis/feature_pack_c_acceptance_v1.json
+  u1_report: reports/analysis/u1_lightweight_geometry_v1.json

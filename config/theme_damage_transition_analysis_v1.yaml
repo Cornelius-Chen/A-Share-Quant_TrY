@@ -1,0 +1,21 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: theme_damage_transition_analysis_v1
+
+analysis:
+  cases:
+    - symbol: "300750"
+      timeline_report: reports/analysis/theme_q1_symbol_timeline_300750_v1.json
+      path_report: reports/analysis/theme_q1_symbol_path_shift_300750_v1.json
+    - symbol: "002466"
+      timeline_report: reports/analysis/theme_q1_symbol_timeline_002466_v1.json
+      path_report: reports/analysis/theme_q1_symbol_path_shift_002466_v1.json
+    - symbol: "002902"
+      timeline_report: reports/analysis/theme_q1_symbol_timeline_002902_v1.json
+      path_report: reports/analysis/theme_q1_symbol_path_shift_002902_v1.json

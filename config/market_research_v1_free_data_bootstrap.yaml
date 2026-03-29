@@ -1,0 +1,26 @@
+project:
+  protocol_version: protocol_v1.1
+
+provider:
+  name: akshare
+  adjust: qfq
+  pause_seconds: 0.1
+
+paths:
+  raw_dir: data/raw
+  reference_dir: data/reference
+
+time_range:
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+
+universe:
+  stock_symbols_file: config/universes/market_research_v1.txt
+  index_symbols_file: config/universes/common_indices_v1.txt
+
+outputs:
+  daily_bars_filename: akshare_daily_bars_market_research_v1.csv
+  index_daily_bars_filename: akshare_index_daily_bars_market_research_v1.csv
+  trading_calendar_filename: akshare_trading_calendar_market_research_v1.csv
+  security_master_filename: akshare_security_master_market_research_v1.csv
+  adjustment_factors_filename: akshare_adjustment_factors_market_research_v1.csv

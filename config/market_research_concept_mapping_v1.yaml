@@ -1,0 +1,15 @@
+bars_csv: data/raw/daily_bars/akshare_daily_bars_market_research_v1.csv
+output_csv: data/reference/concept_mapping_daily/market_research_concept_mapping_v1.csv
+mapping_source: akshare_em_concept_history
+mapping_version: concept_market_research_v1
+max_boards_to_scan: 80
+min_concepts_per_symbol: 1
+max_concepts_per_symbol: 4
+board_pause_seconds: 0.0
+use_board_history: true
+history_period: daily
+history_adjust: ""
+min_export_weight: 0.16
+base_rank_weight: 0.2
+board_history_weight: 0.55
+stock_alignment_weight: 0.25

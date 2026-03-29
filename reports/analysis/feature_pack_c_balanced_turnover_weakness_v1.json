@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 2,
+    "balanced_weakness_counts": {
+      "singleton_sector_masking": 2,
+      "true_balanced_share_weakness": 0
+    },
+    "recommended_fifth_feature_group": "stop_turnover_lane_as_sector_masked"
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-23",
+      "symbol": "002902",
+      "mechanism_type": "other_worse_loss_shift",
+      "sector_symbol_count": 0,
+      "market_turnover_share": 0.091061,
+      "sector_turnover_share": 1.0,
+      "turnover_rank": 0.5,
+      "balanced_weakness_class": "singleton_sector_masking"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-11-28",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "sector_symbol_count": 0,
+      "market_turnover_share": 0.028662,
+      "sector_turnover_share": 1.0,
+      "turnover_rank": 0.5,
+      "balanced_weakness_class": "singleton_sector_masking"
+    }
+  ],
+  "interpretation": [
+    "Balanced turnover weakness should first be tested against sector breadth before it is treated as a real attention feature.",
+    "A singleton sector means sector-relative share metrics are structurally uninformative and should not drive a new repair branch.",
+    "Only multi-symbol balanced weakness should be considered a candidate for a genuine turnover-balance feature."
+  ]
+}

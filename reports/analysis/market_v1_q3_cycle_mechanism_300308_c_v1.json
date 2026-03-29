@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "cycle_count": 3,
+    "avoided_negative_cycle_count": 2,
+    "reduced_negative_cycle_count": 1,
+    "worsened_negative_cycle_count": 0,
+    "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+  },
+  "mechanism_rows": [
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-02",
+        "exit_date": "2024-08-05",
+        "quantity": 100,
+        "entry_price": 121.48,
+        "exit_price": 112.14,
+        "pnl": -955.214,
+        "holding_days": 3
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": "2024-08-01",
+      "trigger_reason": "incumbent_opened_cycle_but_challenger_suppressed_entry"
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-14",
+        "exit_date": "2024-08-15",
+        "quantity": 100,
+        "entry_price": 119.12,
+        "exit_price": 114.86,
+        "pnl": -447.486,
+        "holding_days": 1
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": "2024-08-13",
+      "trigger_reason": "incumbent_opened_cycle_but_challenger_suppressed_entry"
+    },
+    {
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-08-19",
+        "exit_date": "2024-08-21",
+        "quantity": 100,
+        "entry_price": 120.3,
+        "exit_price": 119.3,
+        "pnl": -121.93,
+        "holding_days": 2
+      },
+      "bridge_classification": "reduced_loss_nearby_cycle",
+      "closest_challenger_cycle": {
+        "entry_date": "2024-08-19",
+        "exit_date": "2024-08-20",
+        "quantity": 100,
+        "entry_price": 120.3,
+        "exit_price": 123.09,
+        "pnl": 256.691,
+        "holding_days": 1
+      },
+      "pnl_delta_vs_closest": 378.621,
+      "trigger_date": "2024-08-19",
+      "trigger_reason": "challenger_exited_before_incumbent"
+    }
+  ],
+  "interpretation": [
+    "Entry-suppression avoidance means the challenger never opened the incumbent's bad cycle.",
+    "Earlier-exit loss reduction means both sides opened the cycle, but the challenger cut risk sooner.",
+    "Carry-in basis advantage means the challenger entered before the incumbent and exited on the same day with a better basis.",
+    "Delayed-entry basis advantage means the challenger entered after the incumbent and exited on the same day with a lower cost basis.",
+    "Later-exit loss extension is the failure case: the challenger held the same bad cycle longer and paid for it."
+  ]
+}

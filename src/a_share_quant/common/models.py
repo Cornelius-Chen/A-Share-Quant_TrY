@@ -30,6 +30,46 @@ class Signal:
     quantity: int
 
 
+@dataclass(frozen=True, slots=True)
+class TradingCalendarEntry:
+    trade_date: date
+    is_open: bool
+    prev_open_date: date | None
+    next_open_date: date | None
+
+
+@dataclass(frozen=True, slots=True)
+class SecurityMasterRecord:
+    symbol: str
+    name: str
+    board: str
+    exchange: str
+    list_date: date | None = None
+    delist_date: date | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class SectorMappingRecord:
+    trade_date: date
+    symbol: str
+    sector_id: str
+    sector_name: str
+    mapping_source: str
+    mapping_version: str
+
+
+@dataclass(frozen=True, slots=True)
+class ConceptMappingRecord:
+    trade_date: date
+    symbol: str
+    concept_id: str
+    concept_name: str
+    mapping_source: str
+    mapping_version: str
+    is_primary_concept: bool
+    weight: float
+
+
 @dataclass(slots=True)
 class Position:
     symbol: str
@@ -150,6 +190,37 @@ class StockSnapshot:
     liquidity: float
     late_mover_quality: float
     resonance: float
+    concept_support: float = 0.0
+    primary_concept_weight: float = 0.0
+    concept_count: int = 0
+    concept_concentration_ratio: float = 0.0
+    leader_component_score: float = 0.0
+    core_component_score: float = 0.0
+    late_component_score: float = 0.0
+    non_junk_composite_score: float = 0.0
+    late_quality_raw_score: float = 0.0
+    late_quality_concept_boost: float = 0.0
+    late_quality_sector_strength: float = 0.0
+    late_quality_lag_balance: float = 0.0
+    late_quality_trend_support: float = 0.0
+    stability_volatility: float = 0.0
+    liquidity_turnover_share: float = 0.0
+    liquidity_turnover_rank: float = 0.0
+    liquidity_sector_turnover_share: float = 0.0
+    liquidity_sector_top_turnover_share: float = 0.0
+    liquidity_sector_mean_turnover_share: float = 0.0
+    liquidity_sector_turnover_share_gap: float = 0.0
+    liquidity_sector_symbol_count: int = 0
+    context_theme_density: float = 0.0
+    context_turnover_concentration: float = 0.0
+    context_theme_turnover_interaction: float = 0.0
+    context_sector_heat: float = 0.0
+    context_sector_breadth: float = 0.0
+    late_quality_sector_contribution: float = 0.0
+    late_quality_stability_contribution: float = 0.0
+    late_quality_liquidity_contribution: float = 0.0
+    late_quality_lag_contribution: float = 0.0
+    late_quality_trend_contribution: float = 0.0
 
 
 @dataclass(frozen=True, slots=True)

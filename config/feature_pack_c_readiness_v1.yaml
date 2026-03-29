@@ -1,0 +1,10 @@
+report:
+  name: feature_pack_c_readiness_v1
+
+paths:
+  reports_dir: reports/analysis
+  feature_gap_report: reports/analysis/specialist_feature_gap_audit_v1.json
+  track_a_report: reports/analysis/feature_pack_b_hierarchy_approval_v1.json
+  track_a_sweep_report: reports/analysis/feature_pack_b_hierarchy_approval_sweep_v2.json
+  track_b_report: reports/analysis/feature_pack_b_concept_supported_hierarchy_v1.json
+  track_b_validation_report: reports/analysis/feature_pack_b_concept_late_validation_v1.json

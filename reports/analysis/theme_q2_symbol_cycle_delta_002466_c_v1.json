@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "incumbent_only_cycle_count": 4,
+    "challenger_only_cycle_count": 1,
+    "matched_cycle_count": 1,
+    "incumbent_only_total_pnl": -461.639,
+    "challenger_only_total_pnl": 75.085
+  },
+  "incumbent_only_cycles": [
+    {
+      "entry_date": "2024-04-10",
+      "exit_date": "2024-04-11",
+      "quantity": 100,
+      "entry_price": 50.84,
+      "exit_price": 48.7,
+      "pnl": -228.87,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-05-10",
+      "exit_date": "2024-05-13",
+      "quantity": 100,
+      "entry_price": 39.36,
+      "exit_price": 38.05,
+      "pnl": -144.805,
+      "holding_days": 3
+    },
+    {
+      "entry_date": "2024-06-27",
+      "exit_date": "2024-06-28",
+      "quantity": 100,
+      "entry_price": 31.3,
+      "exit_price": 30.49,
+      "pnl": -94.049,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-04-02",
+      "exit_date": "2024-04-09",
+      "quantity": 100,
+      "entry_price": 48.94,
+      "exit_price": 49.15,
+      "pnl": 6.085,
+      "holding_days": 7
+    }
+  ],
+  "challenger_only_cycles": [
+    {
+      "entry_date": "2024-04-08",
+      "exit_date": "2024-04-09",
+      "quantity": 100,
+      "entry_price": 48.25,
+      "exit_price": 49.15,
+      "pnl": 75.085,
+      "holding_days": 1
+    }
+  ],
+  "matched_cycles": [
+    {
+      "entry_date": "2024-05-23",
+      "exit_date": "2024-05-24",
+      "incumbent_pnl": -100.598,
+      "challenger_pnl": -100.598,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    }
+  ],
+  "interpretation": [
+    "Incumbent-only negative cycles are the cleanest evidence that a specialist branch reduced churn or filtered low-quality re-entries.",
+    "Challenger-only cycles matter too, but for drawdown pockets the first question is usually which bad cycles disappeared.",
+    "Exact-cycle matching is intentionally strict; unmatched but nearby cycles should be replayed separately if they still matter."
+  ]
+}

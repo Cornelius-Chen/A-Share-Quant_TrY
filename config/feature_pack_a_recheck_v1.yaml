@@ -1,0 +1,25 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: feature_pack_a_recheck_v1
+
+cases:
+  - case_name: theme_q4_002902_b
+    dataset_name: theme_research_v4
+    timeline_config_path: config/theme_q4_symbol_timeline_002902_quality_b_v1.yaml
+    timeline_report_path: reports/analysis/theme_q4_symbol_timeline_002902_quality_b_v1.json
+    cycle_report_path: reports/analysis/theme_q4_cycle_mechanism_002902_b_v1.json
+    stock_snapshots_csv: data/derived/stock_snapshots/theme_research_stock_snapshots_v5.csv
+    sector_snapshots_csv: data/derived/sector_snapshots/theme_research_sector_snapshots_v5.csv
+  - case_name: theme_q2_002466_c
+    dataset_name: theme_research_v4
+    timeline_config_path: config/theme_q2_symbol_timeline_002466_quality_c_v1.yaml
+    timeline_report_path: reports/analysis/theme_q2_symbol_timeline_002466_quality_c_v1.json
+    cycle_report_path: reports/analysis/theme_q2_cycle_mechanism_002466_c_v1.json
+    stock_snapshots_csv: data/derived/stock_snapshots/theme_research_stock_snapshots_v5.csv
+    sector_snapshots_csv: data/derived/sector_snapshots/theme_research_sector_snapshots_v5.csv

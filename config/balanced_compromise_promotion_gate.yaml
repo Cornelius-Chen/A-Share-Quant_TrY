@@ -1,0 +1,19 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  comparison_report: reports/20260329T034115Z_fbe67ff1_comparison.json
+  reports_dir: reports/gates
+
+report:
+  name: balanced_compromise_vs_shared_default_gate
+
+gate:
+  incumbent_candidate: shared_default
+  challenger_candidate: balanced_compromise
+  min_composite_rank_improvement: 3.0
+  min_mean_total_return_delta: 0.002
+  min_mean_max_drawdown_improvement: 0.002
+  max_mean_capture_regression: 0.05
+  min_total_return_row_wins: 1

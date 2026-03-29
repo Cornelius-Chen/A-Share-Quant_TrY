@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "track_count": 2,
+    "recommended_execution_order": [
+      "theme_q4_002902_b",
+      "theme_q2_002466_c"
+    ],
+    "first_track": "theme_q4_002902_b",
+    "first_track_reason": "cleanest non-concept edge; best first target for a narrow feature-pack-b"
+  },
+  "track_rows": [
+    {
+      "case_name": "theme_q4_002902_b",
+      "triage_classification": "hierarchy_approval_edge",
+      "dominant_bottleneck": "late_quality_and_permission_edge",
+      "late_quality_straddles": 3,
+      "non_junk_straddles": 2,
+      "permission_split_rows": 2,
+      "fallback_rows": 2,
+      "concept_supported_late_rows": 0,
+      "concept_supported_non_junk_rows": 0,
+      "recommended_focus_features": [
+        "fallback_reason_score",
+        "approval_hysteresis_state",
+        "switch_buffer_pressure",
+        "late_mover_quality_margin",
+        "non_junk_composite_margin"
+      ],
+      "priority_score": 0.98,
+      "priority_reason": "cleanest non-concept edge; best first target for a narrow feature-pack-b"
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "triage_classification": "concept_supported_hierarchy_edge",
+      "dominant_bottleneck": "concept_to_hierarchy_bridge",
+      "late_quality_straddles": 2,
+      "non_junk_straddles": 2,
+      "permission_split_rows": 0,
+      "fallback_rows": 4,
+      "concept_supported_late_rows": 2,
+      "concept_supported_non_junk_rows": 2,
+      "recommended_focus_features": [
+        "primary_concept_support_margin",
+        "secondary_concept_support_margin",
+        "concept_rotation_pressure",
+        "concept_concentration_ratio",
+        "late_mover_quality_margin"
+      ],
+      "priority_score": 0.8,
+      "priority_reason": "strong second target after the cleaner hierarchy edge is settled"
+    }
+  ],
+  "interpretation": [
+    "Run the cleaner hierarchy/approval track first when concept coverage is zero and the edge is already visible without theme support.",
+    "Run the concept-supported hierarchy track second when the remaining uncertainty is about how concept support should bridge into hierarchy admission.",
+    "Feature-pack-b should stay sequential: prove one track, then decide whether the second track still changes the family boundary."
+  ]
+}

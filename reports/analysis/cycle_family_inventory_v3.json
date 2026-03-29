@@ -1,0 +1,305 @@
+{
+  "summary": {
+    "family_count": 8,
+    "pocket_count": 7,
+    "top_family_by_net_edge": "entry_suppression_avoidance",
+    "top_pocket_by_net_edge": "baseline_q3_cycle_mechanism_600519_c_v1"
+  },
+  "family_rows": [
+    {
+      "family_name": "entry_suppression_avoidance",
+      "occurrence_count": 4,
+      "report_count": 2,
+      "negative_row_count": 4,
+      "positive_row_count": 0,
+      "net_negative_improvement": 4870.1396,
+      "positive_opportunity_cost": 0.0,
+      "net_family_edge": 4870.1396,
+      "datasets": [
+        "baseline_research_v1",
+        "theme_research_v4"
+      ],
+      "slices": [
+        "2024_q3"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "002460",
+        "600519"
+      ]
+    },
+    {
+      "family_name": "preemptive_loss_avoidance_shift",
+      "occurrence_count": 2,
+      "report_count": 2,
+      "negative_row_count": 2,
+      "positive_row_count": 0,
+      "net_negative_improvement": 2475.7267,
+      "positive_opportunity_cost": 0.0,
+      "net_family_edge": 2475.7267,
+      "datasets": [
+        "market_research_v0"
+      ],
+      "slices": [
+        "2024_q4"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "000858",
+        "600519"
+      ]
+    },
+    {
+      "family_name": "earlier_exit_loss_reduction",
+      "occurrence_count": 4,
+      "report_count": 4,
+      "negative_row_count": 3,
+      "positive_row_count": 1,
+      "net_negative_improvement": 2244.0789,
+      "positive_opportunity_cost": 472.3851,
+      "net_family_edge": 1771.6938,
+      "datasets": [
+        "baseline_research_v1",
+        "theme_research_v4"
+      ],
+      "slices": [
+        "2024_q2",
+        "2024_q3",
+        "2024_q4"
+      ],
+      "strategies": [
+        "mainline_trend_b",
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "300750",
+        "600519"
+      ]
+    },
+    {
+      "family_name": "carry_in_basis_advantage",
+      "occurrence_count": 2,
+      "report_count": 2,
+      "negative_row_count": 2,
+      "positive_row_count": 0,
+      "net_negative_improvement": 1682.5046,
+      "positive_opportunity_cost": 0.0,
+      "net_family_edge": 1682.5046,
+      "datasets": [
+        "theme_research_v4"
+      ],
+      "slices": [
+        "2024_q4"
+      ],
+      "strategies": [
+        "mainline_trend_b",
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "300750"
+      ]
+    },
+    {
+      "family_name": "delayed_entry_basis_advantage",
+      "occurrence_count": 1,
+      "report_count": 1,
+      "negative_row_count": 1,
+      "positive_row_count": 0,
+      "net_negative_improvement": 353.1059,
+      "positive_opportunity_cost": 0.0,
+      "net_family_edge": 353.1059,
+      "datasets": [
+        "theme_research_v4"
+      ],
+      "slices": [
+        "2024_q2"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "300750"
+      ]
+    },
+    {
+      "family_name": "other_worse_loss_shift",
+      "occurrence_count": 2,
+      "report_count": 1,
+      "negative_row_count": 1,
+      "positive_row_count": 1,
+      "net_negative_improvement": -89.0,
+      "positive_opportunity_cost": 57.942,
+      "net_family_edge": -146.942,
+      "datasets": [
+        "theme_research_v4"
+      ],
+      "slices": [
+        "2024_q3"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "002460"
+      ]
+    },
+    {
+      "family_name": "later_exit_loss_extension",
+      "occurrence_count": 1,
+      "report_count": 1,
+      "negative_row_count": 1,
+      "positive_row_count": 0,
+      "net_negative_improvement": -3595.32,
+      "positive_opportunity_cost": 0.0,
+      "net_family_edge": -3595.32,
+      "datasets": [
+        "baseline_research_v1"
+      ],
+      "slices": [
+        "2024_q3"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "600519"
+      ]
+    },
+    {
+      "family_name": "entry_suppression_opportunity_cost",
+      "occurrence_count": 3,
+      "report_count": 3,
+      "negative_row_count": 0,
+      "positive_row_count": 3,
+      "net_negative_improvement": 0.0,
+      "positive_opportunity_cost": 34478.9929,
+      "net_family_edge": -34478.9929,
+      "datasets": [
+        "baseline_research_v1",
+        "market_research_v0"
+      ],
+      "slices": [
+        "2024_q3",
+        "2024_q4"
+      ],
+      "strategies": [
+        "mainline_trend_c"
+      ],
+      "symbols": [
+        "000858",
+        "600519"
+      ]
+    }
+  ],
+  "pocket_rows": [
+    {
+      "report_name": "baseline_q3_cycle_mechanism_600519_c_v1",
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "600519",
+      "family_counts": {
+        "entry_suppression_avoidance": 1,
+        "earlier_exit_loss_reduction": 1,
+        "later_exit_loss_extension": 1,
+        "entry_suppression_opportunity_cost": 1
+      },
+      "negative_improvement_total": 2051.4189,
+      "positive_opportunity_cost_total": 94.3797,
+      "net_family_edge": 1957.0392
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_300750_b_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_b",
+      "symbol": "300750",
+      "family_counts": {
+        "earlier_exit_loss_reduction": 1,
+        "carry_in_basis_advantage": 1
+      },
+      "negative_improvement_total": 1464.4411,
+      "positive_opportunity_cost_total": 0.0,
+      "net_family_edge": 1464.4411
+    },
+    {
+      "report_name": "theme_q4_cycle_mechanism_300750_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "300750",
+      "family_counts": {
+        "earlier_exit_loss_reduction": 1,
+        "carry_in_basis_advantage": 1
+      },
+      "negative_improvement_total": 1464.4411,
+      "positive_opportunity_cost_total": 0.0,
+      "net_family_edge": 1464.4411
+    },
+    {
+      "report_name": "theme_q3_cycle_mechanism_002460_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "002460",
+      "family_counts": {
+        "entry_suppression_avoidance": 3,
+        "other_worse_loss_shift": 2
+      },
+      "negative_improvement_total": 132.102,
+      "positive_opportunity_cost_total": 57.942,
+      "net_family_edge": 74.16
+    },
+    {
+      "report_name": "theme_q2_cycle_mechanism_300750_c_v1",
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q2",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "300750",
+      "family_counts": {
+        "delayed_entry_basis_advantage": 1,
+        "earlier_exit_loss_reduction": 1
+      },
+      "negative_improvement_total": 353.1059,
+      "positive_opportunity_cost_total": 472.3851,
+      "net_family_edge": -119.2792
+    },
+    {
+      "report_name": "market_q4_cycle_mechanism_000858_c_v1",
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "000858",
+      "family_counts": {
+        "preemptive_loss_avoidance_shift": 1,
+        "entry_suppression_opportunity_cost": 1
+      },
+      "negative_improvement_total": 373.859,
+      "positive_opportunity_cost_total": 3668.8428,
+      "net_family_edge": -3294.9838
+    },
+    {
+      "report_name": "market_q4_cycle_mechanism_600519_c_v1",
+      "dataset_name": "market_research_v0",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "symbol": "600519",
+      "family_counts": {
+        "preemptive_loss_avoidance_shift": 1,
+        "entry_suppression_opportunity_cost": 1
+      },
+      "negative_improvement_total": 2101.8677,
+      "positive_opportunity_cost_total": 30715.7704,
+      "net_family_edge": -28613.9027
+    }
+  ],
+  "interpretation": [
+    "A cycle family becomes more research-worthy when it repeats across pockets instead of appearing only once.",
+    "Negative-cycle improvement should be read together with positive-cycle opportunity cost; clean specialist families preserve more net edge.",
+    "Pocket-level net edge helps separate reusable structural families from noisy one-off wins."
+  ]
+}

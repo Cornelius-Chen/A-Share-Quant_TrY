@@ -1,1 +1,1 @@
-"""Data loading and filtering."""
+"""Data loading, filtering, and bootstrap helpers."""

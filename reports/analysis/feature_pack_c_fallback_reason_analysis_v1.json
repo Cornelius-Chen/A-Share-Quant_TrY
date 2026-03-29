@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 8,
+    "dominant_component_counts": {
+      "score_margin": 2,
+      "late_quality": 6
+    },
+    "approval_edge_active_count": 2,
+    "concept_supported_count": 4,
+    "recommended_first_feature_group": "fallback_reason_decomposition_plus_late_quality_residuals"
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-04-08",
+      "mechanism_type": "preemptive_loss_avoidance_shift",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.107294,
+      "non_junk_deficit": 0.005486,
+      "resonance_deficit": 0.023748,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": true,
+      "fallback_reason_score": 0.023748
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-04-08",
+      "mechanism_type": "delayed_entry_basis_advantage",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.107294,
+      "non_junk_deficit": 0.005486,
+      "resonance_deficit": 0.023748,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": true,
+      "fallback_reason_score": 0.023748
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-05-09",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "fallback_to_junk",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.026642,
+      "non_junk_deficit": 0.0,
+      "resonance_deficit": 0.0,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": true,
+      "fallback_reason_score": 0.026642
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-06-26",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "fallback_to_junk",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.052687,
+      "non_junk_deficit": 0.0,
+      "resonance_deficit": 0.0,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": true,
+      "fallback_reason_score": 0.052687
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-23",
+      "mechanism_type": "other_worse_loss_shift",
+      "challenger_assignment_reason": "highest_leader_score",
+      "dominant_component": "score_margin",
+      "late_quality_deficit": 0.034331,
+      "non_junk_deficit": 0.0,
+      "resonance_deficit": 0.0,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.067136,
+      "approval_edge_active": true,
+      "concept_supported": false,
+      "fallback_reason_score": 0.0
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-31",
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "challenger_assignment_reason": "highest_leader_score",
+      "dominant_component": "score_margin",
+      "late_quality_deficit": 0.074208,
+      "non_junk_deficit": 0.0,
+      "resonance_deficit": 0.0,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.087551,
+      "approval_edge_active": true,
+      "concept_supported": false,
+      "fallback_reason_score": 0.0
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-11-28",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.060324,
+      "non_junk_deficit": 0.010338,
+      "resonance_deficit": 0.0,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": false,
+      "fallback_reason_score": 0.010338
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-12-26",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "dominant_component": "late_quality",
+      "late_quality_deficit": 0.254875,
+      "non_junk_deficit": 0.008285,
+      "resonance_deficit": 0.078074,
+      "top_score_deficit": 0.0,
+      "score_margin_deficit": 0.0,
+      "approval_edge_active": false,
+      "concept_supported": false,
+      "fallback_reason_score": 0.078074
+    }
+  ],
+  "interpretation": [
+    "Feature-pack-c should start by decomposing fallback rows into causal deficit types rather than widening thresholds again.",
+    "If late-quality deficits dominate, the next useful feature group is likely late-quality residual structure rather than generic concept support.",
+    "Approval-edge activation matters only when score deficits co-occur with fallback rows; otherwise the blocker is mostly hierarchy-side."
+  ]
+}

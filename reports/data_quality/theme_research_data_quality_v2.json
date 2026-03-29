@@ -1,0 +1,269 @@
+{
+  "summary": {
+    "security_symbol_count": 13,
+    "concept_covered_symbol_count": 12,
+    "concept_symbol_coverage_ratio": 0.923077,
+    "unique_concept_count": 10,
+    "mean_concepts_per_covered_symbol": 2.0,
+    "static_primary_symbol_ratio": 0.333333,
+    "multi_concept_symbol_ratio": 0.666667,
+    "top_primary_concept_share": 0.738079,
+    "warning_count": 2,
+    "sector_override_ratio": 0.922832
+  },
+  "missing_concept_symbols": [
+    "002902"
+  ],
+  "primary_concept_distribution": [
+    {
+      "concept_name": "锂矿概念",
+      "primary_row_count": 2136
+    },
+    {
+      "concept_name": "CRO",
+      "primary_row_count": 226
+    },
+    {
+      "concept_name": "创新药",
+      "primary_row_count": 204
+    },
+    {
+      "concept_name": "减肥药",
+      "primary_row_count": 177
+    },
+    {
+      "concept_name": "维生素",
+      "primary_row_count": 70
+    },
+    {
+      "concept_name": "动力电池回收",
+      "primary_row_count": 29
+    },
+    {
+      "concept_name": "独家药品",
+      "primary_row_count": 23
+    },
+    {
+      "concept_name": "小金属概念",
+      "primary_row_count": 13
+    },
+    {
+      "concept_name": "AI制药（医疗）",
+      "primary_row_count": 9
+    },
+    {
+      "concept_name": "创新医疗服务",
+      "primary_row_count": 7
+    }
+  ],
+  "symbol_concept_profiles": [
+    {
+      "symbol": "000155",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002176",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "002460",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 93.171336
+    },
+    {
+      "symbol": "002466",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 484,
+      "primary_weight_sum": 136.747006
+    },
+    {
+      "symbol": "300390",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300518",
+      "all_concept_count": 1,
+      "all_concepts": [
+        "锂矿概念"
+      ],
+      "primary_concept_count": 1,
+      "primary_concepts": [
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 242,
+      "primary_weight_sum": 242.0
+    },
+    {
+      "symbol": "300750",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "动力电池回收",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 480,
+      "primary_weight_sum": 138.06927
+    },
+    {
+      "symbol": "300759",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "AI制药（医疗）",
+        "CRO",
+        "创新医疗服务"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "AI制药（医疗）",
+        "CRO",
+        "创新医疗服务"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 104.390025
+    },
+    {
+      "symbol": "300765",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "创新药",
+        "维生素"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "创新药",
+        "维生素"
+      ],
+      "primary_date_count": 232,
+      "total_mapping_rows": 464,
+      "primary_weight_sum": 119.477968
+    },
+    {
+      "symbol": "600338",
+      "all_concept_count": 2,
+      "all_concepts": [
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 2,
+      "primary_concepts": [
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 484,
+      "primary_weight_sum": 136.257361
+    },
+    {
+      "symbol": "603087",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "减肥药",
+        "创新药",
+        "独家药品"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "减肥药",
+        "创新药",
+        "独家药品"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 84.213056
+    },
+    {
+      "symbol": "603799",
+      "all_concept_count": 3,
+      "all_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_concept_count": 3,
+      "primary_concepts": [
+        "动力电池回收",
+        "小金属概念",
+        "锂矿概念"
+      ],
+      "primary_date_count": 242,
+      "total_mapping_rows": 726,
+      "primary_weight_sum": 92.144778
+    }
+  ],
+  "warnings": [
+    {
+      "type": "coverage_gap",
+      "detail": "Not every security in the theme pack has concept coverage.",
+      "value": 0.923077
+    },
+    {
+      "type": "concept_concentration",
+      "detail": "One primary concept dominates the mapping too heavily, reducing theme diversity.",
+      "value": 0.738079
+    }
+  ],
+  "extras": {
+    "config_path": "config\\theme_data_quality_v2.yaml",
+    "protocol_version": "protocol_v1.0"
+  }
+}

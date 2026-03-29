@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "bridge_days": 1,
+    "incumbent_only_cycle_count": 2,
+    "avoided_cycle_count": 1,
+    "reduced_loss_cycle_count": 1,
+    "worse_loss_cycle_count": 0
+  },
+  "bridged_cycles": [
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-12-13",
+        "exit_date": "2024-12-16",
+        "quantity": 100,
+        "entry_price": 1474.57,
+        "exit_price": 1445.56,
+        "pnl": -3133.1599,
+        "holding_days": 3
+      },
+      "classification": "reduced_loss_nearby_cycle",
+      "challenger_cycles": [
+        {
+          "entry_date": "2024-12-11",
+          "exit_date": "2024-12-12",
+          "quantity": 100,
+          "entry_price": 1464.56,
+          "exit_price": 1456.58,
+          "pnl": -1031.2922,
+          "holding_days": 1
+        }
+      ],
+      "closest_challenger_cycle": {
+        "entry_date": "2024-12-11",
+        "exit_date": "2024-12-12",
+        "quantity": 100,
+        "entry_price": 1464.56,
+        "exit_price": 1456.58,
+        "pnl": -1031.2922,
+        "holding_days": 1
+      },
+      "pnl_delta_vs_closest": 2101.8677
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-09-27",
+        "exit_date": "2024-10-08",
+        "quantity": 100,
+        "entry_price": 1524.56,
+        "exit_price": 1834.56,
+        "pnl": 30715.7704,
+        "holding_days": 11
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    }
+  ],
+  "interpretation": [
+    "A drawdown-specialist branch is strongest when it either avoids a bad incumbent-only cycle entirely or converts it into a nearby smaller loss.",
+    "A nearby challenger cycle is still useful if it shrinks loss enough; full avoidance is not the only valid drawdown mechanism.",
+    "Worse nearby cycles matter because they show where the specialist pays for its stricter posture."
+  ]
+}

@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.0
+
+paths:
+  comparison_report: reports/20260329T061729Z_4197eb4d_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: buffer_only_012_drawdown_gap_analysis_v1
+
+analysis:
+  incumbent_candidate: shared_default
+  challenger_candidate: buffer_only_012

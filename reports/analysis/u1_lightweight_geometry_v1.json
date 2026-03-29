@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 8,
+    "active_feature_count": 11,
+    "top_abs_correlation_pair": {
+      "feature_a": "challenger_margin_gap",
+      "feature_b": "top_score_gap",
+      "correlation": 1.0
+    },
+    "pc1_explained_variance_ratio": 0.386599,
+    "case_centroid_distance": 4.080383,
+    "separation_reading": "cases_geometrically_separable"
+  },
+  "feature_matrix": [
+    {
+      "case_name": "theme_q4_002902_b",
+      "symbol": "002902",
+      "trigger_date": "2024-10-31",
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "features": {
+        "challenger_margin_gap": -0.087551,
+        "fallback_reason_score": 0.0,
+        "top_score_gap": 0.012449,
+        "challenger_top_score_gap": 1.876308,
+        "challenger_late_quality_margin": -0.074208,
+        "challenger_non_junk_margin": 0.148553,
+        "challenger_resonance_margin": 0.074506,
+        "concept_support": 0.0,
+        "primary_concept_weight": 0.0,
+        "concept_count": 0.0,
+        "concept_concentration_ratio": 0.0
+      }
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "symbol": "002902",
+      "trigger_date": "2024-11-28",
+      "mechanism_type": "entry_suppression_avoidance",
+      "features": {
+        "challenger_margin_gap": 1.204211,
+        "fallback_reason_score": 0.010338,
+        "top_score_gap": 1.304211,
+        "challenger_top_score_gap": 1.267131,
+        "challenger_late_quality_margin": -0.060324,
+        "challenger_non_junk_margin": -0.010338,
+        "challenger_resonance_margin": 0.03706,
+        "concept_support": 0.0,
+        "primary_concept_weight": 0.0,
+        "concept_count": 0.0,
+        "concept_concentration_ratio": 0.0
+      }
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "symbol": "002902",
+      "trigger_date": "2024-10-23",
+      "mechanism_type": "other_worse_loss_shift",
+      "features": {
+        "challenger_margin_gap": -0.067136,
+        "fallback_reason_score": 0.0,
+        "top_score_gap": 0.032864,
+        "challenger_top_score_gap": 1.605721,
+        "challenger_late_quality_margin": -0.034331,
+        "challenger_non_junk_margin": 0.150639,
+        "challenger_resonance_margin": 0.090076,
+        "concept_support": 0.0,
+        "primary_concept_weight": 0.0,
+        "concept_count": 0.0,
+        "concept_concentration_ratio": 0.0
+      }
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "symbol": "002902",
+      "trigger_date": "2024-12-26",
+      "mechanism_type": "entry_suppression_avoidance",
+      "features": {
+        "challenger_margin_gap": 0.472906,
+        "fallback_reason_score": 0.078074,
+        "top_score_gap": 0.572906,
+        "challenger_top_score_gap": 1.242183,
+        "challenger_late_quality_margin": -0.254875,
+        "challenger_non_junk_margin": -0.008285,
+        "challenger_resonance_margin": -0.078074,
+        "concept_support": 0.0,
+        "primary_concept_weight": 0.0,
+        "concept_count": 0.0,
+        "concept_concentration_ratio": 0.0
+      }
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "symbol": "002466",
+      "trigger_date": "2024-04-08",
+      "mechanism_type": "preemptive_loss_avoidance_shift",
+      "features": {
+        "challenger_margin_gap": 0.000959,
+        "fallback_reason_score": 0.023748,
+        "top_score_gap": 0.100959,
+        "challenger_top_score_gap": 0.339135,
+        "challenger_late_quality_margin": -0.107294,
+        "challenger_non_junk_margin": -0.005486,
+        "challenger_resonance_margin": -0.023748,
+        "concept_support": 0.574228,
+        "primary_concept_weight": 0.60604,
+        "concept_count": 2.0,
+        "concept_concentration_ratio": 0.60604
+      }
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "symbol": "002466",
+      "trigger_date": "2024-05-09",
+      "mechanism_type": "entry_suppression_avoidance",
+      "features": {
+        "challenger_margin_gap": 0.511931,
+        "fallback_reason_score": 0.026642,
+        "top_score_gap": 0.611931,
+        "challenger_top_score_gap": 2.558752,
+        "challenger_late_quality_margin": -0.026642,
+        "challenger_non_junk_margin": 0.011185,
+        "challenger_resonance_margin": 0.091436,
+        "concept_support": 0.518548,
+        "primary_concept_weight": 0.526497,
+        "concept_count": 2.0,
+        "concept_concentration_ratio": 0.526497
+      }
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "symbol": "002466",
+      "trigger_date": "2024-06-26",
+      "mechanism_type": "entry_suppression_avoidance",
+      "features": {
+        "challenger_margin_gap": 1.039299,
+        "fallback_reason_score": 0.052687,
+        "top_score_gap": 1.139299,
+        "challenger_top_score_gap": 2.24494,
+        "challenger_late_quality_margin": -0.052687,
+        "challenger_non_junk_margin": 0.117617,
+        "challenger_resonance_margin": 0.097573,
+        "concept_support": 0.533114,
+        "primary_concept_weight": 0.547305,
+        "concept_count": 2.0,
+        "concept_concentration_ratio": 0.547305
+      }
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "symbol": "002466",
+      "trigger_date": "2024-04-08",
+      "mechanism_type": "delayed_entry_basis_advantage",
+      "features": {
+        "challenger_margin_gap": 0.000959,
+        "fallback_reason_score": 0.023748,
+        "top_score_gap": 0.100959,
+        "challenger_top_score_gap": 0.339135,
+        "challenger_late_quality_margin": -0.107294,
+        "challenger_non_junk_margin": -0.005486,
+        "challenger_resonance_margin": -0.023748,
+        "concept_support": 0.574228,
+        "primary_concept_weight": 0.60604,
+        "concept_count": 2.0,
+        "concept_concentration_ratio": 0.60604
+      }
+    }
+  ],
+  "correlation_rows": [
+    {
+      "feature_a": "challenger_margin_gap",
+      "feature_b": "top_score_gap",
+      "correlation": 1.0
+    },
+    {
+      "feature_a": "primary_concept_weight",
+      "feature_b": "concept_concentration_ratio",
+      "correlation": 1.0
+    },
+    {
+      "feature_a": "concept_support",
+      "feature_b": "primary_concept_weight",
+      "correlation": 0.999719
+    },
+    {
+      "feature_a": "concept_support",
+      "feature_b": "concept_concentration_ratio",
+      "correlation": 0.999719
+    },
+    {
+      "feature_a": "concept_support",
+      "feature_b": "concept_count",
+      "correlation": 0.997983
+    },
+    {
+      "feature_a": "primary_concept_weight",
+      "feature_b": "concept_count",
+      "correlation": 0.996197
+    },
+    {
+      "feature_a": "concept_count",
+      "feature_b": "concept_concentration_ratio",
+      "correlation": 0.996197
+    },
+    {
+      "feature_a": "challenger_late_quality_margin",
+      "feature_b": "challenger_resonance_margin",
+      "correlation": 0.885752
+    },
+    {
+      "feature_a": "challenger_top_score_gap",
+      "feature_b": "challenger_resonance_margin",
+      "correlation": 0.765728
+    },
+    {
+      "feature_a": "fallback_reason_score",
+      "feature_b": "challenger_late_quality_margin",
+      "correlation": -0.714414
+    }
+  ],
+  "principal_axes": [
+    {
+      "axis_name": "pc1",
+      "explained_variance_ratio": 0.386599,
+      "top_loadings": [
+        {
+          "feature_name": "primary_concept_weight",
+          "loading": -0.473872
+        },
+        {
+          "feature_name": "concept_concentration_ratio",
+          "loading": -0.473872
+        },
+        {
+          "feature_name": "concept_support",
+          "loading": -0.472764
+        },
+        {
+          "feature_name": "concept_count",
+          "loading": -0.46849
+        },
+        {
+          "feature_name": "challenger_non_junk_margin",
+          "loading": 0.23687
+        }
+      ]
+    },
+    {
+      "axis_name": "pc2",
+      "explained_variance_ratio": 0.285456,
+      "top_loadings": [
+        {
+          "feature_name": "challenger_resonance_margin",
+          "loading": 0.548533
+        },
+        {
+          "feature_name": "challenger_late_quality_margin",
+          "loading": 0.530112
+        },
+        {
+          "feature_name": "challenger_top_score_gap",
+          "loading": 0.375418
+        },
+        {
+          "feature_name": "challenger_non_junk_margin",
+          "loading": 0.345693
+        },
+        {
+          "feature_name": "fallback_reason_score",
+          "loading": -0.299298
+        }
+      ]
+    }
+  ],
+  "case_geometry": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "row_count": 4,
+      "pc1_centroid": -1.992294,
+      "pc2_centroid": 0.439482,
+      "pc_spread": 1.527402
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "row_count": 4,
+      "pc1_centroid": 1.992294,
+      "pc2_centroid": -0.439482,
+      "pc_spread": 1.724433
+    }
+  ],
+  "interpretation": [
+    "U1 lightweight geometry is only useful if it changes a feature-pack decision or pocket interpretation boundary.",
+    "High centroid separation means the current suspects likely belong to different local-causal regimes rather than one blended feature branch.",
+    "Strong principal-axis loadings highlight which current features already separate the pockets, and therefore which additional features are less likely to add decision value."
+  ]
+}

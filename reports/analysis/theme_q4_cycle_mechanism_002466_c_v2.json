@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "cycle_count": 5,
+    "avoided_negative_cycle_count": 2,
+    "reduced_negative_cycle_count": 1,
+    "worsened_negative_cycle_count": 0,
+    "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+  },
+  "mechanism_rows": [
+    {
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-11-12",
+        "exit_date": "2024-11-15",
+        "quantity": 100,
+        "entry_price": 41.99,
+        "exit_price": 39.19,
+        "pnl": -293.919,
+        "holding_days": 3
+      },
+      "bridge_classification": "reduced_loss_nearby_cycle",
+      "closest_challenger_cycle": {
+        "entry_date": "2024-11-12",
+        "exit_date": "2024-11-13",
+        "quantity": 100,
+        "entry_price": 41.99,
+        "exit_price": 42.53,
+        "pnl": 39.747,
+        "holding_days": 1
+      },
+      "pnl_delta_vs_closest": 333.666,
+      "trigger_date": "2024-11-12",
+      "trigger_reason": "challenger_exited_before_incumbent"
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-10-28",
+        "exit_date": "2024-10-30",
+        "quantity": 100,
+        "entry_price": 36.67,
+        "exit_price": 35.5,
+        "pnl": -130.55,
+        "holding_days": 2
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": null,
+      "trigger_reason": null
+    },
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "entry_date": "2024-12-23",
+        "exit_date": "2024-12-24",
+        "quantity": 100,
+        "entry_price": 34.74,
+        "exit_price": 34.35,
+        "pnl": -52.435,
+        "holding_days": 1
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": null,
+      "trigger_reason": null
+    },
+    {
+      "mechanism_type": "other_worse_loss_shift",
+      "cycle_sign": "positive",
+      "incumbent_cycle": {
+        "entry_date": "2024-11-05",
+        "exit_date": "2024-11-07",
+        "quantity": 100,
+        "entry_price": 36.0,
+        "exit_price": 36.8,
+        "pnl": 66.32,
+        "holding_days": 2
+      },
+      "bridge_classification": "worse_nearby_cycle",
+      "closest_challenger_cycle": {
+        "entry_date": "2024-11-06",
+        "exit_date": "2024-11-07",
+        "quantity": 100,
+        "entry_price": 36.89,
+        "exit_price": 36.8,
+        "pnl": -22.68,
+        "holding_days": 1
+      },
+      "pnl_delta_vs_closest": -89.0,
+      "trigger_date": null,
+      "trigger_reason": null
+    },
+    {
+      "mechanism_type": "entry_suppression_opportunity_cost",
+      "cycle_sign": "positive",
+      "incumbent_cycle": {
+        "entry_date": "2024-10-22",
+        "exit_date": "2024-10-23",
+        "quantity": 100,
+        "entry_price": 33.75,
+        "exit_price": 35.6,
+        "pnl": 171.44,
+        "holding_days": 1
+      },
+      "bridge_classification": "avoided_cycle",
+      "closest_challenger_cycle": null,
+      "pnl_delta_vs_closest": null,
+      "trigger_date": "2024-10-21",
+      "trigger_reason": "incumbent_opened_cycle_but_challenger_suppressed_entry"
+    }
+  ],
+  "interpretation": [
+    "Entry-suppression avoidance means the challenger never opened the incumbent's bad cycle.",
+    "Earlier-exit loss reduction means both sides opened the cycle, but the challenger cut risk sooner.",
+    "Carry-in basis advantage means the challenger entered before the incumbent and exited on the same day with a better basis.",
+    "Delayed-entry basis advantage means the challenger entered after the incumbent and exited on the same day with a lower cost basis.",
+    "Later-exit loss extension is the failure case: the challenger held the same bad cycle longer and paid for it."
+  ]
+}

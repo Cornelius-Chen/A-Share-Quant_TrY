@@ -1,0 +1,20 @@
+{
+  "mechanism_rows": [
+    {
+      "mechanism_type": "entry_suppression_avoidance",
+      "cycle_sign": "negative",
+      "incumbent_cycle": {
+        "pnl": -100.0
+      },
+      "pnl_delta_vs_closest": null
+    },
+    {
+      "mechanism_type": "entry_suppression_opportunity_cost",
+      "cycle_sign": "positive",
+      "incumbent_cycle": {
+        "pnl": 20.0
+      },
+      "pnl_delta_vs_closest": null
+    }
+  ]
+}

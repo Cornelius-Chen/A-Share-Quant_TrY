@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "slice_count": 3,
+    "dataset_names": [
+      "market_research_v1"
+    ],
+    "slice_names": [
+      "2024_q2",
+      "2024_q3",
+      "2024_q4"
+    ],
+    "recommended_first_conditional_feature_group": "theme_load_plus_turnover_concentration_context",
+    "recommended_second_conditional_feature_group": "sector_state_heat_breadth_context",
+    "highest_spread_axis": "sector_top_turnover_share_mean",
+    "second_spread_axis": "concept_support_mean",
+    "sector_conditioning_needed": true,
+    "do_sector_specific_training_now": false
+  },
+  "slice_rows": [
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q2",
+      "slice_role": "capture",
+      "acceptance_posture": "close_market_q2_capture_slice_as_mixed_opening_plus_persistence",
+      "top_symbols": [
+        "300502",
+        "002371",
+        "603259"
+      ],
+      "row_count": 177,
+      "sector_heat_mean": 0.523707,
+      "sector_breadth_mean": 0.463936,
+      "concept_support_mean": 0.181592,
+      "concept_count_mean": 1.0,
+      "theme_density_mean": 0.181592,
+      "sector_top_turnover_share_mean": 0.614949,
+      "sector_turnover_share_gap_mean": 0.045124,
+      "late_quality_raw_mean": 0.422832,
+      "late_quality_margin_mean": -0.127168,
+      "context_tags": [
+        "cool_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q3_drawdown_slice_as_cross_strategy_baseline_style_reuse",
+      "top_symbols": [
+        "300308"
+      ],
+      "row_count": 64,
+      "sector_heat_mean": 0.643542,
+      "sector_breadth_mean": 0.467188,
+      "concept_support_mean": 0.0,
+      "concept_count_mean": 0.0,
+      "theme_density_mean": 0.0,
+      "sector_top_turnover_share_mean": 0.35957,
+      "sector_turnover_share_gap_mean": 0.010612,
+      "late_quality_raw_mean": 0.464275,
+      "late_quality_margin_mean": -0.085725,
+      "context_tags": [
+        "hot_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q4_drawdown_slice_as_avoidance_plus_reduced_loss_mix",
+      "top_symbols": [
+        "002371",
+        "000977",
+        "000858"
+      ],
+      "row_count": 183,
+      "sector_heat_mean": 0.516613,
+      "sector_breadth_mean": 0.469399,
+      "concept_support_mean": 0.0,
+      "concept_count_mean": 0.0,
+      "theme_density_mean": 0.0,
+      "sector_top_turnover_share_mean": 0.663379,
+      "sector_turnover_share_gap_mean": 0.0376,
+      "late_quality_raw_mean": 0.417265,
+      "late_quality_margin_mean": -0.132735,
+      "context_tags": [
+        "cool_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    }
+  ],
+  "axis_rankings": [
+    {
+      "axis_name": "sector_top_turnover_share_mean",
+      "spread": 0.303809,
+      "mean_value": 0.545966,
+      "proposed_feature_group": "theme_load_plus_turnover_concentration_context"
+    },
+    {
+      "axis_name": "concept_support_mean",
+      "spread": 0.181592,
+      "mean_value": 0.060531,
+      "proposed_feature_group": "theme_load_plus_turnover_concentration_context"
+    },
+    {
+      "axis_name": "theme_density_mean",
+      "spread": 0.181592,
+      "mean_value": 0.060531,
+      "proposed_feature_group": "theme_load_plus_turnover_concentration_context"
+    },
+    {
+      "axis_name": "sector_heat_mean",
+      "spread": 0.126929,
+      "mean_value": 0.561287,
+      "proposed_feature_group": "sector_state_heat_breadth_context"
+    },
+    {
+      "axis_name": "late_quality_margin_mean",
+      "spread": 0.04701,
+      "mean_value": -0.115209,
+      "proposed_feature_group": "late_quality_context_follow_on"
+    },
+    {
+      "axis_name": "sector_turnover_share_gap_mean",
+      "spread": 0.034512,
+      "mean_value": 0.031112,
+      "proposed_feature_group": "theme_load_plus_turnover_concentration_context"
+    },
+    {
+      "axis_name": "sector_breadth_mean",
+      "spread": 0.005463,
+      "mean_value": 0.466841,
+      "proposed_feature_group": "sector_state_heat_breadth_context"
+    }
+  ],
+  "interpretation": [
+    "This audit is a conditioning step, not a mandate to split the strategy into per-sector models.",
+    "If slice-level specialist behavior separates first by theme-load and turnover concentration, the correct next step is to add sector/theme state as conditional features rather than train separate board models.",
+    "If a later audit shows the same family only survives inside a stable sector-state bucket, then environment grouping becomes a justified next step. This report alone does not justify direct per-sector training."
+  ]
+}

@@ -3,11 +3,11 @@ project:
   protocol_version: protocol_v1.0
 
 paths:
-  bars_csv: data/sample/strategy_daily_bars.csv
-  index_bars_csv: data/sample/index_daily_bars.csv
-  sector_snapshots_csv: data/sample/sector_snapshots.csv
-  stock_snapshots_csv: data/sample/stock_snapshots.csv
-  mainline_windows_csv: data/sample/mainline_windows.csv
+  bars_csv: data/sample/segcomp_strategy_daily_bars.csv
+  index_bars_csv: data/sample/segcomp_index_daily_bars.csv
+  sector_snapshots_csv: data/sample/segcomp_sector_snapshots.csv
+  stock_snapshots_csv: data/sample/segcomp_stock_snapshots.csv
+  mainline_windows_csv: data/sample/segcomp_mainline_windows.csv
   runs_dir: experiments/runs
   reports_dir: reports
 

@@ -1,0 +1,18 @@
+report:
+  name: feature_pack_b_concept_late_validation_v1
+
+paths:
+  bridge_report_path: reports/analysis/concept_to_late_bridge_analysis_v1.json
+  reports_dir: reports/analysis
+
+baseline:
+  timeline_report_path: reports/analysis/theme_q2_symbol_timeline_002466_quality_c_v1.json
+  challenger_candidate_name: theme_strict_quality_branch
+
+variants:
+  - variant_name: v2_broad_concept_late_bridge
+    timeline_report_path: reports/analysis/theme_q2_symbol_timeline_002466_quality_c_v2.json
+    challenger_candidate_name: theme_strict_quality_branch
+  - variant_name: v3_narrow_concept_late_bridge
+    timeline_report_path: reports/analysis/theme_q2_symbol_timeline_002466_quality_c_v3.json
+    challenger_candidate_name: theme_strict_quality_branch

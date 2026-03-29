@@ -11,6 +11,7 @@ class AttackPermissionConfig:
     min_top_score: float = 4.0
     min_score_margin: float = 0.2
     require_active_segment: bool = True
+    switch_margin_buffer: float = 0.0
 
 
 class AttackPermissionEngine:
@@ -27,6 +28,7 @@ class AttackPermissionEngine:
         scores_by_date = self._scores_by_date(sector_scores)
         active_dates = self._active_dates(segments)
         permissions: list[AttackPermission] = []
+        previous_approved_sector_id: str | None = None
 
         for trade_date in sorted(scores_by_date):
             ranked = scores_by_date[trade_date]
@@ -75,6 +77,34 @@ class AttackPermissionEngine:
                     )
                     continue
 
+            if (
+                self.config.switch_margin_buffer > 0.0
+                and previous_approved_sector_id is not None
+                and top_score.sector_id != previous_approved_sector_id
+            ):
+                previous_score = next(
+                    (
+                        score
+                        for score in ranked
+                        if score.sector_id == previous_approved_sector_id
+                    ),
+                    None,
+                )
+                if previous_score is not None:
+                    switch_margin = top_score.composite_score - previous_score.composite_score
+                    if switch_margin < self.config.switch_margin_buffer:
+                        permissions.append(
+                            AttackPermission(
+                                trade_date=trade_date,
+                                is_attack_allowed=True,
+                                approved_sector_id=previous_score.sector_id,
+                                approved_sector_name=previous_score.sector_name,
+                                score=previous_score.composite_score,
+                                reason="approved_with_switch_buffer_hold",
+                            )
+                        )
+                        continue
+
             permissions.append(
                 AttackPermission(
                     trade_date=trade_date,
@@ -85,6 +115,7 @@ class AttackPermissionEngine:
                     reason="approved",
                 )
             )
+            previous_approved_sector_id = top_score.sector_id
 
         return permissions
 

@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 6,
+    "local_context_counts": {
+      "volatility_led": 1,
+      "turnover_share_led": 3,
+      "turnover_rank_led": 0,
+      "mixed_stability_liquidity": 2
+    },
+    "recommended_third_feature_group": "late_quality_turnover_share_context"
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-05-09",
+      "symbol": "002466",
+      "mechanism_type": "entry_suppression_avoidance",
+      "dominant_residual_component": "liquidity",
+      "local_context_class": "turnover_share_led",
+      "stability_gap": 0.094151,
+      "liquidity_gap": 0.126634,
+      "volatility_pressure": 0.3766,
+      "stability_volatility": 0.022596,
+      "turnover_share_deficit": 0.888616,
+      "turnover_rank_deficit": 0.25,
+      "liquidity_turnover_share": 0.111384,
+      "liquidity_turnover_rank": 0.75
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-06-26",
+      "symbol": "002466",
+      "mechanism_type": "entry_suppression_avoidance",
+      "dominant_residual_component": "stability",
+      "local_context_class": "mixed_stability_liquidity",
+      "stability_gap": 0.153691,
+      "liquidity_gap": 0.110225,
+      "volatility_pressure": 0.614767,
+      "stability_volatility": 0.036886,
+      "turnover_share_deficit": 0.835211,
+      "turnover_rank_deficit": 0.125,
+      "liquidity_turnover_share": 0.164789,
+      "liquidity_turnover_rank": 0.875
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-23",
+      "symbol": "002902",
+      "mechanism_type": "other_worse_loss_shift",
+      "dominant_residual_component": "liquidity",
+      "local_context_class": "turnover_share_led",
+      "stability_gap": 0.138878,
+      "liquidity_gap": 0.149073,
+      "volatility_pressure": 0.555517,
+      "stability_volatility": 0.033331,
+      "turnover_share_deficit": 0.908939,
+      "turnover_rank_deficit": 0.5,
+      "liquidity_turnover_share": 0.091061,
+      "liquidity_turnover_rank": 0.5
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-31",
+      "symbol": "002902",
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "dominant_residual_component": "stability",
+      "local_context_class": "mixed_stability_liquidity",
+      "stability_gap": 0.179241,
+      "liquidity_gap": 0.149565,
+      "volatility_pressure": 0.716967,
+      "stability_volatility": 0.043018,
+      "turnover_share_deficit": 0.913044,
+      "turnover_rank_deficit": 0.5,
+      "liquidity_turnover_share": 0.086956,
+      "liquidity_turnover_rank": 0.5
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-11-28",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "dominant_residual_component": "liquidity",
+      "local_context_class": "turnover_share_led",
+      "stability_gap": 0.067952,
+      "liquidity_gap": 0.156561,
+      "volatility_pressure": 0.271817,
+      "stability_volatility": 0.016309,
+      "turnover_share_deficit": 0.971338,
+      "turnover_rank_deficit": 0.5,
+      "liquidity_turnover_share": 0.028662,
+      "liquidity_turnover_rank": 0.5
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-12-26",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "dominant_residual_component": "stability",
+      "local_context_class": "volatility_led",
+      "stability_gap": 0.236487,
+      "liquidity_gap": 0.155443,
+      "volatility_pressure": 0.94595,
+      "stability_volatility": 0.056757,
+      "turnover_share_deficit": 0.962021,
+      "turnover_rank_deficit": 0.5,
+      "liquidity_turnover_share": 0.037979,
+      "liquidity_turnover_rank": 0.5
+    }
+  ],
+  "interpretation": [
+    "Stability-led rows should be split by whether the gap comes from realized volatility or from a more mixed quality stack.",
+    "Liquidity-led rows should be split by turnover-share weakness versus weak cross-sectional rank.",
+    "If a mixed class dominates, the next pack-c move should stay descriptive rather than immediately introducing a new scalar signal."
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "summary": {
+    "dataset_name": "theme_research_v3",
+    "incumbent_name": "shared_default",
+    "challenger_name": "balanced_targeted_timing_repair",
+    "strategy_count": 1,
+    "impacted_window_count": 10,
+    "impacted_symbol_count": 7,
+    "blocked_window_count": 8,
+    "partial_window_count": 2,
+    "mean_capture_regression": 0.428711,
+    "worst_strategy": {
+      "strategy_name": "mainline_trend_c",
+      "impacted_window_count": 10,
+      "blocked_window_count": 8,
+      "partial_window_count": 2,
+      "mean_capture_regression": 0.428711,
+      "worst_window": {
+        "strategy_name": "mainline_trend_c",
+        "window_id": "600338_25",
+        "symbol": "600338",
+        "start_date": "2024-09-23",
+        "end_date": "2024-09-30",
+        "capturable_return": 0.234637,
+        "incumbent_capture_ratio": 1.0,
+        "challenger_capture_ratio": 0.0,
+        "capture_regression": 1.0,
+        "gap_day_count": 3,
+        "first_gap_date": "2024-09-26",
+        "last_gap_date": "2024-09-30",
+        "max_gap_layer_score": 0.666934,
+        "max_gap_late_score": 0.640689,
+        "max_gap_core_score": 0.504722,
+        "assignment_reasons": [
+          "fallback_to_junk"
+        ],
+        "triggered_entry_rules": [
+          "confirmation_entry",
+          "mid_trend_follow",
+          "second_breakout"
+        ],
+        "passed_filters": [
+          "loose_uptrend",
+          "medium_term_uptrend",
+          "strict_short_term_bullish"
+        ],
+        "classification": "blocked_window"
+      }
+    },
+    "worst_window": {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "600338_25",
+      "symbol": "600338",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.234637,
+      "incumbent_capture_ratio": 1.0,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 1.0,
+      "gap_day_count": 3,
+      "first_gap_date": "2024-09-26",
+      "last_gap_date": "2024-09-30",
+      "max_gap_layer_score": 0.666934,
+      "max_gap_late_score": 0.640689,
+      "max_gap_core_score": 0.504722,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    }
+  },
+  "strategy_deltas": [
+    {
+      "strategy_name": "mainline_trend_c",
+      "impacted_window_count": 10,
+      "blocked_window_count": 8,
+      "partial_window_count": 2,
+      "mean_capture_regression": 0.428711,
+      "worst_window": {
+        "strategy_name": "mainline_trend_c",
+        "window_id": "600338_25",
+        "symbol": "600338",
+        "start_date": "2024-09-23",
+        "end_date": "2024-09-30",
+        "capturable_return": 0.234637,
+        "incumbent_capture_ratio": 1.0,
+        "challenger_capture_ratio": 0.0,
+        "capture_regression": 1.0,
+        "gap_day_count": 3,
+        "first_gap_date": "2024-09-26",
+        "last_gap_date": "2024-09-30",
+        "max_gap_layer_score": 0.666934,
+        "max_gap_late_score": 0.640689,
+        "max_gap_core_score": 0.504722,
+        "assignment_reasons": [
+          "fallback_to_junk"
+        ],
+        "triggered_entry_rules": [
+          "confirmation_entry",
+          "mid_trend_follow",
+          "second_breakout"
+        ],
+        "passed_filters": [
+          "loose_uptrend",
+          "medium_term_uptrend",
+          "strict_short_term_bullish"
+        ],
+        "classification": "blocked_window"
+      }
+    }
+  ],
+  "top_window_gaps": [
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "600338_25",
+      "symbol": "600338",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.234637,
+      "incumbent_capture_ratio": 1.0,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 1.0,
+      "gap_day_count": 3,
+      "first_gap_date": "2024-09-26",
+      "last_gap_date": "2024-09-30",
+      "max_gap_layer_score": 0.666934,
+      "max_gap_late_score": 0.640689,
+      "max_gap_core_score": 0.504722,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002466_28",
+      "symbol": "002466",
+      "start_date": "2024-11-04",
+      "end_date": "2024-11-05",
+      "capturable_return": 0.027094,
+      "incumbent_capture_ratio": 0.679937,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.679937,
+      "gap_day_count": 1,
+      "first_gap_date": "2024-11-04",
+      "last_gap_date": "2024-11-04",
+      "max_gap_layer_score": 0.563762,
+      "max_gap_late_score": 0.563762,
+      "max_gap_core_score": 0.51584,
+      "assignment_reasons": [
+        "low_composite_or_low_resonance"
+      ],
+      "triggered_entry_rules": [
+        "mid_trend_follow"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "600338_5",
+      "symbol": "600338",
+      "start_date": "2024-02-21",
+      "end_date": "2024-02-29",
+      "capturable_return": 0.20339,
+      "incumbent_capture_ratio": 0.4992,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.4992,
+      "gap_day_count": 3,
+      "first_gap_date": "2024-02-21",
+      "last_gap_date": "2024-02-26",
+      "max_gap_layer_score": 0.829374,
+      "max_gap_late_score": 0.740734,
+      "max_gap_core_score": 0.590799,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "pullback_repair",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002466_25",
+      "symbol": "002466",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.411953,
+      "incumbent_capture_ratio": 0.444373,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.444373,
+      "gap_day_count": 3,
+      "first_gap_date": "2024-09-24",
+      "last_gap_date": "2024-09-27",
+      "max_gap_layer_score": 0.894162,
+      "max_gap_late_score": 0.752652,
+      "max_gap_core_score": 0.46902,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "pullback_repair",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "000155_25",
+      "symbol": "000155",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.278835,
+      "incumbent_capture_ratio": 0.43643,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.43643,
+      "gap_day_count": 4,
+      "first_gap_date": "2024-09-24",
+      "last_gap_date": "2024-09-30",
+      "max_gap_layer_score": 0.749752,
+      "max_gap_late_score": 0.670521,
+      "max_gap_core_score": 0.461989,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "pullback_repair",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002466_17",
+      "symbol": "002466",
+      "start_date": "2024-07-10",
+      "end_date": "2024-07-11",
+      "capturable_return": 0.060172,
+      "incumbent_capture_ratio": 0.400144,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.400144,
+      "gap_day_count": 1,
+      "first_gap_date": "2024-07-10",
+      "last_gap_date": "2024-07-10",
+      "max_gap_layer_score": 0.553637,
+      "max_gap_late_score": 0.512544,
+      "max_gap_core_score": 0.553637,
+      "assignment_reasons": [
+        "low_composite_or_low_resonance"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "pullback_then_restrengthening"
+      ],
+      "passed_filters": [
+        "pullback_repair"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "300518_25",
+      "symbol": "300518",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.355107,
+      "incumbent_capture_ratio": 0.99998,
+      "challenger_capture_ratio": 0.670064,
+      "capture_regression": 0.329916,
+      "gap_day_count": 3,
+      "first_gap_date": "2024-09-24",
+      "last_gap_date": "2024-09-30",
+      "max_gap_layer_score": 0.9212,
+      "max_gap_late_score": 0.70382,
+      "max_gap_core_score": 0.361313,
+      "assignment_reasons": [
+        "fallback_to_junk",
+        "low_composite_or_low_resonance"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "pullback_then_restrengthening",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "pullback_repair",
+        "strict_short_term_bullish"
+      ],
+      "classification": "partial_capture_with_admissibility_gap"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "300390_23",
+      "symbol": "300390",
+      "start_date": "2024-08-26",
+      "end_date": "2024-09-06",
+      "capturable_return": 0.007692,
+      "incumbent_capture_ratio": 0.282257,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.282257,
+      "gap_day_count": 2,
+      "first_gap_date": "2024-08-26",
+      "last_gap_date": "2024-08-29",
+      "max_gap_layer_score": 0.764342,
+      "max_gap_late_score": 0.664115,
+      "max_gap_core_score": 0.499931,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "pullback_then_restrengthening"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "pullback_repair",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "603799_23",
+      "symbol": "603799",
+      "start_date": "2024-09-23",
+      "end_date": "2024-09-30",
+      "capturable_return": 0.366934,
+      "incumbent_capture_ratio": 0.531876,
+      "challenger_capture_ratio": 0.415273,
+      "capture_regression": 0.116603,
+      "gap_day_count": 1,
+      "first_gap_date": "2024-09-27",
+      "last_gap_date": "2024-09-27",
+      "max_gap_layer_score": 0.890382,
+      "max_gap_late_score": 0.753283,
+      "max_gap_core_score": 0.437262,
+      "assignment_reasons": [
+        "fallback_to_junk"
+      ],
+      "triggered_entry_rules": [
+        "confirmation_entry",
+        "mid_trend_follow",
+        "second_breakout"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "strict_short_term_bullish"
+      ],
+      "classification": "partial_capture_with_admissibility_gap"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "window_id": "002176_27",
+      "symbol": "002176",
+      "start_date": "2024-10-21",
+      "end_date": "2024-10-28",
+      "capturable_return": 0.068921,
+      "incumbent_capture_ratio": 0.098249,
+      "challenger_capture_ratio": 0.0,
+      "capture_regression": 0.098249,
+      "gap_day_count": 1,
+      "first_gap_date": "2024-10-21",
+      "last_gap_date": "2024-10-21",
+      "max_gap_layer_score": 0.563906,
+      "max_gap_late_score": 0.563906,
+      "max_gap_core_score": 0.455226,
+      "assignment_reasons": [
+        "low_composite_or_low_resonance"
+      ],
+      "triggered_entry_rules": [
+        "mid_trend_follow"
+      ],
+      "passed_filters": [
+        "loose_uptrend",
+        "medium_term_uptrend",
+        "strict_short_term_bullish"
+      ],
+      "classification": "blocked_window"
+    }
+  ],
+  "extras": {
+    "dataset_name": "theme_research_v3",
+    "strategy_names": [
+      "mainline_trend_c"
+    ],
+    "candidate_names": [
+      "shared_default",
+      "balanced_targeted_timing_repair"
+    ]
+  }
+}

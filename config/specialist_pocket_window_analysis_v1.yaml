@@ -1,0 +1,19 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  validation_report: reports/20260329T071117Z_fa50f33e_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: specialist_pocket_window_analysis_v1
+
+analysis:
+  dataset_name: theme_research_v4
+  slice_name: 2024_q1
+  strategy_name: mainline_trend_c
+  specialist_candidate: baseline_expansion_branch
+  anchor_candidates:
+    - shared_default
+    - buffer_only_012

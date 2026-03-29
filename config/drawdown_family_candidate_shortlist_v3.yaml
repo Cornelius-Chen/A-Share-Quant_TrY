@@ -1,0 +1,82 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: drawdown_family_candidate_shortlist_v3
+
+analysis:
+  min_positive_delta: 50.0
+  reports:
+    - report_path: reports/analysis/baseline_q3_trade_divergence_quality_c_v1.json
+      dataset_name: baseline_research_v1
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+    - report_path: reports/analysis/market_q4_trade_divergence_quality_c_v1.json
+      dataset_name: market_research_v0
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+    - report_path: reports/analysis/theme_q2_trade_divergence_quality_c_v1.json
+      dataset_name: theme_research_v4
+      slice_name: 2024_q2
+      strategy_name: mainline_trend_c
+    - report_path: reports/analysis/theme_q3_trade_divergence_quality_c_v1.json
+      dataset_name: theme_research_v4
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+    - report_path: reports/analysis/theme_q4_trade_divergence_quality_b_v1.json
+      dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_b
+    - report_path: reports/analysis/theme_q4_trade_divergence_quality_c_v1.json
+      dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+  excluded_symbols:
+    - dataset_name: baseline_research_v1
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+      symbol: "600519"
+    - dataset_name: market_research_v0
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+      symbol: "600519"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q2
+      strategy_name: mainline_trend_c
+      symbol: "300750"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+      symbol: "002460"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+      symbol: "300750"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q3
+      strategy_name: mainline_trend_c
+      symbol: "603799"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_b
+      symbol: "300750"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_b
+      symbol: "300759"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+      symbol: "300750"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+      symbol: "300759"
+    - dataset_name: theme_research_v4
+      slice_name: 2024_q4
+      strategy_name: mainline_trend_c
+      symbol: "002466"

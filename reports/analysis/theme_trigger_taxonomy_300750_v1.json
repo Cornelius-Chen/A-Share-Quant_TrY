@@ -1,0 +1,280 @@
+{
+  "summary": {
+    "symbol": "300750",
+    "trigger_row_count": 12,
+    "unique_trigger_type_count": 4,
+    "top_trigger_type": {
+      "trigger_type": "early_buy_trigger",
+      "count": 3
+    },
+    "core_rule": "The most repair-worthy trigger types are the ones that repeatedly change the action sequence, not the ones that only alter passive state labels."
+  },
+  "taxonomy_rows": [
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-01-19",
+      "trigger_type": "early_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-01-22",
+      "trigger_type": "forced_sell_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-02-05",
+      "trigger_type": "missed_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_a",
+      "trade_date": "2024-02-06",
+      "trigger_type": "position_gap_exit_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-01-19",
+      "trigger_type": "early_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-01-22",
+      "trigger_type": "forced_sell_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-02-05",
+      "trigger_type": "missed_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "trade_date": "2024-02-06",
+      "trigger_type": "position_gap_exit_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-01-19",
+      "trigger_type": "early_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "buy"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-01-22",
+      "trigger_type": "forced_sell_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [],
+      "challenger_emitted_actions": [
+        "sell"
+      ],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 100
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-02-05",
+      "trigger_type": "missed_buy_trigger",
+      "action_state_types": [
+        "emitted_actions"
+      ],
+      "difference_types": [
+        "permission",
+        "approved_sector",
+        "emitted_actions"
+      ],
+      "incumbent_emitted_actions": [
+        "buy"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 0,
+      "challenger_position_qty": 0
+    },
+    {
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "trade_date": "2024-02-06",
+      "trigger_type": "position_gap_exit_trigger",
+      "action_state_types": [
+        "emitted_actions",
+        "position_qty"
+      ],
+      "difference_types": [
+        "emitted_actions",
+        "position_qty",
+        "exit_reason"
+      ],
+      "incumbent_emitted_actions": [
+        "sell"
+      ],
+      "challenger_emitted_actions": [],
+      "incumbent_position_qty": 100,
+      "challenger_position_qty": 0
+    }
+  ],
+  "trigger_leaderboard": [
+    {
+      "trigger_type": "early_buy_trigger",
+      "count": 3
+    },
+    {
+      "trigger_type": "forced_sell_trigger",
+      "count": 3
+    },
+    {
+      "trigger_type": "missed_buy_trigger",
+      "count": 3
+    },
+    {
+      "trigger_type": "position_gap_exit_trigger",
+      "count": 3
+    }
+  ],
+  "interpretation": [
+    "Early-buy and missed-buy triggers usually point to entry-path issues.",
+    "Forced-sell and missing-exit-partner triggers usually point to state carry or permission-loss issues.",
+    "When the same trigger type repeats across all three strategies, it is much more likely to be a real structural blocker."
+  ]
+}

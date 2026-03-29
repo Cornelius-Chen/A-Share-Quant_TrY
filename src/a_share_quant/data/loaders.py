@@ -5,11 +5,15 @@ from datetime import date
 from pathlib import Path
 
 from a_share_quant.common.models import (
+    ConceptMappingRecord,
     DailyBar,
     MainlineWindow,
+    SecurityMasterRecord,
+    SectorMappingRecord,
     SectorSnapshot,
     Signal,
     StockSnapshot,
+    TradingCalendarEntry,
 )
 
 
@@ -100,6 +104,93 @@ def load_stock_snapshots_from_csv(path: Path) -> list[StockSnapshot]:
                     liquidity=float(row["liquidity"]),
                     late_mover_quality=float(row["late_mover_quality"]),
                     resonance=float(row["resonance"]),
+                    concept_support=float(row.get("concept_support", 0.0) or 0.0),
+                    primary_concept_weight=float(row.get("primary_concept_weight", 0.0) or 0.0),
+                    concept_count=int(row.get("concept_count", 0) or 0),
+                    concept_concentration_ratio=float(
+                        row.get("concept_concentration_ratio", 0.0) or 0.0
+                    ),
+                    leader_component_score=float(
+                        row.get("leader_component_score", 0.0) or 0.0
+                    ),
+                    core_component_score=float(
+                        row.get("core_component_score", 0.0) or 0.0
+                    ),
+                    late_component_score=float(
+                        row.get("late_component_score", 0.0) or 0.0
+                    ),
+                    non_junk_composite_score=float(
+                        row.get("non_junk_composite_score", 0.0) or 0.0
+                    ),
+                    late_quality_raw_score=float(
+                        row.get("late_quality_raw_score", 0.0) or 0.0
+                    ),
+                    late_quality_concept_boost=float(
+                        row.get("late_quality_concept_boost", 0.0) or 0.0
+                    ),
+                    late_quality_sector_strength=float(
+                        row.get("late_quality_sector_strength", 0.0) or 0.0
+                    ),
+                    late_quality_lag_balance=float(
+                        row.get("late_quality_lag_balance", 0.0) or 0.0
+                    ),
+                    late_quality_trend_support=float(
+                        row.get("late_quality_trend_support", 0.0) or 0.0
+                    ),
+                    stability_volatility=float(
+                        row.get("stability_volatility", 0.0) or 0.0
+                    ),
+                    liquidity_turnover_share=float(
+                        row.get("liquidity_turnover_share", 0.0) or 0.0
+                    ),
+                    liquidity_turnover_rank=float(
+                        row.get("liquidity_turnover_rank", 0.0) or 0.0
+                    ),
+                    liquidity_sector_turnover_share=float(
+                        row.get("liquidity_sector_turnover_share", 0.0) or 0.0
+                    ),
+                    liquidity_sector_top_turnover_share=float(
+                        row.get("liquidity_sector_top_turnover_share", 0.0) or 0.0
+                    ),
+                    liquidity_sector_mean_turnover_share=float(
+                        row.get("liquidity_sector_mean_turnover_share", 0.0) or 0.0
+                    ),
+                    liquidity_sector_turnover_share_gap=float(
+                        row.get("liquidity_sector_turnover_share_gap", 0.0) or 0.0
+                    ),
+                    liquidity_sector_symbol_count=int(
+                        row.get("liquidity_sector_symbol_count", 0) or 0
+                    ),
+                    context_theme_density=float(
+                        row.get("context_theme_density", 0.0) or 0.0
+                    ),
+                    context_turnover_concentration=float(
+                        row.get("context_turnover_concentration", 0.0) or 0.0
+                    ),
+                    context_theme_turnover_interaction=float(
+                        row.get("context_theme_turnover_interaction", 0.0) or 0.0
+                    ),
+                    context_sector_heat=float(
+                        row.get("context_sector_heat", 0.0) or 0.0
+                    ),
+                    context_sector_breadth=float(
+                        row.get("context_sector_breadth", 0.0) or 0.0
+                    ),
+                    late_quality_sector_contribution=float(
+                        row.get("late_quality_sector_contribution", 0.0) or 0.0
+                    ),
+                    late_quality_stability_contribution=float(
+                        row.get("late_quality_stability_contribution", 0.0) or 0.0
+                    ),
+                    late_quality_liquidity_contribution=float(
+                        row.get("late_quality_liquidity_contribution", 0.0) or 0.0
+                    ),
+                    late_quality_lag_contribution=float(
+                        row.get("late_quality_lag_contribution", 0.0) or 0.0
+                    ),
+                    late_quality_trend_contribution=float(
+                        row.get("late_quality_trend_contribution", 0.0) or 0.0
+                    ),
                 )
             )
     return snapshots
@@ -121,3 +212,95 @@ def load_mainline_windows_from_csv(path: Path) -> list[MainlineWindow]:
                 )
             )
     return windows
+
+
+def load_trading_calendar_from_csv(path: Path) -> list[TradingCalendarEntry]:
+    """Load trading-calendar entries from a canonical CSV file."""
+    entries: list[TradingCalendarEntry] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            entries.append(
+                TradingCalendarEntry(
+                    trade_date=date.fromisoformat(row["trade_date"]),
+                    is_open=_parse_bool(row.get("is_open", "true")),
+                    prev_open_date=(
+                        date.fromisoformat(row["prev_open_date"])
+                        if row.get("prev_open_date")
+                        else None
+                    ),
+                    next_open_date=(
+                        date.fromisoformat(row["next_open_date"])
+                        if row.get("next_open_date")
+                        else None
+                    ),
+                )
+            )
+    return entries
+
+
+def load_security_master_from_csv(path: Path) -> list[SecurityMasterRecord]:
+    """Load security-master entries from a canonical CSV file."""
+    records: list[SecurityMasterRecord] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            records.append(
+                SecurityMasterRecord(
+                    symbol=row["symbol"],
+                    name=str(row.get("name", "")),
+                    board=str(row.get("board", "")),
+                    exchange=str(row.get("exchange", "")),
+                    list_date=(
+                        date.fromisoformat(row["list_date"])
+                        if row.get("list_date")
+                        else None
+                    ),
+                    delist_date=(
+                        date.fromisoformat(row["delist_date"])
+                        if row.get("delist_date")
+                        else None
+                    ),
+                )
+            )
+    return records
+
+
+def load_sector_mapping_from_csv(path: Path) -> list[SectorMappingRecord]:
+    """Load daily sector mappings from a canonical CSV file."""
+    records: list[SectorMappingRecord] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            records.append(
+                SectorMappingRecord(
+                    trade_date=date.fromisoformat(row["trade_date"]),
+                    symbol=row["symbol"],
+                    sector_id=row["sector_id"],
+                    sector_name=row["sector_name"],
+                    mapping_source=str(row.get("mapping_source", "")),
+                    mapping_version=str(row.get("mapping_version", "")),
+                )
+            )
+    return records
+
+
+def load_concept_mapping_from_csv(path: Path) -> list[ConceptMappingRecord]:
+    """Load daily concept mappings from a canonical CSV file."""
+    records: list[ConceptMappingRecord] = []
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            records.append(
+                ConceptMappingRecord(
+                    trade_date=date.fromisoformat(row["trade_date"]),
+                    symbol=row["symbol"],
+                    concept_id=row["concept_id"],
+                    concept_name=row["concept_name"],
+                    mapping_source=str(row.get("mapping_source", "")),
+                    mapping_version=str(row.get("mapping_version", "")),
+                    is_primary_concept=_parse_bool(row.get("is_primary_concept", "false")),
+                    weight=float(row.get("weight", 0.0) or 0.0),
+                )
+            )
+    return records

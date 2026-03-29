@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "candidate_count": 4,
+    "trigger_date_count": 4,
+    "best_candidate": "theme_nonjunk_relief_058",
+    "best_candidate_reason": "assignment_led"
+  },
+  "candidate_rows": [
+    {
+      "candidate_name": "theme_nonjunk_relief_058",
+      "combined_repairs": 2,
+      "permission_repairs": 0,
+      "assignment_repairs": 2,
+      "emitted_buy_repairs": 2,
+      "trade_count": 10,
+      "fill_count": 21,
+      "total_pnl": -328.999,
+      "repair_profile": "assignment_led"
+    },
+    {
+      "candidate_name": "theme_coupled_relief_005_058",
+      "combined_repairs": 2,
+      "permission_repairs": 0,
+      "assignment_repairs": 2,
+      "emitted_buy_repairs": 2,
+      "trade_count": 10,
+      "fill_count": 21,
+      "total_pnl": -328.999,
+      "repair_profile": "assignment_led"
+    },
+    {
+      "candidate_name": "theme_strict_quality_branch",
+      "combined_repairs": 0,
+      "permission_repairs": 0,
+      "assignment_repairs": 0,
+      "emitted_buy_repairs": 0,
+      "trade_count": 8,
+      "fill_count": 17,
+      "total_pnl": -312.215,
+      "repair_profile": "no_trigger_repairs"
+    },
+    {
+      "candidate_name": "theme_margin_relief_005",
+      "combined_repairs": 0,
+      "permission_repairs": 0,
+      "assignment_repairs": 0,
+      "emitted_buy_repairs": 0,
+      "trade_count": 8,
+      "fill_count": 17,
+      "total_pnl": -312.215,
+      "repair_profile": "no_trigger_repairs"
+    }
+  ],
+  "interpretation": [
+    "A useful pocket-local repair should fix trigger-date states first; raw PnL alone is not enough.",
+    "Permission repairs matter most on the dates where the control candidate actually lost approval.",
+    "Assignment repairs matter most on the dates where the control candidate stayed in junk while the incumbent did not."
+  ]
+}

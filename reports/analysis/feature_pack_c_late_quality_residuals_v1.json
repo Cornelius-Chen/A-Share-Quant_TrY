@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "case_count": 2,
+    "row_count": 8,
+    "dominant_residual_component_counts": {
+      "stability": 3,
+      "liquidity": 3,
+      "sector_strength": 2
+    },
+    "concept_boost_active_count": 1,
+    "raw_below_threshold_count": 8,
+    "recommended_second_feature_group": "late_quality_stability_liquidity_context"
+  },
+  "case_rows": [
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-04-08",
+      "symbol": "002466",
+      "mechanism_type": "preemptive_loss_avoidance_shift",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "late_quality": 0.542706,
+      "late_quality_raw_score": 0.542706,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.107294,
+      "raw_gap_to_threshold": 0.107294,
+      "concept_support": 0.574228,
+      "late_quality_sector_strength": 0.523189,
+      "late_quality_lag_balance": 0.730159,
+      "late_quality_trend_support": 0.568855,
+      "component_deficits": {
+        "sector_strength": 0.143043,
+        "stability": 0.089559,
+        "liquidity": 0.141101,
+        "lag_balance": 0.040476,
+        "trend_support": 0.043115
+      },
+      "dominant_residual_component": "sector_strength"
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-04-08",
+      "symbol": "002466",
+      "mechanism_type": "delayed_entry_basis_advantage",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "late_quality": 0.542706,
+      "late_quality_raw_score": 0.542706,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.107294,
+      "raw_gap_to_threshold": 0.107294,
+      "concept_support": 0.574228,
+      "late_quality_sector_strength": 0.523189,
+      "late_quality_lag_balance": 0.730159,
+      "late_quality_trend_support": 0.568855,
+      "component_deficits": {
+        "sector_strength": 0.143043,
+        "stability": 0.089559,
+        "liquidity": 0.141101,
+        "lag_balance": 0.040476,
+        "trend_support": 0.043115
+      },
+      "dominant_residual_component": "sector_strength"
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-05-09",
+      "symbol": "002466",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "fallback_to_junk",
+      "late_quality": 0.623358,
+      "late_quality_raw_score": 0.623358,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.026642,
+      "raw_gap_to_threshold": 0.026642,
+      "concept_support": 0.518548,
+      "late_quality_sector_strength": 0.893125,
+      "late_quality_lag_balance": 0.555556,
+      "late_quality_trend_support": 0.428721,
+      "component_deficits": {
+        "sector_strength": 0.032062,
+        "stability": 0.094151,
+        "liquidity": 0.126634,
+        "lag_balance": 0.066667,
+        "trend_support": 0.057128
+      },
+      "dominant_residual_component": "liquidity"
+    },
+    {
+      "case_name": "theme_q2_002466_c",
+      "trigger_date": "2024-06-26",
+      "symbol": "002466",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "fallback_to_junk",
+      "late_quality": 0.597313,
+      "late_quality_raw_score": 0.554664,
+      "late_quality_concept_boost": 0.042649,
+      "late_threshold": 0.65,
+      "required_uplift": 0.052687,
+      "raw_gap_to_threshold": 0.095336,
+      "concept_support": 0.533114,
+      "late_quality_sector_strength": 0.840823,
+      "late_quality_lag_balance": 0.611111,
+      "late_quality_trend_support": 0.246667,
+      "component_deficits": {
+        "sector_strength": 0.047753,
+        "stability": 0.153691,
+        "liquidity": 0.110225,
+        "lag_balance": 0.058333,
+        "trend_support": 0.075333
+      },
+      "dominant_residual_component": "stability"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-23",
+      "symbol": "002902",
+      "mechanism_type": "other_worse_loss_shift",
+      "challenger_assignment_reason": "highest_leader_score",
+      "late_quality": 0.615669,
+      "late_quality_raw_score": 0.615669,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.034331,
+      "raw_gap_to_threshold": 0.034331,
+      "concept_support": 0.0,
+      "late_quality_sector_strength": 0.734287,
+      "late_quality_lag_balance": 0.888889,
+      "late_quality_trend_support": 1.0,
+      "component_deficits": {
+        "sector_strength": 0.079714,
+        "stability": 0.138878,
+        "liquidity": 0.149073,
+        "lag_balance": 0.016667,
+        "trend_support": 0.0
+      },
+      "dominant_residual_component": "liquidity"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-10-31",
+      "symbol": "002902",
+      "mechanism_type": "earlier_exit_loss_reduction",
+      "challenger_assignment_reason": "highest_leader_score",
+      "late_quality": 0.575792,
+      "late_quality_raw_score": 0.575792,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.074208,
+      "raw_gap_to_threshold": 0.074208,
+      "concept_support": 0.0,
+      "late_quality_sector_strength": 0.779385,
+      "late_quality_lag_balance": 0.888889,
+      "late_quality_trend_support": 0.874504,
+      "component_deficits": {
+        "sector_strength": 0.066185,
+        "stability": 0.179241,
+        "liquidity": 0.149565,
+        "lag_balance": 0.016667,
+        "trend_support": 0.01255
+      },
+      "dominant_residual_component": "stability"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-11-28",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "late_quality": 0.589676,
+      "late_quality_raw_score": 0.589676,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.060324,
+      "raw_gap_to_threshold": 0.060324,
+      "concept_support": 0.0,
+      "late_quality_sector_strength": 0.677855,
+      "late_quality_lag_balance": 0.888889,
+      "late_quality_trend_support": 0.274986,
+      "component_deficits": {
+        "sector_strength": 0.096643,
+        "stability": 0.067952,
+        "liquidity": 0.156561,
+        "lag_balance": 0.016667,
+        "trend_support": 0.072501
+      },
+      "dominant_residual_component": "liquidity"
+    },
+    {
+      "case_name": "theme_q4_002902_b",
+      "trigger_date": "2024-12-26",
+      "symbol": "002902",
+      "mechanism_type": "entry_suppression_avoidance",
+      "challenger_assignment_reason": "low_composite_or_low_resonance",
+      "late_quality": 0.395125,
+      "late_quality_raw_score": 0.395125,
+      "late_quality_concept_boost": 0.0,
+      "late_threshold": 0.65,
+      "required_uplift": 0.254875,
+      "raw_gap_to_threshold": 0.254875,
+      "concept_support": 0.0,
+      "late_quality_sector_strength": 0.673697,
+      "late_quality_lag_balance": 0.888889,
+      "late_quality_trend_support": 0.016125,
+      "component_deficits": {
+        "sector_strength": 0.097891,
+        "stability": 0.236487,
+        "liquidity": 0.155443,
+        "lag_balance": 0.016667,
+        "trend_support": 0.098388
+      },
+      "dominant_residual_component": "stability"
+    }
+  ],
+  "interpretation": [
+    "Late-quality residuals should be read as weighted contribution deficits, not as another scalar threshold search.",
+    "If one component dominates repeatedly, the next pack-c feature should expose its local causal context rather than widen concept support or approval thresholds.",
+    "Concept boost matters only when the raw late-quality score stays near the threshold edge; otherwise the blocker is inside the raw late-quality stack."
+  ]
+}

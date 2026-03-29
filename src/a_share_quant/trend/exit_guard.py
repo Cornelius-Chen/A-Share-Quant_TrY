@@ -14,6 +14,7 @@ from a_share_quant.common.models import (
 @dataclass(frozen=True, slots=True)
 class ExitGuardConfig:
     medium_window: int = 3
+    junk_grace_min_health_score: float = 99.0
 
 
 class ExitGuard:
@@ -35,6 +36,18 @@ class ExitGuard:
         ma_medium = self._moving_average(ordered, self.config.medium_window)
 
         if assignment.layer == "junk":
+            if (
+                holding.should_hold
+                and holding.health_score >= self.config.junk_grace_min_health_score
+                and permission.is_attack_allowed
+                and permission.approved_sector_id == assignment.sector_id
+            ):
+                return self._decision(
+                    latest,
+                    False,
+                    "junk_grace_hold",
+                    "junk_assignment_temporarily_tolerated_while_structure_intact",
+                )
             return self._decision(latest, True, "stock_fell_out_of_core_hierarchy", "assignment_became_junk")
 
         if not permission.is_attack_allowed:

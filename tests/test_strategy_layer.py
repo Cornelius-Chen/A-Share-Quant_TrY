@@ -3,10 +3,11 @@ from __future__ import annotations
 from datetime import date
 
 from a_share_quant.common.models import AttackPermission, DailyBar, HierarchyAssignment
+from a_share_quant.strategy.mainline_strategy_base import StrategyConfig
 from a_share_quant.strategy.mainline_trend_a import MainlineTrendA
 from a_share_quant.strategy.mainline_trend_b import MainlineTrendB
 from a_share_quant.strategy.mainline_trend_c import MainlineTrendC
-from a_share_quant.trend.exit_guard import ExitGuard
+from a_share_quant.trend.exit_guard import ExitGuard, ExitGuardConfig
 from a_share_quant.trend.holding_engine import HoldingEngine
 
 
@@ -174,3 +175,89 @@ def test_strategy_sells_existing_position_when_sector_loses_permission() -> None
     assert signals[0].action == "sell"
     assert signals[0].symbol == "LDR"
     assert signals[0].quantity == 200
+
+
+def test_exit_guard_can_grace_single_junk_day_when_health_is_high() -> None:
+    bars = bullish_bars("CORE")
+    assignment = build_assignment("CORE", "junk")
+    permission = AttackPermission(
+        trade_date=date(2025, 1, 8),
+        is_attack_allowed=True,
+        approved_sector_id="AI",
+        approved_sector_name="AI",
+        score=5.0,
+        reason="approved",
+    )
+    holding = HoldingEngine().evaluate(bars, assignment, permission)
+
+    decision = ExitGuard(
+        ExitGuardConfig(medium_window=3, junk_grace_min_health_score=1.5)
+    ).evaluate(bars, assignment, permission, holding)
+
+    assert decision.should_exit is False
+    assert decision.category == "junk_grace_hold"
+
+
+def test_mainline_trend_c_can_override_junk_for_high_score_late_mover_entry() -> None:
+    trade_date = date(2025, 1, 8)
+    bars_by_symbol = {"LATE": bullish_bars("LATE")}
+    permissions = [
+        AttackPermission(
+            trade_date=trade_date,
+            is_attack_allowed=True,
+            approved_sector_id="AI",
+            approved_sector_name="AI",
+            score=5.0,
+            reason="approved",
+        )
+    ]
+    junk_late_candidate = HierarchyAssignment(
+        trade_date=trade_date,
+        symbol="LATE",
+        sector_id="AI",
+        sector_name="AI",
+        layer="junk",
+        layer_score=0.58,
+        leader_score=0.55,
+        core_score=0.57,
+        late_score=0.66,
+        reason="low_composite_or_low_resonance",
+    )
+
+    default_signals = MainlineTrendC().generate_signals(
+        trade_date=trade_date,
+        bars_by_symbol=bars_by_symbol,
+        permissions=permissions,
+        assignments=[junk_late_candidate],
+        current_positions={},
+    )
+    override_signals = MainlineTrendC(
+        config=StrategyConfig(
+            enable_late_mover_entry_override=True,
+            late_mover_entry_override_min_layer_score=0.55,
+            late_mover_entry_override_min_late_score=0.60,
+        )
+    ).generate_signals(
+        trade_date=trade_date,
+        bars_by_symbol=bars_by_symbol,
+        permissions=permissions,
+        assignments=[junk_late_candidate],
+        current_positions={},
+    )
+    strategy_b_signals = MainlineTrendB(
+        config=StrategyConfig(
+            enable_late_mover_entry_override=True,
+            late_mover_entry_override_min_layer_score=0.55,
+            late_mover_entry_override_min_late_score=0.60,
+        )
+    ).generate_signals(
+        trade_date=trade_date,
+        bars_by_symbol=bars_by_symbol,
+        permissions=permissions,
+        assignments=[junk_late_candidate],
+        current_positions={},
+    )
+
+    assert default_signals == []
+    assert [signal.symbol for signal in override_signals] == ["LATE"]
+    assert strategy_b_signals == []
