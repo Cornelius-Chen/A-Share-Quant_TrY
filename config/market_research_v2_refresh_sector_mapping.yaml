@@ -1,0 +1,15 @@
+project:
+  protocol_version: protocol_v1.2
+
+provider:
+  name: akshare_cninfo
+  pause_seconds: 0.1
+
+bars_csv: data/raw/daily_bars/akshare_daily_bars_market_research_v2_refresh.csv
+output_csv: data/reference/sector_mapping_daily/market_research_sector_mapping_cninfo_v2_refresh.csv
+mapping_source: akshare_cninfo
+mapping_version: cninfo_market_research_v2_refresh
+fallback_sector_name: UNKNOWN
+fallback_sector_id: UNKNOWN
+backfill_earliest_known: true
+

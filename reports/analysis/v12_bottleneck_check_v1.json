@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v12_primary_bottleneck_as_carry_row_diversity_gap",
+    "row_diversity_still_missing": true,
+    "refresh_batch_still_needed": true,
+    "lane_changes_carry_reading": false,
+    "first_lane_opening_led": true,
+    "current_primary_bottleneck": "carry_row_diversity_gap",
+    "do_open_second_v3_lane_now": false,
+    "do_change_v12_direction_now": false,
+    "recommended_next_posture": "keep_v12_on_factor_row_diversity_track",
+    "recommended_next_batch_name": "market_research_v3_factor_diversity_seed"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "phase_readiness",
+      "actual": {
+        "row_diversity_still_missing": true,
+        "do_open_new_refresh_batch_now": true,
+        "recommended_next_posture": "prepare_later_refresh_batch_to_add_factor_row_diversity"
+      },
+      "reading": "If the phase gate still says row diversity is missing, one new lane needs to overturn that reading before the main bottleneck can change."
+    },
+    {
+      "evidence_name": "next_refresh_design",
+      "actual": {
+        "design_posture": "prepare_refresh_batch_for_factor_row_diversity",
+        "recommended_batch_posture": "expand_for_carry_row_diversity_not_general_size",
+        "recommended_next_batch_name": "market_research_v3_factor_diversity_seed"
+      },
+      "reading": "The last V1.2 design step already narrowed the next batch goal to carry row diversity rather than generic expansion."
+    },
+    {
+      "evidence_name": "first_v3_lane",
+      "actual": {
+        "top_driver": "002049",
+        "opening_present": true,
+        "persistence_present": false,
+        "lane_changes_carry_reading": false
+      },
+      "reading": "An opening-led first lane without a clean persistence edge does not yet count as carry-breakthrough evidence."
+    }
+  ],
+  "interpretation": [
+    "The first v3 lane is useful because it proves the new substrate can generate live specialist lanes, but it does not yet solve the carry-lane bottleneck.",
+    "Because the lane closes as opening-led and does not change the carry reading, V1.2 should keep its primary bottleneck defined as missing carry row diversity.",
+    "So the correct next posture is not to widen replay, but to stay on the factor-row-diversity track until a later lane or later refresh batch materially changes that reading."
+  ]
+}

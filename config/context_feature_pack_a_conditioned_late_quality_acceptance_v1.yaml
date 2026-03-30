@@ -1,0 +1,11 @@
+paths:
+  control_comparison_report: reports/20260329T122538Z_a98eb978_comparison.json
+  conditioned_comparison_report: reports/20260329T122501Z_40f2a08a_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: context_feature_pack_a_conditioned_late_quality_acceptance_v1
+
+analysis:
+  min_material_return_improvement: 0.0005
+  max_capture_regression: 0.001

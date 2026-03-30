@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "strategy_posture": "freeze_v12_carry_row_hunting_strategy_v1",
+    "current_primary_bottleneck": "carry_row_diversity_gap",
+    "checked_v4_symbol_count": 1,
+    "remaining_v4_symbol_count": 7,
+    "additional_carry_rows_needed": 2,
+    "do_open_new_refresh_now": false,
+    "do_widen_replay_now": false,
+    "recommended_next_action": "hunt_one_v4_symbol_from_basis_or_duration_track",
+    "recommended_next_symbol": "000725"
+  },
+  "hunt_rows": [
+    {
+      "symbol": "000725",
+      "target_row_diversity": "basis_spread_diversity",
+      "carry_row_hypothesis": "Panel and display leader intended to add lower-basis electronics carry rows rather than only saturated theme-growth carry evidence.",
+      "priority_bucket": 1,
+      "hunt_posture": "hunt_next"
+    },
+    {
+      "symbol": "600703",
+      "target_row_diversity": "basis_spread_diversity",
+      "carry_row_hypothesis": "Optoelectronics semiconductor name intended to probe mid-basis carry rows in a hardware cycle different from the current island.",
+      "priority_bucket": 1,
+      "hunt_posture": "hunt_next"
+    },
+    {
+      "symbol": "600150",
+      "target_row_diversity": "carry_duration_diversity",
+      "carry_row_hypothesis": "Shipbuilding cyclical intended to add slower multi-day carry duration variation in a regime unlike the current theme_q4 island.",
+      "priority_bucket": 2,
+      "hunt_posture": "hunt_next"
+    },
+    {
+      "symbol": "601127",
+      "target_row_diversity": "carry_duration_diversity",
+      "carry_row_hypothesis": "Auto trend leader intended to probe longer carry duration under stronger trend persistence than the current shared one-score carry rows.",
+      "priority_bucket": 2,
+      "hunt_posture": "hunt_next"
+    },
+    {
+      "symbol": "002600",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "carry_row_hypothesis": "Precision manufacturing name intended to test cross-dataset carry reuse in a broader industrial-electronics context without using opening-led clone logic.",
+      "priority_bucket": 3,
+      "hunt_posture": "defer_until_high_priority_tracks_checked"
+    },
+    {
+      "symbol": "600570",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "carry_row_hypothesis": "Software platform leader intended to probe whether carry-like negative-cycle basis can reappear outside current semiconductor-heavy islands.",
+      "priority_bucket": 3,
+      "hunt_posture": "defer_until_high_priority_tracks_checked"
+    },
+    {
+      "symbol": "002241",
+      "target_row_diversity": "exit_alignment_diversity",
+      "carry_row_hypothesis": "Consumer electronics manufacturer intended to test exit-alignment breaks in a demand-sensitive hardware regime.",
+      "priority_bucket": 4,
+      "hunt_posture": "defer_until_high_priority_tracks_checked"
+    }
+  ],
+  "interpretation": [
+    "The next carry-row hunt should stay inside the existing v4 refresh rather than opening another batch.",
+    "Because the first checked v4 symbol surfaced as opening-led from the exit-alignment track, the next hunt should move to basis-spread or carry-duration targets first.",
+    "This preserves single-lane discipline while still pursuing the actual carry-row-diversity bottleneck."
+  ]
+}

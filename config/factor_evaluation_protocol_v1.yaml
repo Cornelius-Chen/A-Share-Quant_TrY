@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: factor_evaluation_protocol_v1
+
+inputs:
+  registry_report: reports/analysis/feature_factor_registry_v1.json
+  family_inventory_report: reports/analysis/cycle_family_inventory_v3.json

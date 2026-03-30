@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "open_carry_in_basis_first_pass_as_bounded_factor_candidate",
+    "evaluate_now": true,
+    "repeated_clean_evidence": true,
+    "cross_strategy_reuse_confirmed": true,
+    "mechanism_present_in_b": true,
+    "mechanism_present_in_c": true,
+    "do_open_bounded_carry_factor_lane": true,
+    "promote_to_retained_feature_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "protocol_bucket",
+      "actual": {
+        "evaluation_bucket": "evaluate_now",
+        "protocol_posture": "promote_into_first_pass_factor_evaluation"
+      },
+      "reading": "The factor must first clear protocol-level readiness before any bounded design work should open."
+    },
+    {
+      "evidence_name": "family_inventory_cleanliness",
+      "actual": {
+        "occurrence_count": 2,
+        "report_count": 2,
+        "net_family_edge": 1682.5046,
+        "positive_opportunity_cost": 0.0
+      },
+      "reading": "A first-pass lane should only open when repeated evidence remains net-positive without opportunity-cost contamination."
+    },
+    {
+      "evidence_name": "cross_strategy_reuse",
+      "actual": {
+        "shared_carry": true,
+        "cross_strategy_summary": {
+          "strategy_count": 2,
+          "shared_negative_mechanism_count": 2,
+          "identical_negative_cycle_map": true,
+          "primary_takeaway": "If multiple strategies share the same negative-cycle map, the drawdown pocket is more likely to be a dataset-level structural effect."
+        },
+        "mechanism_present_in_b": true,
+        "mechanism_present_in_c": true
+      },
+      "reading": "The first bounded factor lane should prefer candidate structures that repeat across B/C rather than one-off strategy accidents."
+    }
+  ],
+  "interpretation": [
+    "A bounded first-pass factor lane is narrower than retained-feature promotion: it opens design work without claiming full structural closure.",
+    "Carry-in-basis advantage clears that bar when the protocol bucket is evaluate-now, the family remains clean, and the mechanism repeats across B/C.",
+    "So the correct next move is to open a bounded carry factor lane, while still keeping retained-feature promotion closed for now."
+  ]
+}

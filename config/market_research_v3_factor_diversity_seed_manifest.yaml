@@ -1,0 +1,42 @@
+paths:
+  reference_base_file: config/universes/market_research_v3_factor_diversity_reference_base.txt
+  seed_universe_file: config/universes/market_research_v3_factor_diversity_seed.txt
+  reports_dir: reports/analysis
+
+report:
+  name: market_research_v3_factor_diversity_seed_manifest_v1
+
+manifest:
+  required_targets:
+    - basis_spread_diversity
+    - carry_duration_diversity
+    - exit_alignment_diversity
+    - cross_dataset_carry_reuse
+  entries:
+    - symbol: "002049"
+      target_row_diversity: basis_spread_diversity
+      rationale: "Digital-security semiconductor leader intended to add mid-basis carry rows rather than only the currently saturated max-basis theme evidence."
+    - symbol: "600584"
+      target_row_diversity: basis_spread_diversity
+      rationale: "Packaging and foundry-adjacent semiconductor name intended to create lower or mixed basis-spread carry rows inside a liquid technology context."
+
+    - symbol: "300014"
+      target_row_diversity: carry_duration_diversity
+      rationale: "Power-battery platform name intended to probe carry rows that can extend beyond the current shared +1 day carry shape."
+    - symbol: "600438"
+      target_row_diversity: carry_duration_diversity
+      rationale: "Solar-chain leader intended to add a second path for zero-day or multi-day carry-duration variation in a different cyclical growth regime."
+
+    - symbol: "600050"
+      target_row_diversity: exit_alignment_diversity
+      rationale: "Telecom backbone name intended to stress cases where challenger and incumbent can no longer share the same exit date under slower trend decay."
+    - symbol: "601888"
+      target_row_diversity: exit_alignment_diversity
+      rationale: "Travel-consumption leader intended to add exit-alignment breaks in a consumer regime that is structurally unlike the current theme_q4 island."
+
+    - symbol: "000625"
+      target_row_diversity: cross_dataset_carry_reuse
+      rationale: "Auto-manufacturing leader intended to test whether carry-like negative-cycle basis can reappear outside the current theme_q4 semiconductor-heavy evidence cluster."
+    - symbol: "603993"
+      target_row_diversity: cross_dataset_carry_reuse
+      rationale: "Global metals and resources anchor intended to probe carry reuse in a commodity-heavy context rather than a concentrated theme-growth context."

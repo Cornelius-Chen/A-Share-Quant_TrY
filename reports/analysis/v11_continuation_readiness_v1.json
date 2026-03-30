@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "all_market_v1_slices_closed": true,
+    "all_context_branches_closed": true,
+    "u2_ready": false,
+    "specialist_opportunity_count": 19,
+    "recommended_next_phase": "pause_specialist_refinement_and_prepare_new_suspect_batch",
+    "do_continue_current_specialist_loop": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "closed_market_v1_slices",
+      "actual": {
+        "q2_closed": true,
+        "q3_closed": true,
+        "q4_closed": true
+      },
+      "reading": "If all current market-v1 slice lanes are already closed, there is no open continuation lane left inside the current suspect batch."
+    },
+    {
+      "evidence_name": "closed_context_branches",
+      "actual": {
+        "context_a_closed": true,
+        "context_b_closed": true,
+        "context_b_candidate_row_count": 1
+      },
+      "reading": "If both conditional context branches are already closed, the current stage has no active context-led refinement branch left either."
+    },
+    {
+      "evidence_name": "unsupervised_gate",
+      "actual": {
+        "u2_ready": false,
+        "recommended_next_phase": "hold_u2_and_wait_for_larger_or_less_separable_suspect_set"
+      },
+      "reading": "If U2 is not ready, unsupervised sidecar work is also not the next continuation path."
+    },
+    {
+      "evidence_name": "specialist_frontier_state",
+      "actual": {
+        "specialist_opportunity_count": 19,
+        "top_specialist_by_opportunity_count": "theme_strict_quality_branch"
+      },
+      "reading": "Opportunity pockets still exist, but the current question is whether they justify more local replay under the existing batch or require a new suspect substrate."
+    }
+  ],
+  "interpretation": [
+    "This readiness gate is a stop-rule check, not a new strategy comparison.",
+    "If all currently active slices and context branches are already closed, and unsupervised clustering is still not ready, the specialist line should pause rather than invent another continuation lane.",
+    "Under that condition, the next productive move is to prepare a new suspect batch or a new data expansion phase, not to keep replaying inside the same closed geography."
+  ]
+}

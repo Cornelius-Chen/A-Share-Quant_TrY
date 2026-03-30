@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  bridge_report: reports/analysis/market_v2_refresh_q1_nearby_cycle_bridge_002415_c_v1.json
+  timeline_report: reports/analysis/market_v2_refresh_q1_symbol_timeline_002415_quality_c_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: market_v2_refresh_q1_cycle_mechanism_002415_c_v1
+
+analysis:
+  strategy_name: mainline_trend_c
+  incumbent_candidate: shared_default
+  challenger_candidate: theme_strict_quality_branch

@@ -1,0 +1,24 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  validation_report: reports/20260330T041323Z_5e228d98_comparison.json
+  reports_dir: reports/analysis
+
+report:
+  name: specialist_alpha_analysis_v7
+
+analysis:
+  anchors:
+    - shared_default
+    - buffer_only_012
+  specialists:
+    - candidate_name: baseline_expansion_branch
+      primary_metric: mainline_capture_ratio
+      min_primary_advantage: 0.01
+      max_secondary_penalty: 0.003
+    - candidate_name: theme_strict_quality_branch
+      primary_metric: max_drawdown
+      min_primary_advantage: 0.0003
+      max_secondary_penalty: 0.0015

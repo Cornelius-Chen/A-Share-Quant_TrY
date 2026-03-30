@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "incumbent_only_cycle_count": 3,
+    "challenger_only_cycle_count": 0,
+    "matched_cycle_count": 1,
+    "incumbent_only_total_pnl": -252.116809,
+    "challenger_only_total_pnl": 0
+  },
+  "incumbent_only_cycles": [
+    {
+      "entry_date": "2024-03-04",
+      "exit_date": "2024-03-05",
+      "quantity": 100,
+      "entry_price": 33.69,
+      "exit_price": 32.78,
+      "pnl": -103.065073,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-02-28",
+      "exit_date": "2024-02-29",
+      "quantity": 100,
+      "entry_price": 33.05,
+      "exit_price": 32.26,
+      "pnl": -91.031637,
+      "holding_days": 1
+    },
+    {
+      "entry_date": "2024-02-26",
+      "exit_date": "2024-02-27",
+      "quantity": 100,
+      "entry_price": 32.57,
+      "exit_price": 32.11,
+      "pnl": -58.020099,
+      "holding_days": 1
+    }
+  ],
+  "challenger_only_cycles": [],
+  "matched_cycles": [
+    {
+      "entry_date": "2024-01-18",
+      "exit_date": "2024-01-22",
+      "incumbent_pnl": 87.143733,
+      "challenger_pnl": 87.143733,
+      "pnl_delta": 0.0,
+      "holding_day_delta": 0
+    }
+  ],
+  "interpretation": [
+    "Incumbent-only negative cycles are the cleanest evidence that a specialist branch reduced churn or filtered low-quality re-entries.",
+    "Challenger-only cycles matter too, but for drawdown pockets the first question is usually which bad cycles disappeared.",
+    "Exact-cycle matching is intentionally strict; unmatched but nearby cycles should be replayed separately if they still matter."
+  ]
+}

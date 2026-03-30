@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "trigger_name": "new_archetype_gap",
+    "trigger_type": "archetype_gap",
+    "source": "manual_review",
+    "dataset_count": 2,
+    "symbol_count": 1,
+    "slice_count": 1,
+    "recommended_next_step": "rerun_phase_guard_after_persisting_new_signal"
+  },
+  "evidence": [
+    {
+      "evidence_name": "signal_origin",
+      "actual": {
+        "source": "manual_review",
+        "rationale": "Found a materially different suspect geography."
+      },
+      "reading": "This records where the potential refresh signal came from and why it may matter."
+    },
+    {
+      "evidence_name": "affected_scope",
+      "actual": {
+        "datasets": [
+          "market_research_v1",
+          "market_research_v2_seed"
+        ],
+        "symbols": [
+          "603986"
+        ],
+        "slices": [
+          "2024_q4"
+        ]
+      },
+      "reading": "This records which datasets, symbols, or slices are suspected to have changed the current waiting-state reading."
+    }
+  ],
+  "interpretation": [
+    "This artifact does not open refresh by itself.",
+    "It is the canonical intake record for a newly observed signal before rerunning the guard stack.",
+    "After writing this record, the next safe command remains `python scripts/run_phase_guard.py`."
+  ]
+}

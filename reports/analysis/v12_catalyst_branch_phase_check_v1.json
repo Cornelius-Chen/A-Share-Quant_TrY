@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "phase_posture": "keep_catalyst_branch_active_but_bounded",
+    "context_separation_present": true,
+    "keep_branch_report_only": true,
+    "primary_bottleneck_still_carry_row_diversity": true,
+    "catalyst_branch_changes_v12_direction_now": false,
+    "promote_catalyst_branch_now": false,
+    "recommended_next_posture": "preserve_catalyst_branch_as_context_support_not_mainline_switch"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "catalyst_directional_separation",
+      "actual": {
+        "context_separation_present": true,
+        "keep_branch_report_only": true
+      },
+      "reading": "The catalyst branch is already directionally useful, but the bounded audit still keeps it below promotion threshold."
+    },
+    {
+      "evidence_name": "main_v12_bottleneck",
+      "actual": {
+        "primary_bottleneck_still_carry_row_diversity": true
+      },
+      "reading": "Carry row diversity remains the main V1.2 bottleneck, so catalyst context should support rather than replace the current mainline."
+    }
+  ],
+  "interpretation": [
+    "The catalyst branch is now real enough to keep, but not strong enough to become the new V1.2 mainline.",
+    "Its current value is contextual support: it helps explain why opening-led lanes surface before carry, without changing the carry-row-diversity bottleneck itself.",
+    "So the correct phase reading is to preserve the branch as active but bounded and keep the mainline focused on true carry-row expansion."
+  ]
+}

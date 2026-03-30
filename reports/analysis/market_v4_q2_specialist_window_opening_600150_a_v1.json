@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_a",
+    "specialist_candidate": "baseline_expansion_branch",
+    "anchor_candidates": [
+      "shared_default",
+      "buffer_only_012"
+    ],
+    "window_start": "2024-04-01",
+    "window_end": "2024-06-30",
+    "specialist_opened_window": false,
+    "opening_trade_date": null
+  },
+  "opening_edge": null,
+  "anchor_blockers": [],
+  "interpretation": [
+    "A specialist-owned window is most interesting when permission, filters, and entries are already aligned but the hierarchy layer is still different.",
+    "If anchors and specialist share the same permission path, then a pure assignment-layer upgrade is a strong candidate for the true opening edge.",
+    "The first specialist-only buy date is usually more actionable than later exit differences because it explains how the window was opened in the first place."
+  ]
+}

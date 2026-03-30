@@ -1,0 +1,47 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  runs_dir: experiments/runs
+  reports_dir: reports
+
+backtest:
+  initial_cash: 1000000
+  price_field: open
+
+cost_model:
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
+  transfer_fee_bps: 0.1
+  exchange_handling_bps: 0.341
+  regulatory_fee_bps: 0.2
+  min_commission: 5.0
+
+limit_model:
+  daily_limit_pct: 0.10
+  epsilon: 0.0001
+
+strategy:
+  strategy_names:
+    - mainline_trend_a
+    - mainline_trend_b
+    - mainline_trend_c
+
+datasets:
+  - dataset_name: baseline_research_v1
+    config_path: config/baseline_research_strategy_suite.yaml
+  - dataset_name: theme_research_v4
+    config_path: config/theme_research_strategy_suite_v4.yaml
+  - dataset_name: market_research_v1
+    config_path: config/market_research_strategy_suite_v1.yaml
+  - dataset_name: market_research_v2_seed
+    config_path: config/market_research_strategy_suite_v2_seed.yaml
+  - dataset_name: market_research_v2_refresh
+    config_path: config/market_research_strategy_suite_v2_refresh.yaml
+  - dataset_name: market_research_v3_factor_diversity_seed
+    config_path: config/market_research_strategy_suite_v3_factor_diversity_seed.yaml
+  - dataset_name: market_research_v4_carry_row_diversity_refresh
+    config_path: config/market_research_strategy_suite_v4_carry_row_diversity_refresh.yaml
+  - dataset_name: market_research_v5_carry_row_diversity_refresh
+    config_path: config/market_research_strategy_suite_v5_carry_row_diversity_refresh.yaml

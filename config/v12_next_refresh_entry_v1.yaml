@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  bottleneck_report: reports/analysis/v12_bottleneck_check_v1.json
+  next_refresh_design_report: reports/analysis/v12_next_refresh_factor_diversity_design_v1.json
+  v3_audit_report: reports/data/market_research_data_audit_v3_factor_diversity_seed.json
+  first_lane_acceptance_report: reports/analysis/market_v3_q4_first_lane_acceptance_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v12_next_refresh_entry_v1

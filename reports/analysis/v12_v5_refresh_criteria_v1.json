@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v12_v5_refresh_symbol_selection_criteria",
+    "criteria_count": 7,
+    "recommended_next_batch_name": "market_research_v5_carry_row_diversity_refresh",
+    "prepare_manifest_now": false,
+    "ready_to_open_v5_manifest_after_criteria": true,
+    "additional_carry_rows_needed": 2,
+    "additional_persistence_rows_needed": 2,
+    "carry_observable_field_count": 5
+  },
+  "criteria_rows": [
+    {
+      "criterion_name": "must_target_one_primary_training_gap",
+      "criterion_type": "inclusion",
+      "rule": {
+        "allowed_primary_targets": [
+          "true_carry_row",
+          "clean_persistence_row"
+        ],
+        "exactly_one_primary_target_per_symbol": true
+      },
+      "reading": "Each v5 symbol should enter to solve one training-sample gap first; mixed multi-purpose admissions dilute the refresh."
+    },
+    {
+      "criterion_name": "must_support_carry_or_persistence_observability",
+      "criterion_type": "inclusion",
+      "rule": {
+        "carry_required_observable_fields": [
+          "basis_advantage_abs",
+          "basis_advantage_bps",
+          "challenger_carry_days",
+          "same_exit_date",
+          "pnl_delta_vs_closest"
+        ],
+        "persistence_required_signature": "specialist_preserved_window_with_anchor_churn",
+        "must_support_acceptance_grade_row_classification": true
+      },
+      "reading": "A v5 candidate must plausibly generate either a true carry row or a clean persistence row that survives the existing acceptance chain."
+    },
+    {
+      "criterion_name": "must_fill_known_training_gap",
+      "criterion_type": "inclusion",
+      "rule": {
+        "additional_carry_rows_needed": 2,
+        "additional_persistence_rows_needed": 2,
+        "opening_count_frozen": true
+      },
+      "reading": "The v5 refresh is tied to the current training manifest: it should fill the missing carry and persistence rows while leaving opening rows frozen."
+    },
+    {
+      "criterion_name": "exclude_opening_led_clone_as_primary_reason",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_opening_clone_chasing": true,
+        "exclude_if_primary_case_is_only_opening_edge": true
+      },
+      "reading": "A candidate that only looks like another opening-led lane should not be admitted as a primary v5 target."
+    },
+    {
+      "criterion_name": "exclude_relabelled_non_carry_rows",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_penalty_relabelling_into_carry": true,
+        "exclude_deferred_basis_relabelling_into_carry": true,
+        "exclude_mixed_hold_examples_into_persistence": true
+      },
+      "reading": "The new batch should not solve the gap by relabeling adjacent structures into carry or persistence classes."
+    },
+    {
+      "criterion_name": "exclude_locally_exhausted_replay_zone",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_v4_q2_a_local_hunt_zone": true,
+        "exclude_reopening_checked_high_priority_symbols": true
+      },
+      "reading": "The checked local v4 q2/A hunt zone is already exhausted at high priority and should not be reused as a primary v5 source."
+    },
+    {
+      "criterion_name": "require_reference_base_novelty",
+      "criterion_type": "inclusion",
+      "rule": {
+        "must_be_new_vs_combined_reference_base": true,
+        "reference_base": "v1_plus_v2_seed_plus_v2_refresh_plus_v3_seed_plus_v4_refresh"
+      },
+      "reading": "V5 should continue the discipline of adding only genuinely new symbols against the accumulated reference base."
+    }
+  ],
+  "interpretation": [
+    "The next v5 refresh should open only after its training-gap criteria are frozen, not directly from a generic desire for more samples.",
+    "These criteria keep V1.2 focused on true carry rows and clean persistence rows by requiring acceptance-grade observability and by excluding opening-clone chasing.",
+    "Once these criteria are accepted, the next healthy move is to draft the v5 manifest against them rather than reopen local replay on existing substrates."
+  ]
+}

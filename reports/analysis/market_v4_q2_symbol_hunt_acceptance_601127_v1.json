@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v4_q2_symbol_hunt_as_no_active_structural_lane",
+    "target_symbol": "601127",
+    "target_row_diversity": "carry_duration_diversity",
+    "target_pnl_delta": 0.0,
+    "opening_present": false,
+    "persistence_present": false,
+    "identical_trade_count_signature": true,
+    "lane_changes_carry_reading": false,
+    "do_continue_current_symbol_now": false,
+    "do_continue_hunt_with_next_symbol": true,
+    "recommended_next_symbol": ""
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "hunt_target",
+      "actual": {
+        "target_symbol": "601127",
+        "target_row_diversity": "carry_duration_diversity",
+        "carry_row_hypothesis": "Auto trend leader intended to probe longer carry duration under stronger trend persistence than the current shared one-score carry rows."
+      },
+      "reading": "A v4 symbol should be judged against the specific row-diversity gap it was selected to probe."
+    },
+    {
+      "evidence_name": "divergence_signature",
+      "actual": {
+        "target_pnl_delta": 0.0,
+        "incumbent_trade_count": 6,
+        "challenger_trade_count": 6,
+        "identical_trade_count_signature": true
+      },
+      "reading": "If the symbol shows zero pnl delta and no trade-count divergence, the hunt should assume no active structural lane until a replay proves otherwise."
+    },
+    {
+      "evidence_name": "window_checks",
+      "actual": {
+        "opening_present": false,
+        "opening_trade_date": null,
+        "persistence_present": false,
+        "persistence_trade_date": null
+      },
+      "reading": "The hunt only stays open when opening or persistence analysis surfaces an actual specialist-owned window."
+    }
+  ],
+  "interpretation": [
+    "A carry-row hunt should not be forced just because a symbol was selected for row-diversity coverage.",
+    "If the selected symbol shows no pnl divergence and no specialist-owned opening or persistence window, the correct posture is to close that hunt and move to the next symbol.",
+    "This keeps v4 focused on one symbol at a time without relabeling inactive lanes as carry evidence."
+  ]
+}

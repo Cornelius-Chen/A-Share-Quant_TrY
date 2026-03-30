@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  monitor_report: reports/analysis/refresh_trigger_monitor_v1.json
+  readiness_report: reports/analysis/next_batch_refresh_readiness_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: refresh_trigger_action_plan_v1

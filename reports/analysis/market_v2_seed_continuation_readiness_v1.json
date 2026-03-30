@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "all_open_v2_seed_lanes_closed": true,
+    "v2_seed_baseline_ready": true,
+    "v2_seed_contributes_specialist_pockets": true,
+    "recommended_next_phase": "hold_market_v2_seed_as_secondary_substrate_and_wait_for_next_batch_refresh",
+    "do_continue_current_v2_seed_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "slice_acceptance_state",
+      "actual": {
+        "q4_capture_closed": true,
+        "q3_drawdown_closed": true
+      },
+      "reading": "If the currently opened v2-seed lanes are already closed, there is no active local replay lane left to justify another symbol by momentum alone."
+    },
+    {
+      "evidence_name": "pack_status",
+      "actual": {
+        "baseline_ready": true,
+        "derived_ready_count": 3
+      },
+      "reading": "A closed-lane decision only matters if the pack itself is already stable enough to count as a real substrate."
+    },
+    {
+      "evidence_name": "specialist_role",
+      "actual": {
+        "contributes_specialist_pockets": true,
+        "top_specialist_by_opportunity_count": "baseline_expansion_branch"
+      },
+      "reading": "v2-seed is useful only if it already contributes pocket geography, even when it does not yet justify a fresh local replay branch."
+    }
+  ],
+  "interpretation": [
+    "This gate is not a promotion comparison. It is a stop-rule for the current v2-seed local replay budget.",
+    "If v2-seed is baseline-ready, contributes specialist pockets, and its currently opened lanes are already closed, the correct posture is to keep it as a secondary substrate rather than forcing another replay lane.",
+    "Under that condition, the next productive move is either a later batch refresh or a materially different v2-seed suspect lane, not one more local continuation by inertia."
+  ]
+}

@@ -78,7 +78,14 @@ def test_merge_config_recursively_overrides_nested_values() -> None:
 def test_rule_sweep_runner_emits_rows_and_candidate_leaderboard() -> None:
     engine = BacktestEngine(
         initial_cash=100000.0,
-        cost_model=CostModel(commission_bps=0.0, stamp_tax_bps=0.0, min_commission=0.0),
+        cost_model=CostModel(
+            commission_bps=0.0,
+            stamp_tax_bps=0.0,
+            transfer_fee_bps=0.0,
+            exchange_handling_bps=0.0,
+            regulatory_fee_bps=0.0,
+            min_commission=0.0,
+        ),
         limit_model=LimitModel(daily_limit_pct=0.10, epsilon=0.0001),
     )
     runner = RuleSweepRunner(engine=engine)

@@ -1,0 +1,16 @@
+protocol_version: protocol_v1.1
+
+paths:
+  output_path: reports/data/market_research_data_audit_v2_seed.json
+
+tables:
+  daily_bars: data/raw/daily_bars/akshare_daily_bars_market_research_v2_seed.csv
+  index_daily_bars: data/raw/index_daily_bars/akshare_index_daily_bars_market_research_v2_seed.csv
+  security_master: data/reference/security_master/akshare_security_master_market_research_v2_seed.csv
+  trading_calendar: data/reference/trading_calendar/akshare_trading_calendar_market_research_v2_seed.csv
+  adjustment_factors: data/reference/adjustment_factors/akshare_adjustment_factors_market_research_v2_seed.csv
+  sector_mapping_daily: data/reference/sector_mapping_daily/market_research_sector_mapping_daily_v2_seed.csv
+  concept_mapping_daily: data/reference/concept_mapping_daily/market_research_concept_mapping_v2_seed.csv
+  sector_snapshots: data/derived/sector_snapshots/market_research_sector_snapshots_v2_seed.csv
+  stock_snapshots: data/derived/stock_snapshots/market_research_stock_snapshots_v2_seed.csv
+  mainline_windows: data/derived/mainline_windows/market_research_mainline_windows_v2_seed.csv

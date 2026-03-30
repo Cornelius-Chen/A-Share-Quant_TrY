@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "schema_posture": "open_carry_observable_schema_v1",
+    "schema_row_count": 2,
+    "observable_mode": "negative_cycle_basis_row",
+    "required_fields": [
+      "basis_advantage_abs",
+      "basis_advantage_bps",
+      "challenger_carry_days",
+      "same_exit_date",
+      "pnl_delta_vs_closest"
+    ],
+    "mean_basis_advantage_bps": 333.4258,
+    "common_carry_days": true,
+    "same_exit_consistency": true,
+    "allow_scoring_design_next": true
+  },
+  "schema_rows": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "trigger_date": "2024-11-05",
+      "incumbent_entry_date": "2024-11-06",
+      "incumbent_exit_date": "2024-11-07",
+      "challenger_entry_date": "2024-11-05",
+      "challenger_exit_date": "2024-11-07",
+      "basis_advantage_abs": 8.41,
+      "basis_advantage_bps": 333.4258,
+      "challenger_carry_days": 1,
+      "same_exit_date": true,
+      "pnl_delta_vs_closest": 841.2523,
+      "observable_mode": "negative_cycle_basis_row"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "trigger_date": "2024-11-05",
+      "incumbent_entry_date": "2024-11-06",
+      "incumbent_exit_date": "2024-11-07",
+      "challenger_entry_date": "2024-11-05",
+      "challenger_exit_date": "2024-11-07",
+      "basis_advantage_abs": 8.41,
+      "basis_advantage_bps": 333.4258,
+      "challenger_carry_days": 1,
+      "same_exit_date": true,
+      "pnl_delta_vs_closest": 841.2523,
+      "observable_mode": "negative_cycle_basis_row"
+    }
+  ],
+  "interpretation": [
+    "Carry schema v1 is row-level and negative-cycle specific: it isolates the better-basis challenger row instead of inheriting the whole mixed pocket.",
+    "The core observables are basis advantage, carry duration, same-exit alignment, and realized pnl delta against the incumbent cycle.",
+    "Once this schema is explicit, the next factor step can design scoring or filtering around carry rows rather than around the entire pocket."
+  ]
+}

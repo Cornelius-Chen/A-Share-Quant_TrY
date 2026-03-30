@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+  next_refresh_entry_report: reports/analysis/v12_next_refresh_entry_v2.json
+  training_manifest_report: reports/analysis/v12_training_sample_manifest_v1.json
+  carry_schema_report: reports/analysis/carry_observable_schema_v1.json
+
+report:
+  name: v12_v5_refresh_criteria_v1

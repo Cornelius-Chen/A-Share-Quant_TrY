@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "design_posture": "open_carry_scoring_design_v1",
+    "score_row_count": 2,
+    "score_field_name": "carry_score_v1",
+    "score_formula": "0.45*basis + 0.20*same_exit + 0.15*carry_days + 0.20*realized_confirmation",
+    "min_score": 1.0,
+    "max_score": 1.0,
+    "mean_score": 1.0,
+    "allow_factor_pilot_next": true,
+    "allow_strategy_integration_now": false,
+    "allow_retained_feature_promotion_now": false
+  },
+  "score_rows": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "basis_component": 1.0,
+      "exit_alignment_component": 1.0,
+      "carry_duration_component": 1.0,
+      "realized_confirmation_component": 1.0,
+      "carry_score_v1": 1.0,
+      "score_formula": "0.45*basis + 0.20*same_exit + 0.15*carry_days + 0.20*realized_confirmation"
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "basis_component": 1.0,
+      "exit_alignment_component": 1.0,
+      "carry_duration_component": 1.0,
+      "realized_confirmation_component": 1.0,
+      "carry_score_v1": 1.0,
+      "score_formula": "0.45*basis + 0.20*same_exit + 0.15*carry_days + 0.20*realized_confirmation"
+    }
+  ],
+  "interpretation": [
+    "Carry scoring design v1 stays inside the row-isolated boundary and scores only row-level carry observables.",
+    "The score combines basis advantage, same-exit alignment, positive carry duration, and realized negative-cycle confirmation.",
+    "This opens a bounded factor pilot next, but it still keeps strategy integration and retained-feature promotion off."
+  ]
+}

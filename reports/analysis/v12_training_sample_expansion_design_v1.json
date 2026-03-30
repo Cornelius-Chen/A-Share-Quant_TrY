@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "design_posture": "freeze_v12_training_sample_expansion_design_v1",
+    "opening_sample_sufficient_now": true,
+    "persistence_sample_still_thin": true,
+    "carry_sample_still_thin": true,
+    "allow_relabelling_penalty_track_into_carry_class": false,
+    "allow_relabelling_deferred_basis_track_into_carry_class": false,
+    "recommended_expansion_source": "future_refresh_rows_not_relabelled_existing_candidates",
+    "recommended_next_action": "expand_true_carry_rows_and_clean_persistence_rows_before_next_model_step",
+    "ready_for_training_sample_manifest": true
+  },
+  "expansion_rows": [
+    {
+      "class_name": "opening_led",
+      "current_count": 6,
+      "posture": "hold_current_count",
+      "reading": "Opening-led samples are no longer the main scarcity; the branch already has enough opening structure to avoid chasing more clones now."
+    },
+    {
+      "class_name": "persistence_led",
+      "current_count": 2,
+      "posture": "expand_when_new_clean_persistence_rows_arrive",
+      "reading": "Persistence remains thin, but the repo should only add new rows when they are acceptance-grade persistence cases rather than mixed hold examples."
+    },
+    {
+      "class_name": "carry_row_present",
+      "current_count": 2,
+      "posture": "primary_expansion_target",
+      "reading": "Carry remains the primary scarcity and should be expanded using new true carry rows rather than broader opening clones."
+    },
+    {
+      "candidate_name": "preemptive_loss_avoidance_shift",
+      "evaluation_bucket": "evaluate_with_penalty",
+      "posture": "do_not_relabel_into_carry_training_class",
+      "reading": "Penalty-track factors can help later, but opportunity-cost baggage makes them unsafe as direct carry-class substitutes in the current training pilot."
+    },
+    {
+      "candidate_name": "delayed_entry_basis_advantage",
+      "evaluation_bucket": "hold_for_more_sample",
+      "posture": "keep_deferred_until_repeated",
+      "reading": "Thin basis candidates are useful for later row diversity, but should not be relabelled into the carry class until repeated evidence exists."
+    },
+    {
+      "candidate_name": "carry_in_basis_advantage",
+      "registry_bucket": "candidate_factor",
+      "posture": "expand_via_future_refresh_rows",
+      "reading": "The current carry candidate should be strengthened by new rows from later refresh batches, not by collapsing neighboring factor families into the same class."
+    }
+  ],
+  "interpretation": [
+    "The next training-step bottleneck is not model choice; it is class expansion discipline.",
+    "The repo should avoid cheating by relabelling preemptive or delayed basis examples as carry rows just to enlarge the class.",
+    "So the right next move is to define a bounded training-sample manifest that asks for new true carry rows and clean persistence rows from future refresh work."
+  ]
+}

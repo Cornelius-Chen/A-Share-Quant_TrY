@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "binding_check_posture": "freeze_v12_training_lane_binding_check_v1",
+    "candidate_report_count": 2,
+    "opening_class_frozen": true,
+    "bindable_persistence_count": 0,
+    "bindable_carry_count": 0,
+    "rejected_candidate_count": 2,
+    "additional_persistence_rows_needed": 2,
+    "additional_carry_rows_needed": 2,
+    "ready_to_expand_training_sample_now": false
+  },
+  "candidate_rows": [
+    {
+      "report_path": "reports/analysis/market_v3_q4_first_lane_acceptance_v1.json",
+      "dataset_name": "",
+      "slice_name": "",
+      "top_driver": "002049",
+      "opening_present": true,
+      "persistence_present": false,
+      "lane_changes_carry_reading": false,
+      "binding_outcome": "reject_opening_class_frozen"
+    },
+    {
+      "report_path": "reports/analysis/market_v4_q2_first_lane_acceptance_v1.json",
+      "dataset_name": "",
+      "slice_name": "",
+      "top_driver": "601919",
+      "opening_present": true,
+      "persistence_present": false,
+      "lane_changes_carry_reading": false,
+      "binding_outcome": "reject_opening_class_frozen"
+    }
+  ],
+  "interpretation": [
+    "This check is the per-lane operational entry for the bounded training branch.",
+    "A closed lane may bind only if it contributes a clean persistence row or a true carry row.",
+    "Opening-led lanes remain structurally useful but should continue to stay outside the training sample while the opening class is frozen."
+  ]
+}

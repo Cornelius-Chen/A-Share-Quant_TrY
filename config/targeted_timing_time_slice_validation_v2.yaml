@@ -11,8 +11,8 @@ backtest:
   price_field: open
 
 cost_model:
-  commission_bps: 3.0
-  stamp_tax_bps: 10.0
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
   min_commission: 5.0
 
 limit_model:
@@ -78,3 +78,5 @@ validation:
     - slice_name: 2024_q4
       start_date: 2024-10-01
       end_date: 2024-12-31
+
+

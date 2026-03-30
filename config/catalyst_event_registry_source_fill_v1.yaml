@@ -1,0 +1,52 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  market_context_fill_report: reports/analysis/catalyst_event_registry_fill_v1.json
+  reports_dir: reports/analysis
+
+source_entries:
+  - lane_id: "mainline_trend_c::2024-11-05::002049"
+    source_fill_status: "resolved_official_or_high_trust"
+    source_authority_tier: "official_industry"
+    primary_source_ref: "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2024/art_efda38def5694be3a95353e7a32b1ea2.html"
+    policy_scope: "industry_support"
+    execution_strength: "guidance"
+    rumor_risk_level: "low"
+    notes: "电子信息制造业运行情况可作为通信技术板块的高可信行业背景。"
+  - lane_id: "mainline_trend_c::2024-06-17::300502"
+    source_fill_status: "resolved_official_or_high_trust"
+    source_authority_tier: "official_industry"
+    primary_source_ref: "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2024/art_efda38def5694be3a95353e7a32b1ea2.html"
+    policy_scope: "industry_support"
+    execution_strength: "guidance"
+    rumor_risk_level: "low"
+    notes: "电子信息制造业口径与计算机、通信和其他电子设备制造业一致。"
+  - lane_id: "mainline_trend_c::2024-02-22::000155"
+    source_fill_status: "resolved_official_or_high_trust"
+    source_authority_tier: "official_industry"
+    primary_source_ref: "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html"
+    policy_scope: "industry_norms"
+    execution_strength: "guidance"
+    rumor_risk_level: "low"
+    notes: "锂离子电池行业规范条件可作为锂电/锂矿相关持续产业背景。"
+  - lane_id: "mainline_trend_b::2024-11-05::300750"
+    source_fill_status: "resolved_official_or_high_trust"
+    source_authority_tier: "official_industry"
+    primary_source_ref: "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html"
+    policy_scope: "industry_norms"
+    execution_strength: "guidance"
+    rumor_risk_level: "low"
+    notes: "锂电行业规范条件可作为动力电池产业持续背景。"
+  - lane_id: "mainline_trend_c::2024-11-05::300750"
+    source_fill_status: "resolved_official_or_high_trust"
+    source_authority_tier: "official_industry"
+    primary_source_ref: "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html"
+    policy_scope: "industry_norms"
+    execution_strength: "guidance"
+    rumor_risk_level: "low"
+    notes: "锂电行业规范条件可作为动力电池产业持续背景。"
+
+report:
+  name: catalyst_event_registry_source_fill_v1

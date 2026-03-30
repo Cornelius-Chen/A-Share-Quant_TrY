@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v4_as_active_but_locally_exhausted_substrate",
+    "v4_still_active_substrate": true,
+    "checked_region_paused": true,
+    "primary_bottleneck_still_carry_row_diversity": true,
+    "do_open_lower_priority_v4_tracks_now": false,
+    "do_open_new_v4_slice_now": false,
+    "do_open_new_refresh_now": false,
+    "recommended_next_posture": "return_to_v12_level_batch_or_substrate_decision"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v4_hunt_phase_check",
+      "actual": {
+        "checked_region_paused": true,
+        "high_priority_tracks_exhausted": true,
+        "all_checked_high_priority_hunts_inactive": true
+      },
+      "reading": "The currently checked q2/A hunt area should not be extended automatically once its high-priority tracks are exhausted."
+    },
+    {
+      "evidence_name": "v4_specialist_map_position",
+      "actual": {
+        "v4_still_active_substrate": true,
+        "v4_top_opportunity_count": 1,
+        "top_v4_rows": [
+          {
+            "dataset_name": "market_research_v4_carry_row_diversity_refresh",
+            "slice_name": "2024_q2",
+            "strategy_name": "mainline_trend_a",
+            "primary_advantage_vs_anchors": 0.056622,
+            "secondary_penalty_vs_anchors": -6.5e-05,
+            "total_return_delta_vs_anchors": 4.6e-05,
+            "specialist_candidate": "baseline_expansion_branch"
+          }
+        ]
+      },
+      "reading": "V4 can remain a real substrate in the broader map even if one checked hunt area is locally exhausted."
+    },
+    {
+      "evidence_name": "global_v12_bottleneck",
+      "actual": {
+        "primary_bottleneck_still_carry_row_diversity": true
+      },
+      "reading": "The global V1.2 problem stays the same even when the local v4 q2/A hunt pauses."
+    }
+  ],
+  "interpretation": [
+    "V4 should not be discarded: it still exists as an active substrate inside the wider specialist map.",
+    "But the checked v4 q2/A high-priority hunt region is now locally exhausted, so pushing into lower-priority tracks would look like replay drift.",
+    "The correct next move is to return to a higher-level V1.2 decision about the next batch or substrate, not to force more v4 symbol hunts right now."
+  ]
+}

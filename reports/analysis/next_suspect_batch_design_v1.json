@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "current_loop_paused": true,
+    "observed_closed_slice_count": 3,
+    "specialist_opportunity_count": 19,
+    "top_specialist_by_opportunity_count": "theme_strict_quality_branch",
+    "missing_archetype_count": 3,
+    "recommended_next_batch_name": "market_research_v2_seed",
+    "recommended_batch_posture": "expand_by_missing_context_archetypes"
+  },
+  "observed_rows": [
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q2",
+      "slice_role": "capture",
+      "theme_bucket": "theme_light",
+      "turnover_bucket": "balanced_turnover",
+      "sector_bucket": "narrow_sector",
+      "context_tags": [
+        "cool_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "slice_role": "drawdown",
+      "theme_bucket": "theme_light",
+      "turnover_bucket": "balanced_turnover",
+      "sector_bucket": "narrow_sector",
+      "context_tags": [
+        "hot_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "slice_role": "drawdown",
+      "theme_bucket": "theme_light",
+      "turnover_bucket": "balanced_turnover",
+      "sector_bucket": "narrow_sector",
+      "context_tags": [
+        "cool_sector",
+        "narrow_sector",
+        "theme_light",
+        "balanced_turnover"
+      ]
+    }
+  ],
+  "missing_archetypes": [
+    {
+      "theme_bucket": "theme_loaded",
+      "turnover_bucket": "balanced_turnover",
+      "sector_bucket": "broad_sector",
+      "priority": 1,
+      "rationale": "Tests whether specialist edges survive when concept load stays high but turnover is not dominated by one name."
+    },
+    {
+      "theme_bucket": "theme_loaded",
+      "turnover_bucket": "balanced_turnover",
+      "sector_bucket": "narrow_sector",
+      "priority": 2,
+      "rationale": "Tests whether specialist edges survive when concept load stays high but turnover is not dominated by one name."
+    },
+    {
+      "theme_bucket": "theme_light",
+      "turnover_bucket": "concentrated_turnover",
+      "sector_bucket": "broad_sector",
+      "priority": 3,
+      "rationale": "Stresses low-theme slices where one or two names still dominate turnover but sector structure is broader."
+    }
+  ],
+  "interpretation": [
+    "Once the current specialist loop is paused, the next batch should not be a random size expansion.",
+    "The new suspect batch should target context archetypes that are missing from the current closed-slice geography.",
+    "This keeps the next batch tied to decision-boundary gaps rather than general sample hunger."
+  ]
+}

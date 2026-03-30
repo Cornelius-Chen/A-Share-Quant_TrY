@@ -1,0 +1,19 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  timeline_report: reports/analysis/market_v4_q2_symbol_timeline_600703_capture_a_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: market_v4_q2_specialist_window_opening_600703_a_v1
+
+analysis:
+  strategy_name: mainline_trend_a
+  specialist_candidate: baseline_expansion_branch
+  anchor_candidates:
+    - shared_default
+    - buffer_only_012
+  window_start: 2024-04-01
+  window_end: 2024-06-30

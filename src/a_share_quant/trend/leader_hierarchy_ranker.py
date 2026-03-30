@@ -11,6 +11,13 @@ class HierarchyConfig:
     min_resonance_for_core: float = 0.55
     min_quality_for_late_mover: float = 0.55
     min_composite_for_non_junk: float = 0.60
+    enable_context_conditioned_late_quality: bool = False
+    conditioned_high_interaction_threshold: float = 0.25
+    conditioned_medium_interaction_threshold: float = 0.18
+    conditioned_high_interaction_relief: float = 0.0
+    conditioned_medium_interaction_relief: float = 0.0
+    conditioned_resonance_floor: float = 0.40
+    conditioned_non_junk_threshold: float | None = None
 
 
 class LeaderHierarchyRanker:
@@ -92,6 +99,7 @@ class LeaderHierarchyRanker:
         core_score: float,
         late_score: float,
     ) -> tuple[str, float, str]:
+        effective_late_quality_threshold = self._effective_late_quality_threshold(snapshot)
         max_score = max(leader_score, core_score, late_score)
         if max_score < self.config.min_composite_for_non_junk or snapshot.resonance < 0.40:
             return ("junk", max_score, "low_composite_or_low_resonance")
@@ -99,13 +107,46 @@ class LeaderHierarchyRanker:
             return ("leader", leader_score, "highest_leader_score")
         if core_symbol is not None and snapshot.symbol == core_symbol and snapshot.resonance >= self.config.min_resonance_for_core:
             return ("core", core_score, "highest_core_score")
-        if late_symbol is not None and snapshot.symbol == late_symbol and snapshot.late_mover_quality >= self.config.min_quality_for_late_mover:
+        if (
+            late_symbol is not None
+            and snapshot.symbol == late_symbol
+            and snapshot.late_mover_quality >= effective_late_quality_threshold
+        ):
             return ("late_mover", late_score, "highest_late_mover_score")
         if core_score >= late_score and snapshot.resonance >= self.config.min_resonance_for_core:
             return ("core", core_score, "core_resonance_fallback")
-        if snapshot.late_mover_quality >= self.config.min_quality_for_late_mover:
+        if snapshot.late_mover_quality >= effective_late_quality_threshold:
             return ("late_mover", late_score, "late_mover_quality_fallback")
         return ("junk", max_score, "fallback_to_junk")
+
+    def _effective_late_quality_threshold(self, snapshot: StockSnapshot) -> float:
+        threshold = self.config.min_quality_for_late_mover
+        if not self.config.enable_context_conditioned_late_quality:
+            return threshold
+
+        non_junk_threshold = (
+            self.config.min_composite_for_non_junk
+            if self.config.conditioned_non_junk_threshold is None
+            else self.config.conditioned_non_junk_threshold
+        )
+        if (
+            snapshot.non_junk_composite_score < non_junk_threshold
+            or snapshot.resonance < self.config.conditioned_resonance_floor
+        ):
+            return threshold
+
+        interaction_value = snapshot.context_theme_turnover_interaction
+        if interaction_value >= self.config.conditioned_high_interaction_threshold:
+            return max(
+                0.0,
+                threshold - self.config.conditioned_high_interaction_relief,
+            )
+        if interaction_value >= self.config.conditioned_medium_interaction_threshold:
+            return max(
+                0.0,
+                threshold - self.config.conditioned_medium_interaction_relief,
+            )
+        return threshold
 
     def _leader_score(self, snapshot: StockSnapshot) -> float:
         return (

@@ -11,8 +11,8 @@ backtest:
   price_field: open
 
 cost_model:
-  commission_bps: 3.0
-  stamp_tax_bps: 10.0
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
   min_commission: 5.0
 
 limit_model:
@@ -124,3 +124,5 @@ candidates:
           min_health_score_to_hold: 1.2
         exit_guard:
           medium_window: 4
+
+

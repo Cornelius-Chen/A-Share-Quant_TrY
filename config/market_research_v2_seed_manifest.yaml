@@ -1,0 +1,43 @@
+paths:
+  base_universe_file: config/universes/market_research_v1.txt
+  seed_universe_file: config/universes/market_research_v2_seed.txt
+  reports_dir: reports/analysis
+
+report:
+  name: next_suspect_batch_manifest_v1
+
+manifest:
+  required_archetypes:
+    - theme_loaded_balanced_turnover_broad_sector
+    - theme_loaded_balanced_turnover_narrow_sector
+    - theme_light_concentrated_turnover_broad_sector
+  entries:
+    - symbol: "002475"
+      target_archetype: theme_loaded_balanced_turnover_broad_sector
+      rationale: "Consumer-electronics supply-chain leader intended to add theme-loaded exposure inside a broader hardware sector without relying on one-name turnover dominance."
+    - symbol: "601138"
+      target_archetype: theme_loaded_balanced_turnover_broad_sector
+      rationale: "Large AI/server complex name intended to stress broad-sector theme load under more balanced turnover."
+    - symbol: "603986"
+      target_archetype: theme_loaded_balanced_turnover_broad_sector
+      rationale: "Semiconductor growth name intended to reinforce broad-sector theme-loaded conditions beyond the current market_v1 set."
+
+    - symbol: "600111"
+      target_archetype: theme_loaded_balanced_turnover_narrow_sector
+      rationale: "Rare-earth leader intended to test a theme-loaded but more sector-narrow context."
+    - symbol: "002050"
+      target_archetype: theme_loaded_balanced_turnover_narrow_sector
+      rationale: "Specialized manufacturing / robotics-linked name intended to stress narrower sector context with active themes."
+    - symbol: "300274"
+      target_archetype: theme_loaded_balanced_turnover_narrow_sector
+      rationale: "New-energy equipment leader intended to provide a high-theme but not one-name-dominated narrow-sector environment."
+
+    - symbol: "600690"
+      target_archetype: theme_light_concentrated_turnover_broad_sector
+      rationale: "Large home-appliance anchor intended to test low-theme broad-sector behavior with concentrated turnover."
+    - symbol: "600809"
+      target_archetype: theme_light_concentrated_turnover_broad_sector
+      rationale: "Large consumer/liquor anchor intended to test concentrated-turnover broad-sector behavior without strong theme loading."
+    - symbol: "601398"
+      target_archetype: theme_light_concentrated_turnover_broad_sector
+      rationale: "Mega-cap bank intended to stress theme-light broad-sector structure where turnover can still concentrate in a few large names."

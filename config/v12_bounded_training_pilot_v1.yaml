@@ -1,0 +1,30 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: v12_bounded_training_pilot_v1
+
+inputs:
+  opening_reports:
+    - sample_id: market_v1_q2_002371_opening
+      report_path: reports/analysis/market_v1_q2_specialist_window_opening_002371_v1.json
+    - sample_id: theme_q1_002466_opening
+      report_path: reports/analysis/theme_q1_specialist_window_opening_002466_v1.json
+    - sample_id: theme_q1_600338_opening
+      report_path: reports/analysis/theme_q1_specialist_window_opening_600338_v1.json
+    - sample_id: theme_q1_300518_opening
+      report_path: reports/analysis/theme_q1_specialist_window_opening_300518_v1.json
+    - sample_id: market_v3_q4_002049_opening
+      report_path: reports/analysis/market_v3_factor_diversity_q4_specialist_window_opening_002049_v1.json
+    - sample_id: market_v4_q2_601919_opening
+      report_path: reports/analysis/market_v4_q2_specialist_window_opening_601919_a_v1.json
+  persistence_reports:
+    - sample_id: market_v1_q2_300502_persistence
+      report_path: reports/analysis/market_v1_q2_specialist_window_persistence_300502_v1.json
+    - sample_id: theme_q1_000155_persistence
+      report_path: reports/analysis/theme_q1_specialist_window_persistence_000155_v1.json
+  carry_report: reports/analysis/carry_observable_schema_v1.json

@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "registry_entry_count": 10,
+    "retained_feature_count": 4,
+    "explanatory_only_feature_count": 3,
+    "candidate_factor_count": 3,
+    "ready_for_factor_evaluation_protocol": true
+  },
+  "registry_rows": [
+    {
+      "entry_name": "drawdown_entry_suppression_avoidance",
+      "bucket": "retained_feature",
+      "source_type": "cycle_family",
+      "posture": "retain_as_core_drawdown_feature",
+      "rationale": "Repeats across multiple pockets with the strongest net family edge and clean reuse inside later refreshed slices.",
+      "evidence_paths": [
+        "reports/analysis/cycle_family_inventory_v3.json",
+        "reports/analysis/market_v1_q3_drawdown_slice_acceptance_v1.json",
+        "reports/analysis/market_v2_refresh_q1_drawdown_slice_acceptance_v1.json"
+      ],
+      "evidence_count": 3
+    },
+    {
+      "entry_name": "drawdown_earlier_exit_loss_reduction",
+      "bucket": "retained_feature",
+      "source_type": "cycle_family",
+      "posture": "retain_as_secondary_drawdown_feature",
+      "rationale": "Repeats across multiple drawdown pockets and remains net-positive after opportunity-cost adjustment.",
+      "evidence_paths": [
+        "reports/analysis/cycle_family_inventory_v3.json",
+        "reports/analysis/market_v1_q4_drawdown_slice_acceptance_v1.json"
+      ],
+      "evidence_count": 2
+    },
+    {
+      "entry_name": "capture_opening_edge_late_mover_admission",
+      "bucket": "retained_feature",
+      "source_type": "specialist_mechanism",
+      "posture": "retain_as_capture_edge_feature",
+      "rationale": "Opening edge is now a clean repeated capture mechanism and is explicitly part of a closed mixed capture slice.",
+      "evidence_paths": [
+        "reports/analysis/market_v1_q2_capture_slice_acceptance_v1.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "capture_persistence_edge_late_mover_structure",
+      "bucket": "retained_feature",
+      "source_type": "specialist_mechanism",
+      "posture": "retain_as_capture_edge_feature",
+      "rationale": "Persistence edge is now a clean repeated capture mechanism and is explicitly part of a closed mixed capture slice.",
+      "evidence_paths": [
+        "reports/analysis/market_v1_q2_capture_slice_acceptance_v1.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "conditioned_late_quality_theme_turnover_context",
+      "bucket": "explanatory_only_feature",
+      "source_type": "context_branch",
+      "posture": "keep_as_explanatory_context_only",
+      "rationale": "The branch showed genuine explanatory separation but failed to produce suite-level material improvement.",
+      "evidence_paths": [
+        "reports/analysis/context_feature_pack_a_conditioned_late_quality_acceptance_v1.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "sector_heat_breadth_context",
+      "bucket": "explanatory_only_feature",
+      "source_type": "context_branch",
+      "posture": "keep_as_sparse_explanatory_context_only",
+      "rationale": "The branch collapsed to one surviving row and is too sparse for retained-rule or factor promotion.",
+      "evidence_paths": [
+        "reports/analysis/context_feature_pack_b_sector_heat_breadth_v1.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "balanced_turnover_weakness_context",
+      "bucket": "explanatory_only_feature",
+      "source_type": "feature_pack",
+      "posture": "keep_as_local_explanatory_context_only",
+      "rationale": "The branch improved local explanation but closed as non-material for continuation.",
+      "evidence_paths": [
+        "reports/analysis/feature_pack_c_acceptance_v1.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "carry_in_basis_advantage",
+      "bucket": "candidate_factor",
+      "source_type": "cycle_family",
+      "posture": "evaluate_as_clean_non_baseline_candidate",
+      "rationale": "This is the cleanest non-baseline drawdown family and now has repeated evidence without positive opportunity cost.",
+      "evidence_paths": [
+        "reports/analysis/cycle_family_inventory_v3.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "preemptive_loss_avoidance_shift",
+      "bucket": "candidate_factor",
+      "source_type": "cycle_family",
+      "posture": "evaluate_with_opportunity_cost_penalty",
+      "rationale": "The family now repeats, but its edge quality is inseparable from large opportunity-cost baggage.",
+      "evidence_paths": [
+        "reports/analysis/cycle_family_inventory_v3.json"
+      ],
+      "evidence_count": 1
+    },
+    {
+      "entry_name": "delayed_entry_basis_advantage",
+      "bucket": "candidate_factor",
+      "source_type": "cycle_family",
+      "posture": "evaluate_as_weak_basis_candidate",
+      "rationale": "The family exists and is directionally promising, but current evidence is still thin and net edge remains modest.",
+      "evidence_paths": [
+        "reports/analysis/cycle_family_inventory_v3.json"
+      ],
+      "evidence_count": 1
+    }
+  ],
+  "interpretation": [
+    "Retained features are the current reusable feature pool: they already have enough structural evidence to survive beyond one local pocket.",
+    "Explanatory-only features stay in the research stack, but they should not be promoted into retained strategy rules or factor inputs yet.",
+    "Candidate factors are worth formal evaluation next; they are promising enough to preserve, but not stable enough to call retained features."
+  ]
+}

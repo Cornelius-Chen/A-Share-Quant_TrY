@@ -1,0 +1,44 @@
+paths:
+  base_universe_file: config/universes/market_research_v2_reference_base.txt
+  seed_universe_file: config/universes/market_research_v2_refresh.txt
+  reports_dir: reports/analysis
+
+report:
+  name: next_suspect_batch_manifest_v2_refresh
+
+manifest:
+  required_archetypes:
+    - theme_loaded_concentrated_turnover_narrow_sector
+    - theme_light_balanced_turnover_narrow_sector
+    - theme_moderate_concentrated_turnover_broad_sector
+  entries:
+    - symbol: "300124"
+      target_archetype: theme_loaded_concentrated_turnover_narrow_sector
+      rationale: "Industrial-automation and robotics-heavy leader intended to stress a theme-loaded narrow sector where turnover can concentrate in a few active names."
+    - symbol: "603019"
+      target_archetype: theme_loaded_concentrated_turnover_narrow_sector
+      rationale: "AI-compute server name intended to reinforce concentrated turnover inside a narrower high-theme technology lane."
+    - symbol: "002130"
+      target_archetype: theme_loaded_concentrated_turnover_narrow_sector
+      rationale: "Power-and-electronics linkage intended to add another high-theme narrow-sector case that can crowd into a small set of liquid names."
+
+    - symbol: "600030"
+      target_archetype: theme_light_balanced_turnover_narrow_sector
+      rationale: "Large brokerage anchor intended to represent a theme-light but still narrow financial sector where turnover is active without being dominated by a single symbol."
+    - symbol: "600426"
+      target_archetype: theme_light_balanced_turnover_narrow_sector
+      rationale: "Chemical-sector quality leader intended to add a theme-light narrow-sector case with steadier, more balanced turnover."
+    - symbol: "601225"
+      target_archetype: theme_light_balanced_turnover_narrow_sector
+      rationale: "Coal-sector large cap intended to stress balanced-turnover behavior inside a theme-light narrow cyclical sector."
+
+    - symbol: "002230"
+      target_archetype: theme_moderate_concentrated_turnover_broad_sector
+      rationale: "AI-software platform name intended to add a broad-sector case where theme load is present but not extreme while turnover can still concentrate."
+    - symbol: "002415"
+      target_archetype: theme_moderate_concentrated_turnover_broad_sector
+      rationale: "Security-and-electronics leader intended to represent a broader technology sector with moderate theme linkage and concentrated attention."
+    - symbol: "300760"
+      target_archetype: theme_moderate_concentrated_turnover_broad_sector
+      rationale: "Healthcare large-cap leader intended to add a non-technology broad-sector case with moderate theme loading and concentrated turnover."
+

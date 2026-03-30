@@ -1,0 +1,20 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  seed_report: reports/analysis/catalyst_event_registry_seed_v1.json
+  concept_mapping_files:
+    - data/reference/concept_mapping_daily/market_research_concept_mapping_v1.csv
+    - data/reference/concept_mapping_daily/market_research_concept_mapping_v3_factor_diversity_seed.csv
+    - data/reference/concept_mapping_daily/theme_research_concept_mapping_v1.csv
+    - data/reference/concept_mapping_daily/theme_research_concept_mapping_v4.csv
+  sector_mapping_files:
+    - data/reference/sector_mapping_daily/market_research_sector_mapping_daily_v1.csv
+    - data/reference/sector_mapping_daily/market_research_sector_mapping_daily_v3_factor_diversity_seed.csv
+    - data/reference/sector_mapping_daily/theme_research_sector_mapping_daily_v1.csv
+    - data/reference/sector_mapping_daily/theme_research_sector_mapping_daily_v4.csv
+  reports_dir: reports/analysis
+
+report:
+  name: catalyst_event_registry_fill_v1

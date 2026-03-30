@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "reference_base_count": 57,
+    "seed_universe_count": 8,
+    "manifest_entry_count": 8,
+    "new_symbol_count": 8,
+    "overlap_with_reference_base_count": 0,
+    "missing_from_seed_count": 0,
+    "missing_from_manifest_count": 0,
+    "missing_target_count": 0,
+    "target_counts": {
+      "basis_spread_diversity": 2,
+      "carry_duration_diversity": 2,
+      "exit_alignment_diversity": 2,
+      "cross_dataset_carry_reuse": 2
+    },
+    "ready_to_bootstrap_market_research_v3_factor_diversity_seed": true
+  },
+  "manifest_rows": [
+    {
+      "symbol": "002049",
+      "target_row_diversity": "basis_spread_diversity",
+      "rationale": "Digital-security semiconductor leader intended to add mid-basis carry rows rather than only the currently saturated max-basis theme evidence.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600584",
+      "target_row_diversity": "basis_spread_diversity",
+      "rationale": "Packaging and foundry-adjacent semiconductor name intended to create lower or mixed basis-spread carry rows inside a liquid technology context.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "300014",
+      "target_row_diversity": "carry_duration_diversity",
+      "rationale": "Power-battery platform name intended to probe carry rows that can extend beyond the current shared +1 day carry shape.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600438",
+      "target_row_diversity": "carry_duration_diversity",
+      "rationale": "Solar-chain leader intended to add a second path for zero-day or multi-day carry-duration variation in a different cyclical growth regime.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600050",
+      "target_row_diversity": "exit_alignment_diversity",
+      "rationale": "Telecom backbone name intended to stress cases where challenger and incumbent can no longer share the same exit date under slower trend decay.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "601888",
+      "target_row_diversity": "exit_alignment_diversity",
+      "rationale": "Travel-consumption leader intended to add exit-alignment breaks in a consumer regime that is structurally unlike the current theme_q4 island.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "000625",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "rationale": "Auto-manufacturing leader intended to test whether carry-like negative-cycle basis can reappear outside the current theme_q4 semiconductor-heavy evidence cluster.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "603993",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "rationale": "Global metals and resources anchor intended to probe carry reuse in a commodity-heavy context rather than a concentrated theme-growth context.",
+      "is_new_vs_reference_base": true
+    }
+  ],
+  "interpretation": [
+    "The next refresh manifest should solve carry row-diversity gaps, not generic sample-size gaps.",
+    "A valid seed must add only new symbols versus the combined v1/v2 reference base while covering all four diversity targets.",
+    "This gate should pass before any market_research_v3 factor-diversity bootstrap is attempted."
+  ]
+}

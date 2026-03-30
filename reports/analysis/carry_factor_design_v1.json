@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "design_posture": "open_row_isolated_carry_factor_design",
+    "do_open_carry_factor_design": true,
+    "carry_lane_open": true,
+    "carry_shared_across_b_c": true,
+    "mixed_with_earlier_exit": true,
+    "row_isolation_required": true,
+    "identical_negative_cycle_map": true,
+    "allow_broad_factor_scoring_now": false,
+    "allow_retained_feature_promotion_now": false,
+    "next_design_mode": "negative_cycle_basis_row_isolation"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "first_pass_gate",
+      "actual": {
+        "acceptance_posture": "open_carry_in_basis_first_pass_as_bounded_factor_candidate",
+        "evaluate_now": true,
+        "repeated_clean_evidence": true,
+        "cross_strategy_reuse_confirmed": true,
+        "mechanism_present_in_b": true,
+        "mechanism_present_in_c": true,
+        "do_open_bounded_carry_factor_lane": true,
+        "promote_to_retained_feature_now": false
+      },
+      "reading": "The design lane only opens after the bounded first-pass gate is already green."
+    },
+    {
+      "evidence_name": "shared_mechanism_mix",
+      "actual": {
+        "mechanism_types_b": [
+          "carry_in_basis_advantage",
+          "earlier_exit_loss_reduction"
+        ],
+        "mechanism_types_c": [
+          "carry_in_basis_advantage",
+          "earlier_exit_loss_reduction"
+        ],
+        "shared_mechanism_types": [
+          "carry_in_basis_advantage",
+          "earlier_exit_loss_reduction"
+        ]
+      },
+      "reading": "Carry repeats across B/C, but it coexists with earlier-exit reduction inside the same pocket family mix."
+    },
+    {
+      "evidence_name": "design_boundary",
+      "actual": {
+        "row_isolation_required": true,
+        "identical_negative_cycle_map": true
+      },
+      "reading": "Because carry is embedded in a mixed pocket, the next design should isolate carry rows rather than treat the whole pocket as one factor."
+    }
+  ],
+  "interpretation": [
+    "Carry is strong enough to open factor design, but not clean enough to inherit an entire mixed pocket unchanged.",
+    "The right next move is a row-isolated negative-cycle basis design, not broad factor scoring across all current pockets.",
+    "This keeps the lane narrow, preserves the protocol discipline, and avoids accidental promotion into retained-feature status."
+  ]
+}

@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.1
+
+paths:
+  v11_continuation_report: reports/analysis/v11_continuation_readiness_v1.json
+  v2_seed_continuation_report: reports/analysis/market_v2_seed_continuation_readiness_v1.json
+  refresh_readiness_report: reports/analysis/next_batch_refresh_readiness_v1.json
+  trigger_monitor_report: reports/analysis/refresh_trigger_monitor_v1.json
+  action_plan_report: reports/analysis/refresh_trigger_action_plan_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: phase_status_snapshot_v1

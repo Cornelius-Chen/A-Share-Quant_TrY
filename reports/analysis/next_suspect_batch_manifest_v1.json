@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "base_universe_count": 40,
+    "seed_universe_count": 9,
+    "manifest_entry_count": 9,
+    "new_symbol_count": 9,
+    "overlap_with_market_v1_count": 0,
+    "missing_from_seed_count": 0,
+    "missing_from_manifest_count": 0,
+    "missing_archetype_count": 0,
+    "archetype_counts": {
+      "theme_loaded_balanced_turnover_broad_sector": 3,
+      "theme_loaded_balanced_turnover_narrow_sector": 3,
+      "theme_light_concentrated_turnover_broad_sector": 3
+    },
+    "ready_to_bootstrap_market_research_v2_seed": true
+  },
+  "manifest_rows": [
+    {
+      "symbol": "002475",
+      "target_archetype": "theme_loaded_balanced_turnover_broad_sector",
+      "rationale": "Consumer-electronics supply-chain leader intended to add theme-loaded exposure inside a broader hardware sector without relying on one-name turnover dominance.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "601138",
+      "target_archetype": "theme_loaded_balanced_turnover_broad_sector",
+      "rationale": "Large AI/server complex name intended to stress broad-sector theme load under more balanced turnover.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "603986",
+      "target_archetype": "theme_loaded_balanced_turnover_broad_sector",
+      "rationale": "Semiconductor growth name intended to reinforce broad-sector theme-loaded conditions beyond the current market_v1 set.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "600111",
+      "target_archetype": "theme_loaded_balanced_turnover_narrow_sector",
+      "rationale": "Rare-earth leader intended to test a theme-loaded but more sector-narrow context.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "002050",
+      "target_archetype": "theme_loaded_balanced_turnover_narrow_sector",
+      "rationale": "Specialized manufacturing / robotics-linked name intended to stress narrower sector context with active themes.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "300274",
+      "target_archetype": "theme_loaded_balanced_turnover_narrow_sector",
+      "rationale": "New-energy equipment leader intended to provide a high-theme but not one-name-dominated narrow-sector environment.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "600690",
+      "target_archetype": "theme_light_concentrated_turnover_broad_sector",
+      "rationale": "Large home-appliance anchor intended to test low-theme broad-sector behavior with concentrated turnover.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "600809",
+      "target_archetype": "theme_light_concentrated_turnover_broad_sector",
+      "rationale": "Large consumer/liquor anchor intended to test concentrated-turnover broad-sector behavior without strong theme loading.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "601398",
+      "target_archetype": "theme_light_concentrated_turnover_broad_sector",
+      "rationale": "Mega-cap bank intended to stress theme-light broad-sector structure where turnover can still concentrate in a few large names.",
+      "is_new_vs_market_v1": true
+    }
+  ],
+  "interpretation": [
+    "The next suspect batch should be designed, not just enlarged.",
+    "A good seed manifest should add only new symbols versus market_research_v1 while explicitly covering the targeted missing archetypes.",
+    "This audit is a design-quality gate before any free-data bootstrap is attempted."
+  ]
+}

@@ -176,6 +176,29 @@ class StrategyExperimentRunner:
                     min_resonance_for_core=float(hierarchy_config.get("min_resonance_for_core", 0.55)),
                     min_quality_for_late_mover=float(hierarchy_config.get("min_quality_for_late_mover", 0.55)),
                     min_composite_for_non_junk=float(hierarchy_config.get("min_composite_for_non_junk", 0.60)),
+                    enable_context_conditioned_late_quality=bool(
+                        hierarchy_config.get("enable_context_conditioned_late_quality", False)
+                    ),
+                    conditioned_high_interaction_threshold=float(
+                        hierarchy_config.get("conditioned_high_interaction_threshold", 0.25)
+                    ),
+                    conditioned_medium_interaction_threshold=float(
+                        hierarchy_config.get("conditioned_medium_interaction_threshold", 0.18)
+                    ),
+                    conditioned_high_interaction_relief=float(
+                        hierarchy_config.get("conditioned_high_interaction_relief", 0.0)
+                    ),
+                    conditioned_medium_interaction_relief=float(
+                        hierarchy_config.get("conditioned_medium_interaction_relief", 0.0)
+                    ),
+                    conditioned_resonance_floor=float(
+                        hierarchy_config.get("conditioned_resonance_floor", 0.40)
+                    ),
+                    conditioned_non_junk_threshold=(
+                        float(hierarchy_config["conditioned_non_junk_threshold"])
+                        if "conditioned_non_junk_threshold" in hierarchy_config
+                        else None
+                    ),
                 )
             ),
             strategy_config=StrategyConfig(

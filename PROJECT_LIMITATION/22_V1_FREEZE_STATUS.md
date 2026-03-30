@@ -607,6 +607,148 @@ Latest freeze-oriented replay status:
     - `do_continue_q4_drawdown_replay = false`
     So under the current evidence, q4 should also be treated as a closed slice
     rather than an open replay lane.
+65. The first retained context-conditioning branch has now also been tested
+    and explicitly closed as non-material.
+    [context_feature_pack_a_conditioned_late_quality_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_v1.json)
+    shows real candidate rows only in `market_research_v1 / q2,q4`, all
+    inside `mid/high` theme-turnover interaction buckets, which justified one
+    bounded hierarchy experiment. But
+    [context_feature_pack_a_conditioned_late_quality_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_acceptance_v1.json)
+    then closes that branch:
+    - `acceptance_posture = close_conditioned_late_quality_branch_as_non_material`
+    - `material_improvement_count = 0`
+    - `harmed_strategy_count = 1`
+    - `do_promote_conditioned_branch = false`
+    So sector/theme context remains useful as explanatory state, but it is not
+    yet a retained hierarchy rule and still does not justify per-sector
+    training.
+66. The deferred second context-conditioning branch has now also been audited
+    directly and closed as sparse.
+    [context_feature_pack_b_sector_heat_breadth_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_b_sector_heat_breadth_v1.json)
+    shows:
+    - `candidate_row_count = 1`
+    - `candidate_slice_names = ['2024_q4']`
+    - the only candidate row is `000977` on `2024-10-24`
+      with `context_sector_heat = 0.807045` and
+      `context_sector_breadth = 0.6`
+    But the branch still concludes:
+    - `recommended_posture = close_sector_heat_breadth_context_branch_as_sparse`
+    - `do_continue_context_feature_pack_b = false`
+    So sector/theme context now has two completed bounded audits:
+    - the first branch is explanatory but non-material
+    - the second branch is explanatory but too sparse
+    and neither one currently justifies a kept rule or direct per-sector
+    training.
+67. The current `V1.1` specialist loop now also has an explicit continuation
+    stop gate:
+    [v11_continuation_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v11_continuation_readiness_v1.json)
+    concludes:
+    - `all_market_v1_slices_closed = true`
+    - `all_context_branches_closed = true`
+    - `u2_ready = false`
+    - `recommended_next_phase = pause_specialist_refinement_and_prepare_new_suspect_batch`
+    So the repo should not invent another local replay lane inside the current
+    batch. The next productive move is to prepare a materially new suspect
+    batch instead.
+68. That next suspect batch now also has a first design rule:
+    [next_suspect_batch_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_design_v1.json)
+    concludes:
+    - `recommended_next_batch_name = market_research_v2_seed`
+    - `recommended_batch_posture = expand_by_missing_context_archetypes`
+    - current missing archetypes:
+      - `theme_loaded + balanced_turnover + broad_sector`
+      - `theme_loaded + balanced_turnover + narrow_sector`
+      - `theme_light + concentrated_turnover + broad_sector`
+    So the next batch should not be a random larger watchlist. It should be a
+    context-targeted seed batch.
+69. The first `market_research_v2_seed` manifest has now passed its own audit:
+    [next_suspect_batch_manifest_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_manifest_v1.json)
+    shows:
+    - `seed_universe_count = 9`
+    - `new_symbol_count = 9`
+    - `overlap_with_market_v1_count = 0`
+    - `missing_archetype_count = 0`
+    - `ready_to_bootstrap_market_research_v2_seed = true`
+    So the repo now has a concrete, auditable next-batch seed and does not
+    need another abstract design pass before bootstrap.
+70. `market_research_v2_seed` has now completed its first runnable pass:
+    [market_research_data_audit_v2_seed.json](D:/Creativity/A-Share-Quant_TrY/reports/data/market_research_data_audit_v2_seed.json)
+    shows:
+    - `canonical_ready_count = 6`
+    - `canonical_partial_count = 0`
+    - `derived_ready_count = 3`
+    - `baseline_ready = true`
+    and
+    [20260329T130402Z_0e1d8809_comparison.json](D:/Creativity/A-Share-Quant_TrY/reports/20260329T130402Z_0e1d8809_comparison.json)
+    shows:
+    - `mainline_trend_c` best total return and capture
+    - `mainline_trend_b` lowest drawdown
+71. A first four-pack validation including `market_research_v2_seed` now also
+    exists:
+    [20260329T130537Z_f0a9da05_comparison.json](D:/Creativity/A-Share-Quant_TrY/reports/20260329T130537Z_f0a9da05_comparison.json)
+    and
+    [specialist_alpha_analysis_v3.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/specialist_alpha_analysis_v3.json)
+    show:
+    - broad freeze is unchanged
+    - `buffer_only_012` remains the broad stability leader
+    - `market_research_v2_seed` now contributes narrow specialist pockets
+    - but `market_research_v1` still remains the primary specialist substrate
+72. The first two narrow `market_research_v2_seed` lanes are now both closed
+    as mixed slice reads:
+    - q4/C:
+      - [market_v2_seed_q4_capture_slice_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q4_capture_slice_acceptance_v1.json)
+      - `close_market_v2_seed_q4_capture_slice_as_opening_plus_carry`
+    - q3/C:
+      - [market_v2_seed_q3_drawdown_slice_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q3_drawdown_slice_acceptance_v1.json)
+      - `close_market_v2_seed_q3_drawdown_slice_as_avoidance_plus_opportunity_cost`
+    So `v2_seed` is now a real secondary substrate with interpretable lanes,
+    but not yet a clean new-family frontier.
+73. `market_research_v2_seed` now also has a local continuation gate:
+    - [market_v2_seed_continuation_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_continuation_readiness_v1.json)
+    - `all_open_v2_seed_lanes_closed = true`
+    - `do_continue_current_v2_seed_replay = false`
+    So the repo should hold `v2_seed` as a bounded secondary substrate and
+    wait for a later refresh instead of forcing a third local lane.
+74. The repo now also has a gate for the *next* batch refresh after `v2_seed`:
+    - [next_batch_refresh_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_batch_refresh_readiness_v1.json)
+    - `do_open_market_research_v2_refresh_now = false`
+    - `recommended_next_phase = wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh`
+    So the correct posture is now: keep `v2_seed` bounded, and wait for a new
+    trigger rather than automatically designing `v2_refresh`.
+75. The repo now also has a live trigger monitor for that waiting state:
+    - [refresh_trigger_monitor_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/refresh_trigger_monitor_v1.json)
+    - `active_trigger_count = 0`
+    - `should_open_refresh = false`
+    - `recommended_posture = maintain_waiting_state_until_new_trigger`
+    So the current status is an explicit no-trigger wait, not just an informal pause.
+76. That no-trigger wait state now also has an explicit operator checklist:
+    - [refresh_trigger_action_plan_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/refresh_trigger_action_plan_v1.json)
+    - `action_mode = idle_wait_state`
+    - `action_count = 3`
+    So the post-`v2_seed` idle state is now both policy-level and operational.
+77. The repo now also has a one-page status snapshot for the current phase:
+    - [phase_status_snapshot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/phase_status_snapshot_v1.json)
+    - `current_mode = explicit_no_trigger_wait`
+    - `all_gates_aligned = true`
+    - `active_trigger_count = 0`
+    This is now the shortest correct read of the repo state.
+78. The repo also now has a one-command refresh chain for that read:
+    - `python scripts/run_phase_status_refresh.py`
+    It refreshes readiness -> monitor -> action plan -> snapshot, but does not
+    itself authorize a new replay or refresh cycle.
+79. The repo also now has a one-command console read:
+    - `python scripts/run_phase_status_console.py`
+    It prints the current no-trigger wait state in a short operator-facing form.
+80. The repo also now has a one-command phase guard:
+    - `python scripts/run_phase_guard.py`
+    It refreshes the current gate stack and then prints the final
+    operator-facing answer. This is now the shortest safe command for the
+    question "can the repo do anything new right now?".
+81. The repo now also has a canonical trigger-intake step:
+    - [43_REFRESH_TRIGGER_INTAKE_RUNBOOK.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/43_REFRESH_TRIGGER_INTAKE_RUNBOOK.md)
+    - `python scripts/run_refresh_trigger_intake.py ...`
+    So a genuinely new signal can now be persisted in a standard form before
+    the guard stack is rerun.
 
 ## What This Means
 
@@ -631,3 +773,8 @@ When specialist refinement resumes, the next line should be:
 4. do **not** start per-sector training from the current evidence alone
 5. the first validated narrow branch is now:
    `conditioned_late_quality_on_theme_turnover_context`
+6. the deferred second branch has now already been checked and closed as sparse,
+   so there is currently no active sector/theme-conditioned rule branch left to
+   promote
+7. the current specialist loop should now pause until a new suspect batch or a
+   materially different substrate appears

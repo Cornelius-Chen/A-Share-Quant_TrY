@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "manifest_posture": "freeze_v12_training_sample_manifest_v1",
+    "opening_count_frozen": true,
+    "additional_opening_rows_needed": 0,
+    "additional_persistence_rows_needed": 2,
+    "additional_carry_rows_needed": 2,
+    "allow_penalty_relabelling_into_carry": false,
+    "allow_deferred_basis_relabelling_into_carry": false,
+    "recommended_manifest_source": "future_refresh_rows_not_relabelled_existing_candidates",
+    "ready_for_future_refresh_binding": true
+  },
+  "manifest_rows": [
+    {
+      "class_name": "opening_led",
+      "current_count": 6,
+      "target_count": 6,
+      "additional_rows_needed": 0,
+      "expansion_posture": "freeze_current_opening_count",
+      "allowed_source": "none_required_now",
+      "forbidden_source": "opening_clone_chasing"
+    },
+    {
+      "class_name": "persistence_led",
+      "current_count": 2,
+      "target_count": 4,
+      "additional_rows_needed": 2,
+      "expansion_posture": "add_only_clean_persistence_rows",
+      "allowed_source": "future_refresh_acceptance_grade_persistence_rows",
+      "forbidden_source": "mixed_hold_examples"
+    },
+    {
+      "class_name": "carry_row_present",
+      "current_count": 2,
+      "target_count": 4,
+      "additional_rows_needed": 2,
+      "expansion_posture": "primary_expansion_target",
+      "allowed_source": "future_refresh_true_carry_rows",
+      "forbidden_source": "relabelled_penalty_or_deferred_basis_rows"
+    }
+  ],
+  "interpretation": [
+    "The next bounded training step should request only true carry rows and clean persistence rows.",
+    "Opening-led rows are already sufficient for the current micro branch and should not be expanded further now.",
+    "This manifest keeps the branch honest by preventing penalty-track or deferred basis rows from being relabelled into the carry class."
+  ]
+}

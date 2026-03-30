@@ -23,8 +23,8 @@ universe:
   min_close: 3.0
 
 cost_model:
-  commission_bps: 3.0
-  stamp_tax_bps: 10.0
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
   min_commission: 5.0
 
 limit_model:
@@ -67,3 +67,5 @@ strategy:
     - mainline_trend_b
     - mainline_trend_c
   buy_quantity: 100
+
+

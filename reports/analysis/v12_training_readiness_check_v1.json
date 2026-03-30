@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v12_training_branch_report_only_and_expand_samples_first",
+    "sample_count": 10,
+    "class_counts": {
+      "carry_row_present": 2,
+      "opening_led": 6,
+      "persistence_led": 2
+    },
+    "smallest_class_count": 2,
+    "class_balance_ratio": 0.3333,
+    "perfect_micro_accuracy_present": true,
+    "carry_duplicate_row_count": 1,
+    "carry_row_diversity_still_thin": true,
+    "ready_for_next_bounded_model_work": false,
+    "allow_strategy_training_now": false,
+    "allow_news_branch_training_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "pilot_shape",
+      "actual": {
+        "sample_count": 10,
+        "class_counts": {
+          "carry_row_present": 2,
+          "opening_led": 6,
+          "persistence_led": 2
+        },
+        "overall_accuracy": 1.0
+      },
+      "reading": "A perfect micro-pilot on a tiny sample can be useful evidence, but it is not enough on its own to justify a stronger model step."
+    },
+    {
+      "evidence_name": "carry_row_diversity",
+      "actual": {
+        "carry_row_count": 2,
+        "carry_duplicate_row_count": 1,
+        "distinct_carry_signatures": 1
+      },
+      "reading": "If carry rows remain duplicated, the training branch still inherits the same row-diversity bottleneck as the carry factor lane."
+    },
+    {
+      "evidence_name": "branch_boundary",
+      "actual": {
+        "ready_for_next_bounded_model_work": false,
+        "allow_strategy_training_now": false,
+        "allow_news_branch_training_now": false
+      },
+      "reading": "The right next step is bounded sample expansion or richer row diversity, not direct strategy ML or catalyst-news training."
+    }
+  ],
+  "interpretation": [
+    "The bounded training pilot succeeded as a structure-separation check, but success on 10 frozen samples is still too narrow to justify a larger model step.",
+    "The main remaining weakness is the same one already visible in the carry lane: carry rows are still too few and too similar.",
+    "So the correct posture is to keep training report-only, preserve strategy/news training as closed, and only revisit model expansion after more row diversity appears."
+  ]
+}

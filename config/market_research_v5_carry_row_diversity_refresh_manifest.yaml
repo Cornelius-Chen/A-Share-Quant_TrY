@@ -1,0 +1,27 @@
+paths:
+  reference_base_file: config/universes/market_research_v5_carry_row_diversity_reference_base.txt
+  seed_universe_file: config/universes/market_research_v5_carry_row_diversity_refresh.txt
+  reports_dir: reports/analysis
+
+manifest:
+  required_targets:
+    - true_carry_row
+    - clean_persistence_row
+  entries:
+    - symbol: "000099"
+      target_training_gap: true_carry_row
+      primary_admission_reason: true_carry_row
+      row_hypothesis: "Low-altitude economy/aviation operations name intended to probe policy-followthrough carry rows outside the current semiconductor-heavy island."
+    - symbol: "002273"
+      target_training_gap: true_carry_row
+      primary_admission_reason: true_carry_row
+      row_hypothesis: "Optics hardware name intended to probe alternative hardware carry rows with different basis-spread and exit-alignment behavior."
+
+    - symbol: "600760"
+      target_training_gap: clean_persistence_row
+      primary_admission_reason: clean_persistence_row
+      row_hypothesis: "Defense aerospace leader intended to probe structure-intact persistence under high-authority, multi-day theme reinforcement."
+    - symbol: "601989"
+      target_training_gap: clean_persistence_row
+      primary_admission_reason: clean_persistence_row
+      row_hypothesis: "Shipbuilding cycle name intended to probe slower, cleaner persistence rows under longer duration industry reinforcement."

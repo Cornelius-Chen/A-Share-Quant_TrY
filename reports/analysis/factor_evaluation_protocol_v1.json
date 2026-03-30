@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "candidate_factor_count": 3,
+    "evaluate_now_count": 1,
+    "evaluate_with_penalty_count": 1,
+    "hold_for_more_sample_count": 1,
+    "first_pass_shortlist": [
+      "carry_in_basis_advantage"
+    ],
+    "penalty_shortlist": [
+      "preemptive_loss_avoidance_shift"
+    ],
+    "deferred_shortlist": [
+      "delayed_entry_basis_advantage"
+    ],
+    "ready_for_first_pass_factor_evaluation": true
+  },
+  "factor_rows": [
+    {
+      "entry_name": "carry_in_basis_advantage",
+      "evaluation_bucket": "evaluate_now",
+      "protocol_posture": "promote_into_first_pass_factor_evaluation",
+      "occurrence_count": 2,
+      "report_count": 2,
+      "net_family_edge": 1682.5046,
+      "positive_opportunity_cost": 0.0,
+      "toxic_companion_pocket_count": 0,
+      "min_pocket_net_edge": 1464.4411,
+      "rationale": "Repeated clean evidence, positive net edge, and no toxic opportunity-cost companion mean this factor is ready for first-pass evaluation now."
+    },
+    {
+      "entry_name": "preemptive_loss_avoidance_shift",
+      "evaluation_bucket": "evaluate_with_penalty",
+      "protocol_posture": "evaluate_but_attach_opportunity_cost_penalty",
+      "occurrence_count": 2,
+      "report_count": 2,
+      "net_family_edge": 2475.7267,
+      "positive_opportunity_cost": 0.0,
+      "toxic_companion_pocket_count": 2,
+      "min_pocket_net_edge": -28613.9027,
+      "rationale": "The factor repeats and carries positive edge, but at least one pocket ties it to toxic opportunity cost or negative pocket-level net edge."
+    },
+    {
+      "entry_name": "delayed_entry_basis_advantage",
+      "evaluation_bucket": "hold_for_more_sample",
+      "protocol_posture": "preserve_as_candidate_until_more_repeated_evidence_arrives",
+      "occurrence_count": 1,
+      "report_count": 1,
+      "net_family_edge": 353.1059,
+      "positive_opportunity_cost": 0.0,
+      "toxic_companion_pocket_count": 0,
+      "min_pocket_net_edge": -119.2792,
+      "rationale": "Current evidence is still too thin or too local to justify formal evaluation beyond registry preservation."
+    }
+  ],
+  "interpretation": [
+    "A factor qualifies for first-pass evaluation only when repeated evidence remains clean after pocket-level opportunity-cost checks.",
+    "Penalty-track factors should still be evaluated, but only under an explicit opportunity-cost adjustment rather than as clean retained alpha candidates.",
+    "Thin factors should stay in the registry until a later batch adds more repeated evidence."
+  ]
+}

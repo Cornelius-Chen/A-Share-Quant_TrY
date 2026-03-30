@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "close_first_v12_factorization_cycle_as_representative_but_bounded",
+    "v12_factorization_milestone_reached": true,
+    "registry_ready": true,
+    "protocol_ready": true,
+    "carry_lane_open": true,
+    "carry_pilot_open": true,
+    "carry_pilot_rankable": false,
+    "penalty_bucket_present": true,
+    "deferred_bucket_present": true,
+    "do_open_second_factor_lane_now": false,
+    "recommended_next_posture": "hold_second_lane_until_more_diverse_rows_or_new_refresh_batch"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "registry_and_protocol_gate",
+      "actual": {
+        "registry_ready": true,
+        "protocol_ready": true,
+        "candidate_factor_count": 3,
+        "evaluate_now_count": 1
+      },
+      "reading": "The first factorization cycle only counts as real when the repo has both a registry layer and a protocol layer."
+    },
+    {
+      "evidence_name": "carry_lane_status",
+      "actual": {
+        "carry_lane_open": true,
+        "carry_pilot_open": true,
+        "carry_pilot_rankable": false,
+        "pilot_mode": "report_only_micro_pilot"
+      },
+      "reading": "The first factor lane should reach pilot state, even if that pilot remains report-only and bounded."
+    },
+    {
+      "evidence_name": "other_candidate_buckets",
+      "actual": {
+        "penalty_bucket_present": true,
+        "deferred_bucket_present": true,
+        "penalty_shortlist": [
+          "preemptive_loss_avoidance_shift"
+        ],
+        "deferred_shortlist": [
+          "delayed_entry_basis_advantage"
+        ]
+      },
+      "reading": "A representative first cycle does not require opening every factor lane at once; penalty and thin buckets may remain frozen."
+    }
+  ],
+  "interpretation": [
+    "V1.2 now has a representative factorization result because one clean factor has progressed from registry to protocol to bounded pilot.",
+    "That result is still bounded, not broad: the carry pilot remains report-only and does not justify opening a second lane immediately.",
+    "So the correct posture is to close the first factorization cycle as successful-but-bounded, and wait for more row diversity or a later refreshed batch before widening factor work."
+  ]
+}

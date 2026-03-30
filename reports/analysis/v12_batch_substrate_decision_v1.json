@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "prepare_next_refresh_batch_instead_of_reopening_existing_local_substrate",
+    "row_diversity_still_missing": true,
+    "later_refresh_batch_needed": true,
+    "v4_still_active_substrate": true,
+    "v4_locally_exhausted": true,
+    "do_reopen_v3_local_lane_now": false,
+    "do_reopen_v4_local_lane_now": false,
+    "do_prepare_new_refresh_batch_now": true,
+    "recommended_next_posture": "prepare_next_refresh_batch_for_carry_row_diversity"
+  },
+  "decision_rows": [
+    {
+      "decision_name": "phase_gate",
+      "actual": {
+        "row_diversity_still_missing": true,
+        "do_open_new_refresh_batch_now": true
+      },
+      "reading": "If V1.2 still says row diversity is missing, the default next move should be toward a later refresh batch, not more local replay."
+    },
+    {
+      "decision_name": "v4_reassessment",
+      "actual": {
+        "v4_still_active_substrate": true,
+        "v4_locally_exhausted": true
+      },
+      "reading": "An active substrate can still be locally exhausted; that combination argues against reopening the same checked local hunt area."
+    },
+    {
+      "decision_name": "specialist_map_context",
+      "actual": {
+        "v3_best_row": {
+          "dataset_name": "market_research_v3_factor_diversity_seed",
+          "slice_name": "2024_q4",
+          "strategy_name": "mainline_trend_c",
+          "primary_advantage_vs_anchors": 0.095289,
+          "secondary_penalty_vs_anchors": -0.000364,
+          "total_return_delta_vs_anchors": 0.000871,
+          "specialist_candidate": "baseline_expansion_branch"
+        },
+        "v4_best_row": {
+          "dataset_name": "market_research_v4_carry_row_diversity_refresh",
+          "slice_name": "2024_q2",
+          "strategy_name": "mainline_trend_a",
+          "primary_advantage_vs_anchors": 0.056622,
+          "secondary_penalty_vs_anchors": -6.5e-05,
+          "total_return_delta_vs_anchors": 4.6e-05,
+          "specialist_candidate": "baseline_expansion_branch"
+        }
+      },
+      "reading": "The broader specialist map shows v3 and v4 are both alive, but that does not override the local exhaustion and row-diversity gate."
+    }
+  ],
+  "interpretation": [
+    "The global V1.2 bottleneck remains missing carry row diversity.",
+    "V4 should not be discarded, but its checked local hunt area should not be reopened right now.",
+    "So the correct next step is to prepare the next refresh batch rather than bounce back into more local substrate replay."
+  ]
+}

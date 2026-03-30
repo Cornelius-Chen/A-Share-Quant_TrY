@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "base_universe_count": 48,
+    "seed_universe_count": 9,
+    "manifest_entry_count": 9,
+    "new_symbol_count": 9,
+    "overlap_with_market_v1_count": 0,
+    "missing_from_seed_count": 0,
+    "missing_from_manifest_count": 0,
+    "missing_archetype_count": 0,
+    "archetype_counts": {
+      "theme_loaded_concentrated_turnover_narrow_sector": 3,
+      "theme_light_balanced_turnover_narrow_sector": 3,
+      "theme_moderate_concentrated_turnover_broad_sector": 3
+    },
+    "ready_to_bootstrap_next_batch": true
+  },
+  "manifest_rows": [
+    {
+      "symbol": "300124",
+      "target_archetype": "theme_loaded_concentrated_turnover_narrow_sector",
+      "rationale": "Industrial-automation and robotics-heavy leader intended to stress a theme-loaded narrow sector where turnover can concentrate in a few active names.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "603019",
+      "target_archetype": "theme_loaded_concentrated_turnover_narrow_sector",
+      "rationale": "AI-compute server name intended to reinforce concentrated turnover inside a narrower high-theme technology lane.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "002130",
+      "target_archetype": "theme_loaded_concentrated_turnover_narrow_sector",
+      "rationale": "Power-and-electronics linkage intended to add another high-theme narrow-sector case that can crowd into a small set of liquid names.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "600030",
+      "target_archetype": "theme_light_balanced_turnover_narrow_sector",
+      "rationale": "Large brokerage anchor intended to represent a theme-light but still narrow financial sector where turnover is active without being dominated by a single symbol.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "600426",
+      "target_archetype": "theme_light_balanced_turnover_narrow_sector",
+      "rationale": "Chemical-sector quality leader intended to add a theme-light narrow-sector case with steadier, more balanced turnover.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "601225",
+      "target_archetype": "theme_light_balanced_turnover_narrow_sector",
+      "rationale": "Coal-sector large cap intended to stress balanced-turnover behavior inside a theme-light narrow cyclical sector.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "002230",
+      "target_archetype": "theme_moderate_concentrated_turnover_broad_sector",
+      "rationale": "AI-software platform name intended to add a broad-sector case where theme load is present but not extreme while turnover can still concentrate.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "002415",
+      "target_archetype": "theme_moderate_concentrated_turnover_broad_sector",
+      "rationale": "Security-and-electronics leader intended to represent a broader technology sector with moderate theme linkage and concentrated attention.",
+      "is_new_vs_market_v1": true
+    },
+    {
+      "symbol": "300760",
+      "target_archetype": "theme_moderate_concentrated_turnover_broad_sector",
+      "rationale": "Healthcare large-cap leader intended to add a non-technology broad-sector case with moderate theme loading and concentrated turnover.",
+      "is_new_vs_market_v1": true
+    }
+  ],
+  "interpretation": [
+    "The next suspect batch should be designed, not just enlarged.",
+    "A good seed manifest should add only new symbols versus market_research_v1 while explicitly covering the targeted missing archetypes.",
+    "This audit is a design-quality gate before any free-data bootstrap is attempted."
+  ]
+}

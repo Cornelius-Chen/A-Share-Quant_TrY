@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "audit_posture": "open_catalyst_context_audit_v1_as_bounded_report_only_check",
+    "row_count": 6,
+    "class_count": 3,
+    "opening_single_pulse_only": true,
+    "persistence_multi_day_only": true,
+    "carry_followthrough_only": true,
+    "resolved_non_opening_count": 4,
+    "context_separation_present": true,
+    "promote_catalyst_context_now": false,
+    "keep_branch_report_only": true
+  },
+  "audit_rows": [
+    {
+      "lane_outcome_label": "carry_row_present",
+      "row_count": 2,
+      "resolved_source_count": 2,
+      "persistence_classes": [
+        "policy_followthrough"
+      ],
+      "scope_counts": {
+        "theme": 2
+      }
+    },
+    {
+      "lane_outcome_label": "opening_led",
+      "row_count": 2,
+      "resolved_source_count": 1,
+      "persistence_classes": [
+        "single_pulse"
+      ],
+      "scope_counts": {
+        "sector": 1,
+        "theme": 1
+      }
+    },
+    {
+      "lane_outcome_label": "persistence_led",
+      "row_count": 2,
+      "resolved_source_count": 2,
+      "persistence_classes": [
+        "multi_day_reinforcement"
+      ],
+      "scope_counts": {
+        "sector": 1,
+        "theme": 1
+      }
+    }
+  ],
+  "interpretation": [
+    "The first bounded catalyst audit already shows a directional separation: opening rows stay in single-pulse context, persistence rows cluster in multi-day reinforcement, and carry rows sit in followthrough context.",
+    "That separation is still too small to promote catalyst context into a retained factor or a training feature, but it is enough to justify keeping the branch active as a report-only context audit.",
+    "The next catalyst step should add more rows or better source coverage before any promotion decision is reconsidered."
+  ]
+}

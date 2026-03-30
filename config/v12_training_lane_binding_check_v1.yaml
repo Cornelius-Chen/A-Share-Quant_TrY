@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  manifest_report: reports/analysis/v12_training_sample_manifest_v1.json
+  reports_dir: reports/analysis
+
+candidate_reports:
+  - reports/analysis/market_v3_q4_first_lane_acceptance_v1.json
+  - reports/analysis/market_v4_q2_first_lane_acceptance_v1.json
+
+report:
+  name: v12_training_lane_binding_check_v1

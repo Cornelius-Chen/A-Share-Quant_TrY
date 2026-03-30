@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "reference_base_count": 65,
+    "seed_universe_count": 8,
+    "manifest_entry_count": 8,
+    "new_symbol_count": 8,
+    "overlap_with_reference_base_count": 0,
+    "missing_from_seed_count": 0,
+    "missing_from_manifest_count": 0,
+    "missing_target_count": 0,
+    "missing_hypothesis_count": 0,
+    "opening_clone_primary_count": 0,
+    "invalid_primary_reason_count": 0,
+    "target_counts": {
+      "basis_spread_diversity": 2,
+      "carry_duration_diversity": 2,
+      "exit_alignment_diversity": 2,
+      "cross_dataset_carry_reuse": 2
+    },
+    "ready_to_bootstrap_market_research_v4_carry_row_diversity_refresh": true
+  },
+  "manifest_rows": [
+    {
+      "symbol": "000725",
+      "target_row_diversity": "basis_spread_diversity",
+      "primary_admission_reason": "basis_spread_diversity",
+      "carry_row_hypothesis": "Panel and display leader intended to add lower-basis electronics carry rows rather than only saturated theme-growth carry evidence.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600703",
+      "target_row_diversity": "basis_spread_diversity",
+      "primary_admission_reason": "basis_spread_diversity",
+      "carry_row_hypothesis": "Optoelectronics semiconductor name intended to probe mid-basis carry rows in a hardware cycle different from the current island.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "601127",
+      "target_row_diversity": "carry_duration_diversity",
+      "primary_admission_reason": "carry_duration_diversity",
+      "carry_row_hypothesis": "Auto trend leader intended to probe longer carry duration under stronger trend persistence than the current shared one-score carry rows.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600150",
+      "target_row_diversity": "carry_duration_diversity",
+      "primary_admission_reason": "carry_duration_diversity",
+      "carry_row_hypothesis": "Shipbuilding cyclical intended to add slower multi-day carry duration variation in a regime unlike the current theme_q4 island.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "601919",
+      "target_row_diversity": "exit_alignment_diversity",
+      "primary_admission_reason": "exit_alignment_diversity",
+      "carry_row_hypothesis": "Shipping leader intended to create rows where challenger and anchors stop sharing the same exit date under slower decay and replacement pressure.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "002241",
+      "target_row_diversity": "exit_alignment_diversity",
+      "primary_admission_reason": "exit_alignment_diversity",
+      "carry_row_hypothesis": "Consumer electronics manufacturer intended to test exit-alignment breaks in a demand-sensitive hardware regime.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600570",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "primary_admission_reason": "cross_dataset_carry_reuse",
+      "carry_row_hypothesis": "Software platform leader intended to probe whether carry-like negative-cycle basis can reappear outside current semiconductor-heavy islands.",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "002600",
+      "target_row_diversity": "cross_dataset_carry_reuse",
+      "primary_admission_reason": "cross_dataset_carry_reuse",
+      "carry_row_hypothesis": "Precision manufacturing name intended to test cross-dataset carry reuse in a broader industrial-electronics context without using opening-led clone logic.",
+      "is_new_vs_reference_base": true
+    }
+  ],
+  "interpretation": [
+    "The v4 refresh manifest should satisfy both the old target-coverage gate and the new carry-row-diversity criteria gate.",
+    "That means every symbol must stay new versus the combined reference base and must enter with an explicit carry-row hypothesis.",
+    "Pure opening-led clone logic is not an acceptable primary admission reason for this v4 refresh."
+  ]
+}

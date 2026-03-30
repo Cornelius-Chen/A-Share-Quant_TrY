@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_a",
+    "specialist_candidate": "baseline_expansion_branch",
+    "anchor_candidates": [
+      "shared_default",
+      "buffer_only_012"
+    ],
+    "window_start": "2024-04-01",
+    "window_end": "2024-06-30",
+    "specialist_preserved_window": false,
+    "persistence_trade_date": null
+  },
+  "persistence_edge": null,
+  "anchor_divergence": [],
+  "interpretation": [
+    "A persistence edge is different from an opening edge: the specialist already has the position and simply refuses to churn out when anchors do.",
+    "The cleanest persistence cases happen when the specialist still says hold while anchors emit sell on the same date.",
+    "If the specialist and anchors all entered the window together, then persistence usually matters more than entry logic for the resulting capture edge."
+  ]
+}

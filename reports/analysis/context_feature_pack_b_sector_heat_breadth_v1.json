@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "slice_count": 3,
+    "candidate_row_count": 1,
+    "candidate_slice_names": [
+      "2024_q4"
+    ],
+    "candidate_bucket_counts": {
+      "heat_breadth_high": 1,
+      "heat_only": 0,
+      "breadth_only": 0,
+      "heat_breadth_low": 0
+    },
+    "recommended_next_feature_branch": "close_sector_heat_breadth_context_branch_as_sparse",
+    "recommended_posture": "close_sector_heat_breadth_context_branch_as_sparse",
+    "do_continue_context_feature_pack_b": false
+  },
+  "slice_rows": [
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q2",
+      "slice_role": "capture",
+      "acceptance_posture": "close_market_q2_capture_slice_as_mixed_opening_plus_persistence",
+      "top_symbols": [
+        "300502",
+        "002371",
+        "603259"
+      ],
+      "row_count": 177,
+      "conditioning_candidate_count": 0,
+      "heat_breadth_high_candidate_count": 0,
+      "heat_only_candidate_count": 0,
+      "breadth_only_candidate_count": 0,
+      "mean_sector_heat": 0.523707,
+      "mean_sector_breadth": 0.463936,
+      "mean_non_junk_gap_to_threshold": 0.031294
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q3_drawdown_slice_as_cross_strategy_baseline_style_reuse",
+      "top_symbols": [
+        "300308"
+      ],
+      "row_count": 64,
+      "conditioning_candidate_count": 0,
+      "heat_breadth_high_candidate_count": 0,
+      "heat_only_candidate_count": 0,
+      "breadth_only_candidate_count": 0,
+      "mean_sector_heat": 0.643542,
+      "mean_sector_breadth": 0.467187,
+      "mean_non_junk_gap_to_threshold": 0.037929
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "slice_role": "drawdown",
+      "acceptance_posture": "close_market_q4_drawdown_slice_as_avoidance_plus_reduced_loss_mix",
+      "top_symbols": [
+        "002371",
+        "000977",
+        "000858"
+      ],
+      "row_count": 183,
+      "conditioning_candidate_count": 1,
+      "heat_breadth_high_candidate_count": 1,
+      "heat_only_candidate_count": 0,
+      "breadth_only_candidate_count": 0,
+      "mean_sector_heat": 0.516613,
+      "mean_sector_breadth": 0.469399,
+      "mean_non_junk_gap_to_threshold": 0.035535
+    }
+  ],
+  "candidate_rows": [
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "slice_role": "drawdown",
+      "symbol": "000977",
+      "trade_date": "2024-10-24",
+      "non_junk_composite_score": 0.525718,
+      "non_junk_gap_to_threshold": 0.024282,
+      "late_mover_quality": 0.550817,
+      "resonance": 0.546532,
+      "context_sector_heat": 0.807045,
+      "context_sector_breadth": 0.6,
+      "context_bucket": "heat_breadth_high"
+    }
+  ],
+  "interpretation": [
+    "This branch should continue only if near-threshold non-junk misses recur across multiple closed slices while late-quality and resonance remain structurally intact.",
+    "If the evidence collapses into one symbol or one slice, sector heat and breadth should remain explanatory context rather than become another retained hierarchy rule.",
+    "This is still a conditioned feature audit and does not justify per-sector training."
+  ]
+}

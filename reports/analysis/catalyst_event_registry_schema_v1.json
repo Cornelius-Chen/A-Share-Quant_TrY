@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "schema_posture": "freeze_catalyst_event_registry_schema_v1",
+    "section_count": 5,
+    "total_field_count": 31,
+    "contains_source_authority_tier": true,
+    "contains_execution_strength": true,
+    "contains_rumor_risk_level": true,
+    "contains_consolidation_days_after_pulse": true,
+    "contains_reacceleration_present": true,
+    "ready_for_bounded_registry_seeding": true
+  },
+  "schema_sections": [
+    {
+      "section_name": "identity",
+      "field_count": 8,
+      "fields": [
+        "lane_id",
+        "dataset_name",
+        "slice_name",
+        "strategy_name",
+        "symbol",
+        "event_date",
+        "window_start",
+        "window_end"
+      ],
+      "reading": "Identity fields tie each catalyst row to a frozen lane and a bounded event window."
+    },
+    {
+      "section_name": "catalyst_source",
+      "field_count": 8,
+      "fields": [
+        "event_scope",
+        "event_type",
+        "source_authority_tier",
+        "policy_scope",
+        "execution_strength",
+        "rumor_risk_level",
+        "source_tier",
+        "primary_source_ref"
+      ],
+      "reading": "Catalyst-source fields separate state policy, local policy, official notices, company announcements, media, and rumor-like pulses."
+    },
+    {
+      "section_name": "persistence_context",
+      "field_count": 6,
+      "fields": [
+        "persistence_class",
+        "reinforcement_count",
+        "confirmation_delay_days",
+        "followthrough_window_days",
+        "board_pulse_breadth_class",
+        "turnover_concentration_class"
+      ],
+      "reading": "Persistence fields capture whether the catalyst is a one-day pulse or a reinforced multi-day context with board confirmation."
+    },
+    {
+      "section_name": "price_shape_proxy",
+      "field_count": 6,
+      "fields": [
+        "first_impulse_return_pct",
+        "consolidation_days_after_pulse",
+        "retrace_depth_vs_ma5",
+        "retrace_depth_vs_ma10",
+        "reacceleration_present",
+        "reacceleration_delay_days"
+      ],
+      "reading": "Price-shape proxy fields capture the impulse, consolidation, retrace, and reacceleration pattern after the first catalyst pulse."
+    },
+    {
+      "section_name": "lane_labels",
+      "field_count": 3,
+      "fields": [
+        "lane_outcome_label",
+        "context_posture",
+        "notes"
+      ],
+      "reading": "Lane labels preserve the already-frozen lane reading so the catalyst branch explains rather than relitigates the lane."
+    }
+  ],
+  "interpretation": [
+    "Catalyst schema v1 should model source quality, execution strength, and persistence, not just a generic policy/news label.",
+    "The most important additions are authority tier, rumor risk, consolidation days, and reacceleration markers because these can separate single-pulse openings from carry-capable contexts.",
+    "This schema remains report-only until a bounded catalyst registry shows that these fields change a later factor decision."
+  ]
+}

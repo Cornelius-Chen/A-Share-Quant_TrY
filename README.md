@@ -556,9 +556,8 @@ Notes:
   - `2024-01-19`: approved sector splits between electronics and `BK1173`
   - `2024-02-05`: incumbent keeps permission while challenger loses it
   but `002466` still ends with identical trades and identical pnl on both sides
-  - this is useful because it separates ‚Äúpath-shift shape exists‚Äù from
-    ‚Äúpath-shift causes actual trade damage‚Äù
-  - current interpretation:
+  - this is useful because it separates ‚Äúpath-shift shape exists‚Ä?from
+    ‚Äúpath-shift causes actual trade damage‚Ä?  - current interpretation:
     `300750` is the first clear damage case, while `002466` is the first
     repeated-mechanism-but-no-damage case
 - a third tradable replay now sharpens that picture again:
@@ -1170,3 +1169,443 @@ Notes:
   recommends:
   - `conditioned_late_quality_on_theme_turnover_context`
   - `defer_sector_heat_branch = true`
+- that first context-conditioned branch has now also been tested and closed as
+  non-material:
+  [context_feature_pack_a_conditioned_late_quality_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_v1.json)
+  identifies real candidate rows only in `q2/q4`, but
+  [context_feature_pack_a_conditioned_late_quality_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_acceptance_v1.json)
+  shows the retained hierarchy experiment is not worth keeping:
+  - `material_improvement_count = 0`
+  - `harmed_strategy_count = 1`
+  - `do_promote_conditioned_branch = false`
+  so sector/theme context remains useful as analysis, not yet as per-sector
+  training and not yet as a kept hierarchy rule
+- the deferred second context branch has now also been checked directly:
+  [context_feature_pack_b_sector_heat_breadth_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_b_sector_heat_breadth_v1.json)
+  shows only `1` surviving candidate row, all inside `2024_q4`, so the
+  current posture is:
+  - `close_sector_heat_breadth_context_branch_as_sparse`
+  - `do_continue_context_feature_pack_b = false`
+  this keeps sector/theme context at the explanatory layer and still does not
+  justify per-sector training
+- the current `V1.1` specialist loop now has an explicit stop gate:
+  [v11_continuation_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v11_continuation_readiness_v1.json)
+  concludes:
+  - `all_market_v1_slices_closed = true`
+  - `all_context_branches_closed = true`
+  - `u2_ready = false`
+  - `recommended_next_phase = pause_specialist_refinement_and_prepare_new_suspect_batch`
+  so the repo should not invent another local replay lane inside the current
+  batch; the next productive move is a materially new suspect batch
+- that next suspect batch is now also constrained by a design rule:
+  [next_suspect_batch_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_design_v1.json)
+  concludes:
+  - `recommended_next_batch_name = market_research_v2_seed`
+  - `recommended_batch_posture = expand_by_missing_context_archetypes`
+  - current missing archetypes include:
+    - `theme_loaded + balanced_turnover + broad_sector`
+    - `theme_loaded + balanced_turnover + narrow_sector`
+    - `theme_light + concentrated_turnover + broad_sector`
+  so the next batch should be a context-targeted seed, not a random size expansion
+- the first `market_research_v2_seed` manifest is now also ready:
+  [next_suspect_batch_manifest_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_manifest_v1.json)
+  shows:
+  - `seed_universe_count = 9`
+  - `new_symbol_count = 9`
+  - `overlap_with_market_v1_count = 0`
+  - `missing_archetype_count = 0`
+  - `ready_to_bootstrap_market_research_v2_seed = true`
+  so the repo now has a concrete, auditable next batch and does not need
+  another design loop before bootstrap
+- `market_research_v2_seed` has now completed its first runnable pass:
+  [market_research_data_audit_v2_seed.json](D:/Creativity/A-Share-Quant_TrY/reports/data/market_research_data_audit_v2_seed.json)
+  reaches `baseline_ready=true`, and
+  [20260329T130402Z_0e1d8809_comparison.json](D:/Creativity/A-Share-Quant_TrY/reports/20260329T130402Z_0e1d8809_comparison.json)
+  shows `mainline_trend_c` best total return/capture and `mainline_trend_b`
+  lowest drawdown
+- the first four-pack validation with `market_research_v2_seed` is now also in:
+  [20260329T130537Z_f0a9da05_comparison.json](D:/Creativity/A-Share-Quant_TrY/reports/20260329T130537Z_f0a9da05_comparison.json)
+  keeps `buffer_only_012` as the broad stability leader, while
+  [specialist_alpha_analysis_v3.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/specialist_alpha_analysis_v3.json)
+  shows `market_research_v2_seed` already contributes narrow specialist pockets
+  under both the capture and drawdown specialists
+- the first narrow `v2_seed` replay is now also in:
+  [market_v2_seed_q4_trade_divergence_capture_c_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q4_trade_divergence_capture_c_v1.json)
+  identifies `603986` as the dominant q4/C capture symbol, and
+  [market_v2_seed_q4_specialist_window_opening_603986_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q4_specialist_window_opening_603986_v1.json)
+  confirms a clean opening edge on `2024-12-12`; but
+  [market_v2_seed_q4_symbol_timeline_603986_capture_c_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q4_symbol_timeline_603986_capture_c_v1.json)
+  also carries a positive pre-q4 trade, so the current `v2_seed / q4 / C` read
+  is mixed rather than a clean new family signal
+- that q4/C read is now formally closed too:
+  [market_v2_seed_q4_capture_slice_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q4_capture_slice_acceptance_v1.json)
+  concludes:
+  - `close_market_v2_seed_q4_capture_slice_as_opening_plus_carry`
+  - `do_continue_q4_capture_replay = false`
+- the first narrow `v2_seed` q3/C drawdown read is now also in:
+  [market_v2_seed_q3_trade_divergence_quality_c_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q3_trade_divergence_quality_c_v1.json)
+  and
+  [market_v2_seed_q3_cycle_mechanism_603986_c_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q3_cycle_mechanism_603986_c_v1.json)
+  which currently read as mixed avoidance plus opportunity cost, not a clean new family
+- q3/C is now also formally closed:
+  [market_v2_seed_q3_drawdown_slice_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_q3_drawdown_slice_acceptance_v1.json)
+  concludes:
+  - `close_market_v2_seed_q3_drawdown_slice_as_avoidance_plus_opportunity_cost`
+  - `do_continue_q3_drawdown_replay = false`
+- `v2_seed` now also has its own continuation gate:
+  [market_v2_seed_continuation_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v2_seed_continuation_readiness_v1.json)
+  concludes:
+  - `all_open_v2_seed_lanes_closed = true`
+  - `recommended_next_phase = hold_market_v2_seed_as_secondary_substrate_and_wait_for_next_batch_refresh`
+  - `do_continue_current_v2_seed_replay = false`
+- and the repo now also has an explicit post-`v2_seed` refresh gate:
+  [next_batch_refresh_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_batch_refresh_readiness_v1.json)
+  concludes:
+  - `do_open_market_research_v2_refresh_now = false`
+  - `recommended_next_phase = wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh`
+- and that waiting state now also has a live monitor:
+  [refresh_trigger_monitor_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/refresh_trigger_monitor_v1.json)
+  currently shows:
+  - `active_trigger_count = 0`
+  - `recommended_posture = maintain_waiting_state_until_new_trigger`
+- and that wait state now also has an operator checklist:
+  [refresh_trigger_action_plan_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/refresh_trigger_action_plan_v1.json)
+  currently shows:
+  - `action_mode = idle_wait_state`
+  - `action_count = 3`
+- and the whole current gate stack is now compressed into one report:
+  [phase_status_snapshot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/phase_status_snapshot_v1.json)
+  currently shows:
+  - `current_mode = explicit_no_trigger_wait`
+  - `all_gates_aligned = true`
+  - `active_trigger_count = 0`
+- and that stack is now refreshable in one command:
+  `python scripts/run_phase_status_refresh.py`
+- and readable in one short console command:
+  `python scripts/run_phase_status_console.py`
+- and available through one shortest safe guarded command:
+  `python scripts/run_phase_guard.py`
+- and if a genuinely new signal appears, it can now be persisted first via:
+  `python scripts/run_refresh_trigger_intake.py ...`
+  using canonical trigger types rather than free-form labels
+- the default A-share broker commission assumption is now aligned to the
+  owner's live contract:
+  - `commission_bps = 1.2` (`0.12°Î`)
+  - `min_commission = 5.0`
+- the repo now also aligns the statutory A-share stock-fee assumptions to the
+  current public fee schedule:
+  - `stamp_tax_bps = 5.0` on sells only (`0.05%`)
+  - `transfer_fee_bps = 0.1` on both buys and sells (`0.001%`)
+  - `exchange_handling_bps = 0.341` on both buys and sells (`0.00341%`)
+  - `regulatory_fee_bps = 0.2` on both buys and sells (`0.002%`)
+
+- the repo has now explicitly opened the next main research phase:
+  - [44_V12_DATA_EXPANSION_AND_FACTORIZATION_PREP.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/44_V12_DATA_EXPANSION_AND_FACTORIZATION_PREP.md)
+  - [45_DATA_SOURCE_INVENTORY.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/45_DATA_SOURCE_INVENTORY.md)
+  current reading:
+  - the next active target is `market_research_v2_refresh`
+  - AkShare remains the primary batch-ingestion layer
+  - official sites remain the preferred fee/rule truth layer
+  - direct per-sector training remains deferred
+
+- the repo has now explicitly opened the next main research phase:
+  - [44_V12_DATA_EXPANSION_AND_FACTORIZATION_PREP.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/44_V12_DATA_EXPANSION_AND_FACTORIZATION_PREP.md)
+  - [45_DATA_SOURCE_INVENTORY.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/45_DATA_SOURCE_INVENTORY.md)
+- the first runnable `V1.2` batch skeleton is now also prepared:
+  - [46_MARKET_RESEARCH_V2_REFRESH_PLAN.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/46_MARKET_RESEARCH_V2_REFRESH_PLAN.md)
+  - [config/market_research_v2_refresh_manifest.yaml](D:/Creativity/A-Share-Quant_TrY/config/market_research_v2_refresh_manifest.yaml)
+  - [reports/analysis/next_suspect_batch_manifest_v2_refresh.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_manifest_v2_refresh.json)
+  current reading:
+  - the next active target is `market_research_v2_refresh`
+  - AkShare remains the primary batch-ingestion layer
+  - official sites remain the preferred fee/rule truth layer
+  - direct per-sector training remains deferred
+
+- `V1.2` now also has its first formal feature/factor registry:
+  - [47_FEATURE_FACTOR_REGISTRY_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/47_FEATURE_FACTOR_REGISTRY_V1.md)
+  - [feature_factor_registry_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/feature_factor_registry_v1.json)
+  current reading:
+  - retained features = `4`
+  - explanatory-only features = `3`
+  - candidate factors = `3`
+  - the next `V1.2` step is now `factor_evaluation_protocol_v1`, not more local replay by momentum
+
+- `V1.2` now also has its first factor-evaluation protocol:
+  - [48_FACTOR_EVALUATION_PROTOCOL_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/48_FACTOR_EVALUATION_PROTOCOL_V1.md)
+  - [factor_evaluation_protocol_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/factor_evaluation_protocol_v1.json)
+  current reading:
+  - `carry_in_basis_advantage` = `evaluate_now`
+  - `preemptive_loss_avoidance_shift` = `evaluate_with_penalty`
+  - `delayed_entry_basis_advantage` = `hold_for_more_sample`
+
+- `V1.2` now also has its first bounded factor lane:
+  - [49_CARRY_IN_BASIS_FIRST_PASS.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/49_CARRY_IN_BASIS_FIRST_PASS.md)
+  - [carry_in_basis_first_pass_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/carry_in_basis_first_pass_v1.json)
+  current reading:
+  - `carry_in_basis_advantage` is ready for bounded factor design
+  - it is still below retained-feature promotion
+  - penalty-track and thin factors remain frozen
+
+- `V1.2` now also has the first carry factor design artifact:
+  - [50_CARRY_FACTOR_DESIGN_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/50_CARRY_FACTOR_DESIGN_V1.md)
+  - [carry_factor_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/carry_factor_design_v1.json)
+  current reading:
+  - carry factor lane is open
+  - row isolation is required
+  - broad factor scoring remains off
+
+- `V1.2` now also has the first carry observable schema:
+  - [51_CARRY_OBSERVABLE_SCHEMA_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/51_CARRY_OBSERVABLE_SCHEMA_V1.md)
+  - [carry_observable_schema_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/carry_observable_schema_v1.json)
+  current reading:
+  - carry lane remains row-isolated
+  - the first explicit required fields are now fixed
+  - scoring design is now the next bounded step
+
+- `V1.2` now also has the first carry scoring design:
+  - [52_CARRY_SCORING_DESIGN_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/52_CARRY_SCORING_DESIGN_V1.md)
+  - [carry_scoring_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/carry_scoring_design_v1.json)
+  current reading:
+  - `carry_score_v1` now exists
+  - the lane is ready for a bounded factor pilot
+  - strategy integration remains off
+
+- `V1.2` now also has the first carry factor pilot:
+  - [53_CARRY_FACTOR_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/53_CARRY_FACTOR_PILOT_V1.md)
+  - [carry_factor_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/carry_factor_pilot_v1.json)
+  current reading:
+  - the pilot is open
+  - it is only `report_only_micro_pilot`
+  - rankable pilot and strategy integration remain off
+
+- `V1.2` now also has its first factorization review:
+  - [54_V12_FACTORIZATION_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/54_V12_FACTORIZATION_REVIEW_V1.md)
+  - [v12_factorization_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_factorization_review_v1.json)
+  current reading:
+  - the first factorization cycle counts as representative
+  - it remains bounded
+  - the second factor lane stays closed for now
+
+- `V1.2` now also has phase-readiness guidance:
+  - [55_V12_PHASE_READINESS_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/55_V12_PHASE_READINESS_V1.md)
+  - [v12_phase_readiness_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_phase_readiness_v1.json)
+  current reading:
+  - `V1.2` stays open
+  - the next bottleneck is factor row diversity
+  - the next healthy move is a later refresh batch, not a second factor lane yet
+
+- `V1.2` now also has the next refresh design:
+  - [56_V12_NEXT_REFRESH_FACTOR_DIVERSITY_PLAN.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/56_V12_NEXT_REFRESH_FACTOR_DIVERSITY_PLAN.md)
+  - [v12_next_refresh_factor_diversity_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_next_refresh_factor_diversity_design_v1.json)
+  current reading:
+  - the next refresh is now justified by factor-row diversity
+  - not by generic sample growth
+  - the next concrete step is a new manifest for `market_research_v3_factor_diversity_seed`
+
+## V1.2 update
+- `market_research_v3_factor_diversity_seed` is now the next executable refresh step rather than a design-only placeholder.
+- Manifest gate passed in `reports/analysis/market_research_v3_factor_diversity_seed_manifest_v1.json`.
+- The seed adds `8` new symbols and covers all four carry row-diversity targets before bootstrap.
+
+## V1.2 update
+- `market_research_v3_factor_diversity_seed` is now bootstrap-complete and `baseline_ready`.
+- First suite run: `reports/20260330T005408Z_70e5fe8c_comparison.json`.
+- Immediate next step is no longer bootstrap; it is the first specialist comparison against the current carry row-diversity bottleneck.
+
+## V1.2 update
+- `market_research_v3_factor_diversity_seed` is now in the active specialist map, not just baseline-ready.
+- Six-pack validation report: `reports/20260330T005654Z_c28cab1a_comparison.json`.
+- First v3 specialist lane: `market_research_v3_factor_diversity_seed / 2024_q4 / mainline_trend_c`, with `002049` as the top positive capture driver.
+
+## V1.2 update
+- The first `market_research_v3_factor_diversity_seed` lane has now been structurally narrowed.
+- `market_research_v3_factor_diversity_seed / 2024_q4 / mainline_trend_c / 002049` currently reads as an opening-led lane, not a persistence-led lane.
+- Opening evidence: `reports/analysis/market_v3_factor_diversity_q4_specialist_window_opening_002049_v1.json`.
+- Persistence check remained empty: `reports/analysis/market_v3_factor_diversity_q4_specialist_window_persistence_002049_v1.json`.
+- Current posture remains bounded: do not yet interpret this as a carry-lane structural breakthrough, and do not widen the `v3` replay map.
+
+## V1.2 update
+- The first `market_research_v3_factor_diversity_seed` lane is now formally closed by `reports/analysis/market_v3_q4_first_lane_acceptance_v1.json`.
+- Current reading: `002049 / 2024_q4 / mainline_trend_c` is opening-led, not persistence-led, and not a carry-lane breakthrough.
+- `v3` remains useful as a factor-row-diversity substrate, but second-lane expansion stays closed for now.
+
+## V1.2 update
+- `reports/analysis/v12_bottleneck_check_v1.json` confirms that the first `v3` lane does not change the main V1.2 bottleneck.
+- Current reading remains: the primary gap is still carry row diversity, not lack of a capture-opening substrate.
+- The second `v3` lane remains closed, and V1.2 stays on the factor-row-diversity track.
+
+## V1.2 update
+- `reports/analysis/v12_next_refresh_entry_v1.json` now opens a criteria-first next-refresh entry for `market_research_v4_carry_row_diversity_refresh`.
+- Current posture is deliberate: prepare the refresh entry now, but do not open a new manifest yet.
+- This keeps V1.2 focused on carry row diversity while replay remains closed.
+
+## V1.2 update
+- `reports/analysis/v12_v4_refresh_criteria_v1.json` now freezes symbol-selection rules for `market_research_v4_carry_row_diversity_refresh`.
+- The next refresh can now move into manifest drafting, but only under carry-schema and row-diversity criteria.
+- Replay remains closed while the `v4` manifest is being drafted.
+
+## V1.2 update
+- `reports/analysis/market_research_v4_carry_row_diversity_refresh_manifest_v1.json` is now green.
+- `market_research_v4_carry_row_diversity_refresh` has moved from criteria-ready to manifest-ready.
+- The next mainline step is bootstrap, not replay.
+
+## V1.2 update
+- `market_research_v4_carry_row_diversity_refresh` now audits as `baseline_ready` and has completed its first suite run.
+- Seven-pack validation and `specialist_alpha_analysis_v6` place `v4` into the active specialist map.
+- `v4` already contributes visible specialist geography, but replay remains closed until the first single-lane choice is made.
+## V1.2 update
+- `market_research_v4_carry_row_diversity_refresh / 2024_q2 / mainline_trend_a / 601919` is now formally closed as an opening-led first lane, not a carry breakthrough.
+- The checked late window did not produce a clean persistence edge, so the second `v4` lane remains closed.
+- `V1.2` still primarily bottlenecks on missing carry row diversity rather than lack of active substrates.
+## V1.2 update
+- Added a deferred `catalyst persistence` context hypothesis branch for testing whether opening-led lanes turn into carry-led lanes only under sustained external catalysts.
+- The branch is now documented in `PROJECT_LIMITATION/61_CATALYST_CARRY_CONTEXT_HYPOTHESIS_PLAN.md`.
+- It remains report-only and does not change the current main bottleneck, which is still missing carry row diversity.
+## V1.2 update
+- Froze `catalyst_event_registry_schema_v1` as a deferred context branch for testing whether source authority, execution strength, rumor risk, consolidation days, and reacceleration help separate opening-led lanes from carry-capable lanes.
+- The schema is formalized in `reports/analysis/catalyst_event_registry_schema_v1.json` and `PROJECT_LIMITATION/62_CATALYST_EVENT_REGISTRY_SCHEMA_V1.md`.
+- The branch remains report-only and does not change the current main bottleneck, which is still missing carry row diversity.
+## V1.2 update
+- Added a first bounded training pilot on frozen structured lane artifacts.
+- `reports/analysis/v12_bounded_training_pilot_v1.json` shows that current structured observables cleanly separate `opening_led`, `persistence_led`, and `carry_row_present` in a tiny report-only nearest-centroid check.
+- This supports later bounded training work, but it does not yet justify strategy-level ML or raw-news model integration.
+## V1.2 update
+- `v12_training_readiness_check_v1.json` now confirms that the first bounded training pilot is informative but still too small to justify a larger model step.
+- The current bottleneck is unchanged: carry rows are still thin and duplicated.
+- Strategy-level ML and news-branch training both remain closed.
+
+Training branch status now includes two additional bounded artifacts:
+- [65_V12_TRAINING_SAMPLE_EXPANSION_DESIGN_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/65_V12_TRAINING_SAMPLE_EXPANSION_DESIGN_V1.md)
+- [66_V12_TRAINING_SAMPLE_MANIFEST_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/66_V12_TRAINING_SAMPLE_MANIFEST_V1.md)
+
+Current reading:
+- opening-led samples are sufficient for the current micro branch
+- clean persistence rows and true carry rows are the only approved expansion targets
+- relabelling neighboring factor families into the carry class remains closed
+
+The training branch now also has an operational binding gate:
+- [67_V12_TRAINING_SAMPLE_BINDING_GATE_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/67_V12_TRAINING_SAMPLE_BINDING_GATE_V1.md)
+- [v12_training_sample_binding_gate_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_training_sample_binding_gate_v1.json)
+
+Current reading:
+- current `v3` and `v4` opening-led first lanes remain outside the training sample
+- future clean persistence rows and future true carry rows remain the only approved binding sources
+
+The training branch now also has a per-lane intake check:
+- [68_V12_TRAINING_LANE_BINDING_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/68_V12_TRAINING_LANE_BINDING_CHECK_V1.md)
+- [v12_training_lane_binding_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_training_lane_binding_check_v1.json)
+
+Current reading:
+- current `v3` and `v4` first lanes are rejected as training additions because they are opening-led
+- the next valid training additions must still come from future clean persistence rows or future true carry rows
+
+The catalyst branch now also has a bounded sample seed:
+- [69_CATALYST_EVENT_REGISTRY_SEED_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/69_CATALYST_EVENT_REGISTRY_SEED_V1.md)
+- [catalyst_event_registry_seed_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_event_registry_seed_v1.json)
+
+Current reading:
+- the catalyst branch now starts from a balanced 2/2/2 lane sample
+- the next step is filling event-level fields for this bounded sample, not widening into a full news pipeline
+
+The catalyst branch now also has a bounded sample seed:
+- [69_CATALYST_EVENT_REGISTRY_SEED_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/69_CATALYST_EVENT_REGISTRY_SEED_V1.md)
+- [catalyst_event_registry_seed_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_event_registry_seed_v1.json)
+
+Current reading:
+- the catalyst branch now starts from a balanced 2/2/2 lane sample
+- the next step is filling event-level fields for this bounded sample, not widening into a full news pipeline
+
+The catalyst branch now also has a first bounded fill artifact:
+- [70_CATALYST_EVENT_REGISTRY_FILL_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/70_CATALYST_EVENT_REGISTRY_FILL_V1.md)
+- [catalyst_event_registry_fill_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_event_registry_fill_v1.json)
+
+Current reading:
+- all 6 seeded rows now have a market-context fill
+- 4 rows currently map to theme scope and 2 to sector scope
+- official source authority remains a later manual or semi-manual fill layer
+
+The catalyst branch now also has a partial source layer:
+- [71_CATALYST_EVENT_REGISTRY_SOURCE_FILL_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/71_CATALYST_EVENT_REGISTRY_SOURCE_FILL_V1.md)
+- [72_CATALYST_SOURCE_REFERENCES_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/72_CATALYST_SOURCE_REFERENCES_V1.md)
+- [catalyst_event_registry_source_fill_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_event_registry_source_fill_v1.json)
+
+Current reading:
+- 5 seeded rows now have official or high-trust source context
+- 1 row remains explicitly unresolved
+- the branch is now ready for a first bounded catalyst-context audit
+
+The catalyst branch now also has its first bounded audit:
+- [73_CATALYST_CONTEXT_AUDIT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/73_CATALYST_CONTEXT_AUDIT_V1.md)
+- [catalyst_context_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_context_audit_v1.json)
+
+Current reading:
+- opening rows currently stay in `single_pulse`
+- persistence rows currently cluster in `multi_day_reinforcement`
+- carry rows currently cluster in `policy_followthrough`
+- the branch stays report-only for now
+
+The catalyst branch now also has:
+- [73_CATALYST_CONTEXT_AUDIT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/73_CATALYST_CONTEXT_AUDIT_V1.md)
+- [74_V12_CATALYST_BRANCH_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/74_V12_CATALYST_BRANCH_PHASE_CHECK_V1.md)
+- [catalyst_context_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/catalyst_context_audit_v1.json)
+- [v12_catalyst_branch_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_catalyst_branch_phase_check_v1.json)
+
+Current reading:
+- the catalyst branch shows directional context separation
+- it remains active but report-only
+- it does not replace the main V1.2 bottleneck of missing carry row diversity
+
+The mainline now also has a frozen carry-row hunting strategy:
+- [75_V12_CARRY_ROW_HUNTING_STRATEGY_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/75_V12_CARRY_ROW_HUNTING_STRATEGY_V1.md)
+- [v12_carry_row_hunting_strategy_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_carry_row_hunting_strategy_v1.json)
+
+Current reading:
+- stay inside the existing `v4` refresh
+- do not widen replay
+- the next single-symbol carry hunt target is `000725`
+## 2026-03-30 Update: 000725 carry-row hunt closed inactive
+- Added `PROJECT_LIMITATION/76_V12_CARRY_ROW_HUNT_000725_V1.md`.
+- Added `reports/analysis/market_v4_q2_symbol_hunt_acceptance_000725_v1.json`.
+- `000725` does not change the carry reading: zero pnl divergence, no opening edge, no persistence edge.
+- The next bounded single-symbol hunt should move to `600703`.
+## 2026-03-30 Update: 600703 carry-row hunt closed inactive
+- Added `PROJECT_LIMITATION/77_V12_CARRY_ROW_HUNT_600703_V1.md`.
+- Added `reports/analysis/market_v4_q2_symbol_hunt_acceptance_600703_v1.json`.
+- `600703` does not change the carry reading: zero pnl divergence, no opening edge, no persistence edge.
+- The next bounded single-symbol hunt should move to `600150`.
+## 2026-03-30 Update: 600150 carry-row hunt closed inactive
+- Added `PROJECT_LIMITATION/78_V12_CARRY_ROW_HUNT_600150_V1.md`.
+- Added `reports/analysis/market_v4_q2_symbol_hunt_acceptance_600150_v1.json`.
+- `600150` does not change the carry reading: zero pnl divergence, no opening edge, no persistence edge.
+- The next bounded single-symbol hunt should move to `601127`.
+## 2026-03-30 Update: 601127 carry-row hunt closed inactive
+- Added `PROJECT_LIMITATION/79_V12_CARRY_ROW_HUNT_601127_V1.md`.
+- Added `reports/analysis/market_v4_q2_symbol_hunt_acceptance_601127_v1.json`.
+- `601127` does not change the carry reading: zero pnl divergence, no opening edge, no persistence edge.
+- The next correct action is a phase-level check before touching lower-priority v4 hunt tracks.
+## 2026-03-30 Update: v4 q2/A high-priority hunt paused
+- Added `reports/analysis/v12_v4_hunt_phase_check_v1.json`.
+- The current `v4 / q2 / A` hunt has exhausted its checked high-priority tracks without surfacing an active carry-supporting lane.
+- The next correct action is a reassessment of the current v4 hunt posture, not immediate expansion into lower-priority symbols.
+## 2026-03-30 Update: v4 reassessment completed
+- Added `reports/analysis/v12_v4_reassessment_v1.json`.
+- `v4` remains active as a substrate, but its checked `q2 / A` high-priority hunt region is locally exhausted.
+- The next correct action is a higher-level `V1.2` decision, not more local `v4` replay.
+## 2026-03-30 Update: V1.2 returns to next refresh prep
+- Added `reports/analysis/v12_batch_substrate_decision_v1.json`.
+- Added `PROJECT_LIMITATION/82_V12_BATCH_SUBSTRATE_DECISION_V1.md`.
+- Current reading: do not reopen local `v3` or `v4` replay; instead prepare the next refresh batch for carry-row diversity.
+## 2026-03-30 Update: v5 refresh entry prepared
+- Added `reports/analysis/v12_next_refresh_entry_v2.json`.
+- Added `PROJECT_LIMITATION/83_V12_NEXT_REFRESH_ENTRY_V2.md`.
+- Current reading: prepare `market_research_v5_carry_row_diversity_refresh` as a `criteria_first_true_carry_plus_clean_persistence_refresh` batch.
+- Local `v3/v4` replay remains closed.
+## 2026-03-30 Update: v5 criteria frozen
+- Added `reports/analysis/v12_v5_refresh_criteria_v1.json`.
+- Added `PROJECT_LIMITATION/84_V12_V5_REFRESH_CRITERIA_V1.md`.
+- Current reading: `market_research_v5_carry_row_diversity_refresh` is a `training-gap-aware` refresh targeting true carry rows first and clean persistence rows second.
+## 2026-03-30 Update: v5 manifest ready
+- Added `reports/analysis/market_research_v5_carry_row_diversity_refresh_manifest_v1.json`.
+- Added `PROJECT_LIMITATION/85_MARKET_RESEARCH_V5_CARRY_ROW_DIVERSITY_REFRESH_PLAN.md`.
+- Current reading: `market_research_v5_carry_row_diversity_refresh` is ready to bootstrap with `4` new symbols across `true_carry_row` and `clean_persistence_row` targets.
+- `market_research_v5_carry_row_diversity_refresh` is now fully bootstrapped (`baseline_ready = true`), validated in the eight-pack `time_slice_validation_v9` run (`reports/20260330T041451Z_b6297292_comparison.json`), and included in `reports/analysis/specialist_alpha_analysis_v8.json`.

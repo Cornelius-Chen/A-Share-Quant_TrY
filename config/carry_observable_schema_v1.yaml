@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: carry_observable_schema_v1
+
+inputs:
+  design_report: reports/analysis/carry_factor_design_v1.json
+  mechanism_b_report: reports/analysis/theme_q4_cycle_mechanism_300750_b_v1.json
+  mechanism_c_report: reports/analysis/theme_q4_cycle_mechanism_300750_c_v1.json

@@ -46,3 +46,36 @@ Current result:
 
 So the first context branch is now validated enough to continue, and the heat /
 breadth branch remains deferred.
+
+## Conditioned Late-Quality Check
+
+The first narrow continuation under this plan is now formalized in:
+
+- [context_feature_pack_a_conditioned_late_quality_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_v1.json)
+
+Current result:
+
+- `candidate_row_count = 17`
+- `candidate_bucket_counts = {interaction_high: 8, interaction_mid: 9, interaction_low: 0}`
+- candidate rows appear only in `2024_q2` and `2024_q4`
+- `recommended_conditioning_branch = conditioned_late_quality_on_theme_turnover_context`
+- `recommended_conditioning_posture = continue_context_conditioning_branch`
+
+This was strong enough to justify one bounded hierarchy experiment, but not to
+justify reopening broader strategy search.
+
+## Conditioned Branch Acceptance
+
+The bounded hierarchy experiment has now been evaluated in:
+
+- [context_feature_pack_a_conditioned_late_quality_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_acceptance_v1.json)
+
+Current result:
+
+- `acceptance_posture = close_conditioned_late_quality_branch_as_non_material`
+- `material_improvement_count = 0`
+- `harmed_strategy_count = 1`
+- `do_promote_conditioned_branch = false`
+
+So this context branch remains valuable as explanatory evidence, but not as a
+retained hierarchy rule in the current strategy baseline.

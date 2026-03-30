@@ -1,0 +1,47 @@
+paths:
+  reference_base_file: config/universes/market_research_v4_carry_row_diversity_reference_base.txt
+  seed_universe_file: config/universes/market_research_v4_carry_row_diversity_refresh.txt
+  reports_dir: reports/analysis
+
+manifest:
+  required_targets:
+    - basis_spread_diversity
+    - carry_duration_diversity
+    - exit_alignment_diversity
+    - cross_dataset_carry_reuse
+  entries:
+    - symbol: "000725"
+      target_row_diversity: basis_spread_diversity
+      primary_admission_reason: basis_spread_diversity
+      carry_row_hypothesis: "Panel and display leader intended to add lower-basis electronics carry rows rather than only saturated theme-growth carry evidence."
+    - symbol: "600703"
+      target_row_diversity: basis_spread_diversity
+      primary_admission_reason: basis_spread_diversity
+      carry_row_hypothesis: "Optoelectronics semiconductor name intended to probe mid-basis carry rows in a hardware cycle different from the current island."
+
+    - symbol: "601127"
+      target_row_diversity: carry_duration_diversity
+      primary_admission_reason: carry_duration_diversity
+      carry_row_hypothesis: "Auto trend leader intended to probe longer carry duration under stronger trend persistence than the current shared one-score carry rows."
+    - symbol: "600150"
+      target_row_diversity: carry_duration_diversity
+      primary_admission_reason: carry_duration_diversity
+      carry_row_hypothesis: "Shipbuilding cyclical intended to add slower multi-day carry duration variation in a regime unlike the current theme_q4 island."
+
+    - symbol: "601919"
+      target_row_diversity: exit_alignment_diversity
+      primary_admission_reason: exit_alignment_diversity
+      carry_row_hypothesis: "Shipping leader intended to create rows where challenger and anchors stop sharing the same exit date under slower decay and replacement pressure."
+    - symbol: "002241"
+      target_row_diversity: exit_alignment_diversity
+      primary_admission_reason: exit_alignment_diversity
+      carry_row_hypothesis: "Consumer electronics manufacturer intended to test exit-alignment breaks in a demand-sensitive hardware regime."
+
+    - symbol: "600570"
+      target_row_diversity: cross_dataset_carry_reuse
+      primary_admission_reason: cross_dataset_carry_reuse
+      carry_row_hypothesis: "Software platform leader intended to probe whether carry-like negative-cycle basis can reappear outside current semiconductor-heavy islands."
+    - symbol: "002600"
+      target_row_diversity: cross_dataset_carry_reuse
+      primary_admission_reason: cross_dataset_carry_reuse
+      carry_row_hypothesis: "Precision manufacturing name intended to test cross-dataset carry reuse in a broader industrial-electronics context without using opening-led clone logic."

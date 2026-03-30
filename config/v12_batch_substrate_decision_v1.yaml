@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+  phase_readiness_report: reports/analysis/v12_phase_readiness_v1.json
+  v4_reassessment_report: reports/analysis/v12_v4_reassessment_v1.json
+  specialist_analysis_report: reports/analysis/specialist_alpha_analysis_v6.json
+
+report:
+  name: v12_batch_substrate_decision_v1

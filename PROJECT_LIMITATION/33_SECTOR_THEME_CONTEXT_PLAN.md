@@ -66,3 +66,49 @@ That first group has now been validated into an explicit next branch:
 And the current non-goal is explicit:
 
 - do not start per-sector training yet
+
+## Current Branch Status
+
+The first conditional branch has now been carried through one bounded strategy
+experiment.
+
+Supporting reports:
+
+- [context_feature_pack_a_conditioned_late_quality_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_v1.json)
+- [context_feature_pack_a_conditioned_late_quality_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_a_conditioned_late_quality_acceptance_v1.json)
+
+Current conclusions:
+
+- candidate rows do exist, and they cluster in `mid/high` theme-turnover interaction buckets
+- that makes the branch useful as a conditioned explanation of late-quality misses
+- but the retained hierarchy experiment was not material enough to keep:
+  - `acceptance_posture = close_conditioned_late_quality_branch_as_non_material`
+  - `do_promote_conditioned_branch = false`
+
+So the board/theme context line remains active as analysis, but still not as
+per-sector training and not yet as a kept strategy rule.
+
+## Second Branch Audit
+
+The deferred second branch has now also been audited directly:
+
+- [context_feature_pack_b_sector_heat_breadth_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/context_feature_pack_b_sector_heat_breadth_v1.json)
+
+Current result:
+
+- `candidate_row_count = 1`
+- `candidate_slice_names = ['2024_q4']`
+- the only surviving candidate is:
+  - `000977`
+  - `2024-10-24`
+  - `context_sector_heat = 0.807045`
+  - `context_sector_breadth = 0.6`
+
+So the current posture is now:
+
+- `close_sector_heat_breadth_context_branch_as_sparse`
+- do **not** continue `context_feature_pack_b`
+- do **not** escalate this into per-sector training
+
+This means both current context branches remain useful at the explanatory
+layer, but neither one has earned promotion into a kept strategy rule.

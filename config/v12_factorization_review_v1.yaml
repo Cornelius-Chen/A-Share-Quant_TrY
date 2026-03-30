@@ -1,0 +1,15 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: v12_factorization_review_v1
+
+inputs:
+  registry_report: reports/analysis/feature_factor_registry_v1.json
+  protocol_report: reports/analysis/factor_evaluation_protocol_v1.json
+  carry_first_pass_report: reports/analysis/carry_in_basis_first_pass_v1.json
+  carry_pilot_report: reports/analysis/carry_factor_pilot_v1.json

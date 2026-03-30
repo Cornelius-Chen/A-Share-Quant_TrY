@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "bridge_days": 1,
+    "incumbent_only_cycle_count": 1,
+    "avoided_cycle_count": 0,
+    "reduced_loss_cycle_count": 0,
+    "worse_loss_cycle_count": 1
+  },
+  "bridged_cycles": [
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-02-23",
+        "exit_date": "2024-03-05",
+        "quantity": 100,
+        "entry_price": 39.22,
+        "exit_price": 52.08,
+        "pnl": 1272.810767,
+        "holding_days": 11
+      },
+      "classification": "worse_nearby_cycle",
+      "challenger_cycles": [
+        {
+          "entry_date": "2024-02-23",
+          "exit_date": "2024-02-28",
+          "quantity": 100,
+          "entry_price": 39.22,
+          "exit_price": 49.7,
+          "pnl": 1034.945023,
+          "holding_days": 5
+        },
+        {
+          "entry_date": "2024-02-29",
+          "exit_date": "2024-03-05",
+          "quantity": 100,
+          "entry_price": 48.05,
+          "exit_price": 52.08,
+          "pnl": 389.754167,
+          "holding_days": 5
+        }
+      ],
+      "closest_challenger_cycle": {
+        "entry_date": "2024-02-23",
+        "exit_date": "2024-02-28",
+        "quantity": 100,
+        "entry_price": 39.22,
+        "exit_price": 49.7,
+        "pnl": 1034.945023,
+        "holding_days": 5
+      },
+      "pnl_delta_vs_closest": -237.865744
+    }
+  ],
+  "interpretation": [
+    "A drawdown-specialist branch is strongest when it either avoids a bad incumbent-only cycle entirely or converts it into a nearby smaller loss.",
+    "A nearby challenger cycle is still useful if it shrinks loss enough; full avoidance is not the only valid drawdown mechanism.",
+    "Worse nearby cycles matter because they show where the specialist pays for its stricter posture."
+  ]
+}

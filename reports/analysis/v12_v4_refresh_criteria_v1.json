@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v12_v4_refresh_symbol_selection_criteria",
+    "criteria_count": 6,
+    "recommended_next_batch_name": "market_research_v4_carry_row_diversity_refresh",
+    "prepare_manifest_now": false,
+    "ready_to_open_v4_manifest_after_criteria": true,
+    "current_distinct_score_count": 1,
+    "observable_field_count": 5
+  },
+  "criteria_rows": [
+    {
+      "criterion_name": "must_target_one_primary_row_diversity_gap",
+      "criterion_type": "inclusion",
+      "rule": {
+        "allowed_primary_targets": [
+          "basis_spread_diversity",
+          "carry_duration_diversity",
+          "exit_alignment_diversity",
+          "cross_dataset_carry_reuse"
+        ],
+        "exactly_one_primary_target_per_symbol": true
+      },
+      "reading": "Each v4 symbol should enter to solve one carry-row-diversity gap first; generic multi-purpose additions dilute the refresh."
+    },
+    {
+      "criterion_name": "must_be_observable_under_carry_schema",
+      "criterion_type": "inclusion",
+      "rule": {
+        "required_observable_fields": [
+          "basis_advantage_abs",
+          "basis_advantage_bps",
+          "challenger_carry_days",
+          "same_exit_date",
+          "pnl_delta_vs_closest"
+        ],
+        "must_support_negative_cycle_basis_reading": true
+      },
+      "reading": "A v4 candidate must plausibly generate rows that can populate the bounded carry schema, not just another specialist lane with no carry-like observables."
+    },
+    {
+      "criterion_name": "must_expand_score_dispersion",
+      "criterion_type": "inclusion",
+      "rule": {
+        "current_distinct_score_count": 1,
+        "expected_effect": "increase_future_carry_score_dispersion"
+      },
+      "reading": "The refresh should be judged by whether it can create non-isomorphic carry rows and break the current one-score pilot state."
+    },
+    {
+      "criterion_name": "exclude_opening_led_clone_as_primary_reason",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_pure_opening_led_clone": true,
+        "exclude_if_no_carry_row_hypothesis": true
+      },
+      "reading": "A candidate that only looks like another 002049-style opening lane should not be admitted as a primary v4 target."
+    },
+    {
+      "criterion_name": "exclude_generic_sample_growth",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_general_sample_growth": true,
+        "exclude_non_interpretable_symbol_expansion": true
+      },
+      "reading": "V4 is a criteria-first carry refresh, not a broad size expansion exercise."
+    },
+    {
+      "criterion_name": "require_reference_base_novelty",
+      "criterion_type": "inclusion",
+      "rule": {
+        "must_be_new_vs_combined_reference_base": true,
+        "reference_base": "v1_plus_v2_seed_plus_v2_refresh_plus_v3_seed"
+      },
+      "reading": "V4 should continue the discipline of adding only genuinely new symbols against the accumulated reference base."
+    }
+  ],
+  "interpretation": [
+    "The next v4 refresh should be opened only after symbol-selection criteria are frozen, not directly from a phase-level desire for more diversity.",
+    "These criteria keep V1.2 focused on carry-row diversity by requiring schema-observable, score-dispersing rows and by excluding pure opening-led clones.",
+    "Once these criteria are accepted, the next healthy move is to draft the v4 manifest against them rather than revisit replay on the current v3 map."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "design_posture": "prepare_refresh_batch_for_factor_row_diversity",
+    "target_count": 4,
+    "current_carry_schema_row_count": 2,
+    "current_distinct_score_count": 1,
+    "row_diversity_gap_confirmed": true,
+    "recommended_next_batch_name": "market_research_v3_factor_diversity_seed",
+    "recommended_batch_posture": "expand_for_carry_row_diversity_not_general_size",
+    "do_prepare_new_refresh_manifest": true
+  },
+  "target_rows": [
+    {
+      "priority": 1,
+      "target_name": "basis_spread_diversity",
+      "target_posture": "add_carry_rows_with_lower_and_mid_basis_advantage",
+      "desired_shift": "basis_advantage_bps should no longer collapse to one saturated value.",
+      "rationale": "The current carry rows both saturate the basis component. The next refresh should add rows that create non-maximal basis values."
+    },
+    {
+      "priority": 2,
+      "target_name": "carry_duration_diversity",
+      "target_posture": "add_rows_with_zero_or_multi_day_carry_variation",
+      "desired_shift": "challenger_carry_days should vary beyond the current constant +1 day.",
+      "rationale": "The current pilot cannot learn whether carry is robust when duration is shorter or longer than the current shared row shape."
+    },
+    {
+      "priority": 3,
+      "target_name": "exit_alignment_diversity",
+      "target_posture": "seek_rows_where_same_exit_date_can_break",
+      "desired_shift": "same_exit_date should not remain uniformly true across all carry rows.",
+      "rationale": "A rankable pilot needs evidence beyond the current perfect same-exit alignment pattern."
+    },
+    {
+      "priority": 4,
+      "target_name": "cross_dataset_carry_reuse",
+      "target_posture": "add_non_theme_q4_candidates_with_carry_like_negative_cycle_basis",
+      "desired_shift": "carry rows should appear outside the current theme_q4 / 300750 evidence island.",
+      "rationale": "The next refresh should expand carry evidence beyond one dataset-slice-symbol cluster before any wider factor work opens."
+    }
+  ],
+  "interpretation": [
+    "The next refresh batch should not be justified as generic sample growth; it should be justified as targeted factor-row diversity expansion.",
+    "The carry lane is currently bottlenecked by saturated basis values, constant carry duration, and perfect same-exit alignment.",
+    "So the next batch should be designed to break those constants before any second factor lane is opened."
+  ]
+}

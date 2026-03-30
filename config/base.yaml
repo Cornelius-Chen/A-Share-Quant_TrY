@@ -18,8 +18,11 @@ universe:
   min_close: 3.0
 
 cost_model:
-  commission_bps: 3.0
-  stamp_tax_bps: 10.0
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
+  transfer_fee_bps: 0.1
+  exchange_handling_bps: 0.341
+  regulatory_fee_bps: 0.2
   min_commission: 5.0
 
 limit_model:

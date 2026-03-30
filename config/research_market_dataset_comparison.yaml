@@ -11,8 +11,8 @@ backtest:
   price_field: open
 
 cost_model:
-  commission_bps: 3.0
-  stamp_tax_bps: 10.0
+  commission_bps: 1.2
+  stamp_tax_bps: 5.0
   min_commission: 5.0
 
 limit_model:
@@ -32,3 +32,5 @@ datasets:
     config_path: config/theme_research_strategy_suite_v2.yaml
   - dataset_name: market_research_v0
     config_path: config/market_research_strategy_suite_v0.yaml
+
+

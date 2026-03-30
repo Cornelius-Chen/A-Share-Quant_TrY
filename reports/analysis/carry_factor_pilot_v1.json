@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "acceptance_posture": "open_carry_factor_pilot_as_report_only",
+    "pilot_mode": "report_only_micro_pilot",
+    "score_row_count": 2,
+    "distinct_score_count": 1,
+    "score_dispersion_present": false,
+    "sample_thin": true,
+    "strategies_covered": [
+      "mainline_trend_b",
+      "mainline_trend_c"
+    ],
+    "allow_report_only_pilot_now": true,
+    "allow_rankable_pilot_now": false,
+    "allow_strategy_integration_now": false,
+    "allow_retained_feature_promotion_now": false,
+    "needs_more_row_diversity_for_rankable_pilot": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "scoring_summary",
+      "actual": {
+        "design_posture": "open_carry_scoring_design_v1",
+        "score_row_count": 2,
+        "score_field_name": "carry_score_v1",
+        "score_formula": "0.45*basis + 0.20*same_exit + 0.15*carry_days + 0.20*realized_confirmation",
+        "min_score": 1.0,
+        "max_score": 1.0,
+        "mean_score": 1.0,
+        "allow_factor_pilot_next": true,
+        "allow_strategy_integration_now": false,
+        "allow_retained_feature_promotion_now": false
+      },
+      "reading": "The pilot can only open after the lane already has an explicit bounded score."
+    },
+    {
+      "evidence_name": "score_dispersion",
+      "actual": {
+        "scores": [
+          1.0,
+          1.0
+        ],
+        "distinct_score_count": 1,
+        "score_dispersion_present": false
+      },
+      "reading": "A rankable pilot needs cross-row score dispersion; identical rows can still support a report-only pilot."
+    },
+    {
+      "evidence_name": "sample_shape",
+      "actual": {
+        "schema_row_count": 2,
+        "sample_thin": true,
+        "strategies_covered": [
+          "mainline_trend_b",
+          "mainline_trend_c"
+        ]
+      },
+      "reading": "The current carry pilot remains tiny and bounded, so the first pilot should stay report-only unless more diverse rows arrive."
+    }
+  ],
+  "interpretation": [
+    "The first carry pilot is allowed because the lane now has admission, schema, and score layers.",
+    "But the current evidence is too symmetric for a rankable pilot: both rows score identically and come from the same structural pocket.",
+    "So the correct posture is a report-only micro-pilot, with strategy integration and retained-feature promotion still turned off."
+  ]
+}

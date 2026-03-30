@@ -1,0 +1,28 @@
+paths:
+  stock_snapshots_csv: data/derived/stock_snapshots/market_research_stock_snapshots_v1.csv
+  strategy_suite_config: config/market_research_strategy_suite_v1.yaml
+  reports_dir: reports/analysis
+
+report:
+  name: context_feature_pack_b_sector_heat_breadth_v1
+
+analysis:
+  slices:
+    - dataset_name: market_research_v1
+      slice_name: 2024_q2
+      slice_role: capture
+      acceptance_report_path: reports/analysis/market_v1_q2_capture_slice_acceptance_v1.json
+    - dataset_name: market_research_v1
+      slice_name: 2024_q3
+      slice_role: drawdown
+      acceptance_report_path: reports/analysis/market_v1_q3_drawdown_slice_acceptance_v1.json
+    - dataset_name: market_research_v1
+      slice_name: 2024_q4
+      slice_role: drawdown
+      acceptance_report_path: reports/analysis/market_v1_q4_drawdown_slice_acceptance_v1.json
+  thresholds:
+    late_quality_floor: 0.55
+    resonance_floor: 0.40
+    high_sector_heat_threshold: 0.65
+    high_sector_breadth_threshold: 0.55
+    near_threshold_gap: 0.05

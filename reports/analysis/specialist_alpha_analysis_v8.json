@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "anchor_count": 2,
+    "specialist_count": 2,
+    "top_specialist_by_opportunity_count": "baseline_expansion_branch"
+  },
+  "specialist_summaries": [
+    {
+      "candidate_name": "baseline_expansion_branch",
+      "primary_metric": "mainline_capture_ratio",
+      "opportunity_count": 23,
+      "best_opportunity": {
+        "dataset_name": "market_research_v3_factor_diversity_seed",
+        "slice_name": "2024_q4",
+        "strategy_name": "mainline_trend_c",
+        "primary_advantage_vs_anchors": 0.095289,
+        "secondary_penalty_vs_anchors": -0.000364,
+        "total_return_delta_vs_anchors": 0.000871
+      },
+      "top_datasets": [
+        "baseline_research_v1",
+        "market_research_v1",
+        "market_research_v2_seed",
+        "market_research_v3_factor_diversity_seed",
+        "market_research_v4_carry_row_diversity_refresh",
+        "market_research_v5_carry_row_diversity_refresh",
+        "theme_research_v4"
+      ],
+      "top_slices": [
+        "2024_q1",
+        "2024_q2",
+        "2024_q3",
+        "2024_q4"
+      ]
+    },
+    {
+      "candidate_name": "theme_strict_quality_branch",
+      "primary_metric": "max_drawdown",
+      "opportunity_count": 10,
+      "best_opportunity": {
+        "dataset_name": "baseline_research_v1",
+        "slice_name": "2024_q3",
+        "strategy_name": "mainline_trend_b",
+        "primary_advantage_vs_anchors": 0.001594,
+        "secondary_penalty_vs_anchors": -0.001536,
+        "total_return_delta_vs_anchors": 0.001536
+      },
+      "top_datasets": [
+        "baseline_research_v1",
+        "market_research_v1",
+        "market_research_v2_seed",
+        "theme_research_v4"
+      ],
+      "top_slices": [
+        "2024_q2",
+        "2024_q3",
+        "2024_q4"
+      ]
+    }
+  ],
+  "top_opportunities": [
+    {
+      "dataset_name": "market_research_v3_factor_diversity_seed",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.095289,
+      "secondary_penalty_vs_anchors": -0.000364,
+      "total_return_delta_vs_anchors": 0.000871,
+      "specialist_candidate": "baseline_expansion_branch"
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q1",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.086974,
+      "secondary_penalty_vs_anchors": 0.000179,
+      "total_return_delta_vs_anchors": 0.000633,
+      "specialist_candidate": "baseline_expansion_branch"
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_a",
+      "primary_advantage_vs_anchors": 0.067155,
+      "secondary_penalty_vs_anchors": 0.000208,
+      "total_return_delta_vs_anchors": -0.000186,
+      "specialist_candidate": "baseline_expansion_branch"
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.059862,
+      "secondary_penalty_vs_anchors": 0.002104,
+      "total_return_delta_vs_anchors": -0.001823,
+      "specialist_candidate": "baseline_expansion_branch"
+    },
+    {
+      "dataset_name": "market_research_v4_carry_row_diversity_refresh",
+      "slice_name": "2024_q2",
+      "strategy_name": "mainline_trend_a",
+      "primary_advantage_vs_anchors": 0.056622,
+      "secondary_penalty_vs_anchors": -6.5e-05,
+      "total_return_delta_vs_anchors": 4.6e-05,
+      "specialist_candidate": "baseline_expansion_branch"
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_b",
+      "primary_advantage_vs_anchors": 0.001594,
+      "secondary_penalty_vs_anchors": -0.001536,
+      "total_return_delta_vs_anchors": 0.001536,
+      "specialist_candidate": "theme_strict_quality_branch"
+    },
+    {
+      "dataset_name": "baseline_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.001594,
+      "secondary_penalty_vs_anchors": -0.001536,
+      "total_return_delta_vs_anchors": 0.001536,
+      "specialist_candidate": "theme_strict_quality_branch"
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_b",
+      "primary_advantage_vs_anchors": 0.00071,
+      "secondary_penalty_vs_anchors": -0.00073,
+      "total_return_delta_vs_anchors": 0.00073,
+      "specialist_candidate": "theme_strict_quality_branch"
+    },
+    {
+      "dataset_name": "market_research_v1",
+      "slice_name": "2024_q3",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.000699,
+      "secondary_penalty_vs_anchors": -0.000454,
+      "total_return_delta_vs_anchors": 0.000454,
+      "specialist_candidate": "theme_strict_quality_branch"
+    },
+    {
+      "dataset_name": "theme_research_v4",
+      "slice_name": "2024_q4",
+      "strategy_name": "mainline_trend_c",
+      "primary_advantage_vs_anchors": 0.000697,
+      "secondary_penalty_vs_anchors": -2.9e-05,
+      "total_return_delta_vs_anchors": 2.9e-05,
+      "specialist_candidate": "theme_strict_quality_branch"
+    }
+  ],
+  "interpretation": [
+    "A specialist branch is most worth future research when it beats both broad anchors in its native metric inside a specific dataset-slice-strategy pocket.",
+    "These opportunity pockets are not promotion evidence for the shared default. They are candidates for the next structural alpha cycle.",
+    "Once a blocker line is frozen, the next high-value research question is where specialists still produce non-overlapping edge."
+  ]
+}

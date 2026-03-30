@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "close_conditioned_late_quality_branch_as_non_material",
+    "strategy_count": 3,
+    "material_improvement_count": 0,
+    "harmed_strategy_count": 1,
+    "do_promote_conditioned_branch": false
+  },
+  "strategy_rows": [
+    {
+      "strategy_name": "mainline_trend_a",
+      "total_return_delta": 0.0,
+      "max_drawdown_delta": 0.0,
+      "capture_delta": 0.0,
+      "signal_delta": 0,
+      "material_improvement": false,
+      "harmed": false
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "total_return_delta": 3.9e-05,
+      "max_drawdown_delta": -3.9e-05,
+      "capture_delta": 0.0,
+      "signal_delta": -2,
+      "material_improvement": false,
+      "harmed": false
+    },
+    {
+      "strategy_name": "mainline_trend_c",
+      "total_return_delta": -0.000768,
+      "max_drawdown_delta": 0.000123,
+      "capture_delta": -0.000135,
+      "signal_delta": 18,
+      "material_improvement": false,
+      "harmed": true
+    }
+  ],
+  "interpretation": [
+    "A conditioned late-quality branch only deserves continued strategy work if it changes suite-level outcomes materially rather than just moving a few signals around.",
+    "If the branch mostly leaves one strategy unchanged, barely helps another, and harms the third, the correct action is to keep it as explanatory evidence and close the strategy branch.",
+    "That still leaves the context axis valuable as analysis, but not yet worthy of a retained hierarchy rule."
+  ]
+}

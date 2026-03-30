@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v12_open_and_wait_for_new_refresh_batch_or_row_diversity",
+    "refresh_pack_ready": true,
+    "registry_ready": true,
+    "factorization_milestone_reached": true,
+    "second_lane_closed": true,
+    "carry_pilot_report_only": true,
+    "row_diversity_still_missing": true,
+    "ready_to_close_v12_now": false,
+    "do_open_new_refresh_batch_now": true,
+    "recommended_next_posture": "prepare_later_refresh_batch_to_add_factor_row_diversity"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "data_expansion_status",
+      "actual": {
+        "baseline_ready": true,
+        "canonical_ready_count": 6,
+        "derived_ready_count": 3
+      },
+      "reading": "V1.2 cannot close credibly unless the refreshed pack itself is already runnable and auditable."
+    },
+    {
+      "evidence_name": "factorization_status",
+      "actual": {
+        "registry_ready": true,
+        "factorization_milestone_reached": true,
+        "second_lane_closed": true
+      },
+      "reading": "The phase needs one full bounded factorization cycle before any close-or-refresh decision is meaningful."
+    },
+    {
+      "evidence_name": "carry_pilot_boundary",
+      "actual": {
+        "pilot_mode": "report_only_micro_pilot",
+        "row_diversity_still_missing": true,
+        "allow_rankable_pilot_now": false
+      },
+      "reading": "If the first pilot is still report-only because row diversity is missing, the correct next move is a later refresh batch rather than immediate phase closure."
+    }
+  ],
+  "interpretation": [
+    "V1.2 has already achieved a real data-plus-factorization milestone, so it is no longer in early buildout mode.",
+    "But the first factor lane is still report-only, which means the phase has not yet converted its first factor lane into a rankable or broader reusable factor layer.",
+    "So the correct current posture is to keep V1.2 open, hold the second lane closed, and wait for a later refresh batch that can add more factor row diversity."
+  ]
+}

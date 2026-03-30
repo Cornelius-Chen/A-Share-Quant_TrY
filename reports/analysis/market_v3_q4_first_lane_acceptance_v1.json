@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v3_q4_first_lane_as_opening_led_not_carry_breakthrough",
+    "top_positive_symbols": [
+      "002049",
+      "600584",
+      "600050"
+    ],
+    "top_driver": "002049",
+    "opening_present": true,
+    "persistence_present": false,
+    "anchor_alignment_present": true,
+    "anchor_junk_block_present": true,
+    "lane_changes_carry_reading": false,
+    "do_open_second_v3_lane_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_driver_rank",
+      "actual": {
+        "top_driver": "002049",
+        "top_positive_symbols": [
+          "002049",
+          "600584",
+          "600050"
+        ]
+      },
+      "reading": "The first v3 lane should be judged using the strongest q4/C symbol rather than a widened lane set."
+    },
+    {
+      "evidence_name": "opening_edge",
+      "actual": {
+        "opening_present": true,
+        "opening_trade_date": "2024-11-05",
+        "specialist_assignment_layer": "late_mover",
+        "anchor_alignment_present": true,
+        "anchor_junk_block_present": true
+      },
+      "reading": "A clean opening-led reading needs aligned permission and entry family, with anchors blocked mainly by hierarchy admission."
+    },
+    {
+      "evidence_name": "persistence_check",
+      "actual": {
+        "persistence_present": false,
+        "persistence_trade_date": null
+      },
+      "reading": "If the checked late window does not preserve the specialist position while anchors churn out, the lane should not be called persistence-led."
+    }
+  ],
+  "interpretation": [
+    "The first v3 lane should only upgrade the carry reading if it adds more than another clean opening case.",
+    "The current 002049 evidence shows a specialist-only opening edge with aligned permission and entry family, but no clean persistence edge in the checked late window.",
+    "So the correct current posture is to treat the first v3 lane as opening-led and keep the second lane closed until a later lane changes the carry-row-diversity reading."
+  ]
+}

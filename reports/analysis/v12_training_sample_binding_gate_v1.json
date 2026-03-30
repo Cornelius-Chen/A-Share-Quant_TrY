@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "binding_gate_posture": "freeze_v12_training_sample_binding_gate_v1",
+    "opening_class_frozen": true,
+    "additional_persistence_rows_needed": 2,
+    "additional_carry_rows_needed": 2,
+    "current_bindable_row_count": 0,
+    "current_non_bindable_row_count": 2,
+    "allow_binding_current_opening_led_rows": false,
+    "allow_binding_future_clean_persistence_rows": true,
+    "allow_binding_future_true_carry_rows": true,
+    "ready_for_future_row_binding": true,
+    "recommended_next_binding_source": "future_refresh_acceptance_grade_persistence_or_true_carry_rows"
+  },
+  "binding_rows": [
+    {
+      "dataset": "None",
+      "slice_name": "None",
+      "symbol": "002049",
+      "opening_present": true,
+      "persistence_present": false,
+      "carry_breakthrough_present": false,
+      "binding_posture": "do_not_bind_now",
+      "reason": "opening_class_frozen"
+    },
+    {
+      "dataset": "None",
+      "slice_name": "None",
+      "symbol": "601919",
+      "opening_present": true,
+      "persistence_present": false,
+      "carry_breakthrough_present": false,
+      "binding_posture": "do_not_bind_now",
+      "reason": "opening_class_frozen"
+    }
+  ],
+  "interpretation": [
+    "The bounded training branch should not absorb currently surfaced opening-led first lanes because the opening class is already frozen.",
+    "The next bindable rows must come from future acceptance-grade persistence lanes or true carry rows.",
+    "This gate turns the training manifest into an operational binding rule instead of a static note."
+  ]
+}

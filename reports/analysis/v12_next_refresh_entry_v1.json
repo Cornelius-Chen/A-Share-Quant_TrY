@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "prepare_v12_next_refresh_entry_for_market_research_v4",
+    "prepare_refresh_entry_now": true,
+    "prepare_manifest_now": false,
+    "current_primary_bottleneck": "carry_row_diversity_gap",
+    "v3_baseline_ready": true,
+    "first_lane_opening_led": true,
+    "lane_changes_carry_reading": false,
+    "recommended_next_batch_name": "market_research_v4_carry_row_diversity_refresh",
+    "recommended_batch_posture": "criteria_first_carry_row_diversity_refresh"
+  },
+  "entry_rules": [
+    {
+      "rule_name": "batch_scope",
+      "rule_value": {
+        "next_batch_name": "market_research_v4_carry_row_diversity_refresh",
+        "prepare_manifest_now": false,
+        "keep_second_v3_lane_closed": true
+      },
+      "reading": "The next refresh should open as a criteria-first entry, not as an immediate manifest expansion while the current v3 map remains intentionally narrow."
+    },
+    {
+      "rule_name": "selection_targets",
+      "rule_value": {
+        "basis_spread_diversity": true,
+        "carry_duration_diversity": true,
+        "exit_alignment_diversity": true,
+        "cross_dataset_carry_reuse": true
+      },
+      "reading": "The next refresh still has to target the same four carry row-diversity gaps; the first v3 lane did not replace them with a new priority."
+    },
+    {
+      "rule_name": "explicit_exclusions",
+      "rule_value": {
+        "exclude_pure_opening_led_clones_as_primary_goal": true,
+        "exclude_general_sample_growth_as_primary_goal": true,
+        "exclude_second_factor_lane_opening": true
+      },
+      "reading": "The next refresh should not drift into generic sample growth or capture-opening expansion just because the first v3 lane was opening-led."
+    }
+  ],
+  "interpretation": [
+    "The first v3 lane proved the new substrate is alive, but it did not solve the carry-lane bottleneck.",
+    "So the right next move is to prepare the next refresh as a criteria-first carry-row-diversity entry rather than widen the current v3 replay map.",
+    "This keeps V1.2 on its intended track: improve factor-row diversity first, then revisit whether the carry lane can become more than a report-only micro-pilot."
+  ]
+}

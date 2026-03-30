@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_c",
+    "incumbent_name": "shared_default",
+    "challenger_name": "theme_strict_quality_branch",
+    "bridge_days": 1,
+    "incumbent_only_cycle_count": 3,
+    "avoided_cycle_count": 3,
+    "reduced_loss_cycle_count": 0,
+    "worse_loss_cycle_count": 0
+  },
+  "bridged_cycles": [
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-03-04",
+        "exit_date": "2024-03-05",
+        "quantity": 100,
+        "entry_price": 33.69,
+        "exit_price": 32.78,
+        "pnl": -103.065073,
+        "holding_days": 1
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-02-28",
+        "exit_date": "2024-02-29",
+        "quantity": 100,
+        "entry_price": 33.05,
+        "exit_price": 32.26,
+        "pnl": -91.031637,
+        "holding_days": 1
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    },
+    {
+      "incumbent_cycle": {
+        "entry_date": "2024-02-26",
+        "exit_date": "2024-02-27",
+        "quantity": 100,
+        "entry_price": 32.57,
+        "exit_price": 32.11,
+        "pnl": -58.020099,
+        "holding_days": 1
+      },
+      "classification": "avoided_cycle",
+      "challenger_cycles": []
+    }
+  ],
+  "interpretation": [
+    "A drawdown-specialist branch is strongest when it either avoids a bad incumbent-only cycle entirely or converts it into a nearby smaller loss.",
+    "A nearby challenger cycle is still useful if it shrinks loss enough; full avoidance is not the only valid drawdown mechanism.",
+    "Worse nearby cycles matter because they show where the specialist pays for its stricter posture."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "active_trigger_count": 0,
+    "archetype_gap_trigger": false,
+    "specialist_geography_trigger": false,
+    "clean_frontier_trigger": false,
+    "secondary_status_break_trigger": false,
+    "should_open_refresh": false,
+    "recommended_posture": "maintain_waiting_state_until_new_trigger"
+  },
+  "trigger_rows": [
+    {
+      "trigger_name": "new_archetype_gap_signal",
+      "is_active": false,
+      "actual": {
+        "do_open_market_research_v2_refresh_now": false,
+        "recommended_next_phase": "wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh"
+      },
+      "reading": "This trigger should only fire when the repo has an explicit post-v2 reason to open refresh design now."
+    },
+    {
+      "trigger_name": "materially_different_specialist_geography",
+      "is_active": false,
+      "actual": {
+        "do_continue_current_v2_seed_replay": false,
+        "v2_seed_contributes_specialist_pockets": true,
+        "top_specialist_by_opportunity_count": "baseline_expansion_branch"
+      },
+      "reading": "If v2-seed itself reopens locally, that would imply the suspect geography has changed enough to reconsider refresh timing."
+    },
+    {
+      "trigger_name": "clean_new_lane_frontier",
+      "is_active": false,
+      "actual": {
+        "q4_closed": true,
+        "q3_closed": true
+      },
+      "reading": "A refresh should stay closed while the currently opened lanes are still mixed and already slice-closed."
+    },
+    {
+      "trigger_name": "secondary_substrate_status_break",
+      "is_active": false,
+      "actual": {
+        "v2_seed_secondary_substrate_status": true
+      },
+      "reading": "If v2-seed stops reading as a bounded secondary substrate, the repo may need a new refresh decision immediately."
+    }
+  ],
+  "interpretation": [
+    "This monitor is the operational version of the next-refresh policy.",
+    "The repo should open a new refresh design cycle only when at least one trigger becomes active.",
+    "If all trigger flags remain false, the correct posture is to keep waiting rather than inventing another batch by momentum."
+  ]
+}

@@ -115,7 +115,14 @@ def test_strategy_experiment_runner_produces_custom_metrics_and_signals() -> Non
 
     engine = BacktestEngine(
         initial_cash=1_000_000,
-        cost_model=CostModel(commission_bps=0.0, stamp_tax_bps=0.0, min_commission=0.0),
+        cost_model=CostModel(
+            commission_bps=0.0,
+            stamp_tax_bps=0.0,
+            transfer_fee_bps=0.0,
+            exchange_handling_bps=0.0,
+            regulatory_fee_bps=0.0,
+            min_commission=0.0,
+        ),
         limit_model=LimitModel(daily_limit_pct=0.10, epsilon=0.0001),
     )
     runner = StrategyExperimentRunner(engine=engine)
@@ -159,7 +166,14 @@ def test_strategy_experiment_runner_blocks_duplicate_buy_until_fill() -> None:
 
     engine = BacktestEngine(
         initial_cash=1_000_000,
-        cost_model=CostModel(commission_bps=0.0, stamp_tax_bps=0.0, min_commission=0.0),
+        cost_model=CostModel(
+            commission_bps=0.0,
+            stamp_tax_bps=0.0,
+            transfer_fee_bps=0.0,
+            exchange_handling_bps=0.0,
+            regulatory_fee_bps=0.0,
+            min_commission=0.0,
+        ),
         limit_model=LimitModel(daily_limit_pct=0.10, epsilon=0.0001),
     )
     runner = StrategyExperimentRunner(engine=engine)
@@ -220,7 +234,14 @@ def test_strategy_experiment_runner_supports_resonance_segmentation() -> None:
 
     engine = BacktestEngine(
         initial_cash=1_000_000,
-        cost_model=CostModel(commission_bps=0.0, stamp_tax_bps=0.0, min_commission=0.0),
+        cost_model=CostModel(
+            commission_bps=0.0,
+            stamp_tax_bps=0.0,
+            transfer_fee_bps=0.0,
+            exchange_handling_bps=0.0,
+            regulatory_fee_bps=0.0,
+            min_commission=0.0,
+        ),
         limit_model=LimitModel(daily_limit_pct=0.10, epsilon=0.0001),
     )
     runner = StrategyExperimentRunner(engine=engine, segmentation_method="resonance")

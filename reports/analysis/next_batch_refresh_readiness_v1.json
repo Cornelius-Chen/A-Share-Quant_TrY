@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "v11_current_loop_paused": true,
+    "v2_seed_local_loop_paused": true,
+    "v2_seed_secondary_substrate_status": true,
+    "v2_seed_specialist_opportunity_count": 21,
+    "recommended_next_phase": "wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh",
+    "do_open_market_research_v2_refresh_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "current_loop_state",
+      "actual": {
+        "v11_current_loop_paused": true,
+        "v2_seed_local_loop_paused": true
+      },
+      "reading": "If both the primary specialist loop and the currently opened v2-seed loop are paused, there is no active replay frontier that forces an immediate refresh."
+    },
+    {
+      "evidence_name": "v2_seed_role",
+      "actual": {
+        "v2_seed_secondary_substrate_status": true,
+        "v2_seed_specialist_opportunity_count": 21
+      },
+      "reading": "A secondary substrate can stay useful without immediately triggering another seed-refresh cycle."
+    },
+    {
+      "evidence_name": "refresh_trigger_posture",
+      "actual": {
+        "recommended_next_phase": "wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh"
+      },
+      "reading": "The next refresh should open only when a new archetype gap signal or materially different suspect geography appears, not merely because the current packs are productive."
+    }
+  ],
+  "interpretation": [
+    "This gate controls when the repo is allowed to open a new suspect-batch refresh after v2-seed.",
+    "If the current primary loop is paused and v2-seed is already useful but bounded, the correct default is to wait rather than immediately design another refresh.",
+    "The next refresh should be triggered by a new archetype-gap signal, a materially different suspect geography, or a later pack refresh that changes the current bounded reading."
+  ]
+}

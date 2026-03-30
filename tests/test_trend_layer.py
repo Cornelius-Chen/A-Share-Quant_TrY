@@ -4,7 +4,7 @@ from datetime import date
 
 from a_share_quant.common.models import DailyBar, StockSnapshot
 from a_share_quant.trend.entry_rules import EntryRules
-from a_share_quant.trend.leader_hierarchy_ranker import LeaderHierarchyRanker
+from a_share_quant.trend.leader_hierarchy_ranker import HierarchyConfig, LeaderHierarchyRanker
 from a_share_quant.trend.trend_filters import TrendFilters
 
 
@@ -83,3 +83,82 @@ def test_entry_rules_emit_multiple_candidate_entries() -> None:
     assert entries["mid_trend_follow"].triggered is False
     assert entries["pullback_then_restrengthening"].triggered is True
     assert entries["second_breakout"].triggered is True
+
+
+def test_leader_hierarchy_ranker_can_condition_late_quality_on_theme_turnover_context() -> None:
+    snapshots = [
+        StockSnapshot(
+            date(2025, 1, 7),
+            "LDR",
+            "AI",
+            "AI",
+            0.95,
+            0.95,
+            0.55,
+            0.60,
+            0.30,
+            0.90,
+        ),
+        StockSnapshot(
+            date(2025, 1, 7),
+            "CORE",
+            "AI",
+            "AI",
+            0.60,
+            0.55,
+            0.95,
+            0.95,
+            0.40,
+            0.85,
+        ),
+        StockSnapshot(
+            date(2025, 1, 7),
+            "CTX",
+            "AI",
+            "AI",
+            0.72,
+            0.50,
+            0.60,
+            0.55,
+            0.53,
+            0.75,
+            non_junk_composite_score=0.72,
+            context_theme_turnover_interaction=0.29,
+        ),
+        StockSnapshot(
+            date(2025, 1, 7),
+            "JUNK",
+            "AI",
+            "AI",
+            0.35,
+            0.20,
+            0.30,
+            0.25,
+            0.30,
+            0.20,
+        ),
+    ]
+
+    default_layers = {
+        item.symbol: item.layer
+        for item in LeaderHierarchyRanker().rank(snapshots)
+    }
+    conditioned_layers = {
+        item.symbol: item.layer
+        for item in LeaderHierarchyRanker(
+            HierarchyConfig(
+                min_resonance_for_core=0.55,
+                min_quality_for_late_mover=0.55,
+                min_composite_for_non_junk=0.55,
+                enable_context_conditioned_late_quality=True,
+                conditioned_high_interaction_threshold=0.25,
+                conditioned_medium_interaction_threshold=0.18,
+                conditioned_high_interaction_relief=0.03,
+                conditioned_medium_interaction_relief=0.02,
+                conditioned_resonance_floor=0.40,
+            )
+        ).rank(snapshots)
+    }
+
+    assert default_layers["CTX"] == "junk"
+    assert conditioned_layers["CTX"] == "late_mover"

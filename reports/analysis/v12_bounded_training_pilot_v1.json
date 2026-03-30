@@ -1,0 +1,286 @@
+{
+  "summary": {
+    "pilot_posture": "open_v12_bounded_training_pilot_as_report_only",
+    "model_type": "leave_one_out_nearest_centroid",
+    "sample_count": 10,
+    "class_count": 3,
+    "class_labels": [
+      "carry_row_present",
+      "opening_led",
+      "persistence_led"
+    ],
+    "overall_accuracy": 1.0,
+    "class_accuracy": {
+      "carry_row_present": 1.0,
+      "opening_led": 1.0,
+      "persistence_led": 1.0
+    },
+    "allow_strategy_training_now": false,
+    "allow_news_branch_training_now": false
+  },
+  "feature_names": [
+    "assignment_layer_value",
+    "specialist_permission_allowed",
+    "specialist_trigger_count",
+    "specialist_filter_count",
+    "anchor_count",
+    "anchor_alignment_present",
+    "anchor_junk_block_present",
+    "specialist_position_present",
+    "specialist_holding_health_score",
+    "anchor_exit_signal_count",
+    "basis_advantage_bps",
+    "challenger_carry_days",
+    "same_exit_date",
+    "pnl_delta_vs_closest"
+  ],
+  "sample_rows": [
+    {
+      "sample_id": "market_v1_q2_002371_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 3.0,
+      "specialist_filter_count": 3.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "theme_q1_002466_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 1.0,
+      "specialist_filter_count": 3.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "theme_q1_600338_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 3.0,
+      "specialist_filter_count": 3.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "theme_q1_300518_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 2.0,
+      "specialist_filter_count": 2.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "market_v3_q4_002049_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 3.0,
+      "specialist_filter_count": 1.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "market_v4_q2_601919_opening",
+      "label": "opening_led",
+      "assignment_layer_value": 3.0,
+      "specialist_permission_allowed": 1.0,
+      "specialist_trigger_count": 1.0,
+      "specialist_filter_count": 1.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 1.0,
+      "anchor_junk_block_present": 0.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "market_v1_q2_300502_persistence",
+      "label": "persistence_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 0.0,
+      "specialist_trigger_count": 0.0,
+      "specialist_filter_count": 0.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 0.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 1.0,
+      "specialist_holding_health_score": 3.5,
+      "anchor_exit_signal_count": 2.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "theme_q1_000155_persistence",
+      "label": "persistence_led",
+      "assignment_layer_value": 2.0,
+      "specialist_permission_allowed": 0.0,
+      "specialist_trigger_count": 0.0,
+      "specialist_filter_count": 0.0,
+      "anchor_count": 2.0,
+      "anchor_alignment_present": 0.0,
+      "anchor_junk_block_present": 1.0,
+      "specialist_position_present": 1.0,
+      "specialist_holding_health_score": 3.5,
+      "anchor_exit_signal_count": 2.0,
+      "basis_advantage_bps": 0.0,
+      "challenger_carry_days": 0.0,
+      "same_exit_date": 0.0,
+      "pnl_delta_vs_closest": 0.0
+    },
+    {
+      "sample_id": "carry_1",
+      "label": "carry_row_present",
+      "assignment_layer_value": 0.0,
+      "specialist_permission_allowed": 0.0,
+      "specialist_trigger_count": 0.0,
+      "specialist_filter_count": 0.0,
+      "anchor_count": 0.0,
+      "anchor_alignment_present": 0.0,
+      "anchor_junk_block_present": 0.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 333.4258,
+      "challenger_carry_days": 1.0,
+      "same_exit_date": 1.0,
+      "pnl_delta_vs_closest": 841.2523
+    },
+    {
+      "sample_id": "carry_2",
+      "label": "carry_row_present",
+      "assignment_layer_value": 0.0,
+      "specialist_permission_allowed": 0.0,
+      "specialist_trigger_count": 0.0,
+      "specialist_filter_count": 0.0,
+      "anchor_count": 0.0,
+      "anchor_alignment_present": 0.0,
+      "anchor_junk_block_present": 0.0,
+      "specialist_position_present": 0.0,
+      "specialist_holding_health_score": 0.0,
+      "anchor_exit_signal_count": 0.0,
+      "basis_advantage_bps": 333.4258,
+      "challenger_carry_days": 1.0,
+      "same_exit_date": 1.0,
+      "pnl_delta_vs_closest": 841.2523
+    }
+  ],
+  "fold_rows": [
+    {
+      "fold_index": 0,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 1,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 2,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 3,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 4,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 5,
+      "predicted_label": "opening_led",
+      "true_label": "opening_led",
+      "correct": true
+    },
+    {
+      "fold_index": 6,
+      "predicted_label": "persistence_led",
+      "true_label": "persistence_led",
+      "correct": true
+    },
+    {
+      "fold_index": 7,
+      "predicted_label": "persistence_led",
+      "true_label": "persistence_led",
+      "correct": true
+    },
+    {
+      "fold_index": 8,
+      "predicted_label": "carry_row_present",
+      "true_label": "carry_row_present",
+      "correct": true
+    },
+    {
+      "fold_index": 9,
+      "predicted_label": "carry_row_present",
+      "true_label": "carry_row_present",
+      "correct": true
+    }
+  ],
+  "interpretation": [
+    "This is a bounded training pilot on frozen structured lane artifacts, not a production model and not a strategy-integrated ML branch.",
+    "The pilot only tests whether current structured observables can separate opening-led, persistence-led, and carry-row-present lanes at all.",
+    "Even if the micro-pilot separates classes well, that only justifies later feature work; it does not justify live strategy training or raw-news model integration."
+  ]
+}

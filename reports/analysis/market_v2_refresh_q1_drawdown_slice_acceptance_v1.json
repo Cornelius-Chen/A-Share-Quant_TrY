@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v2_refresh_q1_drawdown_slice_as_avoidance_plus_positive_fragmentation",
+    "top_positive_symbols": [
+      "002415",
+      "603019",
+      "002130"
+    ],
+    "top_driver_matches_read": true,
+    "clean_avoidance_present": true,
+    "positive_fragmentation_present": true,
+    "do_continue_q1_drawdown_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_positive_symbol_rank",
+      "actual": {
+        "top_positive_symbols": [
+          "002415",
+          "603019",
+          "002130"
+        ],
+        "top_positive_count": 4
+      },
+      "reading": "A q1 drawdown slice only deserves more replay if later symbols are likely to overturn the current two-driver read."
+    },
+    {
+      "evidence_name": "top_driver_mechanism_shape",
+      "actual": {
+        "negative_mechanism_types": [
+          "entry_suppression_avoidance"
+        ],
+        "summary": {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_name": "shared_default",
+          "challenger_name": "theme_strict_quality_branch",
+          "cycle_count": 3,
+          "avoided_negative_cycle_count": 3,
+          "reduced_negative_cycle_count": 0,
+          "worsened_negative_cycle_count": 0,
+          "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+        }
+      },
+      "reading": "The leading q1 symbol should first be tested as a clean drawdown-avoidance read."
+    },
+    {
+      "evidence_name": "second_driver_fragmentation_shape",
+      "actual": {
+        "positive_mechanism_types": [
+          "other_worse_loss_shift"
+        ],
+        "summary": {
+          "strategy_name": "mainline_trend_c",
+          "incumbent_name": "shared_default",
+          "challenger_name": "theme_strict_quality_branch",
+          "cycle_count": 1,
+          "avoided_negative_cycle_count": 0,
+          "reduced_negative_cycle_count": 0,
+          "worsened_negative_cycle_count": 0,
+          "primary_takeaway": "Drawdown-specialist behavior should be read through cycle mechanisms: entry suppression, earlier loss exit, or worse delayed exit."
+        }
+      },
+      "reading": "A positive fragmentation row weakens the purity of the slice, turning it into a mixed read rather than a clean drawdown-family frontier."
+    }
+  ],
+  "interpretation": [
+    "A q1 drawdown slice should stop once its top driver is a clean avoidance case and the second driver is a positive-fragmentation case.",
+    "That mix is informative and worth keeping, but it does not justify a broader replay queue inside the same slice.",
+    "So the correct default is to close q1 here unless a later symbol is likely to overturn the current mixed read."
+  ]
+}

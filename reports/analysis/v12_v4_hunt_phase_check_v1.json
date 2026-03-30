@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "pause_v4_lower_priority_tracks_and_reassess_after_high_priority_hunt",
+    "high_priority_target_count": 4,
+    "checked_high_priority_count": 4,
+    "high_priority_tracks_exhausted": true,
+    "all_checked_high_priority_hunts_inactive": true,
+    "primary_bottleneck_still_carry_row_diversity": true,
+    "do_open_lower_priority_tracks_now": false,
+    "do_open_new_refresh_now": false,
+    "recommended_next_posture": "reassess_v4_hunt_posture_before_cross_dataset_or_exit_alignment_tracks"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "high_priority_track_coverage",
+      "actual": {
+        "high_priority_target_count": 4,
+        "checked_high_priority_count": 4,
+        "high_priority_tracks_exhausted": true
+      },
+      "reading": "A pause is only justified if the checked hunt has already covered the intended high-priority carry tracks."
+    },
+    {
+      "evidence_name": "checked_hunt_outcomes",
+      "actual": {
+        "checked_symbols": [
+          "000725",
+          "600703",
+          "600150",
+          "601127"
+        ],
+        "all_checked_high_priority_hunts_inactive": true
+      },
+      "reading": "If every checked high-priority symbol closes inactive, blindly moving to lower-priority tracks risks replay drift rather than real carry discovery."
+    },
+    {
+      "evidence_name": "phase_bottleneck",
+      "actual": {
+        "primary_bottleneck_still_carry_row_diversity": true
+      },
+      "reading": "The main V1.2 bottleneck can remain carry row diversity even while a specific v4 hunt slice is temporarily exhausted."
+    }
+  ],
+  "interpretation": [
+    "The current v4 q2/A hunt has now checked the intended high-priority basis-spread and carry-duration targets without surfacing an active structural lane.",
+    "That does not solve the main V1.2 bottleneck, but it does justify a pause before touching lower-priority tracks such as cross-dataset reuse or exit-alignment.",
+    "So the correct next move is a short reassessment of the v4 hunt posture rather than another immediate symbol replay."
+  ]
+}

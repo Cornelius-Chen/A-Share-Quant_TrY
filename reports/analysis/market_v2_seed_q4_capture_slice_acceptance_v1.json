@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v2_seed_q4_capture_slice_as_opening_plus_carry",
+    "top_positive_symbols": [
+      "603986",
+      "601398"
+    ],
+    "top_symbol_matches_opening": true,
+    "specialist_opened_window": true,
+    "carry_in_positive_trade_present": true,
+    "do_continue_q4_capture_replay": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_positive_symbol_rank",
+      "actual": {
+        "top_positive_symbols": [
+          "603986",
+          "601398"
+        ],
+        "top_positive_count": 2
+      },
+      "reading": "A single dominant symbol is enough to justify one narrow replay, but not enough to justify a broad queue restart."
+    },
+    {
+      "evidence_name": "opening_case",
+      "actual": {
+        "specialist_opened_window": true,
+        "opening_trade_date": "2024-12-12",
+        "opening_symbol": "603986"
+      },
+      "reading": "The q4/C pocket contains a real specialist-only opening edge inside the slice."
+    },
+    {
+      "evidence_name": "carry_in_case",
+      "actual": {
+        "carry_in_positive_trade": {
+          "entry_date": "2024-09-27",
+          "exit_date": "2024-10-09",
+          "quantity": 100,
+          "entry_price": 76.06,
+          "exit_price": 96.76,
+          "pnl": 2050.324,
+          "holding_days": 12
+        },
+        "slice_start": "2024-10-01"
+      },
+      "reading": "A positive carry-in trade weakens the purity of the slice-level read because part of the gain starts before q4."
+    }
+  ],
+  "interpretation": [
+    "A q4 capture slice should continue only if the dominant symbol gives a clean in-slice mechanism boundary.",
+    "When the same dominant symbol contains both a clean opening edge and a positive carry-in trade, the slice is real but mixed.",
+    "So the correct default is to close the slice as mixed opening-plus-carry unless a later symbol is likely to overturn that read."
+  ]
+}

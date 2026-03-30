@@ -1,0 +1,15 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: v12_phase_readiness_v1
+
+inputs:
+  data_audit_report: reports/data/market_research_data_audit_v2_refresh.json
+  registry_report: reports/analysis/feature_factor_registry_v1.json
+  factorization_review_report: reports/analysis/v12_factorization_review_v1.json
+  carry_pilot_report: reports/analysis/carry_factor_pilot_v1.json

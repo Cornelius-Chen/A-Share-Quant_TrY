@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: carry_factor_pilot_v1
+
+inputs:
+  scoring_report: reports/analysis/carry_scoring_design_v1.json
+  schema_report: reports/analysis/carry_observable_schema_v1.json

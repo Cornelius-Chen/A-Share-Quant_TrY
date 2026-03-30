@@ -57,7 +57,14 @@ def build_stock_snapshot(symbol: str) -> StockSnapshot:
 def test_dataset_comparison_runner_emits_rows_for_each_dataset_and_strategy() -> None:
     engine = BacktestEngine(
         initial_cash=100000.0,
-        cost_model=CostModel(commission_bps=0.0, stamp_tax_bps=0.0, min_commission=0.0),
+        cost_model=CostModel(
+            commission_bps=0.0,
+            stamp_tax_bps=0.0,
+            transfer_fee_bps=0.0,
+            exchange_handling_bps=0.0,
+            regulatory_fee_bps=0.0,
+            min_commission=0.0,
+        ),
         limit_model=LimitModel(daily_limit_pct=0.10, epsilon=0.0001),
     )
     runner = DatasetComparisonRunner(engine=engine)

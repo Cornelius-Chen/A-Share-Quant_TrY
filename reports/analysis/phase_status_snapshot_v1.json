@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "current_mode": "explicit_no_trigger_wait",
+    "all_gates_aligned": true,
+    "should_open_refresh": false,
+    "active_trigger_count": 0,
+    "recommended_operator_posture": "idle_wait_state"
+  },
+  "status_rows": [
+    {
+      "layer_name": "v11_continuation",
+      "current_state": "paused",
+      "key_signal": "pause_specialist_refinement_and_prepare_new_suspect_batch",
+      "reading": "Primary specialist loop state."
+    },
+    {
+      "layer_name": "v2_seed_continuation",
+      "current_state": "bounded",
+      "key_signal": "hold_market_v2_seed_as_secondary_substrate_and_wait_for_next_batch_refresh",
+      "reading": "Secondary substrate local replay state."
+    },
+    {
+      "layer_name": "refresh_readiness",
+      "current_state": "closed",
+      "key_signal": "wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh",
+      "reading": "Whether the next refresh may open now."
+    },
+    {
+      "layer_name": "refresh_trigger_monitor",
+      "current_state": "idle",
+      "key_signal": "maintain_waiting_state_until_new_trigger",
+      "reading": "Whether any concrete trigger is active right now."
+    },
+    {
+      "layer_name": "operator_action_plan",
+      "current_state": "idle_wait_state",
+      "key_signal": "wait_for_new_archetype_gap_signal_before_opening_market_research_v2_refresh",
+      "reading": "What to do next under the current trigger state."
+    }
+  ],
+  "interpretation": [
+    "This snapshot is the one-page read of the repo's current phase state.",
+    "If all gates align and current_mode is explicit_no_trigger_wait, the repo should not invent new replay or refresh work.",
+    "If later one of these layers changes, this snapshot should be regenerated before any new phase action."
+  ]
+}
