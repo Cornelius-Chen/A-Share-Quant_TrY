@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cm_core_leader_half_life_probe_review_v1",
+    "holding_grid_count": 4,
+    "baseline_holding_days": 20,
+    "baseline_total_return": 1.6263,
+    "baseline_max_drawdown": -0.2036,
+    "simple_half_life_cut_sufficient": false,
+    "recommended_next_posture": "do_not_use_uniform_core_leader_half_life_cut_open_state_conditioned_holding_veto_probe"
+  },
+  "half_life_rows": [
+    {
+      "holding_days": 5,
+      "trade_count": 6,
+      "total_return": 1.0762,
+      "max_drawdown": -0.0684
+    },
+    {
+      "holding_days": 10,
+      "trade_count": 6,
+      "total_return": 1.2048,
+      "max_drawdown": -0.1433
+    },
+    {
+      "holding_days": 15,
+      "trade_count": 6,
+      "total_return": 1.2663,
+      "max_drawdown": -0.1648
+    },
+    {
+      "holding_days": 20,
+      "trade_count": 6,
+      "total_return": 1.6263,
+      "max_drawdown": -0.2036
+    }
+  ],
+  "interpretation": [
+    "V1.12CM checks whether a simple uniform half-life cut can solve core leader mature-markup overstay without needing a richer control template.",
+    "The probe shows drawdown can be reduced by shorter holding, but the return loss is too large, so a blunt half-life reduction is not the right fix."
+  ]
+}

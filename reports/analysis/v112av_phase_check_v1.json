@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112av_as_branch_role_geometry_patch_pilot",
+    "do_open_v112av_now": true,
+    "core_targets_stable_after_branch_patch": true,
+    "guarded_targets_stable_after_branch_patch": true,
+    "role_state_patch_gain": 0.1028,
+    "branch_patch_family_role_accuracy_drop": 0.1028,
+    "allow_formal_training_now": false,
+    "allow_formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "review_if_branch_rows_can_move_from_review_only_to_guarded_training_context"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112av_branch_patch",
+      "actual": {
+        "role_state_gbdt_accuracy_before_patch": 0.8972,
+        "role_state_gbdt_accuracy_after_patch": 1.0,
+        "core_targets_stable_after_branch_patch": true,
+        "guarded_targets_stable_after_branch_patch": true
+      },
+      "reading": "The branch patch matters only if widened role-state improves without reopening formal rights."
+    }
+  ],
+  "interpretation": [
+    "V1.12AV is a bounded repair pass for branch-row geometry, not a generic training promotion step.",
+    "Formal training and signal rights remain closed."
+  ]
+}

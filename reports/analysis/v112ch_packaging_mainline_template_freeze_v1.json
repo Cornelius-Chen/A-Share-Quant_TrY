@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ch_packaging_mainline_template_freeze_v1",
+    "cluster_mainline_template_asset_count": 1,
+    "eligibility_only_cluster_member_count": 1,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "cd_total_return": 2.8309,
+    "cd_max_drawdown": -0.1854,
+    "cf_validation_accuracy": 0.8824,
+    "cg_realized_path_changed": false,
+    "recommended_next_posture": "treat_packaging_as_frozen_cluster_mainline_template_and_open_laser_maturation_probe_only_if_needed"
+  },
+  "freeze_rows": [
+    {
+      "asset_name": "packaging_process_enabler_refined_template",
+      "promotion_posture": "cluster_mainline_template_asset",
+      "control_language": [
+        "entry_veto",
+        "de_risk",
+        "eligibility"
+      ],
+      "path_result_reading": "path-level pilot improves both return and max drawdown versus BP and neutral"
+    },
+    {
+      "asset_name": "laser_chip_component_cluster_member",
+      "promotion_posture": "eligibility_only_template_member",
+      "control_language": [
+        "eligibility"
+      ],
+      "path_result_reading": "do not promote veto/de-risk action language yet"
+    }
+  ],
+  "boundary_rows": [
+    {
+      "boundary_name": "template_mainline_boundary",
+      "reading": "Only packaging_process_enabler enters the cluster mainline template now; laser remains eligibility-only and silicon remains isolated diagnostic."
+    },
+    {
+      "boundary_name": "path_stability_boundary",
+      "reading": "Refined packaging boundary does not distort the already realized path.",
+      "realized_path_changed": false
+    },
+    {
+      "boundary_name": "validation_boundary",
+      "reading": "Packaging family validation improves materially after local boundary refinement.",
+      "previous_accuracy": 0.6471,
+      "refined_accuracy": 0.8824
+    }
+  ],
+  "interpretation": [
+    "V1.12CH freezes packaging_process_enabler as the first refined cluster mainline template asset in the CPO control stack.",
+    "Laser-chip remains in the same template-capable cluster but only as an eligibility-only member; it must not be promoted with packaging's full three-layer action language."
+  ]
+}

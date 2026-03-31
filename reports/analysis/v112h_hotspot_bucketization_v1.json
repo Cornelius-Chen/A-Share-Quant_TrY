@@ -1,0 +1,665 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_hotspot_bucketization_v1",
+    "bucket_count": 8,
+    "target_stage_count": 2,
+    "target_stage_row_count": 306,
+    "baseline_misread_row_count": 255,
+    "gbdt_misread_row_count": 200,
+    "both_models_misread_row_count": 149,
+    "ready_for_owner_review_next": true
+  },
+  "bucket_rows": [
+    {
+      "bucket_name": "high_level_consolidation__breadth_rich_catalyst_active",
+      "bucket_stage": "high_level_consolidation",
+      "bucket_reading": "Broad and fresh catalyst pressure with cross-day persistence; the cleanest continuation-like bucket.",
+      "sample_count": 15,
+      "symbol_distribution": {
+        "300502": 15
+      },
+      "true_label_distribution": {
+        "carry_constructive": 2,
+        "failed": 11,
+        "watch_constructive": 2
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 15
+      },
+      "gbdt_predicted_label_distribution": {
+        "failed": 14,
+        "watch_constructive": 1
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 12,
+        "both_misread": 1,
+        "gbdt_only": 2
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.179665,
+        "cross_day_catalyst_persistence": 0.246228,
+        "theme_breadth_confirmation_proxy": 0.955556
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.18852,
+        "demand_acceleration_proxy": 0.093043,
+        "relative_strength_persistence": 0.151968,
+        "volume_expansion_confirmation": 1.064139,
+        "breakout_or_hold_structure": 0.266667
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-10-29",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.082934,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.122476,
+          "cross_day_catalyst_persistence": 0.205829
+        },
+        {
+          "trade_date": "2025-12-08",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.08747,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.129834,
+          "cross_day_catalyst_persistence": 0.302732
+        },
+        {
+          "trade_date": "2025-10-28",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.093311,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.261611,
+          "cross_day_catalyst_persistence": 0.250285
+        }
+      ],
+      "baseline_only_misread_count": 12,
+      "gbdt_only_misread_count": 2,
+      "both_models_misread_count": 1
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_rich_catalyst_stale",
+      "bucket_stage": "high_level_consolidation",
+      "bucket_reading": "Broad but stale consolidation; looks like breadth remains while catalyst freshness fades.",
+      "sample_count": 2,
+      "symbol_distribution": {
+        "300502": 2
+      },
+      "true_label_distribution": {
+        "failed": 2
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 1,
+        "watch_constructive": 1
+      },
+      "gbdt_predicted_label_distribution": {
+        "failed": 2
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 2
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.018378,
+        "cross_day_catalyst_persistence": 0.0,
+        "theme_breadth_confirmation_proxy": 0.666667
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": -0.117291,
+        "demand_acceleration_proxy": 0.006726,
+        "relative_strength_persistence": -0.021501,
+        "volume_expansion_confirmation": 1.000238,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2026-01-28",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.018378,
+          "theme_breadth_confirmation_proxy": 0.666667,
+          "catalyst_freshness_state": 0.036757,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-01-29",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "watch_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.018378,
+          "theme_breadth_confirmation_proxy": 0.666667,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ],
+      "baseline_only_misread_count": 2,
+      "gbdt_only_misread_count": 0,
+      "both_models_misread_count": 0
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_thin_catalyst_active",
+      "bucket_stage": "high_level_consolidation",
+      "bucket_reading": "Thin breadth but active catalyst pressure; looks more like a catalyst-led transition pocket.",
+      "sample_count": 14,
+      "symbol_distribution": {
+        "300502": 14
+      },
+      "true_label_distribution": {
+        "carry_constructive": 1,
+        "failed": 13
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 11,
+        "watch_constructive": 3
+      },
+      "gbdt_predicted_label_distribution": {
+        "failed": 14
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 13,
+        "both_misread": 1
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.039141,
+        "cross_day_catalyst_persistence": 0.226515,
+        "theme_breadth_confirmation_proxy": 0.166666
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.262348,
+        "demand_acceleration_proxy": -0.041175,
+        "relative_strength_persistence": 0.0887,
+        "volume_expansion_confirmation": 0.884163,
+        "breakout_or_hold_structure": 0.142857
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-12-25",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.171945,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.242494
+        },
+        {
+          "trade_date": "2025-12-26",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.172391,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.206291
+        },
+        {
+          "trade_date": "2025-12-16",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.172937,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.250958
+        }
+      ],
+      "baseline_only_misread_count": 13,
+      "gbdt_only_misread_count": 0,
+      "both_models_misread_count": 1
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_thin_catalyst_stale",
+      "bucket_stage": "high_level_consolidation",
+      "bucket_reading": "Thin breadth and stale catalyst; likely the weakest mixed bucket and the most likely to hide multiple submodes.",
+      "sample_count": 57,
+      "symbol_distribution": {
+        "300502": 57
+      },
+      "true_label_distribution": {
+        "carry_constructive": 19,
+        "failed": 32,
+        "watch_constructive": 6
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 13,
+        "watch_constructive": 44
+      },
+      "gbdt_predicted_label_distribution": {
+        "carry_constructive": 2,
+        "failed": 55
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 34,
+        "both_misread": 13,
+        "gbdt_only": 10
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.032564,
+        "cross_day_catalyst_persistence": 0.015472,
+        "theme_breadth_confirmation_proxy": 0.210526
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": -0.044435,
+        "demand_acceleration_proxy": -0.02359,
+        "relative_strength_persistence": -0.04248,
+        "volume_expansion_confirmation": 0.980638,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-11-20",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "watch_constructive",
+          "baseline_predicted_label": "watch_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.123798,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.030288,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-01-16",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.123866,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.037235,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-02-13",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "watch_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.123888,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.03779,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ],
+      "baseline_only_misread_count": 34,
+      "gbdt_only_misread_count": 10,
+      "both_models_misread_count": 13
+    },
+    {
+      "bucket_name": "major_markup__breadth_rich_catalyst_active",
+      "bucket_stage": "major_markup",
+      "bucket_reading": "Broad and fresh catalyst pressure with cross-day persistence; the cleanest continuation-like bucket.",
+      "sample_count": 71,
+      "symbol_distribution": {
+        "300308": 27,
+        "300394": 21,
+        "300502": 23
+      },
+      "true_label_distribution": {
+        "carry_constructive": 20,
+        "failed": 43,
+        "watch_constructive": 8
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 71
+      },
+      "gbdt_predicted_label_distribution": {
+        "carry_constructive": 32,
+        "failed": 35,
+        "watch_constructive": 4
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 17,
+        "both_misread": 34,
+        "gbdt_only": 20
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.32127,
+        "cross_day_catalyst_persistence": 0.708435,
+        "theme_breadth_confirmation_proxy": 1.246479
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.446998,
+        "demand_acceleration_proxy": 0.115434,
+        "relative_strength_persistence": 0.261429,
+        "volume_expansion_confirmation": 1.100904,
+        "breakout_or_hold_structure": 0.577465
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-07-01",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.260678,
+          "theme_breadth_confirmation_proxy": 1.5,
+          "catalyst_freshness_state": 0.297579,
+          "cross_day_catalyst_persistence": 0.652588
+        },
+        {
+          "trade_date": "2025-07-15",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "watch_constructive",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.265844,
+          "theme_breadth_confirmation_proxy": 1.5,
+          "catalyst_freshness_state": 0.24426,
+          "cross_day_catalyst_persistence": 0.730099
+        },
+        {
+          "trade_date": "2025-08-19",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.278351,
+          "theme_breadth_confirmation_proxy": 1.5,
+          "catalyst_freshness_state": 0.429905,
+          "cross_day_catalyst_persistence": 0.745919
+        }
+      ],
+      "baseline_only_misread_count": 17,
+      "gbdt_only_misread_count": 20,
+      "both_models_misread_count": 34
+    },
+    {
+      "bucket_name": "major_markup__breadth_rich_catalyst_stale",
+      "bucket_stage": "major_markup",
+      "bucket_reading": "Broad but stale consolidation; looks like breadth remains while catalyst freshness fades.",
+      "sample_count": 10,
+      "symbol_distribution": {
+        "300308": 5,
+        "300394": 5
+      },
+      "true_label_distribution": {
+        "failed": 8,
+        "watch_constructive": 2
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 10
+      },
+      "gbdt_predicted_label_distribution": {
+        "carry_constructive": 9,
+        "watch_constructive": 1
+      },
+      "error_pattern_distribution": {
+        "both_misread": 10
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.002269,
+        "cross_day_catalyst_persistence": 0.014739,
+        "theme_breadth_confirmation_proxy": 0.7
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": -0.069265,
+        "demand_acceleration_proxy": -0.030623,
+        "relative_strength_persistence": -0.026642,
+        "volume_expansion_confirmation": 0.806127,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2026-01-22",
+          "symbol": "300308",
+          "stage": "major_markup",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.200048,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.018504
+        },
+        {
+          "trade_date": "2025-09-26",
+          "symbol": "300394",
+          "stage": "major_markup",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.200555,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2025-10-09",
+          "symbol": "300308",
+          "stage": "major_markup",
+          "true_label": "watch_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.200555,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ],
+      "baseline_only_misread_count": 0,
+      "gbdt_only_misread_count": 0,
+      "both_models_misread_count": 10
+    },
+    {
+      "bucket_name": "major_markup__breadth_thin_catalyst_active",
+      "bucket_stage": "major_markup",
+      "bucket_reading": "Thin breadth but active catalyst pressure; looks more like a catalyst-led transition pocket.",
+      "sample_count": 68,
+      "symbol_distribution": {
+        "300308": 26,
+        "300394": 26,
+        "300502": 16
+      },
+      "true_label_distribution": {
+        "carry_constructive": 10,
+        "failed": 39,
+        "watch_constructive": 19
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 68
+      },
+      "gbdt_predicted_label_distribution": {
+        "carry_constructive": 34,
+        "failed": 30,
+        "watch_constructive": 4
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 18,
+        "both_misread": 40,
+        "gbdt_only": 10
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.012787,
+        "cross_day_catalyst_persistence": 0.564645,
+        "theme_breadth_confirmation_proxy": 0.0
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.441454,
+        "demand_acceleration_proxy": -0.129296,
+        "relative_strength_persistence": 0.122176,
+        "volume_expansion_confirmation": 0.993193,
+        "breakout_or_hold_structure": 0.058824
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-07-28",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.012926,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.566538
+        },
+        {
+          "trade_date": "2025-07-25",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.014187,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.558501
+        },
+        {
+          "trade_date": "2025-12-19",
+          "symbol": "300394",
+          "stage": "major_markup",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.015873,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.555241
+        }
+      ],
+      "baseline_only_misread_count": 18,
+      "gbdt_only_misread_count": 10,
+      "both_models_misread_count": 40
+    },
+    {
+      "bucket_name": "major_markup__breadth_thin_catalyst_stale",
+      "bucket_stage": "major_markup",
+      "bucket_reading": "Thin breadth and stale catalyst; likely the weakest mixed bucket and the most likely to hide multiple submodes.",
+      "sample_count": 69,
+      "symbol_distribution": {
+        "300308": 27,
+        "300394": 32,
+        "300502": 10
+      },
+      "true_label_distribution": {
+        "carry_constructive": 10,
+        "failed": 44,
+        "watch_constructive": 15
+      },
+      "baseline_predicted_label_distribution": {
+        "carry_constructive": 60,
+        "watch_constructive": 9
+      },
+      "gbdt_predicted_label_distribution": {
+        "carry_constructive": 54,
+        "failed": 10,
+        "watch_constructive": 5
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 10,
+        "both_misread": 50,
+        "gbdt_only": 9
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.032295,
+        "cross_day_catalyst_persistence": 0.248934,
+        "theme_breadth_confirmation_proxy": 0.528986
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.155229,
+        "demand_acceleration_proxy": -0.025745,
+        "relative_strength_persistence": 0.025515,
+        "volume_expansion_confirmation": 0.975768,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-09-23",
+          "symbol": "300502",
+          "stage": "major_markup",
+          "true_label": "watch_constructive",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.048067,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.269604
+        },
+        {
+          "trade_date": "2025-09-24",
+          "symbol": "300394",
+          "stage": "major_markup",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.054085,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.216652
+        },
+        {
+          "trade_date": "2025-09-26",
+          "symbol": "300308",
+          "stage": "major_markup",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "carry_constructive",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.080692,
+          "theme_breadth_confirmation_proxy": 0.5,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.180904
+        }
+      ],
+      "baseline_only_misread_count": 10,
+      "gbdt_only_misread_count": 9,
+      "both_models_misread_count": 50
+    }
+  ],
+  "interpretation": [
+    "The misread rows are not random noise; they collapse into a small number of reviewable stage-plus-semantic buckets.",
+    "The output is intentionally a bucket draft, not a formal label split.",
+    "The next owner review can decide whether the largest bucket(s) justify bounded label refinement."
+  ]
+}

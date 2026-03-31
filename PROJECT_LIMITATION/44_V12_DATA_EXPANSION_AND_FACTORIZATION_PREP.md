@@ -420,3 +420,35 @@ Current reading:
 - Added eight-pack time-slice validation report `reports/20260330T041451Z_b6297292_comparison.json`.
 - Added `reports/analysis/specialist_alpha_analysis_v8.json`; `market_research_v5_carry_row_diversity_refresh` is now present in the active specialist geography for `baseline_expansion_branch`, but it has not yet produced a top opportunity strong enough to change the current `V1.2` bottleneck reading.
 - Current `V1.2` reading stays the same: `carry_row_diversity_gap` remains the primary bottleneck, and the correct next move is to open the first bounded `v5` lane rather than widen old local substrate hunts.
+## 2026-03-30 Update: long-horizon autonomy policy frozen
+- Added `PROJECT_LIMITATION/86_LONG_HORIZON_AUTONOMY_POLICY.md`.
+- Future unattended execution must remain inside current phase guard, stop criteria, waiting-state rules, and charter requirements.
+- New phases may only open after explicit phase-level justification and a charter.
+## 2026-03-30 Update: v5 first lane 002273 closes as opening-led
+- Added `reports/analysis/market_v5_q2_trade_divergence_capture_b_v1.json`, `reports/analysis/market_v5_q2_symbol_timeline_002273_capture_b_v1.json`, `reports/analysis/market_v5_q2_specialist_window_opening_002273_b_v1.json`, `reports/analysis/market_v5_q2_specialist_window_persistence_002273_b_v1.json`, and `reports/analysis/market_v5_q2_first_lane_acceptance_v1.json`.
+- Added `PROJECT_LIMITATION/87_V12_V5_FIRST_LANE_002273_V1.md`.
+- `002273 / q2 / mainline_trend_b` is the first positive `v5` lane, but it closes as `opening_led_not_carry_breakthrough`.
+- The current `V1.2` bottleneck does not change: `carry_row_diversity_gap` remains primary.
+## 2026-03-30 Update: v5 exhausted cleanly and opened a v6 entry
+- Added `reports/analysis/market_v5_q2_symbol_timeline_000099_capture_b_v1.json`, `reports/analysis/market_v5_q2_specialist_window_opening_000099_b_v1.json`, `reports/analysis/market_v5_q2_specialist_window_persistence_000099_b_v1.json`, and `reports/analysis/market_v5_q2_last_carry_probe_acceptance_000099_v1.json`.
+- Added `reports/analysis/v12_v5_exhaustion_phase_check_v1.json`, `PROJECT_LIMITATION/90_V12_V5_EXHAUSTION_PHASE_CHECK_V1.md`, `reports/analysis/v12_next_refresh_entry_v3.json`, and `PROJECT_LIMITATION/91_V12_NEXT_REFRESH_ENTRY_V3.md`.
+- `v5` exhausted its bounded lanes without adding an acceptance-grade true carry row or clean persistence row; this is a valid negative result, not a reason to widen replay.
+- `V1.2` still reads as `carry_row_diversity_gap`, and the next legal move is now frozen as a criteria-first `v6` entry with catalyst context support-only.## 2026-03-30 Update: v6 entry and manifest frozen
+- Added `reports/analysis/v12_v6_refresh_criteria_v1.json`, `PROJECT_LIMITATION/92_V12_V6_REFRESH_CRITERIA_V1.md`, `reports/analysis/market_research_v6_catalyst_supported_carry_persistence_refresh_manifest_v1.json`, and `PROJECT_LIMITATION/93_MARKET_RESEARCH_V6_CATALYST_SUPPORTED_CARRY_PERSISTENCE_REFRESH_PLAN.md`.
+- `v6` is now manifest-ready as `market_research_v6_catalyst_supported_carry_persistence_refresh`.
+- The batch remains training-gap-first: `2` true carry rows and `2` clean persistence rows.
+- Catalyst context is now frozen as bounded selection support, not as a promoted mainline.
+## 2026-03-30 v6 first lane and local reassessment
+- `market_v6_q3_first_lane_acceptance_v1.json`: `600118 / 2024_q3 / mainline_trend_c` closed as `opening_led_not_true_carry`; `opening_present=true`, `persistence_present=false`, `lane_changes_training_reading=false`.
+- `v12_v6_first_lane_phase_check_v1.json`: second local v6 lane is held; no remaining positive symbol beyond `600118`, one negative true-carry target (`002085`), and two zero-divergence clean-persistence targets (`000738`, `300474`).
+- `v12_v6_reassessment_v1.json`: keep `v6` as active substrate but hold local second-lane expansion; return to V1.2-level batch/substrate decision instead of widening v6.
+
+## 2026-03-30 V1.2 explicit waiting state
+- `v12_waiting_state_summary_v1.json`: `V1.2` enters explicit waiting state after the `v6` local hold.
+- The current primary bottleneck remains `carry_row_diversity_gap`, but no legal local `v6` next step remains and two consecutive phase-level reviews did not change that judgment.
+- Per the long-horizon autonomy policy, `v7` is not opened automatically; valid next actions are now limited to state updates, waiting-state summaries, and restart-entry preservation until a new trigger or owner-directed phase switch appears.
+
+## 2026-03-30 V1.3 transition
+- `V1.2` ended in explicit waiting state and did not auto-open `v7`.
+- Owner phase switch opened `V1.3 Catalyst And Concept Context Infrastructure`.
+- Early V1.3 artifacts are replay-independent: charter, concept mapping inventory, concept seed, concept source fill, concept context audit, and bounded phase check.

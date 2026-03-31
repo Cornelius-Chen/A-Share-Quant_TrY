@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ah_factor_candidate_preservation_rule_v1",
+    "rule_name": "no_easy_kill_of_possible_factor_candidates",
+    "silent_drop_forbidden": true,
+    "owner_review_must_apply_rule": true,
+    "applies_from_next_step": "v112ag_owner_review_of_bounded_label_draft_integrity"
+  },
+  "preservation_tier_rows": [
+    {
+      "tier_name": "design_ready_review_candidate",
+      "default_posture": "retain_for_family_supported_review_use",
+      "drop_standard": "forbidden_without_explicit_leakage_or_exact_duplicate_mapping",
+      "reading": "Strong candidates cannot be removed just because they are not yet promoted."
+    },
+    {
+      "tier_name": "speculative_family_member",
+      "default_posture": "retain_as_speculative_backlog",
+      "drop_standard": "forbidden_without_repeat_failure_or_point_in_time_impossibility",
+      "reading": "Speculative rows should survive long enough to be falsified rather than silently forgotten."
+    },
+    {
+      "tier_name": "overlay_only_candidate",
+      "default_posture": "retain_as_overlay_memory_or_a_share_specific_candidate",
+      "drop_standard": "forbidden_without clear proof of irrelevance or unrecoverable leakage",
+      "reading": "Overlay candidates often carry A-share specific noise or spillover structure and should not be cleaned away for neatness."
+    },
+    {
+      "tier_name": "suppressed_duplicate",
+      "default_posture": "retain_as_shadow_alias_of_stronger_feature",
+      "drop_standard": "only_after_explicit_mapping_to_stronger_owner_feature",
+      "reading": "Suppression means shadow retention, not deletion."
+    },
+    {
+      "tier_name": "preserved_blind_spot",
+      "default_posture": "retain_as_open_gap",
+      "drop_standard": "forbidden_until operationalized or explicitly replaced",
+      "reading": "Blind spots are part of the truth about the current system and must remain visible."
+    },
+    {
+      "tier_name": "pending_ambiguous_candidate",
+      "default_posture": "retain_as_pending_for_experiment_or_future_split",
+      "drop_standard": "forbidden_without repeated non-value confirmation",
+      "reading": "Pending rows are unresolved structure, not clutter."
+    }
+  ],
+  "drop_guard_rows": [
+    {
+      "guard_name": "explicit_reason_required",
+      "rule": "Any downgrade or archive action must state whether the cause is leakage, exact duplication, point-in-time impossibility, or repeated zero-value evidence."
+    },
+    {
+      "guard_name": "archive_instead_of_delete",
+      "rule": "Candidates that fail current review should move to memory or archive tiers rather than disappearing from the research trace."
+    },
+    {
+      "guard_name": "future_recheck_window",
+      "rule": "Speculative, overlay, and pending candidates should remain eligible for re-check during later bounded experiments."
+    },
+    {
+      "guard_name": "a_share_specific_noise_preservation",
+      "rule": "Potential A-share specific spillover, name-bonus, and board-follow structures should default to preservation unless they are explicitly disproved."
+    }
+  ],
+  "interpretation": [
+    "This rule exists to stop the system from over-cleaning away potentially valuable factor structures.",
+    "The immediate goal is not to promote every candidate, but to prevent premature deletion of things that may only become legible during later experiments.",
+    "The next owner review should classify and preserve before it judges and trims."
+  ]
+}

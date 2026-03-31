@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ao_cpo_role_layer_patch_pilot",
+    "do_open_v112ao_now": true,
+    "recommended_first_action": "freeze_v112ao_cpo_role_layer_patch_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AO CPO Role-Layer Patch Pilot",
+    "mission": "Patch the weakest current layer, role-state separation, with a bounded set of market-observable microstructure and behavior features, then rerun the tiny core-skeleton pilot without widening scope.",
+    "in_scope": [
+      "reuse the existing V1.12AM truth rows and time split",
+      "add a small role-patch feature layer with no future leakage",
+      "rerun guardrail and GBDT models",
+      "compare role-state accuracy and confusion buckets before and after the patch"
+    ],
+    "out_of_scope": [
+      "widening the pilot row set",
+      "formal training promotion",
+      "formal signal generation",
+      "new generic audit layers"
+    ],
+    "success_criteria": [
+      "the phase exposes whether role-state can be improved without widening geometry",
+      "it explains which patch family contributes most to role separation",
+      "it keeps the experiment report-only"
+    ]
+  },
+  "interpretation": [
+    "V1.12AO exists to patch the current weakest layer before any pilot widening is considered.",
+    "The right question is not whether more review is possible. The right question is whether role-state can improve with bounded non-leaking market-observable inputs."
+  ]
+}

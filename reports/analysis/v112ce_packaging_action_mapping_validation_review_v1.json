@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ce_packaging_action_mapping_validation_review_v1",
+    "sample_count": 17,
+    "action_mapping_accuracy": 0.6471,
+    "predicted_entry_veto_count": 10,
+    "predicted_de_risk_count": 4,
+    "predicted_eligibility_count": 3,
+    "recommended_next_posture": "keep_packaging_three_layer_template_as_candidate_if_action_accuracy_remains_material"
+  },
+  "action_confusion_rows": [
+    {
+      "actual_action": "de_risk",
+      "predicted_action": "de_risk",
+      "count": 4
+    },
+    {
+      "actual_action": "de_risk",
+      "predicted_action": "eligibility",
+      "count": 1
+    },
+    {
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "count": 5
+    },
+    {
+      "actual_action": "eligibility",
+      "predicted_action": "eligibility",
+      "count": 2
+    },
+    {
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "count": 5
+    }
+  ],
+  "sample_rows": [
+    {
+      "trade_date": "2024-03-14",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "predicted_band": "veto_band",
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "predicted_band": "veto_band",
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-18",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "predicted_band": "veto_band",
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "actual_band": "eligibility_band",
+      "predicted_band": "eligibility_band",
+      "actual_action": "eligibility",
+      "predicted_action": "eligibility",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "veto_band",
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-14",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "veto_band",
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-17",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "veto_band",
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-18",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "de_risk_band",
+      "actual_action": "de_risk",
+      "predicted_action": "de_risk",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-19",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "de_risk_band",
+      "actual_action": "de_risk",
+      "predicted_action": "de_risk",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-20",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "predicted_band": "veto_band",
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "predicted_band": "veto_band",
+      "actual_action": "entry_veto",
+      "predicted_action": "entry_veto",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-24",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "de_risk_band",
+      "actual_action": "de_risk",
+      "predicted_action": "de_risk",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-25",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "veto_band",
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-26",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "veto_band",
+      "actual_action": "de_risk",
+      "predicted_action": "entry_veto",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-27",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "de_risk_band",
+      "actual_action": "de_risk",
+      "predicted_action": "de_risk",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-28",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "predicted_band": "eligibility_band",
+      "actual_action": "de_risk",
+      "predicted_action": "eligibility",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300757",
+      "actual_band": "eligibility_band",
+      "predicted_band": "eligibility_band",
+      "actual_action": "eligibility",
+      "predicted_action": "eligibility",
+      "classification_correct": true
+    }
+  ],
+  "interpretation": [
+    "V1.12CE validates the packaging-process-enabler three-layer action mapping on the broader family sample set, not just on the realized baseline path.",
+    "The core question is whether role-specific calibrated band edges still produce meaningful action-layer separation across the wider packaging state family."
+  ]
+}

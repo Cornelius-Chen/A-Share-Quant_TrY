@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112t_as_spillover_truth_check_only",
+    "do_open_v112t_now": true,
+    "reviewed_spillover_row_count": 3,
+    "candidate_a_share_spillover_factor_count": 2,
+    "pure_name_bonus_or_board_follow_count": 1,
+    "allow_auto_training_now": false,
+    "allow_auto_feature_promotion_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_of_overall_cpo_information_foundation"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "spillover_truth_check",
+      "actual": {
+        "reviewed_spillover_row_count": 3,
+        "candidate_a_share_spillover_factor_count": 2,
+        "pure_name_bonus_or_board_follow_count": 1
+      },
+      "reading": "The spillover bucket is no longer an undifferentiated noise pile; it now has explicit review categories."
+    }
+  ],
+  "interpretation": [
+    "V1.12T is the final cleaning pass in this CPO information-foundation sequence.",
+    "It preserves A-share-specific spillover information without granting any training rights."
+  ]
+}

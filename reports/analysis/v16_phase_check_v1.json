@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v16_active_but_bounded_as_stability_review",
+    "v16_open": true,
+    "continue_provisional_candidacy_count": 4,
+    "hold_for_more_stability_evidence_count": 0,
+    "promote_retained_now": false,
+    "do_integrate_into_strategy_now": false,
+    "recommended_next_posture": "prepare_v16_phase_closure_or_waiting_state_not_promotion"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v16_charter",
+      "actual": {
+        "acceptance_posture": "open_v16_provisional_candidacy_stability_review",
+        "recommended_first_action": "freeze_v16_stability_review_protocol_v1"
+      },
+      "reading": "V1.6 opened lawfully as stability review, not promotion."
+    },
+    {
+      "evidence_name": "feature_stability_review",
+      "actual": {
+        "continue_provisional_candidacy_count": 4,
+        "hold_for_more_stability_evidence_count": 0,
+        "drop_from_provisional_candidacy_count": 0
+      },
+      "reading": "The bounded review already answers whether current provisional candidates remain alive under stability scrutiny."
+    }
+  ],
+  "interpretation": [
+    "V1.6 has produced bounded stability judgments without crossing into promotion.",
+    "That means the phase now has a clear continued-candidacy posture and does not need wider expansion to justify itself.",
+    "The next legal step is a closure check, not integration or local-model work."
+  ]
+}

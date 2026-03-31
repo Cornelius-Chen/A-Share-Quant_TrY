@@ -1,0 +1,286 @@
+{
+  "protocol_version": "protocol_v1.2",
+  "summary": {
+    "canonical_ready_count": 6,
+    "canonical_partial_count": 0,
+    "canonical_missing_count": 0,
+    "derived_ready_count": 3,
+    "table_warning_count": 3,
+    "table_error_count": 0,
+    "baseline_ready": true
+  },
+  "tables": {
+    "daily_bars": {
+      "path": "data\\raw\\daily_bars\\akshare_daily_bars_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 968,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "turnover",
+        "pre_close",
+        "adjust_factor",
+        "is_st",
+        "is_suspended",
+        "listed_days"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 4
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "index_daily_bars": {
+      "path": "data\\raw\\index_daily_bars\\akshare_index_daily_bars_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 726,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "open",
+        "high",
+        "low",
+        "close",
+        "volume",
+        "turnover",
+        "pre_close"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 3
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "security_master": {
+      "path": "data\\reference\\security_master\\akshare_security_master_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 4,
+      "columns": [
+        "symbol",
+        "name",
+        "board",
+        "exchange",
+        "list_date",
+        "delist_date"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "unique_symbol_count": 4
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "trading_calendar": {
+      "path": "data\\reference\\trading_calendar\\akshare_trading_calendar_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 242,
+      "columns": [
+        "trade_date",
+        "is_open",
+        "prev_open_date",
+        "next_open_date"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "adjustment_factors": {
+      "path": "data\\reference\\adjustment_factors\\akshare_adjustment_factors_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 968,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "adjust_factor"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 4
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "sector_mapping_daily": {
+      "path": "data\\reference\\sector_mapping_daily\\market_research_sector_mapping_daily_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 968,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "sector_id",
+        "sector_name",
+        "mapping_source",
+        "mapping_version"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 4
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "concept_mapping_daily": {
+      "path": "data\\reference\\concept_mapping_daily\\market_research_concept_mapping_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "ready",
+      "row_count": 2178,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "concept_id",
+        "concept_name",
+        "mapping_source",
+        "mapping_version",
+        "is_primary_concept",
+        "weight"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 4
+      },
+      "warnings": [],
+      "errors": []
+    },
+    "sector_snapshots": {
+      "path": "data\\derived\\sector_snapshots\\market_research_sector_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "bootstrap_partial",
+      "row_count": 924,
+      "columns": [
+        "trade_date",
+        "sector_id",
+        "sector_name",
+        "persistence",
+        "diffusion",
+        "money_making",
+        "leader_strength",
+        "relative_strength",
+        "activity"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242
+      },
+      "warnings": [
+        "derived_bootstrap_table"
+      ],
+      "errors": []
+    },
+    "stock_snapshots": {
+      "path": "data\\derived\\stock_snapshots\\market_research_stock_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "bootstrap_partial",
+      "row_count": 968,
+      "columns": [
+        "trade_date",
+        "symbol",
+        "sector_id",
+        "sector_name",
+        "expected_upside",
+        "drive_strength",
+        "stability",
+        "liquidity",
+        "late_mover_quality",
+        "resonance",
+        "concept_support",
+        "primary_concept_weight",
+        "concept_count",
+        "concept_concentration_ratio",
+        "leader_component_score",
+        "core_component_score",
+        "late_component_score",
+        "non_junk_composite_score",
+        "late_quality_raw_score",
+        "late_quality_concept_boost",
+        "late_quality_sector_strength",
+        "late_quality_lag_balance",
+        "late_quality_trend_support",
+        "stability_volatility",
+        "liquidity_turnover_share",
+        "liquidity_turnover_rank",
+        "liquidity_sector_turnover_share",
+        "liquidity_sector_top_turnover_share",
+        "liquidity_sector_mean_turnover_share",
+        "liquidity_sector_turnover_share_gap",
+        "liquidity_sector_symbol_count",
+        "context_theme_density",
+        "context_turnover_concentration",
+        "context_theme_turnover_interaction",
+        "context_sector_heat",
+        "context_sector_breadth",
+        "late_quality_sector_contribution",
+        "late_quality_stability_contribution",
+        "late_quality_liquidity_contribution",
+        "late_quality_lag_contribution",
+        "late_quality_trend_contribution"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "date_min": "2024-01-02",
+        "date_max": "2024-12-31",
+        "unique_date_count": 242,
+        "unique_symbol_count": 4
+      },
+      "warnings": [
+        "derived_bootstrap_table"
+      ],
+      "errors": []
+    },
+    "mainline_windows": {
+      "path": "data\\derived\\mainline_windows\\market_research_mainline_windows_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "status": "bootstrap_partial",
+      "row_count": 42,
+      "columns": [
+        "window_id",
+        "symbol",
+        "start_date",
+        "end_date",
+        "capturable_return"
+      ],
+      "missing_required_fields": [],
+      "duplicate_primary_key_count": 0,
+      "coverage": {
+        "unique_symbol_count": 4
+      },
+      "warnings": [
+        "derived_bootstrap_table"
+      ],
+      "errors": []
+    }
+  }
+}

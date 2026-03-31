@@ -1,0 +1,19 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  timeline_report: reports/analysis/market_v6_q3_symbol_timeline_600118_capture_c_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: market_v6_q3_specialist_window_persistence_600118_c_v1
+
+analysis:
+  strategy_name: mainline_trend_c
+  specialist_candidate: baseline_expansion_branch
+  anchor_candidates:
+    - shared_default
+    - buffer_only_012
+  window_start: 2024-07-01
+  window_end: 2024-09-30

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112m_mixed_high_level_stall_inner_drafting",
+    "phase_name": "V1.12M Mixed High-Level Stall Inner Drafting",
+    "ready_for_inner_draft_next": true
+  },
+  "mission": {
+    "goal": "Run one bounded inner-drafting pass only inside the mixed high-level stall cluster to see whether a small number of review-only inner structures can be separated without formal label action.",
+    "why_now": "V1.12L preserved the mixed stall cluster only as an optional future target, and the owner explicitly reopened exactly that target."
+  },
+  "in_scope": [
+    "only the mixed high-level stall cluster from V1.12L",
+    "review-only inner draft based on existing frozen pilot data and existing semantic-v2 features",
+    "small number of candidate inner structures plus any unresolved residue"
+  ],
+  "out_of_scope": [
+    "formal label split",
+    "high_level_consolidation buckets outside the mixed stall cluster",
+    "major_markup follow-up",
+    "dataset widening",
+    "model escalation"
+  ],
+  "success_criteria": [
+    "the mixed stall cluster is reduced into a small review-only inner draft",
+    "at least one inner draft has nontrivial support and distinct reading",
+    "any unresolved residue remains explicit instead of being forced into a fake clean split"
+  ],
+  "stop_criteria": [
+    "the inner draft requires changing the formal label system",
+    "the mixed stall cluster cannot be separated into anything more useful than noise"
+  ],
+  "handoff_condition": "mainline can decide whether the inner draft adds enough review value to preserve, or whether the mixed stall cluster should remain frozen as unresolved"
+}

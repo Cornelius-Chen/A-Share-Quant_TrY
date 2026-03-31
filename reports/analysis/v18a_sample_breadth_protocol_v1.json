@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v18a_sample_breadth_protocol_v1",
+    "target_feature_count": 2,
+    "allowed_evidence_sample_type_count": 2,
+    "allow_retained_promotion_now": false,
+    "ready_for_breadth_entry_design_next": true
+  },
+  "protocol": {
+    "target_feature_rows": [
+      {
+        "feature_name": "single_pulse_support",
+        "primary_shortfall": "sample_breadth_gap",
+        "minimum_evidence_path": "bounded_multi_sample_review",
+        "breadth_target_type": "bounded_additional_cases"
+      },
+      {
+        "feature_name": "policy_followthrough_support",
+        "primary_shortfall": "sample_breadth_gap",
+        "minimum_evidence_path": "bounded_additional_followthrough_case_review",
+        "breadth_target_type": "bounded_additional_cases"
+      }
+    ],
+    "bounded_entry_rules": [
+      "new samples must be tied to explicit sample_breadth shortfall only",
+      "new samples must not widen into generic replay growth",
+      "new samples must preserve point_in_time and source_aware constraints",
+      "new samples must stay below promotion and strategy integration thresholds"
+    ],
+    "allowed_evidence_sample_types": [
+      "bounded additional opening-like cases for single_pulse_support",
+      "bounded additional followthrough-like cases for policy_followthrough_support"
+    ],
+    "forbidden_actions": [
+      "retained_feature_promotion",
+      "strategy_integration",
+      "mixed shortfall expansion",
+      "wide replay queue reopening",
+      "local_model_opening"
+    ]
+  },
+  "interpretation": [
+    "V1.8A does not collect arbitrary new samples; it targets only the features whose primary shortfall is sample breadth.",
+    "The protocol keeps breadth expansion bounded, source-aware, and below any promotion or strategy-integration threshold.",
+    "The next legal action is breadth-entry design, not generic replay or direct promotion."
+  ]
+}

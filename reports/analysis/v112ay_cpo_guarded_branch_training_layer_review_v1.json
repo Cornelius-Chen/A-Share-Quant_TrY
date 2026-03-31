@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ay_cpo_guarded_branch_training_layer_review_v1",
+    "branch_rows_reviewed": 4,
+    "guarded_training_layer_admissible_count": 3,
+    "branch_rows_retained_review_only_count": 1,
+    "core_targets_stable_after_guarded_branch_admission": true,
+    "guarded_targets_stable_after_guarded_branch_admission": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "consider_extending_bounded_training_layer_with_guarded_branch_rows_only"
+  },
+  "branch_layer_rows": [
+    {
+      "symbol": "300570",
+      "role_family": "connector_mpo_branch",
+      "active_stage_windows": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ],
+      "training_layer_posture": "review_only_branch_row",
+      "bounded_training_layer_admissible": false,
+      "reading": "This row remains review-only because its branch behavior is still too mixed for training-layer use."
+    },
+    {
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "training_layer_posture": "guarded_training_layer_row",
+      "bounded_training_layer_admissible": true,
+      "reading": "This row can enter the next bounded training-facing layer, but only under guarded posture."
+    },
+    {
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "training_layer_posture": "guarded_training_layer_row",
+      "bounded_training_layer_admissible": true,
+      "reading": "This row can enter the next bounded training-facing layer, but only under guarded posture."
+    },
+    {
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "training_layer_posture": "guarded_training_layer_row",
+      "bounded_training_layer_admissible": true,
+      "reading": "This row can enter the next bounded training-facing layer, but only under guarded posture."
+    }
+  ],
+  "interpretation": [
+    "V1.12AY does not open formal training; it only decides whether guarded branch rows may enter the next bounded training-facing layer.",
+    "The branch layer remains split: three rows admissible, connector/MPO branch still review-only."
+  ]
+}

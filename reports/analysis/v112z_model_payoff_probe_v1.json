@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112z_report_only_model_payoff_probe_v1",
+    "sample_count": 2238,
+    "train_count": 1566,
+    "test_count": 672,
+    "model_count": 3,
+    "primary_positive_label": "carry_constructive",
+    "holding_days_for_probe": 20,
+    "best_model_by_profit_factor": "hist_gradient_boosting_classifier_v2",
+    "best_model_profit_factor": 13.7131,
+    "formal_training_still_forbidden": true,
+    "execution_still_forbidden": true,
+    "ready_for_owner_review_next": true
+  },
+  "model_rows": [
+    {
+      "model_name": "guardrail_nearest_centroid_v2",
+      "test_accuracy": 0.4628,
+      "carry_constructive_precision": 0.5303,
+      "carry_constructive_recall": 0.7329,
+      "conditional_carry_payoff": {
+        "trade_count": 445,
+        "avg_forward_return_20d": 0.2243,
+        "median_forward_return_20d": 0.2066,
+        "hit_rate": 0.7079,
+        "avg_max_drawdown_20d": -0.0833,
+        "profit_factor": 8.9169,
+        "return_over_drawdown": 2.6931
+      },
+      "non_overlap_trade_probe": {
+        "trade_count": 27,
+        "avg_forward_return_20d": 0.2234,
+        "median_forward_return_20d": 0.2516,
+        "hit_rate": 0.7407,
+        "avg_max_drawdown_20d": -0.0975,
+        "profit_factor": 7.9942,
+        "return_over_drawdown": 2.2904
+      }
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier_v2",
+      "test_accuracy": 0.5655,
+      "carry_constructive_precision": 0.6088,
+      "carry_constructive_recall": 0.6429,
+      "conditional_carry_payoff": {
+        "trade_count": 340,
+        "avg_forward_return_20d": 0.271,
+        "median_forward_return_20d": 0.2527,
+        "hit_rate": 0.8147,
+        "avg_max_drawdown_20d": -0.0702,
+        "profit_factor": 17.4804,
+        "return_over_drawdown": 3.8582
+      },
+      "non_overlap_trade_probe": {
+        "trade_count": 27,
+        "avg_forward_return_20d": 0.2377,
+        "median_forward_return_20d": 0.2031,
+        "hit_rate": 0.8148,
+        "avg_max_drawdown_20d": -0.0826,
+        "profit_factor": 13.7131,
+        "return_over_drawdown": 2.8795
+      }
+    },
+    {
+      "model_name": "small_mlp_classifier_v2",
+      "test_accuracy": 0.5744,
+      "carry_constructive_precision": 0.5852,
+      "carry_constructive_recall": 0.736,
+      "conditional_carry_payoff": {
+        "trade_count": 405,
+        "avg_forward_return_20d": 0.2544,
+        "median_forward_return_20d": 0.2356,
+        "hit_rate": 0.7901,
+        "avg_max_drawdown_20d": -0.073,
+        "profit_factor": 14.1876,
+        "return_over_drawdown": 3.4838
+      },
+      "non_overlap_trade_probe": {
+        "trade_count": 27,
+        "avg_forward_return_20d": 0.2391,
+        "median_forward_return_20d": 0.2039,
+        "hit_rate": 0.8889,
+        "avg_max_drawdown_20d": -0.0851,
+        "profit_factor": 13.0739,
+        "return_over_drawdown": 2.8081
+      }
+    }
+  ],
+  "interpretation": [
+    "This is a report-only payoff probe on the frozen optical-link pilot, not a live-trading backtest.",
+    "All models use the same time split and the same dataset so payoff differences remain attributable to model family rather than scope drift.",
+    "The non-overlap trade probe is a bounded approximation of trade quality, meant to compare cycle absorption quality before any formal training rights are opened."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v17_promotion_evidence_protocol_v1",
+    "provisional_candidate_count": 4,
+    "promotion_evidence_axis_count": 4,
+    "allow_retained_promotion_now": false,
+    "ready_for_per_feature_promotion_gap_review_next": true
+  },
+  "protocol": {
+    "provisional_candidate_feature_names": [
+      "single_pulse_support",
+      "multi_day_reinforcement_support",
+      "policy_followthrough_support",
+      "concept_confirmation_depth"
+    ],
+    "promotion_evidence_axes": [
+      "sample_breadth_gap",
+      "cross_pocket_or_cross_regime_gap",
+      "non_redundancy_stress_gap",
+      "safe_consumption_beyond_report_only_gap"
+    ],
+    "admissible_proof_types": [
+      "bounded multi-sample review",
+      "bounded cross-pocket consistency check",
+      "bounded orthogonality stress review",
+      "bounded safe-containment extension review"
+    ],
+    "forbidden_shortcuts": [
+      "retained_feature_promotion",
+      "strategy_integration",
+      "label_relaxation",
+      "wide replay expansion",
+      "local_model_opening"
+    ],
+    "phase_target": "state the minimum new evidence required to change promotion judgment without promoting now"
+  },
+  "interpretation": [
+    "V1.7 does not reopen candidacy or stability; it identifies the concrete evidence shortfalls that keep current features below promotion threshold.",
+    "The protocol stays review-only and forbids promotion, integration, or wide replay shortcuts.",
+    "The next legal action is per-feature promotion-evidence gap review, not retained-feature promotion itself."
+  ]
+}

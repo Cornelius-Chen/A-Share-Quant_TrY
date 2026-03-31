@@ -1,0 +1,10 @@
+report:
+  name: v112bb_cpo_default_10_row_guarded_layer_pilot_v1
+paths:
+  reports_dir: reports/analysis
+  phase_charter_report: reports/analysis/v112bb_phase_charter_v1.json
+  v112az_extension_report: reports/analysis/v112az_cpo_bounded_training_layer_extension_v1.json
+  v112z_cycle_reconstruction_report: reports/analysis/v112z_bounded_cycle_reconstruction_pass_v1.json
+  v112am_pilot_report: reports/analysis/v112am_cpo_extremely_small_core_skeleton_training_pilot_v1.json
+  v112ap_pilot_report: reports/analysis/v112ap_cpo_bounded_secondary_widen_pilot_v1.json
+  v112ax_pilot_report: reports/analysis/v112ax_cpo_guarded_branch_admitted_pilot_v1.json

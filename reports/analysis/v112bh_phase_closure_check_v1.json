@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bh_as_cpo_neutral_selective_no_leak_portfolio_pilot_success",
+    "v112bh_success_criteria_met": true,
+    "enter_v112bh_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bh_phase_check",
+      "actual": {
+        "trade_count": 7,
+        "cash_ratio": 0.7283
+      },
+      "reading": "The phase closes once the selective no-leak line exists as a distinct bounded portfolio track."
+    }
+  ],
+  "interpretation": [
+    "V1.12BH closes with the first neutral selective no-leak portfolio pilot on the lawful 10-row CPO layer.",
+    "Formal training and signal rights remain closed."
+  ]
+}

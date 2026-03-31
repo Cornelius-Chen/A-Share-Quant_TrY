@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112br_as_state_representation_and_resonance_discovery_success",
+    "v112br_success_criteria_met": true,
+    "enter_v112br_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112br_phase_check",
+      "actual": {
+        "cluster_count": 4,
+        "offensive_cluster_count": 3,
+        "veto_cluster_count": 0
+      },
+      "reading": "The phase closes once state geometry has yielded explicit candidate offensive and veto regions."
+    }
+  ],
+  "interpretation": [
+    "V1.12BR closes with the first lawful state-space discovery layer for CPO gate research."
+  ]
+}

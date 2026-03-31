@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.8b
+
+paths:
+  v18b_phase_charter_report: reports/analysis/v18b_phase_charter_v1.json
+  v18a_breadth_entry_design_report: reports/analysis/v18a_breadth_entry_design_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v18b_sample_admission_protocol_v1

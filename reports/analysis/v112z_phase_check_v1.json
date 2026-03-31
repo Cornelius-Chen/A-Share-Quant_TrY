@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112z_as_bounded_cycle_reconstruction_only",
+    "do_open_v112z_now": true,
+    "foundation_ready_for_bounded_cycle_reconstruction": true,
+    "split_ready_adjacent_asset_count": 6,
+    "bounded_spillover_factor_candidate_count": 2,
+    "allow_auto_training_now": false,
+    "allow_auto_feature_promotion_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "run_v112z_bounded_cycle_reconstruction_pass"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112z_protocol",
+      "actual": {
+        "foundation_ready_for_bounded_cycle_reconstruction": true,
+        "split_ready_adjacent_asset_count": 6,
+        "bounded_spillover_factor_candidate_count": 2
+      },
+      "reading": "The CPO line now has an explicit bounded reconstruction protocol and enough cleaned inputs to attempt the experiment."
+    }
+  ],
+  "interpretation": [
+    "V1.12Z remains an experiment-prep phase until the reconstruction pass itself runs.",
+    "Training and feature promotion stay closed."
+  ]
+}

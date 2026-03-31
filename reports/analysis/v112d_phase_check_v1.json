@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112d_as_same_dataset_sidecar_pilot_success",
+    "sidecar_pilot_present": true,
+    "allow_sidecar_deployment_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_same_dataset_sidecar_result_before_any_feature_or_model_widening"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112d_charter",
+      "actual": {
+        "do_open_v112d_now": true
+      },
+      "reading": "V1.12D opened lawfully as a first sidecar execution phase."
+    },
+    {
+      "evidence_name": "v112d_sidecar_pilot",
+      "actual": {
+        "model_count": 2,
+        "best_model_name": "hist_gradient_boosting_classifier",
+        "baseline_test_accuracy": 0.4509,
+        "best_model_test_accuracy": 0.558
+      },
+      "reading": "The first same-dataset black-box comparison now exists and can be judged against the known baseline."
+    }
+  ],
+  "interpretation": [
+    "V1.12D succeeds once the first black-box sidecar comparison runs under the same dataset and validation split.",
+    "That is enough to close the phase without widening scope or opening deployment.",
+    "The next lawful move is owner review of whether the sidecar changes decision value enough to continue."
+  ]
+}

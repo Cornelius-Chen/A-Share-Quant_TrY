@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ca_enabler_candidate_template_promotion_split_v1",
+    "role_count": 3,
+    "candidate_template_path_count": 1,
+    "role_specific_template_count": 1,
+    "isolated_diagnostic_path_count": 1,
+    "recommended_next_posture": "run_action_mapping_review_for_packaging_and_laser_and_isolate_silicon_direction_review"
+  },
+  "promotion_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "transfer_accuracy": 1.0,
+      "direction_layer_status": "transferred_direction_set_confirmed",
+      "band_layer_status": "three_band_semantics_confirmed",
+      "edge_layer_status": "transferred_edges_unchanged",
+      "action_layer_status": "ready_for_candidate_action_mapping_review",
+      "promotion_posture": "candidate_template_path"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "transfer_accuracy": 0.6471,
+      "direction_layer_status": "transferred_direction_set_supported",
+      "band_layer_status": "three_band_semantics_supported_with_local_calibration",
+      "edge_layer_status": "role_specific_edge_calibration_required",
+      "action_layer_status": "candidate_action_mapping_review_after_local_edge_binding",
+      "promotion_posture": "candidate_template_path_with_role_specific_edges"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "transfer_accuracy": 0.25,
+      "direction_layer_status": "direction_review_required",
+      "band_layer_status": "band_semantics_not_ready",
+      "edge_layer_status": "edge_transfer_blocked",
+      "action_layer_status": "do_not_promote_action_mapping",
+      "promotion_posture": "isolated_diagnostic_path"
+    }
+  ],
+  "layer_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "layer_name": "direction_layer",
+      "layer_status": "transferred_direction_set_confirmed"
+    },
+    {
+      "role_family": "laser_chip_component",
+      "layer_name": "band_layer",
+      "layer_status": "three_band_semantics_confirmed"
+    },
+    {
+      "role_family": "laser_chip_component",
+      "layer_name": "edge_layer",
+      "layer_status": "transferred_edges_unchanged"
+    },
+    {
+      "role_family": "laser_chip_component",
+      "layer_name": "action_layer",
+      "layer_status": "ready_for_candidate_action_mapping_review"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "layer_name": "direction_layer",
+      "layer_status": "transferred_direction_set_supported"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "layer_name": "band_layer",
+      "layer_status": "three_band_semantics_supported_with_local_calibration"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "layer_name": "edge_layer",
+      "layer_status": "role_specific_edge_calibration_required"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "layer_name": "action_layer",
+      "layer_status": "candidate_action_mapping_review_after_local_edge_binding"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "layer_name": "direction_layer",
+      "layer_status": "direction_review_required"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "layer_name": "band_layer",
+      "layer_status": "band_semantics_not_ready"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "layer_name": "edge_layer",
+      "layer_status": "edge_transfer_blocked"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "layer_name": "action_layer",
+      "layer_status": "do_not_promote_action_mapping"
+    }
+  ],
+  "diagnostic_rows": [
+    {
+      "role_family": "silicon_photonics_component",
+      "sample_count": 4,
+      "pre_calibration_accuracy": 0.25,
+      "diagnostic_posture": "isolate_role_for_separate_direction_review",
+      "reading": "Transferred direction set is insufficiently aligned for direct family-wide calibration."
+    }
+  ],
+  "interpretation": [
+    "V1.12CA splits the enabler-family transfer result into four method layers: direction transfer, band semantics, edge calibration, and action mapping readiness.",
+    "The key outcome is that packaging-process-enabler and laser-chip-component can move forward as candidate template paths, while silicon-photonics remains an isolated diagnostic path."
+  ]
+}

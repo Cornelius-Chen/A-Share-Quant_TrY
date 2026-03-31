@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bo_cpo_internal_maturity_overlay_review_v1",
+    "overlay_feature_count": 8,
+    "overlay_family_count": 1,
+    "relative_strength_feature_count": 2,
+    "breadth_turnover_feature_count": 2,
+    "role_quality_feature_count": 3,
+    "spillover_feature_count": 1,
+    "formal_feature_promotion_now": false,
+    "formal_label_promotion_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "use_internal_maturity_overlay_in_later_gate_or_selector_fusion_before_any_large_data_widen"
+  },
+  "overlay_feature_rows": [
+    {
+      "feature_name": "core_branch_relative_strength_spread_state",
+      "overlay_domain": "internal_relative_strength",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Measures whether core names still dominate branch rows or whether branch beta has started to overtake core quality."
+    },
+    {
+      "feature_name": "core_spillover_divergence_state",
+      "overlay_domain": "spillover_divergence",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Measures whether spillover activation is exceeding core-strength confirmation, a common late-maturity warning."
+    },
+    {
+      "feature_name": "internal_breadth_compression_state",
+      "overlay_domain": "breadth_compression",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether internal participation is shrinking from broad diffusion back to a narrow set of survivors."
+    },
+    {
+      "feature_name": "internal_turnover_concentration_state",
+      "overlay_domain": "turnover_concentration",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether turnover is concentrating into a smaller subset of names, often a congestion warning."
+    },
+    {
+      "feature_name": "leader_absorption_fragility_state",
+      "overlay_domain": "leader_absorption",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether the leader still absorbs pressure cleanly or begins to show maturity-stage fragility."
+    },
+    {
+      "feature_name": "branch_promotion_failure_rate_state",
+      "overlay_domain": "branch_quality",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether branch names can sustain promotion from review support into credible extension or repeatedly fail."
+    },
+    {
+      "feature_name": "role_deterioration_spread_state",
+      "overlay_domain": "role_deterioration",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether more rows are being downgraded from core or extension roles into weaker maturity-stage behavior."
+    },
+    {
+      "feature_name": "spillover_saturation_overlay_state",
+      "overlay_domain": "spillover_saturation",
+      "allowed_usage_layer": "internal_maturity_overlay_only",
+      "reading": "Tracks whether late-stage spillover activation has reached levels more consistent with maturity than with healthy diffusion."
+    }
+  ],
+  "family_rows": [
+    {
+      "family_name": "cpo_internal_maturity_overlay_family",
+      "family_posture": "design_ready_overlay_family",
+      "member_count": 8,
+      "disallowed_layers": [
+        "core_truth_label",
+        "role_truth_replacement",
+        "formal_signal_trigger"
+      ],
+      "reading": "These factors express internal crowding, maturity, and role-quality deterioration inside the CPO cohort. They can filter later portfolio decisions but do not replace role, phase, or catalyst truth."
+    }
+  ],
+  "interpretation": [
+    "V1.12BO freezes the missing layer between market regime and stock-level truth: internal maturity, congestion, and role-quality deterioration inside the CPO cohort.",
+    "This layer is explicitly motivated by the BL failure: regime alone was necessary but insufficient."
+  ]
+}

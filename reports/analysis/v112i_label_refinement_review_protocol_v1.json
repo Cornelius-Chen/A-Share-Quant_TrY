@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112i_label_refinement_review_protocol_v1",
+    "primary_bottleneck_type": "feature_definition_or_non_redundancy_gap",
+    "semantic_rerun_acceptance_posture": "close_v112g_as_semantic_v2_rerun_success",
+    "protocol_ready_for_candidate_structure_review": true,
+    "ready_for_phase_check_next": true
+  },
+  "review_gate_rows": [
+    {
+      "gate_name": "candidate_substates_show_distinct_error_behavior",
+      "required_reading": "different false-positive or false-negative profiles across candidate buckets",
+      "why_it_matters": "A label split is not justified if all candidate groups fail in the same way."
+    },
+    {
+      "gate_name": "candidate_substates_show_distinct_semantic_v2_profiles",
+      "required_reading": "freshness, persistence, or breadth-confirmation patterns differ materially across candidate buckets",
+      "why_it_matters": "The split must reflect state meaning, not only arbitrary numerical separation."
+    },
+    {
+      "gate_name": "candidate_substates_reduce_review_confusion_without_fragmenting_sample_too_far",
+      "required_reading": "review complexity falls while sample buckets remain usable for bounded follow-up",
+      "why_it_matters": "The split should clarify the stage, not shatter it into tiny unstable shards."
+    }
+  ],
+  "rejection_gate_rows": [
+    {
+      "gate_name": "no_distinct_semantic_profile",
+      "reading": "Keep refinement on the feature side only if candidate buckets do not carry different semantic-v2 patterns."
+    },
+    {
+      "gate_name": "only_symbol_identity_changes",
+      "reading": "Reject label-split candidacy if the buckets are merely symbol-specific rather than stage-specific."
+    },
+    {
+      "gate_name": "sample_fragmentation_exceeds_value",
+      "reading": "Reject label-split candidacy if candidate buckets become too small to support bounded follow-up review."
+    }
+  ],
+  "review_questions": [
+    "Does high_level_consolidation contain at least one candidate substate with clearly different semantic-v2 meaning?",
+    "Would a bounded split improve decision quality more than further feature refinement alone?",
+    "Can the candidate split remain review-only first, without pretending to legislate a new formal label schema?"
+  ],
+  "interpretation": [
+    "This protocol does not authorize a label split by itself.",
+    "It defines the review threshold that candidate buckets must clear before label refinement becomes a lawful bounded follow-up.",
+    "The current default remains feature-side refinement unless candidate structure shows distinct semantics plus distinct error behavior."
+  ]
+}

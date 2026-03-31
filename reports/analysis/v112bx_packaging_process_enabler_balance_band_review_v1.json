@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bx_packaging_process_enabler_balance_band_review_v1",
+    "feature_count": 4,
+    "contrast_row_count": 2,
+    "classification_correct_count": 2,
+    "classification_accuracy": 1.0,
+    "balance_band_count": 3,
+    "recommended_next_posture": "test_transfer_of_balance_band_to_adjacent_enabler_like_states"
+  },
+  "contrast_rows": [
+    {
+      "entry_date": "2024-03-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "realized_forward_return_20d": -0.1668,
+      "path_max_drawdown": -0.3602,
+      "contrast_label": "bad_trade",
+      "core_branch_relative_strength_spread_state": -0.4265499730426965,
+      "core_spillover_divergence_state": -0.4024035175779169,
+      "spillover_saturation_overlay_state": 0.4024035175779169,
+      "ai_hardware_cross_board_resonance_state": -0.3165619226481703
+    },
+    {
+      "entry_date": "2024-04-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "realized_forward_return_20d": 0.1787,
+      "path_max_drawdown": -0.1686,
+      "contrast_label": "good_trade",
+      "core_branch_relative_strength_spread_state": 0.19561347484591063,
+      "core_spillover_divergence_state": 0.16761048375016863,
+      "spillover_saturation_overlay_state": 0.0,
+      "ai_hardware_cross_board_resonance_state": 0.16774630469159643
+    }
+  ],
+  "band_rows": [
+    {
+      "feature_name": "core_branch_relative_strength_spread_state",
+      "direction": "higher_is_better",
+      "bad_trade_value": -0.42655,
+      "good_trade_value": 0.195613,
+      "balance_midpoint": -0.115468,
+      "veto_side_rule": "< midpoint",
+      "eligibility_side_rule": ">= midpoint"
+    },
+    {
+      "feature_name": "core_spillover_divergence_state",
+      "direction": "higher_is_better",
+      "bad_trade_value": -0.402404,
+      "good_trade_value": 0.16761,
+      "balance_midpoint": -0.117397,
+      "veto_side_rule": "< midpoint",
+      "eligibility_side_rule": ">= midpoint"
+    },
+    {
+      "feature_name": "spillover_saturation_overlay_state",
+      "direction": "lower_is_better",
+      "bad_trade_value": 0.402404,
+      "good_trade_value": 0.0,
+      "balance_midpoint": 0.201202,
+      "veto_side_rule": "> midpoint",
+      "eligibility_side_rule": "<= midpoint"
+    },
+    {
+      "feature_name": "ai_hardware_cross_board_resonance_state",
+      "direction": "higher_is_better",
+      "bad_trade_value": -0.316562,
+      "good_trade_value": 0.167746,
+      "balance_midpoint": -0.074408,
+      "veto_side_rule": "< midpoint",
+      "eligibility_side_rule": ">= midpoint"
+    }
+  ],
+  "classification_rows": [
+    {
+      "entry_date": "2024-03-18",
+      "symbol": "300757",
+      "contrast_label": "bad_trade",
+      "classified_band": "veto_band",
+      "expected_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "entry_date": "2024-04-18",
+      "symbol": "300757",
+      "contrast_label": "good_trade",
+      "classified_band": "eligibility_band",
+      "expected_band": "eligibility_band",
+      "classification_correct": true
+    }
+  ],
+  "interpretation": [
+    "V1.12BX upgrades the single contrastive veto into a three-band internal state template: veto band, de-risk band, and eligibility band.",
+    "The balance object is not a static threshold point; it is a bounded internal state region built from directionally opposed bad/good contributor states."
+  ]
+}

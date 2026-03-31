@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: v113f_label_review_sheet_v1
+
+paths:
+  v113f_pilot_object_pool_report: reports/analysis/v113f_pilot_object_pool_v1.json
+  v113e_pilot_protocol_report: reports/analysis/v113e_pilot_protocol_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113f_label_review_sheet_v1

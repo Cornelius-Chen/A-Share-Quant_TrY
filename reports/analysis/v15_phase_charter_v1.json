@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v15_retained_feature_candidacy_review",
+    "v14_waiting_state_present": true,
+    "context_feature_schema_ready": true,
+    "bounded_discrimination_ready": true,
+    "do_open_v15_now": true,
+    "recommended_first_action": "freeze_v15_feature_candidacy_protocol_v1"
+  },
+  "charter": {
+    "mission": "Review whether current report-only context features meet the minimum admissibility threshold for retained-feature candidacy without promoting them into the strategy mainline.",
+    "in_scope": [
+      "feature admissibility review",
+      "evidence sufficiency review",
+      "non-redundancy or orthogonality review",
+      "safe-containment review",
+      "bounded candidacy decisions"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "formal model work",
+      "new wide replay or refresh expansion",
+      "local regime segmentation"
+    ],
+    "success_criteria": [
+      "freeze a clear candidacy review protocol",
+      "produce admissibility judgments for the current bounded report-only context features",
+      "close the phase with a clear retained-candidacy posture or a bounded rejection posture"
+    ],
+    "stop_criteria": [
+      "if current feature definitions are too unstable for candidacy review",
+      "if evidence remains too sparse to support bounded admissibility judgments",
+      "if the work drifts into direct promotion or strategy integration"
+    ],
+    "handoff_condition": "After the charter opens, only replay-independent candidacy-review artifacts are allowed until the phase-level posture is explicit."
+  },
+  "interpretation": [
+    "V1.4 already proved bounded context-consumption value, but stopped below promotion threshold.",
+    "That makes retained-feature candidacy review the next lawful question: not whether to promote, but whether current report-only features deserve candidacy consideration at all.",
+    "So V1.5 should open as a bounded review phase, not as a promotion, modeling, or segmentation phase."
+  ]
+}

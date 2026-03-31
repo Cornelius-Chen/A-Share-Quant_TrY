@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112y_cpo_adjacent_role_split_sidecar_probe",
+    "do_open_v112y_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112y_cpo_adjacent_role_split_sidecar_probe_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12Y CPO Adjacent Role-Split Sidecar Probe",
+    "mission": "Use a bounded black-box sidecar posture to probe whether the unresolved adjacent CPO rows can be split into cleaner review-only role families without mistaking the probe result for training truth.",
+    "in_scope": [
+      "probe only the nine unresolved adjacent rows left pending in V1.12R",
+      "separate split-ready review assets from still-mixed pending rows",
+      "freeze review-only sidecar scores and candidate role families"
+    ],
+    "out_of_scope": [
+      "formal role freeze into training surface",
+      "feature promotion",
+      "signal generation",
+      "new adjacent discovery",
+      "cohort widening"
+    ],
+    "success_criteria": [
+      "the unresolved adjacent set is no longer one undifferentiated pending bucket",
+      "some rows can be preserved as split-ready review assets with explicit candidate roles",
+      "still-mixed rows remain preserved without over-promotion"
+    ],
+    "stop_criteria": [
+      "the phase promotes sidecar suggestions into formal training roles",
+      "the phase silently discards the still-mixed adjacent rows",
+      "the phase expands beyond the nine unresolved rows from V1.12R"
+    ]
+  },
+  "interpretation": [
+    "V1.12Y attacks the last large unresolved adjacent-role gap in the CPO foundation line.",
+    "Its purpose is bounded sidecar probing, not final role legislation.",
+    "The result should split the adjacent pending bucket into cleaner review-only candidates and residual mixed rows."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cl_core_residual_control_probe_review_v1",
+    "family_count": 2,
+    "dominant_control_split": "core_leader_to_holding_veto__high_beta_core_to_derisk",
+    "packaging_template_kept_frozen": true,
+    "recommended_next_posture": "open_core_leader_holding_veto_probe_and_high_beta_core_derisk_probe"
+  },
+  "family_rows": [
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "candidate_control_action": "holding_veto_or_shorter_half_life",
+      "control_reading": "late main_markup continuation should not be treated as plain eligibility once maturity weakens and drawdown tolerance deteriorates",
+      "sample_count": 2,
+      "next_probe": "core_leader_holding_veto_probe"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "candidate_control_action": "de_risk_not_entry_veto",
+      "control_reading": "high-beta core expression still carries alpha; the issue is drawdown tolerance and expression size rather than outright disqualification",
+      "sample_count": 1,
+      "next_probe": "high_beta_core_derisk_probe"
+    }
+  ],
+  "evidence_rows": [
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2023-06-07",
+      "realized_forward_return_20d": 0.3596,
+      "path_max_drawdown": -0.1826,
+      "predicted_winner_prob": 0.5501,
+      "probability_margin": 0.1952,
+      "selective_score": 0.3103,
+      "evidence_reading": "reference_window"
+    },
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2024-02-05",
+      "realized_forward_return_20d": 0.4719,
+      "path_max_drawdown": -0.0749,
+      "predicted_winner_prob": 0.626,
+      "probability_margin": 0.4253,
+      "selective_score": 0.5353,
+      "evidence_reading": "reference_window"
+    },
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2024-03-15",
+      "realized_forward_return_20d": -0.062,
+      "path_max_drawdown": -0.1433,
+      "predicted_winner_prob": 0.552,
+      "probability_margin": 0.3376,
+      "selective_score": 0.5274,
+      "evidence_reading": "bad_window"
+    },
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2025-07-24",
+      "realized_forward_return_20d": 0.4321,
+      "path_max_drawdown": -0.0554,
+      "predicted_winner_prob": 0.3983,
+      "probability_margin": 0.2191,
+      "selective_score": 0.3779,
+      "evidence_reading": "reference_window"
+    },
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2025-09-12",
+      "realized_forward_return_20d": -0.0452,
+      "path_max_drawdown": -0.2036,
+      "predicted_winner_prob": 0.4714,
+      "probability_margin": 0.3029,
+      "selective_score": 0.4747,
+      "evidence_reading": "bad_window"
+    },
+    {
+      "residual_family": "core_module_leader_mature_markup_overstay",
+      "symbol": "300308",
+      "entry_date": "2025-12-19",
+      "realized_forward_return_20d": 0.0233,
+      "path_max_drawdown": -0.0885,
+      "predicted_winner_prob": 0.3715,
+      "probability_margin": 0.2163,
+      "selective_score": 0.3856,
+      "evidence_reading": "reference_window"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2023-04-28",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": 0.2238,
+      "path_max_drawdown": -0.154,
+      "evidence_reading": "high_drawdown_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2023-12-20",
+      "stage_family": "divergence_and_decay",
+      "realized_forward_return_20d": 0.0675,
+      "path_max_drawdown": -0.134,
+      "evidence_reading": "manageable_expression_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2025-06-03",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": 0.4729,
+      "path_max_drawdown": -0.0557,
+      "evidence_reading": "manageable_expression_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2025-07-02",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": 0.523,
+      "path_max_drawdown": -0.0583,
+      "evidence_reading": "manageable_expression_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2025-07-31",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": 0.876,
+      "path_max_drawdown": -0.0475,
+      "evidence_reading": "manageable_expression_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2025-09-29",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": -0.1036,
+      "path_max_drawdown": -0.1854,
+      "evidence_reading": "high_drawdown_reference"
+    },
+    {
+      "residual_family": "high_beta_core_module_expression_risk",
+      "symbol": "300502",
+      "entry_date": "2026-01-06",
+      "stage_family": "main_markup",
+      "realized_forward_return_20d": 0.0277,
+      "path_max_drawdown": -0.0898,
+      "evidence_reading": "manageable_expression_reference"
+    }
+  ],
+  "interpretation": [
+    "V1.12CL translates ex-packaging residual families into action-type hypotheses rather than reopening blanket gate search.",
+    "The review indicates that core-leader residuals look like mature-markup overstay problems, while high-beta core residuals look like expression-risk problems that should be handled by de-risk rather than by outright veto."
+  ]
+}

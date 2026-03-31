@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bt_as_phase_conditioned_veto_and_eligibility_extraction_success",
+    "v112bt_success_criteria_met": true,
+    "enter_v112bt_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bt_phase_check",
+      "actual": {
+        "eligibility_rule_count": 2,
+        "entry_veto_count": 4,
+        "holding_veto_count": 2,
+        "risk_off_override_count": 3
+      },
+      "reading": "The phase closes once dangerous regions have been translated into explicit control-layer candidates."
+    }
+  ],
+  "interpretation": [
+    "V1.12BT closes with the first explicit phase-conditioned eligibility and veto extraction layer for CPO."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v18c_screened_bounded_collection",
+    "v18b_waiting_state_present": true,
+    "admission_gate_ready_count": 2,
+    "target_feature_names": [
+      "single_pulse_support",
+      "policy_followthrough_support"
+    ],
+    "do_open_v18c_now": true,
+    "recommended_first_action": "freeze_v18c_screened_collection_protocol_v1"
+  },
+  "charter": {
+    "mission": "Execute screened bounded collection for current breadth-target features under the frozen V1.8A entry design and V1.8B admission gate, generating the first lawful breadth evidence without promoting or integrating any feature now.",
+    "in_scope": [
+      "screened candidate review under frozen admission gates",
+      "bounded collection records for admitted cases",
+      "per-feature collection summary under sample limits",
+      "bounded evidence artifact generation"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "new refresh or replay widening",
+      "sample collection beyond current limits",
+      "safe-consumption validation work",
+      "cross-pocket or cross-regime validation work"
+    ],
+    "success_criteria": [
+      "execute a lawful screened bounded collection cycle",
+      "admit at least one clean additional breadth case for at least one target feature or exhaust the candidate pools cleanly",
+      "produce collection records and a bounded collection summary",
+      "close the phase with a clear follow-up posture for later promotion-evidence review"
+    ],
+    "stop_criteria": [
+      "if collection drifts beyond frozen sample limits",
+      "if screened candidates fail admission gates and no lawful case remains",
+      "if collection requires widening replay queues or weakening evidence standards"
+    ],
+    "handoff_condition": "After the charter opens, only screened bounded collection artifacts are allowed until a bounded collection summary is explicit."
+  },
+  "interpretation": [
+    "V1.8A and V1.8B already answered where breadth evidence may come from and which candidates are admissible.",
+    "The next lawful move is therefore screened bounded collection itself, not another design-only or review-only phase.",
+    "So V1.8C should open as a tightly bounded collection phase, not as a promotion or integration phase."
+  ]
+}

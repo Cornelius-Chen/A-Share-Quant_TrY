@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bt_phase_conditioned_veto_and_eligibility_extraction",
+    "do_open_v112bt_now": true,
+    "recommended_first_action": "freeze_v112bt_phase_conditioned_veto_and_eligibility_extraction_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BT Phase-Conditioned Veto And Eligibility Extraction",
+    "mission": "Translate the high-dimensional offensive bundles, veto neighborhoods, and transition veto bands into phase-conditioned control objects: eligibility, entry veto, holding veto, and risk-off override.",
+    "in_scope": [
+      "extract phase-conditioned eligibility rules from offensive geometry",
+      "extract entry-veto rules from veto neighborhoods",
+      "extract holding-veto rules from transition bands",
+      "extract stage-level risk-off override candidates"
+    ],
+    "out_of_scope": [
+      "formal training opening",
+      "formal signal generation",
+      "new selector family expansion",
+      "returning to low-dimensional hard gate sweeps"
+    ]
+  },
+  "interpretation": [
+    "V1.12BT opens because risk structure is now visible as dangerous regions, and the lawful next move is to turn those regions into control objects.",
+    "The goal is not another abstract risk memo; it is explicit extraction of eligibility, veto, and override candidates."
+  ]
+}

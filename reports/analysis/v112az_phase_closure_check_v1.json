@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112az_as_bounded_training_layer_extension_success",
+    "v112az_success_criteria_met": true,
+    "enter_v112az_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "recommended_next_posture": "review_if_10_row_bounded_training_layer_can_replace_the_7_row_baseline_for_next_pilot"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112az_phase_check",
+      "actual": {
+        "row_count_after_extension": 10,
+        "guarded_branch_row_count": 3
+      },
+      "reading": "The phase closes once the 10-row bounded training-facing layer has been assembled under the guarded branch rules."
+    }
+  ],
+  "interpretation": [
+    "V1.12AZ closes with a bounded training-layer extension asset.",
+    "Formal training and signal rights remain closed."
+  ]
+}

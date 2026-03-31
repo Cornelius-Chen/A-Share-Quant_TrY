@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112z_cycle_reconstruction_protocol_v1",
+    "foundation_ready_for_bounded_cycle_reconstruction": true,
+    "split_ready_adjacent_asset_count": 6,
+    "bounded_spillover_factor_candidate_count": 2,
+    "ready_for_phase_check_next": true
+  },
+  "protocol": {
+    "cycle_scope": "single optical-link price-and-demand cycle only",
+    "core_inputs": [
+      "registry schema and feature slots from V112Q",
+      "validated review assets from V112R",
+      "chronology grammar from V112S",
+      "spillover buckets from V112T and V112X",
+      "adjacent split-ready review assets from V112Y"
+    ],
+    "required reconstruction layers": [
+      "stage ordering",
+      "catalyst ordering",
+      "core/adjacent/branch role transitions",
+      "board chronology overlays",
+      "spillover and weak-memory overlays"
+    ],
+    "must_preserve_ambiguity_checks": [
+      "mixed-role entities must remain visible as ambiguity checks",
+      "spillover candidates must be tracked separately from core roles",
+      "residual pending rows must not be silently dropped"
+    ],
+    "output_posture": [
+      "review_only_reconstructed_cycle_map",
+      "review_only_residual_gap_exposure",
+      "owner_facing_reconstruction_summary"
+    ],
+    "forbidden_slides": [
+      "auto training",
+      "auto labeling freeze",
+      "auto signal logic",
+      "automatic feature promotion"
+    ]
+  },
+  "interpretation": [
+    "V1.12Z freezes a reconstruction protocol rather than jumping straight into reconstructed truth.",
+    "The protocol explicitly keeps mixed-role and spillover ambiguity alive so the experiment can expose problems instead of hiding them.",
+    "The next lawful action after this is the actual bounded reconstruction pass."
+  ]
+}

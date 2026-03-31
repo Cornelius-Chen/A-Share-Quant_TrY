@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ci_laser_maturation_probe_v1",
+    "sample_count": 4,
+    "clean_eligibility_count": 3,
+    "de_risk_fringe_watch_count": 1,
+    "promote_de_risk_now": false,
+    "recommended_next_posture": "keep_laser_as_eligibility_only_member_with_fringe_watch_overlay"
+  },
+  "sample_rows": [
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "688498",
+      "actual_band": "eligibility_band",
+      "nearest_packaging_band": "eligibility_band",
+      "nearest_packaging_distance": 0.0799,
+      "nearest_eligibility_distance": 0.0799,
+      "nearest_non_eligibility_distance": 0.3769,
+      "maturation_reading": "clean_eligibility_member"
+    },
+    {
+      "trade_date": "2025-08-29",
+      "symbol": "688498",
+      "actual_band": "eligibility_band",
+      "nearest_packaging_band": "eligibility_band",
+      "nearest_packaging_distance": 0.2213,
+      "nearest_eligibility_distance": 0.2213,
+      "nearest_non_eligibility_distance": 0.5214,
+      "maturation_reading": "clean_eligibility_member"
+    },
+    {
+      "trade_date": "2025-09-08",
+      "symbol": "688498",
+      "actual_band": "eligibility_band",
+      "nearest_packaging_band": "eligibility_band",
+      "nearest_packaging_distance": 0.1891,
+      "nearest_eligibility_distance": 0.1891,
+      "nearest_non_eligibility_distance": 0.4425,
+      "maturation_reading": "clean_eligibility_member"
+    },
+    {
+      "trade_date": "2025-10-31",
+      "symbol": "688498",
+      "actual_band": "eligibility_band",
+      "nearest_packaging_band": "veto_band",
+      "nearest_packaging_distance": 0.1837,
+      "nearest_eligibility_distance": 0.3971,
+      "nearest_non_eligibility_distance": 0.1837,
+      "maturation_reading": "de_risk_fringe_watch"
+    }
+  ],
+  "interpretation": [
+    "V1.12CI checks whether laser-chip states are still clean eligibility members or are beginning to migrate toward packaging-like de-risk/veto regions.",
+    "The expected result is not immediate promotion, but a controlled maturity reading that preserves the frozen packaging mainline template boundary."
+  ]
+}

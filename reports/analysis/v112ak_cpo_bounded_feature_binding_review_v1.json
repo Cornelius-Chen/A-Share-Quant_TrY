@@ -1,0 +1,917 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ak_cpo_bounded_feature_binding_review_v1",
+    "truth_candidate_row_count": 7,
+    "evaluated_binding_count": 56,
+    "direct_bindable_count": 21,
+    "guarded_bindable_count": 17,
+    "row_specific_blocked_count": 18,
+    "formal_label_freeze_now": false,
+    "formal_training_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "bounded_training_readiness_review_with_binding_gaps_explicit"
+  },
+  "binding_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "stable_core_anchor_has_low_role_variation_on_current_truth_windows",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_primary_core_rows_are_not_the_main_failed_promotion_surface",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_primary_core_rows_are_not_the_main_failed_promotion_surface",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_primary_core_rows_are_not_the_main_failed_promotion_surface",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "chronology_time_geometry_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "primary_support_family": "catalyst_sequence_family",
+      "binding_posture": "direct_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "primary_support_family": "board_structure_divergence_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_row_has_no_explicit_quiet_window_attachment",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "primary_support_family": "dynamic_role_handoff_family",
+      "binding_posture": "guarded_bindable_now",
+      "blocking_reason": "",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label can bind on the current truth row set."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "primary_support_family": "spillover_maturity_decay_family",
+      "binding_posture": "row_specific_not_currently_bindable",
+      "blocking_reason": "current_truth_candidate_rows_do_not_include_late_extension_or_spillover_surfaces",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This label is globally allowed in principle, but not meaningfully bindable for this row on the current truth set."
+    }
+  ],
+  "interpretation": [
+    "V1.12AK shows that globally admitted labels are not equally bindable on the current truth row set.",
+    "Quiet-window and spillover-boundary labels are especially weak on the present truth-candidate geometry.",
+    "This keeps the project from mistaking bundle admission for actual row-level usability."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bg_as_cpo_oracle_vs_no_leak_gap_review",
+    "do_open_v112bg_now": true,
+    "primary_gap_axis": "risk_control_and_stage_maturity_filtering",
+    "recommended_probability_margin_floor": 0.1845,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bg_gap_review",
+      "actual": {
+        "return_capture_ratio": 0.002,
+        "drawdown_penalty_vs_oracle": 0.3167,
+        "primary_gap_axis": "risk_control_and_stage_maturity_filtering"
+      },
+      "reading": "The review is only useful if it produces a concrete bottleneck attribution and a next-track gate stack."
+    }
+  ],
+  "interpretation": [
+    "V1.12BG is valid because it converts the oracle gap into a selective gate design problem rather than another round of generic feature wish-listing."
+  ]
+}

@@ -1,0 +1,8 @@
+report:
+  name: v112as_cpo_bounded_implementation_backfill_v1
+paths:
+  reports_dir: reports/analysis
+  phase_charter_report: reports/analysis/v112as_phase_charter_v1.json
+  v112ar_patch_spec_report: reports/analysis/v112ar_cpo_feature_implementation_patch_spec_v1.json
+  v112aj_dataset_report: reports/analysis/v112aj_cpo_bounded_label_draft_dataset_assembly_v1.json
+  v112z_cycle_report: reports/analysis/v112z_bounded_cycle_reconstruction_pass_v1.json

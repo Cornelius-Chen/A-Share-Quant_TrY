@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v113f_as_owner_correction_ready_theme_diffusion_pilot_data_assembly_only",
+    "do_open_v113f_now": true,
+    "selected_archetype": "commercial_space_mainline",
+    "pilot_object_count": 3,
+    "owner_review_required_count": 3,
+    "ready_for_owner_correction_next": true,
+    "allow_label_freeze_now": false,
+    "allow_training_now": false,
+    "recommended_next_posture": "close_v113f_and_wait_for_owner_corrections_on_theme_diffusion_sheet"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "pilot_object_pool",
+      "actual": {
+        "pilot_object_count": 3,
+        "dense_local_mapping_object_count": 1,
+        "owner_review_priority_count": 2
+      },
+      "reading": "The first commercial-space pool is small enough for direct owner inspection and explicit role correction."
+    },
+    {
+      "evidence_name": "label_review_sheet",
+      "actual": {
+        "review_row_count": 3,
+        "owner_review_required_count": 3
+      },
+      "reading": "The sheet makes state, role, strength, and driver review explicit before any pilot labeling freeze."
+    }
+  ],
+  "interpretation": [
+    "V1.13F succeeds when the first theme-diffusion pilot draft becomes reviewable by the owner, not when labeling or training starts.",
+    "The branch should stop exactly where owner correction adds the most value.",
+    "The next legal move is owner correction, not auto-labeling or auto-training."
+  ]
+}

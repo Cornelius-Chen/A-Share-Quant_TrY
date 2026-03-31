@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113c_bounded_state_usage_review_v1",
+    "reviewed_high_priority_driver_count": 4,
+    "drivers_allowed_for_schema_review_only": 4,
+    "formal_driver_promotion_now": false,
+    "model_usage_now": false,
+    "execution_usage_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "driver_usage_rows": [
+    {
+      "candidate_driver_name": "policy_backing_tier",
+      "usage_posture": "allow_as_mainline_strength_context_anchor",
+      "allowed_layer": "schema_review_only",
+      "disallowed_layers": [
+        "formal_model_feature",
+        "execution_trigger",
+        "strategy_signal"
+      ],
+      "reading": "Use as a top-layer context anchor when judging whether a theme has the right to become a major mainline."
+    },
+    {
+      "candidate_driver_name": "industrial_advantage_alignment",
+      "usage_posture": "allow_as_structural_viability_filter",
+      "allowed_layer": "schema_review_only",
+      "disallowed_layers": [
+        "formal_model_feature",
+        "execution_trigger",
+        "strategy_signal"
+      ],
+      "reading": "Use as a structural viability filter to separate real industrial themes from weak story shells."
+    },
+    {
+      "candidate_driver_name": "market_regime_tailwind",
+      "usage_posture": "allow_as_regime_amplifier_context",
+      "allowed_layer": "schema_review_only",
+      "disallowed_layers": [
+        "formal_model_feature",
+        "execution_trigger",
+        "strategy_signal"
+      ],
+      "reading": "Use as an amplifier context showing whether the broader tape helps or fights the theme."
+    },
+    {
+      "candidate_driver_name": "event_resonance_intensity",
+      "usage_posture": "allow_as_multi_trigger_confirmation_context",
+      "allowed_layer": "schema_review_only",
+      "disallowed_layers": [
+        "formal_model_feature",
+        "execution_trigger",
+        "strategy_signal"
+      ],
+      "reading": "Use as confirmation that the theme is supported by layered events rather than a single one-day impulse."
+    }
+  ],
+  "interpretation": [
+    "V1.13C keeps the reviewed driver quartet inside the schema-review layer.",
+    "The quartet now has lawful review usage, but still no model, execution, or strategy rights.",
+    "This turns the high-priority drivers into reusable review grammar rather than premature scoring variables."
+  ]
+}

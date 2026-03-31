@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112n_shadow_rerun_v1",
+    "shadow_feature_count": 3,
+    "baseline_shadow_test_accuracy": 0.4628,
+    "baseline_v2_test_accuracy": 0.4628,
+    "gbdt_shadow_test_accuracy": 0.5655,
+    "gbdt_v2_test_accuracy": 0.5655,
+    "baseline_shadow_incremental_gain_present": false,
+    "gbdt_shadow_incremental_gain_present": false,
+    "ready_for_phase_check_next": true
+  },
+  "shadow_feature_rows": [
+    {
+      "feature_name": "shadow_quiet_contraction_stall_recoverable",
+      "source_reading": "quiet contraction inside mixed stall cluster"
+    },
+    {
+      "feature_name": "shadow_residual_breadth_stall_exhaustion",
+      "source_reading": "residual breadth with exhaustion tendency"
+    },
+    {
+      "feature_name": "shadow_unresolved_mixed_stall_residue",
+      "source_reading": "remaining unresolved mixed residue after one inner pass"
+    }
+  ],
+  "model_rows": [
+    {
+      "model_name": "baseline_shadow_v1",
+      "test_accuracy": 0.4628,
+      "prior_test_accuracy": 0.4628,
+      "high_level_consolidation_carry_fp": 34,
+      "prior_high_level_consolidation_carry_fp": 34,
+      "major_markup_carry_fp": 174,
+      "prior_major_markup_carry_fp": 174
+    },
+    {
+      "model_name": "gbdt_shadow_v1",
+      "test_accuracy": 0.5655,
+      "prior_test_accuracy": 0.5655,
+      "high_level_consolidation_carry_fp": 0,
+      "prior_high_level_consolidation_carry_fp": 0,
+      "major_markup_carry_fp": 126,
+      "prior_major_markup_carry_fp": 126
+    }
+  ],
+  "interpretation": [
+    "The shadow rerun keeps the same dataset, same labels, and same split; only review-only inner-draft flags are added.",
+    "If metrics do not move, the result still matters: it means the inner draft is currently more descriptive than incrementally predictive.",
+    "No formal schema change is authorized from this rerun."
+  ]
+}

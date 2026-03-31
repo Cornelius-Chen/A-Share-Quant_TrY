@@ -1,0 +1,240 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ab_cpo_bounded_labeling_review_v1",
+    "primary_labeling_surface_count": 3,
+    "secondary_labeling_surface_count": 4,
+    "review_support_surface_count": 7,
+    "overlay_only_surface_count": 3,
+    "excluded_pending_surface_count": 3,
+    "formal_label_freeze_still_forbidden": true,
+    "formal_training_still_forbidden": true,
+    "ready_for_phase_check_next": true
+  },
+  "labeling_surface_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "labeling_surface": "primary_labeling_surface",
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "labeling_surface": "primary_labeling_surface",
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "labeling_surface": "primary_labeling_surface",
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "labeling_surface": "secondary_labeling_surface",
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "labeling_surface": "secondary_labeling_surface",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "labeling_surface": "secondary_labeling_surface",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "labeling_surface": "secondary_labeling_surface",
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "Later label drafting may use this row."
+    },
+    {
+      "symbol": "300570",
+      "cohort_layer": "branch_extension",
+      "role_family": "connector_mpo_branch",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "601869",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "600487",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "600522",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "000070",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "telecom_adjacent_board_follow_factor",
+      "labeling_surface": "overlay_only_surface",
+      "active_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "603228",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "hardware_sentiment_spillover_factor",
+      "labeling_surface": "overlay_only_surface",
+      "active_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "001267",
+      "cohort_layer": "weak_memory",
+      "role_family": "name_bonus_or_board_follow_memory",
+      "labeling_surface": "overlay_only_surface",
+      "active_stage_windows": [
+        "divergence_decay_3"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "300620",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "upstream_photonics_enabler",
+      "labeling_surface": "excluded_pending_surface",
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "300548",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "module_or_silicon_photonics_adjacency",
+      "labeling_surface": "excluded_pending_surface",
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    },
+    {
+      "symbol": "000988",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "vertical_optoelectronic_platform",
+      "labeling_surface": "excluded_pending_surface",
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "reading": "Keep outside formal label truth for now."
+    }
+  ],
+  "interpretation": [
+    "The labeling review freezes surfaces, not labels.",
+    "Core and secondary objects can now be discussed separately from support-only, overlay-only, and pending rows.",
+    "This remains a boundary phase; formal labels are still closed."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112_single_price_cycle_experimental_training_pilot",
+    "do_open_v112_now": true,
+    "owner_phase_switch_approved": true,
+    "recommended_first_action": "freeze_v112_pilot_cycle_selection_v1"
+  },
+  "charter": {
+    "mission": "Define one high-observability price-cycle experimental training pilot that can later expand into a broader object set without losing state, label, and validation discipline.",
+    "in_scope": [
+      "select one pilot carry family and one pilot cycle archetype",
+      "freeze training objective and label posture",
+      "freeze minimal feature blocks for one cycle experiment",
+      "freeze expansion rules for later multi-object scaling"
+    ],
+    "out_of_scope": [
+      "strategy integration",
+      "full multi-cycle training",
+      "intraday execution modeling",
+      "retained-feature promotion",
+      "heavy black-box model deployment"
+    ],
+    "success_criteria": [
+      "select one pilot cycle with high observable richness",
+      "freeze a minimal training protocol for one-cycle experimentation",
+      "state how later object expansion should occur without breaking validation discipline"
+    ],
+    "stop_criteria": [
+      "if no single cycle can be selected without mixing multiple carry families",
+      "if training objectives cannot be specified without execution leakage",
+      "if the phase drifts into direct signal integration or broad model work"
+    ],
+    "handoff_condition": "After pilot selection and protocol freeze, the next legal move is bounded pilot data assembly or another owner-reviewed phase switch.",
+    "exploration_layer_phase": true
+  },
+  "interpretation": [
+    "V1.12 is not a broad model phase; it is a bounded pilot-design phase for one price cycle.",
+    "The point is to learn one high-signal cycle cleanly before scaling to many objects.",
+    "The next legal move is to pick the pilot cycle family and archetype rather than train immediately."
+  ]
+}

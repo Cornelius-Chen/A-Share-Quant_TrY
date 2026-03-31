@@ -1,0 +1,5413 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112g_baseline_readout_v2",
+    "feature_count_v2": 15,
+    "baseline_v1_test_accuracy": 0.4509,
+    "baseline_v2_test_accuracy": 0.4628,
+    "baseline_v1_major_markup_fp": 178,
+    "baseline_v1_high_level_consolidation_fp": 46,
+    "baseline_v2_major_markup_fp": 174,
+    "baseline_v2_high_level_consolidation_fp": 34,
+    "ready_for_gbdt_v2_next": true
+  },
+  "feature_names": [
+    "product_price_change_proxy",
+    "demand_acceleration_proxy",
+    "supply_tightness_proxy",
+    "official_or_industry_catalyst_presence",
+    "revenue_sensitivity_class",
+    "gross_margin_sensitivity_class",
+    "order_or_capacity_sensitivity_proxy",
+    "earnings_revision_pressure_proxy",
+    "rerating_gap_proxy",
+    "relative_strength_persistence",
+    "volume_expansion_confirmation",
+    "breakout_or_hold_structure",
+    "catalyst_freshness_state",
+    "cross_day_catalyst_persistence",
+    "theme_breadth_confirmation_proxy"
+  ],
+  "fold_rows": [
+    {
+      "trade_date": "2025-03-27",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-27",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-03-27",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-28",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-28",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-03-28",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-31",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-31",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-03-31",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-01",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-01",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-01",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-02",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-02",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-02",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-03",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-03",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-03",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-07",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-07",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-07",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-08",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-08",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-08",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-09",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-09",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-09",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-10",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-10",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-10",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-11",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-11",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-11",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-14",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-14",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-14",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-15",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-15",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-15",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-16",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-16",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-16",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-17",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-17",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-17",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-18",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-18",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-18",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-21",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-21",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-21",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-22",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-22",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-22",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-23",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-23",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-23",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-24",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-24",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-24",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-25",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-25",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-25",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-28",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-28",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-28",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-29",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-29",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-29",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-30",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-04-30",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-04-30",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-06",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-06",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-06",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-07",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-07",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-07",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-08",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-08",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-08",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-09",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-09",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-09",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-12",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-12",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-12",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-13",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-13",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-13",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-14",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-14",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-14",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-15",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-15",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-15",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-16",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-16",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-16",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-19",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-19",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-19",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-20",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-20",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-20",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-21",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-21",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-21",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-22",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-22",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-22",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-23",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-23",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-23",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-26",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-26",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-26",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-27",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-27",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-27",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-28",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-28",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-28",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-29",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-29",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-29",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-30",
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-05-30",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-05-30",
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-03",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-03",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-03",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-04",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-04",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-05",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-05",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-06",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-06",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-06",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-09",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-09",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-10",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-10",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-11",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-11",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-12",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-12",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-13",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-13",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-13",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-16",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-16",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-17",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-17",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-18",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-18",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-19",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-19",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-20",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-20",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-20",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-23",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-23",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-24",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-24",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-25",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-25",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-26",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-26",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-27",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-27",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-27",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-06-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-30",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-06-30",
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-07-01",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-01",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-01",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-02",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-02",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-02",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-03",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-03",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-03",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-04",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-07",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-07",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-07",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-08",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-08",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-08",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-09",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-10",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-11",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-14",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-14",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-14",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-15",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-07-16",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-16",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-17",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-17",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-18",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-18",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-21",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-21",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-21",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-22",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-23",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-23",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-24",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-25",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-28",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-28",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-28",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-29",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-30",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-30",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-31",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-31",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-07-31",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-01",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-01",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-01",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-04",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-05",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-06",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-06",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-06",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-07",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-07",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-07",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-08",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-08",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-08",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-11",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-12",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-13",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-13",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-13",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-14",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-14",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-14",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-15",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-18",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-18",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-19",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-19",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-20",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-20",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-20",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-21",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-21",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-21",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-22",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-26",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-27",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-27",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-27",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-08-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-08-29",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-08-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-09-01",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-01",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-01",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-02",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-02",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-02",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-03",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-03",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-03",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-04",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-05",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-08",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-08",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-08",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-09",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-10",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-11",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-12",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-15",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-16",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-16",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-17",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-17",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-18",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-18",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-19",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-09-19",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-22",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-09-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-23",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-23",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-24",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-25",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-26",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-29",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-30",
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-30",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-09-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-09",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-10",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-13",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-13",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-13",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-14",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-14",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-14",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-15",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-16",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-16",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-17",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-17",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-20",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-20",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-20",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-21",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-21",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-21",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-22",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-23",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-23",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-24",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-27",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-27",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-27",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-28",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-28",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-28",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-29",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-30",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-30",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-31",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-10-31",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-10-31",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-03",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-03",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-03",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-04",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-05",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-06",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-06",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-06",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-07",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-07",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-07",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-10",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-11",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-12",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-13",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-13",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-13",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-14",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-14",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-14",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-17",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-17",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-18",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-18",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-19",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-19",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-20",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-20",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-20",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-21",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-21",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-21",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-24",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-25",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-11-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-26",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-27",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-27",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-27",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-28",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-28",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-11-28",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-01",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-01",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-01",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-02",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-02",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-02",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-03",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-03",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-03",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-04",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2025-12-04",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-05",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-08",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-08",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-08",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-09",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-10",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-10",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-11",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-11",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-12",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-15",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-16",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-16",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-17",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-17",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-17",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-18",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-18",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-18",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-19",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-19",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-22",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-23",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-23",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-24",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-24",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-25",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-25",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-26",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-29",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-30",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-30",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-31",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-31",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2025-12-31",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-05",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-05",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-06",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-06",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-06",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-07",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-07",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-07",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-08",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-08",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-08",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-09",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-09",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-12",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-12",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-13",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-13",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-13",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-14",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-14",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-14",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-15",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-15",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-15",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-16",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-16",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-16",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-19",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-19",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-19",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-20",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-20",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-20",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-21",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-21",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-21",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-22",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-22",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-22",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-23",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-23",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-23",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-26",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-26",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-27",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-27",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-27",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-28",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-28",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-28",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-29",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-29",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-29",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-30",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-01-30",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-01-30",
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-02",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-02",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-02",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-03",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-03",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-03",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-04",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-04",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-04",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-05",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-05",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-05",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-06",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-06",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-06",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-09",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-09",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-09",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-10",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-10",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "watch_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-02-10",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-11",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-11",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-11",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-12",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-12",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-12",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-13",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-13",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-13",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-24",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-24",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-24",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-25",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-25",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-25",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-26",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-26",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-26",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-27",
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-27",
+      "symbol": "300308",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-02-27",
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-03-02",
+      "symbol": "300502",
+      "stage": "rebound",
+      "predicted_label": "carry_constructive",
+      "true_label": "carry_constructive",
+      "correct": true
+    },
+    {
+      "trade_date": "2026-03-02",
+      "symbol": "300308",
+      "stage": "rebound",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "correct": false
+    },
+    {
+      "trade_date": "2026-03-02",
+      "symbol": "300394",
+      "stage": "pullback",
+      "predicted_label": "failed",
+      "true_label": "failed",
+      "correct": true
+    }
+  ],
+  "interpretation": [
+    "This rerun keeps the same dataset and labels but upgrades catalyst-state representation.",
+    "The question is whether richer state semantics help the simple baseline before any new model-family escalation.",
+    "The most important comparison remains hotspot false positives, not generic score chasing."
+  ]
+}

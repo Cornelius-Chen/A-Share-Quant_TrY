@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v19_breadth_evidence_rereview",
+    "v18c_waiting_state_present": true,
+    "breadth_target_feature_count": 2,
+    "target_feature_names": [
+      "policy_followthrough_support",
+      "single_pulse_support"
+    ],
+    "do_open_v19_now": true,
+    "recommended_first_action": "freeze_v19_breadth_rereview_protocol_v1"
+  },
+  "charter": {
+    "mission": "Re-review whether newly collected bounded breadth evidence changes the promotion judgment for the breadth-target provisional features without promoting or integrating any feature now.",
+    "in_scope": [
+      "bounded breadth-evidence re-review protocol",
+      "per-feature promotion-judgment refresh for breadth targets",
+      "updated shortfall ordering after new breadth evidence",
+      "phase-level re-review conclusion"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "new collection beyond V1.8C",
+      "safe-consumption validation work",
+      "cross-pocket or cross-regime validation work",
+      "local-model opening"
+    ],
+    "success_criteria": [
+      "freeze a bounded breadth re-review protocol",
+      "produce refreshed promotion judgments for the breadth-target features",
+      "state whether breadth gaps were materially reduced, unchanged, or resolved",
+      "close the phase with a clear follow-up posture"
+    ],
+    "stop_criteria": [
+      "if re-review drifts into direct promotion",
+      "if the new breadth evidence is insufficient to support even a bounded judgment refresh",
+      "if the phase starts collecting new samples instead of re-reviewing the evidence already collected"
+    ],
+    "handoff_condition": "After the charter opens, only replay-independent breadth re-review artifacts are allowed until the refreshed promotion posture is explicit."
+  },
+  "interpretation": [
+    "V1.8C already produced the first lawful new breadth evidence; the next lawful question is whether that evidence changes promotion judgment.",
+    "That makes re-review more appropriate than another design or collection phase.",
+    "So V1.9 should open as a bounded breadth-evidence re-review phase, not as a promotion or integration phase."
+  ]
+}

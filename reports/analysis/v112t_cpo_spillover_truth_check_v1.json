@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112t_cpo_spillover_truth_check_v1",
+    "reviewed_spillover_row_count": 3,
+    "candidate_a_share_spillover_factor_count": 2,
+    "pure_name_bonus_or_board_follow_count": 1,
+    "formal_training_candidate_count": 0,
+    "ready_for_phase_check_next": true
+  },
+  "spillover_review_rows": [
+    {
+      "symbol": "000070",
+      "existing_chain_role": "story_spillover_or_board_follow",
+      "review_disposition": "preserve_as_a_share_spillover_factor_candidate",
+      "refined_spillover_bucket": "telecom_or_network_adjacent_board_follow",
+      "training_rights_now": "none",
+      "reading": "Keep preserved because it may capture board-follow behavior tied to communications adjacency rather than pure random noise."
+    },
+    {
+      "symbol": "603228",
+      "existing_chain_role": "board_follow_with_unclear_core_link",
+      "review_disposition": "preserve_as_hardware_sentiment_spillover_candidate",
+      "refined_spillover_bucket": "hardware_or_supply_chain_sentiment_spillover",
+      "training_rights_now": "none",
+      "reading": "Keep preserved because it may capture broader hardware-chain sentiment spillover even if the optical-link core tie is weak."
+    },
+    {
+      "symbol": "001267",
+      "existing_chain_role": "board_follow_with_unclear_core_link",
+      "review_disposition": "preserve_as_name_bonus_or_pure_board_follow_candidate",
+      "refined_spillover_bucket": "name_bonus_or_pure_board_follow",
+      "training_rights_now": "none",
+      "reading": "Keep preserved because it may carry A-share-style name bonus or pure board-follow information rather than business relevance."
+    }
+  ],
+  "interpretation": [
+    "V1.12T does not delete spillover rows; it classifies them into review categories.",
+    "The result preserves possible A-share-specific spillover factor candidates while preventing them from contaminating the core cohort silently.",
+    "This is still review memory, not training surface."
+  ]
+}

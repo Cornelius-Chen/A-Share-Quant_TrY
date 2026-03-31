@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ay_as_guarded_branch_training_layer_review",
+    "do_open_v112ay_now": true,
+    "guarded_training_layer_admissible_count": 3,
+    "branch_rows_retained_review_only_count": 1,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "consider_extending_bounded_training_layer_with_guarded_branch_rows_only"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ay_branch_training_layer_review",
+      "actual": {
+        "guarded_training_layer_admissible_count": 3,
+        "branch_rows_retained_review_only_count": 1,
+        "core_targets_stable_after_guarded_branch_admission": true
+      },
+      "reading": "The review is only successful if the project can cut admissible guarded branch rows away from still-mixed branch rows."
+    }
+  ],
+  "interpretation": [
+    "V1.12AY is a bounded training-layer review, not formal training.",
+    "Formal training and signal rights remain closed."
+  ]
+}

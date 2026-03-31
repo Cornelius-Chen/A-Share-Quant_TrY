@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ac_unsupervised_role_challenge_probe",
+    "do_open_v112ac_now": true,
+    "selected_parent_line": "v112aa_v112ab_cpo_cohort_and_label_surface",
+    "recommended_first_action": "freeze_v112ac_unsupervised_role_challenge_probe_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AC CPO Unsupervised Role-Challenge Probe",
+    "mission": "Use a bounded unsupervised probe to challenge the current manual core/adjacent/branch/spillover/pending layering using only contemporaneously visible cohort-stage evidence, without opening formal label freeze, training, or automatic role legislation.",
+    "in_scope": [
+      "cluster cohort rows using active stage windows and evidence-axis features only",
+      "compare latent clusters against the current manual cohort map",
+      "preserve supportive and challenging findings as review-only candidate structures"
+    ],
+    "out_of_scope": [
+      "formal role replacement",
+      "formal label freeze",
+      "training rights",
+      "signal generation",
+      "execution implications"
+    ],
+    "success_criteria": [
+      "the probe reveals whether the current manual role grammar is supported or challenged by data-side structure",
+      "late-cycle spillover and pending ambiguity remain explicit rather than cleaned away",
+      "any new latent structure stays review-only and does not legislate labels"
+    ],
+    "stop_criteria": [
+      "future returns or other post-event truth leak into clustering inputs",
+      "cluster names are turned into automatic formal roles",
+      "the probe is used to silently override pending or spillover boundaries"
+    ]
+  },
+  "interpretation": [
+    "V1.12AC does not replace the manual cohort map; it challenges it.",
+    "The correct posture is hypothesis stress-testing, not automatic role legislation.",
+    "Training and formal labeling remain closed throughout this probe."
+  ]
+}

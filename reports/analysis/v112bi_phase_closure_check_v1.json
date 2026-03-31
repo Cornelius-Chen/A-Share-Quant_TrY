@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bi_as_cpo_cross_sectional_ranker_pilot_success",
+    "v112bi_success_criteria_met": true,
+    "enter_v112bi_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bi_phase_check",
+      "actual": {
+        "trade_count": 19,
+        "cash_ratio": 0.2759
+      },
+      "reading": "The phase closes once the ranker exists as a lawful comparison line on the same 10-row CPO layer."
+    }
+  ],
+  "interpretation": [
+    "V1.12BI closes with the first direct-return ranking portfolio pilot on the lawful 10-row CPO layer."
+  ]
+}

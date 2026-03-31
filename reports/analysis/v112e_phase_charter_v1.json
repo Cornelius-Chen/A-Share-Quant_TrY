@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112e_now_for_gbdt_baseline_attribution_review",
+    "do_open_v112e_now": true,
+    "ready_for_attribution_review_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12E GBDT Baseline Attribution Review",
+    "mission": "Review why the first GBDT sidecar outperformed the interpretable baseline by using same-dataset block ablation and hotspot-specific error attribution.",
+    "in_scope": [
+      "refit the same GBDT sidecar on the frozen pilot dataset",
+      "measure hotspot-specific gains against the V1.12B baseline",
+      "run block-level ablation across catalyst state, earnings bridge, expectation gap, and price confirmation"
+    ],
+    "out_of_scope": [
+      "strategy deployment",
+      "new data acquisition",
+      "object widening",
+      "intraday execution features",
+      "new model families beyond the existing GBDT sidecar"
+    ],
+    "success_criteria": [
+      "the review localizes which feature blocks explain most of the sidecar's hotspot improvement",
+      "the result changes the next feature or model decision basis",
+      "the review stays same-dataset and report-only"
+    ],
+    "stop_criteria": [
+      "ablation adds no decision value beyond the raw sidecar score",
+      "the review requires wider data or weaker validation rules to proceed",
+      "the phase drifts into deployment or object expansion"
+    ]
+  },
+  "interpretation": [
+    "V1.12E exists to explain the first sidecar gain, not to search for a new winner.",
+    "The review remains same-dataset so attribution is about feature blocks and hotspot structure rather than scope drift.",
+    "The correct output is a next-step decision basis, not a new deployment branch."
+  ]
+}

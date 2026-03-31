@@ -1,0 +1,9 @@
+report:
+  name: v112u_cpo_foundation_readiness_review_v1
+paths:
+  reports_dir: reports/analysis
+  v112u_phase_charter_report: reports/analysis/v112u_phase_charter_v1.json
+  v112q_schema_report: reports/analysis/v112q_cpo_information_registry_schema_v1.json
+  v112r_adjacent_validation_report: reports/analysis/v112r_adjacent_cohort_validation_v1.json
+  v112s_chronology_report: reports/analysis/v112s_cpo_chronology_normalization_v1.json
+  v112t_spillover_report: reports/analysis/v112t_cpo_spillover_truth_check_v1.json

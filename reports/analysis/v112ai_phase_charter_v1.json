@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ai_cpo_label_draft_integrity_owner_review",
+    "ready_for_owner_review_next": true,
+    "do_open_v112ai_now": true,
+    "recommended_first_action": "freeze_v112ai_cpo_label_draft_integrity_owner_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AI CPO Label-Draft Integrity Owner Review",
+    "mission": "Review the bounded CPO label draft and classify each label into draft-ready, guarded-draft, review-only future target, or confirmed-only review language without silently dropping potentially useful structures.",
+    "in_scope": [
+      "apply preservation-first review to all draft labels",
+      "freeze owner dispositions for each draft label",
+      "preserve provisional and confirmed splits where needed",
+      "confirm that no label is silently deleted"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training",
+      "formal signal generation",
+      "rewriting the label skeleton itself"
+    ],
+    "success_criteria": [
+      "all draft labels are classified into bounded review tiers",
+      "no label is dropped without explicit leakage or exact-duplicate justification",
+      "guarded and confirmed-only labels remain fenced away from automatic training rights"
+    ]
+  },
+  "interpretation": [
+    "V1.12AI is the owner review gate that converts the draft-integrity layer into a bounded disposition map.",
+    "Preservation-first discipline applies: downgrade and archive are allowed; silent deletion is not.",
+    "Training remains closed throughout this owner review."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "emit_solution_shift_memo_as_data_acquisition_plan",
+    "triggered_from_exhausted_pool": true,
+    "recommended_next_phase_name": "V1.11 Sustained Catalyst Evidence Acquisition Infrastructure",
+    "do_open_v111_now": true
+  },
+  "memo": {
+    "memo_type": "Data Acquisition Plan",
+    "current_primary_bottleneck_category": "data_or_evidence_gap",
+    "why_current_path_no_longer_adds_decision_value": "The current bounded policy-followthrough pool has only two visible candidates and both remain inside the existing 300750 anchor family, so another same-pool probe would repeat the same negative result.",
+    "proposed_shift": "Build sustained catalyst evidence acquisition infrastructure that can generate genuinely new, point-in-time, source-aware, market-confirmed policy-followthrough candidates beyond the current symbol family.",
+    "how_the_shift_changes_the_decision_basis": "It changes the evidence source itself rather than recycling the same bounded pool, allowing future promotion judgment to rest on new family-level evidence instead of repeated re-review.",
+    "why_this_is_not_just_more_artifacts": "The output defines acquisition scope, source hierarchy, admissibility, novelty rules, point-in-time recording, and refresh cadence that can repeatedly produce new candidates.",
+    "freeze_reason_if_no_viable_shift_exists": ""
+  },
+  "interpretation": [
+    "The correct response to the exhausted policy-followthrough pool is to change evidence acquisition, not to continue same-pool probing.",
+    "This memo therefore selects Data Acquisition Plan as the single allowed solution-shift type.",
+    "The next lawful move is an exploration-layer phase that defines sustained evidence acquisition infrastructure."
+  ]
+}

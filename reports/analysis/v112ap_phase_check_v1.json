@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ap_as_bounded_secondary_widen_pilot",
+    "do_open_v112ap_now": true,
+    "core_targets_stable_after_widen": true,
+    "guarded_targets_learnable_count": 3,
+    "best_guarded_target": "role_transition_label",
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "review_if_feature_implementation_patch_should_precede_any_row_geometry_widen"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ap_widen_pilot",
+      "actual": {
+        "core_targets_stable_after_widen": true,
+        "guarded_targets_learnable_count": 3,
+        "best_guarded_target": "role_transition_label"
+      },
+      "reading": "The widened pilot tells the project whether the current gain survives one lawful secondary step."
+    }
+  ],
+  "interpretation": [
+    "V1.12AP is successful if it produces a bounded widen decision, not if it creates pressure for formal training.",
+    "The report-only boundary remains intact."
+  ]
+}

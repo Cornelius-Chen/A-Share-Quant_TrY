@@ -1,0 +1,8 @@
+report:
+  name: v112bv_contributor_aligned_control_pilot_v1
+paths:
+  reports_dir: reports/analysis
+  bp_fusion_report: reports/analysis/v112bp_cpo_selector_maturity_fusion_pilot_v1.json
+  bu_control_pilot_report: reports/analysis/v112bu_phase_conditioned_control_pilot_v1.json
+  bt_extraction_report: reports/analysis/v112bt_phase_conditioned_veto_and_eligibility_extraction_v1.json
+  neutral_pilot_report: reports/analysis/v112bh_cpo_neutral_selective_no_leak_portfolio_pilot_v1.json

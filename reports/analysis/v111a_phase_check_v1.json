@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v111a_as_bounded_first_acquisition_pilot_only",
+    "do_open_v111a_now": true,
+    "admitted_candidate_count": 2,
+    "admitted_policy_followthrough_count": 0,
+    "direct_policy_followthrough_breadth_gain_present": false,
+    "acquisition_path_validated": true,
+    "allow_retained_promotion_now": false,
+    "allow_strategy_integration_now": false,
+    "recommended_next_posture": "close_v111a_and_preserve_new_candidate_records_for_future_owner_review"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v111a_charter",
+      "actual": {
+        "acceptance_posture": "open_v111a_bounded_first_catalyst_acquisition_pilot",
+        "do_open_v111a_now": true
+      },
+      "reading": "The owner-reviewed first pilot opened lawfully on top of the V1.11 infrastructure."
+    },
+    {
+      "evidence_name": "screened_first_collection",
+      "actual": {
+        "screened_candidate_count": 5,
+        "admitted_candidate_count": 2,
+        "admitted_policy_followthrough_count": 0
+      },
+      "reading": "The pilot produced real new candidate admissions, but direct policy-followthrough breadth gain must be read separately from generic acquisition success."
+    }
+  ],
+  "interpretation": [
+    "V1.11A validated that the new acquisition basis can admit non-anchor official or high-trust candidates under bounded rules.",
+    "The pilot did not automatically convert those admissions into direct policy-followthrough breadth evidence or retained-feature advancement.",
+    "The correct next move is closure into waiting state, not auto-expansion."
+  ]
+}

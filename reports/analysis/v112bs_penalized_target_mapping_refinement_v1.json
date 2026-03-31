@@ -1,0 +1,370 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bs_penalized_target_mapping_refinement_v1",
+    "state_row_count": 324,
+    "feature_dimension_count": 15,
+    "cluster_count": 4,
+    "candidate_veto_cluster_count": 0,
+    "candidate_veto_neighborhood_count": 12,
+    "candidate_transition_band_count": 12,
+    "candidate_bundle_count": 2,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "map_penalized_veto_regions_back_to_phase_conditioned_veto_and_eligibility_design"
+  },
+  "penalized_cluster_rows": [
+    {
+      "cluster_id": 0,
+      "row_count": 178,
+      "average_forward_return_20d": 0.0863,
+      "average_max_drawdown_20d": -0.0976,
+      "average_penalized_veto_intensity": 0.2357,
+      "bad_trade_density": 0.4494,
+      "tail_loss_density": 0.0843,
+      "dominant_stage_family": "main_markup",
+      "dominant_role_family": "domestic_optics_platform_bridge",
+      "penalized_posture": "mixed_risk_transition"
+    },
+    {
+      "cluster_id": 1,
+      "row_count": 43,
+      "average_forward_return_20d": 0.117,
+      "average_max_drawdown_20d": -0.1217,
+      "average_penalized_veto_intensity": 0.1699,
+      "bad_trade_density": 0.3488,
+      "tail_loss_density": 0.1395,
+      "dominant_stage_family": "divergence_and_decay",
+      "dominant_role_family": "high_beta_core_module",
+      "penalized_posture": "offensive_cluster"
+    },
+    {
+      "cluster_id": 2,
+      "row_count": 45,
+      "average_forward_return_20d": 0.034,
+      "average_max_drawdown_20d": -0.1185,
+      "average_penalized_veto_intensity": 0.2718,
+      "bad_trade_density": 0.4667,
+      "tail_loss_density": 0.0667,
+      "dominant_stage_family": "main_markup",
+      "dominant_role_family": "high_beta_core_module",
+      "penalized_posture": "mixed_risk_transition"
+    },
+    {
+      "cluster_id": 3,
+      "row_count": 58,
+      "average_forward_return_20d": 0.1161,
+      "average_max_drawdown_20d": -0.1192,
+      "average_penalized_veto_intensity": 0.2203,
+      "bad_trade_density": 0.431,
+      "tail_loss_density": 0.1552,
+      "dominant_stage_family": "divergence_and_decay",
+      "dominant_role_family": "high_beta_core_module",
+      "penalized_posture": "mixed_risk_transition"
+    }
+  ],
+  "veto_neighborhood_rows": [
+    {
+      "neighborhood_id": 1,
+      "trade_date": "2023-07-20",
+      "symbol": "603083",
+      "stage_family": "diffusion",
+      "role_family": "high_beta_module_extension",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1782,
+      "local_average_penalized_veto_intensity": 0.523,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 2,
+      "trade_date": "2023-07-21",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1784,
+      "local_average_penalized_veto_intensity": 0.5222,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 3,
+      "trade_date": "2023-07-18",
+      "symbol": "688205",
+      "stage_family": "diffusion",
+      "role_family": "high_end_module_extension",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1747,
+      "local_average_penalized_veto_intensity": 0.5214,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 4,
+      "trade_date": "2025-06-03",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1689,
+      "local_average_penalized_veto_intensity": 0.5207,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 5,
+      "trade_date": "2023-08-02",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1668,
+      "local_average_penalized_veto_intensity": 0.518,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 6,
+      "trade_date": "2023-07-25",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.165,
+      "local_average_penalized_veto_intensity": 0.5173,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 7,
+      "trade_date": "2023-07-24",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "local_bad_trade_density": 0.9167,
+      "local_average_max_drawdown_20d": -0.1664,
+      "local_average_penalized_veto_intensity": 0.5167,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 8,
+      "trade_date": "2023-07-10",
+      "symbol": "603083",
+      "stage_family": "diffusion",
+      "role_family": "high_beta_module_extension",
+      "local_bad_trade_density": 0.8333,
+      "local_average_max_drawdown_20d": -0.1619,
+      "local_average_penalized_veto_intensity": 0.4759,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 9,
+      "trade_date": "2023-07-12",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "local_bad_trade_density": 0.8333,
+      "local_average_max_drawdown_20d": -0.1512,
+      "local_average_penalized_veto_intensity": 0.4692,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 10,
+      "trade_date": "2023-07-11",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "local_bad_trade_density": 0.8333,
+      "local_average_max_drawdown_20d": -0.149,
+      "local_average_penalized_veto_intensity": 0.4691,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 11,
+      "trade_date": "2023-07-13",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "local_bad_trade_density": 0.8333,
+      "local_average_max_drawdown_20d": -0.1492,
+      "local_average_penalized_veto_intensity": 0.4679,
+      "pocket_reading": "candidate_veto_neighborhood"
+    },
+    {
+      "neighborhood_id": 12,
+      "trade_date": "2023-08-16",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "local_bad_trade_density": 0.8333,
+      "local_average_max_drawdown_20d": -0.142,
+      "local_average_penalized_veto_intensity": 0.4661,
+      "pocket_reading": "candidate_veto_neighborhood"
+    }
+  ],
+  "transition_band_rows": [
+    {
+      "transition_band_id": 1,
+      "trade_date": "2023-07-24",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "cluster_id": 0,
+      "boundary_margin": 0.068,
+      "penalized_veto_intensity": 0.5529,
+      "boundary_risk_score": 0.8349,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 2,
+      "trade_date": "2023-08-10",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "cluster_id": 0,
+      "boundary_margin": 0.0977,
+      "penalized_veto_intensity": 0.5362,
+      "boundary_risk_score": 0.7885,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 3,
+      "trade_date": "2023-07-21",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "cluster_id": 0,
+      "boundary_margin": 0.1539,
+      "penalized_veto_intensity": 0.5503,
+      "boundary_risk_score": 0.7464,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 4,
+      "trade_date": "2023-09-19",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "cluster_id": 0,
+      "boundary_margin": 0.1801,
+      "penalized_veto_intensity": 0.5384,
+      "boundary_risk_score": 0.7083,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 5,
+      "trade_date": "2023-07-20",
+      "symbol": "603083",
+      "stage_family": "diffusion",
+      "role_family": "high_beta_module_extension",
+      "cluster_id": 0,
+      "boundary_margin": 0.2076,
+      "penalized_veto_intensity": 0.5401,
+      "boundary_risk_score": 0.6825,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 6,
+      "trade_date": "2023-07-13",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "cluster_id": 0,
+      "boundary_margin": 0.4983,
+      "penalized_veto_intensity": 0.6323,
+      "boundary_risk_score": 0.6323,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 7,
+      "trade_date": "2023-08-02",
+      "symbol": "002281",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "cluster_id": 0,
+      "boundary_margin": 0.2598,
+      "penalized_veto_intensity": 0.5378,
+      "boundary_risk_score": 0.628,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 8,
+      "trade_date": "2023-07-11",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "cluster_id": 0,
+      "boundary_margin": 0.5853,
+      "penalized_veto_intensity": 0.6181,
+      "boundary_risk_score": 0.6181,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 9,
+      "trade_date": "2023-07-12",
+      "symbol": "301205",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "cluster_id": 0,
+      "boundary_margin": 0.5228,
+      "penalized_veto_intensity": 0.617,
+      "boundary_risk_score": 0.617,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 10,
+      "trade_date": "2023-07-03",
+      "symbol": "300502",
+      "stage_family": "divergence_and_decay",
+      "role_family": "high_beta_core_module",
+      "cluster_id": 3,
+      "boundary_margin": 0.7479,
+      "penalized_veto_intensity": 0.6053,
+      "boundary_risk_score": 0.6053,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 11,
+      "trade_date": "2023-06-30",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "cluster_id": 0,
+      "boundary_margin": 0.953,
+      "penalized_veto_intensity": 0.5914,
+      "boundary_risk_score": 0.5914,
+      "band_reading": "candidate_transition_veto_band"
+    },
+    {
+      "transition_band_id": 12,
+      "trade_date": "2023-07-05",
+      "symbol": "300502",
+      "stage_family": "divergence_and_decay",
+      "role_family": "high_beta_core_module",
+      "cluster_id": 3,
+      "boundary_margin": 0.7187,
+      "penalized_veto_intensity": 0.5817,
+      "boundary_risk_score": 0.5817,
+      "band_reading": "candidate_transition_veto_band"
+    }
+  ],
+  "candidate_bundle_rows": [
+    {
+      "bundle_name": "offensive_resonance_direction",
+      "feature_1": "ranker_score",
+      "feature_2": "catalyst_presence_proxy",
+      "feature_3": "core_branch_relative_strength_spread_state",
+      "reading": "high-return cluster direction candidate",
+      "average_forward_return_20d": 0.4845,
+      "average_max_drawdown_20d": -0.0239
+    },
+    {
+      "bundle_name": "veto_resonance_direction",
+      "feature_1": "spillover_saturation_overlay_state",
+      "feature_2": "internal_turnover_concentration_state",
+      "feature_3": "role_deterioration_spread_state",
+      "reading": "risk-surface direction candidate",
+      "average_penalized_veto_intensity": 0.5769,
+      "average_max_drawdown_20d": -0.2406
+    }
+  ],
+  "interpretation": [
+    "V1.12BS keeps the high-dimensional state representation fixed and only refines how danger is made visible.",
+    "Risk structure is allowed to surface as clusters, local neighborhoods, or transition bands instead of forcing it into a single clean bad cluster."
+  ]
+}

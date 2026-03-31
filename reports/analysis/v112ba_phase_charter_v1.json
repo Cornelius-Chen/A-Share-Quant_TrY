@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ba_10_row_layer_replacement_review",
+    "do_open_v112ba_now": true,
+    "recommended_first_action": "freeze_v112ba_cpo_10_row_layer_replacement_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BA CPO 10-Row Layer Replacement Review",
+    "mission": "Review whether the new 10-row bounded training-facing layer can replace the original 7-row baseline as the default layer for the next bounded pilot.",
+    "in_scope": [
+      "compare the 7-row baseline and the 10-row bounded extension",
+      "preserve guarded posture on the three added branch rows",
+      "decide default-layer replacement only within the bounded pilot scope"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "formal signal generation",
+      "connector/MPO branch admission",
+      "broader row-geometry widen"
+    ],
+    "success_criteria": [
+      "a default next-pilot layer can be named explicitly",
+      "the replacement decision preserves guarded branch boundaries",
+      "the next lawful move becomes an actual pilot on the chosen layer"
+    ]
+  },
+  "interpretation": [
+    "V1.12BA is a replacement review, not a new training promotion pass.",
+    "This remains bounded, report-only, and non-deployable."
+  ]
+}

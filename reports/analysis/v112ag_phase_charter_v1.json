@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ag_cpo_bounded_label_draft_assembly",
+    "do_open_v112ag_now": true,
+    "selected_parent_line": "v112aa_v112ab_v112ad_v112af_cpo_label_feature_cohort_consistency",
+    "recommended_first_action": "freeze_v112ag_cpo_bounded_label_draft_assembly_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AG CPO Bounded Label-Draft Assembly",
+    "mission": "Assemble a bounded, review-first CPO label draft that checks whether current label language is consistently supported by cohort, role, chronology, and feature-family structure without forcing false precision or leaking future information.",
+    "in_scope": [
+      "freeze a minimal label surface skeleton",
+      "freeze family-to-label support mappings",
+      "run anti-leakage review against key draft labels",
+      "preserve ambiguity through pending, weak-confidence, and review-only draft states"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training",
+      "formal signal generation",
+      "auto-promotion of candidate features into truth"
+    ],
+    "success_criteria": [
+      "important draft labels are supportable by current families rather than narrative intuition alone",
+      "labels that need ex-post confirmation are explicitly split or downgraded",
+      "spillover, board, role, and phase dimensions are not flattened into one crude strength label"
+    ],
+    "stop_criteria": [
+      "pending rows are silently forced into clean draft labels",
+      "draft labels require future outcome information without being marked confirmed-only",
+      "overlay-only structures are promoted into core truth labels"
+    ]
+  },
+  "interpretation": [
+    "V1.12AG is an assembly and integrity check, not a pretraining sprint.",
+    "The goal is to see whether labels, families, cohort layers, and dynamic roles fit together without hiding ambiguity.",
+    "Formal labels and training remain closed throughout this phase."
+  ]
+}

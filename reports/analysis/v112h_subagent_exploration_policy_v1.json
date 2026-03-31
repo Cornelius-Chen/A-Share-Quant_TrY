@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_subagent_exploration_policy_v1",
+    "goal": "use subagents only for bounded repetitive exploration work that does not block or override the mainline",
+    "max_parallel_subagents": 2,
+    "max_tasks_per_round": 3,
+    "default_compute_class": "low",
+    "allow_heavy_models": false,
+    "owner_review_required_before_consumption": true
+  },
+  "allowed_task_classes": [
+    "hotspot_bucketization",
+    "feature_ablation_batch",
+    "constrained_proxy_generation",
+    "review_sheet_generation",
+    "candidate_prescreen_under_frozen_rules"
+  ],
+  "forbidden_task_classes": [
+    "label_schema_definition",
+    "feature_candidacy_or_promotion_decision",
+    "strategy_signal_definition",
+    "execution_timing_decision",
+    "phase_switch_decision",
+    "open_ended_model_search",
+    "wide_dataset_growth"
+  ],
+  "interpretation": [
+    "Subagents are not expected to solve the mainline problem directly.",
+    "Their job is to cheaply generate, filter, and format bounded exploratory evidence.",
+    "Any output still requires owner and mainline review before it can affect labels, feature promotion, or scope."
+  ]
+}

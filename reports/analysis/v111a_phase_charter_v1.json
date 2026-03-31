@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v111a_bounded_first_catalyst_acquisition_pilot",
+    "do_open_v111a_now": true,
+    "ready_for_bounded_first_pilot_next": true,
+    "owner_phase_switch_approved": true,
+    "recommended_first_action": "freeze_v111a_screened_collection_protocol_v1"
+  },
+  "charter": {
+    "mission": "Execute one owner-reviewed bounded first catalyst acquisition pilot under the frozen V1.11 infrastructure to test whether new non-anchor, point-in-time, source-aware, market-confirmed sustained-catalyst candidates can be admitted.",
+    "in_scope": [
+      "bounded candidate screening under frozen source hierarchy",
+      "admission against frozen admissibility and family novelty rules",
+      "candidate recording for newly admitted non-anchor cases",
+      "pilot-only collection summary"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "generic replay growth",
+      "automatic follow-on pilot phases",
+      "same-pool policy-followthrough re-probing"
+    ],
+    "success_criteria": [
+      "screen the first bounded candidate pool under V1.11 rules",
+      "admit at least one lawful non-anchor candidate or close with a clear negative result",
+      "stay within candidate and admission caps",
+      "record feature-shadow implications without opening promotion"
+    ],
+    "stop_criteria": [
+      "candidate cap reached",
+      "admission cap reached",
+      "all screened rows fail frozen admissibility or novelty rules",
+      "the branch drifts into promotion or strategy arguments"
+    ],
+    "handoff_condition": "After the pilot collection summary, the branch must close and return to waiting state unless the owner explicitly opens another phase.",
+    "exploration_layer_phase": true,
+    "owner_reviewed_exception_phase": true,
+    "auto_follow_on_forbidden": true
+  },
+  "interpretation": [
+    "V1.11A is not a new acquisition-design phase; it is the first bounded execution pilot on top of the frozen acquisition basis.",
+    "The pilot remains exploration-layer only and cannot promote features or auto-open later phases.",
+    "The next legal action is a screened collection protocol that turns V1.11 rules into a small executable pilot."
+  ]
+}

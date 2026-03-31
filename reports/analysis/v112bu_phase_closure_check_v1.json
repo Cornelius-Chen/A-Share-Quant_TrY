@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bu_as_phase_conditioned_control_pilot_success",
+    "v112bu_success_criteria_met": true,
+    "enter_v112bu_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bu_phase_check",
+      "actual": {
+        "acceptance_posture": "keep_v112bu_as_phase_conditioned_control_pilot",
+        "trade_count": 7,
+        "vetoed_trade_count": 0,
+        "holding_veto_half_life_count": 2,
+        "ready_for_phase_closure_next": true
+      },
+      "reading": "The phase closes once the extracted controls have been exercised on the baseline and produced a comparison-ready outcome."
+    }
+  ],
+  "interpretation": [
+    "V1.12BU closes with the first lawful test of phase-conditioned controls on top of the selector-maturity fusion baseline."
+  ]
+}

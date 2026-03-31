@@ -1,0 +1,162 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cp_neutral_core_residual_control_injection_replay_v1",
+    "replayed_trade_count": 7,
+    "holding_veto_count": 3,
+    "de_risk_count": 1,
+    "selected_total_return": 2.2104,
+    "selected_max_drawdown": -0.1826,
+    "neutral_total_return": 2.2481,
+    "neutral_max_drawdown": -0.2106,
+    "return_delta_vs_neutral": -0.0377,
+    "drawdown_delta_vs_neutral": 0.028,
+    "beats_neutral_return": false,
+    "beats_neutral_drawdown": true,
+    "combined_promotion_ready": false,
+    "recommended_next_posture": "keep_core_residual_controls_split_do_not_force_combined_promotion_yet"
+  },
+  "replay_trade_rows": [
+    {
+      "entry_date": "2023-05-09",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "baseline_forward_return_20d": 0.2368,
+      "replay_forward_return_20d": 0.1702,
+      "control_band": "de_risk_band",
+      "trigger_reason": "late_main_markup_expression_risk_derisk",
+      "trigger_trade_date": "2023-05-22",
+      "trigger_day_index": 9,
+      "trigger_snapshot": {
+        "day_index": 9,
+        "close_below_ma5": true,
+        "close_below_ma10": true,
+        "retained_gain_from_entry": -0.0294,
+        "draw_from_peak": -0.154,
+        "daily_ret": -0.059,
+        "vol_ratio": 0.7738
+      }
+    },
+    {
+      "entry_date": "2023-06-07",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": 0.3596,
+      "replay_forward_return_20d": 0.3596,
+      "control_band": "continue_band",
+      "trigger_reason": "hold_valid_under_current_state_band",
+      "trigger_trade_date": null,
+      "trigger_day_index": null,
+      "trigger_snapshot": null
+    },
+    {
+      "entry_date": "2024-02-05",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": 0.4719,
+      "replay_forward_return_20d": 0.4719,
+      "control_band": "continue_band",
+      "trigger_reason": "hold_valid_under_current_state_band",
+      "trigger_trade_date": null,
+      "trigger_day_index": null,
+      "trigger_snapshot": null
+    },
+    {
+      "entry_date": "2024-03-15",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": -0.062,
+      "replay_forward_return_20d": -0.0546,
+      "control_band": "holding_veto_band",
+      "trigger_reason": "late_main_markup_holding_veto",
+      "trigger_trade_date": "2024-03-22",
+      "trigger_day_index": 5,
+      "trigger_snapshot": {
+        "day_index": 5,
+        "close_below_ma5": true,
+        "close_below_ma10": true,
+        "retained_gain_from_entry": -0.0546,
+        "draw_from_peak": -0.0684,
+        "daily_ret": 0.0,
+        "vol_ratio": 0.7725
+      }
+    },
+    {
+      "entry_date": "2025-07-24",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": 0.4321,
+      "replay_forward_return_20d": 0.4321,
+      "control_band": "continue_band",
+      "trigger_reason": "hold_valid_under_current_state_band",
+      "trigger_trade_date": null,
+      "trigger_day_index": null,
+      "trigger_snapshot": null
+    },
+    {
+      "entry_date": "2025-09-12",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": -0.0452,
+      "replay_forward_return_20d": -0.0436,
+      "control_band": "holding_veto_band",
+      "trigger_reason": "late_main_markup_holding_veto",
+      "trigger_trade_date": "2025-09-30",
+      "trigger_day_index": 12,
+      "trigger_snapshot": {
+        "day_index": 12,
+        "close_below_ma5": true,
+        "close_below_ma10": true,
+        "retained_gain_from_entry": -0.0436,
+        "draw_from_peak": -0.0711,
+        "daily_ret": -0.0314,
+        "vol_ratio": 0.9481
+      }
+    },
+    {
+      "entry_date": "2025-12-19",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "baseline_forward_return_20d": 0.0233,
+      "replay_forward_return_20d": 0.0587,
+      "control_band": "holding_veto_band",
+      "trigger_reason": "late_main_markup_holding_veto",
+      "trigger_trade_date": "2026-01-06",
+      "trigger_day_index": 10,
+      "trigger_snapshot": {
+        "day_index": 10,
+        "close_below_ma5": true,
+        "close_below_ma10": true,
+        "retained_gain_from_entry": 0.0587,
+        "draw_from_peak": -0.054,
+        "daily_ret": -0.0293,
+        "vol_ratio": 1.2288
+      }
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "replay_vs_neutral_return",
+      "baseline_value": 2.2481,
+      "pilot_value": 2.2104,
+      "delta": -0.0377
+    },
+    {
+      "comparison_name": "replay_vs_neutral_drawdown",
+      "baseline_value": -0.2106,
+      "pilot_value": -0.1826,
+      "delta": 0.028
+    }
+  ],
+  "interpretation": [
+    "V1.12CP injects the already-extracted 300308 holding-veto and 300502 de-risk controls back into the neutral baseline without reopening selector logic.",
+    "The replay checks whether core residual controls can improve neutral as a combined action layer rather than as isolated contributor studies.",
+    "If the combined replay improves drawdown but gives back some return, the right reading is not failure of the individual controls but remaining calibration tension between leader-exit discipline and high-beta expression retention."
+  ]
+}

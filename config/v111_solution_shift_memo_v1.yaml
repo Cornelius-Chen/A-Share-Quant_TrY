@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: solution_shift_memo_v1.11
+
+paths:
+  v110a_phase_closure_report: reports/analysis/v110a_phase_closure_check_v1.json
+  v110a_cross_family_probe_report: reports/analysis/v110a_cross_family_probe_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v111_solution_shift_memo_v1

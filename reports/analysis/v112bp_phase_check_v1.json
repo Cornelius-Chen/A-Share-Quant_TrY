@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bp_as_cpo_selector_maturity_fusion_pilot",
+    "do_open_v112bp_now": true,
+    "trade_count": 7,
+    "total_return": 2.1918,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bp_fusion_pilot",
+      "actual": {
+        "trade_count": 7,
+        "neutral_return_delta": -0.0563,
+        "bk_drawdown_delta": 0.1579
+      },
+      "reading": "The fusion phase is only useful if it makes the selector-versus-discipline tradeoff explicit."
+    }
+  ],
+  "interpretation": [
+    "V1.12BP phase check confirms the first selector-plus-overlay fusion line exists as a bounded experiment."
+  ]
+}

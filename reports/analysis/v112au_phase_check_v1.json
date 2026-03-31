@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112au_as_bounded_row_geometry_widen_pilot",
+    "do_open_v112au_now": true,
+    "core_targets_stable_after_row_widen": false,
+    "guarded_targets_stable_after_row_widen": true,
+    "row_count_after_widen": 11,
+    "allow_formal_training_now": false,
+    "allow_formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "keep_branch_rows_as_review_only_and_patch_branch_role_geometry_before_any_training_widen"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112au_row_widen",
+      "actual": {
+        "row_count_after_widen": 11,
+        "added_branch_row_count": 4,
+        "core_targets_stable_after_row_widen": false,
+        "guarded_targets_stable_after_row_widen": true
+      },
+      "reading": "The row-geometry widen is only successful if branch-row admission does not collapse the current post-patch stack."
+    }
+  ],
+  "interpretation": [
+    "V1.12AU is a bounded geometry experiment, not a training promotion pass.",
+    "Formal training and signal rights remain closed."
+  ]
+}

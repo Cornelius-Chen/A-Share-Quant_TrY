@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v110a_cross_family_probe_v1_as_single_probe",
+    "candidate_count": 2,
+    "admitted_case_count": 0,
+    "rejected_case_count": 2,
+    "non_redundant_case_count": 0,
+    "successful_negative_probe": true,
+    "ready_for_v110a_phase_check_next": true
+  },
+  "probe_rows": [
+    {
+      "lane_id": "mainline_trend_b::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "same_symbol_family_as_anchor": true,
+      "already_used_in_v18c": true,
+      "catalyst_context_identical_to_anchor": true,
+      "non_redundant_under_probe_rules": false,
+      "probe_admission_status": "reject",
+      "rejection_reason": "same_symbol_family_anchor_cluster"
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "same_symbol_family_as_anchor": true,
+      "already_used_in_v18c": true,
+      "catalyst_context_identical_to_anchor": true,
+      "non_redundant_under_probe_rules": false,
+      "probe_admission_status": "reject",
+      "rejection_reason": "same_symbol_family_anchor_cluster"
+    }
+  ],
+  "interpretation": [
+    "V1.10A does not widen the pool; it screens only the current bounded policy-followthrough candidates.",
+    "A case must be cross-family and non-redundant relative to the 300750-based anchor to count.",
+    "If no such case exists, the phase still succeeds as a lawful negative probe rather than forcing new evidence."
+  ]
+}

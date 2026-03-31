@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v18a_active_but_bounded_as_sample_breadth_expansion_design",
+    "v18a_open": true,
+    "target_feature_count": 2,
+    "entry_row_count": 2,
+    "collect_samples_now": false,
+    "promote_retained_now": false,
+    "do_integrate_into_strategy_now": false,
+    "recommended_next_posture": "prepare_v18a_phase_closure_or_waiting_state_not_sample_collection"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v18a_charter",
+      "actual": {
+        "acceptance_posture": "open_v18a_sample_breadth_expansion",
+        "target_feature_names": [
+          "single_pulse_support",
+          "policy_followthrough_support"
+        ]
+      },
+      "reading": "V1.8A opened lawfully as a bounded sample-breadth expansion phase for two explicit targets."
+    },
+    {
+      "evidence_name": "breadth_entry_design",
+      "actual": {
+        "entry_row_count": 2,
+        "allow_unbounded_sample_collection_now": false
+      },
+      "reading": "The bounded review already defines the minimum lawful entry design without authorizing broad sample collection."
+    }
+  ],
+  "interpretation": [
+    "V1.8A has produced bounded breadth-entry design without widening into generic sample growth.",
+    "That means the phase now has a clear readiness posture and does not need forced collection inside the same cycle.",
+    "The next legal step is a closure check, not sample collection or promotion."
+  ]
+}

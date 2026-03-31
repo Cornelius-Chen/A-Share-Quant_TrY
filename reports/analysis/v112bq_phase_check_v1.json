@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bq_as_cpo_gate_precision_sweep",
+    "do_open_v112bq_now": true,
+    "best_total_return": 0.9938,
+    "best_max_drawdown": -0.2164,
+    "best_objective_score": 0.4745,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "best_gate_candidate",
+      "actual": {
+        "best_candidate_signature": "ranker>=0.3516|maturity>=-0.3326|regime>=-0.0755|turnover<=0.3326|spillover<=0.0000|pressure<=1.0000",
+        "neutral_drawdown_delta": -0.0058,
+        "best_bad_trade_suppression_rate": 0.9474
+      },
+      "reading": "The phase is only useful if it turns gate research into concrete candidate rules and suppression metrics."
+    }
+  ],
+  "interpretation": [
+    "V1.12BQ phase check confirms gate precision is now being tested as a bounded rule discovery layer rather than abstract overlay discussion."
+  ]
+}

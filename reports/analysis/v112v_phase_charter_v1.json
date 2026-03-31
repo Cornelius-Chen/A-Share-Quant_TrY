@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112v_cpo_daily_board_chronology_operationalization",
+    "do_open_v112v_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112v_cpo_daily_board_chronology_operationalization_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12V CPO Daily Board Chronology Series Operationalization",
+    "mission": "Turn the already-frozen CPO chronology grammar into an operational day-level board chronology table spec so board strength, breadth, turnover, and event overlap can later be attached consistently.",
+    "in_scope": [
+      "operationalize the daily board chronology series gap called out in V1.12U",
+      "freeze a bounded table schema for board chronology rows",
+      "freeze source precedence and missingness handling"
+    ],
+    "out_of_scope": [
+      "future catalyst calendar operationalization",
+      "spillover factor testing",
+      "adjacent role split cleanup",
+      "training authorization",
+      "signal generation"
+    ],
+    "success_criteria": [
+      "the board-level chronology gap is no longer described only abstractly",
+      "the project has an explicit daily chronology table spec with bounded fields",
+      "source precedence and missingness are explicit enough for later collection work"
+    ],
+    "stop_criteria": [
+      "the phase turns into bulk daily-data backfill",
+      "training or feature promotion is opened implicitly",
+      "the board chronology layer is widened into general market-state modeling"
+    ]
+  },
+  "interpretation": [
+    "V1.12V attacks one explicit material gap from V1.12U.",
+    "It stays in the information-foundation layer and does not authorize training.",
+    "The purpose is operational clarity, not bulk data expansion."
+  ]
+}

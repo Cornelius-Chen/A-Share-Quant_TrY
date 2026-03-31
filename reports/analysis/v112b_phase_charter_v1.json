@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112b_now_for_first_trainable_dataset_freeze_and_baseline",
+    "owner_accepted_unified_cycle_draft": true,
+    "pilot_object_count": 3,
+    "do_open_v112b_now": true,
+    "ready_for_dataset_freeze_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12B First Trainable Pilot Dataset Freeze And Baseline Readout",
+    "mission": "Freeze the first owner-accepted three-object optical-link pilot dataset and run one report-only baseline readout under the existing V1.12 training protocol.",
+    "in_scope": [
+      "freeze the owner-accepted pilot rows into a first trainable dataset",
+      "assemble daily sample rows inside the accepted cycle windows",
+      "run one bounded time-split baseline readout",
+      "keep the result report-only and owner-reviewable"
+    ],
+    "out_of_scope": [
+      "strategy integration",
+      "intraday execution features",
+      "retained-feature promotion",
+      "black-box deployment",
+      "automatic multi-object widening beyond the first three optical-link names"
+    ],
+    "success_criteria": [
+      "the first trainable pilot dataset is frozen from the accepted three-symbol draft",
+      "one bounded baseline readout runs successfully under time-split rules",
+      "the output remains report-only and does not auto-open strategy training"
+    ],
+    "stop_criteria": [
+      "cycle windows cannot be converted into a clean sample table",
+      "the bounded baseline readout cannot run without breaking protocol rules",
+      "the result would require strategy integration or widened object growth to stay alive"
+    ],
+    "handoff_condition": "after the first baseline readout, return to owner review instead of auto-opening a wider training branch"
+  },
+  "interpretation": [
+    "V1.12B is not a strategy-training phase; it is the first lawful step from accepted draft data into a trainable pilot table.",
+    "The phase remains bounded to the three optical-link pilot names and the existing V1.12 grammar.",
+    "The correct close-out posture is owner review of the report-only readout, not automatic widening."
+  ]
+}

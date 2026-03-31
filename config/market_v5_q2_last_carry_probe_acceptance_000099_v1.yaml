@@ -1,0 +1,16 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reports_dir: reports/analysis
+  reassessment_report: reports/analysis/v12_v5_reassessment_v1.json
+  divergence_report: reports/analysis/market_v5_q2_trade_divergence_capture_b_v1.json
+  opening_report: reports/analysis/market_v5_q2_specialist_window_opening_000099_b_v1.json
+  persistence_report: reports/analysis/market_v5_q2_specialist_window_persistence_000099_b_v1.json
+
+report:
+  name: market_v5_q2_last_carry_probe_acceptance_000099_v1
+
+analysis:
+  target_symbol: "000099"

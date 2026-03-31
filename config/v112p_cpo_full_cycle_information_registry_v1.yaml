@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: v112p_cpo_full_cycle_information_registry_v1
+
+paths:
+  v112p_phase_charter_report: reports/analysis/v112p_phase_charter_v1.json
+  v112o_study_scope_report: reports/analysis/v112o_optical_link_study_scope_v1.json
+  v112b_pilot_dataset_report: reports/analysis/v112b_pilot_dataset_freeze_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v112p_cpo_full_cycle_information_registry_v1

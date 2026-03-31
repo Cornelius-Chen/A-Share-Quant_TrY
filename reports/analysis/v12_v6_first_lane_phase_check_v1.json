@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "hold_second_v6_lane_until_new_positive_or_acceptance_grade_candidate",
+    "top_driver": "600118",
+    "first_lane_opening_led": true,
+    "first_lane_changes_training_reading": false,
+    "remaining_positive_symbol_count_excluding_top": 0,
+    "negative_true_carry_candidate_count": 1,
+    "zero_divergence_clean_persistence_candidate_count": 2,
+    "remaining_true_carry_gap": 2,
+    "remaining_clean_persistence_gap": 2,
+    "do_open_second_v6_lane_now": false,
+    "do_run_v6_reassessment_now": true,
+    "recommended_next_posture": "run_v12_v6_reassessment_before_any_second_lane"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "first_lane_result",
+      "actual": {
+        "acceptance_posture": "close_market_v6_q3_first_lane_as_opening_led_not_true_carry",
+        "first_lane_opening_led": true,
+        "lane_changes_training_reading": false
+      },
+      "reading": "A first lane that closes as opening-led without changing the training reading should not automatically justify a second local lane."
+    },
+    {
+      "evidence_name": "remaining_symbol_structure",
+      "actual": {
+        "remaining_positive_rows": [],
+        "negative_true_carry_candidates": [
+          "002085"
+        ],
+        "zero_divergence_clean_persistence_candidates": [
+          "000738",
+          "300474"
+        ]
+      },
+      "reading": "The remaining local v6 symbols currently show either negative carry-target divergence or zero-divergence persistence targets, which is too weak for another bounded lane."
+    },
+    {
+      "evidence_name": "remaining_training_gap",
+      "actual": {
+        "remaining_true_carry_gap": 2,
+        "remaining_clean_persistence_gap": 2
+      },
+      "reading": "The global training gaps remain real, but they do not by themselves license another local v6 lane when the local candidate structure is weak."
+    }
+  ],
+  "interpretation": [
+    "The first v6 lane was useful because it tested the best current local pocket, but it only closed as opening-led.",
+    "The remaining symbols in the same local pocket do not currently offer a clean positive persistence candidate or a credible true-carry follow-up.",
+    "So the correct next move is a v6 reassessment, not an automatic second-lane expansion."
+  ]
+}

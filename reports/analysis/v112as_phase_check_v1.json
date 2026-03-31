@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112as_as_bounded_implementation_backfill",
+    "do_open_v112as_now": true,
+    "patch_rule_count_applied": 6,
+    "board_backfill_coverage_ratio": 1.0,
+    "calendar_backfill_coverage_ratio": 1.0,
+    "allow_row_geometry_widen_now": false,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "rerun_current_truth_rows_with_patched_board_and_calendar_features_before_any_row_geometry_widen"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112as_backfill",
+      "actual": {
+        "patch_rule_count_applied": 6,
+        "sample_count": 2160,
+        "next_lawful_move": "rerun_current_truth_rows_with_patched_board_and_calendar_features_before_any_row_geometry_widen"
+      },
+      "reading": "The backfill phase is successful only if current truth rows now carry the frozen implementation layer explicitly."
+    }
+  ],
+  "interpretation": [
+    "V1.12AS should end with current-row implementation now explicit, not with immediate row widening.",
+    "Formal training and signal rights remain closed."
+  ]
+}

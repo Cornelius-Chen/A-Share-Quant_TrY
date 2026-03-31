@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112be_as_cpo_oracle_upper_bound_benchmark",
+    "do_open_v112be_now": true,
+    "trade_count": 25,
+    "future_information_allowed": true,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112be_oracle_benchmark",
+      "actual": {
+        "trade_count": 25,
+        "total_return": 752.0861,
+        "max_drawdown": -0.3774
+      },
+      "reading": "The oracle benchmark is only useful if it produces a real hindsight upper-bound portfolio trace."
+    }
+  ],
+  "interpretation": [
+    "V1.12BE is valid because it produces an explicit hindsight upper-bound benchmark without opening no-leak training rights."
+  ]
+}

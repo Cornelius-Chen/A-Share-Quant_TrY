@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112aw_as_branch_guarded_admission_review",
+    "do_open_v112aw_now": true,
+    "branch_rows_under_review": 4,
+    "guarded_training_context_admissible_count": 3,
+    "retained_review_only_count": 1,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "run_guarded_branch_admitted_pilot_before_any_broader_row_widen"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112aw_branch_admission_review",
+      "actual": {
+        "guarded_training_context_admissible_count": 3,
+        "retained_review_only_count": 1,
+        "role_state_patch_gain": 0.1028
+      },
+      "reading": "Branch admission is only valid if the project can split guarded-admissible rows from still-mixed review-only rows."
+    }
+  ],
+  "interpretation": [
+    "V1.12AW is an admissibility cut, not a promotion to formal training.",
+    "Formal training and signal rights remain closed."
+  ]
+}

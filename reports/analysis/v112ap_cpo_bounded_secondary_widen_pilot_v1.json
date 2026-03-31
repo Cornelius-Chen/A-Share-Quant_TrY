@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ap_cpo_bounded_secondary_widen_pilot_v1",
+    "truth_candidate_row_count": 7,
+    "sample_count": 2160,
+    "core_target_count": 3,
+    "guarded_target_count": 3,
+    "core_targets_stable_after_widen": true,
+    "guarded_targets_learnable_count": 3,
+    "best_guarded_target": "role_transition_label",
+    "best_guarded_target_gain": 0.5084,
+    "formal_training_still_forbidden": true,
+    "formal_signal_generation_still_forbidden": true,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "review_if_feature_implementation_patch_should_precede_any_row_geometry_widen"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "baseline_accuracy_after_widen": 0.6543,
+      "gbdt_accuracy_change_vs_role_patch": 0.0
+    },
+    {
+      "target_name": "role_state_label",
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "baseline_accuracy_after_widen": 0.6327,
+      "gbdt_accuracy_change_vs_role_patch": 0.0
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "baseline_accuracy_after_widen": 0.6543,
+      "gbdt_accuracy_change_vs_role_patch": 0.0
+    }
+  ],
+  "guarded_target_rows": [
+    {
+      "target_name": "board_condition_label",
+      "eligible_symbol_count": 7,
+      "sample_count": 2160,
+      "baseline_accuracy": 0.6759,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.3241,
+      "classes": [
+        "latent_board",
+        "pressured_board",
+        "supportive_board",
+        "widening_board"
+      ]
+    },
+    {
+      "target_name": "role_transition_label",
+      "eligible_symbol_count": 6,
+      "sample_count": 1781,
+      "baseline_accuracy": 0.4916,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.5084,
+      "classes": [
+        "challenger_activation",
+        "role_quality_split",
+        "role_requalification",
+        "stable_no_transition"
+      ]
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "eligible_symbol_count": 4,
+      "sample_count": 1009,
+      "baseline_accuracy": 0.6436,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.3564,
+      "classes": [
+        "bridge_or_non_failure",
+        "promotion_at_risk",
+        "promotion_attempt_only"
+      ]
+    }
+  ],
+  "interpretation": [
+    "This pass widens the target stack, not the row geometry.",
+    "If the guarded layer is learnable without collapsing the core layer, then the current role patch has survived one lawful widen step.",
+    "This still does not authorize formal training or signal generation."
+  ]
+}

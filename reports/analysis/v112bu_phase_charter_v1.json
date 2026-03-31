@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bu_phase_conditioned_control_pilot",
+    "do_open_v112bu_now": true,
+    "recommended_first_action": "freeze_v112bu_phase_conditioned_control_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BU Phase-Conditioned Control Pilot",
+    "mission": "Test whether the extracted phase-conditioned controls from V1.12BT can improve the selector-maturity fusion baseline by vetoing dangerous entries, shortening dangerous holdings, and activating risk-off overrides without destroying the alpha backbone.",
+    "in_scope": [
+      "entry veto application on the frozen fusion baseline",
+      "holding veto application via shorter holding half-life",
+      "risk-off override application on mapped risk dates",
+      "report-only performance comparison versus V1.12BP and neutral baseline"
+    ],
+    "out_of_scope": [
+      "formal training opening",
+      "formal signal generation",
+      "new selector training",
+      "new clustering or mapping layers"
+    ]
+  },
+  "interpretation": [
+    "V1.12BU opens because V1.12BT has already translated risk regions into explicit control-layer objects.",
+    "The lawful next step is to test those control objects on top of the existing fusion baseline instead of inventing a new selector."
+  ]
+}

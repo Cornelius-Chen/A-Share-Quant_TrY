@@ -1,0 +1,9 @@
+report:
+  name: v112q_phase_charter_v1
+paths:
+  reports_dir: reports/analysis
+  v112p_phase_closure_report: reports/analysis/v112p_phase_closure_check_v1.json
+inputs:
+  owner_requires_schema_hardening: true
+  owner_requires_pre_rise_window: true
+  owner_allows_parallel_collection_drafts: true

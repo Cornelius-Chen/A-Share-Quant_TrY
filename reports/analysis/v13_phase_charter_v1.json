@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v13_catalyst_and_concept_context_infrastructure",
+    "v12_waiting_state_present": true,
+    "catalyst_schema_ready": true,
+    "catalyst_context_separation_present": true,
+    "catalyst_branch_support_real": true,
+    "do_open_v13_now": true,
+    "recommended_first_action": "freeze_v13_concept_mapping_inventory_v1"
+  },
+  "charter": {
+    "mission": "Build bounded catalyst and concept context infrastructure that can feed later research without directly entering the strategy mainline.",
+    "in_scope": [
+      "event registry structure",
+      "concept mapping inventory",
+      "event-to-theme/sector/symbol mapping rules",
+      "market-confirmation layer",
+      "bounded context-support artifacts"
+    ],
+    "out_of_scope": [
+      "strategy integration",
+      "heavy NLP or real-time news systems",
+      "paid data sources",
+      "promotion of report-only catalyst features into retained features"
+    ],
+    "success_criteria": [
+      "freeze a usable concept/context mapping framework",
+      "define bounded source and mapping rules",
+      "produce at least one replay-independent infrastructure artifact that future branches can consume"
+    ],
+    "stop_criteria": [
+      "if concept/context infrastructure cannot improve on the existing bounded catalyst branch",
+      "if the work would require heavy dependencies or paid sources",
+      "if the branch drifts into direct strategy integration before the infrastructure is stable"
+    ],
+    "handoff_condition": "After the infrastructure entry action completes, continue only with bounded mapping and registry work inside V1.3."
+  },
+  "interpretation": [
+    "V1.2 has already reached explicit waiting state, so a new phase now requires an owner-directed switch plus a lawful charter.",
+    "The catalyst branch is real enough to justify infrastructure work because it has a frozen schema and bounded separation evidence, but it remains below promotion threshold.",
+    "So V1.3 should open as infrastructure work, not as direct signal or training work, and concept mapping inventory is the correct first bounded action."
+  ]
+}

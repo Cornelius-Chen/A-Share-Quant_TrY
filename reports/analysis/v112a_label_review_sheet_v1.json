@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112a_label_review_sheet_v1",
+    "review_row_count": 3,
+    "owner_review_required_count": 3,
+    "feature_block_focus_count": 4,
+    "ready_for_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "pool_role_guess": "core_beta_beneficiary",
+      "cycle_window_start_guess": "",
+      "cycle_window_end_guess": "",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "feature_block_focus": [
+        "catalyst_state",
+        "earnings_transmission_bridge",
+        "expectation_gap",
+        "price_confirmation"
+      ],
+      "label_fields_to_review": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "pool_role_guess": "leader_or_core_beneficiary",
+      "cycle_window_start_guess": "",
+      "cycle_window_end_guess": "",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "feature_block_focus": [
+        "catalyst_state",
+        "earnings_transmission_bridge",
+        "expectation_gap",
+        "price_confirmation"
+      ],
+      "label_fields_to_review": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "pool_role_guess": "mid_core_component_beneficiary",
+      "cycle_window_start_guess": "",
+      "cycle_window_end_guess": "",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "feature_block_focus": [
+        "catalyst_state",
+        "earnings_transmission_bridge",
+        "expectation_gap",
+        "price_confirmation"
+      ],
+      "label_fields_to_review": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "owner_notes": ""
+    }
+  ],
+  "interpretation": [
+    "The first pilot sheet is intentionally incomplete in the places where owner correction adds the most value: object inclusion, role, and cycle window.",
+    "This lets the owner correct omissions and misreads before any training data is finalized.",
+    "The sheet is a bounded collaboration surface, not a finished label file."
+  ]
+}

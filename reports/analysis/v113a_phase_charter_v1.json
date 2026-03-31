@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113a_theme_diffusion_state_schema_v1",
+    "phase_name": "V1.13A Theme Diffusion State Schema",
+    "ready_for_schema_freeze_next": true
+  },
+  "mission": {
+    "goal": "Freeze a first bounded state schema for A-share theme-diffusion carry, including state phases, stock roles, mainline strength dimensions, and context-backed driver slots.",
+    "why_now": "V1.13 selected theme_diffusion_carry as the next higher-leverage line. The first lawful move is to define the state language before any modeling or execution work."
+  },
+  "in_scope": [
+    "theme-diffusion phase states",
+    "stock-role taxonomy",
+    "mainline strength dimensions",
+    "context-backed driver dimensions",
+    "open candidate-driver layer for later discovery",
+    "review-only candidate-driver preservation"
+  ],
+  "out_of_scope": [
+    "execution timing schema",
+    "intraday order-book or microstructure variables",
+    "model training",
+    "strategy integration",
+    "formal driver scoring model"
+  ],
+  "success_criteria": [
+    "a usable schema exists for theme-diffusion state, role, and strength",
+    "policy/industry/market/event drivers are explicitly recorded as separate dimensions",
+    "the schema leaves room for subagent-discovered candidate drivers without freezing them prematurely"
+  ],
+  "stop_criteria": [
+    "the schema collapses into execution-level trigger design",
+    "the schema tries to legislate candidate drivers as final variables without review"
+  ],
+  "handoff_condition": "mainline can review the first schema and then decide whether to add a bounded candidate-driver discovery layer"
+}

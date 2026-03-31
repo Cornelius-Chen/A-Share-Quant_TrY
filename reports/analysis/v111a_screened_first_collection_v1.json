@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v111a_screened_first_collection_v1_as_bounded_first_pilot",
+    "screened_candidate_count": 5,
+    "admitted_candidate_count": 2,
+    "admitted_new_family_count": 2,
+    "admitted_policy_followthrough_count": 0,
+    "sample_limit_breaches": 0,
+    "ready_for_v111a_phase_check_next": true
+  },
+  "collection_rows": [
+    {
+      "lane_id": "mainline_trend_b::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "event_scope": "theme",
+      "event_type": "carry_context_candidate",
+      "persistence_class": "policy_followthrough",
+      "policy_scope": "industry_norms",
+      "source_authority_tier": "official_industry",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "mapped_context_name": "锂矿概念",
+      "novelty_status": "same_anchor_family_reject",
+      "admissibility_status": "reject",
+      "rejection_reasons": [
+        "same_anchor_family"
+      ],
+      "feature_shadow_implication": "no_new_feature_shadow_signal",
+      "candidate_rank": 1
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "event_scope": "theme",
+      "event_type": "carry_context_candidate",
+      "persistence_class": "policy_followthrough",
+      "policy_scope": "industry_norms",
+      "source_authority_tier": "official_industry",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "mapped_context_name": "锂矿概念",
+      "novelty_status": "same_anchor_family_reject",
+      "admissibility_status": "reject",
+      "rejection_reasons": [
+        "same_anchor_family"
+      ],
+      "feature_shadow_implication": "no_new_feature_shadow_signal",
+      "candidate_rank": 2
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-02-22::000155",
+      "symbol": "000155",
+      "event_date": "2024-02-22",
+      "event_scope": "theme",
+      "event_type": "market_followthrough",
+      "persistence_class": "multi_day_reinforcement",
+      "policy_scope": "industry_norms",
+      "source_authority_tier": "official_industry",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "mapped_context_name": "锂矿概念",
+      "novelty_status": "passes_anchor_family_separation",
+      "admissibility_status": "admit",
+      "rejection_reasons": [],
+      "feature_shadow_implication": "challenge_policy_followthrough_anchor_concentration",
+      "candidate_rank": 3
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-06-17::300502",
+      "symbol": "300502",
+      "event_date": "2024-06-17",
+      "event_scope": "sector",
+      "event_type": "market_followthrough",
+      "persistence_class": "multi_day_reinforcement",
+      "policy_scope": "industry_support",
+      "source_authority_tier": "official_industry",
+      "primary_source_ref": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2024/art_efda38def5694be3a95353e7a32b1ea2.html",
+      "mapped_context_name": "计算机、通信和其他电子设备制造业",
+      "novelty_status": "passes_anchor_family_separation",
+      "admissibility_status": "admit",
+      "rejection_reasons": [],
+      "feature_shadow_implication": "challenge_policy_followthrough_anchor_concentration",
+      "candidate_rank": 4
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::002049",
+      "symbol": "002049",
+      "event_date": "2024-11-05",
+      "event_scope": "theme",
+      "event_type": "market_pulse",
+      "persistence_class": "single_pulse",
+      "policy_scope": "industry_support",
+      "source_authority_tier": "official_industry",
+      "primary_source_ref": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2024/art_efda38def5694be3a95353e7a32b1ea2.html",
+      "mapped_context_name": "通信技术",
+      "novelty_status": "passes_anchor_family_separation",
+      "admissibility_status": "reject",
+      "rejection_reasons": [
+        "single_pulse_only"
+      ],
+      "feature_shadow_implication": "no_new_feature_shadow_signal",
+      "candidate_rank": 5
+    },
+    {
+      "lane_id": null,
+      "symbol": null,
+      "event_date": null,
+      "event_scope": null,
+      "event_type": null,
+      "persistence_class": null,
+      "policy_scope": null,
+      "source_authority_tier": null,
+      "primary_source_ref": null,
+      "mapped_context_name": null,
+      "novelty_status": null,
+      "admissibility_status": "collection_summary",
+      "rejection_reasons": [],
+      "feature_shadow_implication": null,
+      "candidate_rank": null,
+      "admission_record_status": "screened_5_admitted_2_under_caps_5_2"
+    }
+  ],
+  "interpretation": [
+    "V1.11A executes the first real acquisition pilot under the frozen infrastructure rather than expanding replay or promotion scope.",
+    "The pilot can admit new non-anchor candidates even if they do not yet yield direct policy-followthrough breadth evidence.",
+    "The next legal step is a phase check that states clearly whether the pilot produced new candidates, changed the policy-followthrough judgment, or only validated the acquisition path."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ao_cpo_role_layer_patch_pilot_v1",
+    "sample_count": 2160,
+    "train_count": 1512,
+    "test_count": 648,
+    "truth_candidate_row_count": 7,
+    "patched_feature_count": 19,
+    "patch_feature_count": 8,
+    "phase_gbdt_accuracy_before_patch": 1.0,
+    "phase_gbdt_accuracy_after_patch": 1.0,
+    "role_state_gbdt_accuracy_before_patch": 0.7377,
+    "role_state_gbdt_accuracy_after_patch": 1.0,
+    "role_state_accuracy_gain_after_patch": 0.2623,
+    "catalyst_sequence_gbdt_accuracy_before_patch": 1.0,
+    "catalyst_sequence_gbdt_accuracy_after_patch": 1.0,
+    "best_role_patch_family": "role_patch_microstructure_family",
+    "best_role_patch_family_drop": 0.2114,
+    "max_role_confusion_before_patch": 58,
+    "max_role_confusion_after_patch": 0,
+    "constructive_phase_avg_forward_return_20d_after_patch": 0.0891,
+    "constructive_phase_avg_max_drawdown_20d_after_patch": -0.1109,
+    "role_patch_success": true,
+    "formal_training_still_forbidden": true,
+    "formal_signal_generation_still_forbidden": true,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "consider_bounded_secondary_widen_pilot_under_same_report_only_boundary"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "baseline_accuracy_before_patch": 0.6265,
+      "baseline_accuracy_after_patch": 0.6543,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_gain_after_patch": 0.0,
+      "reading": "Compare current bounded role-layer patch behavior against the earlier V1.12AM tiny pilot."
+    },
+    {
+      "target_name": "role_state_label",
+      "baseline_accuracy_before_patch": 0.4784,
+      "baseline_accuracy_after_patch": 0.6327,
+      "gbdt_accuracy_before_patch": 0.7377,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_gain_after_patch": 0.2623,
+      "reading": "Compare current bounded role-layer patch behavior against the earlier V1.12AM tiny pilot."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "baseline_accuracy_before_patch": 0.6265,
+      "baseline_accuracy_after_patch": 0.6543,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_gain_after_patch": 0.0,
+      "reading": "Compare current bounded role-layer patch behavior against the earlier V1.12AM tiny pilot."
+    }
+  ],
+  "role_patch_family_rows": [
+    {
+      "family_name": "original_skeleton_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 0.4074,
+      "accuracy_drop": 0.5926,
+      "reading": "Larger drop means the patched role-state result relies more on this family."
+    },
+    {
+      "family_name": "role_patch_microstructure_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 0.7886,
+      "accuracy_drop": 0.2114,
+      "reading": "Larger drop means the patched role-state result relies more on this family."
+    },
+    {
+      "family_name": "role_patch_behavior_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the patched role-state result relies more on this family."
+    }
+  ],
+  "role_confusion_comparison_rows": [
+    {
+      "true_role": "high_beta_module_extension",
+      "predicted_role": "high_end_module_extension",
+      "count_before_patch": 29,
+      "count_after_patch": 0,
+      "confusion_reduction": 29
+    },
+    {
+      "true_role": "high_beta_module_extension",
+      "predicted_role": "smaller_cap_high_beta_module",
+      "count_before_patch": 58,
+      "count_after_patch": 0,
+      "confusion_reduction": 58
+    },
+    {
+      "true_role": "high_end_module_extension",
+      "predicted_role": "high_beta_module_extension",
+      "count_before_patch": 3,
+      "count_after_patch": 0,
+      "confusion_reduction": 3
+    },
+    {
+      "true_role": "high_end_module_extension",
+      "predicted_role": "smaller_cap_high_beta_module",
+      "count_before_patch": 43,
+      "count_after_patch": 0,
+      "confusion_reduction": 43
+    },
+    {
+      "true_role": "smaller_cap_high_beta_module",
+      "predicted_role": "high_beta_module_extension",
+      "count_before_patch": 33,
+      "count_after_patch": 0,
+      "confusion_reduction": 33
+    },
+    {
+      "true_role": "smaller_cap_high_beta_module",
+      "predicted_role": "high_end_module_extension",
+      "count_before_patch": 4,
+      "count_after_patch": 0,
+      "confusion_reduction": 4
+    }
+  ],
+  "interpretation": [
+    "This patch does not widen geometry; it only tests whether role-state can be improved with bounded market-observable microstructure and behavior inputs.",
+    "If the role layer improves, that is evidence for patch-before-widen. It is not evidence for formal training or signal rights.",
+    "A strong result here should still be read as A-share-specific role discrimination, not as timeless universal truth."
+  ]
+}

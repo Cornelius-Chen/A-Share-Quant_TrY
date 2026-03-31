@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v17_active_but_bounded_as_promotion_evidence_generation",
+    "v17_open": true,
+    "reviewed_feature_count": 4,
+    "promotion_ready_now_count": 0,
+    "needs_additional_promotion_evidence_count": 4,
+    "promote_retained_now": false,
+    "do_integrate_into_strategy_now": false,
+    "recommended_next_posture": "prepare_v17_phase_closure_or_waiting_state_not_promotion"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v17_charter",
+      "actual": {
+        "acceptance_posture": "open_v17_promotion_evidence_generation",
+        "recommended_first_action": "freeze_v17_promotion_evidence_protocol_v1"
+      },
+      "reading": "V1.7 opened lawfully as promotion-evidence generation, not as a promotion phase."
+    },
+    {
+      "evidence_name": "feature_promotion_gap_review",
+      "actual": {
+        "reviewed_feature_count": 4,
+        "promotion_ready_now_count": 0,
+        "needs_additional_promotion_evidence_count": 4
+      },
+      "reading": "The bounded review already states what evidence is missing for current provisional candidates."
+    }
+  ],
+  "interpretation": [
+    "V1.7 has produced bounded promotion-gap judgments without crossing into promotion.",
+    "That means the phase now has a clear evidence-shortfall posture and does not need wider expansion to justify itself.",
+    "The next legal step is a closure check, not retained-feature promotion or local-model work."
+  ]
+}

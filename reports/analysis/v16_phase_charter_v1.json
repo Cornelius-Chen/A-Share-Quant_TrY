@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v16_provisional_candidacy_stability_review",
+    "v15_waiting_state_present": true,
+    "provisional_candidate_count": 4,
+    "do_open_v16_now": true,
+    "recommended_first_action": "freeze_v16_stability_review_protocol_v1"
+  },
+  "charter": {
+    "mission": "Review whether current provisional candidacy context features show enough bounded stability to justify continued candidacy attention without promoting them into retained features.",
+    "in_scope": [
+      "provisional-candidacy stability criteria",
+      "bounded cross-artifact consistency review",
+      "bounded persistence of admissibility judgments",
+      "continued safe-containment review"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "local regime segmentation",
+      "new replay or refresh expansion",
+      "formal model work"
+    ],
+    "success_criteria": [
+      "freeze a bounded stability-review protocol",
+      "produce stability judgments for the provisional candidacy features",
+      "close the phase with a clear continued-candidacy or hold posture"
+    ],
+    "stop_criteria": [
+      "if stability cannot be assessed without reopening data expansion",
+      "if the work drifts into promotion or integration",
+      "if provisional candidates prove too thin or inconsistent for bounded review"
+    ],
+    "handoff_condition": "After the charter opens, only replay-independent stability-review artifacts are allowed until the phase-level posture is explicit."
+  },
+  "interpretation": [
+    "V1.5 already sorted bounded context features into provisional candidacy or hold, but did not answer whether those provisional candidates are stable enough to remain alive.",
+    "That makes bounded stability review the next lawful question before any future promotion discussion.",
+    "So V1.6 should open as a review-only phase, not as a promotion, integration, or local-model phase."
+  ]
+}

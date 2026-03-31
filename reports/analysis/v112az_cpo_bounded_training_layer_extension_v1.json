@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112az_cpo_bounded_training_layer_extension_v1",
+    "row_count_before_extension": 7,
+    "row_count_after_extension": 10,
+    "guarded_branch_row_count": 3,
+    "retained_review_only_branch_row_count": 1,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "review_if_10_row_bounded_training_layer_can_replace_the_7_row_baseline_for_next_pilot"
+  },
+  "training_layer_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "training_layer_posture": "core_or_secondary_truth_row",
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "This row stays in the bounded training-facing layer as part of the original 7-row skeleton."
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "training_layer_posture": "guarded_branch_training_layer_row",
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [
+        "board_condition_label",
+        "role_transition_label"
+      ],
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This branch row enters the bounded training-facing layer under guarded posture only."
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "training_layer_posture": "guarded_branch_training_layer_row",
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [
+        "board_condition_label",
+        "role_transition_label"
+      ],
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This branch row enters the bounded training-facing layer under guarded posture only."
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "training_layer_posture": "guarded_branch_training_layer_row",
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [
+        "board_condition_label",
+        "role_transition_label"
+      ],
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "This branch row enters the bounded training-facing layer under guarded posture only."
+    }
+  ],
+  "interpretation": [
+    "V1.12AZ assembles the first 10-row bounded training-facing layer without broadening beyond the three guarded-admissible branch rows.",
+    "The added branch rows remain guarded and do not inherit unrestricted truth posture."
+  ]
+}

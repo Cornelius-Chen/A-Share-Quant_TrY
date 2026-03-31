@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112e_as_gbdt_attribution_review_success",
+    "attribution_review_present": true,
+    "allow_model_deployment_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_attribution_before_any_new_feature_or_sidecar_expansion"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112e_charter",
+      "actual": {
+        "do_open_v112e_now": true
+      },
+      "reading": "V1.12E opened lawfully as a bounded attribution-review phase."
+    },
+    {
+      "evidence_name": "v112e_attribution_review",
+      "actual": {
+        "full_model_test_accuracy": 0.558,
+        "most_useful_block_by_hotspot_impact": "catalyst_state"
+      },
+      "reading": "The project now has a block-level explanation for the first GBDT sidecar gain."
+    }
+  ],
+  "interpretation": [
+    "V1.12E succeeds once the first same-dataset sidecar gain has a bounded feature-block explanation.",
+    "That is enough to close without opening deployment or new data scope.",
+    "The next lawful move is owner review of whether the most useful block should drive the next feature or model decision."
+  ]
+}

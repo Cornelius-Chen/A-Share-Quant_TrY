@@ -1,0 +1,240 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112an_cpo_core_skeleton_pilot_result_review_v1",
+    "sample_count": 2160,
+    "test_count": 648,
+    "family_ablation_count": 12,
+    "role_confusion_count": 6,
+    "correction_bucket_count": 11,
+    "best_family_for_phase": "catalyst_presence_family",
+    "best_family_drop_for_phase": 0.446,
+    "best_family_for_catalyst_sequence": "catalyst_presence_family",
+    "best_family_drop_for_catalyst_sequence": 0.446,
+    "best_family_for_role_state": "role_prior_family",
+    "best_family_drop_for_role_state": 0.6003,
+    "formal_training_still_forbidden": true,
+    "formal_signal_generation_still_forbidden": true,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "owner_decide_whether_to_widen_pilot_or_patch_role_layer"
+  },
+  "family_ablation_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "family_name": "chronology_price_geometry_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "phase_progression_label",
+      "family_name": "liquidity_confirmation_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "phase_progression_label",
+      "family_name": "role_prior_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "phase_progression_label",
+      "family_name": "catalyst_presence_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 0.554,
+      "accuracy_drop": 0.446,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "role_state_label",
+      "family_name": "chronology_price_geometry_family",
+      "full_accuracy": 0.7377,
+      "masked_accuracy": 0.6991,
+      "accuracy_drop": 0.0386,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "role_state_label",
+      "family_name": "liquidity_confirmation_family",
+      "full_accuracy": 0.7377,
+      "masked_accuracy": 0.7407,
+      "accuracy_drop": -0.0031,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "role_state_label",
+      "family_name": "role_prior_family",
+      "full_accuracy": 0.7377,
+      "masked_accuracy": 0.1373,
+      "accuracy_drop": 0.6003,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "role_state_label",
+      "family_name": "catalyst_presence_family",
+      "full_accuracy": 0.7377,
+      "masked_accuracy": 0.7454,
+      "accuracy_drop": -0.0077,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "family_name": "chronology_price_geometry_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "family_name": "liquidity_confirmation_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "family_name": "role_prior_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "family_name": "catalyst_presence_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 0.554,
+      "accuracy_drop": 0.446,
+      "reading": "Larger drop means the current target relies more on this pilot-local family."
+    }
+  ],
+  "role_confusion_rows": [
+    {
+      "true_role": "high_beta_module_extension",
+      "predicted_role": "smaller_cap_high_beta_module",
+      "count": 58,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    },
+    {
+      "true_role": "high_end_module_extension",
+      "predicted_role": "smaller_cap_high_beta_module",
+      "count": 43,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    },
+    {
+      "true_role": "smaller_cap_high_beta_module",
+      "predicted_role": "high_beta_module_extension",
+      "count": 33,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    },
+    {
+      "true_role": "high_beta_module_extension",
+      "predicted_role": "high_end_module_extension",
+      "count": 29,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    },
+    {
+      "true_role": "smaller_cap_high_beta_module",
+      "predicted_role": "high_end_module_extension",
+      "count": 4,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    },
+    {
+      "true_role": "high_end_module_extension",
+      "predicted_role": "high_beta_module_extension",
+      "count": 3,
+      "reading": "GBDT still confuses these role families on the current tiny pilot."
+    }
+  ],
+  "correction_bucket_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "main_markup",
+      "count": 227,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "validated_markup",
+      "count": 227,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "smaller_cap_high_beta_module",
+      "count": 138,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "high_beta_core_module",
+      "count": 102,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "upstream_component_platform",
+      "count": 64,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "high_end_module_extension",
+      "count": 64,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "divergence_and_decay",
+      "corrected_true_class": "upstream_component_platform",
+      "count": 26,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "high_beta_module_extension",
+      "count": 16,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "phase_progression_label",
+      "stage_family": "divergence_and_decay",
+      "corrected_true_class": "divergence_and_decay",
+      "count": 15,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "stage_family": "divergence_and_decay",
+      "corrected_true_class": "stale_or_conflicted",
+      "count": 15,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    },
+    {
+      "target_name": "role_state_label",
+      "stage_family": "main_markup",
+      "corrected_true_class": "core_module_leader",
+      "count": 12,
+      "reading": "These are the cases where the guardrail missed and GBDT recovered the correct target state."
+    }
+  ],
+  "interpretation": [
+    "Phase and catalyst-sequence are learned best because the current tiny pilot gives them strong stage-aligned geometry and catalyst-presence support.",
+    "Role-state remains harder because the current secondary rows still contain adjacent-role similarity and the pilot-local feature set only partially encodes role handoff.",
+    "GBDT adds most value where baseline misses stage-conditioned structure rather than where labels are already trivially separated."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bb_as_default_10_row_guarded_layer_pilot_success",
+    "v112bb_success_criteria_met": true,
+    "enter_v112bb_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "recommended_next_posture": "use_10_row_default_layer_as_experimental_baseline_and_only_probe_300570_mixed_branch_if_further_row_widen_is_needed"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bb_phase_check",
+      "actual": {
+        "default_10_row_pilot_established": true,
+        "core_targets_stable_vs_7_row_baseline": true,
+        "guarded_targets_stable_vs_7_row_guarded_baseline": true
+      },
+      "reading": "The phase closes once the 10-row layer has been proven stable enough to serve as the default bounded pilot baseline."
+    }
+  ],
+  "interpretation": [
+    "V1.12BB closes with a frozen default experimental baseline on the 10-row guarded layer.",
+    "Formal training and signal rights remain closed."
+  ]
+}

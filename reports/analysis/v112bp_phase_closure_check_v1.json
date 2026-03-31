@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bp_as_cpo_selector_maturity_fusion_pilot_success",
+    "v112bp_success_criteria_met": true,
+    "enter_v112bp_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bp_phase_check",
+      "actual": {
+        "trade_count": 7,
+        "total_return": 2.1918
+      },
+      "reading": "The phase closes once the selector-plus-overlay fusion line exists as a lawful no-leak experiment."
+    }
+  ],
+  "interpretation": [
+    "V1.12BP closes with the first bounded selector-plus-internal-maturity fusion pilot for CPO."
+  ]
+}

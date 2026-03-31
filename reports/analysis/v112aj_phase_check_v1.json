@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112aj_as_bounded_label_draft_dataset_layer",
+    "do_open_v112aj_now": true,
+    "dataset_row_count": 20,
+    "truth_candidate_row_count": 7,
+    "context_only_row_count": 13,
+    "ready_label_count": 3,
+    "guarded_label_count": 5,
+    "review_only_label_count": 1,
+    "confirmed_only_label_count": 1,
+    "allow_auto_label_freeze_now": false,
+    "allow_auto_training_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "bounded_feature_binding_review_before_any_training_readiness_claim"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112aj_dataset_assembly",
+      "actual": {
+        "truth_candidate_row_count": 7,
+        "context_only_row_count": 13,
+        "ready_label_count": 3,
+        "guarded_label_count": 5
+      },
+      "reading": "The dataset draft now separates truth-candidate rows from context-only rows and keeps review-only labels out of truth bundles."
+    }
+  ],
+  "interpretation": [
+    "V1.12AJ succeeds if the dataset draft is assembled without flattening context rows into truth.",
+    "Training remains closed after this assembly pass."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112n_review_only_shadow_rerun",
+    "phase_name": "V1.12N Review-Only Shadow Rerun",
+    "ready_for_shadow_rerun_next": true
+  },
+  "mission": {
+    "goal": "Run one review-only rerun with inner-draft shadow flags added as features, to check whether the V1.12M inner structures create measurable incremental value before any label or schema action.",
+    "why_now": "V1.12M produced two preserved review-only inner candidates and one unresolved residue, so the next lawful question is whether these inner structures help the frozen pilot at all."
+  },
+  "in_scope": [
+    "same frozen pilot dataset",
+    "same labels and same time split",
+    "three review-only shadow flags derived from V1.12M inner-draft logic",
+    "baseline and GBDT comparison against V1.12G"
+  ],
+  "out_of_scope": [
+    "formal label split",
+    "schema promotion",
+    "dataset widening",
+    "model-family expansion",
+    "strategy deployment"
+  ],
+  "success_criteria": [
+    "the shadow rerun completes on the frozen pilot",
+    "the report clearly states whether the inner-draft shadow features add incremental value or not",
+    "the result remains review-only regardless of outcome"
+  ],
+  "stop_criteria": [
+    "the rerun requires label changes to show any value",
+    "the rerun drifts into wider model search or dataset widening"
+  ],
+  "handoff_condition": "mainline can decide whether the inner-draft pieces are only descriptive or also useful as future feature-side assets"
+}

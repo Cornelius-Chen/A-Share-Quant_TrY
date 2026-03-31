@@ -1,0 +1,26 @@
+# Subagent Exploration Policy V1
+
+- Mission: prevent subagents from becoming an infinite experiment sink while still letting them add bounded exploratory bandwidth.
+- Role split:
+  - mainline: judge, converge, freeze
+  - subagent: generate, filter, format bounded exploratory evidence
+- Hard limits:
+  - max parallel subagents: `2`
+  - max tasks per round: `3`
+  - default compute posture: low
+  - no heavy-model escalation
+  - no automatic scope growth
+- Every subagent task must declare:
+  - `hypothesis`
+  - `success_if`
+  - `stop_if`
+  - `used_for`
+  - fixed dataset or pool
+  - fixed output template
+- Forbidden:
+  - label-schema definition
+  - feature candidacy or promotion decisions
+  - strategy-signal definition
+  - execution-timing decisions
+  - phase switching
+  - open-ended model search

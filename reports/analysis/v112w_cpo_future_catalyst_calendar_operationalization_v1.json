@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112w_cpo_future_catalyst_calendar_operationalization_v1",
+    "recurring_anchor_count": 10,
+    "table_column_count": 12,
+    "source_precedence_count": 4,
+    "remaining_operational_gap_count": 3,
+    "ready_for_phase_check_next": true
+  },
+  "recurring_calendar_rows": [
+    {
+      "source_name": "ofc_official_event_page",
+      "cadence_bucket": "annual_event_window",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "annual",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Primary anchor for OFC timing and exhibit window."
+    },
+    {
+      "source_name": "nvidia_gtc_official",
+      "cadence_bucket": "annual_event_window",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "annual",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Key AI-infrastructure event where optical-link and CPO roadmap items surface."
+    },
+    {
+      "source_name": "optica_executive_forum_at_ofc",
+      "cadence_bucket": "annual_event_window",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "annual",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "CEO or CTO optical-market discussion adjacent to OFC."
+    },
+    {
+      "source_name": "oif_ofc_2026_demo_listing",
+      "cadence_bucket": "annual_event_window",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "semiannual",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Concrete date anchor for standards and interoperability showcases."
+    },
+    {
+      "source_name": "broadcom_ofc_announcements",
+      "cadence_bucket": "event_driven_company_route_release",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "event_driven",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Proxy for product-event timing around OFC and optical interconnect demos."
+    },
+    {
+      "source_name": "lumentum_ofc_announcements",
+      "cadence_bucket": "event_driven_company_route_release",
+      "target_layer": "message_and_catalyst",
+      "default_refresh_frequency": "event_driven",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Captures OFC-timed product reveals and demo sets."
+    },
+    {
+      "source_name": "alphabet_results_and_capex_guidance",
+      "cadence_bucket": "quarterly_csp_results_or_capex_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "default_refresh_frequency": "quarterly",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Public capex-guidance anchor for CSP demand context."
+    },
+    {
+      "source_name": "microsoft_investor_earnings_events",
+      "cadence_bucket": "quarterly_csp_results_or_capex_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "default_refresh_frequency": "quarterly",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Public cloud-infrastructure and capex timing anchor."
+    },
+    {
+      "source_name": "amazon_investor_results",
+      "cadence_bucket": "quarterly_csp_results_or_capex_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "default_refresh_frequency": "quarterly",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Public AWS-related infrastructure-spend timing anchor."
+    },
+    {
+      "source_name": "meta_capex_materials",
+      "cadence_bucket": "quarterly_csp_results_or_capex_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "default_refresh_frequency": "quarterly",
+      "calendar_use_mode": "review_first_forward_anchor",
+      "why_it_helps": "Official capex-guidance reference point for hyperscale infrastructure cycles."
+    }
+  ],
+  "table_column_rows": [
+    {
+      "column_name": "calendar_anchor_id",
+      "column_role": "primary_key"
+    },
+    {
+      "column_name": "anchor_group",
+      "column_role": "event_family"
+    },
+    {
+      "column_name": "cadence_bucket",
+      "column_role": "recurrence_type"
+    },
+    {
+      "column_name": "expected_window_start",
+      "column_role": "forward_timing"
+    },
+    {
+      "column_name": "expected_window_end",
+      "column_role": "forward_timing"
+    },
+    {
+      "column_name": "target_layer",
+      "column_role": "registry_attachment"
+    },
+    {
+      "column_name": "confidence_tier",
+      "column_role": "source_confidence"
+    },
+    {
+      "column_name": "source_url",
+      "column_role": "traceability"
+    },
+    {
+      "column_name": "refresh_frequency",
+      "column_role": "maintenance_rule"
+    },
+    {
+      "column_name": "window_status",
+      "column_role": "upcoming_or_passed_state"
+    },
+    {
+      "column_name": "owner_review_flag",
+      "column_role": "auditability"
+    },
+    {
+      "column_name": "missingness_reason",
+      "column_role": "data_gap_trace"
+    }
+  ],
+  "source_precedence_rows": [
+    {
+      "precedence_tier": 1,
+      "source_class": "official_event_or_ir_calendar_page",
+      "usage_rule": "Use first when an official event page or IR calendar exists."
+    },
+    {
+      "precedence_tier": 2,
+      "source_class": "official_company_news_release",
+      "usage_rule": "Use when event timing is disclosed through company PR rather than a stable calendar page."
+    },
+    {
+      "precedence_tier": 3,
+      "source_class": "official_results_and_prepared_remarks_schedule",
+      "usage_rule": "Use for quarterly capex or results anchors when event pages are absent."
+    },
+    {
+      "precedence_tier": 4,
+      "source_class": "review_placeholder_with_explicit_missingness",
+      "usage_rule": "Use only when no official timing source can be pinned down; do not silently infer dates."
+    }
+  ],
+  "unresolved_gap_rows": [
+    {
+      "gap_name": "expected_window_fill_rule_not_yet_frozen",
+      "why_it_still_matters": "The table shape exists, but the exact rule for window start/end filling across annual vs quarterly anchors remains open."
+    },
+    {
+      "gap_name": "confidence_tier_mapping_not_yet_frozen",
+      "why_it_still_matters": "Confidence is required, but the exact tiering rubric across event pages, PRs, and results schedules remains open."
+    },
+    {
+      "gap_name": "calendar_rollforward_process_not_yet_frozen",
+      "why_it_still_matters": "The recurring table exists conceptually, but the maintenance rule for expired anchors and next-cycle rollover remains open."
+    }
+  ],
+  "interpretation": [
+    "V1.12W turns forward-visible catalyst anchors into a bounded recurring calendar spec.",
+    "The line still does not have a fully maintained forward calendar, but it now has an auditable operational target.",
+    "This remains information-foundation work, not trigger logic or execution logic."
+  ]
+}

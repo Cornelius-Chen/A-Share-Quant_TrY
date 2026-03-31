@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112x_as_spillover_sidecar_probe_only",
+    "do_open_v112x_now": true,
+    "bounded_spillover_factor_candidate_count": 2,
+    "weak_memory_only_row_count": 1,
+    "formal_feature_candidate_count": 0,
+    "allow_auto_training_now": false,
+    "allow_auto_feature_promotion_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_of_cpo_foundation_residual_gaps"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "spillover_factor_candidacy_review",
+      "actual": {
+        "bounded_spillover_factor_candidate_count": 2,
+        "weak_memory_only_row_count": 1
+      },
+      "reading": "The spillover layer now distinguishes bounded factor candidates from weaker memory-only rows."
+    }
+  ],
+  "interpretation": [
+    "V1.12X remains a review-only sidecar probe pass.",
+    "It reduces ambiguity in the spillover layer without authorizing model use."
+  ]
+}

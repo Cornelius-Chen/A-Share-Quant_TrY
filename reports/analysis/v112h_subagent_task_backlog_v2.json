@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_current_subagent_task_backlog_v2",
+    "current_mainline_state": "v112g_waiting_state_pending_owner_review",
+    "task_count_ready_now": 3,
+    "recommended_start_order": [
+      "hotspot_bucketization_for_high_level_consolidation_and_major_markup",
+      "bounded_candidate_substate_clustering_for_high_level_consolidation",
+      "bounded_catalyst_semantic_ablation_batch"
+    ]
+  },
+  "ready_now_tasks": [
+    {
+      "task_name": "hotspot_bucketization_for_high_level_consolidation_and_major_markup",
+      "task_class": "structuring",
+      "review_cadence": "volume_or_time_based",
+      "hypothesis": "The remaining misreads cluster into a small number of repetitive semantic patterns that can be reviewed faster in grouped form than row by row.",
+      "used_for": "owner review of whether semantic v2 should stay feature-side only or motivate bounded label splitting",
+      "fixed_dataset_or_pool": "V1.12B frozen pilot dataset plus V1.12G prediction outputs",
+      "fixed_output_template": "grouped misread bucket table",
+      "success_if": "Produces stable grouped error buckets by symbol, stage, prediction direction, and semantic-v2 feature profile.",
+      "stop_if": "Buckets fail to reduce review complexity or collapse into one-off idiosyncratic cases.",
+      "compute_class": "low"
+    },
+    {
+      "task_name": "bounded_candidate_substate_clustering_for_high_level_consolidation",
+      "task_class": "drafting",
+      "review_cadence": "stage_based",
+      "hypothesis": "Some high_level_consolidation samples belong to distinct candidate subclusters that should be reviewed separately instead of being treated as one coarse state.",
+      "used_for": "candidate label-split discovery without changing the formal label schema",
+      "fixed_dataset_or_pool": "Only V1.12B high_level_consolidation rows with V1.12G semantic-v2 features",
+      "fixed_output_template": "2-4 candidate subclusters plus per-cluster summary stats and representative rows",
+      "success_if": "Produces candidate subclusters with materially different error rates or semantic-v2 profiles.",
+      "stop_if": "Clusters are unstable, uninterpretable, or do not differ on error behavior.",
+      "compute_class": "low"
+    },
+    {
+      "task_name": "bounded_catalyst_semantic_ablation_batch",
+      "task_class": "execution",
+      "review_cadence": "volume_or_time_based",
+      "hypothesis": "One of the three new semantic catalyst-state fields explains most of the hotspot-control delta and should therefore be prioritized for future refinement.",
+      "used_for": "feature refinement prioritization without changing labels or widening dataset scope",
+      "fixed_dataset_or_pool": "V1.12B frozen pilot dataset with V1.12G feature schema v2",
+      "fixed_output_template": "ablation comparison table under same split and same model family",
+      "success_if": "Ablation results show repeatable hotspot FP deltas for at least one semantic field.",
+      "stop_if": "No semantic field shows repeatable marginal value beyond noise.",
+      "compute_class": "low"
+    }
+  ],
+  "interpretation": [
+    "Current lawful subagent work includes one structuring task, one drafting task, and one execution task.",
+    "None of these tasks is allowed to rewrite labels or change mainline direction.",
+    "Review cadence should follow task type: repetitive pipeline work can accumulate to a bounded threshold, while candidate-structure drafting should be reviewed at the end of the bounded thematic stage."
+  ]
+}

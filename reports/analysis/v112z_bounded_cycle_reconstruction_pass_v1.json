@@ -1,0 +1,474 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112z_bounded_cycle_reconstruction_pass_v1",
+    "reconstructed_stage_window_count": 10,
+    "catalyst_thread_count": 6,
+    "role_transition_count": 11,
+    "board_overlay_count": 5,
+    "spillover_overlay_count": 3,
+    "residual_ambiguity_count": 9,
+    "core_seed_count": 3,
+    "validated_adjacent_review_asset_count": 5,
+    "split_ready_adjacent_review_asset_count": 6,
+    "chronology_segment_count": 9,
+    "daily_board_series_count": 5,
+    "future_catalyst_anchor_count": 10,
+    "cycle_absorption_review_success": true,
+    "formal_training_still_forbidden": true,
+    "execution_still_forbidden": true,
+    "ready_for_owner_review_next": true,
+    "recommended_next_posture": "owner_review_then_bounded_cohort_map_or_labeling_pilot"
+  },
+  "reconstructed_stage_rows": [
+    {
+      "occurrence_name": "pre_ignition_watch_1",
+      "stage_family": "pre_ignition_watch",
+      "window": "2023-01 to 2023-02",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "300394"
+      ],
+      "dominant_reading": "AI-capex and optical-demand expectation drift matters before the obvious breakout.",
+      "supporting_context": [
+        "pre_earnings_channel_check_window",
+        "capex_to_order_conversion_window",
+        "conference_or_route_event watch"
+      ]
+    },
+    {
+      "occurrence_name": "ignition_1",
+      "stage_family": "ignition",
+      "window": "2023-02 to 2023-03",
+      "primary_symbols": [
+        "300308",
+        "300502"
+      ],
+      "dominant_reading": "Core module names detach first; leadership quality matters more than breadth.",
+      "supporting_context": [
+        "concept_index_strength_daily",
+        "cross_board_resonance_daily",
+        "catalyst_freshness"
+      ]
+    },
+    {
+      "occurrence_name": "main_markup_1",
+      "stage_family": "main_markup",
+      "window": "2023-03 to 2023-06",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "300394"
+      ],
+      "dominant_reading": "The first clean markup is led by core optical-module beneficiaries and confirmed by the upstream component platform.",
+      "supporting_context": [
+        "earnings_acceleration_state",
+        "order_visibility_proxy",
+        "event_window and post_event_followthrough_window"
+      ]
+    },
+    {
+      "occurrence_name": "diffusion_1",
+      "stage_family": "diffusion",
+      "window": "2023-05 to 2023-09",
+      "primary_symbols": [
+        "603083",
+        "688205",
+        "301205",
+        "002281",
+        "300570"
+      ],
+      "dominant_reading": "High-beta challengers, domestic optics bridges, and connector/MPO branches activate after the core markup proves durable.",
+      "supporting_context": [
+        "cohort_breadth_daily",
+        "branch_rotation_timing",
+        "multi_trigger_resonance"
+      ]
+    },
+    {
+      "occurrence_name": "divergence_decay_1",
+      "stage_family": "divergence_and_decay",
+      "window": "2023-07 to 2024-01",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "603083",
+        "688205"
+      ],
+      "dominant_reading": "The first wave stops being a one-direction story; some names hold structure while others reveal role-quality differences.",
+      "supporting_context": [
+        "high_level_absorption_state",
+        "between_event_quiet_window",
+        "turnover_pressure_daily"
+      ]
+    },
+    {
+      "occurrence_name": "re_ignition_markup_2",
+      "stage_family": "main_markup",
+      "window": "2024-02 to 2024-06",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "688498",
+        "688313"
+      ],
+      "dominant_reading": "A secondary reacceleration emerges as route discussion, core earnings, and advanced-component adjacency reinforce each other.",
+      "supporting_context": [
+        "launch_to_ramp_window",
+        "design_win_to_volume_window",
+        "advanced component branch adjacency"
+      ]
+    },
+    {
+      "occurrence_name": "deep_reset_quiet_window",
+      "stage_family": "divergence_and_decay",
+      "window": "2024-07 to 2025-05",
+      "primary_symbols": [
+        "300308",
+        "300394",
+        "000988",
+        "300620",
+        "300548"
+      ],
+      "dominant_reading": "A long quiet or deep-reset period separates structural beneficiaries from rows that only looked good during the first diffusion burst.",
+      "supporting_context": [
+        "between_event_quiet_window",
+        "post_earnings_reset_window",
+        "capex_to_order_conversion_window"
+      ]
+    },
+    {
+      "occurrence_name": "major_markup_3",
+      "stage_family": "main_markup",
+      "window": "2025-06 to 2026-01",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "603083",
+        "688205",
+        "301205"
+      ],
+      "dominant_reading": "The strongest integrated wave combines core leader strength, challenger beta, and broader board resonance under a cleaner optical-link narrative.",
+      "supporting_context": [
+        "concept_index_strength_daily",
+        "cross_board_resonance_daily",
+        "quarterly_csp_results_or_capex_anchor"
+      ]
+    },
+    {
+      "occurrence_name": "laggard_catchup_3",
+      "stage_family": "laggard_catchup",
+      "window": "2025-08 to 2026-02",
+      "primary_symbols": [
+        "601869",
+        "600487",
+        "600522",
+        "000070",
+        "603228"
+      ],
+      "dominant_reading": "Fiber-cable extensions and A-share spillover candidates become more informative about stage maturity than about core business purity.",
+      "supporting_context": [
+        "cohort_breadth_daily",
+        "story_spillover_intensity",
+        "board_follow_correlation"
+      ]
+    },
+    {
+      "occurrence_name": "divergence_decay_3",
+      "stage_family": "divergence_and_decay",
+      "window": "2026-02 to 2026-03",
+      "primary_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "000070",
+        "603228",
+        "001267"
+      ],
+      "dominant_reading": "The final stage separates residual core strength from spillover collapse and weak name-bonus memory.",
+      "supporting_context": [
+        "pullback_depth_state",
+        "turnover_pressure_daily",
+        "post_event_followthrough_window"
+      ]
+    }
+  ],
+  "catalyst_order_rows": [
+    {
+      "order_id": 1,
+      "catalyst_thread": "hyperscaler_ai_capex_and_optical_demand_expectation",
+      "first_dominant_stage": "pre_ignition_watch_1",
+      "role_in_cycle": "preheat_and_ignition_context"
+    },
+    {
+      "order_id": 2,
+      "catalyst_thread": "conference_and_route_event_reinforcement",
+      "first_dominant_stage": "ignition_1",
+      "role_in_cycle": "initial_public_narrative_reinforcement"
+    },
+    {
+      "order_id": 3,
+      "catalyst_thread": "core_earnings_acceleration_and_guidance_confirmation",
+      "first_dominant_stage": "main_markup_1",
+      "role_in_cycle": "fundamental_confirmation"
+    },
+    {
+      "order_id": 4,
+      "catalyst_thread": "advanced_component_and_branch_extension_activation",
+      "first_dominant_stage": "diffusion_1",
+      "role_in_cycle": "cohort_widening_and_route_granularity"
+    },
+    {
+      "order_id": 5,
+      "catalyst_thread": "board_liquidity_and_cross_hardware_resonance",
+      "first_dominant_stage": "major_markup_3",
+      "role_in_cycle": "amplifier"
+    },
+    {
+      "order_id": 6,
+      "catalyst_thread": "spillover_and_name_bonus_late_cycle_behavior",
+      "first_dominant_stage": "laggard_catchup_3",
+      "role_in_cycle": "late_stage_maturity_indicator"
+    }
+  ],
+  "role_transition_rows": [
+    {
+      "symbol": "300308",
+      "role_family": "core_module_leader",
+      "stage_progression": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "The cleanest leader anchor and the main benchmark for whether the cycle is still alive."
+    },
+    {
+      "symbol": "300502",
+      "role_family": "high_beta_core_module",
+      "stage_progression": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "reading": "The strongest high-beta core expression and the best aggression barometer."
+    },
+    {
+      "symbol": "300394",
+      "role_family": "upstream_component_platform",
+      "stage_progression": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "The upstream platform confirms that the cycle is not only a module beta story."
+    },
+    {
+      "symbol": "002281",
+      "role_family": "domestic_optics_platform_bridge",
+      "stage_progression": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "reading": "Useful during diffusion and secondary strengthening, not the first ignition anchor."
+    },
+    {
+      "symbol": "603083/688205/301205",
+      "role_family": "high_beta_module_extension_cluster",
+      "stage_progression": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "reading": "Challenge-beta rows that help capture widened module enthusiasm after the core story is proven."
+    },
+    {
+      "symbol": "300570",
+      "role_family": "connector_mpo_branch",
+      "stage_progression": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ],
+      "reading": "Connector and MPO branch matters once the market pays for route granularity."
+    },
+    {
+      "symbol": "688498/688313",
+      "role_family": "advanced_component_cluster",
+      "stage_progression": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Advanced component adjacency matters more when route depth becomes market-relevant."
+    },
+    {
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "stage_progression": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "reading": "Packaging and process adjacency becomes visible later, once implementation depth matters."
+    },
+    {
+      "symbol": "601869/600487/600522",
+      "role_family": "fiber_cable_extension",
+      "stage_progression": [
+        "laggard_catchup_3"
+      ],
+      "reading": "Useful for late-cycle breadth and maturity, not for defining the cycle start."
+    },
+    {
+      "symbol": "000070/603228",
+      "role_family": "a_share_spillover_factor_candidates",
+      "stage_progression": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "reading": "Useful as A-share-specific spillover indicators rather than business-pure truth rows."
+    },
+    {
+      "symbol": "001267",
+      "role_family": "weak_name_bonus_memory",
+      "stage_progression": [
+        "divergence_decay_3"
+      ],
+      "reading": "Marks the weakest end of the spillover surface."
+    }
+  ],
+  "board_overlay_rows": [
+    {
+      "series_name": "concept_index_strength_daily",
+      "most_informative_stages": [
+        "ignition_1",
+        "main_markup_1",
+        "major_markup_3"
+      ]
+    },
+    {
+      "series_name": "cohort_breadth_daily",
+      "most_informative_stages": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ]
+    },
+    {
+      "series_name": "turnover_pressure_daily",
+      "most_informative_stages": [
+        "divergence_decay_1",
+        "major_markup_3",
+        "divergence_decay_3"
+      ]
+    },
+    {
+      "series_name": "cross_board_resonance_daily",
+      "most_informative_stages": [
+        "ignition_1",
+        "major_markup_3"
+      ]
+    },
+    {
+      "series_name": "anchor_event_overlap_daily",
+      "most_informative_stages": [
+        "pre_ignition_watch_1",
+        "main_markup_1",
+        "re_ignition_markup_2"
+      ]
+    }
+  ],
+  "spillover_overlay_rows": [
+    {
+      "symbol": "000070",
+      "review_bucket": "telecom_adjacent_board_follow_factor",
+      "best_read_as": "late_cycle_stage_indicator",
+      "do_not_confuse_with": "core_earnings_transmission_truth",
+      "reading": "The row is weak on business purity but the sidecar-style score is high enough to preserve it as a telecom-adjacent board-follow factor candidate."
+    },
+    {
+      "symbol": "603228",
+      "review_bucket": "hardware_sentiment_spillover_factor",
+      "best_read_as": "late_cycle_stage_indicator",
+      "do_not_confuse_with": "core_earnings_transmission_truth",
+      "reading": "The row remains structurally useful as a hardware-chain sentiment spillover candidate even if its direct CPO linkage is weak."
+    },
+    {
+      "symbol": "001267",
+      "review_bucket": "name_bonus_or_board_follow_memory",
+      "best_read_as": "weak_memory_only",
+      "do_not_confuse_with": "core_earnings_transmission_truth",
+      "reading": "The row should remain preserved as weak name-bonus memory because the sidecar-style score is too weak for bounded factor candidacy."
+    }
+  ],
+  "residual_ambiguity_rows": [
+    {
+      "ambiguity_name": "300620",
+      "ambiguity_family": "pending_adjacent_role_split",
+      "current_posture": "keep_pending_mixed_enabler_row",
+      "why_preserved": "The upstream photonics row still looks too broad and should remain pending."
+    },
+    {
+      "ambiguity_name": "300548",
+      "ambiguity_family": "pending_adjacent_role_split",
+      "current_posture": "keep_pending_mixed_enabler_row",
+      "why_preserved": "Module and silicon-photonics adjacency is still mixed and should not yet be treated as clean."
+    },
+    {
+      "ambiguity_name": "000988",
+      "ambiguity_family": "pending_adjacent_role_split",
+      "current_posture": "keep_pending_vertical_platform_row",
+      "why_preserved": "The vertical platform row remains too wide and should stay pending."
+    },
+    {
+      "ambiguity_name": "board_vendor_selection_not_yet_frozen",
+      "ambiguity_family": "board_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "The daily table spec exists, but the canonical board-series provider is not yet frozen."
+    },
+    {
+      "ambiguity_name": "breadth_formula_not_yet_frozen",
+      "ambiguity_family": "board_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "Breadth is operationalized conceptually, but the exact bounded computation rule is not yet frozen."
+    },
+    {
+      "ambiguity_name": "turnover_normalization_rule_not_yet_frozen",
+      "ambiguity_family": "board_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "Turnover pressure is a required daily field, but the exact normalization rule remains open."
+    },
+    {
+      "ambiguity_name": "expected_window_fill_rule_not_yet_frozen",
+      "ambiguity_family": "calendar_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "The table shape exists, but the exact rule for window start/end filling across annual vs quarterly anchors remains open."
+    },
+    {
+      "ambiguity_name": "confidence_tier_mapping_not_yet_frozen",
+      "ambiguity_family": "calendar_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "Confidence is required, but the exact tiering rubric across event pages, PRs, and results schedules remains open."
+    },
+    {
+      "ambiguity_name": "calendar_rollforward_process_not_yet_frozen",
+      "ambiguity_family": "calendar_operational_gap",
+      "current_posture": "preserve_as_operational_gap",
+      "why_preserved": "The recurring table exists conceptually, but the maintenance rule for expired anchors and next-cycle rollover remains open."
+    }
+  ],
+  "owner_facing_reconstruction_summary": [
+    "The optical-link cycle is not one smooth trend; it is best read as pre-ignition watch, first ignition and markup, diffusion, reset, re-ignition, major late markup, and final divergence.",
+    "300308 remains the cleanest leader anchor, 300502 is the strongest high-beta core expression, and 300394 is the upstream platform that prevents the cycle from collapsing into a one-factor story.",
+    "Adjacent names matter, but they do not all matter in the same phase: challengers and domestic optics bridges belong to diffusion, while advanced-component and process rows become more useful in re-ignition and later markup windows.",
+    "Spillover rows should not be discarded; they are late-cycle maturity and A-share noise indicators, not core business truth rows.",
+    "Board strength, breadth, turnover, and cross-board resonance are amplifiers and maturity indicators, not substitutes for core role identification.",
+    "The current reconstruction is strong enough to support bounded cohort mapping and bounded labeling review, but not strong enough to authorize automatic training or signal logic."
+  ],
+  "interpretation": [
+    "The bounded reconstruction pass closes the gap between cleaned information layers and an owner-facing cycle narrative.",
+    "The pass preserves unresolved adjacent, board, and calendar ambiguity instead of pretending the cycle is fully purified.",
+    "This is a review-only cycle map: strong enough to support the next bounded research layer, but not a license for auto-training or signal generation."
+  ]
+}

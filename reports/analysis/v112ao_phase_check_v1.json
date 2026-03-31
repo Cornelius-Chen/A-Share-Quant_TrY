@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ao_as_role_layer_patch_pilot",
+    "do_open_v112ao_now": true,
+    "role_state_accuracy_gain_after_patch": 0.2623,
+    "best_role_patch_family": "role_patch_microstructure_family",
+    "max_role_confusion_before_patch": 58,
+    "max_role_confusion_after_patch": 0,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "consider_bounded_secondary_widen_pilot_under_same_report_only_boundary"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ao_role_patch_result",
+      "actual": {
+        "role_state_accuracy_gain_after_patch": 0.2623,
+        "best_role_patch_family": "role_patch_microstructure_family",
+        "max_role_confusion_after_patch": 0
+      },
+      "reading": "The project now knows whether role separation can improve without widening the pilot geometry."
+    }
+  ],
+  "interpretation": [
+    "V1.12AO succeeds if it produces an action-grade answer on role patch value, not if it simply adds more candidate features.",
+    "Formal training still remains closed after this patch pilot."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v6_q3_first_lane_as_opening_led_not_true_carry",
+    "top_positive_symbols": [
+      "600118"
+    ],
+    "top_driver": "600118",
+    "opening_present": true,
+    "persistence_present": false,
+    "opening_trade_date": "2024-07-22",
+    "persistence_trade_date": null,
+    "specialist_assignment_layer": "core",
+    "lane_changes_training_reading": false,
+    "do_open_second_v6_lane_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "top_driver_rank",
+      "actual": {
+        "top_driver": "600118",
+        "top_positive_symbols": [
+          "600118"
+        ]
+      },
+      "reading": "The first v6 lane should be judged using the strongest q3/C symbol rather than widening to another lane."
+    },
+    {
+      "evidence_name": "opening_edge",
+      "actual": {
+        "opening_present": true,
+        "opening_trade_date": "2024-07-22",
+        "specialist_assignment_layer": "core"
+      },
+      "reading": "A clean opening-led reading requires a specialist-only admission edge that the anchors did not match at the same time."
+    },
+    {
+      "evidence_name": "persistence_check",
+      "actual": {
+        "persistence_present": false,
+        "persistence_trade_date": null
+      },
+      "reading": "If the checked late window preserves the specialist position while anchors churn out, the lane may count as persistence-led support even if it is not true carry."
+    }
+  ],
+  "interpretation": [
+    "The first v6 lane should only improve the training reading if it contributes more than another opening-only case.",
+    "A clean persistence edge is useful for the manifest even if it does not yet repair the carry gap itself.",
+    "So the correct current posture is to classify the first v6 lane conservatively before any second-lane decision."
+  ]
+}

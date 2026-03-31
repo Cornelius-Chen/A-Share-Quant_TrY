@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ar_cpo_feature_implementation_patch_spec_freeze",
+    "do_open_v112ar_now": true,
+    "recommended_first_action": "freeze_v112ar_cpo_feature_implementation_patch_spec_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AR CPO Feature Implementation Patch Spec Freeze",
+    "mission": "Freeze the minimum bounded implementation rule set for daily board series and recurring future catalyst calendar before any row-geometry widen.",
+    "in_scope": [
+      "freeze board vendor selection rule",
+      "freeze breadth formula rule",
+      "freeze turnover normalization rule",
+      "freeze expected-window fill rule",
+      "freeze confidence-tier mapping",
+      "freeze calendar rollforward rule"
+    ],
+    "out_of_scope": [
+      "full day-by-day backfill",
+      "row-geometry widen",
+      "formal training promotion",
+      "formal signal generation"
+    ],
+    "success_criteria": [
+      "all 6 bounded patch rules are frozen",
+      "each rule has point-in-time and audit posture",
+      "next lawful move becomes bounded implementation backfill on current truth rows"
+    ]
+  },
+  "interpretation": [
+    "V1.12AR exists to stop the project from hiding implementation ambiguity behind broad model wins.",
+    "This is the smallest lawful freeze needed before any row-geometry widen."
+  ]
+}

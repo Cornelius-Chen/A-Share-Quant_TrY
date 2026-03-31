@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_subagent_exploration_policy_v2",
+    "goal": "use subagents only for low-governance, reviewable, recoverable work",
+    "max_parallel_subagents": 2,
+    "max_tasks_per_round": 3,
+    "default_compute_class": "low",
+    "max_unreviewed_subagent_batches": 1,
+    "mainline_review_required_after_each_batch": true,
+    "default_task_count_threshold": 3,
+    "default_time_window_days": 2
+  },
+  "task_taxonomy": [
+    "exploration",
+    "drafting",
+    "structuring",
+    "execution"
+  ],
+  "review_cadence_modes": {
+    "volume_or_time_based": [
+      "structuring",
+      "execution"
+    ],
+    "stage_based": [
+      "drafting",
+      "exploration"
+    ]
+  },
+  "interpretation": [
+    "Subagents may now produce candidate structural drafts, not only exploratory trials.",
+    "They still cannot legislate labels, freeze schemas, or decide phase direction.",
+    "Review cadence is not one-size-fits-all: repetitive pipeline work is reviewed by volume or time, while candidate-draft work is reviewed by bounded thematic stage."
+  ]
+}

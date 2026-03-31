@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v18b_active_but_bounded_as_admission_gate_review",
+    "v18b_open": true,
+    "reviewed_feature_count": 2,
+    "admission_gate_ready_count": 2,
+    "allow_sample_collection_now": false,
+    "promote_retained_now": false,
+    "recommended_next_posture": "prepare_v18b_phase_closure_or_waiting_state_not_collection"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v18b_charter",
+      "actual": {
+        "acceptance_posture": "open_v18b_breadth_sample_admission_gate",
+        "target_feature_names": [
+          "single_pulse_support",
+          "policy_followthrough_support"
+        ]
+      },
+      "reading": "V1.8B opened lawfully as a bounded breadth admission-gate phase."
+    },
+    {
+      "evidence_name": "feature_admission_gate_review",
+      "actual": {
+        "reviewed_feature_count": 2,
+        "admission_gate_ready_count": 2,
+        "allow_sample_collection_now": false
+      },
+      "reading": "The bounded review already states whether the target features have clean admission gates for future screened collection."
+    }
+  ],
+  "interpretation": [
+    "V1.8B has produced bounded admission-gate judgments without drifting into actual sample collection.",
+    "That means the phase now has a clear gate-readiness posture and does not need forced expansion to justify itself.",
+    "The next legal step is a closure check, not sample collection or promotion."
+  ]
+}

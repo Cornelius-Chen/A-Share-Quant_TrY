@@ -1,0 +1,143 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112r_adjacent_cohort_validation_v1",
+    "reviewed_adjacent_row_count": 14,
+    "validated_review_asset_count": 5,
+    "pending_split_or_role_validation_count": 9,
+    "formal_training_candidate_count": 0,
+    "ready_for_phase_check_next": true
+  },
+  "validation_rows": [
+    {
+      "symbol": "002281",
+      "existing_chain_role": "domestic_optics_platform",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-25/1224895597.PDF",
+      "review_disposition": "validate_as_domestic_optics_platform_bridge_review_asset",
+      "refined_review_role": "domestic_optics_platform_bridge",
+      "reading": "Direct optics platform bridge worth preserving as a bounded adjacent review asset."
+    },
+    {
+      "symbol": "603083",
+      "existing_chain_role": "high_beta_module_extension",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-08/1223020216.PDF",
+      "review_disposition": "keep_pending_high_beta_extension_role_split",
+      "refined_review_role": "high_beta_module_extension_cluster",
+      "reading": "High-beta module-extension cluster is too broad to validate cleanly without a challenger split."
+    },
+    {
+      "symbol": "688205",
+      "existing_chain_role": "high_end_module_extension",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-26/1219838235.PDF",
+      "review_disposition": "keep_pending_high_beta_extension_role_split",
+      "refined_review_role": "high_beta_module_extension_cluster",
+      "reading": "High-end module extension remains inside the same over-broad high-beta challenger cluster."
+    },
+    {
+      "symbol": "301205",
+      "existing_chain_role": "smaller_cap_high_beta_module",
+      "anchor_type": "official_interaction",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2024-05-21/1220119757.PDF",
+      "review_disposition": "keep_pending_high_beta_extension_role_split",
+      "refined_review_role": "high_beta_module_extension_cluster",
+      "reading": "Smaller-cap high-beta module row should remain pending until the challenger hierarchy is cleaner."
+    },
+    {
+      "symbol": "300620",
+      "existing_chain_role": "upstream_photonics_cpo_adjacent",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2020-07-29/1208099577.PDF",
+      "review_disposition": "keep_pending_cpo_enabler_split",
+      "refined_review_role": "cpo_enabler_cluster",
+      "reading": "Upstream photonics row appears useful, but still belongs to an unsplit CPO-enabler cluster."
+    },
+    {
+      "symbol": "300548",
+      "existing_chain_role": "module_and_cpo_adjacency",
+      "anchor_type": "official_disclosure",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-07-01/1224058932.PDF",
+      "review_disposition": "keep_pending_cpo_enabler_split",
+      "refined_review_role": "cpo_enabler_cluster",
+      "reading": "Module or silicon-photonics adjacency remains too mixed for clean validation today."
+    },
+    {
+      "symbol": "300757",
+      "existing_chain_role": "equipment_and_cpo_process_adjacency",
+      "anchor_type": "official_product_disclosure",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-05-19/1223587601.PDF",
+      "review_disposition": "keep_pending_cpo_enabler_split",
+      "refined_review_role": "cpo_enabler_cluster",
+      "reading": "Packaging or process adjacency should not be hidden inside a generic extension bucket."
+    },
+    {
+      "symbol": "000988",
+      "existing_chain_role": "optoelectronic_vertical_platform",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-05-10/1223512787.PDF",
+      "review_disposition": "keep_pending_vertical_platform_role_validation",
+      "refined_review_role": "vertical_platform_pending",
+      "reading": "Vertical optoelectronic platform role is still too wide to validate cleanly."
+    },
+    {
+      "symbol": "300570",
+      "existing_chain_role": "mpo_and_optical_connector",
+      "anchor_type": "official_interaction",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223069331.PDF",
+      "review_disposition": "validate_as_connector_mpo_branch_review_asset",
+      "refined_review_role": "connector_mpo_branch",
+      "reading": "Connector or MPO branch row is structurally distinct enough to preserve as a review asset."
+    },
+    {
+      "symbol": "688498",
+      "existing_chain_role": "optical_chip_and_laser",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-02-21/1222593490.PDF",
+      "review_disposition": "keep_pending_advanced_component_subsplit",
+      "refined_review_role": "advanced_component_cluster",
+      "reading": "Laser-chip adjacency should stay pending until separated from other advanced photonics rows."
+    },
+    {
+      "symbol": "688313",
+      "existing_chain_role": "silicon_photonics_and_chip_adjacency",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-22/1216528088.PDF",
+      "review_disposition": "keep_pending_advanced_component_subsplit",
+      "refined_review_role": "advanced_component_cluster",
+      "reading": "Silicon-photonics adjacency should stay pending until its sub-branch is cleaner."
+    },
+    {
+      "symbol": "601869",
+      "existing_chain_role": "optical_fiber_and_cable",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-28/1224586854.PDF",
+      "review_disposition": "validate_as_fiber_cable_extension_review_asset",
+      "refined_review_role": "fiber_cable_extension",
+      "reading": "Fiber and cable extension is a stable branch worth preserving for review."
+    },
+    {
+      "symbol": "600487",
+      "existing_chain_role": "optical_fiber_and_cable",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2023-12-12/1218583250.PDF",
+      "review_disposition": "validate_as_fiber_cable_extension_review_asset",
+      "refined_review_role": "fiber_cable_extension",
+      "reading": "Fiber and cable extension is a stable branch worth preserving for review."
+    },
+    {
+      "symbol": "600522",
+      "existing_chain_role": "optical_fiber_and_cable",
+      "anchor_type": "annual_report",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2022-08-31/1214469070.PDF",
+      "review_disposition": "validate_as_fiber_cable_extension_review_asset",
+      "refined_review_role": "fiber_cable_extension",
+      "reading": "Fiber and cable extension is a stable branch worth preserving for review."
+    }
+  ],
+  "interpretation": [
+    "V1.12R improves the adjacent pool by separating already-usable review assets from unresolved structural clusters.",
+    "Several rows are intentionally left pending because the real problem is role-coarseness, not lack of raw information.",
+    "This still does not authorize training; it only improves the cleanliness of downstream review work."
+  ]
+}

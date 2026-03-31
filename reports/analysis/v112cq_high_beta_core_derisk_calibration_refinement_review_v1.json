@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cq_high_beta_core_derisk_calibration_refinement_review_v1",
+    "band_count": 2,
+    "mild_band_neutral_safe": true,
+    "strong_band_beats_evidence_both": true,
+    "combined_replay_ready_after_split": false,
+    "cp_combined_return_delta_vs_neutral": -0.0377,
+    "cp_combined_drawdown_delta_vs_neutral": 0.028,
+    "recommended_next_posture": "keep_300502_on_split_derisk_bands_and_defer_joint_promotion_until_neutral_safe_calibration_improves"
+  },
+  "band_rows": [
+    {
+      "band_name": "neutral_safe_mild_derisk_band",
+      "band_role": "de-risk without harming the current neutral 300502 path",
+      "drawdown_threshold": 0.05,
+      "min_holding_day": 1,
+      "reduced_exposure": 0.75,
+      "retained_gain_floor": 0.0,
+      "require_ma5_break": true,
+      "require_ma10_break": false,
+      "evidence_total_return": 3.7626,
+      "evidence_max_drawdown": -0.2234,
+      "de_risk_count": 2,
+      "neutral_trigger_count": 1,
+      "neutral_symbol_total_return": 0.2368,
+      "neutral_symbol_return_delta": 0.0,
+      "beats_evidence_baseline_return": false,
+      "beats_evidence_baseline_drawdown": true
+    },
+    {
+      "band_name": "evidence_optimizing_stronger_derisk_band",
+      "band_role": "stronger late-state de-risk that beats evidence baseline on both return and drawdown",
+      "drawdown_threshold": 0.07,
+      "min_holding_day": 7,
+      "reduced_exposure": 0.75,
+      "retained_gain_floor": -0.05,
+      "require_ma5_break": true,
+      "require_ma10_break": false,
+      "evidence_total_return": 4.1585,
+      "evidence_max_drawdown": -0.2089,
+      "de_risk_count": 1,
+      "neutral_trigger_count": 1,
+      "neutral_symbol_total_return": 0.1702,
+      "neutral_symbol_return_delta": -0.0665,
+      "beats_evidence_baseline_return": true,
+      "beats_evidence_baseline_drawdown": true
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "mild_vs_strong_neutral_symbol_return_delta",
+      "baseline_value": 0.0,
+      "pilot_value": -0.0665,
+      "delta": -0.0665
+    },
+    {
+      "comparison_name": "mild_vs_strong_evidence_total_return",
+      "baseline_value": 3.7626,
+      "pilot_value": 4.1585,
+      "delta": 0.3959
+    },
+    {
+      "comparison_name": "mild_vs_strong_evidence_max_drawdown",
+      "baseline_value": -0.2234,
+      "pilot_value": -0.2089,
+      "delta": 0.0145
+    }
+  ],
+  "interpretation": [
+    "V1.12CQ stops searching for a single 300502 de-risk point and instead extracts a calibration frontier.",
+    "The mild band preserves the current neutral 300502 path, while the stronger band improves the evidence bundle on both return and drawdown at the cost of a small neutral-path giveback.",
+    "This means 300502 now reads as a split-band de-risk problem rather than as a single-rule promotion candidate."
+  ]
+}

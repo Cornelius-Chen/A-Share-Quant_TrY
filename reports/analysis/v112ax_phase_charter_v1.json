@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ax_guarded_branch_admitted_pilot",
+    "do_open_v112ax_now": true,
+    "recommended_first_action": "freeze_v112ax_cpo_guarded_branch_admitted_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AX CPO Guarded Branch-Admitted Pilot",
+    "mission": "Run a bounded pilot with the three branch rows admitted into guarded training context before any broader row-geometry widen.",
+    "in_scope": [
+      "reuse the current 7 truth rows",
+      "admit only the three V1.12AW guarded branch rows",
+      "retain the branch patch feature family",
+      "test core and guarded targets under this narrower branch admission"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "formal signal generation",
+      "connector/MPO branch admission",
+      "spillover or pending row admission"
+    ],
+    "success_criteria": [
+      "core targets remain stable",
+      "guarded targets remain stable",
+      "the admitted branch subset does not recreate the V1.12AU role collapse"
+    ]
+  },
+  "interpretation": [
+    "V1.12AX is the first pilot that uses the V1.12AW admissibility cut operationally.",
+    "This remains bounded, report-only, and non-deployable."
+  ]
+}

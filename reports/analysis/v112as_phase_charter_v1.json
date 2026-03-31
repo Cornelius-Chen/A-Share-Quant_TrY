@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112as_cpo_bounded_implementation_backfill",
+    "do_open_v112as_now": true,
+    "recommended_first_action": "freeze_v112as_cpo_bounded_implementation_backfill_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AS CPO Bounded Implementation Backfill",
+    "mission": "Apply the frozen board/calendar implementation rules onto the current 7 truth rows without widening geometry or opening formal training.",
+    "in_scope": [
+      "backfill bounded board-series columns on current truth rows",
+      "backfill bounded calendar columns on current truth rows",
+      "audit coverage and explicit placeholder usage"
+    ],
+    "out_of_scope": [
+      "row-geometry widen",
+      "formal training promotion",
+      "formal signal generation",
+      "full market-wide backfill"
+    ],
+    "success_criteria": [
+      "all 6 frozen patch rules are applied to the current truth rows",
+      "board and calendar coverage is explicit and auditable",
+      "next lawful move is narrowed to a post-patch rerun or widen decision"
+    ]
+  },
+  "interpretation": [
+    "V1.12AS does not broaden scope. It operationalizes the already-frozen patch rules on the current truth rows.",
+    "This is the smallest lawful move before any post-patch rerun or geometry widen decision."
+  ]
+}

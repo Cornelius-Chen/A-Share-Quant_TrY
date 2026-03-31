@@ -1,0 +1,37 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  reference_base_file: config/universes/market_research_v6_catalyst_supported_carry_persistence_reference_base.txt
+  seed_universe_file: config/universes/market_research_v6_catalyst_supported_carry_persistence_refresh.txt
+
+manifest:
+  required_targets:
+    - true_carry_row
+    - clean_persistence_row
+  entries:
+    - symbol: "002085"
+      target_training_gap: true_carry_row
+      primary_admission_reason: true_carry_row
+      row_hypothesis: low-altitude catalyst followthrough can produce a real carry row instead of a one-day opening pulse
+      catalyst_support_hypothesis: board-level low-altitude policy followthrough and repeated market recognition may support carry persistence
+      catalyst_context_mode: policy_followthrough
+    - symbol: "600118"
+      target_training_gap: true_carry_row
+      primary_admission_reason: true_carry_row
+      row_hypothesis: commercial-space style thematic followthrough can generate a basis-advantage carry row if market confirmation persists
+      catalyst_support_hypothesis: sector and theme confirmation may convert repeated aerospace policy attention into a bounded carry context
+      catalyst_context_mode: policy_followthrough
+    - symbol: "000738"
+      target_training_gap: clean_persistence_row
+      primary_admission_reason: clean_persistence_row
+      row_hypothesis: multi-day reinforcement in defense and aerospace context may support a clean persistence row
+      catalyst_support_hypothesis: repeated board reinforcement can help distinguish persistence from a single-pulse opening edge
+      catalyst_context_mode: multi_day_reinforcement
+    - symbol: "300474"
+      target_training_gap: clean_persistence_row
+      primary_admission_reason: clean_persistence_row
+      row_hypothesis: repeated high-heat thematic reinforcement can create an acceptance-grade persistence row rather than a mixed hold example
+      catalyst_support_hypothesis: multi-day sector and theme reinforcement can support bounded persistence confirmation
+      catalyst_context_mode: multi_day_reinforcement

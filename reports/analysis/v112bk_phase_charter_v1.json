@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bk_cpo_tree_ranker_search",
+    "do_open_v112bk_now": true,
+    "recommended_first_action": "freeze_v112bk_cpo_tree_ranker_search_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BK CPO Tree/Ranker Search",
+    "mission": "Run a bounded no-leak model-zoo search over cheap tree/ranking variants on the lawful 10-row CPO layer and check whether any variant can beat the current neutral selective baseline without materially worse drawdown.",
+    "in_scope": [
+      "hist-gradient boosting regression ranker",
+      "random forest regression ranker",
+      "extra trees regression ranker",
+      "same lawful 10-row CPO layer",
+      "explicit comparison against aggressive, neutral, and oracle tracks"
+    ],
+    "out_of_scope": [
+      "formal signal generation",
+      "formal training opening",
+      "deep model zoo expansion",
+      "reinforcement learning"
+    ],
+    "success_criteria": [
+      "all variants remain no-leak",
+      "the search emits explicit portfolio traces",
+      "the report states whether any variant beats neutral without materially worse drawdown"
+    ]
+  },
+  "interpretation": [
+    "V1.12BK is a bounded model-zoo search, not a deployment step.",
+    "It exists to test whether cheaper tree/ranker variants can beat the current neutral selective baseline without opening the model search too widely."
+  ]
+}

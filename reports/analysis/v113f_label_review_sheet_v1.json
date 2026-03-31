@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113f_label_review_sheet_v1",
+    "review_row_count": 3,
+    "owner_review_required_count": 3,
+    "label_block_focus_count": 4,
+    "ready_for_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "symbol": "002085",
+      "name": "万丰奥威",
+      "pool_role_guess": "leader",
+      "role_guess_reason": "Dense commercial-space concept presence makes this the cleanest local mainline leader seed.",
+      "cycle_window_start_guess": "2024-01-02",
+      "cycle_window_end_guess": "2024-12-31",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "state_label_review_status": "owner_review_needed",
+      "strength_label_review_status": "owner_review_needed",
+      "driver_presence_review_status": "owner_review_needed",
+      "label_blocks_to_review": [
+        "state_label",
+        "role_label",
+        "strength_labels",
+        "driver_presence_review_flags"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "symbol": "000738",
+      "name": "航发控制",
+      "pool_role_guess": "mapping_activation",
+      "role_guess_reason": "The symbol appears in commercial-space mapping intermittently and therefore reads more like a mapping activation draft than a clean core.",
+      "cycle_window_start_guess": "2024-02-19",
+      "cycle_window_end_guess": "2024-12-13",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "state_label_review_status": "owner_review_needed",
+      "strength_label_review_status": "owner_review_needed",
+      "driver_presence_review_status": "owner_review_needed",
+      "label_blocks_to_review": [
+        "state_label",
+        "role_label",
+        "strength_labels",
+        "driver_presence_review_flags"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "symbol": "600118",
+      "name": "中国卫星",
+      "pool_role_guess": "mid_core",
+      "role_guess_reason": "Policy and aerospace anchoring make this a plausible mid-core review seed despite sparse direct commercial-space mapping.",
+      "cycle_window_start_guess": "2024-07-24",
+      "cycle_window_end_guess": "2024-07-30",
+      "include_in_first_pilot_guess": true,
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "owner_review_needed",
+      "cycle_window_correction_status": "owner_review_needed",
+      "state_label_review_status": "owner_review_needed",
+      "strength_label_review_status": "owner_review_needed",
+      "driver_presence_review_status": "owner_review_needed",
+      "label_blocks_to_review": [
+        "state_label",
+        "role_label",
+        "strength_labels",
+        "driver_presence_review_flags"
+      ],
+      "owner_notes": ""
+    }
+  ],
+  "interpretation": [
+    "The first theme-diffusion pilot sheet is intentionally draft-heavy because object roles and windows remain archetype-review questions, not fixed truth.",
+    "Every row is exposed to owner correction before any label freeze or training starts.",
+    "The sheet is a bounded collaboration surface, not a finished training file."
+  ]
+}

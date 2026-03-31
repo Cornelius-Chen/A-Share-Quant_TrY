@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ak_as_bounded_feature_binding_review",
+    "do_open_v112ak_now": true,
+    "truth_candidate_row_count": 7,
+    "evaluated_binding_count": 56,
+    "direct_bindable_count": 21,
+    "guarded_bindable_count": 17,
+    "row_specific_blocked_count": 18,
+    "allow_auto_label_freeze_now": false,
+    "allow_auto_training_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "bounded_training_readiness_review_with_binding_gaps_explicit"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ak_feature_binding_review",
+      "actual": {
+        "evaluated_binding_count": 56,
+        "direct_bindable_count": 21,
+        "guarded_bindable_count": 17,
+        "row_specific_blocked_count": 18
+      },
+      "reading": "The current row-label set now has an explicit binding map instead of assuming all admitted labels are equally usable."
+    }
+  ],
+  "interpretation": [
+    "V1.12AK succeeds if row-level binding weakness is made explicit before any training-readiness claim.",
+    "Training remains closed."
+  ]
+}

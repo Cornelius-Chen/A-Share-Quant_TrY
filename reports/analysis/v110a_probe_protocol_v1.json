@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v110a_probe_protocol_v1",
+    "target_feature_name": "policy_followthrough_support",
+    "allow_zero_admitted_as_successful_probe": true,
+    "sample_limit": 2,
+    "ready_for_single_probe_next": true
+  },
+  "protocol": {
+    "target_feature_name": "policy_followthrough_support",
+    "existing_symbol_family_anchor": [
+      "300750"
+    ],
+    "candidate_source_pool": "closed_followthrough_like_lanes_with_policy_or_industry_context",
+    "sample_limit": 2,
+    "required_non_redundancy_axes": [
+      "cross_symbol_family",
+      "catalyst_context_not_identical",
+      "not_same_event_day_same_symbol_cluster"
+    ],
+    "forbidden_actions": [
+      "retained_feature_promotion",
+      "strategy_integration",
+      "new_refresh_opening",
+      "automatic_v110b_creation"
+    ]
+  },
+  "interpretation": [
+    "V1.10A is a single bounded probe, not an expansion phase.",
+    "A candidate must be cross-family and non-redundant relative to the current 300750-based evidence anchor.",
+    "Zero admitted cases is a valid successful negative result if the bounded pool cannot satisfy the frozen gate."
+  ]
+}

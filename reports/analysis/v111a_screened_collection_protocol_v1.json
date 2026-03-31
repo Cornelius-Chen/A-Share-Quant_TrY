@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v111a_screened_collection_protocol_v1",
+    "candidate_cap": 5,
+    "admission_cap": 2,
+    "negative_result_allowed": true,
+    "ready_for_screened_collection_next": true
+  },
+  "protocol": {
+    "candidate_source_pool": "resolved_official_or_high_trust_rows_from_catalyst_event_registry_source_fill_v1",
+    "candidate_cap": 5,
+    "admission_cap": 2,
+    "pilot_priority_order": [
+      "official_policy_or_regulatory_followthrough",
+      "industry_reinforcement_with_board_confirmation",
+      "project_or_order_followthrough_with_multi-day breadth"
+    ],
+    "screening_requirements": [
+      "row must satisfy point_in_time_recordable fields",
+      "row must have resolved official or high-trust source status",
+      "row must have board-level mapped theme or sector confirmation",
+      "row must not be single-pulse only",
+      "row must pass family novelty rules against existing anchor family"
+    ],
+    "admission_requirements": [
+      "candidate must be non-anchor-family",
+      "candidate must preserve source-aware traceability",
+      "candidate must remain report-only and exploration-layer only",
+      "candidate must record feature-shadow implications"
+    ],
+    "negative_result_allowed": true,
+    "auto_follow_on_forbidden": true
+  },
+  "interpretation": [
+    "V1.11A screens only resolved, source-aware catalyst rows rather than opening a fresh replay branch.",
+    "The pilot is deliberately small: it can screen at most five candidates and admit at most two.",
+    "The next legal step is to execute the screen and record admissions or a clean negative result."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112am_cpo_extremely_small_core_skeleton_training_pilot",
+    "do_open_v112am_now": true,
+    "recommended_first_action": "freeze_v112am_cpo_extremely_small_core_skeleton_training_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AM CPO Extremely Small Core-Skeleton Training Pilot",
+    "mission": "Run a first extremely small CPO training pilot on the current core skeleton only, using the current truth-candidate rows, core labels, and stable implemented features under report-only boundaries.",
+    "in_scope": [
+      "build a minimal sample set from current truth-candidate rows",
+      "train an interpretable baseline and a bounded GBDT sidecar",
+      "evaluate learnability of phase, role, and catalyst-sequence skeleton labels",
+      "attach a small payoff-quality side reading without opening deployment rights"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "full feature-family implementation",
+      "quiet-window or spillover truth promotion",
+      "signal deployment"
+    ],
+    "success_criteria": [
+      "the pilot exposes whether the current core skeleton is learnable at all",
+      "the pilot produces model-comparison evidence without pretending representativeness",
+      "the pilot remains report-only"
+    ]
+  },
+  "interpretation": [
+    "V1.12AM exists to replace further abstract auditing with bounded failure exposure.",
+    "The pilot is intentionally narrow: if it works, that does not open broad training rights; if it fails, that failure is still high-value information."
+  ]
+}

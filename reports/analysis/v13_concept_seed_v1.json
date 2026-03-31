@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v13_concept_seed_v1_as_bounded_theme_scope_sample",
+    "seed_row_count": 4,
+    "unique_symbol_count": 3,
+    "cross_strategy_symbol_count": 1,
+    "label_counts": {
+      "carry_row_present": 2,
+      "opening_led": 1,
+      "persistence_led": 1
+    },
+    "ready_for_concept_source_fill_next": true
+  },
+  "seed_rows": [
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::002049",
+      "symbol": "002049",
+      "strategy_name": "mainline_trend_c",
+      "slice_name": "2024-11",
+      "lane_outcome_label": "opening_led",
+      "mapped_context_name": "通信技术",
+      "mapping_source": "akshare_em_concept_history",
+      "persistence_class": "single_pulse"
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-02-22::000155",
+      "symbol": "000155",
+      "strategy_name": "mainline_trend_c",
+      "slice_name": "2024-02",
+      "lane_outcome_label": "persistence_led",
+      "mapped_context_name": "锂矿概念",
+      "mapping_source": "akshare_em_concept_history",
+      "persistence_class": "multi_day_reinforcement"
+    },
+    {
+      "lane_id": "mainline_trend_b::2024-11-05::300750",
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_b",
+      "slice_name": "2024-11",
+      "lane_outcome_label": "carry_row_present",
+      "mapped_context_name": "锂矿概念",
+      "mapping_source": "akshare_em_concept_history",
+      "persistence_class": "policy_followthrough"
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::300750",
+      "symbol": "300750",
+      "strategy_name": "mainline_trend_c",
+      "slice_name": "2024-11",
+      "lane_outcome_label": "carry_row_present",
+      "mapped_context_name": "锂矿概念",
+      "mapping_source": "akshare_em_concept_history",
+      "persistence_class": "policy_followthrough"
+    }
+  ],
+  "interpretation": [
+    "The first concept-focused seed should stay inside already-mapped theme-scope rows, not expand into fresh scraping.",
+    "That keeps V1.3 tied to closed lanes while still covering opening, persistence, and carry-labeled contexts inside theme mappings.",
+    "The next legal action after this seed is bounded concept-source fill rather than new replay or direct model work."
+  ]
+}

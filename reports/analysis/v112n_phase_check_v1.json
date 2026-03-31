@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112n_as_shadow_rerun_complete",
+    "baseline_shadow_incremental_gain_present": false,
+    "gbdt_shadow_incremental_gain_present": false,
+    "net_incremental_gain_present": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "treat_inner_draft_as_descriptive_until_further_evidence_if_no_gain"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112n_shadow_rerun",
+      "actual": {
+        "baseline_shadow_test_accuracy": 0.4628,
+        "baseline_v2_test_accuracy": 0.4628,
+        "gbdt_shadow_test_accuracy": 0.5655,
+        "gbdt_v2_test_accuracy": 0.5655
+      },
+      "reading": "V1.12N asks whether the inner-draft shadow features add any incremental predictive value on the frozen pilot."
+    }
+  ],
+  "interpretation": [
+    "V1.12N is a same-dataset review-only shadow rerun.",
+    "Its main value is diagnostic: gain or no gain both clarify how to treat the inner draft."
+  ]
+}

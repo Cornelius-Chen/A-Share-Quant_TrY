@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ab_cpo_bounded_labeling_review",
+    "do_open_v112ab_now": true,
+    "selected_parent_line": "v112aa_cpo_bounded_cohort_map",
+    "recommended_first_action": "freeze_v112ab_cpo_bounded_labeling_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AB CPO Bounded Labeling Review",
+    "mission": "Use the frozen CPO bounded cohort map to decide which objects may later enter primary or secondary labeling surfaces, while keeping review-only, spillover, and pending rows outside formal label freeze.",
+    "in_scope": [
+      "review later labeling surface boundaries",
+      "freeze primary versus secondary versus review-only object posture",
+      "preserve pending rows as explicit exclusions"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training rights",
+      "signal logic",
+      "execution rules"
+    ],
+    "success_criteria": [
+      "later labeling surfaces are explicit",
+      "core truth, secondary candidates, support-only rows, overlays, and exclusions remain separated",
+      "the line can move toward a bounded label-draft assembly without leaking ambiguity into truth"
+    ],
+    "stop_criteria": [
+      "the review quietly turns into final truth assignment",
+      "spillover or pending rows are promoted without governance",
+      "the phase opens training by stealth"
+    ]
+  },
+  "interpretation": [
+    "V1.12AB does not label samples yet; it freezes labeling surfaces and exclusions.",
+    "This phase exists to keep later label drafting disciplined."
+  ]
+}

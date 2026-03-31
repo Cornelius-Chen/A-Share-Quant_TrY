@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112l_candidate_substate_owner_review",
+    "phase_name": "V1.12L Candidate Substate Owner Review",
+    "ready_for_owner_review_next": true
+  },
+  "mission": {
+    "goal": "Review the V1.12K candidate-substate draft and decide which pieces are worth preserving as review-only candidate substates versus keeping only as future inner-drafting targets.",
+    "why_now": "V1.12K already produced a bounded review-only draft, so the next lawful move is preservation review rather than immediate inner splitting or formal relabeling."
+  },
+  "in_scope": [
+    "review-only preserve/reject judgment on the three V1.12K candidate substate rows",
+    "separating preservable review-only candidate substates from mixed drafting-only structures",
+    "keeping high_level_consolidation as the only stage under review"
+  ],
+  "out_of_scope": [
+    "formal label split",
+    "inner drafting execution",
+    "major_markup follow-up",
+    "dataset widening",
+    "model escalation"
+  ],
+  "success_criteria": [
+    "a bounded preserve/reject decision exists for each V1.12K candidate substate row",
+    "at least one preserved review-only candidate substate remains usable without formal label action",
+    "mixed structures remain explicitly blocked from automatic promotion into formal schema"
+  ],
+  "stop_criteria": [
+    "the review collapses into de facto label legislation",
+    "the review requires widening scope beyond the existing V1.12K draft before any judgment is possible"
+  ],
+  "handoff_condition": "mainline can decide whether to stop at preserved review-only substates or open one further bounded inner-drafting pass only for the mixed stall cluster"
+}

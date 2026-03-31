@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bl_cpo_regime_aware_gate_pilot",
+    "do_open_v112bl_now": true,
+    "recommended_first_action": "freeze_v112bl_cpo_regime_aware_gate_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BL CPO Regime-Aware Gate Pilot",
+    "mission": "Test whether a bounded no-leak gate model can learn neutral-style participation discipline when market_regime_overlay_family is added explicitly on top of the current CPO skeleton.",
+    "in_scope": [
+      "teacher decision reconstruction from the neutral selective track",
+      "point-in-time gate-model training",
+      "regime-aware overlay features from the frozen market_regime_overlay_family",
+      "cash-versus-entry learning on the same lawful 10-row CPO layer",
+      "bounded comparison against aggressive, neutral, and ranker tracks"
+    ],
+    "out_of_scope": [
+      "formal signal generation",
+      "formal training opening",
+      "row-geometry widen",
+      "deep RL",
+      "heavy transformer search"
+    ],
+    "success_criteria": [
+      "the regime-aware gate line remains no-leak",
+      "it emits an explicit portfolio trace",
+      "it improves over the naive teacher-gate attempt or exposes a clear regime mechanism"
+    ]
+  },
+  "interpretation": [
+    "V1.12BL is not a new ideology; it is a regime-aware attempt to learn the strongest no-leak line's participation discipline.",
+    "It uses the frozen market-regime overlay family explicitly rather than pretending neutral is only a stock-level gate."
+  ]
+}

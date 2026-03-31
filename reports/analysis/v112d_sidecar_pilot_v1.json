@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112d_first_same_dataset_sidecar_pilot_v1",
+    "model_count": 2,
+    "best_model_name": "hist_gradient_boosting_classifier",
+    "best_model_test_accuracy": 0.558,
+    "baseline_test_accuracy": 0.4509,
+    "baseline_major_markup_fp": 178,
+    "baseline_high_level_consolidation_fp": 46,
+    "allow_strategy_training_now": false,
+    "allow_sidecar_deployment_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "model_rows": [
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "test_accuracy": 0.558,
+      "carry_constructive_precision": 0.6024,
+      "carry_constructive_recall": 0.6211,
+      "false_positive_count_in_major_markup": 125,
+      "false_positive_count_in_high_level_consolidation": 1,
+      "baseline_test_accuracy": 0.4509,
+      "baseline_false_positive_count_in_major_markup": 178,
+      "baseline_false_positive_count_in_high_level_consolidation": 46,
+      "same_dataset_rule_kept": true,
+      "same_time_split_rule_kept": true
+    },
+    {
+      "model_name": "small_mlp_classifier",
+      "test_accuracy": 0.5476,
+      "carry_constructive_precision": 0.5516,
+      "carry_constructive_recall": 0.8137,
+      "false_positive_count_in_major_markup": 176,
+      "false_positive_count_in_high_level_consolidation": 32,
+      "baseline_test_accuracy": 0.4509,
+      "baseline_false_positive_count_in_major_markup": 178,
+      "baseline_false_positive_count_in_high_level_consolidation": 46,
+      "same_dataset_rule_kept": true,
+      "same_time_split_rule_kept": true
+    }
+  ],
+  "interpretation": [
+    "This is a same-dataset, same-label, same-split sidecar comparison, so differences are attributable to model family rather than scope drift.",
+    "The comparison target is hotspot reduction, not generic leaderboard chasing.",
+    "Even if a sidecar model improves hotspot behavior, the result remains report-only until a later review phase accepts it."
+  ]
+}

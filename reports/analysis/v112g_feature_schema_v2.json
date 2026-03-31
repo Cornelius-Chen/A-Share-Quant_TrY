@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112g_feature_schema_v2",
+    "new_feature_count": 3,
+    "total_feature_count_v2": 15,
+    "ready_for_baseline_v2_next": true
+  },
+  "feature_rows": [
+    {
+      "feature_name": "catalyst_freshness_state",
+      "source_semantic": "Is the catalyst newly strengthening, still active, or already stale?",
+      "implementation_basis": "demand_acceleration_proxy + breakout_or_hold_structure + catalyst_presence",
+      "target_stage": "major_markup,high_level_consolidation"
+    },
+    {
+      "feature_name": "cross_day_catalyst_persistence",
+      "source_semantic": "Does the catalyst keep receiving cross-day confirmation instead of fading into one-off narrative memory?",
+      "implementation_basis": "product_price_change_proxy + relative_strength_persistence + catalyst_presence",
+      "target_stage": "high_level_consolidation"
+    },
+    {
+      "feature_name": "theme_breadth_confirmation_proxy",
+      "source_semantic": "Is the catalyst still expanding through the cohort, or is only the core name holding up?",
+      "implementation_basis": "cross-symbol same-day breadth from positive ret_5 and above-ma20 cohort share",
+      "target_stage": "major_markup,high_level_consolidation"
+    }
+  ],
+  "interpretation": [
+    "The v2 schema adds bounded semantics rather than a generic catalyst feature explosion.",
+    "All three additions are stage-targeted and remain derivable from the same frozen dataset plus cross-symbol cohort context.",
+    "The next lawful move is to rerun the same pilot baseline and sidecar with these added semantics."
+  ]
+}

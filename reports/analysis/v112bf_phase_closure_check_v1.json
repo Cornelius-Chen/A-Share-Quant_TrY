@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bf_as_cpo_aggressive_no_leak_black_box_portfolio_pilot_success",
+    "v112bf_success_criteria_met": true,
+    "enter_v112bf_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bf_phase_check",
+      "actual": {
+        "trade_count": 20,
+        "no_leak_enforced": true
+      },
+      "reading": "The phase closes once the aggressive no-leak track exists as an explicit bounded portfolio line."
+    }
+  ],
+  "interpretation": [
+    "V1.12BF closes with the first aggressive no-leak black-box portfolio pilot on the lawful 10-row CPO layer.",
+    "Formal training and signal rights remain closed."
+  ]
+}

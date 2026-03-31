@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: feature_breadth_rereview_v1.9
+
+paths:
+  v19_breadth_rereview_protocol_report: reports/analysis/v19_breadth_rereview_protocol_v1.json
+  v17_feature_promotion_gap_review_report: reports/analysis/v17_feature_promotion_gap_review_v1.json
+  v18c_screened_collection_report: reports/analysis/v18c_screened_collection_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v19_feature_breadth_rereview_v1

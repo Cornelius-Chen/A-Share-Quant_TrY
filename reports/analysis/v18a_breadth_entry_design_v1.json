@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v18a_breadth_entry_design_v1",
+    "entry_row_count": 2,
+    "target_feature_count": 2,
+    "allow_unbounded_sample_collection_now": false,
+    "ready_for_v18a_phase_check_next": true
+  },
+  "entry_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "breadth_entry_mode": "bounded_additional_opening_cases",
+      "candidate_source_pool": "closed_opening_led_lanes_with_context_rows",
+      "sample_limit": 3,
+      "selection_rules": [
+        "must remain point_in_time clean",
+        "must remain source_aware and market_confirmed",
+        "must not reopen generic replay queues",
+        "must not mix in persistence_or_carry shortfall targets"
+      ],
+      "minimum_evidence_path": "bounded_multi_sample_review"
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "breadth_entry_mode": "bounded_additional_followthrough_cases",
+      "candidate_source_pool": "closed_followthrough_like_lanes_with_policy_or_industry_context",
+      "sample_limit": 3,
+      "selection_rules": [
+        "must preserve policy_or_industry_followthrough reading",
+        "must remain point_in_time clean and source_aware",
+        "must avoid generic catalyst ingestion growth",
+        "must not mix in cross_regime validation work"
+      ],
+      "minimum_evidence_path": "bounded_additional_followthrough_case_review"
+    }
+  ],
+  "interpretation": [
+    "V1.8A still does not collect arbitrary new samples; it only defines the smallest lawful entry design for future breadth evidence work.",
+    "The entry design remains tied to two explicit target features and keeps source-aware, point-in-time, and boundedness constraints intact.",
+    "The next legal step is a V1.8A phase check, not generic sample collection or promotion."
+  ]
+}

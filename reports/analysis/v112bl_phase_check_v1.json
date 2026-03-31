@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bl_as_cpo_regime_aware_gate_pilot",
+    "do_open_v112bl_now": true,
+    "trade_count": 1,
+    "cash_ratio": 0.9612,
+    "teacher_alignment_recall": 0.0,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bl_regime_aware_gate_pilot",
+      "actual": {
+        "total_return": -0.2172,
+        "neutral_return_delta": -2.4653,
+        "teacher_alignment_recall": 0.0
+      },
+      "reading": "This phase is only meaningful if regime overlays add information beyond the naive teacher-gate attempt."
+    }
+  ],
+  "interpretation": [
+    "V1.12BL is valid because it explicitly tests whether the regime overlay family improves the learnability of the neutral participation policy."
+  ]
+}

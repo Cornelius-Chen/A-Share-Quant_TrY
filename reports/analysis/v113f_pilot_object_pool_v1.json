@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113f_pilot_object_pool_v1",
+    "selected_archetype": "commercial_space_mainline",
+    "pilot_object_count": 3,
+    "dense_local_mapping_object_count": 1,
+    "owner_review_priority_count": 2,
+    "ready_for_label_review_sheet_next": true
+  },
+  "object_rows": [
+    {
+      "symbol": "002085",
+      "name": "万丰奥威",
+      "pool_role_guess": "leader",
+      "role_guess_reason": "Dense commercial-space concept presence makes this the cleanest local mainline leader seed.",
+      "commercial_space_mapping_days": 242,
+      "first_seen_in_local_mapping": "2024-01-02",
+      "last_seen_in_local_mapping": "2024-12-31",
+      "mainline_window_count": 19,
+      "local_evidence_status": "dense_local_commercial_space_mapping",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    },
+    {
+      "symbol": "000738",
+      "name": "航发控制",
+      "pool_role_guess": "mapping_activation",
+      "role_guess_reason": "The symbol appears in commercial-space mapping intermittently and therefore reads more like a mapping activation draft than a clean core.",
+      "commercial_space_mapping_days": 25,
+      "first_seen_in_local_mapping": "2024-02-19",
+      "last_seen_in_local_mapping": "2024-12-13",
+      "mainline_window_count": 4,
+      "local_evidence_status": "sparse_cross_theme_mapping",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    },
+    {
+      "symbol": "600118",
+      "name": "中国卫星",
+      "pool_role_guess": "mid_core",
+      "role_guess_reason": "Policy and aerospace anchoring make this a plausible mid-core review seed despite sparse direct commercial-space mapping.",
+      "commercial_space_mapping_days": 3,
+      "first_seen_in_local_mapping": "2024-07-24",
+      "last_seen_in_local_mapping": "2024-07-30",
+      "mainline_window_count": 4,
+      "local_evidence_status": "sparse_policy_anchor_mapping",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    }
+  ],
+  "interpretation": [
+    "The first theme-diffusion pilot object pool stays intentionally tiny and only uses locally frozen commercial-space mapping evidence.",
+    "Only one object currently looks dense and clean enough to behave like a strong leader seed; the other objects are preserved as owner-correctable draft roles.",
+    "This pool is a bounded review draft, not a final truth set and not a training-ready universe."
+  ]
+}

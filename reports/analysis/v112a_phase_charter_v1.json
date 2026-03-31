@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112a_bounded_pilot_data_assembly",
+    "do_open_v112a_now": true,
+    "owner_phase_switch_approved": true,
+    "recommended_first_action": "freeze_v112a_pilot_object_pool_v1"
+  },
+  "charter": {
+    "mission": "Assemble the first bounded pilot dataset draft for the frozen optical-link price-and-demand upcycle experiment, including object pool, initial role guesses, cycle window placeholders, and owner-correctable label fields.",
+    "in_scope": [
+      "pilot object pool freeze",
+      "initial object-role guesses",
+      "cycle window placeholders",
+      "owner-review label sheet",
+      "explicit correction slots for missing objects and wrong labels"
+    ],
+    "out_of_scope": [
+      "actual model fitting",
+      "strategy integration",
+      "intraday execution labels",
+      "multi-cycle expansion",
+      "black-box deployment"
+    ],
+    "success_criteria": [
+      "produce a bounded object pool for the first pilot cycle",
+      "produce a reviewable draft label sheet that the owner can correct",
+      "leave no ambiguity about what still needs owner correction before training"
+    ],
+    "stop_criteria": [
+      "if the object pool widens beyond the first pilot family",
+      "if the sheet drifts into execution-level labeling",
+      "if training starts before owner correction is possible"
+    ],
+    "handoff_condition": "After bounded assembly, the next legal move is owner review and correction of the draft pilot dataset, not automatic training.",
+    "exploration_layer_phase": true,
+    "owner_feedback_expected": true
+  },
+  "interpretation": [
+    "V1.12A exists so the owner can see and correct a real pilot dataset draft before any training begins.",
+    "This phase is about assembling a usable first experiment sheet, not about fitting models.",
+    "The next legal move is to freeze the first object pool and expose correction fields explicitly."
+  ]
+}

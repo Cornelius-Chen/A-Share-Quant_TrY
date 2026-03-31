@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112j_candidate_structure_review_v1",
+    "bucket_count_reviewed": 8,
+    "stage_count_reviewed": 2,
+    "formal_label_split_now": false,
+    "bounded_follow_up_stage": "high_level_consolidation",
+    "major_markup_follow_up_posture": "feature_side_only_for_now",
+    "ready_for_phase_check_next": true
+  },
+  "stage_review_rows": [
+    {
+      "stage_name": "high_level_consolidation",
+      "candidate_structure_present": true,
+      "formal_label_split_now": false,
+      "bounded_drafting_follow_up_worthwhile": true,
+      "reading": "This stage now shows distinct semantic/error buckets, but the current best posture is bounded drafting follow-up rather than formal label splitting.",
+      "disposition_mix": [
+        "strong_candidate_for_bounded_substate_drafting",
+        "reject_for_formal_follow_up_sample_too_thin",
+        "strong_candidate_for_bounded_substate_drafting",
+        "needs_further_drafting_inside_bucket"
+      ]
+    },
+    {
+      "stage_name": "major_markup",
+      "candidate_structure_present": true,
+      "formal_label_split_now": false,
+      "bounded_drafting_follow_up_worthwhile": false,
+      "reading": "This stage has useful organizing buckets, but current error behavior remains too mixed for bounded label-refinement follow-up.",
+      "disposition_mix": [
+        "feature_side_only_for_now",
+        "organizing_bucket_only",
+        "feature_side_only_for_now",
+        "feature_side_only_for_now"
+      ]
+    }
+  ],
+  "bucket_review_rows": [
+    {
+      "bucket_name": "high_level_consolidation__breadth_rich_catalyst_active",
+      "bucket_stage": "high_level_consolidation",
+      "sample_count": 15,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.179665,
+        "cross_day_catalyst_persistence": 0.246228,
+        "theme_breadth_confirmation_proxy": 0.955556
+      },
+      "baseline_only_misread_count": 12,
+      "both_models_misread_count": 1,
+      "review_disposition": "strong_candidate_for_bounded_substate_drafting",
+      "reading": "Distinct semantic profile and distinct error behavior; good candidate for a review-only substate draft."
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_rich_catalyst_stale",
+      "bucket_stage": "high_level_consolidation",
+      "sample_count": 2,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.018378,
+        "cross_day_catalyst_persistence": 0.0,
+        "theme_breadth_confirmation_proxy": 0.666667
+      },
+      "baseline_only_misread_count": 2,
+      "both_models_misread_count": 0,
+      "review_disposition": "reject_for_formal_follow_up_sample_too_thin",
+      "reading": "Semantically distinct, but too thin to justify bounded label follow-up."
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_thin_catalyst_active",
+      "bucket_stage": "high_level_consolidation",
+      "sample_count": 14,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.039141,
+        "cross_day_catalyst_persistence": 0.226515,
+        "theme_breadth_confirmation_proxy": 0.166666
+      },
+      "baseline_only_misread_count": 13,
+      "both_models_misread_count": 1,
+      "review_disposition": "strong_candidate_for_bounded_substate_drafting",
+      "reading": "Distinct semantic profile and distinct error behavior; good candidate for a review-only substate draft."
+    },
+    {
+      "bucket_name": "high_level_consolidation__breadth_thin_catalyst_stale",
+      "bucket_stage": "high_level_consolidation",
+      "sample_count": 57,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.032564,
+        "cross_day_catalyst_persistence": 0.015472,
+        "theme_breadth_confirmation_proxy": 0.210526
+      },
+      "baseline_only_misread_count": 34,
+      "both_models_misread_count": 13,
+      "review_disposition": "needs_further_drafting_inside_bucket",
+      "reading": "Large enough to matter, but still mixed; this is a drafting target, not a formal sublabel."
+    },
+    {
+      "bucket_name": "major_markup__breadth_rich_catalyst_active",
+      "bucket_stage": "major_markup",
+      "sample_count": 71,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.32127,
+        "cross_day_catalyst_persistence": 0.708435,
+        "theme_breadth_confirmation_proxy": 1.246479
+      },
+      "baseline_only_misread_count": 17,
+      "both_models_misread_count": 34,
+      "review_disposition": "feature_side_only_for_now",
+      "reading": "Major-markup remains too mixed and too error-heavy for immediate label follow-up."
+    },
+    {
+      "bucket_name": "major_markup__breadth_rich_catalyst_stale",
+      "bucket_stage": "major_markup",
+      "sample_count": 10,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.002269,
+        "cross_day_catalyst_persistence": 0.014739,
+        "theme_breadth_confirmation_proxy": 0.7
+      },
+      "baseline_only_misread_count": 0,
+      "both_models_misread_count": 10,
+      "review_disposition": "organizing_bucket_only",
+      "reading": "Useful for review structure, but not a current bounded label-refinement target."
+    },
+    {
+      "bucket_name": "major_markup__breadth_thin_catalyst_active",
+      "bucket_stage": "major_markup",
+      "sample_count": 68,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.012787,
+        "cross_day_catalyst_persistence": 0.564645,
+        "theme_breadth_confirmation_proxy": 0.0
+      },
+      "baseline_only_misread_count": 18,
+      "both_models_misread_count": 40,
+      "review_disposition": "feature_side_only_for_now",
+      "reading": "Major-markup remains too mixed and too error-heavy for immediate label follow-up."
+    },
+    {
+      "bucket_name": "major_markup__breadth_thin_catalyst_stale",
+      "bucket_stage": "major_markup",
+      "sample_count": 69,
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.032295,
+        "cross_day_catalyst_persistence": 0.248934,
+        "theme_breadth_confirmation_proxy": 0.528986
+      },
+      "baseline_only_misread_count": 10,
+      "both_models_misread_count": 50,
+      "review_disposition": "feature_side_only_for_now",
+      "reading": "Major-markup remains too mixed and too error-heavy for immediate label follow-up."
+    }
+  ],
+  "interpretation": [
+    "The current bucketization output is strong enough to support candidate-structure review.",
+    "Only high_level_consolidation clears the bar for bounded drafting follow-up; it still does not justify formal label splitting now.",
+    "major_markup should remain on the feature side for now, because its buckets are still too mixed and error-heavy."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bt_phase_conditioned_veto_and_eligibility_extraction_v1",
+    "eligibility_rule_count": 2,
+    "entry_veto_count": 4,
+    "holding_veto_count": 2,
+    "risk_off_override_count": 3,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "test_phase_conditioned_controls_inside_selector_maturity_fusion_baseline"
+  },
+  "eligibility_rule_rows": [
+    {
+      "eligibility_name": "guarded_offensive_core_continuation",
+      "stage_family": "divergence_and_decay",
+      "role_family": "high_beta_core_module",
+      "posture": "guarded_eligibility",
+      "reading": "Offensive region remains usable only if no local veto neighborhood or transition-band warning is active.",
+      "average_forward_return_20d": 0.117,
+      "average_max_drawdown_20d": -0.1217
+    },
+    {
+      "eligibility_name": "offensive_resonance_bundle",
+      "feature_1": "ranker_score",
+      "feature_2": "catalyst_presence_proxy",
+      "feature_3": "core_branch_relative_strength_spread_state",
+      "posture": "bundle_supported_eligibility",
+      "reading": "Use as an eligibility support bundle, not as standalone authorization.",
+      "average_forward_return_20d": 0.4845,
+      "average_max_drawdown_20d": -0.0239
+    }
+  ],
+  "entry_veto_rows": [
+    {
+      "entry_veto_name": "diffusion_high_end_module_extension_entry_veto",
+      "stage_family": "diffusion",
+      "role_family": "high_end_module_extension",
+      "bad_trade_density_mean": 0.9167,
+      "penalized_veto_intensity_mean": 0.5214,
+      "reading": "Do not open new exposure when local neighborhood looks like this diffusion risk pocket."
+    },
+    {
+      "entry_veto_name": "diffusion_domestic_optics_platform_bridge_entry_veto",
+      "stage_family": "diffusion",
+      "role_family": "domestic_optics_platform_bridge",
+      "bad_trade_density_mean": 0.9,
+      "penalized_veto_intensity_mean": 0.5081,
+      "reading": "Do not open new exposure when local neighborhood looks like this diffusion risk pocket."
+    },
+    {
+      "entry_veto_name": "diffusion_high_beta_module_extension_entry_veto",
+      "stage_family": "diffusion",
+      "role_family": "high_beta_module_extension",
+      "bad_trade_density_mean": 0.875,
+      "penalized_veto_intensity_mean": 0.4995,
+      "reading": "Do not open new exposure when local neighborhood looks like this diffusion risk pocket."
+    },
+    {
+      "entry_veto_name": "diffusion_smaller_cap_high_beta_module_entry_veto",
+      "stage_family": "diffusion",
+      "role_family": "smaller_cap_high_beta_module",
+      "bad_trade_density_mean": 0.8333,
+      "penalized_veto_intensity_mean": 0.4687,
+      "reading": "Do not open new exposure when local neighborhood looks like this diffusion risk pocket."
+    }
+  ],
+  "holding_veto_rows": [
+    {
+      "holding_veto_name": "divergence_and_decay_core_transition_holding_veto",
+      "stage_family": "divergence_and_decay",
+      "role_family": "high_beta_core_module",
+      "boundary_risk_score_mean": 0.5935,
+      "penalized_veto_intensity_mean": 0.5935,
+      "reading": "This is a de-risk / holding-veto object, not a blanket entry prohibition."
+    },
+    {
+      "holding_veto_name": "main_markup_core_transition_holding_veto",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "boundary_risk_score_mean": 0.5914,
+      "penalized_veto_intensity_mean": 0.5914,
+      "reading": "This is a de-risk / holding-veto object, not a blanket entry prohibition."
+    }
+  ],
+  "risk_off_override_rows": [
+    {
+      "override_name": "diffusion_extension_risk_off_override",
+      "trigger_stage_family": "diffusion",
+      "trigger_reason": "veto neighborhoods are densely concentrated in diffusion extensions and bridge roles",
+      "supporting_count": 11,
+      "reading": "Shrink new risk expression when diffusion extension pockets dominate the local risk map."
+    },
+    {
+      "override_name": "core_transition_instability_override",
+      "trigger_stage_family": "main_markup_to_divergence",
+      "trigger_reason": "core transition bands indicate rising holding instability in the core continuation path",
+      "supporting_count": 3,
+      "reading": "Prefer de-risking or shorter holding half-life when core transition instability is active."
+    },
+    {
+      "override_name": "risk_surface_overlap_override",
+      "trigger_stage_family": "mixed",
+      "trigger_reason": "selector candidates overlap with identified risk regions",
+      "supporting_count": 17,
+      "reading": "Do not let selector strength automatically override mapped risk regions."
+    }
+  ],
+  "interpretation": [
+    "V1.12BT treats dangerous regions as first-class control objects instead of waiting for a clean bad cluster that may never naturally appear.",
+    "The extraction deliberately separates entry veto, holding veto, and risk-off override so that the system does not collapse back into one blunt global gate."
+  ]
+}

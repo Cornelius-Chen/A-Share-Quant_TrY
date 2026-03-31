@@ -1,0 +1,115 @@
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+
+@dataclass(slots=True)
+class V112QParallelCollectionDraftBatchReport:
+    summary: dict[str, Any]
+    adjacent_official_anchor_rows: list[dict[str, Any]]
+    chronology_source_rows: list[dict[str, Any]]
+    future_catalyst_calendar_rows: list[dict[str, Any]]
+    interpretation: list[str]
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "summary": self.summary,
+            "adjacent_official_anchor_rows": self.adjacent_official_anchor_rows,
+            "chronology_source_rows": self.chronology_source_rows,
+            "future_catalyst_calendar_rows": self.future_catalyst_calendar_rows,
+            "interpretation": self.interpretation,
+        }
+
+
+def load_json_report(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Report at {path} must decode to a mapping.")
+    return payload
+
+
+class V112QParallelCollectionDraftBatchAnalyzer:
+    def analyze(
+        self,
+        *,
+        schema_payload: dict[str, Any],
+    ) -> V112QParallelCollectionDraftBatchReport:
+        schema_summary = dict(schema_payload.get("summary", {}))
+        if int(schema_summary.get("recommended_parallel_collection_now", 0)) < 2:
+            raise ValueError("V1.12Q parallel collection draft batch expects at least two lawful parallel tasks.")
+
+        adjacent_official_anchor_rows = [
+            {"symbol": "002281", "company_name": "guangxun_technology", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2025-12-25/1224895597.PDF", "reason": "Official annual-report anchor for optical-device business and capital structure."},
+            {"symbol": "603083", "company_name": "cambridge_technology", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-08/1223020216.PDF", "reason": "Official annual-report anchor for revenue mix and optical communications exposure."},
+            {"symbol": "688205", "company_name": "dk_laser_or_module_extension", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-26/1219838235.PDF", "reason": "Official annual-report anchor for optical-electronic devices and subsystem business."},
+            {"symbol": "301205", "company_name": "liante_technology", "anchor_type": "official_interaction", "source_url": "https://static.cninfo.com.cn/finalpage/2024-05-21/1220119757.PDF", "reason": "Official interaction anchor for 800G shipments and customer-mix discussion."},
+            {"symbol": "300620", "company_name": "fiberhome_photonics_adjacent", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2020-07-29/1208099577.PDF", "reason": "Official annual-report anchor for photonic component and optical-interconnect footprint."},
+            {"symbol": "300548", "company_name": "broadex_or_name_change_anchor", "anchor_type": "official_disclosure", "source_url": "https://static.cninfo.com.cn/finalpage/2025-07-01/1224058932.PDF", "reason": "Official disclosure anchor for issuer identity used in module and silicon-photonics adjacency review."},
+            {"symbol": "000988", "company_name": "huagong_tech", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2025-05-10/1223512787.PDF", "reason": "Official annual-report anchor for photonics business lines."},
+            {"symbol": "300570", "company_name": "tacheng_optical", "anchor_type": "official_interaction", "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223069331.PDF", "reason": "Official IR anchor for operating outlook in optical-connectivity products."},
+            {"symbol": "688498", "company_name": "yuanjie_tech", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2025-02-21/1222593490.PDF", "reason": "Official annual-report anchor for laser-chip supplier role."},
+            {"symbol": "688313", "company_name": "shijia_photon", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-22/1216528088.PDF", "reason": "Official annual-report anchor for photonic-device portfolio."},
+            {"symbol": "300757", "company_name": "luobo_tech", "anchor_type": "official_product_disclosure", "source_url": "https://static.cninfo.com.cn/finalpage/2025-05-19/1223587601.PDF", "reason": "Official disclosure explicitly references CPO or LPO coupling and packaging-test work."},
+            {"symbol": "601869", "company_name": "fiberhome_upstream_anchor", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-28/1224586854.PDF", "reason": "Official annual-report anchor for optical fiber and network supply context."},
+            {"symbol": "600487", "company_name": "hengtong_optic", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2023-12-12/1218583250.PDF", "reason": "Official annual-report anchor for optical communications business and network components."},
+            {"symbol": "600522", "company_name": "zhongtian_tech", "anchor_type": "annual_report", "source_url": "https://static.cninfo.com.cn/finalpage/2022-08-31/1214469070.PDF", "reason": "Official annual-report anchor for optical-communication and network-cabling operations."},
+        ]
+
+        chronology_source_rows = [
+            {"source_name": "broadcom_investor_news", "source_url": "https://investors.broadcom.com/news-releases", "target_layer": "index_sentiment_and_liquidity", "why_it_helps": "Tracks optical-connectivity and AI-networking disclosures useful for chronology.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "coherent_press_releases", "source_url": "https://www.coherent.com/news/press-releases", "target_layer": "industry_technology_path", "why_it_helps": "Tracks CPO demos and component-stack changes across lasers and silicon photonics.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "lumentum_investor_news", "source_url": "https://investor.lumentum.com/financial-news-releases", "target_layer": "industry_technology_path", "why_it_helps": "Tracks CPO-enabling light source, manufacturing, and interconnect readiness news.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "ciena_investor_news", "source_url": "https://investor.ciena.com/news-releases", "target_layer": "industry_technology_path", "why_it_helps": "Tracks data-center optics moves, including Nubis or related route developments.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "oif_interoperability_demos", "source_url": "https://www.oiforum.com/meetings-events/oif-interoperability-demos-showcase-displays/", "target_layer": "message_and_catalyst", "why_it_helps": "Anchors standards and interoperability progression around co-packaging and related optical standards.", "likely_refresh_frequency": "semiannual"},
+            {"source_name": "ofc_news_releases", "source_url": "https://www.ofcconference.org/news-media/news-releases/", "target_layer": "message_and_catalyst", "why_it_helps": "Central event feed for optical-networking product launches and ecosystem shifts tied to OFC timing.", "likely_refresh_frequency": "event_driven"},
+        ]
+
+        future_catalyst_calendar_rows = [
+            {"source_name": "ofc_official_event_page", "source_url": "https://www.ofcconference.org/en-us/home/exhibit-at-ofc/", "target_layer": "message_and_catalyst", "why_it_helps": "Primary anchor for OFC timing and exhibit window.", "likely_refresh_frequency": "annual"},
+            {"source_name": "nvidia_gtc_official", "source_url": "https://www.nvidia.com/gtc/", "target_layer": "message_and_catalyst", "why_it_helps": "Key AI-infrastructure event where optical-link and CPO roadmap items surface.", "likely_refresh_frequency": "annual"},
+            {"source_name": "optica_executive_forum_at_ofc", "source_url": "https://www.optica.org/events/industry_events/2026/optica_executive_forum_at_ofc/", "target_layer": "message_and_catalyst", "why_it_helps": "CEO or CTO optical-market discussion adjacent to OFC.", "likely_refresh_frequency": "annual"},
+            {"source_name": "oif_ofc_2026_demo_listing", "source_url": "https://www.oiforum.com/meetings-events/oif-interoperability-demos-showcase-displays/", "target_layer": "message_and_catalyst", "why_it_helps": "Concrete date anchor for standards and interoperability showcases.", "likely_refresh_frequency": "semiannual"},
+            {"source_name": "broadcom_ofc_announcements", "source_url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-advances-optical-connectivity-ai-infrastructure", "target_layer": "message_and_catalyst", "why_it_helps": "Proxy for product-event timing around OFC and optical interconnect demos.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "lumentum_ofc_announcements", "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx", "target_layer": "message_and_catalyst", "why_it_helps": "Captures OFC-timed product reveals and demo sets.", "likely_refresh_frequency": "event_driven"},
+            {"source_name": "alphabet_results_and_capex_guidance", "source_url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Fourth-Quarter-2025-and-Fiscal-Year-Results-2026-KEvZIMKBLS/default.aspx", "target_layer": "earnings_and_business_performance", "why_it_helps": "Public capex-guidance anchor for CSP demand context.", "likely_refresh_frequency": "quarterly"},
+            {"source_name": "microsoft_investor_earnings_events", "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q1", "target_layer": "earnings_and_business_performance", "why_it_helps": "Public cloud-infrastructure and capex timing anchor.", "likely_refresh_frequency": "quarterly"},
+            {"source_name": "amazon_investor_results", "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx", "target_layer": "earnings_and_business_performance", "why_it_helps": "Public AWS-related infrastructure-spend timing anchor.", "likely_refresh_frequency": "quarterly"},
+            {"source_name": "meta_capex_materials", "source_url": "https://investor.fb.com/files/doc_financials/2023/q4/META-Q4-2023-Prepared-Remarks.pdf", "target_layer": "earnings_and_business_performance", "why_it_helps": "Official capex-guidance reference point for hyperscale infrastructure cycles.", "likely_refresh_frequency": "quarterly"},
+        ]
+
+        summary = {
+            "acceptance_posture": "freeze_v112q_parallel_collection_draft_batch_v1",
+            "adjacent_official_anchor_count": len(adjacent_official_anchor_rows),
+            "chronology_source_count": len(chronology_source_rows),
+            "future_catalyst_calendar_count": len(future_catalyst_calendar_rows),
+            "ready_for_owner_review": True,
+        }
+        interpretation = [
+            "This batch does not validate truth; it only preserves the first parallel collection outputs in a reviewable form.",
+            "The official-anchor rows reduce omission risk for adjacent and branch-extension names.",
+            "The chronology and forward-calendar rows start to turn board-state and event-route gaps into explicit collection objects.",
+        ]
+        return V112QParallelCollectionDraftBatchReport(
+            summary=summary,
+            adjacent_official_anchor_rows=adjacent_official_anchor_rows,
+            chronology_source_rows=chronology_source_rows,
+            future_catalyst_calendar_rows=future_catalyst_calendar_rows,
+            interpretation=interpretation,
+        )
+
+
+def write_v112q_parallel_collection_draft_batch_report(
+    *,
+    reports_dir: Path,
+    report_name: str,
+    result: V112QParallelCollectionDraftBatchReport,
+) -> Path:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    output_path = reports_dir / f"{report_name}.json"
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(result.as_dict(), handle, indent=2, ensure_ascii=False)
+    return output_path

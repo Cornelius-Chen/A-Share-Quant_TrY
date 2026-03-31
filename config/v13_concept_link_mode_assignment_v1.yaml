@@ -1,0 +1,32 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.3
+
+paths:
+  concept_registry_report: reports/analysis/v13_concept_registry_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v13_concept_link_mode_assignment_v1
+
+assignments:
+  - lane_id: "mainline_trend_c::2024-11-05::002049"
+    symbol_link_mode: platform_or_ecosystem
+    assignment_basis: "Official disclosure shows Unigroup Guoxin serves SIM card, network communication, and security-chip application ecosystems, but the concept relation is still indirect rather than core business ownership of a telecom-theme platform."
+    assignment_source_ref: "https://static.cninfo.com.cn/finalpage/2025-04-23/1223222892.PDF"
+    assignment_notes: "Keep as indirect even with official source support."
+  - lane_id: "mainline_trend_c::2024-02-22::000155"
+    symbol_link_mode: primary_business
+    assignment_basis: "Official company disclosure states main business includes lithium business, including lithium salt products and Li Jiagou lithium mine mining/beneficiation."
+    assignment_source_ref: "https://static.cninfo.com.cn/finalpage/2025-11-26/1224827872.PDF"
+    assignment_notes: "Allow core-confirmed status for lithium-theme mapping."
+  - lane_id: "mainline_trend_b::2024-11-05::300750"
+    symbol_link_mode: primary_business
+    assignment_basis: "Official prospectus states the main business revenue is mainly from power battery systems, energy storage systems, and lithium battery materials."
+    assignment_source_ref: "https://static.cninfo.com.cn/finalpage/2022-01-17/1212196765.PDF"
+    assignment_notes: "Allow core-confirmed status for battery-theme mapping."
+  - lane_id: "mainline_trend_c::2024-11-05::300750"
+    symbol_link_mode: primary_business
+    assignment_basis: "Same symbol and concept relation as the paired strategy row; assignment is shared across the cross-strategy registry rows."
+    assignment_source_ref: "https://static.cninfo.com.cn/finalpage/2022-01-17/1212196765.PDF"
+    assignment_notes: "Cross-strategy carry row keeps the same link-mode classification."

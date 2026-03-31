@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bq_as_cpo_gate_precision_sweep_success",
+    "v112bq_success_criteria_met": true,
+    "enter_v112bq_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bq_phase_check",
+      "actual": {
+        "best_total_return": 0.9938,
+        "best_max_drawdown": -0.2164
+      },
+      "reading": "The phase closes once the project has a bounded gate precision candidate stack and an explicit best rule signature."
+    }
+  ],
+  "interpretation": [
+    "V1.12BQ closes with a bounded coarse-to-fine gate sweep that converts eligibility discipline into explicit candidate rules."
+  ]
+}

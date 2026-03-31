@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112aj_cpo_bounded_label_draft_dataset_assembly",
+    "do_open_v112aj_now": true,
+    "recommended_first_action": "freeze_v112aj_cpo_bounded_label_draft_dataset_assembly_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AJ CPO Bounded Label-Draft Dataset Assembly",
+    "mission": "Assemble the first bounded CPO label-draft dataset by combining truth-candidate rows with ready and guarded labels, while preserving support, overlay, and pending rows as context-only layers.",
+    "in_scope": [
+      "assemble truth-candidate draft rows from primary and secondary surfaces",
+      "attach ready and guarded labels only",
+      "preserve support, overlay, and pending rows as explicit non-truth context",
+      "keep review-only future labels and confirmed-only review labels out of draft truth"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training",
+      "formal signal generation",
+      "promotion of context rows into truth rows"
+    ],
+    "success_criteria": [
+      "draft-ready and guarded labels are assembled into a bounded dataset layer",
+      "support, overlay, and pending objects remain explicit but outside truth-candidate rows",
+      "review-only and confirmed-only labels do not leak into draft truth"
+    ]
+  },
+  "interpretation": [
+    "V1.12AJ is the first dataset-shaped assembly step, but it still sits fully below training rights.",
+    "The core idea is truth-candidate rows plus context-only rows, not a fake-clean all-truth dataset.",
+    "Only ready and guarded labels may enter the draft truth layer."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112av_cpo_branch_role_geometry_patch_pilot_v1",
+    "row_count_after_branch_patch": 11,
+    "sample_count": 3175,
+    "branch_patch_feature_count": 4,
+    "core_targets_stable_after_branch_patch": true,
+    "guarded_targets_stable_after_branch_patch": true,
+    "role_state_gbdt_accuracy_before_patch": 0.8972,
+    "role_state_gbdt_accuracy_after_patch": 1.0,
+    "role_state_patch_gain": 0.1028,
+    "branch_patch_family_role_accuracy_drop": 0.1028,
+    "allow_formal_training_now": false,
+    "allow_formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "review_if_branch_rows_can_move_from_review_only_to_guarded_training_context"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "baseline_accuracy_before_patch": 0.8573,
+      "baseline_accuracy_after_patch": 0.8132,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.0
+    },
+    {
+      "target_name": "role_state_label",
+      "baseline_accuracy_before_patch": 0.5498,
+      "baseline_accuracy_after_patch": 0.6485,
+      "gbdt_accuracy_before_patch": 0.8972,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.1028
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "baseline_accuracy_before_patch": 0.8573,
+      "baseline_accuracy_after_patch": 0.8132,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.0
+    },
+    {
+      "target_name": "board_condition_label",
+      "baseline_accuracy_before_patch": 0.8856,
+      "baseline_accuracy_after_patch": 0.8846,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.0
+    },
+    {
+      "target_name": "role_transition_label",
+      "baseline_accuracy_before_patch": 0.5721,
+      "baseline_accuracy_after_patch": 0.5948,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.0
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "baseline_accuracy_before_patch": 0.9604,
+      "baseline_accuracy_after_patch": 0.9604,
+      "gbdt_accuracy_before_patch": 1.0,
+      "gbdt_accuracy_after_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112au": 0.0
+    }
+  ],
+  "branch_patch_family_rows": [
+    {
+      "family_name": "branch_role_geometry_patch_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 0.8972,
+      "accuracy_drop": 0.1028,
+      "reading": "Accuracy drop shows how much widened role-state relies on branch-role geometry features."
+    }
+  ],
+  "interpretation": [
+    "This patch tests whether widened branch-row failure was specifically a branch-role geometry problem.",
+    "A successful result would justify guarded branch-row discussion, not formal training or signal rights.",
+    "This remains report-only and localized to the widened branch geometry."
+  ]
+}

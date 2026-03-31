@@ -1,0 +1,165 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112m_mixed_stall_inner_draft_v1",
+    "mixed_cluster_sample_count": 61,
+    "inner_candidate_count": 3,
+    "preservable_review_only_inner_candidate_count": 2,
+    "unresolved_inner_residue_count": 1,
+    "formal_label_split_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "inner_draft_rows": [
+    {
+      "inner_candidate_name": "candidate_quiet_contraction_stall_recoverable",
+      "sample_count": 15,
+      "carry_constructive_count": 10,
+      "failed_count": 5,
+      "watch_constructive_count": 0,
+      "mean_features": {
+        "theme_breadth_confirmation_proxy": 0.0,
+        "catalyst_freshness_state": 0.005048,
+        "cross_day_catalyst_persistence": 0.0,
+        "product_price_change_proxy": -0.087851,
+        "relative_strength_persistence": -0.080733,
+        "volume_expansion_confirmation": 0.874914
+      },
+      "drafting_readiness": "review_only_inner_draft_candidate",
+      "reading": "A quiet contraction pocket inside the mixed stall cluster: breadth stays thin, price/relative strength are soft, and volume is muted rather than distributive. This is the most recoverable inner draft.",
+      "representative_rows": [
+        {
+          "trade_date": "2026-02-24",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_inner_center": 0.033228,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": -0.077186,
+          "relative_strength_persistence": -0.050468,
+          "volume_expansion_confirmation": 0.867922
+        },
+        {
+          "trade_date": "2026-02-27",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_inner_center": 0.038501,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": -0.12165,
+          "relative_strength_persistence": -0.074601,
+          "volume_expansion_confirmation": 0.869063
+        },
+        {
+          "trade_date": "2026-02-11",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_inner_center": 0.063221,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": -0.03206,
+          "relative_strength_persistence": -0.063019,
+          "volume_expansion_confirmation": 0.898259
+        }
+      ]
+    },
+    {
+      "inner_candidate_name": "candidate_residual_breadth_stall_exhaustion",
+      "sample_count": 15,
+      "carry_constructive_count": 4,
+      "failed_count": 9,
+      "watch_constructive_count": 2,
+      "mean_features": {
+        "theme_breadth_confirmation_proxy": 0.444444,
+        "catalyst_freshness_state": 0.040765,
+        "cross_day_catalyst_persistence": 0.006161,
+        "product_price_change_proxy": -0.069236,
+        "relative_strength_persistence": -0.027401,
+        "volume_expansion_confirmation": 1.060112
+      },
+      "drafting_readiness": "review_only_inner_draft_candidate",
+      "reading": "A residual-breadth stall pocket: some breadth still lingers, but price is no longer advancing. This looks closer to exhaustion than recovery.",
+      "representative_rows": [
+        {
+          "trade_date": "2026-02-09",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_inner_center": 0.146112,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "product_price_change_proxy": -0.003066,
+          "relative_strength_persistence": -0.016702,
+          "volume_expansion_confirmation": 1.113125
+        },
+        {
+          "trade_date": "2026-02-12",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_inner_center": 0.175671,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "product_price_change_proxy": -0.0856,
+          "relative_strength_persistence": -0.073896,
+          "volume_expansion_confirmation": 0.940174
+        },
+        {
+          "trade_date": "2025-10-20",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_inner_center": 0.180425,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "product_price_change_proxy": -0.080284,
+          "relative_strength_persistence": -0.052446,
+          "volume_expansion_confirmation": 0.926851
+        }
+      ]
+    },
+    {
+      "inner_candidate_name": "candidate_unresolved_mixed_stall_residue",
+      "sample_count": 31,
+      "carry_constructive_count": 5,
+      "failed_count": 21,
+      "watch_constructive_count": 5,
+      "mean_features": {
+        "theme_breadth_confirmation_proxy": 0.193548,
+        "catalyst_freshness_state": 0.039713,
+        "cross_day_catalyst_persistence": 0.025635,
+        "product_price_change_proxy": -0.01407,
+        "relative_strength_persistence": -0.031658,
+        "volume_expansion_confirmation": 1.0105
+      },
+      "drafting_readiness": "unresolved_after_one_inner_pass",
+      "reading": "The remaining mixed residue after one bounded inner pass. It is still too heterogeneous to preserve as a clean review-only inner draft.",
+      "representative_rows": [
+        {
+          "trade_date": "2025-11-05",
+          "symbol": "300502",
+          "true_label": "watch_constructive",
+          "distance_to_inner_center": 0.203346,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": -0.053777,
+          "relative_strength_persistence": -0.022897,
+          "volume_expansion_confirmation": 1.009631
+        },
+        {
+          "trade_date": "2026-02-10",
+          "symbol": "300502",
+          "true_label": "watch_constructive",
+          "distance_to_inner_center": 0.208076,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": 0.025861,
+          "relative_strength_persistence": -0.010478,
+          "volume_expansion_confirmation": 0.96519
+        },
+        {
+          "trade_date": "2025-10-14",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_inner_center": 0.212257,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "product_price_change_proxy": 0.006359,
+          "relative_strength_persistence": -0.101428,
+          "volume_expansion_confirmation": 0.995484
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "One bounded inner-drafting pass is enough to reduce the mixed stall cluster into two review-only inner candidates plus one unresolved residue.",
+    "The recoverable quiet-contraction pocket is the only inner draft with a carry-heavy skew.",
+    "No formal label split is authorized from this inner draft."
+  ]
+}

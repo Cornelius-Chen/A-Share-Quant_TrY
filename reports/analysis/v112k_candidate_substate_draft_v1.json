@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112k_candidate_substate_draft_v1",
+    "candidate_substate_count": 3,
+    "excluded_bucket_count": 1,
+    "formal_label_split_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "candidate_substate_rows": [
+    {
+      "candidate_substate_name": "candidate_high_level_base_with_breadth_confirmation",
+      "source_bucket_name": "high_level_consolidation__breadth_rich_catalyst_active",
+      "sample_count": 15,
+      "drafting_readiness": "ready_for_review_only_substate_draft",
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.179665,
+        "cross_day_catalyst_persistence": 0.246228,
+        "theme_breadth_confirmation_proxy": 0.955556
+      },
+      "true_label_distribution": {
+        "carry_constructive": 2,
+        "failed": 11,
+        "watch_constructive": 2
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 12,
+        "both_misread": 1,
+        "gbdt_only": 2
+      },
+      "reading": "A review-only draft for high-level bases that still show strong breadth confirmation plus cross-day catalyst support, even though many samples still fail.",
+      "representative_rows": [
+        {
+          "trade_date": "2025-10-29",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.082934,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.122476,
+          "cross_day_catalyst_persistence": 0.205829
+        },
+        {
+          "trade_date": "2025-12-08",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.08747,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.129834,
+          "cross_day_catalyst_persistence": 0.302732
+        },
+        {
+          "trade_date": "2025-10-28",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.093311,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.261611,
+          "cross_day_catalyst_persistence": 0.250285
+        }
+      ]
+    },
+    {
+      "candidate_substate_name": "candidate_high_level_base_with_thin_breadth_transition",
+      "source_bucket_name": "high_level_consolidation__breadth_thin_catalyst_active",
+      "sample_count": 14,
+      "drafting_readiness": "ready_for_review_only_substate_draft",
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.039141,
+        "cross_day_catalyst_persistence": 0.226515,
+        "theme_breadth_confirmation_proxy": 0.166666
+      },
+      "true_label_distribution": {
+        "carry_constructive": 1,
+        "failed": 13
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 13,
+        "both_misread": 1
+      },
+      "reading": "A review-only draft for high-level bases where catalyst persistence remains but breadth is thin, suggesting a transition pocket rather than a clean continuation.",
+      "representative_rows": [
+        {
+          "trade_date": "2025-12-25",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.171945,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.242494
+        },
+        {
+          "trade_date": "2025-12-26",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.172391,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.206291
+        },
+        {
+          "trade_date": "2025-12-16",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.172937,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.250958
+        }
+      ]
+    },
+    {
+      "candidate_substate_name": "candidate_mixed_high_level_stall_cluster",
+      "source_bucket_name": "high_level_consolidation__breadth_thin_catalyst_stale",
+      "sample_count": 57,
+      "drafting_readiness": "mixed_bucket_needs_inner_split_before_any_formal_follow_up",
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.032564,
+        "cross_day_catalyst_persistence": 0.015472,
+        "theme_breadth_confirmation_proxy": 0.210526
+      },
+      "true_label_distribution": {
+        "carry_constructive": 19,
+        "failed": 32,
+        "watch_constructive": 6
+      },
+      "error_pattern_distribution": {
+        "baseline_only": 34,
+        "both_misread": 13,
+        "gbdt_only": 10
+      },
+      "reading": "This is the largest mixed high-level consolidation bucket. It is worth review-only inner drafting, but too mixed to become a direct candidate substate.",
+      "representative_rows": [
+        {
+          "trade_date": "2025-11-20",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "watch_constructive",
+          "baseline_predicted_label": "watch_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "gbdt_only",
+          "distance_to_bucket_center": 0.123798,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.030288,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-01-16",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "failed",
+          "baseline_predicted_label": "carry_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "baseline_only",
+          "distance_to_bucket_center": 0.123866,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.037235,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-02-13",
+          "symbol": "300502",
+          "stage": "high_level_consolidation",
+          "true_label": "carry_constructive",
+          "baseline_predicted_label": "watch_constructive",
+          "gbdt_predicted_label": "failed",
+          "error_pattern": "both_misread",
+          "distance_to_bucket_center": 0.123888,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.03779,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ]
+    }
+  ],
+  "excluded_bucket_rows": [
+    {
+      "source_bucket_name": "high_level_consolidation__breadth_rich_catalyst_stale",
+      "review_disposition": "reject_for_formal_follow_up_sample_too_thin",
+      "sample_count": 2,
+      "reading": "Semantically distinct, but too thin to justify bounded label follow-up."
+    }
+  ],
+  "interpretation": [
+    "V1.12K produces a review-only candidate-substate draft for high_level_consolidation.",
+    "Two candidate substates are directly draftable now, while one large mixed bucket remains only an inner-drafting target.",
+    "No formal label split is authorized from this draft alone."
+  ]
+}

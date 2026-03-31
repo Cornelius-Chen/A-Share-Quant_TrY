@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "reference_base_count": 77,
+    "seed_universe_count": 4,
+    "manifest_entry_count": 4,
+    "new_symbol_count": 4,
+    "overlap_with_reference_base_count": 0,
+    "missing_from_seed_count": 0,
+    "missing_from_manifest_count": 0,
+    "missing_target_count": 0,
+    "missing_hypothesis_count": 0,
+    "opening_clone_primary_count": 0,
+    "invalid_primary_reason_count": 0,
+    "missing_catalyst_support_count": 0,
+    "invalid_catalyst_mode_count": 0,
+    "target_counts": {
+      "true_carry_row": 2,
+      "clean_persistence_row": 2
+    },
+    "ready_to_bootstrap_market_research_v6_catalyst_supported_carry_persistence_refresh": true
+  },
+  "manifest_rows": [
+    {
+      "symbol": "002085",
+      "target_training_gap": "true_carry_row",
+      "primary_admission_reason": "true_carry_row",
+      "row_hypothesis": "low-altitude catalyst followthrough can produce a real carry row instead of a one-day opening pulse",
+      "catalyst_support_hypothesis": "board-level low-altitude policy followthrough and repeated market recognition may support carry persistence",
+      "catalyst_context_mode": "policy_followthrough",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "600118",
+      "target_training_gap": "true_carry_row",
+      "primary_admission_reason": "true_carry_row",
+      "row_hypothesis": "commercial-space style thematic followthrough can generate a basis-advantage carry row if market confirmation persists",
+      "catalyst_support_hypothesis": "sector and theme confirmation may convert repeated aerospace policy attention into a bounded carry context",
+      "catalyst_context_mode": "policy_followthrough",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "000738",
+      "target_training_gap": "clean_persistence_row",
+      "primary_admission_reason": "clean_persistence_row",
+      "row_hypothesis": "multi-day reinforcement in defense and aerospace context may support a clean persistence row",
+      "catalyst_support_hypothesis": "repeated board reinforcement can help distinguish persistence from a single-pulse opening edge",
+      "catalyst_context_mode": "multi_day_reinforcement",
+      "is_new_vs_reference_base": true
+    },
+    {
+      "symbol": "300474",
+      "target_training_gap": "clean_persistence_row",
+      "primary_admission_reason": "clean_persistence_row",
+      "row_hypothesis": "repeated high-heat thematic reinforcement can create an acceptance-grade persistence row rather than a mixed hold example",
+      "catalyst_support_hypothesis": "multi-day sector and theme reinforcement can support bounded persistence confirmation",
+      "catalyst_context_mode": "multi_day_reinforcement",
+      "is_new_vs_reference_base": true
+    }
+  ],
+  "interpretation": [
+    "The v6 refresh manifest should satisfy the frozen training-gap criteria while using catalyst context only as a bounded support layer.",
+    "That means every symbol must stay new versus the combined reference base, enter with an explicit true-carry or clean-persistence hypothesis, and include a bounded catalyst-support hypothesis.",
+    "Pure opening-led clone logic is still not an acceptable primary admission reason for this v6 refresh."
+  ]
+}

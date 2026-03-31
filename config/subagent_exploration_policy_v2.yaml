@@ -1,0 +1,85 @@
+policy_name: subagent_exploration_policy_v2
+posture: exploration_and_support_layer_only
+goal: >
+  Use subagents only for low-governance, reviewable, recoverable work that
+  expands hypothesis bandwidth without taking over mainline judgment.
+
+limits:
+  max_parallel_subagents: 2
+  max_tasks_per_round: 3
+  default_compute_class: low
+  allow_heavy_models: false
+  allow_scope_widening: false
+  allow_label_rewrite: false
+  allow_phase_decision: false
+  max_unreviewed_subagent_batches: 1
+
+task_taxonomy:
+  exploration:
+    description: try bounded new directions that may fail entirely
+  drafting:
+    description: generate candidate substructures, candidate splits, or candidate feature drafts for mainline review
+  structuring:
+    description: organize samples, errors, stages, and feature behavior into reviewable objects
+  execution:
+    description: run fixed experiments, fixed tables, and fixed reports under frozen rules
+
+task_requirements:
+  required_fields:
+    - task_class
+    - hypothesis
+    - success_if
+    - stop_if
+    - used_for
+    - fixed_dataset_or_pool
+    - fixed_output_template
+  reject_if_missing_any_required_field: true
+
+allowed_task_classes:
+  - exploration
+  - drafting
+  - structuring
+  - execution
+
+allowed_examples:
+  - hotspot_bucketization
+  - bounded_feature_ablation_batch
+  - candidate_substate_clustering
+  - review_sheet_generation
+  - candidate_prescreen_under_frozen_rules
+
+forbidden_actions:
+  - define_or_freeze_formal_label_schema
+  - promote_feature_into_formal_registry
+  - decide_phase_direction
+  - define_strategy_signal
+  - define_execution_timing_logic
+  - open_ended_model_search
+  - wide_dataset_growth
+
+review_rules:
+  cadence_modes:
+    volume_or_time_based:
+      applies_to:
+        - structuring
+        - execution
+      default_rule: review after either task-count threshold or time-window threshold is hit
+    stage_based:
+      applies_to:
+        - drafting
+        - exploration
+      default_rule: review after a bounded thematic batch or phase-relevant milestone is reached
+  default_task_count_threshold: 3
+  default_time_window_days: 2
+  thematic_batch_limit: 1
+  mainline_review_required_after_each_batch: true
+  cannot_open_new_subagent_batch_before_review: true
+  review_must_answer:
+    - whether outputs changed the future decision basis
+    - whether any candidate draft should be discarded
+    - whether any candidate draft is worth bounded follow-up
+
+termination:
+  no_signal_then_stop: true
+  no_follow_on_if_discarded: true
+  owner_review_required_before_any_consumption: true

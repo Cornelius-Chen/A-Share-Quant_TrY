@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112c_sidecar_protocol_v1",
+    "candidate_model_family_count": 2,
+    "metric_count": 5,
+    "ready_for_phase_check_next": true
+  },
+  "protocol": {
+    "comparison_goal": "reduce_optimistic_false_positives_in_late_markup_and_high_level_consolidation",
+    "same_dataset_rule": "reuse_v112b_first_trainable_pilot_dataset_without_object_widening",
+    "same_label_rule": "reuse_forward_return_bucket_max_drawdown_bucket_and_carry_outcome_class",
+    "validation_rule": "keep_the_same_time_split_as_v112b_no_random_shuffle",
+    "candidate_model_families": [
+      "hist_gradient_boosting_classifier",
+      "small_mlp_classifier"
+    ],
+    "must_report_metrics": [
+      "test_accuracy",
+      "carry_constructive_precision",
+      "carry_constructive_recall",
+      "false_positive_count_in_major_markup",
+      "false_positive_count_in_high_level_consolidation"
+    ],
+    "hard_boundaries": [
+      "report_only_sidecar_only",
+      "no_strategy_integration",
+      "no_intraday_features",
+      "no_dataset_widening",
+      "no_black_box_deployment_even_if_sidecar_outperforms"
+    ]
+  },
+  "interpretation": [
+    "The first sidecar is constrained to the exact same dataset and labels so model comparison does not get confounded with data changes.",
+    "The comparison target is explicit: reduce optimistic false positives in the baseline's known hotspot stages.",
+    "Even an improved sidecar remains report-only until a later phase explicitly reviews its evidence."
+  ]
+}

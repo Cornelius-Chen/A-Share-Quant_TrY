@@ -1,0 +1,7 @@
+report:
+  name: v112bt_phase_conditioned_veto_and_eligibility_extraction_v1
+paths:
+  reports_dir: reports/analysis
+  phase_charter_report: reports/analysis/v112bt_phase_charter_v1.json
+  bs_refinement_report: reports/analysis/v112bs_penalized_target_mapping_refinement_v1.json
+  bp_fusion_report: reports/analysis/v112bp_cpo_selector_maturity_fusion_pilot_v1.json

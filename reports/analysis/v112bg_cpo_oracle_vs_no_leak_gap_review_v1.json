@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bg_cpo_oracle_vs_no_leak_gap_review_v1",
+    "oracle_trade_count": 25,
+    "aggressive_trade_count": 20,
+    "return_capture_ratio": 0.002,
+    "drawdown_penalty_vs_oracle": 0.3167,
+    "primary_gap_axis": "risk_control_and_stage_maturity_filtering",
+    "highest_negative_stage": "main_markup",
+    "highest_negative_role": "high_beta_core_module",
+    "highest_negative_catalyst_bucket": "validated_markup",
+    "recommended_probability_margin_floor": 0.1845,
+    "open_neutral_selective_track_next": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "stage_gap_rows": [
+    {
+      "field_name": "stage_family",
+      "field_value": "diffusion",
+      "oracle_trade_count": 3,
+      "aggressive_trade_count": 1,
+      "aggressive_negative_trade_count": 1,
+      "aggressive_average_return": -0.0976
+    },
+    {
+      "field_name": "stage_family",
+      "field_value": "divergence_and_decay",
+      "oracle_trade_count": 5,
+      "aggressive_trade_count": 5,
+      "aggressive_negative_trade_count": 4,
+      "aggressive_average_return": -0.071
+    },
+    {
+      "field_name": "stage_family",
+      "field_value": "ignition",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    },
+    {
+      "field_name": "stage_family",
+      "field_value": "main_markup",
+      "oracle_trade_count": 15,
+      "aggressive_trade_count": 14,
+      "aggressive_negative_trade_count": 7,
+      "aggressive_average_return": 0.1548
+    },
+    {
+      "field_name": "stage_family",
+      "field_value": "pre_ignition_watch",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    }
+  ],
+  "role_gap_rows": [
+    {
+      "field_name": "role_family",
+      "field_value": "core_module_leader",
+      "oracle_trade_count": 4,
+      "aggressive_trade_count": 7,
+      "aggressive_negative_trade_count": 2,
+      "aggressive_average_return": 0.2618
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "domestic_optics_platform_bridge",
+      "oracle_trade_count": 2,
+      "aggressive_trade_count": 1,
+      "aggressive_negative_trade_count": 1,
+      "aggressive_average_return": -0.0976
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "high_beta_core_module",
+      "oracle_trade_count": 8,
+      "aggressive_trade_count": 5,
+      "aggressive_negative_trade_count": 3,
+      "aggressive_average_return": 0.1337
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "high_beta_module_extension",
+      "oracle_trade_count": 2,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "high_end_module_extension",
+      "oracle_trade_count": 2,
+      "aggressive_trade_count": 1,
+      "aggressive_negative_trade_count": 1,
+      "aggressive_average_return": -0.105
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "laser_chip_component",
+      "oracle_trade_count": 2,
+      "aggressive_trade_count": 1,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.1096
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "packaging_process_enabler",
+      "oracle_trade_count": 3,
+      "aggressive_trade_count": 3,
+      "aggressive_negative_trade_count": 3,
+      "aggressive_average_return": -0.1438
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "smaller_cap_high_beta_module",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    },
+    {
+      "field_name": "role_family",
+      "field_value": "upstream_component_platform",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 2,
+      "aggressive_negative_trade_count": 2,
+      "aggressive_average_return": -0.1306
+    }
+  ],
+  "catalyst_gap_rows": [
+    {
+      "field_name": "catalyst_sequence_label",
+      "field_value": "diffusion_extension",
+      "oracle_trade_count": 3,
+      "aggressive_trade_count": 1,
+      "aggressive_negative_trade_count": 1,
+      "aggressive_average_return": -0.0976
+    },
+    {
+      "field_name": "catalyst_sequence_label",
+      "field_value": "fresh_trigger",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    },
+    {
+      "field_name": "catalyst_sequence_label",
+      "field_value": "preheat_watch",
+      "oracle_trade_count": 1,
+      "aggressive_trade_count": 0,
+      "aggressive_negative_trade_count": 0,
+      "aggressive_average_return": 0.0
+    },
+    {
+      "field_name": "catalyst_sequence_label",
+      "field_value": "stale_or_conflicted",
+      "oracle_trade_count": 5,
+      "aggressive_trade_count": 5,
+      "aggressive_negative_trade_count": 4,
+      "aggressive_average_return": -0.071
+    },
+    {
+      "field_name": "catalyst_sequence_label",
+      "field_value": "validated_markup",
+      "oracle_trade_count": 15,
+      "aggressive_trade_count": 14,
+      "aggressive_negative_trade_count": 7,
+      "aggressive_average_return": 0.1548
+    }
+  ],
+  "margin_quality_rows": [
+    {
+      "bucket_name": "winning_trades",
+      "trade_count": 8,
+      "average_probability_margin": 0.2236
+    },
+    {
+      "bucket_name": "losing_trades",
+      "trade_count": 12,
+      "average_probability_margin": 0.1454
+    },
+    {
+      "bucket_name": "recommended_neutral_floor",
+      "trade_count": 20,
+      "average_probability_margin": 0.1845
+    }
+  ],
+  "recommendation_rows": [
+    {
+      "recommendation_name": "minimum_probability_margin_floor",
+      "recommended_value": 0.1845,
+      "reason": "Winning trades carry a visibly higher mean probability margin than losing trades."
+    },
+    {
+      "recommendation_name": "minimum_confidence_tier_numeric",
+      "recommended_value": 1.0,
+      "reason": "Only allow neutral participation in windows with at least ignition/main-markup confidence."
+    },
+    {
+      "recommendation_name": "minimum_rollforward_state_numeric",
+      "recommended_value": 0.0,
+      "reason": "The aggressive line gives back too much in negative rollforward windows."
+    },
+    {
+      "recommendation_name": "maximum_turnover_state_numeric",
+      "recommended_value": 1.0,
+      "reason": "The neutral line should skip the hottest board-pressure regimes instead of forcing participation."
+    },
+    {
+      "recommendation_name": "minimum_weighted_breadth_ratio",
+      "recommended_value": 0.45,
+      "reason": "Selective participation should require some minimum breadth confirmation."
+    },
+    {
+      "recommendation_name": "minimum_catalyst_presence_proxy",
+      "recommended_value": 0.35,
+      "reason": "Weak or stale catalyst states should not be enough to open a neutral position."
+    }
+  ],
+  "interpretation": [
+    "The oracle-vs-aggressive gap is too large to interpret as a simple factor omission; it also reflects drawdown control and stage-maturity filtering failures.",
+    "The aggressive line is profitable, but its losses cluster in mature or conflicted windows where the neutral line should accept cash.",
+    "V1.12BG therefore freezes a selective gate stack rather than pretending the aggressive objective should simply be tuned harder."
+  ]
+}

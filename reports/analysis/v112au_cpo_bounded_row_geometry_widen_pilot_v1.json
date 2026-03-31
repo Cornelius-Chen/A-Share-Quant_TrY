@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112au_cpo_bounded_row_geometry_widen_pilot_v1",
+    "truth_candidate_row_count_before_widen": 7,
+    "row_count_after_widen": 11,
+    "added_branch_row_count": 4,
+    "sample_count": 3175,
+    "core_targets_stable_after_row_widen": false,
+    "guarded_targets_stable_after_row_widen": true,
+    "best_target_after_row_widen": "phase_progression_label",
+    "allow_formal_training_now": false,
+    "allow_formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "keep_branch_rows_as_review_only_and_patch_branch_role_geometry_before_any_training_widen"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "baseline_accuracy_before_widen": 0.838,
+      "baseline_accuracy_after_widen": 0.8573,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "gbdt_accuracy_change_vs_v112at": 0.0
+    },
+    {
+      "target_name": "role_state_label",
+      "baseline_accuracy_before_widen": 0.5062,
+      "baseline_accuracy_after_widen": 0.5498,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 0.8972,
+      "gbdt_accuracy_change_vs_v112at": -0.1028
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "baseline_accuracy_before_widen": 0.838,
+      "baseline_accuracy_after_widen": 0.8573,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "gbdt_accuracy_change_vs_v112at": 0.0
+    },
+    {
+      "target_name": "board_condition_label",
+      "baseline_accuracy_before_widen": 0.8657,
+      "baseline_accuracy_after_widen": 0.8856,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "gbdt_accuracy_change_vs_v112at": 0.0
+    },
+    {
+      "target_name": "role_transition_label",
+      "baseline_accuracy_before_widen": 0.6561,
+      "baseline_accuracy_after_widen": 0.5721,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "gbdt_accuracy_change_vs_v112at": 0.0
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "baseline_accuracy_before_widen": 0.9571,
+      "baseline_accuracy_after_widen": 0.9604,
+      "gbdt_accuracy_before_widen": 1.0,
+      "gbdt_accuracy_after_widen": 1.0,
+      "gbdt_accuracy_change_vs_v112at": 0.0
+    }
+  ],
+  "widened_row_rows": [
+    {
+      "symbol": "300570",
+      "cohort_layer": "branch_extension",
+      "role_family": "connector_mpo_branch",
+      "dataset_posture": "review_support_context_row",
+      "active_stage_windows": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ]
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "dataset_posture": "review_support_context_row",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ]
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "dataset_posture": "review_support_context_row",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ]
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "dataset_posture": "review_support_context_row",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ]
+    }
+  ],
+  "interpretation": [
+    "This widen admits branch review rows only; it does not open spillover, pending, formal training, or signal rights.",
+    "If stability breaks here, the project learns that branch-row geometry is still ahead of the current trainable boundary.",
+    "This remains report-only and should be read as geometry evidence, not deployment readiness."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bs_as_penalized_target_mapping_refinement",
+    "candidate_veto_cluster_count": 0,
+    "candidate_veto_neighborhood_count": 12,
+    "candidate_transition_band_count": 12,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "penalized_veto_visibility",
+      "actual": {
+        "candidate_veto_cluster_count": 0,
+        "candidate_veto_neighborhood_count": 12,
+        "candidate_transition_band_count": 12
+      },
+      "reading": "The phase is only useful if the refinement yields explicit risk objects instead of only more offensive geometry."
+    }
+  ],
+  "interpretation": [
+    "V1.12BS phase check confirms that veto discovery is now being pushed through mapping refinement rather than further hard-threshold suppression."
+  ]
+}

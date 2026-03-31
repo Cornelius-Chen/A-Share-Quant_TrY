@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bd_as_market_regime_overlay_feature_review",
+    "do_open_v112bd_now": true,
+    "overlay_feature_count": 10,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bd_overlay_review",
+      "actual": {
+        "overlay_feature_count": 10,
+        "overlay_family_count": 1,
+        "board_style_feature_count": 2
+      },
+      "reading": "The review is only useful if the project gets an explicit market-regime overlay family without promoting it into core truth."
+    }
+  ],
+  "interpretation": [
+    "V1.12BD freezes the market-regime overlay family as a lawful context layer for later experiments.",
+    "Formal signal rights remain closed."
+  ]
+}

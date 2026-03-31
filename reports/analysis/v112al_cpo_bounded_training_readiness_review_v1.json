@@ -1,0 +1,342 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112al_cpo_bounded_training_readiness_review_v1",
+    "truth_candidate_row_count": 7,
+    "truth_stage_window_count": 8,
+    "core_label_count": 3,
+    "guarded_label_count": 5,
+    "direct_bindable_count": 21,
+    "guarded_bindable_count": 17,
+    "row_specific_blocked_count": 18,
+    "design_ready_feature_count": 14,
+    "daily_board_operational_gap_count": 3,
+    "future_calendar_operational_gap_count": 3,
+    "row_geometry_readiness_posture": "bounded_core_pilot_possible_but_narrow",
+    "label_binding_readiness_posture": "core_bindable_guarded_auxiliary_only",
+    "feature_implementation_readiness_posture": "partial_with_active_operational_gaps",
+    "bounded_training_pilot_lawful_now": true,
+    "bounded_training_pilot_scope": "extremely_small_core_skeleton_only",
+    "representative_training_lawful_now": false,
+    "primary_bottleneck_layer": "feature_implementation",
+    "secondary_bottleneck_layer": "row_geometry",
+    "formal_label_freeze_now": false,
+    "formal_training_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "open_extremely_small_core_skeleton_training_pilot_only"
+  },
+  "layer_readiness_rows": [
+    {
+      "layer_name": "row_geometry",
+      "readiness_posture": "bounded_core_pilot_possible_but_narrow",
+      "evidence": {
+        "truth_candidate_row_count": 7,
+        "primary_truth_rows": 3,
+        "secondary_truth_rows": 4,
+        "truth_stage_window_count": 8,
+        "has_quiet_window_truth": false,
+        "has_spillover_truth": false
+      },
+      "reading": "The current geometry is enough for an extremely small core-plus-secondary pilot, but not broad enough to claim stage-complete or spillover-complete supervision."
+    },
+    {
+      "layer_name": "label_binding",
+      "readiness_posture": "core_bindable_guarded_auxiliary_only",
+      "evidence": {
+        "direct_bindable_count": 21,
+        "guarded_bindable_count": 17,
+        "row_specific_blocked_count": 18,
+        "core_label_count": 3,
+        "guarded_label_count": 5
+      },
+      "reading": "The pilot has a real supervision skeleton, but it is still uneven: core labels bind cleanly while some guarded labels remain subset-only or geometry-blocked."
+    },
+    {
+      "layer_name": "feature_implementation",
+      "readiness_posture": "partial_with_active_operational_gaps",
+      "evidence": {
+        "feature_family_count": 6,
+        "design_ready_feature_count": 14,
+        "blind_spot_count": 4,
+        "daily_board_operational_gap_count": 3,
+        "future_calendar_operational_gap_count": 3
+      },
+      "reading": "The design layer is rich enough to support a bounded pilot conceptually, but implementation maturity is still the main limiting factor because board and calendar operational rules remain unfinished."
+    }
+  ],
+  "core_trainable_set_rows": [
+    {
+      "symbol": "300308",
+      "truth_tier": "primary",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 1,
+      "row_specific_blocked_label_count": 4,
+      "current_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "300502",
+      "truth_tier": "primary",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 2,
+      "row_specific_blocked_label_count": 3,
+      "current_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "300394",
+      "truth_tier": "primary",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 2,
+      "row_specific_blocked_label_count": 3,
+      "current_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "002281",
+      "truth_tier": "secondary",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 3,
+      "row_specific_blocked_label_count": 2,
+      "current_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "603083",
+      "truth_tier": "secondary",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 3,
+      "row_specific_blocked_label_count": 2,
+      "current_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "688205",
+      "truth_tier": "secondary",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 3,
+      "row_specific_blocked_label_count": 2,
+      "current_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    },
+    {
+      "symbol": "301205",
+      "truth_tier": "secondary",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "core_trainable_labels": [
+        "catalyst_sequence_label",
+        "phase_progression_label",
+        "role_state_label"
+      ],
+      "direct_bindable_label_count": 3,
+      "guarded_auxiliary_label_count": 3,
+      "row_specific_blocked_label_count": 2,
+      "current_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "trainability_posture": "core_skeleton_trainable_now",
+      "reading": "This row can legally enter an extremely small pilot through the current core label skeleton."
+    }
+  ],
+  "guarded_trainable_set_rows": [
+    {
+      "label_name": "board_condition_label",
+      "applicable_symbols": [
+        "002281",
+        "300308",
+        "300394",
+        "300502",
+        "301205",
+        "603083",
+        "688205"
+      ],
+      "blocked_symbols": [],
+      "guard_type": "supported_with_known_operational_gaps",
+      "allowed_usage": "guarded_auxiliary_or_analysis_label_only",
+      "reading": "This label can enter only as a guarded layer and may not define the pilot on its own."
+    },
+    {
+      "label_name": "failed_role_promotion_label",
+      "applicable_symbols": [
+        "002281",
+        "301205",
+        "603083",
+        "688205"
+      ],
+      "blocked_symbols": [
+        "300308",
+        "300394",
+        "300502"
+      ],
+      "guard_type": "supported_with_provisional_guard",
+      "allowed_usage": "auxiliary_train_signal_only",
+      "reading": "This label can enter only as a guarded layer and may not define the pilot on its own."
+    },
+    {
+      "label_name": "role_transition_label",
+      "applicable_symbols": [
+        "002281",
+        "300394",
+        "300502",
+        "301205",
+        "603083",
+        "688205"
+      ],
+      "blocked_symbols": [
+        "300308"
+      ],
+      "guard_type": "supported_with_provisional_guard",
+      "allowed_usage": "auxiliary_train_signal_only",
+      "reading": "This label can enter only as a guarded layer and may not define the pilot on its own."
+    }
+  ],
+  "not_yet_trainable_rows": [
+    {
+      "item_name": "quiet_window_survival_label",
+      "item_type": "label",
+      "current_posture": "not_yet_trainable",
+      "primary_blocker_layer": "row_geometry",
+      "reason": "current truth rows have no explicit quiet-window attachment",
+      "reading": "This remains globally meaningful but the current truth geometry does not yet support it."
+    },
+    {
+      "item_name": "spillover_maturity_boundary_label",
+      "item_type": "label",
+      "current_posture": "not_yet_trainable",
+      "primary_blocker_layer": "row_geometry",
+      "reason": "current truth rows exclude late-extension and spillover truth surfaces",
+      "reading": "Spillover boundary remains important, but only as overlay or review structure for now."
+    },
+    {
+      "item_name": "branch_upgrade_label",
+      "item_type": "label",
+      "current_posture": "review_only_future_target",
+      "primary_blocker_layer": "label_binding",
+      "reason": "owner review kept it as future-target only",
+      "reading": "The concept survives, but not as current pilot supervision."
+    },
+    {
+      "item_name": "residual_core_vs_collapse_label",
+      "item_type": "label",
+      "current_posture": "confirmed_only_review",
+      "primary_blocker_layer": "label_binding",
+      "reason": "it still requires confirmed-only review posture",
+      "reading": "This is useful for interpretation and later audit, not for ex-ante pilot truth."
+    },
+    {
+      "item_name": "board_series_operational_gaps",
+      "item_type": "feature_implementation",
+      "current_posture": "not_yet_frozen",
+      "primary_blocker_layer": "feature_implementation",
+      "reason": "board_vendor_selection_not_yet_frozen, breadth_formula_not_yet_frozen, turnover_normalization_rule_not_yet_frozen",
+      "reading": "Board-conditioned features remain partially ready because the operational table is not fully frozen."
+    },
+    {
+      "item_name": "future_calendar_operational_gaps",
+      "item_type": "feature_implementation",
+      "current_posture": "not_yet_frozen",
+      "primary_blocker_layer": "feature_implementation",
+      "reason": "expected_window_fill_rule_not_yet_frozen, confidence_tier_mapping_not_yet_frozen, calendar_rollforward_process_not_yet_frozen",
+      "reading": "Chronology and catalyst-sequence features still depend on an unfinished recurring-calendar rule layer."
+    }
+  ],
+  "bottleneck_attribution_rows": [
+    {
+      "layer_name": "feature_implementation",
+      "bottleneck_rank": 1,
+      "bottleneck_posture": "primary_current_bottleneck",
+      "why": "The core label skeleton exists and the row geometry is sufficient for a tiny pilot, but board and calendar operational gaps still make implementation maturity the narrowest legal aperture."
+    },
+    {
+      "layer_name": "row_geometry",
+      "bottleneck_rank": 2,
+      "bottleneck_posture": "secondary_bottleneck",
+      "why": "The current truth set covers core and secondary surfaces, but it does not yet include quiet-window truth rows or spillover truth rows, so broader representativeness is still missing."
+    },
+    {
+      "layer_name": "label_binding",
+      "bottleneck_rank": 3,
+      "bottleneck_posture": "constrained_but_not_primary",
+      "why": "Binding is uneven, but the main core labels already bind cleanly enough for a tiny guarded pilot; the larger issue is where and how those bindings can be implemented safely."
+    }
+  ],
+  "interpretation": [
+    "V1.12AL concludes that a tiny bounded pilot is lawful, but only for the current core skeleton and not for broader representative training.",
+    "The project is no longer blocked by the existence of labels alone; it is primarily bottlenecked by implementation maturity and secondarily by still-narrow row geometry.",
+    "This review exists to stop both failure modes at once: endless pre-pilot audits and premature training optimism."
+  ]
+}

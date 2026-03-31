@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bc_cpo_portfolio_objective_protocol",
+    "do_open_v112bc_now": true,
+    "recommended_first_action": "freeze_v112bc_cpo_portfolio_objective_protocol_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BC CPO Portfolio Objective Protocol",
+    "mission": "Freeze the objective tracks, no-leak boundaries, model-zoo search scope, marginal-value stopping rule, and output format for downstream CPO portfolio experiments.",
+    "in_scope": [
+      "portfolio objective tracks",
+      "oracle-vs-no-leak separation",
+      "model-zoo search bounds",
+      "stopping rules based on marginal improvement",
+      "required portfolio charts and process output"
+    ],
+    "out_of_scope": [
+      "actual portfolio backtest execution",
+      "formal strategy deployment",
+      "live trading signal generation"
+    ],
+    "success_criteria": [
+      "the project has explicit objective tracks instead of vague performance goals",
+      "oracle upper bound and no-leak tracks are separated cleanly",
+      "model-zoo exploration has a hard stopping rule"
+    ]
+  },
+  "interpretation": [
+    "V1.12BC exists to prevent black-box expansion from turning into uncontrolled search.",
+    "The phase freezes objective tracks before any broader portfolio experiment opens."
+  ]
+}

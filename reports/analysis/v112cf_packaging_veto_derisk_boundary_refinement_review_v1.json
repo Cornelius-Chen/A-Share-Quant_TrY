@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cf_packaging_veto_derisk_boundary_refinement_review_v1",
+    "sample_count": 17,
+    "previous_action_mapping_accuracy": 0.6471,
+    "refined_action_mapping_accuracy": 0.8824,
+    "accuracy_delta": 0.2353,
+    "residual_count": 2,
+    "recommended_next_posture": "promote_refined_packaging_boundary_as_candidate_and_rerun_template_pilot_if_material"
+  },
+  "refinement_rule_rows": [
+    {
+      "rule_name": "veto_to_derisk_relaxation",
+      "trigger_reading": "If base band is veto but the state is only moderately negative and still shows saturated-weak drift, downgrade to de-risk.",
+      "thresholds": {
+        "core_branch_relative_strength_spread_state": -0.15,
+        "core_spillover_divergence_state": -0.2,
+        "spillover_saturation_overlay_state": 0.16,
+        "ai_hardware_cross_board_resonance_state": -0.08
+      }
+    },
+    {
+      "rule_name": "strict_eligibility_confirmation",
+      "trigger_reading": "Only keep eligibility when all positive directions are clearly constructive and spillover saturation remains subdued.",
+      "thresholds": {
+        "core_branch_relative_strength_spread_state": 0.0,
+        "core_spillover_divergence_state": 0.15,
+        "spillover_saturation_overlay_state": 0.1,
+        "ai_hardware_cross_board_resonance_state": 0.0
+      }
+    }
+  ],
+  "sample_rows": [
+    {
+      "trade_date": "2024-03-14",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-18",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "actual_band": "eligibility_band",
+      "base_band": "eligibility_band",
+      "refined_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-14",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-17",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-18",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "de_risk_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-19",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "de_risk_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-20",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-24",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "de_risk_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-25",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-26",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-27",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "de_risk_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-28",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "eligibility_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300757",
+      "actual_band": "eligibility_band",
+      "base_band": "eligibility_band",
+      "refined_band": "eligibility_band",
+      "classification_correct": true
+    }
+  ],
+  "residual_rows": [
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "actual_band": "de_risk_band",
+      "base_band": "veto_band",
+      "refined_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "actual_band": "veto_band",
+      "base_band": "veto_band",
+      "refined_band": "de_risk_band",
+      "classification_correct": false
+    }
+  ],
+  "interpretation": [
+    "V1.12CF refines the packaging three-layer template by separating true veto states from over-suppressed de-risk states.",
+    "The refinement is intentionally local: it upgrades the de-risk/veto boundary without changing the broader cluster-level control grammar."
+  ]
+}

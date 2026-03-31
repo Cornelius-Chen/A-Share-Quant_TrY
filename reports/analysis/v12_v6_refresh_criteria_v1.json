@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v12_v6_refresh_symbol_selection_criteria",
+    "criteria_count": 9,
+    "recommended_next_batch_name": "market_research_v6_catalyst_supported_carry_persistence_refresh",
+    "prepare_manifest_now": false,
+    "ready_to_open_v6_manifest_after_criteria": true,
+    "additional_carry_rows_needed": 2,
+    "additional_persistence_rows_needed": 2,
+    "carry_observable_field_count": 5,
+    "catalyst_branch_support_only": true
+  },
+  "criteria_rows": [
+    {
+      "criterion_name": "must_target_one_primary_training_gap",
+      "criterion_type": "inclusion",
+      "rule": {
+        "allowed_primary_targets": [
+          "true_carry_row",
+          "clean_persistence_row"
+        ],
+        "exactly_one_primary_target_per_symbol": true
+      },
+      "reading": "Each v6 symbol still enters to solve one training gap first; the catalyst branch does not justify mixed multi-purpose admissions."
+    },
+    {
+      "criterion_name": "must_support_carry_or_persistence_observability",
+      "criterion_type": "inclusion",
+      "rule": {
+        "carry_required_observable_fields": [
+          "basis_advantage_abs",
+          "basis_advantage_bps",
+          "challenger_carry_days",
+          "same_exit_date",
+          "pnl_delta_vs_closest"
+        ],
+        "persistence_required_signature": "specialist_preserved_window_with_anchor_churn",
+        "must_support_acceptance_grade_row_classification": true
+      },
+      "reading": "A v6 candidate must still plausibly generate either a true carry row or a clean persistence row that survives the existing acceptance chain."
+    },
+    {
+      "criterion_name": "must_fill_known_training_gap",
+      "criterion_type": "inclusion",
+      "rule": {
+        "additional_carry_rows_needed": 2,
+        "additional_persistence_rows_needed": 2,
+        "opening_count_frozen": true
+      },
+      "reading": "V6 remains tied to the frozen training manifest: true carry rows first, clean persistence rows second, opening still frozen."
+    },
+    {
+      "criterion_name": "must_support_catalyst_context_observability",
+      "criterion_type": "inclusion",
+      "rule": {
+        "require_theme_or_sector_scope": true,
+        "require_market_context_fillable": true,
+        "catalyst_support_only": true
+      },
+      "reading": "Catalyst context stays support-only, but v6 symbols should allow bounded catalyst-context recording rather than living in a context blind spot."
+    },
+    {
+      "criterion_name": "exclude_single_pulse_only_as_primary_carry_reason",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_opening_clone_chasing": true,
+        "exclude_single_pulse_only_for_true_carry_primary_target": true,
+        "context_separation_present": true
+      },
+      "reading": "Because the bounded catalyst audit separated opening from persistence and carry, a single-pulse-only story should not be used as the main admission reason for a true-carry target."
+    },
+    {
+      "criterion_name": "prefer_multi_day_or_followthrough_context_for_supported_targets",
+      "criterion_type": "preference",
+      "rule": {
+        "prefer_multi_day_reinforcement_for_clean_persistence": true,
+        "prefer_policy_or_followthrough_context_for_true_carry": true,
+        "do_not_promote_catalyst_branch_to_mainline": true
+      },
+      "reading": "Catalyst context can sharpen symbol selection by preferring multi-day reinforcement for persistence and followthrough-style context for carry without becoming the new mainline."
+    },
+    {
+      "criterion_name": "exclude_relabelled_non_carry_rows",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_penalty_relabelling_into_carry": true,
+        "exclude_deferred_basis_relabelling_into_carry": true,
+        "exclude_mixed_hold_examples_into_persistence": true
+      },
+      "reading": "The new batch still cannot solve the gap by relabeling adjacent structures into carry or persistence classes."
+    },
+    {
+      "criterion_name": "exclude_reopening_existing_locally_exhausted_replay_zones",
+      "criterion_type": "exclusion",
+      "rule": {
+        "exclude_v4_q2_a_local_hunt_zone": true,
+        "exclude_v5_local_replay": true
+      },
+      "reading": "V6 should not be built by reopening already exhausted local replay zones from v4 or v5."
+    },
+    {
+      "criterion_name": "require_reference_base_novelty",
+      "criterion_type": "inclusion",
+      "rule": {
+        "must_be_new_vs_combined_reference_base": true,
+        "reference_base": "v1_plus_v2_seed_plus_v2_refresh_plus_v3_seed_plus_v4_refresh_plus_v5_refresh"
+      },
+      "reading": "V6 should continue the discipline of adding only genuinely new symbols against the accumulated reference base."
+    }
+  ],
+  "interpretation": [
+    "V6 should remain a training-gap-driven refresh rather than turning into a generic catalyst-news expansion.",
+    "The catalyst branch now earns a bounded support role inside symbol selection, but it still cannot override the carry-row-diversity mission or reopen opening clone chasing.",
+    "Once these criteria are frozen, the next healthy move is to draft the v6 manifest against them rather than replay old local substrates."
+  ]
+}

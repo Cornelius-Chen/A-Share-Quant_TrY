@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112i_label_refinement_review_protocol",
+    "phase_name": "V1.12I Label Refinement Review Protocol",
+    "ready_for_protocol_next": true
+  },
+  "mission": {
+    "goal": "Freeze the review standard for deciding whether high_level_consolidation should remain a feature-only problem or become a bounded candidate for label splitting.",
+    "why_now": "V1.12G isolated a semantic-v2 delta concentrated in high_level_consolidation, so the next mainline need is a stable review rule rather than immediate relabeling."
+  },
+  "in_scope": [
+    "define review gates for bounded label-split candidacy",
+    "define rejection conditions that keep refinement on the feature side only",
+    "keep the review tied to the frozen V1.12B/V1.12G pilot basis"
+  ],
+  "out_of_scope": [
+    "formal label rewrite",
+    "dataset widening",
+    "new model family search",
+    "strategy integration"
+  ],
+  "success_criteria": [
+    "a review-only protocol exists for deciding whether candidate substates justify bounded follow-up",
+    "the protocol distinguishes evidence sufficient for drafting from evidence sufficient for formal label changes"
+  ],
+  "stop_criteria": [
+    "protocol starts rewriting labels instead of governing review",
+    "protocol depends on scope growth or new data before it can be useful"
+  ],
+  "handoff_condition": "use the protocol after a bounded subagent or mainline bucketization output arrives"
+}

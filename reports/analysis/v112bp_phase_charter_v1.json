@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bp_cpo_selector_maturity_fusion_pilot",
+    "do_open_v112bp_now": true,
+    "recommended_first_action": "freeze_v112bp_cpo_selector_maturity_fusion_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BP CPO Selector Maturity Fusion Pilot",
+    "mission": "Fuse the strongest lawful selector candidate with the frozen internal-maturity overlay and auxiliary market-regime overlay, then test whether drawdown can be compressed without giving up all of the selector's upside on the frozen 10-row CPO layer.",
+    "in_scope": [
+      "best-selector reuse on the lawful 10-row training-facing layer",
+      "internal maturity overlay gating",
+      "market regime overlay as auxiliary context only",
+      "report-only no-leak portfolio simulation",
+      "comparison against BK selector, BH neutral, and BF aggressive tracks"
+    ],
+    "out_of_scope": [
+      "formal training opening",
+      "formal signal generation",
+      "row-geometry widening",
+      "promotion of overlays into truth labels"
+    ],
+    "success_criteria": [
+      "the fusion line remains no-leak and report-only",
+      "the internal maturity overlay is actually consumed downstream",
+      "the tradeoff against neutral and BK is made explicit"
+    ]
+  },
+  "interpretation": [
+    "V1.12BP exists because selector strength is no longer the main bottleneck; timing and maturity discipline are.",
+    "The lawful next step is a selector-plus-overlay fusion, not another uncontrolled selector-only expansion."
+  ]
+}

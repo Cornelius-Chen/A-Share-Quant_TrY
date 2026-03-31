@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bd_market_regime_overlay_feature_review_v1",
+    "overlay_feature_count": 10,
+    "overlay_family_count": 1,
+    "board_style_feature_count": 2,
+    "sector_etf_feature_count": 1,
+    "liquidity_feature_count": 2,
+    "formal_feature_promotion_now": false,
+    "formal_label_promotion_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "overlay_feature_rows": [
+    {
+      "feature_name": "broad_index_trend_state",
+      "overlay_domain": "index_trend",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "all_market_turnover_liquidity_state",
+      "overlay_domain": "liquidity",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "risk_appetite_heat_state",
+      "overlay_domain": "risk_appetite",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "chinext_relative_strength_state",
+      "overlay_domain": "board_style",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "star_board_relative_strength_state",
+      "overlay_domain": "board_style",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "ai_hardware_cross_board_resonance_state",
+      "overlay_domain": "cross_board_resonance",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "optics_sector_etf_strength_state",
+      "overlay_domain": "sector_etf",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "turnover_pressure_overlay_state",
+      "overlay_domain": "turnover_pressure",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "liquidity_dispersion_state",
+      "overlay_domain": "liquidity",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    },
+    {
+      "feature_name": "sector_rotation_conflict_state",
+      "overlay_domain": "rotation_conflict",
+      "allowed_usage_layer": "market_regime_overlay_only"
+    }
+  ],
+  "family_rows": [
+    {
+      "family_name": "market_regime_overlay_family",
+      "family_posture": "design_ready_overlay_family",
+      "member_count": 10,
+      "disallowed_layers": [
+        "core_truth_label",
+        "role_truth_replacement",
+        "formal_signal_trigger"
+      ],
+      "reading": "These factors may amplify or suppress a cycle, but they do not replace stock-level role and catalyst truth."
+    }
+  ],
+  "interpretation": [
+    "V1.12BD freezes broad-market, board-style, and sector-ETF context as an overlay family rather than as core truth.",
+    "This allows later experiments to test regime amplification without flattening the CPO cycle grammar into market beta."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112p_cpo_full_cycle_information_registry",
+    "do_open_v112p_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112p_cpo_full_cycle_information_registry_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12P CPO Full-Cycle Information Registry",
+    "mission": "Collect a broad but governed CPO full-cycle information map across catalysts, earnings, technology, market-state, liquidity, and cohort-expansion objects so later factor/label/training work starts from a much less incomplete review surface.",
+    "in_scope": [
+      "freeze multi-layer information dimensions for the CPO cycle",
+      "record core leaders, direct related names, extension-concept names, and mixed-relevance drift names",
+      "capture review-only catalyst timeline anchors from public sources",
+      "capture review-only earnings and business-line anchors from public sources",
+      "explicitly record remaining gaps where information is still missing or noisy"
+    ],
+    "out_of_scope": [
+      "automatic label freeze",
+      "automatic model feature promotion",
+      "automatic training rerun",
+      "execution timing",
+      "signal generation"
+    ],
+    "success_criteria": [
+      "the CPO line has a broad layered registry rather than a narrow three-name training surface",
+      "the registry distinguishes core, adjacent, extension, and mixed-relevance names cleanly",
+      "the next discussion can focus on missing information and cohort validation rather than object discovery from scratch"
+    ],
+    "stop_criteria": [
+      "the phase drifts into claiming business relevance that has not been validated",
+      "the phase turns review-only information into automatic training candidates",
+      "the scope leaks into execution or signal logic"
+    ]
+  },
+  "interpretation": [
+    "V1.12P is intentionally information-heavy and review-first: it exists to reduce omission risk before the next cohort-validation or training decision.",
+    "This phase expands the information surface, not the training authorization surface.",
+    "The mainline goal is completeness of review memory, including noisy names that may later prove useless."
+  ]
+}

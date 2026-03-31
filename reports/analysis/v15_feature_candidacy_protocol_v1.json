@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v15_feature_candidacy_protocol_v1",
+    "candidate_feature_count": 5,
+    "review_axis_count": 4,
+    "bounded_discrimination_present": true,
+    "allow_retained_promotion_now": false,
+    "ready_for_feature_admissibility_review_next": true
+  },
+  "protocol": {
+    "candidate_feature_names": [
+      "single_pulse_support",
+      "multi_day_reinforcement_support",
+      "policy_followthrough_support",
+      "concept_confirmation_depth",
+      "concept_indirectness_level"
+    ],
+    "review_axes": [
+      "feature_admissibility",
+      "evidence_sufficiency",
+      "non_redundancy_or_orthogonality",
+      "safe_containment"
+    ],
+    "minimum_admissibility_requirements": [
+      "point_in_time_clean_definition",
+      "source_contamination_controlled",
+      "binding_rule_stable_and_auditable",
+      "bounded discrimination already present",
+      "not strategy-integrated"
+    ],
+    "candidacy_outcomes": [
+      "retain_as_report_only_reject_candidacy",
+      "allow_provisional_candidacy_review",
+      "hold_for_more_evidence"
+    ],
+    "forbidden_actions": [
+      "retained_feature_promotion",
+      "strategy integration",
+      "local_model_opening",
+      "refresh or replay expansion to manufacture feature evidence"
+    ]
+  },
+  "interpretation": [
+    "V1.5 reviews whether report-only context features deserve candidacy consideration, not whether they should be promoted now.",
+    "The protocol turns the next step into an admissibility exercise across evidence, non-redundancy, and safe containment.",
+    "The next legal action is per-feature admissibility review, not promotion or model expansion."
+  ]
+}

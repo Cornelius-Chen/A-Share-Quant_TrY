@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v14_context_consumption_pilot",
+    "v13_waiting_state_present": true,
+    "concept_usage_rules_ready": true,
+    "catalyst_context_ready": true,
+    "do_open_v14_now": true,
+    "recommended_first_action": "freeze_v14_context_consumption_protocol_v1"
+  },
+  "charter": {
+    "mission": "Validate whether bounded catalyst and concept context can be consumed as point-in-time, source-aware, market-confirmed report-only features that add stable discrimination across opening, persistence, and carry lanes.",
+    "in_scope": [
+      "freeze the V1.3-consumable input set",
+      "define a context consumption protocol",
+      "bind bounded context rows to lane or sample scope",
+      "produce report-only context feature candidates",
+      "run bounded discrimination checks"
+    ],
+    "out_of_scope": [
+      "strategy integration",
+      "retained-feature promotion",
+      "formal model work or strategy-level ML",
+      "wide replay expansion",
+      "new heavy dependencies or paid data"
+    ],
+    "success_criteria": [
+      "bounded context rows can be stably consumed by auditable rules",
+      "at least one report-only context feature shows stable discrimination value",
+      "the phase can close with a clear next posture: continue report-only, candidate review, or waiting state"
+    ],
+    "stop_criteria": [
+      "if context binding stays too sparse or noisy",
+      "if bounded discrimination remains unstable after small-sample review",
+      "if the work drifts into strategy integration or retained-feature promotion"
+    ],
+    "handoff_condition": "After the charter opens, only replay-independent context-consumption artifacts are allowed until a phase-level review says otherwise."
+  },
+  "interpretation": [
+    "V1.3 closed successfully as bounded infrastructure, so the next lawful question is whether that infrastructure can actually be consumed.",
+    "The catalyst branch already shows directional separation, but still below promotion threshold; that makes it suitable for a report-only consumption pilot rather than strategy work.",
+    "So V1.4 should open as a bounded context-consumption phase, not as a model, refresh, or signal-integration phase."
+  ]
+}

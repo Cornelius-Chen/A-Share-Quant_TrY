@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v16_feature_stability_review_v1_as_bounded_review",
+    "reviewed_feature_count": 4,
+    "continue_provisional_candidacy_count": 4,
+    "hold_for_more_stability_evidence_count": 0,
+    "drop_from_provisional_candidacy_count": 0,
+    "ready_for_v16_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "cross_artifact_consistency": true,
+      "bounded_definition_stability": true,
+      "continued_safe_containment": true,
+      "no_promotion_dependency": true,
+      "stability_outcome": "continue_provisional_candidacy",
+      "review_reading": "Current bounded evidence is stable enough to keep the feature alive inside provisional candidacy review."
+    },
+    {
+      "feature_name": "multi_day_reinforcement_support",
+      "cross_artifact_consistency": true,
+      "bounded_definition_stability": true,
+      "continued_safe_containment": true,
+      "no_promotion_dependency": true,
+      "stability_outcome": "continue_provisional_candidacy",
+      "review_reading": "Current bounded evidence is stable enough to keep the feature alive inside provisional candidacy review."
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "cross_artifact_consistency": true,
+      "bounded_definition_stability": true,
+      "continued_safe_containment": true,
+      "no_promotion_dependency": true,
+      "stability_outcome": "continue_provisional_candidacy",
+      "review_reading": "Current bounded evidence is stable enough to keep the feature alive inside provisional candidacy review."
+    },
+    {
+      "feature_name": "concept_confirmation_depth",
+      "cross_artifact_consistency": true,
+      "bounded_definition_stability": true,
+      "continued_safe_containment": true,
+      "no_promotion_dependency": true,
+      "stability_outcome": "continue_provisional_candidacy",
+      "review_reading": "Current bounded evidence is stable enough to keep the feature alive inside provisional candidacy review."
+    }
+  ],
+  "interpretation": [
+    "V1.6 checks whether provisional candidacy remains stable, not whether features should be promoted.",
+    "A positive stability result only means the feature may continue to live inside bounded candidacy review.",
+    "The next legal step is a V1.6 phase-level check, not promotion or local-model work."
+  ]
+}

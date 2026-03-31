@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v111a_as_bounded_first_acquisition_pilot_success",
+    "v111a_success_criteria_met": true,
+    "admitted_candidate_count": 2,
+    "admitted_policy_followthrough_count": 0,
+    "enter_v111a_waiting_state_now": true,
+    "allow_auto_follow_on_now": false,
+    "recommended_next_posture": "preserve_v111a_candidate_records_and_wait_for_owner_review_or_new_trigger"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v111a_charter",
+      "actual": {
+        "do_open_v111a_now": true
+      },
+      "reading": "V1.11A opened as a bounded owner-reviewed exception phase."
+    },
+    {
+      "evidence_name": "v111a_collection",
+      "actual": {
+        "admitted_candidate_count": 2,
+        "admitted_policy_followthrough_count": 0,
+        "sample_limit_breaches": 0
+      },
+      "reading": "The pilot succeeded if it admitted bounded new candidates without breaching caps, even if direct policy-followthrough breadth did not expand yet."
+    },
+    {
+      "evidence_name": "v111a_phase_check",
+      "actual": {
+        "acquisition_path_validated": true,
+        "direct_policy_followthrough_breadth_gain_present": false
+      },
+      "reading": "Closure should preserve the distinction between validating the acquisition path and changing the promotion judgment."
+    }
+  ],
+  "interpretation": [
+    "V1.11A has completed one bounded first-pilot cycle and produced real acquisition candidates under the frozen V1.11 rules.",
+    "That is enough to close the phase successfully without auto-opening a follow-on pilot or retained-feature review.",
+    "Per current governance, the correct posture is waiting state until the owner chooses the next move."
+  ]
+}

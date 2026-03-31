@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112_training_protocol_v1",
+    "feature_block_count": 4,
+    "label_count": 3,
+    "validation_rule_count": 4,
+    "ready_for_phase_check_next": true
+  },
+  "protocol": {
+    "training_objective": "maximize_cycle_return_under_drawdown_constraint",
+    "sample_unit": "symbol_day_within_one_price_cycle_window",
+    "feature_blocks": {
+      "catalyst_state": [
+        "product_price_change_proxy",
+        "demand_acceleration_proxy",
+        "supply_tightness_proxy",
+        "official_or_industry_catalyst_presence"
+      ],
+      "earnings_transmission_bridge": [
+        "revenue_sensitivity_class",
+        "gross_margin_sensitivity_class",
+        "order_or_capacity_sensitivity_proxy"
+      ],
+      "expectation_gap": [
+        "earnings_revision_pressure_proxy",
+        "rerating_gap_proxy"
+      ],
+      "price_confirmation": [
+        "relative_strength_persistence",
+        "volume_expansion_confirmation",
+        "breakout_or_hold_structure"
+      ]
+    },
+    "label_set": [
+      "forward_return_bucket",
+      "max_drawdown_bucket",
+      "carry_outcome_class"
+    ],
+    "validation_rules": [
+      "time_split_only_no_random_shuffle",
+      "single_cycle_first_then_multi_object_expansion",
+      "no_intraday_execution_features_in_first_pilot",
+      "report_only_model_readout_in_first_pilot"
+    ],
+    "expansion_rules": [
+      "only add new objects after first cycle protocol is frozen and reviewable",
+      "do not mix carry families inside the first experiment",
+      "later multi-object expansion must preserve the same label and split discipline"
+    ]
+  },
+  "interpretation": [
+    "The first price-cycle training experiment should be framed as a bounded report-only model problem, not a live-trading system.",
+    "The protocol explicitly separates catalyst, earnings transmission, expectation gap, and price confirmation.",
+    "This lets later scaling add objects while preserving the same unit, labels, and validation discipline."
+  ]
+}

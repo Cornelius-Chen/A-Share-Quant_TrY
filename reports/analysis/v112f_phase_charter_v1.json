@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112f_now_for_refinement_design",
+    "do_open_v112f_now": true,
+    "ready_for_refinement_design_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12F Catalyst-State Semantics And Label Boundary Refinement Design",
+    "mission": "Turn the first GBDT attribution result into a bounded design decision: determine whether the next high-value move is catalyst-state semantic refinement, label-boundary refinement, or both.",
+    "in_scope": [
+      "review V1.12C hotspot rows and V1.12E block-attribution results together",
+      "classify the single primary bottleneck behind the current optimistic errors",
+      "propose bounded catalyst-state semantic additions for late major-markup and high-level consolidation",
+      "propose bounded label-boundary changes only if they add decision value beyond feature refinement"
+    ],
+    "out_of_scope": [
+      "model retraining",
+      "new data acquisition",
+      "object widening",
+      "strategy deployment",
+      "intraday execution features"
+    ],
+    "success_criteria": [
+      "the phase selects one primary bottleneck cause instead of leaving feature and label issues mixed",
+      "the output gives a bounded next-step design basis",
+      "the phase remains report-only and does not mutate the existing training chain"
+    ],
+    "stop_criteria": [
+      "the review cannot identify a single primary bottleneck",
+      "the phase starts changing model scope instead of design basis",
+      "the result does not change the next refinement decision"
+    ]
+  },
+  "interpretation": [
+    "V1.12F is a design-only phase, not a new training or modeling phase.",
+    "The point is to stop treating 'weights', 'features', and 'labels' as one blurred problem.",
+    "The correct output is a bounded next-step design basis that increases decision value before any new experiment."
+  ]
+}

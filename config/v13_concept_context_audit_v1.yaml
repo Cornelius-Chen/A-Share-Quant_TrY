@@ -1,0 +1,10 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.3
+
+paths:
+  concept_source_fill_report: reports/analysis/v13_concept_source_fill_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v13_concept_context_audit_v1

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112am_as_extremely_small_core_skeleton_training_pilot_success",
+    "v112am_success_criteria_met": true,
+    "enter_v112am_waiting_state_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "recommended_next_posture": "owner_review_of_core_skeleton_pilot_results"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112am_phase_check",
+      "actual": {
+        "sample_count": 2160,
+        "best_target_by_gbdt_gain": "phase_progression_label",
+        "best_target_gain": 0.3735
+      },
+      "reading": "The project now has bounded pilot evidence and can decide from experiment rather than abstract readiness rhetoric alone."
+    }
+  ],
+  "interpretation": [
+    "V1.12AM closes once the first tiny core-skeleton pilot has been exposed and bounded.",
+    "The next move should be owner review of the pilot evidence, not automatic scale-up."
+  ]
+}

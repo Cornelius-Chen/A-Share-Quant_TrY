@@ -1,0 +1,403 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112by_enabler_family_balance_band_transfer_probe_v1",
+    "sample_count": 25,
+    "overall_classification_accuracy": 0.64,
+    "role_count": 3,
+    "direction_transfer_supported": true,
+    "full_family_level_template_ready": false,
+    "recommended_next_posture": "calibrate_family_specific_band_edges_before_promoting_transfer_template"
+  },
+  "role_level_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "sample_count": 4,
+      "correct_count": 4,
+      "classification_accuracy": 1.0,
+      "predicted_band_counts": {
+        "eligibility_band": 4
+      },
+      "actual_band_counts": {
+        "eligibility_band": 4
+      }
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "sample_count": 17,
+      "correct_count": 11,
+      "classification_accuracy": 0.6471,
+      "predicted_band_counts": {
+        "veto_band": 4,
+        "eligibility_band": 6,
+        "de_risk_band": 7
+      },
+      "actual_band_counts": {
+        "veto_band": 5,
+        "eligibility_band": 2,
+        "de_risk_band": 10
+      }
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "sample_count": 4,
+      "correct_count": 1,
+      "classification_accuracy": 0.25,
+      "predicted_band_counts": {
+        "eligibility_band": 4
+      },
+      "actual_band_counts": {
+        "eligibility_band": 1,
+        "veto_band": 2,
+        "de_risk_band": 1
+      }
+    }
+  ],
+  "sample_rows": [
+    {
+      "trade_date": "2024-02-01",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": 0.3409,
+      "max_drawdown_20d": -0.192,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-14",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.184,
+      "max_drawdown_20d": -0.3225,
+      "predicted_band": "veto_band",
+      "actual_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.2447,
+      "max_drawdown_20d": -0.3602,
+      "predicted_band": "veto_band",
+      "actual_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-03-18",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.1668,
+      "max_drawdown_20d": -0.3602,
+      "predicted_band": "veto_band",
+      "actual_band": "veto_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": 0.1787,
+      "max_drawdown_20d": -0.1686,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-05-27",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.0812,
+      "max_drawdown_20d": -0.1042,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": 0.0125,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "veto_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-14",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0478,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-17",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0428,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-18",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0481,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-19",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0246,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-20",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0886,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0829,
+      "max_drawdown_20d": -0.1302,
+      "predicted_band": "de_risk_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-24",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0235,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-25",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": 0.014,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-26",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0282,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "de_risk_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2024-06-27",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.023,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-28",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0762,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": 0.0582,
+      "max_drawdown_20d": -0.1438,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2025-08-27",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.098,
+      "max_drawdown_20d": -0.204,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "forward_return_20d": 0.2078,
+      "max_drawdown_20d": -0.1903,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2025-08-29",
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "forward_return_20d": 0.2241,
+      "max_drawdown_20d": -0.1903,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2025-09-04",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.0447,
+      "max_drawdown_20d": -0.1319,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-09-08",
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "forward_return_20d": 0.0694,
+      "max_drawdown_20d": -0.1923,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    },
+    {
+      "trade_date": "2025-10-31",
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "forward_return_20d": 0.0607,
+      "max_drawdown_20d": -0.1549,
+      "predicted_band": "eligibility_band",
+      "actual_band": "eligibility_band",
+      "classification_correct": true
+    }
+  ],
+  "miss_rows": [
+    {
+      "trade_date": "2024-05-27",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.0812,
+      "max_drawdown_20d": -0.1042,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": 0.0125,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "veto_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-19",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0246,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-20",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0886,
+      "max_drawdown_20d": -0.1367,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0829,
+      "max_drawdown_20d": -0.1302,
+      "predicted_band": "de_risk_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-27",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.023,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2024-06-28",
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "forward_return_20d": -0.0762,
+      "max_drawdown_20d": -0.1019,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-08-27",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.098,
+      "max_drawdown_20d": -0.204,
+      "predicted_band": "eligibility_band",
+      "actual_band": "veto_band",
+      "classification_correct": false
+    },
+    {
+      "trade_date": "2025-09-04",
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "forward_return_20d": -0.0447,
+      "max_drawdown_20d": -0.1319,
+      "predicted_band": "eligibility_band",
+      "actual_band": "de_risk_band",
+      "classification_correct": false
+    }
+  ],
+  "interpretation": [
+    "V1.12BY tests whether the 4-direction balance-band prototype from packaging_process_enabler transfers to adjacent branch/enabler states.",
+    "The result should be read as direction transfer and partial semantic transfer, not as proof that a single family-wide edge calibration already exists."
+  ]
+}

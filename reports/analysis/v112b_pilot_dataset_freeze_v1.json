@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112b_first_trainable_pilot_dataset_v1",
+    "dataset_row_count": 3,
+    "frozen_symbol_count": 3,
+    "all_rows_owner_accepted": true,
+    "ready_for_baseline_readout_next": true
+  },
+  "dataset_rows": [
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "final_role_label_cn": "龙头/核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-06",
+        "cooling_and_box_start": "2023-07",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-04",
+        "deep_box_reset_start": "2024-05",
+        "deep_box_reset_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2026-01",
+        "pullback_window": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_month_span": 12,
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "frozen_for_report_only_baseline",
+      "owner_acceptance_status": "accepted_via_conversation",
+      "owner_notes": "已按统一口径接受，可进入第一轮 report-only baseline。"
+    },
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "final_role_label_cn": "高弹性核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-05",
+        "cooling_and_box_start": "2023-06",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-06",
+        "long_box_reset_start": "2024-07",
+        "long_box_reset_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2025-09",
+        "high_level_consolidation_start": "2025-10",
+        "high_level_consolidation_end": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_month_span": 13,
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "frozen_for_report_only_baseline",
+      "owner_acceptance_status": "accepted_via_conversation",
+      "owner_notes": "已按统一口径接受，可进入第一轮 report-only baseline。"
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "final_role_label_cn": "上游核心器件平台受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-06",
+        "cooling_and_box_start": "2023-07",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-04",
+        "deep_box_reset_start": "2024-05",
+        "deep_box_reset_end": "2025-06",
+        "major_markup_start": "2025-07",
+        "major_markup_end": "2026-02",
+        "pullback_window": "2026-03"
+      },
+      "cycle_month_span": 11,
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "frozen_for_report_only_baseline",
+      "owner_acceptance_status": "accepted_via_conversation",
+      "owner_notes": "已按统一口径接受，可进入第一轮 report-only baseline。"
+    }
+  ],
+  "interpretation": [
+    "This is the first point where the optical-link pilot draft becomes a trainable dataset rather than a review sheet.",
+    "The freeze intentionally keeps the object set narrow at three core names.",
+    "The next lawful move is a report-only baseline readout under the already-frozen V1.12 protocol."
+  ]
+}

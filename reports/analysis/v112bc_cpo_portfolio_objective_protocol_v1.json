@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bc_cpo_portfolio_objective_protocol_v1",
+    "objective_track_count": 3,
+    "no_leak_track_count": 2,
+    "oracle_track_count": 1,
+    "model_scope_count": 3,
+    "marginal_stop_threshold": 0.005,
+    "marginal_stop_patience_rounds": 3,
+    "must_output_equity_curve": true,
+    "must_output_drawdown_curve": true,
+    "must_output_trade_process_trace": true,
+    "must_output_portfolio_plot_bundle": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "objective_track_rows": [
+    {
+      "track_name": "oracle_upper_bound_track",
+      "track_posture": "hindsight_benchmark_only",
+      "future_information_allowed": true,
+      "can_train_models": false,
+      "can_generate_signals": false,
+      "primary_goal": "measure the ex-post profit ceiling of the cycle under unconstrained hindsight allocation"
+    },
+    {
+      "track_name": "aggressive_no_leak_black_box_track",
+      "track_posture": "no_leak_primary_portfolio_experiment",
+      "future_information_allowed": false,
+      "can_train_models": true,
+      "can_generate_signals": false,
+      "primary_goal": "maximize total return under point-in-time information with limited regard for drawdown"
+    },
+    {
+      "track_name": "neutral_selective_no_leak_track",
+      "track_posture": "no_leak_selective_portfolio_experiment",
+      "future_information_allowed": false,
+      "can_train_models": true,
+      "can_generate_signals": false,
+      "primary_goal": "optimize return-drawdown tradeoff, profit factor, and selective participation with cash allowed"
+    }
+  ],
+  "model_scope_rows": [
+    {
+      "model_scope": "level_1_stable_black_box",
+      "allowed_models": [
+        "hist_gradient_boosting_classifier",
+        "random_forest_classifier",
+        "xgboost_or_lightgbm_if_available"
+      ],
+      "priority": 1
+    },
+    {
+      "model_scope": "level_2_mid_black_box",
+      "allowed_models": [
+        "small_mlp_classifier",
+        "gated_mlp_variant",
+        "tabnet_if_available"
+      ],
+      "priority": 2
+    },
+    {
+      "model_scope": "level_3_deep_black_box",
+      "allowed_models": [
+        "ft_transformer",
+        "sequence_model",
+        "reinforcement_learning_agent"
+      ],
+      "priority": 3
+    }
+  ],
+  "evaluation_metric_rows": [
+    {
+      "metric_name": "total_return",
+      "metric_group": "portfolio"
+    },
+    {
+      "metric_name": "max_drawdown",
+      "metric_group": "portfolio"
+    },
+    {
+      "metric_name": "profit_factor",
+      "metric_group": "portfolio"
+    },
+    {
+      "metric_name": "cash_ratio",
+      "metric_group": "portfolio"
+    },
+    {
+      "metric_name": "trade_count",
+      "metric_group": "portfolio"
+    },
+    {
+      "metric_name": "phase_capture_rate",
+      "metric_group": "cycle"
+    },
+    {
+      "metric_name": "role_selection_quality",
+      "metric_group": "cycle"
+    },
+    {
+      "metric_name": "narrative_translation_status",
+      "metric_group": "audit"
+    },
+    {
+      "metric_name": "leakage_status",
+      "metric_group": "audit"
+    },
+    {
+      "metric_name": "marginal_gain_vs_best",
+      "metric_group": "search_stop"
+    }
+  ],
+  "interpretation": [
+    "V1.12BC separates hindsight upper-bound benchmarking from no-leak experimental portfolio tracks.",
+    "It also freezes a hard stopping rule: if the best new model improves the current best result by less than 0.5% for three rounds, search should stop.",
+    "This protocol authorizes black-box exploration, not deployment."
+  ]
+}

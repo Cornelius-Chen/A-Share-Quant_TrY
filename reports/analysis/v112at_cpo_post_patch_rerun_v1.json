@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112at_cpo_post_patch_rerun_v1",
+    "truth_candidate_row_count": 7,
+    "sample_count": 2160,
+    "implementation_feature_count": 7,
+    "core_targets_stable_after_post_patch_rerun": true,
+    "guarded_targets_stable_after_post_patch_rerun": true,
+    "implementation_family_role_accuracy_drop": 0.0,
+    "allow_row_geometry_widen_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "consider_bounded_row_geometry_widen_pilot_now_that_current_truth_rows_are_post_patch_stable"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "baseline_accuracy_before_impl_patch": 0.6543,
+      "baseline_accuracy_after_impl_patch": 0.838,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    },
+    {
+      "target_name": "role_state_label",
+      "baseline_accuracy_before_impl_patch": 0.6327,
+      "baseline_accuracy_after_impl_patch": 0.5062,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "baseline_accuracy_before_impl_patch": 0.6543,
+      "baseline_accuracy_after_impl_patch": 0.838,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    },
+    {
+      "target_name": "board_condition_label",
+      "baseline_accuracy_before_impl_patch": 0.6759,
+      "baseline_accuracy_after_impl_patch": 0.8657,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    },
+    {
+      "target_name": "role_transition_label",
+      "baseline_accuracy_before_impl_patch": 0.4916,
+      "baseline_accuracy_after_impl_patch": 0.6561,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "baseline_accuracy_before_impl_patch": 0.6436,
+      "baseline_accuracy_after_impl_patch": 0.9571,
+      "gbdt_accuracy_before_impl_patch": 1.0,
+      "gbdt_accuracy_after_impl_patch": 1.0,
+      "gbdt_accuracy_change_vs_v112ap": 0.0
+    }
+  ],
+  "implementation_family_rows": [
+    {
+      "family_name": "implementation_board_calendar_family",
+      "full_accuracy": 1.0,
+      "masked_accuracy": 1.0,
+      "accuracy_drop": 0.0,
+      "reading": "Accuracy drop indicates how much the rerun relies on the newly backfilled implementation layer."
+    }
+  ],
+  "interpretation": [
+    "V1.12AT reruns the current truth rows after implementation backfill instead of widening geometry immediately.",
+    "If performance remains stable post-patch, the project can move the next uncertainty to row geometry itself.",
+    "This still does not authorize formal training or signal generation."
+  ]
+}

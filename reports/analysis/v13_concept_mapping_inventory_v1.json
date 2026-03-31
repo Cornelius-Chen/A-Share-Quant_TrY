@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v13_concept_mapping_inventory_v1",
+    "section_count": 4,
+    "mapping_mode_count": 6,
+    "requires_point_in_time_mapping": true,
+    "requires_market_confirmation_layer": true,
+    "market_context_fill_available": true,
+    "ready_for_bounded_concept_seed_next": true
+  },
+  "inventory_sections": [
+    {
+      "section_name": "mapping_mode",
+      "field_count": 6,
+      "fields": [
+        "primary_business",
+        "investment_holding",
+        "supply_chain",
+        "order_or_customer",
+        "platform_or_ecosystem",
+        "rumor_only"
+      ],
+      "reading": "Concept stock mapping must separate business truth from looser market-facing associations."
+    },
+    {
+      "section_name": "source_quality",
+      "field_count": 4,
+      "fields": [
+        "official_announcement",
+        "company_confirmation",
+        "high_trust_market_source",
+        "weak_market_rumor"
+      ],
+      "reading": "Concept mappings need explicit source-quality tags so rumor-like mappings never get treated like confirmed ones."
+    },
+    {
+      "section_name": "market_confirmation",
+      "field_count": 5,
+      "fields": [
+        "board_breadth_confirmed",
+        "leader_confirmed",
+        "turnover_confirmed",
+        "followthrough_days",
+        "reacceleration_present"
+      ],
+      "reading": "A concept mapping only becomes research-relevant when the market actually confirms it as a live board or theme trade."
+    },
+    {
+      "section_name": "point_in_time_rules",
+      "field_count": 4,
+      "fields": [
+        "mapping_start_date",
+        "mapping_end_date",
+        "mapping_confidence",
+        "concept_scope"
+      ],
+      "reading": "Concept membership must be treated as point-in-time and bounded, not as a permanent static tag."
+    }
+  ],
+  "interpretation": [
+    "V1.3 should begin from concept-mapping infrastructure because concept stocks in A-share often trade on market-recognized theme overlays rather than on static industry labels.",
+    "That means the first bounded inventory must freeze mapping modes, source quality, point-in-time bounds, and market-confirmation requirements before any larger registry build starts.",
+    "The next legal action after this inventory is a bounded concept-seed, not direct ingestion or direct model work."
+  ]
+}

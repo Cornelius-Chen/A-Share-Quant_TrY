@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113e_theme_diffusion_bounded_labeling_pilot_v1",
+    "phase_name": "V1.13E Theme Diffusion Bounded Labeling Pilot",
+    "ready_for_pilot_protocol_next": true
+  },
+  "mission": {
+    "goal": "Test whether the frozen theme-diffusion grammar is minimally trainable by freezing one bounded labeling and training-pilot protocol on the cleanest current archetype.",
+    "why_now": "V1.13D shows the grammar is archetype-usable, with one clean core review asset. The next bounded question is whether that grammar can be turned into a small, disciplined labeling/training pilot without leaking into execution."
+  },
+  "in_scope": [
+    "select one clean archetype for the first bounded pilot",
+    "freeze a minimal labeling schema for state, role, strength, and driver-presence review",
+    "freeze a bounded report-only training posture"
+  ],
+  "out_of_scope": [
+    "execution timing",
+    "signal generation",
+    "strategy integration",
+    "multi-archetype expansion",
+    "heavy black-box deployment"
+  ],
+  "success_criteria": [
+    "one bounded theme-diffusion pilot archetype is selected",
+    "a labeling/training protocol is frozen without execution leakage",
+    "the next lawful move becomes bounded pilot data assembly rather than abstract debate"
+  ],
+  "stop_criteria": [
+    "the phase drifts into execution or signal logic",
+    "the phase tries to generalize across multiple archetypes at once",
+    "the labeling design cannot remain bounded and review-first"
+  ],
+  "handoff_condition": "mainline can decide whether to assemble the first bounded pilot dataset for the selected archetype"
+}

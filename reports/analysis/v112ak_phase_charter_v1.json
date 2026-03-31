@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ak_cpo_bounded_feature_binding_review",
+    "do_open_v112ak_now": true,
+    "recommended_first_action": "freeze_v112ak_cpo_bounded_feature_binding_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AK CPO Bounded Feature Binding Review",
+    "mission": "Review whether current ready and guarded labels are actually bindable to the current truth-candidate rows through the existing feature families, and surface any row-label combinations that remain not-currently-bindable.",
+    "in_scope": [
+      "review row-label binding for current truth-candidate rows",
+      "separate direct bindable, guarded bindable, and row-specific blocked combinations",
+      "identify labels that are globally allowed but locally weak on the current truth-candidate set"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training",
+      "formal feature promotion",
+      "rewriting the dataset draft itself"
+    ],
+    "success_criteria": [
+      "the system knows which labels truly bind today and which only exist as future draft capacity",
+      "blocked bindings are surfaced explicitly rather than silently ignored",
+      "training remains closed"
+    ]
+  },
+  "interpretation": [
+    "V1.12AK is the last structural check before anyone can talk seriously about training readiness.",
+    "The point is not to prove every label is usable; the point is to identify which labels truly bind on the current row set."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112q_cpo_information_registry_schema_v1",
+    "do_open_v112q_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112q_cpo_information_registry_schema_v1",
+    "owner_requires_pre_rise_window": true,
+    "owner_allows_parallel_collection_drafts": true
+  },
+  "charter": {
+    "phase_name": "V1.12Q CPO Information Registry Schema V1",
+    "mission": "Freeze a harder CPO full-cycle registry schema with pre-rise coverage, layered feature slots, cohort buckets, and subagent-safe collection routes so later collection lowers omission risk without losing governance.",
+    "in_scope": [
+      "freeze a full CPO registry schema above the earlier broad registry",
+      "add explicit pre-ignition watch coverage before the rise window",
+      "separate stock buckets from board and event-route buckets",
+      "assign review-first feature slots for each information layer",
+      "freeze bounded repetitive collection work that subagents may execute safely"
+    ],
+    "out_of_scope": [
+      "automatic truth validation of all cohort rows",
+      "automatic dataset widening into training",
+      "formal model feature promotion",
+      "execution timing logic",
+      "signal generation"
+    ],
+    "success_criteria": [
+      "the CPO line has a schema that makes omissions more traceable rather than only a flat registry",
+      "pre-rise information collection becomes explicit instead of implied",
+      "repetitive collection tasks are constrained tightly enough to parallelize without governance drift"
+    ],
+    "stop_criteria": [
+      "the phase turns review-only slots into automatic training features",
+      "the phase collapses different cohort buckets into one object pool",
+      "the phase uses subagents for schema legislation instead of repetitive collection drafts"
+    ],
+    "handoff_condition": "After schema freeze, the next lawful move is bounded collection drafting against the frozen schema, not automatic training or feature candidacy."
+  },
+  "interpretation": [
+    "V1.12Q does not replace the broad V1.12P registry; it hardens it into a schema suitable for lower-omission follow-up.",
+    "Pre-rise information capture is explicit because many useful CPO signals begin before the visible markup phase.",
+    "Subagents are allowed only at the repetitive collection layer, not at the schema-legislation layer."
+  ]
+}

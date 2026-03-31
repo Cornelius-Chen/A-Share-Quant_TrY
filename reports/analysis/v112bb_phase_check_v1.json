@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bb_as_default_10_row_guarded_layer_pilot",
+    "do_open_v112bb_now": true,
+    "default_10_row_pilot_established": true,
+    "core_targets_stable_vs_7_row_baseline": true,
+    "guarded_targets_stable_vs_7_row_guarded_baseline": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "use_10_row_default_layer_as_experimental_baseline_and_only_probe_300570_mixed_branch_if_further_row_widen_is_needed"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bb_default_layer_pilot",
+      "actual": {
+        "default_training_layer_row_count": 10,
+        "sample_count": 2934,
+        "core_targets_stable_vs_7_row_baseline": true,
+        "guarded_targets_stable_vs_7_row_guarded_baseline": true
+      },
+      "reading": "The default-layer pilot only matters if the 10-row layer behaves as a stable replacement rather than a fragile extension."
+    }
+  ],
+  "interpretation": [
+    "V1.12BB checks whether the new default 10-row guarded layer truly behaves as the project baseline.",
+    "Formal training and signal rights remain closed."
+  ]
+}

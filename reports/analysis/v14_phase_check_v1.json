@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v14_active_but_bounded_as_context_consumption_pilot",
+    "v14_open": true,
+    "stable_discrimination_present": true,
+    "promote_context_now": false,
+    "do_integrate_into_strategy_now": false,
+    "do_open_local_model_branch_now": false,
+    "recommended_next_posture": "preserve_v14_as_report_only_context_consumption_and_prepare_phase_closure_or_candidate_review"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v14_charter",
+      "actual": {
+        "acceptance_posture": "open_v14_context_consumption_pilot",
+        "recommended_first_action": "freeze_v14_context_consumption_protocol_v1"
+      },
+      "reading": "V1.4 opened lawfully as consumption work, not as a modeling or signal phase."
+    },
+    {
+      "evidence_name": "bounded_discrimination_check",
+      "actual": {
+        "acceptance_posture": "open_v14_bounded_discrimination_check_v1_as_report_only_review",
+        "stable_discrimination_present": true,
+        "promote_context_now": false
+      },
+      "reading": "Bounded report-only discrimination can exist without justifying promotion or strategy integration."
+    }
+  ],
+  "interpretation": [
+    "V1.4 has now shown whether bounded context consumption produces directional discrimination beyond protocol and schema design.",
+    "Even with positive bounded discrimination, the branch remains below promotion threshold and cannot open local-model or strategy work automatically.",
+    "The next legal move is a closure/candidacy decision, not uncontrolled expansion."
+  ]
+}

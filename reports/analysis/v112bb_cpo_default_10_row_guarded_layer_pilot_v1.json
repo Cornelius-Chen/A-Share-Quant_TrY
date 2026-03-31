@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bb_cpo_default_10_row_guarded_layer_pilot_v1",
+    "default_training_layer_row_count": 10,
+    "sample_count": 2934,
+    "core_target_count": 3,
+    "guarded_target_count": 3,
+    "core_targets_stable_vs_7_row_baseline": true,
+    "guarded_targets_stable_vs_7_row_guarded_baseline": true,
+    "core_targets_consistent_vs_prior_10_row_guarded_pilot": true,
+    "guarded_targets_consistent_vs_prior_10_row_guarded_pilot": true,
+    "phase_constructive_phase_avg_forward_return_20d": 0.0979,
+    "phase_constructive_phase_avg_max_drawdown_20d": -0.1063,
+    "default_10_row_pilot_established": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "use_10_row_default_layer_as_experimental_baseline_and_only_probe_300570_mixed_branch_if_further_row_widen_is_needed"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "target_posture": "core",
+      "baseline_accuracy_now": 0.8048,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.1952,
+      "gbdt_accuracy_vs_7_row_baseline": 0.0,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    },
+    {
+      "target_name": "role_state_label",
+      "target_posture": "core",
+      "baseline_accuracy_now": 0.5891,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.4109,
+      "gbdt_accuracy_vs_7_row_baseline": 0.2623,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "target_posture": "core",
+      "baseline_accuracy_now": 0.8048,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.1952,
+      "gbdt_accuracy_vs_7_row_baseline": 0.0,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    },
+    {
+      "target_name": "board_condition_label",
+      "target_posture": "guarded",
+      "eligible_symbol_count": 10,
+      "sample_count": 2934,
+      "baseline_accuracy_now": 0.8831,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.1169,
+      "gbdt_accuracy_vs_7_row_guarded_baseline": 0.0,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    },
+    {
+      "target_name": "role_transition_label",
+      "target_posture": "guarded",
+      "eligible_symbol_count": 9,
+      "sample_count": 2555,
+      "baseline_accuracy_now": 0.6636,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.3364,
+      "gbdt_accuracy_vs_7_row_guarded_baseline": 0.0,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "target_posture": "guarded",
+      "eligible_symbol_count": 4,
+      "sample_count": 1009,
+      "baseline_accuracy_now": 0.9604,
+      "gbdt_accuracy_now": 1.0,
+      "gbdt_minus_baseline_now": 0.0396,
+      "gbdt_accuracy_vs_7_row_guarded_baseline": 0.0,
+      "gbdt_accuracy_vs_prior_10_row_guarded_pilot": 0.0
+    }
+  ],
+  "comparison_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "old_7_row_gbdt_accuracy": 1.0,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Core targets should stay at least as stable as both the old 7-row baseline and the prior guarded-branch pilot."
+    },
+    {
+      "target_name": "role_state_label",
+      "old_7_row_gbdt_accuracy": 0.7377,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Core targets should stay at least as stable as both the old 7-row baseline and the prior guarded-branch pilot."
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "old_7_row_gbdt_accuracy": 1.0,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Core targets should stay at least as stable as both the old 7-row baseline and the prior guarded-branch pilot."
+    },
+    {
+      "target_name": "board_condition_label",
+      "old_7_row_guarded_gbdt_accuracy": 1.0,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Guarded targets should not degrade when the 10-row layer becomes the formal bounded default."
+    },
+    {
+      "target_name": "role_transition_label",
+      "old_7_row_guarded_gbdt_accuracy": 1.0,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Guarded targets should not degrade when the 10-row layer becomes the formal bounded default."
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "old_7_row_guarded_gbdt_accuracy": 1.0,
+      "prior_10_row_guarded_pilot_gbdt_accuracy": 1.0,
+      "current_default_10_row_gbdt_accuracy": 1.0,
+      "reading": "Guarded targets should not degrade when the 10-row layer becomes the formal bounded default."
+    }
+  ],
+  "model_rows": [
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "phase_progression_label",
+      "test_accuracy": 0.8048,
+      "constructive_phase_trade_count": 763,
+      "constructive_phase_avg_forward_return_20d": 0.0899,
+      "constructive_phase_avg_max_drawdown_20d": -0.11
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "phase_progression_label",
+      "test_accuracy": 1.0,
+      "constructive_phase_trade_count": 866,
+      "constructive_phase_avg_forward_return_20d": 0.0979,
+      "constructive_phase_avg_max_drawdown_20d": -0.1063
+    },
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "role_state_label",
+      "test_accuracy": 0.5891,
+      "constructive_phase_trade_count": 0,
+      "constructive_phase_avg_forward_return_20d": 0.0,
+      "constructive_phase_avg_max_drawdown_20d": 0.0
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "role_state_label",
+      "test_accuracy": 1.0,
+      "constructive_phase_trade_count": 0,
+      "constructive_phase_avg_forward_return_20d": 0.0,
+      "constructive_phase_avg_max_drawdown_20d": 0.0
+    },
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "catalyst_sequence_label",
+      "test_accuracy": 0.8048,
+      "constructive_phase_trade_count": 0,
+      "constructive_phase_avg_forward_return_20d": 0.0,
+      "constructive_phase_avg_max_drawdown_20d": 0.0
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "catalyst_sequence_label",
+      "test_accuracy": 1.0,
+      "constructive_phase_trade_count": 0,
+      "constructive_phase_avg_forward_return_20d": 0.0,
+      "constructive_phase_avg_max_drawdown_20d": 0.0
+    },
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "board_condition_label",
+      "test_accuracy": 0.8831,
+      "sample_count": 2934
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "board_condition_label",
+      "test_accuracy": 1.0,
+      "sample_count": 2934
+    },
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "role_transition_label",
+      "test_accuracy": 0.6636,
+      "sample_count": 2555
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "role_transition_label",
+      "test_accuracy": 1.0,
+      "sample_count": 2555
+    },
+    {
+      "model_name": "nearest_centroid_guardrail",
+      "target_name": "failed_role_promotion_label",
+      "test_accuracy": 0.9604,
+      "sample_count": 1009
+    },
+    {
+      "model_name": "hist_gradient_boosting_classifier",
+      "target_name": "failed_role_promotion_label",
+      "test_accuracy": 1.0,
+      "sample_count": 1009
+    }
+  ],
+  "interpretation": [
+    "V1.12BB turns the 10-row guarded layer from an admission decision into the actual default bounded pilot baseline.",
+    "The result should be read as an experimental baseline freeze, not as formal training or signal readiness.",
+    "Any further row widen should now be judged against this 10-row default layer rather than against the old 7-row skeleton."
+  ]
+}

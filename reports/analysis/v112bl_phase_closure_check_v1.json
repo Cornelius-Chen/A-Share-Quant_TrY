@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bl_as_cpo_regime_aware_gate_pilot_success",
+    "v112bl_success_criteria_met": true,
+    "enter_v112bl_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bl_phase_check",
+      "actual": {
+        "trade_count": 1,
+        "teacher_alignment_recall": 0.0
+      },
+      "reading": "The phase closes once the regime-aware gate line exists as a lawful comparison line against the current neutral baseline."
+    }
+  ],
+  "interpretation": [
+    "V1.12BL closes with the regime-aware gate attempt derived from the frozen market-regime overlay family."
+  ]
+}

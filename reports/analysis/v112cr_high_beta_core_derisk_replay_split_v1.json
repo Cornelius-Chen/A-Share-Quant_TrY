@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cr_high_beta_core_derisk_replay_split_v1",
+    "baseline_total_return": 2.2481,
+    "baseline_max_drawdown": -0.2106,
+    "mild_total_return": 2.2481,
+    "mild_max_drawdown": -0.2106,
+    "mild_return_delta_vs_neutral": 0.0,
+    "mild_drawdown_delta_vs_neutral": 0.0,
+    "strong_total_return": 2.0733,
+    "strong_max_drawdown": -0.2106,
+    "strong_return_delta_vs_neutral": -0.1748,
+    "strong_drawdown_delta_vs_neutral": 0.0,
+    "mild_trigger_count": 1,
+    "strong_trigger_count": 1,
+    "preferred_band": "neutral_safe_mild_derisk_band",
+    "recommended_next_posture": "use_mild_band_as_neutral_safe_default_keep_strong_band_as_evidence_optimizing_sidecar"
+  },
+  "replay_rows": [
+    {
+      "band_name": "neutral_safe_mild_derisk_band",
+      "total_return": 2.2481,
+      "max_drawdown": -0.2106,
+      "trigger_count": 1
+    },
+    {
+      "band_name": "evidence_optimizing_stronger_derisk_band",
+      "total_return": 2.0733,
+      "max_drawdown": -0.2106,
+      "trigger_count": 1
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "mild_vs_neutral_return",
+      "baseline_value": 2.2481,
+      "pilot_value": 2.2481,
+      "delta": 0.0
+    },
+    {
+      "comparison_name": "mild_vs_neutral_drawdown",
+      "baseline_value": -0.2106,
+      "pilot_value": -0.2106,
+      "delta": 0.0
+    },
+    {
+      "comparison_name": "strong_vs_neutral_return",
+      "baseline_value": 2.2481,
+      "pilot_value": 2.0733,
+      "delta": -0.1748
+    },
+    {
+      "comparison_name": "strong_vs_neutral_drawdown",
+      "baseline_value": -0.2106,
+      "pilot_value": -0.2106,
+      "delta": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.12CR replays the two calibrated 300502 de-risk bands inside neutral separately instead of forcing a single promoted rule.",
+    "The purpose is to decide which band is closer to neutral-safe deployment and which should remain an evidence-optimizing sidecar."
+  ]
+}

@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: v113g_phase_check_v1
+
+paths:
+  v113g_phase_charter_report: reports/analysis/v113g_phase_charter_v1.json
+  v113g_study_scope_report: reports/analysis/v113g_commercial_space_study_scope_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113g_phase_check_v1

@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: v112_phase_check_v1
+
+paths:
+  v112_phase_charter_report: reports/analysis/v112_phase_charter_v1.json
+  v112_pilot_cycle_selection_report: reports/analysis/v112_pilot_cycle_selection_v1.json
+  v112_training_protocol_report: reports/analysis/v112_training_protocol_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v112_phase_check_v1

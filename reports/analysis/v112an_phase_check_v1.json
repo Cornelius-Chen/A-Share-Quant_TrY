@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112an_as_core_skeleton_pilot_result_review",
+    "do_open_v112an_now": true,
+    "best_family_for_phase": "catalyst_presence_family",
+    "best_family_for_catalyst_sequence": "catalyst_presence_family",
+    "best_family_for_role_state": "role_prior_family",
+    "role_confusion_count": 6,
+    "correction_bucket_count": 11,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_decide_whether_to_widen_pilot_or_patch_role_layer"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112an_result_review",
+      "actual": {
+        "best_family_for_phase": "catalyst_presence_family",
+        "best_family_for_role_state": "role_prior_family",
+        "correction_bucket_count": 11
+      },
+      "reading": "The project now knows what the tiny pilot learned most easily and where the residual difficulty concentrates."
+    }
+  ],
+  "interpretation": [
+    "V1.12AN succeeds if pilot behavior becomes explainable rather than merely measurable.",
+    "Training still remains closed after the review."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v110a_single_probe_bounded_and_non_expanding",
+    "v110a_open": true,
+    "candidate_count": 2,
+    "admitted_case_count": 0,
+    "successful_negative_probe": true,
+    "open_follow_on_probe_now": false,
+    "promote_retained_now": false,
+    "recommended_next_posture": "prepare_v110a_phase_closure_not_v110b"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v110a_charter",
+      "actual": {
+        "acceptance_posture": "open_v110a_policy_followthrough_cross_family_breadth_probe",
+        "allow_auto_follow_on_phase": false
+      },
+      "reading": "V1.10A opened as a one-off owner-led probe, not as the start of a new chain."
+    },
+    {
+      "evidence_name": "cross_family_probe",
+      "actual": {
+        "candidate_count": 2,
+        "admitted_case_count": 0,
+        "successful_negative_probe": true
+      },
+      "reading": "The probe result is bounded and explicit whether positive or negative; it does not justify automatic follow-on expansion."
+    }
+  ],
+  "interpretation": [
+    "V1.10A has now produced a single bounded probe result for policy_followthrough cross-family breadth.",
+    "The branch stays below promotion and forbids auto-creation of V1.10B or broader replay.",
+    "The next legal step is a closure check only."
+  ]
+}

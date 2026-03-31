@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ba_as_10_row_layer_replacement_review",
+    "do_open_v112ba_now": true,
+    "replace_7_row_baseline_now": true,
+    "replacement_posture": "10_row_guarded_layer_becomes_default_next_pilot_layer",
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "open_next_bounded_pilot_on_10_row_guarded_layer"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ba_replacement_review",
+      "actual": {
+        "old_baseline_row_count": 7,
+        "new_layer_row_count": 10,
+        "replace_7_row_baseline_now": true
+      },
+      "reading": "The replacement review is only useful if it names a default next-pilot layer explicitly."
+    }
+  ],
+  "interpretation": [
+    "V1.12BA decides which bounded layer should become the next pilot default.",
+    "Formal training and signal rights remain closed."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113d_bounded_archetype_usage_pass_v1",
+    "phase_name": "V1.13D Bounded Archetype Usage Pass",
+    "ready_for_archetype_usage_pass_next": true
+  },
+  "mission": {
+    "goal": "Apply the frozen theme-diffusion grammar to the three bounded seed archetypes and test whether state, role, strength, and driver layers remain interpretable without leaking into execution or feature promotion.",
+    "why_now": "V1.13C established lawful schema-review-only usage for the four strongest drivers. The next bounded step is to see whether the grammar works cleanly at the archetype level."
+  },
+  "in_scope": [
+    "commercial_space_mainline",
+    "stablecoin_theme_cycle",
+    "low_altitude_economy_cycle",
+    "review-only template usage judgments"
+  ],
+  "out_of_scope": [
+    "new archetype discovery",
+    "feature candidacy",
+    "model training",
+    "execution implications",
+    "strategy deployment"
+  ],
+  "success_criteria": [
+    "the grammar can be applied to the frozen archetypes without role/strength/driver collapse",
+    "the review identifies which archetypes are clean review assets and which remain mixed or overextended"
+  ],
+  "stop_criteria": [
+    "the phase expands beyond the frozen archetype set",
+    "the phase starts deriving execution or signal implications from the review"
+  ],
+  "handoff_condition": "mainline can decide whether the theme-diffusion grammar is archetype-usable enough to support later bounded labeling or broader template work"
+}

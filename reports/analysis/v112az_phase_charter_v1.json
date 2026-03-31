@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112az_bounded_training_layer_extension",
+    "do_open_v112az_now": true,
+    "recommended_first_action": "freeze_v112az_cpo_bounded_training_layer_extension_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AZ CPO Bounded Training Layer Extension",
+    "mission": "Extend the bounded training-facing layer from the original 7-row core skeleton to a 10-row core-plus-guarded-branch layer without opening formal training or signal rights.",
+    "in_scope": [
+      "preserve the original 7-row truth skeleton",
+      "add only the three guarded branch rows admitted by V1.12AY",
+      "keep connector/MPO branch out of the training-facing layer",
+      "preserve guarded posture on the added branch rows"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "formal signal generation",
+      "connector/MPO branch admission",
+      "spillover or pending row admission"
+    ],
+    "success_criteria": [
+      "a 10-row bounded training-facing layer can be assembled cleanly",
+      "the branch addition remains explicitly guarded",
+      "the next lawful move becomes a readiness question instead of another admission review"
+    ]
+  },
+  "interpretation": [
+    "V1.12AZ does not widen beyond the three already-admitted branch rows.",
+    "This remains bounded, report-only, and non-deployable."
+  ]
+}

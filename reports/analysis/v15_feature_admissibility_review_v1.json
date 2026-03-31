@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v15_feature_admissibility_review_v1_as_bounded_review",
+    "reviewed_feature_count": 5,
+    "allow_provisional_candidacy_review_count": 4,
+    "hold_for_more_evidence_count": 1,
+    "reject_candidacy_count": 0,
+    "ready_for_v15_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "point_in_time_clean_definition": true,
+      "source_contamination_controlled": true,
+      "binding_rule_stable_and_auditable": true,
+      "evidence_sufficiency": true,
+      "non_redundancy_or_orthogonality": true,
+      "safe_containment": true,
+      "admissible_for_candidacy_review": true,
+      "candidacy_outcome": "allow_provisional_candidacy_review",
+      "review_reading": "Directional separation is already explicit and the feature is not a pure duplicate label."
+    },
+    {
+      "feature_name": "multi_day_reinforcement_support",
+      "point_in_time_clean_definition": true,
+      "source_contamination_controlled": true,
+      "binding_rule_stable_and_auditable": true,
+      "evidence_sufficiency": true,
+      "non_redundancy_or_orthogonality": true,
+      "safe_containment": true,
+      "admissible_for_candidacy_review": true,
+      "candidacy_outcome": "allow_provisional_candidacy_review",
+      "review_reading": "Directional separation is already explicit and the feature is not a pure duplicate label."
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "point_in_time_clean_definition": true,
+      "source_contamination_controlled": true,
+      "binding_rule_stable_and_auditable": true,
+      "evidence_sufficiency": true,
+      "non_redundancy_or_orthogonality": true,
+      "safe_containment": true,
+      "admissible_for_candidacy_review": true,
+      "candidacy_outcome": "allow_provisional_candidacy_review",
+      "review_reading": "Directional separation is already explicit and the feature is not a pure duplicate label."
+    },
+    {
+      "feature_name": "concept_confirmation_depth",
+      "point_in_time_clean_definition": true,
+      "source_contamination_controlled": true,
+      "binding_rule_stable_and_auditable": true,
+      "evidence_sufficiency": true,
+      "non_redundancy_or_orthogonality": true,
+      "safe_containment": true,
+      "admissible_for_candidacy_review": true,
+      "candidacy_outcome": "allow_provisional_candidacy_review",
+      "review_reading": "Concept depth adds bounded concept-side information beyond catalyst persistence class alone."
+    },
+    {
+      "feature_name": "concept_indirectness_level",
+      "point_in_time_clean_definition": true,
+      "source_contamination_controlled": true,
+      "binding_rule_stable_and_auditable": true,
+      "evidence_sufficiency": true,
+      "non_redundancy_or_orthogonality": false,
+      "safe_containment": true,
+      "admissible_for_candidacy_review": true,
+      "candidacy_outcome": "hold_for_more_evidence",
+      "review_reading": "Indirectness is directionally useful but still too close to the current concept-depth split to clear non-redundancy."
+    }
+  ],
+  "interpretation": [
+    "V1.5 reviews minimum candidacy fitness, not promotion. The important distinction is whether a report-only feature deserves continued candidacy attention at all.",
+    "A positive admissibility result only means the feature can stay inside bounded candidacy review. It does not authorize retained promotion or strategy integration.",
+    "The next legal step is a V1.5 phase-level check that decides whether the candidacy review answered enough to close the phase."
+  ]
+}

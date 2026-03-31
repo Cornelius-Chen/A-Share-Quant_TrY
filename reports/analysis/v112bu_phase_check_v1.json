@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bu_as_phase_conditioned_control_pilot",
+    "trade_count": 7,
+    "vetoed_trade_count": 0,
+    "holding_veto_half_life_count": 2,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "phase_conditioned_control_application",
+      "actual": {
+        "trade_count": 7,
+        "vetoed_trade_count": 0,
+        "holding_veto_half_life_count": 2,
+        "bp_drawdown_delta": -0.0,
+        "bp_return_delta": -0.9341
+      },
+      "reading": "The control pilot matters only if it actually changes the trade path and can be compared against the frozen fusion baseline."
+    }
+  ],
+  "interpretation": [
+    "V1.12BU phase check confirms that explicit control objects have now been exercised on a lawful baseline instead of staying as abstract extracted rules."
+  ]
+}

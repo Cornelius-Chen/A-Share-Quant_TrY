@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v110a_as_single_cross_family_probe_success",
+    "v110a_success_criteria_met": true,
+    "candidate_count": 2,
+    "admitted_case_count": 0,
+    "successful_negative_probe": true,
+    "enter_v110a_waiting_state_now": true,
+    "open_v110b_now": false,
+    "promote_retained_now": false,
+    "recommended_next_posture": "preserve_v110a_probe_result_and_wait_for_owner_phase_switch_or_trigger"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v110a_charter",
+      "actual": {
+        "acceptance_posture": "open_v110a_policy_followthrough_cross_family_breadth_probe",
+        "owner_led_exception_phase": true,
+        "allow_auto_follow_on_phase": false
+      },
+      "reading": "V1.10A was opened as a one-off owner-led exception phase with no automatic successor."
+    },
+    {
+      "evidence_name": "cross_family_probe",
+      "actual": {
+        "candidate_count": 2,
+        "admitted_case_count": 0,
+        "successful_negative_probe": true
+      },
+      "reading": "The single probe produced an explicit bounded result without forcing new evidence or opening wider collection."
+    },
+    {
+      "evidence_name": "phase_check",
+      "actual": {
+        "acceptance_posture": "keep_v110a_single_probe_bounded_and_non_expanding",
+        "open_follow_on_probe_now": false,
+        "promote_retained_now": false
+      },
+      "reading": "The branch remains bounded and explicitly forbids automatic continuation into V1.10B+ or promotion."
+    }
+  ],
+  "interpretation": [
+    "V1.10A has answered its only question: whether cross-family, non-redundant policy-followthrough breadth evidence exists inside the current bounded pool.",
+    "A zero-admission outcome is still a successful bounded closure because it is an explicit negative result rather than a governance failure.",
+    "Per the owner guardrail, the correct move is waiting state, not auto-creation of V1.10B or wider replay."
+  ]
+}

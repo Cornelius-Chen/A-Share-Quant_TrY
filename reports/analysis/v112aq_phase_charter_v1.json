@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112aq_cpo_feature_implementation_patch_review",
+    "do_open_v112aq_now": true,
+    "recommended_first_action": "freeze_v112aq_cpo_feature_implementation_patch_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AQ CPO Feature Implementation Patch Review",
+    "mission": "Resolve whether bounded feature-implementation patching should precede any row-geometry widen, and narrow the required patch scope to the smallest lawful set.",
+    "in_scope": [
+      "compare current implementation gaps against the stable V1.12AP widen result",
+      "attribute the next bottleneck between feature implementation and row geometry",
+      "identify the minimum board/calendar patch domains that should be frozen next"
+    ],
+    "out_of_scope": [
+      "new row admission",
+      "formal training promotion",
+      "formal signal generation",
+      "broad model search"
+    ],
+    "success_criteria": [
+      "produce a yes/no conclusion on whether implementation patching must precede row widen",
+      "name the minimum bounded patch domains",
+      "keep the project out of both infinite audit and premature widen"
+    ]
+  },
+  "interpretation": [
+    "V1.12AQ is a decision phase, not another generic readiness loop.",
+    "Its job is to tell the project whether implementation patching is now the narrowest lawful move."
+  ]
+}

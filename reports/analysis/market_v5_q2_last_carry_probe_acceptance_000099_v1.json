@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v5_q2_last_true_carry_probe_as_opening_led_not_true_carry",
+    "target_symbol": "000099",
+    "target_pnl_delta": -7.953415,
+    "opening_present": true,
+    "persistence_present": false,
+    "lane_changes_training_reading": false,
+    "phase_allowed_last_true_carry_probe": true,
+    "do_continue_current_symbol_now": false,
+    "do_continue_v5_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v5_reassessment_gate",
+      "actual": {
+        "acceptance_posture": "open_last_v5_true_carry_probe_after_persistence_track_exhaustion",
+        "recommended_next_symbol": "000099",
+        "phase_allowed_last_true_carry_probe": true
+      },
+      "reading": "The last carry probe is only legal because reassessment exhausted the clean-persistence track first."
+    },
+    {
+      "evidence_name": "divergence_signature",
+      "actual": {
+        "target_symbol": "000099",
+        "target_pnl_delta": -7.953415,
+        "incumbent_trade_count": 7,
+        "challenger_trade_count": 8
+      },
+      "reading": "A nominal carry target still needs a real specialist-owned structure before it can be treated as carry evidence."
+    },
+    {
+      "evidence_name": "window_checks",
+      "actual": {
+        "opening_present": true,
+        "opening_trade_date": "2024-04-10",
+        "persistence_present": false,
+        "persistence_trade_date": null
+      },
+      "reading": "Opening or persistence can explain the lane, but neither should be relabelled into true carry evidence."
+    }
+  ],
+  "interpretation": [
+    "The last v5 probe exists to exhaust the current bounded manifest, not to force a carry conclusion.",
+    "A nominal true-carry target that only yields opening, persistence, or generic divergence still does not repair the carry-row-diversity gap.",
+    "So this probe should close cleanly unless it produces something materially stronger than the structures already observed."
+  ]
+}

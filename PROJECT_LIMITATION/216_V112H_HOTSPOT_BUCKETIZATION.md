@@ -1,0 +1,22 @@
+# V1.12H Hotspot Bucketization
+
+- Mission: group misread samples from `high_level_consolidation` and `major_markup` into reviewable buckets using frozen V1.12B data and V1.12G semantic-v2 outputs.
+- Output posture: review-only structuring result, not a label rewrite.
+- Key result:
+  - `8` total buckets
+  - `306` target-stage rows considered
+  - baseline misreads: `255`
+  - GBDT misreads: `200`
+  - both models misread: `149`
+- Bucket shape:
+  - `high_level_consolidation` split into 4 semantic buckets
+  - `major_markup` split into 4 semantic buckets
+  - semantic axis used: breadth richness vs thinness, plus catalyst freshness/persistence
+- Interpretation:
+  - the hotspot rows are not uniform
+  - the result is coarse enough to review, but still rich enough to justify bounded owner review
+  - the output should help decide whether `high_level_consolidation` needs bounded label refinement
+- Boundary:
+  - no formal labels were changed
+  - no dataset growth
+  - no new model family

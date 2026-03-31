@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v13_concept_source_fill_v1_as_bounded_theme_source_layer",
+    "row_count": 4,
+    "resolved_source_count": 4,
+    "unresolved_source_count": 0,
+    "all_rows_theme_scoped": true,
+    "ready_for_concept_context_audit_next": true
+  },
+  "fill_rows": [
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::002049",
+      "symbol": "002049",
+      "lane_outcome_label": "opening_led",
+      "mapped_context_name": "通信技术",
+      "source_authority_tier": "official_industry",
+      "policy_scope": "industry_support",
+      "execution_strength": "guidance",
+      "rumor_risk_level": "low",
+      "primary_source_ref": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2024/art_efda38def5694be3a95353e7a32b1ea2.html",
+      "source_fill_status": "resolved_official_or_high_trust",
+      "persistence_class": "single_pulse"
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-02-22::000155",
+      "symbol": "000155",
+      "lane_outcome_label": "persistence_led",
+      "mapped_context_name": "锂矿概念",
+      "source_authority_tier": "official_industry",
+      "policy_scope": "industry_norms",
+      "execution_strength": "guidance",
+      "rumor_risk_level": "low",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "source_fill_status": "resolved_official_or_high_trust",
+      "persistence_class": "multi_day_reinforcement"
+    },
+    {
+      "lane_id": "mainline_trend_b::2024-11-05::300750",
+      "symbol": "300750",
+      "lane_outcome_label": "carry_row_present",
+      "mapped_context_name": "锂矿概念",
+      "source_authority_tier": "official_industry",
+      "policy_scope": "industry_norms",
+      "execution_strength": "guidance",
+      "rumor_risk_level": "low",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "source_fill_status": "resolved_official_or_high_trust",
+      "persistence_class": "policy_followthrough"
+    },
+    {
+      "lane_id": "mainline_trend_c::2024-11-05::300750",
+      "symbol": "300750",
+      "lane_outcome_label": "carry_row_present",
+      "mapped_context_name": "锂矿概念",
+      "source_authority_tier": "official_industry",
+      "policy_scope": "industry_norms",
+      "execution_strength": "guidance",
+      "rumor_risk_level": "low",
+      "primary_source_ref": "https://www.miit.gov.cn/jgsj/dzs/wjfb/art/2024/art_04060ddfaf9a4cad86b098ed4ab3f3eb.html",
+      "source_fill_status": "resolved_official_or_high_trust",
+      "persistence_class": "policy_followthrough"
+    }
+  ],
+  "interpretation": [
+    "The first concept-source layer should reuse the already bounded catalyst source fill instead of starting a new source-hunting workflow.",
+    "That keeps V1.3 narrow while still telling us whether the concept-focused rows already have high-trust support.",
+    "The next legal action after this layer is a bounded concept-context audit."
+  ]
+}

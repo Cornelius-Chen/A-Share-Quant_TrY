@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  manifest_report: reports/analysis/market_research_v5_carry_row_diversity_refresh_manifest_v1.json
+  training_manifest_report: reports/analysis/v12_training_sample_manifest_v1.json
+  first_lane_report: reports/analysis/market_v5_q2_first_lane_acceptance_v1.json
+  divergence_report: reports/analysis/market_v5_q2_trade_divergence_capture_b_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v12_v5_phase_check_v1

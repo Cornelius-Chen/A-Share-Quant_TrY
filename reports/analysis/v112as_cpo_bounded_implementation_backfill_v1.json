@@ -1,0 +1,249 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112as_cpo_bounded_implementation_backfill_v1",
+    "truth_candidate_row_count": 7,
+    "sample_count": 2160,
+    "unique_trade_date_count": 540,
+    "patch_rule_count_applied": 6,
+    "board_backfill_coverage_ratio": 1.0,
+    "calendar_backfill_coverage_ratio": 1.0,
+    "next_lawful_move": "rerun_current_truth_rows_with_patched_board_and_calendar_features_before_any_row_geometry_widen",
+    "allow_row_geometry_widen_now": false,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "patch_application_rows": [
+    {
+      "rule_name": "board_vendor_selection_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every current truth-row sample now records vendor_source_class and fallback_reason."
+    },
+    {
+      "rule_name": "breadth_formula_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every sample now attaches weighted cohort breadth from same-day observable truth-row participation."
+    },
+    {
+      "rule_name": "turnover_normalization_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every sample now attaches trailing turnover percentile and mapped pressure state."
+    },
+    {
+      "rule_name": "expected_window_fill_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every sample now records disclosed-vs-inferred posture and window uncertainty state."
+    },
+    {
+      "rule_name": "confidence_tier_mapping_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every sample now records a bounded confidence tier."
+    },
+    {
+      "rule_name": "calendar_rollforward_rule",
+      "applied": true,
+      "coverage_ratio": 1.0,
+      "reading": "Every sample now records prior-anchor reference and rollforward reason."
+    }
+  ],
+  "coverage_rows": [
+    {
+      "coverage_name": "board_backfill_sample_coverage",
+      "coverage_ratio": 1.0,
+      "covered_sample_count": 2160,
+      "reading": "Board implementation columns are fully backfilled on current truth rows."
+    },
+    {
+      "coverage_name": "calendar_backfill_sample_coverage",
+      "coverage_ratio": 1.0,
+      "covered_sample_count": 2160,
+      "reading": "Calendar implementation columns are fully attached as bounded point-in-time posture fields."
+    },
+    {
+      "coverage_name": "unique_trade_dates_with_board_proxy",
+      "coverage_ratio": 1.0,
+      "covered_sample_count": 540,
+      "reading": "A bounded board proxy now exists on every observed truth-row trade date."
+    }
+  ],
+  "sample_rows_preview": [
+    {
+      "trade_date": "2023-01-03",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "exhausted",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-04",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "exhausted",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-05",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "exhausted",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-06",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "elevated",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-09",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "exhausted",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-10",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 0.5,
+      "turnover_pressure_state": "calm",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-11",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 0.5,
+      "turnover_pressure_state": "calm",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-12",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 0.5,
+      "turnover_pressure_state": "calm",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-13",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 0.5,
+      "turnover_pressure_state": "calm",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-16",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "normal",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-17",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "normal",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-18",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "normal",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-19",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "elevated",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    },
+    {
+      "trade_date": "2023-01-20",
+      "symbol": "300308",
+      "stage_family": "pre_ignition_watch",
+      "vendor_source_class": "bounded_cohort_reconstructed_proxy",
+      "weighted_breadth_ratio": 1.0,
+      "turnover_pressure_state": "elevated",
+      "disclosed_vs_inferred_flag": "inferred_cadence_window",
+      "window_uncertainty_state": "high",
+      "confidence_tier": "tier3",
+      "rollforward_reason": "carry_prior_cadence_placeholder"
+    }
+  ],
+  "interpretation": [
+    "V1.12AS applies the frozen implementation rules on the current truth rows without widening geometry.",
+    "This does not yet open row-geometry widen; it only removes the excuse that board/calendar rules remain undefined.",
+    "The next lawful move is a post-patch rerun on the current truth rows before deciding whether widen is warranted."
+  ]
+}

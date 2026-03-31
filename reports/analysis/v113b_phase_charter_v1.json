@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113b_candidate_mainline_driver_review_v1",
+    "phase_name": "V1.13B Candidate Mainline Driver Review",
+    "ready_for_driver_review_next": true
+  },
+  "mission": {
+    "goal": "Review the frozen review-only candidate drivers and compress them into priority tiers that can guide later bounded state-usage review without prematurely legislating them as formal schema variables.",
+    "why_now": "V1.13A froze the theme-diffusion grammar and preserved ten review-only candidate drivers. The next lawful move is to rank them for bounded follow-up, not to open models or execution."
+  },
+  "in_scope": [
+    "review the ten review-only candidate drivers preserved by V1.13A",
+    "compress candidates into high / medium / deferred priority tiers",
+    "mark which candidates are suitable for bounded state-usage review next"
+  ],
+  "out_of_scope": [
+    "formal driver promotion into schema law",
+    "model training",
+    "execution-timing design",
+    "strategy integration",
+    "new candidate-driver discovery"
+  ],
+  "success_criteria": [
+    "the current candidate-driver list is compressed into bounded priority tiers",
+    "the next lawful review target is narrowed without promoting any candidate into formal driver law"
+  ],
+  "stop_criteria": [
+    "the phase tries to legislate candidate drivers as final variables",
+    "the phase expands into new discovery instead of reviewing the frozen candidate set"
+  ],
+  "handoff_condition": "mainline can decide whether to open a bounded state-usage review using only the highest-priority candidate drivers"
+}

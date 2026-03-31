@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v14_context_consumption_protocol_v1",
+    "v14_open": true,
+    "concept_usage_rows_available": 4,
+    "catalyst_context_separation_present": true,
+    "report_only_context_feature_count": 5,
+    "allow_strategy_integration_now": false,
+    "ready_for_bounded_context_feature_schema_next": true
+  },
+  "protocol": {
+    "consumable_inputs": [
+      "v13_concept_registry_usage_rules_v1",
+      "catalyst_context_audit_v1"
+    ],
+    "binding_scope_rules": [
+      "context rows must bind by lane_id or lane_outcome_label with auditable point-in-time provenance",
+      "core_confirmed concept rows may enter bounded context as primary support",
+      "market_confirmed_indirect rows may enter bounded context only as secondary support",
+      "no context row may override market confirmation or strategy gating"
+    ],
+    "report_only_context_features": [
+      "single_pulse_support",
+      "multi_day_reinforcement_support",
+      "policy_followthrough_support",
+      "concept_confirmation_depth",
+      "concept_indirectness_level"
+    ],
+    "forbidden_actions": [
+      "strategy integration",
+      "retained-feature promotion",
+      "formal model work",
+      "widened replay to create context evidence"
+    ]
+  },
+  "interpretation": [
+    "V1.4 should consume only already-bounded concept and catalyst context, not reopen data collection or replay.",
+    "Context rows may add report-only discrimination support, but they cannot override existing market confirmation or strategy gates.",
+    "The next legal step is a bounded context-feature schema, not direct integration or training work."
+  ]
+}

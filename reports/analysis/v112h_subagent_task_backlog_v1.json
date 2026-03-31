@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_current_subagent_task_backlog_v1",
+    "current_mainline_state": "v112g_waiting_state_pending_owner_review",
+    "task_count_ready_now": 2,
+    "task_count_deferred": 1,
+    "recommended_start_order": [
+      "hotspot_bucketization_for_high_level_consolidation_and_major_markup",
+      "bounded_catalyst_semantic_ablation_batch"
+    ]
+  },
+  "ready_now_tasks": [
+    {
+      "task_name": "hotspot_bucketization_for_high_level_consolidation_and_major_markup",
+      "hypothesis": "The remaining misreads cluster into a small number of repetitive semantic patterns that can be reviewed faster in grouped form than row by row.",
+      "used_for": "owner review of whether semantic v2 should stay feature-side only or motivate bounded label splitting",
+      "fixed_dataset_or_pool": "V1.12B frozen pilot dataset plus V1.12G prediction outputs",
+      "success_if": "Produces stable grouped error buckets by symbol, stage, prediction direction, and semantic-v2 feature profile.",
+      "stop_if": "Buckets fail to reduce review complexity or collapse into one-off idiosyncratic cases.",
+      "compute_class": "low"
+    },
+    {
+      "task_name": "bounded_catalyst_semantic_ablation_batch",
+      "hypothesis": "One of the three new semantic catalyst-state fields explains most of the hotspot-control delta and should therefore be prioritized for future refinement.",
+      "used_for": "feature refinement prioritization without changing labels or widening dataset scope",
+      "fixed_dataset_or_pool": "V1.12B frozen pilot dataset with V1.12G feature schema v2",
+      "success_if": "Ablation results show repeatable hotspot FP deltas for at least one semantic field.",
+      "stop_if": "No semantic field shows repeatable marginal value beyond noise.",
+      "compute_class": "low"
+    }
+  ],
+  "deferred_tasks": [
+    {
+      "task_name": "constrained_proxy_generation_for_late_stage_catalyst_decay",
+      "reason_deferred": "Useful, but should start only after hotspot buckets and semantic ablation clarify which late-stage semantic gap is real.",
+      "used_for": "possible future feature hypothesis plan",
+      "compute_class": "low"
+    }
+  ],
+  "interpretation": [
+    "There are current lawful subagent tasks, but only two are ready now.",
+    "Neither task is allowed to alter labels, phase direction, or dataset scope.",
+    "This keeps subagent use additive rather than disruptive."
+  ]
+}

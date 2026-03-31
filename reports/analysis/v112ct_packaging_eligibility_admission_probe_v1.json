@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ct_packaging_eligibility_admission_probe_v1",
+    "packaging_eligibility_window_count": 2,
+    "baseline_total_return": 2.2481,
+    "baseline_max_drawdown": -0.2106,
+    "preferred_mode": "full_20d_admission",
+    "recommended_next_posture": "promote_full_20d_packaging_admission_candidate_if_replay_beats_neutral_without_reopening_packaging_template_logic"
+  },
+  "mode_rows": [
+    {
+      "mode_name": "full_20d_admission",
+      "total_return": 3.2435,
+      "max_drawdown": -0.1826,
+      "admission_count": 2,
+      "skipped_neutral_count": 1,
+      "admission_exit_dates": [
+        "2024-05-21",
+        "2025-09-22"
+      ],
+      "return_delta_vs_neutral": 0.9954,
+      "drawdown_delta_vs_neutral": 0.028,
+      "beats_neutral_return": true,
+      "beats_neutral_drawdown": true
+    },
+    {
+      "mode_name": "cut_at_next_neutral_entry",
+      "total_return": 2.7528,
+      "max_drawdown": -0.2263,
+      "admission_count": 2,
+      "skipped_neutral_count": 0,
+      "admission_exit_dates": [
+        "2024-05-21",
+        "2025-09-11"
+      ],
+      "return_delta_vs_neutral": 0.5047,
+      "drawdown_delta_vs_neutral": -0.0157,
+      "beats_neutral_return": true,
+      "beats_neutral_drawdown": false
+    }
+  ],
+  "admission_rows": [
+    {
+      "trade_date": "2024-04-18",
+      "mode_name": "full_20d_admission",
+      "exit_date": "2024-05-21"
+    },
+    {
+      "trade_date": "2025-08-25",
+      "mode_name": "full_20d_admission",
+      "exit_date": "2025-09-22"
+    },
+    {
+      "trade_date": "2024-04-18",
+      "mode_name": "cut_at_next_neutral_entry",
+      "exit_date": "2024-05-21"
+    },
+    {
+      "trade_date": "2025-08-25",
+      "mode_name": "cut_at_next_neutral_entry",
+      "exit_date": "2025-09-11"
+    }
+  ],
+  "interpretation": [
+    "V1.12CT does not retrain neutral and does not reopen packaging template learning. It only asks whether previously missed packaging eligibility windows deserve explicit admission handling.",
+    "The probe compares a full 20-day packaging admission against an admission clipped at the next neutral entry to see whether packaging wake-up logic can be introduced without violating time-ordering."
+  ]
+}

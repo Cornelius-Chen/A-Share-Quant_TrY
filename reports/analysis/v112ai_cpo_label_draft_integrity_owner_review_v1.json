@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ai_cpo_label_draft_integrity_owner_review_v1",
+    "reviewed_label_count": 10,
+    "draft_ready_label_count": 3,
+    "guarded_draft_label_count": 5,
+    "review_only_future_target_count": 1,
+    "confirmed_only_review_label_count": 1,
+    "dropped_label_count": 0,
+    "formal_label_freeze_now": false,
+    "formal_training_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "bounded_label_draft_dataset_assembly_with_ready_and_guarded_labels_only"
+  },
+  "review_rows": [
+    {
+      "label_name": "phase_progression_label",
+      "support_posture": "supported_now",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "role_state_label",
+      "support_posture": "supported_now",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "role_transition_label",
+      "support_posture": "supported_with_provisional_guard",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "catalyst_sequence_label",
+      "support_posture": "supported_now",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "board_condition_label",
+      "support_posture": "supported_with_known_operational_gaps",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "weak_or_missing_support": [
+        "breadth_formula_not_yet_frozen",
+        "turnover_normalization_rule_not_yet_frozen"
+      ],
+      "explicit_drop": false,
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "quiet_window_survival_label",
+      "support_posture": "supported_with_provisional_guard",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "failed_role_promotion_label",
+      "support_posture": "supported_with_provisional_guard",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "weak_or_missing_support": [],
+      "explicit_drop": false,
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "branch_upgrade_label",
+      "support_posture": "review_only_until_more_support",
+      "owner_disposition": "preserve_as_review_only_future_target",
+      "weak_or_missing_support": [
+        "pending adjacent role split rows remain unresolved for 300620/300548/000988"
+      ],
+      "explicit_drop": false,
+      "reading": "This label remains useful, but only as a future draft target until unresolved support gaps are reduced."
+    },
+    {
+      "label_name": "spillover_maturity_boundary_label",
+      "support_posture": "supported_with_overlay_boundary_guard",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "weak_or_missing_support": [
+        "name_alias_concept_tag_layer_missing"
+      ],
+      "explicit_drop": false,
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "residual_core_vs_collapse_label",
+      "support_posture": "confirmed_only_review_label",
+      "owner_disposition": "preserve_as_confirmed_only_review_label",
+      "weak_or_missing_support": [
+        "turnover_normalization_rule_not_yet_frozen",
+        "breadth_formula_not_yet_frozen"
+      ],
+      "explicit_drop": false,
+      "reading": "This label remains valuable for review and explanation, but stays outside ex-ante draft truth."
+    }
+  ],
+  "interpretation": [
+    "This owner review does not try to make the draft cleaner than reality.",
+    "The main success condition is that no potentially useful label is silently deleted.",
+    "Only draft-ready and guarded labels should be allowed into the next bounded dataset assembly step."
+  ]
+}

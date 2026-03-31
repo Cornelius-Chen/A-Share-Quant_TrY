@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cj_neutral_packaging_control_injection_replay_v1",
+    "neutral_trade_count": 7,
+    "neutral_packaging_trade_count": 0,
+    "packaging_window_count": 17,
+    "packaging_veto_window_count": 5,
+    "packaging_de_risk_window_count": 10,
+    "packaging_eligibility_window_count": 2,
+    "realized_path_changed": false,
+    "non_packaging_invariance_check": true,
+    "neutral_to_packaging_injected_return_delta": 0.0,
+    "neutral_to_packaging_injected_max_drawdown_delta": 0.0,
+    "packaging_window_false_open_rate": 0.0,
+    "packaging_window_missed_eligibility_rate": 1.0,
+    "packaging_derisk_cash_rate": 1.0,
+    "baseline_total_return": 2.2481,
+    "baseline_max_drawdown": -0.2106,
+    "recommended_next_posture": "treat_packaging_injection_as_invariance_check_and_probe_residual_failures_ex_packaging"
+  },
+  "packaging_window_rows": [
+    {
+      "trade_date": "2024-03-14",
+      "symbol": "300757",
+      "refined_packaging_band": "veto_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "aligned_or_irrelevant"
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300757",
+      "refined_packaging_band": "veto_band",
+      "neutral_position_state": "long",
+      "neutral_symbol": "300308",
+      "residual_reading": "aligned_or_irrelevant"
+    },
+    {
+      "trade_date": "2024-03-18",
+      "symbol": "300757",
+      "refined_packaging_band": "veto_band",
+      "neutral_position_state": "long",
+      "neutral_symbol": "300308",
+      "residual_reading": "aligned_or_irrelevant"
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "refined_packaging_band": "eligibility_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "missed_packaging_eligibility_window"
+    },
+    {
+      "trade_date": "2024-06-13",
+      "symbol": "300757",
+      "refined_packaging_band": "veto_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "aligned_or_irrelevant"
+    },
+    {
+      "trade_date": "2024-06-14",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-17",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-18",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-19",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-20",
+      "symbol": "300757",
+      "refined_packaging_band": "veto_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "aligned_or_irrelevant"
+    },
+    {
+      "trade_date": "2024-06-21",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-24",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-25",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-26",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-27",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2024-06-28",
+      "symbol": "300757",
+      "refined_packaging_band": "de_risk_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "neutral_cash_on_packaging_derisk_window"
+    },
+    {
+      "trade_date": "2025-08-25",
+      "symbol": "300757",
+      "refined_packaging_band": "eligibility_band",
+      "neutral_position_state": "cash",
+      "neutral_symbol": "CASH",
+      "residual_reading": "missed_packaging_eligibility_window"
+    }
+  ],
+  "residual_trade_rows": [
+    {
+      "entry_date": "2024-03-15",
+      "exit_date": "2024-04-16",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "realized_forward_return_20d": -0.062,
+      "path_max_drawdown": -0.1433,
+      "residual_family": "non_packaging_residual_failure"
+    },
+    {
+      "entry_date": "2025-09-12",
+      "exit_date": "2025-10-20",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "realized_forward_return_20d": -0.0452,
+      "path_max_drawdown": -0.2036,
+      "residual_family": "non_packaging_residual_failure"
+    },
+    {
+      "entry_date": "2023-05-09",
+      "exit_date": "2023-06-06",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "realized_forward_return_20d": 0.2368,
+      "path_max_drawdown": -0.154,
+      "residual_family": "non_packaging_residual_failure"
+    },
+    {
+      "entry_date": "2023-06-07",
+      "exit_date": "2023-07-07",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "realized_forward_return_20d": 0.3596,
+      "path_max_drawdown": -0.1826,
+      "residual_family": "non_packaging_residual_failure"
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "realized_path_invariance",
+      "baseline_value": "neutral_selective",
+      "injected_value": "neutral_plus_packaging_frozen_template",
+      "delta": "unchanged"
+    },
+    {
+      "comparison_name": "packaging_missed_eligibility_windows",
+      "baseline_value": 0,
+      "injected_value": 2,
+      "delta": 2
+    },
+    {
+      "comparison_name": "residual_failures_ex_packaging",
+      "baseline_value": 0,
+      "injected_value": 4,
+      "delta": 4
+    }
+  ],
+  "interpretation": [
+    "V1.12CJ does not retrain neutral. It replays the frozen packaging refined template against the neutral path to check whether the mainline template changes realized behavior or mainly serves as a residual diagnostic layer.",
+    "The replay shows whether packaging control information reproduces immediate path-level gains or instead exposes which non-packaging residual failures still dominate after packaging is frozen into the control stack."
+  ]
+}

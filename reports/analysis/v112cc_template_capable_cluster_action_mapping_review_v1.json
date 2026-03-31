@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cc_template_capable_cluster_action_mapping_review_v1",
+    "template_role_count": 2,
+    "eligibility_only_candidate_count": 1,
+    "full_three_layer_candidate_count": 1,
+    "recommended_next_posture": "run_role_specific_action_mapping_pilot_for_packaging_and_keep_laser_as_eligibility_only_template_member"
+  },
+  "shared_structure_rows": [
+    {
+      "shared_structure_name": "shared_direction_set",
+      "shared_posture": "preserve_shared_direction_backbone",
+      "reading": "The template-capable cluster shares the transferred direction set even when edge calibration differs by role."
+    },
+    {
+      "shared_structure_name": "shared_three_band_grammar",
+      "shared_posture": "preserve_veto_de_risk_eligibility_framework",
+      "reading": "All template promotion must keep the three-band grammar, even if empirical coverage differs across member roles."
+    },
+    {
+      "shared_structure_name": "shared_action_mapping_constraint",
+      "shared_posture": "allow_role_specific_edge_calibration_but_not_role_specific_action_language",
+      "reading": "Action language should remain cluster-level while edge placement can remain role-specific."
+    }
+  ],
+  "role_action_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "promotion_posture": "candidate_template_path",
+      "edge_layer_status": "transferred_edges_unchanged",
+      "band_layer_status": "three_band_semantics_confirmed",
+      "action_mapping_posture": "eligibility_only_candidate_path",
+      "mapped_actions": [
+        "eligibility"
+      ]
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "promotion_posture": "candidate_template_path_with_role_specific_edges",
+      "edge_layer_status": "role_specific_edge_calibration_required",
+      "band_layer_status": "three_band_semantics_supported_with_local_calibration",
+      "action_mapping_posture": "full_three_layer_action_mapping_candidate",
+      "mapped_actions": [
+        "entry_veto",
+        "de_risk",
+        "eligibility"
+      ]
+    }
+  ],
+  "coverage_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "sample_count": 4,
+      "veto_band_count": 0,
+      "de_risk_band_count": 0,
+      "eligibility_band_count": 4
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "sample_count": 17,
+      "veto_band_count": 5,
+      "de_risk_band_count": 10,
+      "eligibility_band_count": 2
+    }
+  ],
+  "interpretation": [
+    "V1.12CC upgrades action mapping from single-role review to template-capable-cluster review.",
+    "The cluster shares a common direction backbone and three-band control grammar, but empirical action coverage is asymmetric: packaging-process-enabler supports full three-layer mapping, while laser-chip currently supports eligibility-only mapping."
+  ]
+}

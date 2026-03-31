@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: collection_v1.8c
+
+paths:
+  v18c_screened_collection_protocol_report: reports/analysis/v18c_screened_collection_protocol_v1.json
+  catalyst_seed_report: reports/analysis/catalyst_event_registry_seed_v1.json
+  market_v5_first_lane_acceptance_report: reports/analysis/market_v5_q2_first_lane_acceptance_v1.json
+  market_v5_last_probe_acceptance_report: reports/analysis/market_v5_q2_last_carry_probe_acceptance_000099_v1.json
+  market_v6_first_lane_acceptance_report: reports/analysis/market_v6_q3_first_lane_acceptance_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v18c_screened_collection_v1

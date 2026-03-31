@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112br_as_state_representation_and_resonance_discovery",
+    "cluster_count": 4,
+    "offensive_cluster_count": 3,
+    "veto_cluster_count": 0,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "cluster_target_mapping",
+      "actual": {
+        "offensive_cluster_count": 3,
+        "veto_cluster_count": 0,
+        "candidate_bundle_count": 3
+      },
+      "reading": "The phase is only meaningful if the discovered state structure can be mapped back to offensive and veto regions."
+    }
+  ],
+  "interpretation": [
+    "V1.12BR phase check confirms that state geometry is now being used to discover candidate decision regions instead of more low-dimensional threshold scans."
+  ]
+}

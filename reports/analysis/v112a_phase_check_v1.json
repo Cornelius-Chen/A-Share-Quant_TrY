@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112a_as_owner_correction_ready_pilot_data_assembly_only",
+    "do_open_v112a_now": true,
+    "pilot_object_count": 3,
+    "owner_review_required_count": 3,
+    "ready_for_owner_correction_next": true,
+    "allow_training_now": false,
+    "allow_auto_object_expansion_now": false,
+    "recommended_next_posture": "close_v112a_and_wait_for_owner_corrections_on_pilot_sheet"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "pilot_object_pool",
+      "actual": {
+        "pilot_object_count": 3,
+        "repo_seen_object_count": 1,
+        "owner_seeded_object_count": 2
+      },
+      "reading": "The first pilot pool is small enough for direct owner inspection and correction."
+    },
+    {
+      "evidence_name": "label_review_sheet",
+      "actual": {
+        "review_row_count": 3,
+        "owner_review_required_count": 3
+      },
+      "reading": "The sheet explicitly exposes where owner corrections are needed before training can begin."
+    }
+  ],
+  "interpretation": [
+    "V1.12A succeeds when the first pilot dataset becomes reviewable by the owner, not when training starts.",
+    "The branch should now stop at the point where human correction adds the most value.",
+    "The next legal move is owner correction, not automatic fitting or widening."
+  ]
+}

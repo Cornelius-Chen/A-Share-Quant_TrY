@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112br_state_representation_and_resonance_discovery",
+    "do_open_v112br_now": true,
+    "recommended_first_action": "freeze_v112br_state_representation_and_resonance_discovery_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BR State Representation And Resonance Discovery",
+    "mission": "Build a richer state representation for lawful CPO observations, discover latent state structure without hard-coding low-dimensional thresholds, then map those structures back to return, drawdown, and eligibility/veto interpretations.",
+    "in_scope": [
+      "state vector construction from selector, chronology, role, regime, and internal maturity layers",
+      "unsupervised state structure discovery",
+      "target mapping to return, drawdown, and veto/eligibility pockets",
+      "candidate resonance bundle extraction"
+    ],
+    "out_of_scope": [
+      "formal training opening",
+      "formal signal generation",
+      "cluster promotion into truth labels",
+      "new selector family expansion"
+    ]
+  },
+  "interpretation": [
+    "V1.12BR opens because low-dimensional gate sweeps have now shown diminishing returns.",
+    "The lawful next move is to let state geometry surface candidate eligibility and veto regions before turning them back into explicit rules."
+  ]
+}

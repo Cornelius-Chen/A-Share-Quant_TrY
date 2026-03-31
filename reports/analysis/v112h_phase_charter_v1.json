@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112h_for_high_level_consolidation_candidate_substate_draft",
+    "ready_for_candidate_substate_draft_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12H High-Level Consolidation Candidate Substate Draft",
+    "mission": "Generate a review-only candidate substate draft for high_level_consolidation using the frozen V1.12B pilot dataset and V1.12G semantic-v2 features.",
+    "in_scope": [
+      "high_level_consolidation rows only",
+      "candidate substate drafting only",
+      "cluster statistics and representative rows only",
+      "review-only output"
+    ],
+    "out_of_scope": [
+      "formal label rewrite",
+      "dataset widening",
+      "new model families",
+      "phase judgment",
+      "strategy integration"
+    ],
+    "success_criteria": [
+      "produce 2-4 candidate substates",
+      "summarize semantic-v2 differences per cluster",
+      "show test-fold misread-rate differences per cluster",
+      "remain review-only"
+    ],
+    "stop_criteria": [
+      "the draft needs new labels to stay coherent",
+      "the evidence collapses into a single undifferentiated bucket",
+      "the draft requires scope widening or heavy search"
+    ],
+    "handoff_condition": "owner review before any label split or dataset growth"
+  },
+  "interpretation": [
+    "V1.12H is a review-only drafting phase, not a formal label split.",
+    "Its purpose is to expose candidate substates that can later be judged by the owner.",
+    "No automatic label change is authorized by this charter."
+  ]
+}

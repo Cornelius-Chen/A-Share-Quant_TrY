@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113e_theme_diffusion_pilot_protocol_v1",
+    "selected_archetype": "commercial_space_mainline",
+    "label_block_count": 4,
+    "validation_rule_count": 5,
+    "ready_for_phase_check_next": true
+  },
+  "pilot_basis": {
+    "selected_archetype": "commercial_space_mainline",
+    "pilot_scope": "single_archetype_only",
+    "pilot_posture": "report_only_labeling_and_training_readiness",
+    "why_selected": "This archetype fits the grammar cleanly: policy and event resonance can be used without immediately collapsing role, strength, and driver into one bucket."
+  },
+  "labeling_protocol": {
+    "sample_unit": "symbol_day_within_one_theme_diffusion_window",
+    "label_blocks": {
+      "state_label": [
+        "ignition",
+        "diffusion",
+        "relay",
+        "decay"
+      ],
+      "role_label": [
+        "leader",
+        "mid_core",
+        "laggard_catchup",
+        "mapping_activation"
+      ],
+      "strength_labels": [
+        "mainline_persistence_level",
+        "mainline_height_level",
+        "mainline_absorption_quality",
+        "a_kill_risk_level"
+      ],
+      "driver_presence_review_flags": [
+        "policy_backing_tier",
+        "industrial_advantage_alignment",
+        "market_regime_tailwind",
+        "event_resonance_intensity"
+      ]
+    },
+    "validation_rules": [
+      "report_only_pilot",
+      "no_execution_features",
+      "no_signal_generation",
+      "single_archetype_first",
+      "owner_review_before_dataset_widening"
+    ],
+    "training_posture": {
+      "allowed": true,
+      "scope": "minimal_baseline_only_after_dataset_assembly",
+      "disallowed": [
+        "execution_modeling",
+        "strategy_signal_training",
+        "multi_archetype_joint_training",
+        "automatic_promotion"
+      ]
+    }
+  },
+  "interpretation": [
+    "V1.13E does not yet assemble or train the pilot; it freezes the minimum lawful pilot basis first.",
+    "The selected seed is intentionally the cleanest archetype to reduce early grammar distortion.",
+    "If this pilot later opens, it must stay report-only and single-archetype until owner review says otherwise."
+  ]
+}

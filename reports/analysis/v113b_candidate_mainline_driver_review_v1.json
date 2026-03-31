@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113b_candidate_mainline_driver_review_v1",
+    "candidate_driver_count_reviewed": 10,
+    "bounded_state_usage_ready_count": 4,
+    "formal_driver_promotion_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "driver_review_rows": [
+    {
+      "candidate_driver_name": "policy_backing_tier",
+      "candidate_bucket": "policy_or_industry",
+      "incoming_priority_tier": "high",
+      "review_disposition": "allow_bounded_state_usage_review_next",
+      "reading": "High-leverage candidate; stable enough to guide the next bounded state-usage review."
+    },
+    {
+      "candidate_driver_name": "industrial_advantage_alignment",
+      "candidate_bucket": "policy_or_industry",
+      "incoming_priority_tier": "high",
+      "review_disposition": "allow_bounded_state_usage_review_next",
+      "reading": "High-leverage candidate; stable enough to guide the next bounded state-usage review."
+    },
+    {
+      "candidate_driver_name": "market_regime_tailwind",
+      "candidate_bucket": "market_environment",
+      "incoming_priority_tier": "high",
+      "review_disposition": "allow_bounded_state_usage_review_next",
+      "reading": "High-leverage candidate; stable enough to guide the next bounded state-usage review."
+    },
+    {
+      "candidate_driver_name": "event_resonance_intensity",
+      "candidate_bucket": "event_resonance",
+      "incoming_priority_tier": "high",
+      "review_disposition": "allow_bounded_state_usage_review_next",
+      "reading": "High-leverage candidate; stable enough to guide the next bounded state-usage review."
+    },
+    {
+      "candidate_driver_name": "leader_height_establishment",
+      "candidate_bucket": "market_environment",
+      "incoming_priority_tier": "medium",
+      "review_disposition": "keep_review_only_candidate_for_now",
+      "reading": "Useful and plausible, but still better kept as review-only support rather than immediate next-step focus."
+    },
+    {
+      "candidate_driver_name": "mid_core_confirmation",
+      "candidate_bucket": "market_environment",
+      "incoming_priority_tier": "medium",
+      "review_disposition": "keep_review_only_candidate_for_now",
+      "reading": "Useful and plausible, but still better kept as review-only support rather than immediate next-step focus."
+    },
+    {
+      "candidate_driver_name": "cross_day_breadth_diffusion",
+      "candidate_bucket": "market_environment",
+      "incoming_priority_tier": "medium",
+      "review_disposition": "keep_review_only_candidate_for_now",
+      "reading": "Useful and plausible, but still better kept as review-only support rather than immediate next-step focus."
+    },
+    {
+      "candidate_driver_name": "absorption_quality_or_a_kill_suppression",
+      "candidate_bucket": "market_environment",
+      "incoming_priority_tier": "medium",
+      "review_disposition": "keep_review_only_candidate_for_now",
+      "reading": "Useful and plausible, but still better kept as review-only support rather than immediate next-step focus."
+    },
+    {
+      "candidate_driver_name": "catalyst_freshness_and_reinforcement",
+      "candidate_bucket": "event_resonance",
+      "incoming_priority_tier": "medium",
+      "review_disposition": "keep_review_only_candidate_for_now",
+      "reading": "Useful and plausible, but still better kept as review-only support rather than immediate next-step focus."
+    },
+    {
+      "candidate_driver_name": "mapping_clarity_and_tradeable_story",
+      "candidate_bucket": "borderline_candidate",
+      "incoming_priority_tier": "deferred",
+      "review_disposition": "defer_as_noisy_borderline_candidate",
+      "reading": "Keep preserved in review memory, but too noisy to prioritize for the next bounded follow-up."
+    }
+  ],
+  "interpretation": [
+    "V1.13B does not decide formal driver law; it only ranks review-only candidates for bounded follow-up.",
+    "The next lawful state-usage review should stay focused on the small high-priority set rather than all ten candidates.",
+    "Lower-priority candidates remain useful review memory, but they should not consume the next bounded schema budget."
+  ]
+}

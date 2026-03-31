@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v14_bounded_discrimination_check_v1_as_report_only_review",
+    "class_count": 3,
+    "stable_discrimination_present": true,
+    "opening_single_pulse_supported": true,
+    "persistence_multi_day_supported": true,
+    "carry_followthrough_supported": true,
+    "concept_depth_difference_present": true,
+    "promote_context_now": false,
+    "ready_for_v14_phase_check_next": true
+  },
+  "discrimination_rows": [
+    {
+      "lane_outcome_label": "opening_led",
+      "single_pulse_support": true,
+      "multi_day_reinforcement_support": false,
+      "policy_followthrough_support": false,
+      "concept_confirmation_depth_mode": "secondary",
+      "concept_indirectness_mode": "indirect_present"
+    },
+    {
+      "lane_outcome_label": "persistence_led",
+      "single_pulse_support": false,
+      "multi_day_reinforcement_support": true,
+      "policy_followthrough_support": false,
+      "concept_confirmation_depth_mode": "primary",
+      "concept_indirectness_mode": "core_only"
+    },
+    {
+      "lane_outcome_label": "carry_row_present",
+      "single_pulse_support": false,
+      "multi_day_reinforcement_support": false,
+      "policy_followthrough_support": true,
+      "concept_confirmation_depth_mode": "primary",
+      "concept_indirectness_mode": "core_only"
+    }
+  ],
+  "interpretation": [
+    "The first bounded discrimination check confirms whether report-only catalyst and concept context separate opening, persistence, and carry in a stable directional way.",
+    "A positive result still does not justify strategy integration or retained-feature promotion; it only proves bounded consumption value.",
+    "The next legal step is a V1.4 phase-level check, not a model or signal upgrade."
+  ]
+}

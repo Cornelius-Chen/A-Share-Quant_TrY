@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bf_cpo_aggressive_no_leak_black_box_portfolio_pilot",
+    "do_open_v112bf_now": true,
+    "recommended_first_action": "freeze_v112bf_cpo_aggressive_no_leak_black_box_portfolio_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BF CPO Aggressive No-Leak Black-Box Portfolio Pilot",
+    "mission": "Run the first no-leak aggressive black-box portfolio pilot on the default 10-row guarded CPO layer and compare its realized bounded portfolio quality against the oracle upper-bound benchmark.",
+    "in_scope": [
+      "point-in-time only training cutoff",
+      "aggressive total-return objective",
+      "single-position or cash selection",
+      "equity and drawdown trace",
+      "oracle-gap comparison"
+    ],
+    "out_of_scope": [
+      "oracle hindsight logic",
+      "formal signal generation",
+      "deployment"
+    ],
+    "success_criteria": [
+      "all model decisions use only point-in-time visible information",
+      "the pilot produces an explicit trade trace and equity curve",
+      "the pilot reports its gap versus the oracle benchmark"
+    ]
+  },
+  "interpretation": [
+    "V1.12BF is the first true no-leak portfolio experiment on top of the frozen 10-row CPO layer.",
+    "The aggressive track maximizes return first, but still remains bounded and non-deployable."
+  ]
+}

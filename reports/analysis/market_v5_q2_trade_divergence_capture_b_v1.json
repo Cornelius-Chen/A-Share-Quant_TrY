@@ -1,0 +1,681 @@
+{
+  "summary": {
+    "dataset_name": "market_research_v5_carry_row_diversity_refresh",
+    "slice_name": "2024_q2",
+    "slice_start": "2024-04-01",
+    "slice_end": "2024-06-30",
+    "strategy_count": 1,
+    "symbol_row_count": 4,
+    "weakest_symbol_row": {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "incumbent_trade_count": 3,
+      "challenger_trade_count": 4,
+      "incumbent_total_pnl": -129.423055,
+      "challenger_total_pnl": -147.852689,
+      "pnl_delta": -18.429634,
+      "incumbent_avg_holding_days": 1.0,
+      "challenger_avg_holding_days": 1.0,
+      "challenger_max_holding_days": 1
+    },
+    "interpretation": [
+      "Negative pnl_delta rows show where the challenger realizes worse trade outcomes than the incumbent.",
+      "Rows with equal capture but worse pnl are especially useful for diagnosing path-quality and drawdown issues.",
+      "If the same symbol repeats across strategies, it is likely a real structural driver of the slice-level gap."
+    ]
+  },
+  "strategy_symbol_summary": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "incumbent_trade_count": 7,
+      "challenger_trade_count": 8,
+      "incumbent_total_pnl": 93.216224,
+      "challenger_total_pnl": 85.262809,
+      "pnl_delta": -7.953415,
+      "incumbent_avg_holding_days": 2.571429,
+      "challenger_avg_holding_days": 2.375,
+      "challenger_max_holding_days": 7
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "incumbent_trade_count": 8,
+      "challenger_trade_count": 9,
+      "incumbent_total_pnl": -241.236683,
+      "challenger_total_pnl": -205.157125,
+      "pnl_delta": 36.079558,
+      "incumbent_avg_holding_days": 2.0,
+      "challenger_avg_holding_days": 2.0,
+      "challenger_max_holding_days": 4
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "incumbent_trade_count": 3,
+      "challenger_trade_count": 4,
+      "incumbent_total_pnl": -129.423055,
+      "challenger_total_pnl": -147.852689,
+      "pnl_delta": -18.429634,
+      "incumbent_avg_holding_days": 1.0,
+      "challenger_avg_holding_days": 1.0,
+      "challenger_max_holding_days": 1
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "incumbent_trade_count": 5,
+      "challenger_trade_count": 5,
+      "incumbent_total_pnl": -50.549077,
+      "challenger_total_pnl": -50.549077,
+      "pnl_delta": 0.0,
+      "incumbent_avg_holding_days": 2.4,
+      "challenger_avg_holding_days": 2.4,
+      "challenger_max_holding_days": 4
+    }
+  ],
+  "worst_symbol_rows": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "incumbent_trade_count": 3,
+      "challenger_trade_count": 4,
+      "incumbent_total_pnl": -129.423055,
+      "challenger_total_pnl": -147.852689,
+      "pnl_delta": -18.429634,
+      "incumbent_avg_holding_days": 1.0,
+      "challenger_avg_holding_days": 1.0,
+      "challenger_max_holding_days": 1
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "incumbent_trade_count": 7,
+      "challenger_trade_count": 8,
+      "incumbent_total_pnl": 93.216224,
+      "challenger_total_pnl": 85.262809,
+      "pnl_delta": -7.953415,
+      "incumbent_avg_holding_days": 2.571429,
+      "challenger_avg_holding_days": 2.375,
+      "challenger_max_holding_days": 7
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "incumbent_trade_count": 5,
+      "challenger_trade_count": 5,
+      "incumbent_total_pnl": -50.549077,
+      "challenger_total_pnl": -50.549077,
+      "pnl_delta": 0.0,
+      "incumbent_avg_holding_days": 2.4,
+      "challenger_avg_holding_days": 2.4,
+      "challenger_max_holding_days": 4
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "incumbent_trade_count": 8,
+      "challenger_trade_count": 9,
+      "incumbent_total_pnl": -241.236683,
+      "challenger_total_pnl": -205.157125,
+      "pnl_delta": 36.079558,
+      "incumbent_avg_holding_days": 2.0,
+      "challenger_avg_holding_days": 2.0,
+      "challenger_max_holding_days": 4
+    }
+  ],
+  "trade_pair_samples": [
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 0,
+      "pnl_delta": -473.702463,
+      "incumbent_trade": {
+        "entry_date": "2024-04-16",
+        "exit_date": "2024-04-23",
+        "quantity": 100,
+        "entry_price": 15.63,
+        "exit_price": 20.4,
+        "pnl": 465.749048,
+        "holding_days": 7
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-11",
+        "exit_date": "2024-04-12",
+        "quantity": 100,
+        "entry_price": 15.15,
+        "exit_price": 15.18,
+        "pnl": -7.953415,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 3,
+      "pnl_delta": -168.086781,
+      "incumbent_trade": {
+        "entry_date": "2024-05-20",
+        "exit_date": "2024-05-21",
+        "quantity": 100,
+        "entry_price": 20.53,
+        "exit_price": 20.53,
+        "pnl": -11.289695,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-30",
+        "exit_date": "2024-05-06",
+        "quantity": 100,
+        "entry_price": 23.42,
+        "exit_price": 21.74,
+        "pnl": -179.376476,
+        "holding_days": 6
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 7,
+      "pnl_delta": -126.050812,
+      "incumbent_trade": null,
+      "challenger_trade": {
+        "entry_date": "2024-06-20",
+        "exit_date": "2024-06-21",
+        "quantity": 100,
+        "entry_price": 17.76,
+        "exit_price": 16.61,
+        "pnl": -126.050812,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 6,
+      "pnl_delta": -74.938846,
+      "incumbent_trade": {
+        "entry_date": "2024-06-13",
+        "exit_date": "2024-06-14",
+        "quantity": 100,
+        "entry_price": 15.7,
+        "exit_price": 15.47,
+        "pnl": -33.9733,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-06-07",
+        "exit_date": "2024-06-11",
+        "quantity": 100,
+        "entry_price": 15.4,
+        "exit_price": 14.42,
+        "pnl": -108.912146,
+        "holding_days": 4
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "trade_index": 3,
+      "pnl_delta": -63.562556,
+      "incumbent_trade": null,
+      "challenger_trade": {
+        "entry_date": "2024-06-12",
+        "exit_date": "2024-06-13",
+        "quantity": 100,
+        "entry_price": 41.25,
+        "exit_price": 40.74,
+        "pnl": -63.562556,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 8,
+      "pnl_delta": -45.006671,
+      "incumbent_trade": null,
+      "challenger_trade": {
+        "entry_date": "2024-06-18",
+        "exit_date": "2024-06-20",
+        "quantity": 100,
+        "entry_price": 16.33,
+        "exit_price": 15.99,
+        "pnl": -45.006671,
+        "holding_days": 2
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 4,
+      "pnl_delta": -9.951642,
+      "incumbent_trade": {
+        "entry_date": "2024-05-22",
+        "exit_date": "2024-05-23",
+        "quantity": 100,
+        "entry_price": 21.21,
+        "exit_price": 21.31,
+        "pnl": -1.338053,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-20",
+        "exit_date": "2024-05-21",
+        "quantity": 100,
+        "entry_price": 20.53,
+        "exit_price": 20.53,
+        "pnl": -11.289695,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 0,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-08",
+        "exit_date": "2024-04-09",
+        "quantity": 100,
+        "entry_price": 13.97,
+        "exit_price": 13.55,
+        "pnl": -52.853903,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-08",
+        "exit_date": "2024-04-09",
+        "quantity": 100,
+        "entry_price": 13.97,
+        "exit_price": 13.55,
+        "pnl": -52.853903,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 1,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-10",
+        "exit_date": "2024-04-11",
+        "quantity": 100,
+        "entry_price": 14.03,
+        "exit_price": 13.36,
+        "pnl": -77.84357,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-10",
+        "exit_date": "2024-04-11",
+        "quantity": 100,
+        "entry_price": 14.03,
+        "exit_price": 13.36,
+        "pnl": -77.84357,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 2,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-26",
+        "exit_date": "2024-04-30",
+        "quantity": 100,
+        "entry_price": 12.52,
+        "exit_price": 13.92,
+        "pnl": 129.13452,
+        "holding_days": 4
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-26",
+        "exit_date": "2024-04-30",
+        "quantity": 100,
+        "entry_price": 12.52,
+        "exit_price": 13.92,
+        "pnl": 129.13452,
+        "holding_days": 4
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 3,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-05-06",
+        "exit_date": "2024-05-08",
+        "quantity": 100,
+        "entry_price": 14.33,
+        "exit_price": 14.0,
+        "pnl": -43.881595,
+        "holding_days": 2
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-06",
+        "exit_date": "2024-05-08",
+        "quantity": 100,
+        "entry_price": 14.33,
+        "exit_price": 14.0,
+        "pnl": -43.881595,
+        "holding_days": 2
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "trade_index": 0,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-23",
+        "exit_date": "2024-04-24",
+        "quantity": 100,
+        "entry_price": 36.98,
+        "exit_price": 37.02,
+        "pnl": -8.32534,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-23",
+        "exit_date": "2024-04-24",
+        "quantity": 100,
+        "entry_price": 36.98,
+        "exit_price": 37.02,
+        "pnl": -8.32534,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "trade_index": 0,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-09",
+        "exit_date": "2024-04-10",
+        "quantity": 100,
+        "entry_price": 4.76,
+        "exit_price": 4.69,
+        "pnl": -17.295074,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-09",
+        "exit_date": "2024-04-10",
+        "quantity": 100,
+        "entry_price": 4.76,
+        "exit_price": 4.69,
+        "pnl": -17.295074,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "trade_index": 1,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-04-12",
+        "exit_date": "2024-04-15",
+        "quantity": 100,
+        "entry_price": 4.76,
+        "exit_price": 4.73,
+        "pnl": -13.297331,
+        "holding_days": 3
+      },
+      "challenger_trade": {
+        "entry_date": "2024-04-12",
+        "exit_date": "2024-04-15",
+        "quantity": 100,
+        "entry_price": 4.76,
+        "exit_price": 4.73,
+        "pnl": -13.297331,
+        "holding_days": 3
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "trade_index": 2,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-05-09",
+        "exit_date": "2024-05-13",
+        "quantity": 100,
+        "entry_price": 4.88,
+        "exit_price": 5.11,
+        "pnl": 12.680464,
+        "holding_days": 4
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-09",
+        "exit_date": "2024-05-13",
+        "quantity": 100,
+        "entry_price": 4.88,
+        "exit_price": 5.11,
+        "pnl": 12.680464,
+        "holding_days": 4
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "trade_index": 3,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-05-15",
+        "exit_date": "2024-05-16",
+        "quantity": 100,
+        "entry_price": 5.2,
+        "exit_price": 5.1,
+        "pnl": -20.321023,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-15",
+        "exit_date": "2024-05-16",
+        "quantity": 100,
+        "entry_price": 5.2,
+        "exit_price": 5.1,
+        "pnl": -20.321023,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "601989",
+      "trade_index": 4,
+      "pnl_delta": 0.0,
+      "incumbent_trade": {
+        "entry_date": "2024-05-31",
+        "exit_date": "2024-06-03",
+        "quantity": 100,
+        "entry_price": 5.05,
+        "exit_price": 5.03,
+        "pnl": -12.316113,
+        "holding_days": 3
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-31",
+        "exit_date": "2024-06-03",
+        "quantity": 100,
+        "entry_price": 5.05,
+        "exit_price": 5.03,
+        "pnl": -12.316113,
+        "holding_days": 3
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "trade_index": 2,
+      "pnl_delta": 6.027397,
+      "incumbent_trade": {
+        "entry_date": "2024-06-12",
+        "exit_date": "2024-06-13",
+        "quantity": 100,
+        "entry_price": 41.25,
+        "exit_price": 40.74,
+        "pnl": -63.562556,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-06-06",
+        "exit_date": "2024-06-07",
+        "quantity": 100,
+        "entry_price": 40.76,
+        "exit_price": 40.31,
+        "pnl": -57.535159,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 7,
+      "pnl_delta": 11.033371,
+      "incumbent_trade": {
+        "entry_date": "2024-06-18",
+        "exit_date": "2024-06-20",
+        "quantity": 100,
+        "entry_price": 16.33,
+        "exit_price": 15.99,
+        "pnl": -45.006671,
+        "holding_days": 2
+      },
+      "challenger_trade": {
+        "entry_date": "2024-06-13",
+        "exit_date": "2024-06-14",
+        "quantity": 100,
+        "entry_price": 15.7,
+        "exit_price": 15.47,
+        "pnl": -33.9733,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "600760",
+      "trade_index": 1,
+      "pnl_delta": 39.105525,
+      "incumbent_trade": {
+        "entry_date": "2024-06-06",
+        "exit_date": "2024-06-07",
+        "quantity": 100,
+        "entry_price": 40.76,
+        "exit_price": 40.31,
+        "pnl": -57.535159,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-08",
+        "exit_date": "2024-05-09",
+        "quantity": 100,
+        "entry_price": 38.73,
+        "exit_price": 38.67,
+        "pnl": -18.429634,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 4,
+      "pnl_delta": 42.002692,
+      "incumbent_trade": {
+        "entry_date": "2024-05-14",
+        "exit_date": "2024-05-15",
+        "quantity": 100,
+        "entry_price": 14.3,
+        "exit_price": 14.33,
+        "pnl": -7.900018,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-13",
+        "exit_date": "2024-05-15",
+        "quantity": 100,
+        "entry_price": 13.88,
+        "exit_price": 14.33,
+        "pnl": 34.102674,
+        "holding_days": 2
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 6,
+      "pnl_delta": 53.954462,
+      "incumbent_trade": {
+        "entry_date": "2024-06-20",
+        "exit_date": "2024-06-21",
+        "quantity": 100,
+        "entry_price": 17.76,
+        "exit_price": 16.61,
+        "pnl": -126.050812,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-06-05",
+        "exit_date": "2024-06-06",
+        "quantity": 100,
+        "entry_price": 18.0,
+        "exit_price": 17.39,
+        "pnl": -72.09635,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "000099",
+      "trade_index": 5,
+      "pnl_delta": 70.758297,
+      "incumbent_trade": {
+        "entry_date": "2024-06-05",
+        "exit_date": "2024-06-06",
+        "quantity": 100,
+        "entry_price": 18.0,
+        "exit_price": 17.39,
+        "pnl": -72.09635,
+        "holding_days": 1
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-22",
+        "exit_date": "2024-05-23",
+        "quantity": 100,
+        "entry_price": 21.21,
+        "exit_price": 21.31,
+        "pnl": -1.338053,
+        "holding_days": 1
+      }
+    },
+    {
+      "strategy_name": "mainline_trend_b",
+      "symbol": "002273",
+      "trade_index": 5,
+      "pnl_delta": 102.989012,
+      "incumbent_trade": {
+        "entry_date": "2024-06-07",
+        "exit_date": "2024-06-11",
+        "quantity": 100,
+        "entry_price": 15.4,
+        "exit_price": 14.42,
+        "pnl": -108.912146,
+        "holding_days": 4
+      },
+      "challenger_trade": {
+        "entry_date": "2024-05-21",
+        "exit_date": "2024-05-22",
+        "quantity": 100,
+        "entry_price": 14.65,
+        "exit_price": 14.7,
+        "pnl": -5.923134,
+        "holding_days": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "strategy_name": "mainline_trend_b",
+    "specialist_candidate": "baseline_expansion_branch",
+    "anchor_candidates": [
+      "shared_default",
+      "buffer_only_012"
+    ],
+    "window_start": "2024-04-01",
+    "window_end": "2024-06-30",
+    "specialist_opened_window": true,
+    "opening_trade_date": "2024-05-10"
+  },
+  "opening_edge": {
+    "trade_date": "2024-05-10",
+    "specialist_candidate": "baseline_expansion_branch",
+    "specialist_assignment_layer": "leader",
+    "specialist_assignment_reason": "highest_leader_score",
+    "specialist_permission_allowed": true,
+    "specialist_triggered_entries": [
+      "confirmation_entry",
+      "mid_trend_follow"
+    ],
+    "specialist_passed_filters": [
+      "loose_uptrend"
+    ]
+  },
+  "anchor_blockers": [
+    {
+      "candidate_name": "shared_default",
+      "trade_date": "2024-05-10",
+      "permission_allowed": true,
+      "assignment_layer": "junk",
+      "assignment_reason": "low_composite_or_low_resonance",
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow"
+      ],
+      "passed_filters": [],
+      "emitted_actions": []
+    },
+    {
+      "candidate_name": "buffer_only_012",
+      "trade_date": "2024-05-10",
+      "permission_allowed": true,
+      "assignment_layer": "junk",
+      "assignment_reason": "low_composite_or_low_resonance",
+      "triggered_entries": [
+        "confirmation_entry",
+        "mid_trend_follow"
+      ],
+      "passed_filters": [],
+      "emitted_actions": []
+    }
+  ],
+  "interpretation": [
+    "A specialist-owned window is most interesting when permission, filters, and entries are already aligned but the hierarchy layer is still different.",
+    "If anchors and specialist share the same permission path, then a pure assignment-layer upgrade is a strong candidate for the true opening edge.",
+    "The first specialist-only buy date is usually more actionable than later exit differences because it explains how the window was opened in the first place."
+  ]
+}

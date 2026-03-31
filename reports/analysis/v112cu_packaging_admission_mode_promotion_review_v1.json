@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cu_packaging_admission_mode_promotion_review_v1",
+    "existing_packaging_mainline_asset": true,
+    "joint_promotion_ready": false,
+    "preferred_mode": "full_20d_admission",
+    "promotion_ready": true,
+    "promotion_posture": "cluster_mainline_admission_extension_candidate",
+    "recommended_next_posture": "open_controlled_packaging_admission_extension_replay_without_reopening_packaging_template_learning"
+  },
+  "promotion_rows": [
+    {
+      "promotion_target": "packaging_full_20d_admission_mode",
+      "posture": "cluster_mainline_admission_extension_candidate",
+      "beats_neutral_return": true,
+      "beats_neutral_drawdown": true,
+      "return_delta_vs_neutral": 0.9954,
+      "drawdown_delta_vs_neutral": 0.028,
+      "skipped_neutral_count": 1,
+      "admission_count": 2
+    },
+    {
+      "promotion_target": "packaging_cut_at_next_neutral_entry_mode",
+      "posture": "rejected_as_default_promotion_path",
+      "beats_neutral_return": true,
+      "beats_neutral_drawdown": false,
+      "return_delta_vs_neutral": 0.5047,
+      "drawdown_delta_vs_neutral": -0.0157,
+      "skipped_neutral_count": 0,
+      "admission_count": 2
+    }
+  ],
+  "boundary_rows": [
+    {
+      "boundary_name": "template_learning_boundary",
+      "reading": "V1.12CU does not reopen packaging template learning. It only decides whether packaging admission deserves promotion from miss-diagnostic into a governed mainline extension candidate."
+    },
+    {
+      "boundary_name": "core_residual_boundary",
+      "reading": "Packaging admission promotion remains separate from the deferred 300308/300502 joint residual stack.",
+      "joint_promotion_ready": false
+    },
+    {
+      "boundary_name": "mode_selection_boundary",
+      "reading": "Only the full 20-day packaging admission mode beats neutral on both return and drawdown. The clipped mode improves return but worsens drawdown and cannot serve as the default promotion path.",
+      "full_mode_beats_both": true,
+      "cut_mode_beats_drawdown": false
+    }
+  ],
+  "interpretation": [
+    "V1.12CU turns packaging admission from a residual miss diagnostic into a governed promotion decision.",
+    "The review supports promoting full_20d packaging admission into a controlled mainline extension candidate because it improves both neutral return and neutral max drawdown without reopening packaging template learning."
+  ]
+}

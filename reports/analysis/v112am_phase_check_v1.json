@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112am_as_extremely_small_core_skeleton_training_pilot",
+    "do_open_v112am_now": true,
+    "sample_count": 2160,
+    "target_count": 3,
+    "model_count": 6,
+    "best_target_by_gbdt_gain": "phase_progression_label",
+    "best_target_gain": 0.3735,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_of_core_skeleton_pilot_results"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112am_core_skeleton_training_pilot",
+      "actual": {
+        "sample_count": 2160,
+        "target_count": 3,
+        "best_target_by_gbdt_gain": "phase_progression_label",
+        "best_target_gain": 0.3735
+      },
+      "reading": "The project now has a real bounded failure-exposure experiment instead of another purely pre-pilot audit."
+    }
+  ],
+  "interpretation": [
+    "V1.12AM succeeds if it exposes learnability and limits without pretending to be a broad training launch.",
+    "Formal training and signal generation remain closed."
+  ]
+}

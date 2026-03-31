@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bd_as_market_regime_overlay_feature_review_success",
+    "v112bd_success_criteria_met": true,
+    "enter_v112bd_waiting_state_now": true,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bd_phase_check",
+      "actual": {
+        "overlay_feature_count": 10
+      },
+      "reading": "The phase closes once the market-regime overlay family is frozen as a context layer."
+    }
+  ],
+  "interpretation": [
+    "V1.12BD closes with an explicit market-regime overlay feature family.",
+    "Formal signal rights remain closed."
+  ]
+}

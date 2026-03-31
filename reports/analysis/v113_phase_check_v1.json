@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v113_as_theme_diffusion_template_entry_success",
+    "selected_template_family": "theme_diffusion_carry",
+    "seed_archetype_count": 3,
+    "schema_first_posture": true,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "initialize_bounded_theme_diffusion_state_schema_next"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v113_template_entry",
+      "actual": {
+        "selected_template_family": "theme_diffusion_carry",
+        "seed_archetype_count": 3,
+        "schema_first_posture": true
+      },
+      "reading": "V1.13 succeeds once the project formally reenters a higher-leverage carry template line with bounded seed archetypes."
+    }
+  ],
+  "interpretation": [
+    "V1.13 does not yet build the state schema itself.",
+    "It resets the effort frontier to the correct higher-leverage template line."
+  ]
+}

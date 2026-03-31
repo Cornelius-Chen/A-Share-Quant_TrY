@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112az_as_bounded_training_layer_extension",
+    "do_open_v112az_now": true,
+    "row_count_after_extension": 10,
+    "guarded_branch_row_count": 3,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "review_if_10_row_bounded_training_layer_can_replace_the_7_row_baseline_for_next_pilot"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112az_training_layer_extension",
+      "actual": {
+        "row_count_after_extension": 10,
+        "guarded_branch_row_count": 3,
+        "retained_review_only_branch_row_count": 1
+      },
+      "reading": "The extension is only valid if it remains narrow: three guarded branch rows in, one mixed branch row out."
+    }
+  ],
+  "interpretation": [
+    "V1.12AZ is a bounded training-layer assembly step, not formal training.",
+    "Formal training and signal rights remain closed."
+  ]
+}

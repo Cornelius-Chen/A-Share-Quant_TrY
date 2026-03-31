@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bi_cpo_cross_sectional_ranker_pilot",
+    "do_open_v112bi_now": true,
+    "recommended_first_action": "freeze_v112bi_cpo_cross_sectional_ranker_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BI CPO Cross-Sectional Ranker Pilot",
+    "mission": "Test whether a no-leak direct-return ranker can outperform the existing classifier-style aggressive and neutral lines on the same lawful 10-row CPO layer.",
+    "in_scope": [
+      "point-in-time only training cutoff",
+      "direct future-return regression score",
+      "top-ranked symbol or cash",
+      "comparison versus oracle, aggressive, and neutral tracks"
+    ],
+    "out_of_scope": [
+      "formal signal generation",
+      "deployment",
+      "large model-zoo expansion"
+    ],
+    "success_criteria": [
+      "the ranker remains no-leak",
+      "it produces an explicit portfolio trace",
+      "it reports whether ranking adds value beyond current classifier tracks"
+    ]
+  },
+  "interpretation": [
+    "V1.12BI is the first direct ranking experiment after the aggressive and neutral classifier lines were established.",
+    "It tests target-function alignment rather than simply adding a heavier model family."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v15_as_bounded_candidacy_review_success",
+    "v15_success_criteria_met": true,
+    "allow_provisional_candidacy_review_count": 4,
+    "hold_for_more_evidence_count": 1,
+    "enter_v15_waiting_state_now": true,
+    "promote_retained_now": false,
+    "open_local_regime_phase_now": false,
+    "recommended_next_posture": "preserve_v15_candidacy_results_and_wait_for_owner_phase_switch_or_trigger"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v15_charter",
+      "actual": {
+        "acceptance_posture": "open_v15_retained_feature_candidacy_review",
+        "do_open_v15_now": true
+      },
+      "reading": "V1.5 opened lawfully as a bounded candidacy review phase."
+    },
+    {
+      "evidence_name": "feature_admissibility_review",
+      "actual": {
+        "allow_provisional_candidacy_review_count": 4,
+        "hold_for_more_evidence_count": 1,
+        "reject_candidacy_count": 0
+      },
+      "reading": "The current review answered which bounded context features deserve continued candidacy attention."
+    },
+    {
+      "evidence_name": "phase_check",
+      "actual": {
+        "acceptance_posture": "keep_v15_active_but_bounded_as_candidacy_review",
+        "promote_retained_now": false,
+        "do_integrate_into_strategy_now": false
+      },
+      "reading": "The branch remains below promotion threshold, so closure should preserve review results rather than force promotion or new branches."
+    }
+  ],
+  "interpretation": [
+    "V1.5 has now answered its core question: which current report-only context features can stay inside bounded retained-feature candidacy review.",
+    "That is enough to close the phase successfully without promoting any feature into retained status.",
+    "Per the autonomy policy, the correct move is to enter waiting state until a new owner phase switch or trigger appears."
+  ]
+}

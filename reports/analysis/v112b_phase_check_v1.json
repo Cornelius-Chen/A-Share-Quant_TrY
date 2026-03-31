@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112b_as_report_only_first_baseline_success",
+    "dataset_frozen": true,
+    "baseline_readout_present": true,
+    "allow_strategy_training_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_first_baseline_before_any_widening"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112b_charter",
+      "actual": {
+        "do_open_v112b_now": true
+      },
+      "reading": "V1.12B opened lawfully as a first trainable dataset freeze and baseline-readout phase."
+    },
+    {
+      "evidence_name": "v112b_pilot_dataset_freeze",
+      "actual": {
+        "dataset_row_count": 3,
+        "all_rows_owner_accepted": true
+      },
+      "reading": "The first optical-link pilot dataset is now frozen instead of remaining a draft sheet."
+    },
+    {
+      "evidence_name": "v112b_baseline_readout",
+      "actual": {
+        "sample_count": 2238,
+        "test_accuracy": 0.4509,
+        "allow_strategy_training_now": false
+      },
+      "reading": "The first report-only baseline readout ran under time-split rules without opening strategy training."
+    }
+  ],
+  "interpretation": [
+    "V1.12B succeeds once the first accepted pilot draft becomes a trainable dataset and a report-only baseline readout exists.",
+    "That is enough to close the phase without widening objects or opening deployment.",
+    "The lawful next posture is owner review of the baseline rather than automatic training escalation."
+  ]
+}

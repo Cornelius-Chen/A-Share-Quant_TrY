@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bg_cpo_oracle_vs_no_leak_gap_review",
+    "do_open_v112bg_now": true,
+    "recommended_first_action": "freeze_v112bg_cpo_oracle_vs_no_leak_gap_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BG CPO Oracle-vs-No-Leak Gap Review",
+    "mission": "Decompose the current gap between the hindsight oracle benchmark and the aggressive no-leak track into actionable bottlenecks before opening the neutral selective track.",
+    "in_scope": [
+      "oracle versus aggressive return-gap attribution",
+      "negative-trade concentration by stage, role, and catalyst",
+      "probability-margin quality review",
+      "neutral selective gate recommendations"
+    ],
+    "out_of_scope": [
+      "formal feature promotion",
+      "formal training rights",
+      "deployment"
+    ],
+    "success_criteria": [
+      "the review outputs an explicit bottleneck attribution",
+      "the review freezes concrete neutral-track gate recommendations",
+      "the review does not open formal training or signal rights"
+    ]
+  },
+  "interpretation": [
+    "V1.12BG exists to prevent blind imitation of the aggressive track in the next no-leak portfolio line.",
+    "It should identify whether the current shortfall is mostly a selection problem, a drawdown-control problem, or a stage-maturity problem."
+  ]
+}

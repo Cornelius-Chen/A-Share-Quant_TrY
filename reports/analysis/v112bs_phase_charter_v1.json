@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bs_penalized_target_mapping_refinement",
+    "do_open_v112bs_now": true,
+    "recommended_first_action": "freeze_v112bs_penalized_target_mapping_refinement_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BS Penalized Target Mapping Refinement",
+    "mission": "Refine the high-dimensional state-space mapping so that veto and risk structure can become visible without collapsing back into a low-dimensional hard gate. The focus is on penalty shaping at the mapping layer, plus explicit local-neighborhood and transition-band extraction.",
+    "in_scope": [
+      "reuse the frozen V1.12BR state representation",
+      "add outcome penalties for bad-trade density, severity, and drawdown tails",
+      "add secondary structure penalties for maturity, crowding, and deterioration",
+      "extract candidate veto regions at cluster, neighborhood, and transition-band levels"
+    ],
+    "out_of_scope": [
+      "changing the core clustering method",
+      "returning to low-dimensional threshold sweeps",
+      "formal training opening",
+      "formal signal generation"
+    ]
+  },
+  "interpretation": [
+    "V1.12BS opens because V1.12BR showed offensive geometry clearly but did not produce a clean veto structure.",
+    "The lawful next move is not to re-scan hard thresholds, but to make risk structure more visible at the mapping layer."
+  ]
+}

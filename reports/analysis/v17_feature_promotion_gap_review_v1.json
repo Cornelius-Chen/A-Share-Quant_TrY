@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v17_feature_promotion_gap_review_v1_as_bounded_review",
+    "reviewed_feature_count": 4,
+    "promotion_ready_now_count": 0,
+    "needs_additional_promotion_evidence_count": 4,
+    "ready_for_v17_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "sample_breadth_gap": true,
+      "cross_pocket_or_cross_regime_gap": true,
+      "non_redundancy_stress_gap": true,
+      "safe_consumption_beyond_report_only_gap": true,
+      "primary_shortfall": "sample_breadth_gap",
+      "minimum_evidence_path": "bounded_multi_sample_review",
+      "promotion_readiness_now": false,
+      "review_reading": "The feature remains alive inside provisional candidacy, but promotion still needs explicit new evidence beyond current bounded admissibility and stability review.",
+      "admissibility_basis_present": true
+    },
+    {
+      "feature_name": "multi_day_reinforcement_support",
+      "sample_breadth_gap": true,
+      "cross_pocket_or_cross_regime_gap": true,
+      "non_redundancy_stress_gap": true,
+      "safe_consumption_beyond_report_only_gap": true,
+      "primary_shortfall": "safe_consumption_beyond_report_only_gap",
+      "minimum_evidence_path": "bounded_safe_consumption_extension_review",
+      "promotion_readiness_now": false,
+      "review_reading": "The feature remains alive inside provisional candidacy, but promotion still needs explicit new evidence beyond current bounded admissibility and stability review.",
+      "admissibility_basis_present": true
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "sample_breadth_gap": true,
+      "cross_pocket_or_cross_regime_gap": true,
+      "non_redundancy_stress_gap": true,
+      "safe_consumption_beyond_report_only_gap": true,
+      "primary_shortfall": "sample_breadth_gap",
+      "minimum_evidence_path": "bounded_additional_followthrough_case_review",
+      "promotion_readiness_now": false,
+      "review_reading": "The feature remains alive inside provisional candidacy, but promotion still needs explicit new evidence beyond current bounded admissibility and stability review.",
+      "admissibility_basis_present": true
+    },
+    {
+      "feature_name": "concept_confirmation_depth",
+      "sample_breadth_gap": true,
+      "cross_pocket_or_cross_regime_gap": true,
+      "non_redundancy_stress_gap": true,
+      "safe_consumption_beyond_report_only_gap": true,
+      "primary_shortfall": "cross_pocket_or_cross_regime_gap",
+      "minimum_evidence_path": "bounded_cross_theme_or_cross_regime_consistency_review",
+      "promotion_readiness_now": false,
+      "review_reading": "The feature remains alive inside provisional candidacy, but promotion still needs explicit new evidence beyond current bounded admissibility and stability review.",
+      "admissibility_basis_present": true
+    }
+  ],
+  "interpretation": [
+    "V1.7 asks what evidence is still missing, not whether the current provisional candidates should already be promoted.",
+    "Each current provisional feature still has explicit promotion shortfalls even though it remains alive under bounded review.",
+    "The next legal step is a V1.7 phase check, not retained-feature promotion itself."
+  ]
+}

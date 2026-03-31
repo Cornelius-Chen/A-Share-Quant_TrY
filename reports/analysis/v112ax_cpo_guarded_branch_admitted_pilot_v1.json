@@ -1,0 +1,87 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ax_cpo_guarded_branch_admitted_pilot_v1",
+    "row_count_after_guarded_branch_admission": 10,
+    "admitted_branch_row_count": 3,
+    "sample_count": 2934,
+    "core_targets_stable_after_guarded_branch_admission": true,
+    "guarded_targets_stable_after_guarded_branch_admission": true,
+    "best_target_after_guarded_branch_admission": "phase_progression_label",
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "review_if_guarded_branch_rows_can_enter_the_next_bounded_training_layer"
+  },
+  "target_rows": [
+    {
+      "target_name": "phase_progression_label",
+      "baseline_accuracy": 0.8048,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.1952
+    },
+    {
+      "target_name": "role_state_label",
+      "baseline_accuracy": 0.5891,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.4109
+    },
+    {
+      "target_name": "catalyst_sequence_label",
+      "baseline_accuracy": 0.8048,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.1952
+    },
+    {
+      "target_name": "board_condition_label",
+      "baseline_accuracy": 0.8831,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.1169
+    },
+    {
+      "target_name": "role_transition_label",
+      "baseline_accuracy": 0.6636,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.3364
+    },
+    {
+      "target_name": "failed_role_promotion_label",
+      "baseline_accuracy": 0.9604,
+      "gbdt_accuracy": 1.0,
+      "gbdt_minus_baseline": 0.0396
+    }
+  ],
+  "admitted_branch_rows": [
+    {
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "pilot_posture": "guarded_training_context_row"
+    },
+    {
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "pilot_posture": "guarded_training_context_row"
+    },
+    {
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "pilot_posture": "guarded_training_context_row"
+    }
+  ],
+  "interpretation": [
+    "V1.12AX operationalizes the guarded branch admission cut from V1.12AW.",
+    "This remains report-only and does not open formal training or signal rights.",
+    "A successful result means the admitted branch subset is stable enough for the next bounded layer review."
+  ]
+}

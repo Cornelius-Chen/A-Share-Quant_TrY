@@ -1,0 +1,176 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bv_contributor_aligned_control_pilot_v1",
+    "worst_trade_symbol": "300757",
+    "worst_trade_stage_family": "main_markup",
+    "worst_trade_role_family": "packaging_process_enabler",
+    "trade_count": 5,
+    "vetoed_trade_count": 2,
+    "holding_veto_half_life_count": 2,
+    "total_return": 1.2989,
+    "max_drawdown": -0.0821,
+    "profit_factor": "inf",
+    "bp_return_delta": -0.8929,
+    "bp_drawdown_delta": 0.2781,
+    "bu_return_delta": 0.0412,
+    "bu_drawdown_delta": 0.2781,
+    "neutral_return_delta": -0.9492,
+    "neutral_drawdown_delta": 0.1285,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_followup_next": true,
+    "recommended_next_posture": "promote_contributor_aligned_entry_veto_as_candidate_control"
+  },
+  "contributor_rows": [
+    {
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "entry_date": "2024-03-18",
+      "exit_date": "2024-04-17",
+      "realized_forward_return_20d": -0.1668,
+      "path_max_drawdown": -0.3602,
+      "ranker_score": 0.9095,
+      "gate_prob": 0.9867
+    }
+  ],
+  "trade_rows": [
+    {
+      "entry_date": "2024-02-06",
+      "exit_date": "2024-03-13",
+      "symbol": "002281",
+      "stage_family": "main_markup",
+      "role_family": "domestic_optics_platform_bridge",
+      "holding_days": 20,
+      "ranker_score": 0.3676,
+      "realized_forward_return": 0.7673,
+      "path_max_drawdown": -0.0821,
+      "entry_equity": 1.0,
+      "exit_equity": 1.7673
+    },
+    {
+      "entry_date": "2025-07-25",
+      "exit_date": "2025-08-08",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "holding_days": 10,
+      "ranker_score": 0.2751,
+      "realized_forward_return": 0.0538,
+      "path_max_drawdown": -0.0574,
+      "entry_equity": 1.7673,
+      "exit_equity": 1.8624
+    },
+    {
+      "entry_date": "2025-09-15",
+      "exit_date": "2025-09-29",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "holding_days": 10,
+      "ranker_score": 0.3344,
+      "realized_forward_return": 0.1084,
+      "path_max_drawdown": -0.0208,
+      "entry_equity": 1.8624,
+      "exit_equity": 2.0643
+    },
+    {
+      "entry_date": "2025-11-07",
+      "exit_date": "2025-12-05",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "holding_days": 20,
+      "ranker_score": 0.3016,
+      "realized_forward_return": 0.0959,
+      "path_max_drawdown": -0.0715,
+      "entry_equity": 2.0643,
+      "exit_equity": 2.2623
+    },
+    {
+      "entry_date": "2025-12-29",
+      "exit_date": "2026-01-28",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "holding_days": 20,
+      "ranker_score": 0.3668,
+      "realized_forward_return": 0.0162,
+      "path_max_drawdown": -0.0793,
+      "entry_equity": 2.2623,
+      "exit_equity": 2.2989
+    }
+  ],
+  "control_action_rows": [
+    {
+      "entry_date": "2024-03-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "control_action": "contributor_aligned_entry_veto"
+    },
+    {
+      "entry_date": "2024-04-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "control_action": "contributor_aligned_entry_veto"
+    },
+    {
+      "entry_date": "2025-07-25",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "control_action": "holding_veto_half_life"
+    },
+    {
+      "entry_date": "2025-09-15",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "control_action": "holding_veto_half_life"
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "return_vs_bp_fusion",
+      "baseline_value": 2.1918,
+      "pilot_value": 1.2989,
+      "delta": -0.8929
+    },
+    {
+      "comparison_name": "max_drawdown_vs_bp_fusion",
+      "baseline_value": -0.3602,
+      "pilot_value": -0.0821,
+      "delta": 0.2781
+    },
+    {
+      "comparison_name": "return_vs_bu",
+      "baseline_value": 1.2577,
+      "pilot_value": 1.2989,
+      "delta": 0.0412
+    },
+    {
+      "comparison_name": "max_drawdown_vs_bu",
+      "baseline_value": -0.3602,
+      "pilot_value": -0.0821,
+      "delta": 0.2781
+    },
+    {
+      "comparison_name": "return_vs_neutral",
+      "baseline_value": 2.2481,
+      "pilot_value": 1.2989,
+      "delta": -0.9492
+    },
+    {
+      "comparison_name": "max_drawdown_vs_neutral",
+      "baseline_value": -0.2106,
+      "pilot_value": -0.0821,
+      "delta": 0.1285
+    }
+  ],
+  "interpretation": [
+    "V1.12BV is a contributor-aligned refined control pilot built to target the actual drawdown source from the fusion baseline.",
+    "It keeps prior lawful holding-veto behavior but replaces generic control hope with a direct contributor-aligned entry veto."
+  ]
+}

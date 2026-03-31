@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bj_as_cpo_neutral_teacher_gate_pilot",
+    "do_open_v112bj_now": true,
+    "trade_count": 0,
+    "cash_ratio": 1.0,
+    "teacher_alignment_recall": 0.0,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bj_teacher_gate_pilot",
+      "actual": {
+        "total_return": 0.0,
+        "neutral_return_delta": -2.2481,
+        "teacher_alignment_recall": 0.0
+      },
+      "reading": "The phase is only meaningful if the teacher-gate line both remains lawful and reveals whether neutral-style participation can be learned."
+    }
+  ],
+  "interpretation": [
+    "V1.12BJ is valid because it turns the strongest current no-leak line into a learnable teacher instead of adding an unrelated objective."
+  ]
+}

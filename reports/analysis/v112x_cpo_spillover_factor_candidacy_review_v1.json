@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112x_cpo_spillover_sidecar_probe_v1",
+    "reviewed_spillover_row_count": 3,
+    "bounded_spillover_factor_candidate_count": 2,
+    "weak_memory_only_row_count": 1,
+    "formal_feature_candidate_count": 0,
+    "ready_for_phase_check_next": true
+  },
+  "factor_review_rows": [
+    {
+      "symbol": "000070",
+      "refined_spillover_bucket": "telecom_or_network_adjacent_board_follow",
+      "review_candidacy_status": "keep_as_bounded_a_share_spillover_factor_candidate",
+      "candidate_factor_family": "telecom_adjacent_board_follow_factor",
+      "sidecar_probe_score": 0.62,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The row is weak on business purity but the sidecar-style score is high enough to preserve it as a telecom-adjacent board-follow factor candidate."
+    },
+    {
+      "symbol": "603228",
+      "refined_spillover_bucket": "hardware_or_supply_chain_sentiment_spillover",
+      "review_candidacy_status": "keep_as_bounded_a_share_spillover_factor_candidate",
+      "candidate_factor_family": "hardware_sentiment_spillover_factor",
+      "sidecar_probe_score": 0.59,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The row remains structurally useful as a hardware-chain sentiment spillover candidate even if its direct CPO linkage is weak."
+    },
+    {
+      "symbol": "001267",
+      "refined_spillover_bucket": "name_bonus_or_pure_board_follow",
+      "review_candidacy_status": "keep_as_weak_name_bonus_memory_only",
+      "candidate_factor_family": "name_bonus_or_board_follow_memory",
+      "sidecar_probe_score": 0.24,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The row should remain preserved as weak name-bonus memory because the sidecar-style score is too weak for bounded factor candidacy."
+    }
+  ],
+  "interpretation": [
+    "V1.12X upgrades the preserved spillover rows from flat memory into explicit review-only spillover-factor candidacy status with bounded sidecar scores.",
+    "Two rows remain bounded A-share spillover-factor candidates, while one remains weaker name-bonus memory only.",
+    "This still does not authorize training or formal feature promotion."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ab_as_bounded_labeling_review_only",
+    "do_open_v112ab_now": true,
+    "primary_labeling_surface_count": 3,
+    "secondary_labeling_surface_count": 4,
+    "excluded_pending_surface_count": 3,
+    "allow_auto_label_freeze_now": false,
+    "allow_auto_training_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_then_bounded_label_draft_assembly"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ab_labeling_review",
+      "actual": {
+        "primary_labeling_surface_count": 3,
+        "secondary_labeling_surface_count": 4,
+        "excluded_pending_surface_count": 3
+      },
+      "reading": "The CPO line now has explicit later label surfaces and exclusions."
+    }
+  ],
+  "interpretation": [
+    "V1.12AB keeps label freezing closed while making later drafting surfaces explicit.",
+    "Training remains closed."
+  ]
+}

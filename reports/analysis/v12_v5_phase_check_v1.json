@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "open_second_v5_lane_on_clean_persistence_track",
+    "v5_manifest_ready": true,
+    "first_lane_opening_led": true,
+    "lane_changes_carry_reading": false,
+    "additional_carry_rows_needed": 2,
+    "additional_persistence_rows_needed": 2,
+    "do_open_second_v5_lane_now": true,
+    "do_widen_v5_now": false,
+    "recommended_next_track": "clean_persistence_row",
+    "recommended_next_symbol": "600760"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "first_v5_lane",
+      "actual": {
+        "top_driver": "002273",
+        "opening_present": true,
+        "persistence_present": false,
+        "lane_changes_carry_reading": false
+      },
+      "reading": "The first v5 lane closed as opening-led and therefore did not satisfy the carry-gap mission by itself."
+    },
+    {
+      "evidence_name": "training_gap_manifest",
+      "actual": {
+        "additional_carry_rows_needed": 2,
+        "additional_persistence_rows_needed": 2,
+        "opening_count_frozen": true
+      },
+      "reading": "Opening is frozen; only true carry rows and clean persistence rows are valid next training-gap targets."
+    },
+    {
+      "evidence_name": "clean_persistence_candidates",
+      "actual": {
+        "candidate_symbols": [
+          "600760",
+          "601989"
+        ],
+        "ranked_nonzero_symbols": [
+          {
+            "symbol": "600760",
+            "pnl_delta": -18.429634
+          }
+        ]
+      },
+      "reading": "If a second lane is opened, it should pivot to the clean-persistence track rather than keep chasing another nominal carry symbol after the first lane closes as opening-led."
+    }
+  ],
+  "interpretation": [
+    "The first v5 lane does not justify broadening replay or reclassifying the substrate as carry-resolved.",
+    "But because the training-gap manifest still needs both carry and persistence rows, a single bounded second lane remains legal if it stays inside the clean-persistence track.",
+    "So the correct next move is one more v5 lane on the clean-persistence track, not a wider v5 replay expansion."
+  ]
+}

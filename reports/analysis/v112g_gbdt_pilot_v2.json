@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112g_gbdt_pilot_v2",
+    "baseline_v1_test_accuracy": 0.4509,
+    "baseline_v2_test_accuracy": 0.4628,
+    "gbdt_v1_test_accuracy": 0.558,
+    "gbdt_v2_test_accuracy": 0.5655,
+    "gbdt_v1_major_markup_fp": 125,
+    "gbdt_v2_major_markup_fp": 126,
+    "gbdt_v1_high_level_consolidation_fp": 1,
+    "gbdt_v2_high_level_consolidation_fp": 0,
+    "ready_for_phase_check_next": true
+  },
+  "model_row": {
+    "model_name": "hist_gradient_boosting_classifier_v2",
+    "test_accuracy": 0.5655,
+    "carry_constructive_precision": 0.6088,
+    "carry_constructive_recall": 0.6429,
+    "false_positive_count_in_major_markup": 126,
+    "false_positive_count_in_high_level_consolidation": 0
+  },
+  "interpretation": [
+    "This rerun keeps the same frozen dataset and same GBDT family; only catalyst-state representation changes.",
+    "The highest-value comparison is whether hotspot optimism improves without paying too much elsewhere.",
+    "The result should inform whether to implement feature v2, label refinement, or both."
+  ]
+}

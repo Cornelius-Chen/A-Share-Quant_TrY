@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "integrate_v112a_owner_corrections_v1",
+    "object_count": 3,
+    "resolved_cycle_count": 1,
+    "pending_cycle_count": 2,
+    "ready_for_partial_pilot_dataset_draft_next": true
+  },
+  "integrated_rows": [
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "pool_role_guess": "core_beta_beneficiary",
+      "final_role_label_cn": "高弹性核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window_defined": false,
+      "cycle_window": {},
+      "cycle_notes": "",
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "integrated_role_translation",
+      "cycle_window_correction_status": "owner_review_needed",
+      "owner_notes": "",
+      "still_pending_fields": [
+        "cycle_window",
+        "owner_notes"
+      ]
+    },
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "pool_role_guess": "leader_or_core_beneficiary",
+      "final_role_label_cn": "龙头/核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window_defined": true,
+      "cycle_window": {
+        "first_markup_start": "2023-03",
+        "first_markup_end": "2023-07",
+        "box_consolidation_start": "2023-08",
+        "box_consolidation_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2026-01",
+        "pullback_window": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_notes": "月K视角下，2023-03到2023-07为第一波上涨；2023-08到2025-05箱体震荡；2025-06到2026-01主升浪；2026-02约18%回调，2026-03反弹约10%并重新站回5日线。",
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "integrated_role_translation",
+      "cycle_window_correction_status": "integrated_owner_window",
+      "owner_notes": "优先作为第一版周期窗口标杆。",
+      "still_pending_fields": []
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "pool_role_guess": "mid_core_component_beneficiary",
+      "final_role_label_cn": "上游核心器件平台受益股",
+      "include_in_first_pilot": true,
+      "cycle_window_defined": false,
+      "cycle_window": {},
+      "cycle_notes": "",
+      "object_missing_or_extra_review": "owner_review_needed",
+      "role_correction_status": "integrated_role_translation",
+      "cycle_window_correction_status": "owner_review_needed",
+      "owner_notes": "",
+      "still_pending_fields": [
+        "cycle_window",
+        "owner_notes"
+      ]
+    }
+  ],
+  "interpretation": [
+    "Owner corrections are integrated incrementally rather than waiting for every field to be fully specified.",
+    "This lets the pilot move from a blank review sheet to a partially resolved dataset draft while keeping unresolved fields explicit.",
+    "The next step is to freeze a partial pilot dataset draft that shows what is ready and what still needs correction."
+  ]
+}

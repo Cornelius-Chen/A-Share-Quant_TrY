@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112h_candidate_substate_clustering_draft_v1",
+    "candidate_cluster_count": 4,
+    "high_level_consolidation_sample_count": 94,
+    "test_fold_sample_count": 29,
+    "high_level_consolidation_label_distribution": {
+      "carry_constructive": 22,
+      "failed": 63,
+      "watch_constructive": 9
+    },
+    "candidate_clusters_with_nontrivial_support": 3,
+    "baseline_v2_test_accuracy": 0.4628,
+    "gbdt_v2_test_accuracy": 0.5655,
+    "ready_for_owner_review_next": true
+  },
+  "cluster_rows": [
+    {
+      "candidate_substate_name": "breadth_rich_catalyst_active",
+      "candidate_substate_reading": "Broad consolidation with both fresh catalyst and persistence support; the strongest candidate for a continuation-like substate.",
+      "sample_count_total": 15,
+      "sample_count_train": 14,
+      "sample_count_test": 1,
+      "label_distribution_total": {
+        "carry_constructive": 2,
+        "failed": 11,
+        "watch_constructive": 2
+      },
+      "label_distribution_test": {
+        "failed": 1
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.179665,
+        "cross_day_catalyst_persistence": 0.246228,
+        "theme_breadth_confirmation_proxy": 0.955556
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.18852,
+        "demand_acceleration_proxy": 0.093043,
+        "relative_strength_persistence": 0.151968,
+        "volume_expansion_confirmation": 1.064139,
+        "breakout_or_hold_structure": 0.266667
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-10-29",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.283337,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.122476,
+          "cross_day_catalyst_persistence": 0.205829
+        },
+        {
+          "trade_date": "2025-12-08",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.286246,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.129834,
+          "cross_day_catalyst_persistence": 0.302732
+        },
+        {
+          "trade_date": "2025-12-11",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.326911,
+          "theme_breadth_confirmation_proxy": 1.0,
+          "catalyst_freshness_state": 0.065044,
+          "cross_day_catalyst_persistence": 0.324967
+        }
+      ],
+      "baseline_v2_test_accuracy_in_cluster": 1.0,
+      "baseline_v2_test_carry_fp_count_in_cluster": 0,
+      "gbdt_v2_test_accuracy_in_cluster": 1.0,
+      "gbdt_v2_test_carry_fp_count_in_cluster": 0,
+      "support_level": "strong"
+    },
+    {
+      "candidate_substate_name": "breadth_rich_catalyst_stale",
+      "candidate_substate_reading": "Broad consolidation where breadth remains present but catalyst freshness/persistence have faded; looks like a plateau or late stall candidate.",
+      "sample_count_total": 2,
+      "sample_count_train": 0,
+      "sample_count_test": 2,
+      "label_distribution_total": {
+        "failed": 2
+      },
+      "label_distribution_test": {
+        "failed": 2
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.018378,
+        "cross_day_catalyst_persistence": 0.0,
+        "theme_breadth_confirmation_proxy": 0.666667
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": -0.117291,
+        "demand_acceleration_proxy": 0.006726,
+        "relative_strength_persistence": -0.021501,
+        "volume_expansion_confirmation": 1.000238,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2026-01-28",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.039716,
+          "theme_breadth_confirmation_proxy": 0.666667,
+          "catalyst_freshness_state": 0.036757,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-01-29",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.039716,
+          "theme_breadth_confirmation_proxy": 0.666667,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ],
+      "baseline_v2_test_accuracy_in_cluster": 0.0,
+      "baseline_v2_test_carry_fp_count_in_cluster": 1,
+      "gbdt_v2_test_accuracy_in_cluster": 0.0,
+      "gbdt_v2_test_carry_fp_count_in_cluster": 1,
+      "support_level": "thin"
+    },
+    {
+      "candidate_substate_name": "breadth_thin_catalyst_active",
+      "candidate_substate_reading": "Narrow-breadth consolidation with active catalyst pressure; looks like a catalyst-led transition state rather than a broad breadth state.",
+      "sample_count_total": 16,
+      "sample_count_train": 12,
+      "sample_count_test": 4,
+      "label_distribution_total": {
+        "carry_constructive": 1,
+        "failed": 15
+      },
+      "label_distribution_test": {
+        "carry_constructive": 1,
+        "failed": 3
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.044408,
+        "cross_day_catalyst_persistence": 0.1982,
+        "theme_breadth_confirmation_proxy": 0.145833
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": 0.217071,
+        "demand_acceleration_proxy": -0.029255,
+        "relative_strength_persistence": 0.071421,
+        "volume_expansion_confirmation": 0.922912,
+        "breakout_or_hold_structure": 0.125
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2025-12-18",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.234279,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.27347
+        },
+        {
+          "trade_date": "2025-12-16",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.26553,
+          "theme_breadth_confirmation_proxy": 0.0,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.250958
+        },
+        {
+          "trade_date": "2025-12-25",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.298544,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.242494
+        }
+      ],
+      "baseline_v2_test_accuracy_in_cluster": 0.0,
+      "baseline_v2_test_carry_fp_count_in_cluster": 3,
+      "gbdt_v2_test_accuracy_in_cluster": 0.0,
+      "gbdt_v2_test_carry_fp_count_in_cluster": 3,
+      "support_level": "strong"
+    },
+    {
+      "candidate_substate_name": "breadth_thin_catalyst_stale",
+      "candidate_substate_reading": "Narrow-breadth and low-catalyst consolidation; a large mixed bucket that likely hides several weaker sub-modes.",
+      "sample_count_total": 61,
+      "sample_count_train": 39,
+      "sample_count_test": 22,
+      "label_distribution_total": {
+        "carry_constructive": 19,
+        "failed": 35,
+        "watch_constructive": 7
+      },
+      "label_distribution_test": {
+        "carry_constructive": 6,
+        "failed": 14,
+        "watch_constructive": 2
+      },
+      "mean_semantic_v2_features": {
+        "catalyst_freshness_state": 0.031448,
+        "cross_day_catalyst_persistence": 0.014543,
+        "theme_breadth_confirmation_proxy": 0.20765
+      },
+      "mean_support_features": {
+        "product_price_change_proxy": -0.045778,
+        "demand_acceleration_proxy": -0.022422,
+        "relative_strength_persistence": -0.042679,
+        "volume_expansion_confirmation": 0.989359,
+        "breakout_or_hold_structure": 0.0
+      },
+      "representative_rows": [
+        {
+          "trade_date": "2026-02-12",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_cluster_center": 0.148248,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2025-10-20",
+          "symbol": "300502",
+          "true_label": "failed",
+          "distance_to_cluster_center": 0.149532,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.0,
+          "cross_day_catalyst_persistence": 0.0
+        },
+        {
+          "trade_date": "2026-02-13",
+          "symbol": "300502",
+          "true_label": "carry_constructive",
+          "distance_to_cluster_center": 0.176384,
+          "theme_breadth_confirmation_proxy": 0.333333,
+          "catalyst_freshness_state": 0.03779,
+          "cross_day_catalyst_persistence": 0.0
+        }
+      ],
+      "baseline_v2_test_accuracy_in_cluster": 0.2273,
+      "baseline_v2_test_carry_fp_count_in_cluster": 13,
+      "gbdt_v2_test_accuracy_in_cluster": 0.5,
+      "gbdt_v2_test_carry_fp_count_in_cluster": 7,
+      "support_level": "strong"
+    }
+  ],
+  "interpretation": [
+    "The current high_level_consolidation label is likely too coarse to be treated as a single state.",
+    "The cluster draft is review-only and does not define formal new labels.",
+    "One cluster is sparse and should stay provisional, but the full set still suggests multiple candidate substates with different semantic profiles and misread behavior."
+  ]
+}

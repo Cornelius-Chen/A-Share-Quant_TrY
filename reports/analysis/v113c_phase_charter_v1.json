@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113c_bounded_state_usage_review_v1",
+    "phase_name": "V1.13C Bounded State Usage Review",
+    "ready_for_state_usage_review_next": true
+  },
+  "mission": {
+    "goal": "Freeze how the four highest-priority mainline drivers may lawfully enter theme-diffusion state usage without being promoted into formal scoring variables or execution triggers.",
+    "why_now": "V1.13B narrowed the candidate-driver set to a small high-priority quartet. The next bounded move is to define how they can be used in state review while keeping the project above model and execution layers."
+  },
+  "in_scope": [
+    "review usage posture for policy_backing_tier",
+    "review usage posture for industrial_advantage_alignment",
+    "review usage posture for market_regime_tailwind",
+    "review usage posture for event_resonance_intensity",
+    "freeze usage boundaries for schema review only"
+  ],
+  "out_of_scope": [
+    "formal driver promotion into model features",
+    "driver scoring formulas",
+    "execution trigger design",
+    "strategy integration",
+    "new candidate-driver discovery"
+  ],
+  "success_criteria": [
+    "the four highest-priority drivers receive bounded state-usage dispositions",
+    "the project keeps driver usage in the schema-review layer rather than drifting into model or execution logic"
+  ],
+  "stop_criteria": [
+    "the phase tries to score or rank trades directly with the reviewed drivers",
+    "the phase expands into lower-priority candidates instead of staying on the bounded quartet"
+  ],
+  "handoff_condition": "mainline can decide whether to open a bounded archetype usage pass using only the reviewed driver quartet"
+}

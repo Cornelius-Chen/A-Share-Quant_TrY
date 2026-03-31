@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cs_core_residual_stack_status_freeze_v1",
+    "mainline_asset_count": 1,
+    "core_residual_candidate_count": 1,
+    "core_residual_sidecar_count": 1,
+    "eligibility_only_member_count": 1,
+    "joint_promotion_ready": false,
+    "recommended_next_posture": "treat_packaging_as_mainline_keep_300308_as_holding_veto_candidate_keep_300502_as_split_derisk_sidecar_and_defer_joint_promotion"
+  },
+  "stack_rows": [
+    {
+      "stack_item": "packaging_process_enabler",
+      "status": "cluster_mainline_template_asset",
+      "control_language": [
+        "entry_veto",
+        "de_risk",
+        "eligibility"
+      ],
+      "evidence": {
+        "path_total_return": 2.8309,
+        "path_max_drawdown": -0.1854,
+        "validation_accuracy": 0.8824
+      }
+    },
+    {
+      "stack_item": "300308_core_module_leader",
+      "status": "holding_veto_candidate",
+      "control_language": [
+        "continue",
+        "holding_veto"
+      ],
+      "evidence": {
+        "selected_total_return": 2.3929,
+        "selected_max_drawdown": -0.1826,
+        "neutral_return_delta": 0.1448,
+        "neutral_drawdown_delta": 0.028
+      }
+    },
+    {
+      "stack_item": "300502_high_beta_core_module",
+      "status": "split_derisk_sidecar",
+      "control_language": [
+        "neutral_safe_mild_derisk",
+        "evidence_optimizing_stronger_derisk"
+      ],
+      "evidence": {
+        "mild_band_neutral_safe": true,
+        "strong_band_beats_evidence_both": true,
+        "preferred_band": "neutral_safe_mild_derisk_band"
+      }
+    },
+    {
+      "stack_item": "laser_chip_component",
+      "status": "eligibility_only_template_member",
+      "control_language": [
+        "eligibility",
+        "fringe_watch"
+      ],
+      "evidence": {
+        "clean_eligibility_count": 3,
+        "de_risk_fringe_watch_count": 1
+      }
+    }
+  ],
+  "boundary_rows": [
+    {
+      "boundary_name": "mainline_boundary",
+      "reading": "Only packaging_process_enabler is a promoted mainline template asset at the current stage."
+    },
+    {
+      "boundary_name": "candidate_boundary",
+      "reading": "300308 is promotable as a holding-veto candidate but remains separate from packaging's mainline template language."
+    },
+    {
+      "boundary_name": "sidecar_boundary",
+      "reading": "300502 remains a split de-risk sidecar. Mild de-risk is neutral-safe; stronger de-risk stays evidence-optimizing and should not be force-promoted into the default stack."
+    },
+    {
+      "boundary_name": "joint_promotion_boundary",
+      "reading": "Combined core residual replay improves drawdown but gives back return, so joint promotion remains deferred.",
+      "combined_return_delta_vs_neutral": -0.0377,
+      "combined_drawdown_delta_vs_neutral": 0.028
+    }
+  ],
+  "interpretation": [
+    "V1.12CS freezes the current CPO core residual stack into a governed status map instead of continuing to mix mature assets, candidates, and sidecars.",
+    "Packaging remains the only promoted mainline refined template; 300308 becomes a holding-veto candidate, 300502 remains a split de-risk sidecar, and laser stays eligibility-only."
+  ]
+}

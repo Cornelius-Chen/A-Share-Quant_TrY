@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112g_as_semantic_v2_rerun_success",
+    "feature_schema_v2_present": true,
+    "baseline_v2_present": true,
+    "gbdt_v2_present": true,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_semantic_v2_delta_before_any_label_or_scope_change"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112g_charter",
+      "actual": {
+        "do_open_v112g_now": true
+      },
+      "reading": "V1.12G opened lawfully as a same-scope semantic rerun phase."
+    },
+    {
+      "evidence_name": "v112g_schema_v2",
+      "actual": {
+        "new_feature_count": 3,
+        "total_feature_count_v2": 15
+      },
+      "reading": "The catalyst-state semantics are now explicit rather than implicit design notes."
+    },
+    {
+      "evidence_name": "v112g_delta",
+      "actual": {
+        "baseline_v2_test_accuracy": 0.4628,
+        "gbdt_v2_test_accuracy": 0.5655,
+        "gbdt_v2_high_level_consolidation_fp": 0
+      },
+      "reading": "The same-scope rerun now gives a before/after basis for semantic feature value."
+    }
+  ],
+  "interpretation": [
+    "V1.12G succeeds once semantic v2 can be expressed and rerun on the same dataset.",
+    "The next decision should come from the observed delta, not from a generic belief that more features are always better.",
+    "The lawful next posture is owner review before label or scope changes."
+  ]
+}

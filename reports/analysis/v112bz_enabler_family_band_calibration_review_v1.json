@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bz_enabler_family_band_calibration_review_v1",
+    "role_count": 3,
+    "role_specific_calibration_count": 1,
+    "unchanged_transfer_count": 1,
+    "isolated_role_count": 1,
+    "recommended_next_posture": "promote_packaging_and_laser_as_candidate_template_paths_and_isolate_silicon_review"
+  },
+  "role_calibration_rows": [
+    {
+      "role_family": "laser_chip_component",
+      "sample_count": 4,
+      "pre_calibration_accuracy": 1.0,
+      "post_calibration_accuracy": 1.0,
+      "calibration_posture": "adopt_transferred_band_unchanged"
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "sample_count": 17,
+      "pre_calibration_accuracy": 0.6471,
+      "post_calibration_accuracy": 0.6471,
+      "calibration_posture": "adopt_role_specific_band_edges"
+    },
+    {
+      "role_family": "silicon_photonics_component",
+      "sample_count": 4,
+      "pre_calibration_accuracy": 0.25,
+      "post_calibration_accuracy": 0.25,
+      "calibration_posture": "do_not_transfer_unmodified"
+    }
+  ],
+  "calibrated_band_rows": [
+    {
+      "role_family": "packaging_process_enabler",
+      "feature_name": "core_branch_relative_strength_spread_state",
+      "direction": "higher_is_better",
+      "calibrated_midpoint": -0.080571
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "feature_name": "core_spillover_divergence_state",
+      "direction": "higher_is_better",
+      "calibrated_midpoint": -0.094268
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "feature_name": "spillover_saturation_overlay_state",
+      "direction": "lower_is_better",
+      "calibrated_midpoint": 0.176686
+    },
+    {
+      "role_family": "packaging_process_enabler",
+      "feature_name": "ai_hardware_cross_board_resonance_state",
+      "direction": "higher_is_better",
+      "calibrated_midpoint": -0.05129
+    }
+  ],
+  "diagnostic_rows": [
+    {
+      "role_family": "silicon_photonics_component",
+      "sample_count": 4,
+      "pre_calibration_accuracy": 0.25,
+      "diagnostic_posture": "isolate_role_for_separate_direction_review",
+      "reading": "Transferred direction set is insufficiently aligned for direct family-wide calibration."
+    }
+  ],
+  "interpretation": [
+    "V1.12BZ shows that the 4-direction band transfers at the direction level, but edge calibration must still be role-specific.",
+    "Laser-chip states can keep the transferred band, packaging-process-enabler needs local edge calibration, and silicon-photonics should be isolated for separate review."
+  ]
+}

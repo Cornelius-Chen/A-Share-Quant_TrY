@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v113g_as_scope_freeze_only",
+    "do_open_v113g_now": true,
+    "selected_archetype": "commercial_space_mainline",
+    "validated_local_seed_count": 3,
+    "owner_named_candidate_count": 16,
+    "ready_for_phase_closure_next": true,
+    "allow_auto_training_now": false,
+    "allow_auto_label_freeze_now": false,
+    "recommended_next_posture": "close_v113g_and_decide_whether_to_open_bounded_candidate_validation"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "study_scope",
+      "actual": {
+        "validated_local_seed_count": 3,
+        "owner_named_candidate_count": 16,
+        "bounded_study_dimension_count": 8
+      },
+      "reading": "The commercial-space deep-study scope is now explicit and bounded rather than implicit owner intuition."
+    }
+  ],
+  "interpretation": [
+    "V1.13G succeeds once the high-value commercial-space study scope is frozen cleanly.",
+    "This remains above label freeze and training."
+  ]
+}

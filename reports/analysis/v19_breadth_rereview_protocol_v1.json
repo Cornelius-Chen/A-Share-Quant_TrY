@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v19_breadth_rereview_protocol_v1",
+    "target_feature_count": 2,
+    "allow_retained_promotion_now": false,
+    "ready_for_per_feature_breadth_rereview_next": true
+  },
+  "protocol": {
+    "target_feature_rows": [
+      {
+        "feature_name": "policy_followthrough_support",
+        "prior_primary_shortfall": "sample_breadth_gap",
+        "new_admitted_case_count": 2,
+        "rereview_axes": [
+          "breadth_gap_reduction",
+          "updated_primary_shortfall",
+          "promotion_readiness_refresh"
+        ]
+      },
+      {
+        "feature_name": "single_pulse_support",
+        "prior_primary_shortfall": "sample_breadth_gap",
+        "new_admitted_case_count": 3,
+        "rereview_axes": [
+          "breadth_gap_reduction",
+          "updated_primary_shortfall",
+          "promotion_readiness_refresh"
+        ]
+      }
+    ],
+    "bounded_rules": [
+      "re-review must use only already collected breadth evidence",
+      "re-review may update shortfall ordering but may not promote features",
+      "re-review must preserve prior admissibility and stability boundaries",
+      "re-review must stay below strategy integration"
+    ],
+    "forbidden_actions": [
+      "retained_feature_promotion",
+      "strategy_integration",
+      "new_collection_inside_rereview",
+      "new_refresh_opening"
+    ]
+  },
+  "interpretation": [
+    "V1.9 does not create more evidence; it refreshes promotion judgment using the breadth evidence already collected in V1.8C.",
+    "The protocol allows shortfall re-ordering, but still forbids promotion and strategy integration.",
+    "The next legal action is per-feature breadth re-review, not another collection round."
+  ]
+}

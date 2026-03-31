@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ba_cpo_10_row_layer_replacement_review_v1",
+    "old_baseline_row_count": 7,
+    "new_layer_row_count": 10,
+    "replace_7_row_baseline_now": true,
+    "replacement_posture": "10_row_guarded_layer_becomes_default_next_pilot_layer",
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "open_next_bounded_pilot_on_10_row_guarded_layer"
+  },
+  "comparison_rows": [
+    {
+      "comparison_name": "row_count",
+      "old_7_row_baseline": 7,
+      "new_10_row_layer": 10,
+      "reading": "The replacement only matters if the wider layer stays bounded rather than drifting into generic widen."
+    },
+    {
+      "comparison_name": "core_target_stability",
+      "old_7_row_baseline": "stable_in_v112am_and_followups",
+      "new_10_row_layer": true,
+      "reading": "Core stability must survive the guarded branch addition."
+    },
+    {
+      "comparison_name": "guarded_target_stability",
+      "old_7_row_baseline": "stable_after_guarded_target_widen",
+      "new_10_row_layer": true,
+      "reading": "Guarded targets must also survive, otherwise the wider layer should not replace the old one."
+    },
+    {
+      "comparison_name": "boundary_posture",
+      "old_7_row_baseline": "no_branch_rows",
+      "new_10_row_layer": "3_guarded_branch_rows_plus_1_retained_review_only_row_outside",
+      "reading": "The new layer is only lawful because the mixed connector/MPO branch stays outside."
+    }
+  ],
+  "interpretation": [
+    "The 10-row layer can replace the 7-row baseline for the next bounded pilot because the guarded branch addition remained stable.",
+    "This replacement does not erase the guarded boundary on the three added branch rows.",
+    "Formal training and signal rights remain closed."
+  ]
+}

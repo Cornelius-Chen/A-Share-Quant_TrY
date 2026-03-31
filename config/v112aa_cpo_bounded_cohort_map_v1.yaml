@@ -1,0 +1,9 @@
+report:
+  name: v112aa_cpo_bounded_cohort_map_v1
+paths:
+  reports_dir: reports/analysis
+  v112aa_phase_charter_report: reports/analysis/v112aa_phase_charter_v1.json
+  v112z_reconstruction_report: reports/analysis/v112z_bounded_cycle_reconstruction_pass_v1.json
+  v112r_adjacent_validation_report: reports/analysis/v112r_adjacent_cohort_validation_v1.json
+  v112y_adjacent_split_report: reports/analysis/v112y_cpo_adjacent_role_split_sidecar_probe_v1.json
+  v112x_spillover_factor_report: reports/analysis/v112x_cpo_spillover_factor_candidacy_review_v1.json

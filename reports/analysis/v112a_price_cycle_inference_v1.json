@@ -1,0 +1,812 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112a_price_cycle_inference_v1_for_owner_calibration",
+    "benchmark_symbol_count": 1,
+    "inferred_symbol_count": 2,
+    "ready_for_dataset_draft_v2_next": true
+  },
+  "benchmark_rows": [
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "final_role_label_cn": "龙头/核心受益股",
+      "data_source": "tencent_day_kline_non_adjusted",
+      "date_range": {
+        "start": "2020-01-16",
+        "end": "2026-03-30"
+      },
+      "owner_cycle_window": {
+        "first_markup_start": "2023-03",
+        "first_markup_end": "2023-07",
+        "box_consolidation_start": "2023-08",
+        "box_consolidation_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2026-01",
+        "pullback_window": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "price_structure_tail_monthly": [
+        {
+          "index": 0,
+          "open": 99.03,
+          "close": 83.49,
+          "high": 101.38,
+          "low": 67.2,
+          "volume": 8187574.0,
+          "mom": -15.36,
+          "qoq": -27.29,
+          "draw_from_12m_high": -46.91
+        },
+        {
+          "index": 1,
+          "open": 85.17,
+          "close": 93.55,
+          "high": 101.09,
+          "low": 85.15,
+          "volume": 7321927.0,
+          "mom": 12.05,
+          "qoq": -7.26,
+          "draw_from_12m_high": -39.59
+        },
+        {
+          "index": 2,
+          "open": 92.5,
+          "close": 145.86,
+          "high": 146.6,
+          "low": 91.75,
+          "volume": 11070714.0,
+          "mom": 55.92,
+          "qoq": 47.87,
+          "draw_from_12m_high": -5.81
+        },
+        {
+          "index": 3,
+          "open": 143.59,
+          "close": 217.61,
+          "high": 228.6,
+          "low": 130.21,
+          "volume": 11575074.0,
+          "mom": 49.19,
+          "qoq": 160.64,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 4,
+          "open": 212.52,
+          "close": 354.92,
+          "high": 367.7,
+          "low": 197.2,
+          "volume": 8957444.0,
+          "mom": 63.1,
+          "qoq": 279.39,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 5,
+          "open": 372.75,
+          "close": 403.68,
+          "high": 457.01,
+          "low": 344.0,
+          "volume": 11969586.0,
+          "mom": 13.74,
+          "qoq": 176.76,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 6,
+          "open": 419.0,
+          "close": 473.01,
+          "high": 542.01,
+          "low": 337.0,
+          "volume": 7495768.0,
+          "mom": 17.17,
+          "qoq": 117.37,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 7,
+          "open": 470.67,
+          "close": 514.5,
+          "high": 558.77,
+          "low": 436.96,
+          "volume": 7223770.0,
+          "mom": 8.77,
+          "qoq": 44.96,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 8,
+          "open": 524.0,
+          "close": 610.0,
+          "high": 658.8,
+          "low": 512.34,
+          "volume": 6907247.0,
+          "mom": 18.56,
+          "qoq": 51.11,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 9,
+          "open": 621.08,
+          "close": 649.0,
+          "high": 653.58,
+          "low": 558.85,
+          "volume": 6667990.0,
+          "mom": 6.39,
+          "qoq": 37.21,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 10,
+          "open": 635.01,
+          "close": 534.0,
+          "high": 658.58,
+          "low": 515.0,
+          "volume": 4878145.0,
+          "mom": -17.72,
+          "qoq": 3.79,
+          "draw_from_12m_high": -17.72
+        },
+        {
+          "index": 11,
+          "open": 520.0,
+          "close": 589.08,
+          "high": 645.0,
+          "low": 506.0,
+          "volume": 6595832.0,
+          "mom": 10.31,
+          "qoq": -3.43,
+          "draw_from_12m_high": -9.23
+        }
+      ],
+      "price_structure_tail_weekly": [
+        {
+          "index": 0,
+          "open": 605.0,
+          "close": 585.0,
+          "high": 624.5,
+          "low": 580.0,
+          "volume": 1535442.0,
+          "wow": -5.19,
+          "draw_from_26w_high": -6.7
+        },
+        {
+          "index": 1,
+          "open": 580.0,
+          "close": 649.0,
+          "high": 653.58,
+          "low": 572.01,
+          "volume": 1583964.0,
+          "wow": 10.94,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 2,
+          "open": 635.01,
+          "close": 540.01,
+          "high": 658.58,
+          "low": 525.13,
+          "volume": 2163721.0,
+          "wow": -16.79,
+          "draw_from_26w_high": -16.79
+        },
+        {
+          "index": 3,
+          "open": 561.0,
+          "close": 531.0,
+          "high": 573.99,
+          "low": 515.0,
+          "volume": 1543149.0,
+          "wow": -1.67,
+          "draw_from_26w_high": -18.18
+        },
+        {
+          "index": 4,
+          "open": 542.0,
+          "close": 534.0,
+          "high": 574.0,
+          "low": 522.0,
+          "volume": 1171275.0,
+          "wow": 0.56,
+          "draw_from_26w_high": -17.72
+        },
+        {
+          "index": 5,
+          "open": 520.0,
+          "close": 545.48,
+          "high": 599.04,
+          "low": 520.0,
+          "volume": 1792305.0,
+          "wow": 2.15,
+          "draw_from_26w_high": -15.95
+        },
+        {
+          "index": 6,
+          "open": 520.1,
+          "close": 542.02,
+          "high": 568.9,
+          "low": 506.0,
+          "volume": 1287908.0,
+          "wow": -0.63,
+          "draw_from_26w_high": -16.48
+        },
+        {
+          "index": 7,
+          "open": 549.05,
+          "close": 612.0,
+          "high": 632.72,
+          "low": 539.0,
+          "volume": 1822482.0,
+          "wow": 12.91,
+          "draw_from_26w_high": -5.7
+        },
+        {
+          "index": 8,
+          "open": 590.31,
+          "close": 598.0,
+          "high": 645.0,
+          "low": 577.0,
+          "volume": 1483882.0,
+          "wow": -2.29,
+          "draw_from_26w_high": -7.86
+        },
+        {
+          "index": 9,
+          "open": 585.0,
+          "close": 589.08,
+          "high": 595.58,
+          "low": 579.0,
+          "volume": 209255.0,
+          "wow": -1.49,
+          "draw_from_26w_high": -9.23
+        }
+      ],
+      "status": "owner_anchor_present"
+    }
+  ],
+  "inferred_rows": [
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "final_role_label_cn": "高弹性核心受益股",
+      "data_source": "tencent_day_kline_non_adjusted",
+      "date_range": {
+        "start": "2020-01-16",
+        "end": "2026-03-30"
+      },
+      "bars_count": 1500,
+      "inference_confidence": "medium_owner_calibration_required",
+      "suggested_cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-05",
+        "cooling_and_box_start": "2023-06",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-06",
+        "long_box_reset_start": "2024-07",
+        "long_box_reset_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2025-09",
+        "high_level_consolidation_start": "2025-10",
+        "high_level_consolidation_end": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "price_structure_tail_monthly": [
+        {
+          "index": 0,
+          "open": 98.51,
+          "close": 89.79,
+          "high": 101.65,
+          "low": 65.64,
+          "volume": 8312481.0,
+          "mom": -8.49,
+          "qoq": -28.61,
+          "draw_from_12m_high": -31.02
+        },
+        {
+          "index": 1,
+          "open": 92.9,
+          "close": 88.27,
+          "high": 125.55,
+          "low": 81.03,
+          "volume": 8339854.0,
+          "mom": -1.69,
+          "qoq": -8.09,
+          "draw_from_12m_high": -32.19
+        },
+        {
+          "index": 2,
+          "open": 87.15,
+          "close": 127.02,
+          "high": 128.39,
+          "low": 85.84,
+          "volume": 9667343.0,
+          "mom": 43.9,
+          "qoq": 29.45,
+          "draw_from_12m_high": -2.42
+        },
+        {
+          "index": 3,
+          "open": 125.03,
+          "close": 189.21,
+          "high": 200.88,
+          "low": 121.3,
+          "volume": 12083107.0,
+          "mom": 48.96,
+          "qoq": 110.73,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 4,
+          "open": 185.14,
+          "close": 356.2,
+          "high": 368.0,
+          "low": 176.3,
+          "volume": 10021226.0,
+          "mom": 88.26,
+          "qoq": 303.53,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 5,
+          "open": 362.0,
+          "close": 365.77,
+          "high": 401.1,
+          "low": 295.16,
+          "volume": 13089433.0,
+          "mom": 2.69,
+          "qoq": 187.96,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 6,
+          "open": 374.0,
+          "close": 344.31,
+          "high": 433.33,
+          "low": 310.0,
+          "volume": 8361523.0,
+          "mom": -5.87,
+          "qoq": 81.97,
+          "draw_from_12m_high": -5.87
+        },
+        {
+          "index": 7,
+          "open": 339.98,
+          "close": 347.8,
+          "high": 364.9,
+          "low": 287.31,
+          "volume": 8040511.0,
+          "mom": 1.01,
+          "qoq": -2.36,
+          "draw_from_12m_high": -4.91
+        },
+        {
+          "index": 8,
+          "open": 352.0,
+          "close": 430.88,
+          "high": 468.81,
+          "low": 343.57,
+          "volume": 9123936.0,
+          "mom": 23.89,
+          "qoq": 17.8,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 9,
+          "open": 437.01,
+          "close": 419.49,
+          "high": 440.85,
+          "low": 372.54,
+          "volume": 8167487.0,
+          "mom": -2.64,
+          "qoq": 21.83,
+          "draw_from_12m_high": -2.64
+        },
+        {
+          "index": 10,
+          "open": 457.24,
+          "close": 359.86,
+          "high": 472.0,
+          "low": 353.2,
+          "volume": 6443471.0,
+          "mom": -14.21,
+          "qoq": 3.47,
+          "draw_from_12m_high": -16.48
+        },
+        {
+          "index": 11,
+          "open": 347.74,
+          "close": 458.38,
+          "high": 492.0,
+          "low": 346.74,
+          "volume": 9465520.0,
+          "mom": 27.38,
+          "qoq": 6.38,
+          "draw_from_12m_high": 0.0
+        }
+      ],
+      "price_structure_tail_weekly": [
+        {
+          "index": 0,
+          "open": 392.21,
+          "close": 383.02,
+          "high": 411.98,
+          "low": 377.0,
+          "volume": 2093452.0,
+          "wow": -3.57,
+          "draw_from_26w_high": -13.99
+        },
+        {
+          "index": 1,
+          "open": 379.8,
+          "close": 419.49,
+          "high": 425.0,
+          "low": 374.51,
+          "volume": 1933123.0,
+          "wow": 9.52,
+          "draw_from_26w_high": -5.8
+        },
+        {
+          "index": 2,
+          "open": 457.24,
+          "close": 364.06,
+          "high": 472.0,
+          "low": 357.0,
+          "volume": 2858528.0,
+          "wow": -13.21,
+          "draw_from_26w_high": -18.24
+        },
+        {
+          "index": 3,
+          "open": 379.98,
+          "close": 366.11,
+          "high": 405.82,
+          "low": 357.0,
+          "volume": 1954228.0,
+          "wow": 0.56,
+          "draw_from_26w_high": -17.78
+        },
+        {
+          "index": 4,
+          "open": 368.0,
+          "close": 359.86,
+          "high": 388.58,
+          "low": 353.2,
+          "volume": 1630715.0,
+          "wow": -1.71,
+          "draw_from_26w_high": -19.19
+        },
+        {
+          "index": 5,
+          "open": 347.74,
+          "close": 402.0,
+          "high": 422.6,
+          "low": 346.74,
+          "volume": 2490748.0,
+          "wow": 11.71,
+          "draw_from_26w_high": -9.72
+        },
+        {
+          "index": 6,
+          "open": 380.0,
+          "close": 394.03,
+          "high": 408.0,
+          "low": 369.32,
+          "volume": 1958851.0,
+          "wow": -1.98,
+          "draw_from_26w_high": -11.51
+        },
+        {
+          "index": 7,
+          "open": 396.04,
+          "close": 477.05,
+          "high": 490.28,
+          "low": 385.93,
+          "volume": 2751396.0,
+          "wow": 21.07,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 8,
+          "open": 456.13,
+          "close": 447.41,
+          "high": 492.0,
+          "low": 438.0,
+          "volume": 2009271.0,
+          "wow": -6.21,
+          "draw_from_26w_high": -6.21
+        },
+        {
+          "index": 9,
+          "open": 445.2,
+          "close": 458.38,
+          "high": 464.0,
+          "low": 445.2,
+          "volume": 255254.0,
+          "wow": 2.45,
+          "draw_from_26w_high": -3.91
+        }
+      ],
+      "notes_cn": "价格结构更像 2023Q1-Q2 第一轮主升，2024Q1-Q2 第二轮抬升，2025-06 之后进入更陡的主升段，2026-03 形成一次明显反弹窗口。",
+      "calibration_needed_fields": [
+        "cycle_window",
+        "major_markup_end",
+        "cooling_or_box_boundary",
+        "rebound_or_pullback_boundary"
+      ]
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "final_role_label_cn": "上游核心器件平台受益股",
+      "data_source": "tencent_day_kline_non_adjusted",
+      "date_range": {
+        "start": "2020-01-16",
+        "end": "2026-03-30"
+      },
+      "bars_count": 1500,
+      "inference_confidence": "medium_owner_calibration_required",
+      "suggested_cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-06",
+        "cooling_and_box_start": "2023-07",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-04",
+        "deep_box_reset_start": "2024-05",
+        "deep_box_reset_end": "2025-06",
+        "major_markup_start": "2025-07",
+        "major_markup_end": "2026-02",
+        "pullback_window": "2026-03"
+      },
+      "price_structure_tail_monthly": [
+        {
+          "index": 0,
+          "open": 84.7,
+          "close": 68.57,
+          "high": 86.31,
+          "low": 57.11,
+          "volume": 3555106.0,
+          "mom": -18.97,
+          "qoq": -31.97,
+          "draw_from_12m_high": -46.55
+        },
+        {
+          "index": 1,
+          "open": 69.75,
+          "close": 81.7,
+          "high": 82.8,
+          "low": 69.7,
+          "volume": 3848091.0,
+          "mom": 19.15,
+          "qoq": -7.65,
+          "draw_from_12m_high": -36.32
+        },
+        {
+          "index": 2,
+          "open": 81.0,
+          "close": 79.84,
+          "high": 92.57,
+          "low": 66.19,
+          "volume": 7405057.0,
+          "mom": -2.28,
+          "qoq": -5.65,
+          "draw_from_12m_high": -37.77
+        },
+        {
+          "index": 3,
+          "open": 78.33,
+          "close": 105.63,
+          "high": 112.66,
+          "low": 71.5,
+          "volume": 9187145.0,
+          "mom": 32.3,
+          "qoq": 54.05,
+          "draw_from_12m_high": -17.67
+        },
+        {
+          "index": 4,
+          "open": 105.0,
+          "close": 198.53,
+          "high": 200.88,
+          "low": 98.25,
+          "volume": 9219589.0,
+          "mom": 87.95,
+          "qoq": 143.0,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 5,
+          "open": 197.99,
+          "close": 167.8,
+          "high": 225.05,
+          "low": 165.0,
+          "volume": 9199104.0,
+          "mom": -15.48,
+          "qoq": 110.17,
+          "draw_from_12m_high": -15.48
+        },
+        {
+          "index": 6,
+          "open": 167.87,
+          "close": 158.01,
+          "high": 197.9,
+          "low": 146.2,
+          "volume": 6335853.0,
+          "mom": -5.83,
+          "qoq": 49.59,
+          "draw_from_12m_high": -20.41
+        },
+        {
+          "index": 7,
+          "open": 154.06,
+          "close": 158.0,
+          "high": 183.0,
+          "low": 141.14,
+          "volume": 7467914.0,
+          "mom": -0.01,
+          "qoq": -20.42,
+          "draw_from_12m_high": -20.42
+        },
+        {
+          "index": 8,
+          "open": 158.02,
+          "close": 203.03,
+          "high": 242.0,
+          "low": 151.4,
+          "volume": 10288498.0,
+          "mom": 28.5,
+          "qoq": 21.0,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 9,
+          "open": 206.98,
+          "close": 248.43,
+          "high": 261.9,
+          "low": 182.37,
+          "volume": 8182507.0,
+          "mom": 22.36,
+          "qoq": 57.22,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 10,
+          "open": 249.78,
+          "close": 368.7,
+          "high": 377.31,
+          "low": 234.6,
+          "volume": 6159307.0,
+          "mom": 48.41,
+          "qoq": 133.35,
+          "draw_from_12m_high": 0.0
+        },
+        {
+          "index": 11,
+          "open": 366.86,
+          "close": 316.81,
+          "high": 388.94,
+          "low": 277.17,
+          "volume": 7498726.0,
+          "mom": -14.07,
+          "qoq": 56.04,
+          "draw_from_12m_high": -14.07
+        }
+      ],
+      "price_structure_tail_weekly": [
+        {
+          "index": 0,
+          "open": 193.89,
+          "close": 189.16,
+          "high": 200.66,
+          "low": 182.37,
+          "volume": 1758947.0,
+          "wow": -4.46,
+          "draw_from_26w_high": -12.08
+        },
+        {
+          "index": 1,
+          "open": 188.6,
+          "close": 248.43,
+          "high": 261.9,
+          "low": 186.63,
+          "volume": 2859226.0,
+          "wow": 31.33,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 2,
+          "open": 249.78,
+          "close": 252.97,
+          "high": 277.0,
+          "low": 234.6,
+          "volume": 2589951.0,
+          "wow": 1.83,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 3,
+          "open": 277.0,
+          "close": 311.58,
+          "high": 333.79,
+          "low": 266.11,
+          "volume": 2033644.0,
+          "wow": 23.17,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 4,
+          "open": 328.0,
+          "close": 368.7,
+          "high": 377.31,
+          "low": 328.0,
+          "volume": 1535712.0,
+          "wow": 18.33,
+          "draw_from_26w_high": 0.0
+        },
+        {
+          "index": 5,
+          "open": 366.86,
+          "close": 322.88,
+          "high": 388.94,
+          "low": 318.0,
+          "volume": 1936478.0,
+          "wow": -12.43,
+          "draw_from_26w_high": -12.43
+        },
+        {
+          "index": 6,
+          "open": 306.75,
+          "close": 325.0,
+          "high": 344.44,
+          "low": 292.0,
+          "volume": 1608341.0,
+          "wow": 0.66,
+          "draw_from_26w_high": -11.85
+        },
+        {
+          "index": 7,
+          "open": 325.06,
+          "close": 312.0,
+          "high": 336.63,
+          "low": 277.17,
+          "volume": 2067016.0,
+          "wow": -4.0,
+          "draw_from_26w_high": -15.38
+        },
+        {
+          "index": 8,
+          "open": 300.06,
+          "close": 317.6,
+          "high": 339.0,
+          "low": 290.5,
+          "volume": 1655812.0,
+          "wow": 1.79,
+          "draw_from_26w_high": -13.86
+        },
+        {
+          "index": 9,
+          "open": 314.16,
+          "close": 316.81,
+          "high": 322.0,
+          "low": 308.0,
+          "volume": 231079.0,
+          "wow": -0.25,
+          "draw_from_26w_high": -14.07
+        }
+      ],
+      "notes_cn": "价格结构更像 2023Q1-Q2 第一轮主升，2024Q1 的二次抬升较短，2024-05 到 2025-06 属于较长重置区，2025-07 到 2026-02 为最新主升段。",
+      "calibration_needed_fields": [
+        "cycle_window",
+        "major_markup_end",
+        "cooling_or_box_boundary",
+        "rebound_or_pullback_boundary"
+      ]
+    }
+  ],
+  "interpretation": [
+    "This is a price-structure draft built from daily bars and aggregated to weekly/monthly summaries.",
+    "The windows are intentionally coarse because the owner will calibrate them before any training freeze.",
+    "The goal here is not perfect cycle truth, but a usable first-pass price-state draft for calibration."
+  ]
+}

@@ -2,20 +2,20 @@
 
 ## 目的
 
-本文件用于记录每次重要研究改动后的观察、结果和下一步计划�?
-它不是结构化 run 注册表的替代品，而是面向人的研究叙述层�?
+本文件用于记录每次重要研究改动后的观察、结果和下一步计划�?
+它不是结构化 run 注册表的替代品，而是面向人的研究叙述层�?
 ---
 
 ## 记录规则
 
-以下情况至少应记录一�?journal�?
+以下情况至少应记录一�?journal�?
 1. 协议版本升级
 2. 样本切分逻辑变化
 3. 主线定义或打分逻辑变化
 4. 个股分层逻辑变化
 5. 趋势过滤、入场、持有、退出逻辑变化
 6. 成本、滑点、涨跌停成交模型变化
-7. 出现显著结果提升或退�?8. 发现严重 bug、数据污染或结论反转
+7. 出现显著结果提升或退�?8. 发现严重 bug、数据污染或结论反转
 
 ---
 
@@ -294,7 +294,7 @@
 - Expected Impact: Give the project an immediate path to test the real-data ingestion workflow without paying for a formal provider on day one.
 - Observed Result: The bootstrap path was run successfully against live free-source endpoints. It produced local files for `daily_bars`, `index_daily_bars`, `trading_calendar`, and `security_master_lite`. The `security_master_lite` step had to fall back to configured symbols only because the upstream SZSE code-list endpoint timed out, but the overall bootstrap still completed and confirmed that the repo can now leave sample-only data behind.
 - Side Effects / Risks: The bootstrap output still needs field validation, `security_master_lite` is intentionally weaker than the final canonical reference table required by the long-term data contract, and the current Anaconda environment emits noisy NumPy-compatibility warnings from optional pandas acceleration modules during AKShare imports.
-- Conclusion: The project has crossed from “free-data idea�?into “free-data ingestion path,�?but this remains a bootstrap stage rather than the final data architecture.
+- Conclusion: The project has crossed from “free-data idea�?into “free-data ingestion path,�?but this remains a bootstrap stage rather than the final data architecture.
 - Next Step: Install the optional dependency, run the bootstrap script, inspect the exported fields, and then implement canonical loaders that read these local tables.
 
 ### JOURNAL-0017
@@ -307,7 +307,7 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: The project will learn more by wiring the first bootstrapped local tables into an actual runnable code path than by waiting for the full derived-data stack to exist before any integration happens.
 - What Changed: Added canonical loaders for `trading_calendar` and `security_master`, added a bootstrap-backed backtest config and simple matching signals, and documented the current boundary: basic backtests can now use local real bars, but full strategy experiments still require real derived tables that do not yet exist.
-- Expected Impact: Reduce the gap between “data was downloaded�?and “data is actually used by the repo,�?while making the next missing layer explicit.
+- Expected Impact: Reduce the gap between “data was downloaded�?and “data is actually used by the repo,�?while making the next missing layer explicit.
 - Observed Result: The repository now has a concrete local-real-data backtest path instead of only sample-fixture runs and separate bootstrap outputs. The first bootstrap-backed baseline run completed as `20260328T134553Z_caa626ed` using `data/raw/daily_bars/akshare_daily_bars_bootstrap.csv`, with `fill_count=4`, `closed_trade_count=2`, `total_return=-0.000343`, and `max_drawdown=0.000346`.
 - Side Effects / Risks: The system is now intentionally in a transitional mixed mode; users can run backtests on bootstrapped bars, but should not confuse that with a fully real-data protocol pipeline yet.
 - Conclusion: Real-data integration is now underway in the main code path rather than being isolated to a bootstrap script.
@@ -1077,10 +1077,10 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the `300750` mechanism is structural rather than idiosyncratic, then a second tradable symbol in `theme_research_v4 / 2024_q1` should show the same upstream path-shift dates even if it does not produce the same pnl damage.
 - What Changed: Added `theme_q1_symbol_timeline_002466_v1.yaml` and `theme_q1_symbol_path_shift_002466_v1.yaml`, then replayed `shared_default` versus `buffer_only_012` for `002466`.
-- Expected Impact: Distinguish between “the mechanism only exists on `300750`�?and “the mechanism is broader, but only sometimes propagates into trade damage.�?- Observed Result: The replay [theme_q1_symbol_timeline_002466_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_timeline_002466_v1.json) and path-shift report [theme_q1_symbol_path_shift_002466_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_path_shift_002466_v1.json) show the same two most important upstream dates as `300750`: `2024-01-19` splits on approved sector (`electronics` versus `BK1173`), and `2024-02-05` splits on permission (`true` versus `false`). Unlike `300750`, however, both candidates for `002466` still execute the same real trade path and finish with identical pnl. The repeated shape is real; the damage requires an additional state transition that `002466` does not cross.
+- Expected Impact: Distinguish between “the mechanism only exists on `300750`�?and “the mechanism is broader, but only sometimes propagates into trade damage.�?- Observed Result: The replay [theme_q1_symbol_timeline_002466_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_timeline_002466_v1.json) and path-shift report [theme_q1_symbol_path_shift_002466_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_path_shift_002466_v1.json) show the same two most important upstream dates as `300750`: `2024-01-19` splits on approved sector (`electronics` versus `BK1173`), and `2024-02-05` splits on permission (`true` versus `false`). Unlike `300750`, however, both candidates for `002466` still execute the same real trade path and finish with identical pnl. The repeated shape is real; the damage requires an additional state transition that `002466` does not cross.
 - Side Effects / Risks: This reduces the risk of overfitting to a single symbol, but it also means the repo still needs at least one more intermediate symbol if it wants to fully map when a path shift becomes economically harmful.
 - Conclusion: `300750` is not a pure outlier. The upstream path-shift mechanism repeats on another tradable symbol, but the pnl impact is conditional rather than automatic.
-- Next Step: Keep the next symbol-level diagnosis narrow and target another tradable theme symbol that is closer to the boundary between “shape repeats�?and “damage repeats.�?
+- Next Step: Keep the next symbol-level diagnosis narrow and target another tradable theme symbol that is closer to the boundary between “shape repeats�?and “damage repeats.�?
 ### JOURNAL-0066
 
 - Date: 2026-03-29
@@ -1091,7 +1091,7 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the remaining theme-side blocker is truly conditional, then a third tradable symbol should be able to repeat some of the same path-shift dates and assignment divergence while still keeping realized trades unchanged.
 - What Changed: Added `theme_q1_symbol_timeline_002902_v1.yaml` and `theme_q1_symbol_path_shift_002902_v1.yaml`, then replayed `shared_default` versus `buffer_only_012` for a longer `Q1` range with more trades.
-- Expected Impact: Distinguish between “repeated path shifts that merely exist�?and “repeated path shifts that actually alter economic outcomes.�?- Observed Result: The replay [theme_q1_symbol_timeline_002902_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_timeline_002902_v1.json) and path-shift report [theme_q1_symbol_path_shift_002902_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_path_shift_002902_v1.json) show three repeated cross-strategy dates: `2024-01-23`, `2024-02-05`, and `2024-02-28`. The first and third are primarily assignment-layer splits (`leader` versus `junk`, plus a later exit-reason split), while `2024-02-05` again reproduces the incumbent-permission / challenger-no-permission pattern. Even so, the realized trades and total pnl remain identical across both candidates in all three strategies.
+- Expected Impact: Distinguish between “repeated path shifts that merely exist�?and “repeated path shifts that actually alter economic outcomes.�?- Observed Result: The replay [theme_q1_symbol_timeline_002902_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_timeline_002902_v1.json) and path-shift report [theme_q1_symbol_path_shift_002902_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_q1_symbol_path_shift_002902_v1.json) show three repeated cross-strategy dates: `2024-01-23`, `2024-02-05`, and `2024-02-28`. The first and third are primarily assignment-layer splits (`leader` versus `junk`, plus a later exit-reason split), while `2024-02-05` again reproduces the incumbent-permission / challenger-no-permission pattern. Even so, the realized trades and total pnl remain identical across both candidates in all three strategies.
 - Side Effects / Risks: This makes the diagnosis more robust, but it also warns that many repeated theme-side splits may stay latent until they cross a tradable state boundary.
 - Conclusion: The repo now has three useful symbol-level reference classes in the same pocket: `300750` as the first damage case, `002466` as the first repeated-shape case, and `002902` as the first repeated-assignment-divergence case.
 - Next Step: The next cycle should focus less on finding more repeated dates and more on identifying the exact state transition that turns a latent path split into real trade damage.
@@ -1106,10 +1106,10 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the new action-state boundary is really useful, then the current three-symbol set should separate cleanly into triggered and non-triggered cases without another layer of manual interpretation.
 - What Changed: Added `action_state_divergence_analysis.py`, `run_action_state_divergence_analysis.py`, and `theme_action_state_divergence_v1.yaml`, then aggregated the existing symbol path-shift reports one level deeper.
-- Expected Impact: Turn the abstract rule “path shifts only matter after they change actions or active position state�?into a concrete ranking tool for future symbol-level triage.
+- Expected Impact: Turn the abstract rule “path shifts only matter after they change actions or active position state�?into a concrete ranking tool for future symbol-level triage.
 - Observed Result: The report [theme_action_state_divergence_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_action_state_divergence_v1.json) is clean: among `300750`, `002466`, and `002902`, only `300750` has repeated dates that also trigger action-state divergence, specifically `2024-01-19`, `2024-01-22`, `2024-02-05`, and `2024-02-06`. The other two symbols remain fully latent under this stricter ranking.
 - Side Effects / Risks: This ranking is useful, but it still comes from a small symbol set and should guide priority rather than act as a hard protocol rule.
-- Conclusion: The repo now has a sharper prioritization tool than “find repeated shift dates.�?It can focus on symbols that already cross the action-state boundary.
+- Conclusion: The repo now has a sharper prioritization tool than “find repeated shift dates.�?It can focus on symbols that already cross the action-state boundary.
 - Next Step: Use action-state trigger dates as the first filter for any future theme-side replay or structural repair work.
 
 ### JOURNAL-0069
@@ -1122,7 +1122,7 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the `300750` damage case is already narrow enough to repair intelligently, then its repeated action-state trigger dates should decompose into a small number of named trigger classes instead of one blended failure story.
 - What Changed: Added `trigger_taxonomy_analysis.py`, `run_trigger_taxonomy_analysis.py`, and `theme_trigger_taxonomy_300750_v1.yaml`, then classified the twelve repeated action-state trigger rows from `300750`.
-- Expected Impact: Give the next repair cycle a more precise target than “fix the theme-side blocker.�?- Observed Result: The report [theme_trigger_taxonomy_300750_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_trigger_taxonomy_300750_v1.json) shows four repeated trigger classes, each repeated across all three strategies: `early_buy_trigger` (`2024-01-19`), `forced_sell_trigger` (`2024-01-22`), `missed_buy_trigger` (`2024-02-05`), and `position_gap_exit_trigger` (`2024-02-06`). The current blocker is therefore a four-step sequence, not one undifferentiated failure.
+- Expected Impact: Give the next repair cycle a more precise target than “fix the theme-side blocker.�?- Observed Result: The report [theme_trigger_taxonomy_300750_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_trigger_taxonomy_300750_v1.json) shows four repeated trigger classes, each repeated across all three strategies: `early_buy_trigger` (`2024-01-19`), `forced_sell_trigger` (`2024-01-22`), `missed_buy_trigger` (`2024-02-05`), and `position_gap_exit_trigger` (`2024-02-06`). The current blocker is therefore a four-step sequence, not one undifferentiated failure.
 - Side Effects / Risks: The counts are symmetric across strategies, but that still does not prove which trigger type contributes the most economic damage.
 - Conclusion: The repo can now stop talking about `300750` as a generic damage case and start ranking repair work by trigger family.
 - Next Step: The next cycle should estimate which of the four trigger classes carries the most real damage and prioritize that class first.
@@ -1137,7 +1137,7 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the four trigger families are not equally important, then the symbol timeline should show a larger unique-cycle pnl disadvantage on one side of the trigger sequence.
 - What Changed: Added `trigger_priority_analysis.py`, `run_trigger_priority_analysis.py`, and `theme_trigger_priority_300750_v1.yaml`, then ranked the four trigger families by the unique incumbent-only versus challenger-only cycle pnl they align with.
-- Expected Impact: Move the next repair cycle from “which trigger family exists�?to “which trigger family is worth repairing first.�?- Observed Result: The report [theme_trigger_priority_300750_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_trigger_priority_300750_v1.json) is decisive. The incumbent-only unique cycle around `2024-02-06 -> 2024-02-07` contributes `1969.137` across the three strategies, while the challenger-only extra cycle around `2024-01-22 -> 2024-01-23` contributes only `377.037`. This means `missed_buy_trigger` and `position_gap_exit_trigger` are economically dominant, while `early_buy_trigger` and `forced_sell_trigger` are secondary.
+- Expected Impact: Move the next repair cycle from “which trigger family exists�?to “which trigger family is worth repairing first.�?- Observed Result: The report [theme_trigger_priority_300750_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_trigger_priority_300750_v1.json) is decisive. The incumbent-only unique cycle around `2024-02-06 -> 2024-02-07` contributes `1969.137` across the three strategies, while the challenger-only extra cycle around `2024-01-22 -> 2024-01-23` contributes only `377.037`. This means `missed_buy_trigger` and `position_gap_exit_trigger` are economically dominant, while `early_buy_trigger` and `forced_sell_trigger` are secondary.
 - Side Effects / Risks: This ranking is still based on one damage symbol and should not be promoted into a protocol-level rule without more validation.
 - Conclusion: The repo now has a real repair order. The next theme-side cycle should start from missed re-entry and position-gap exit, not from early entry suppression.
 - Next Step: If repair work resumes, target the `2024-02-05 -> 2024-02-06` chain first and treat the `2024-01-19 -> 2024-01-22` chain as a lower-priority clean-up branch.
@@ -1429,7 +1429,7 @@
 - Side Effects / Risks: The inventory is still small and strategy-specific. It ranks the current drawdown family set; it does not yet prove which one scales best across all future slices.
 - Conclusion: The drawdown-specialist loop no longer needs to be driven by whichever pocket was most recently replayed. It now has a first-pass family asset table.
 - Next Step: Keep `entry_suppression_avoidance` as the reusable baseline family. For the next non-baseline research loop, prefer pockets that might repeat `carry_in_basis_advantage` rather than chase another `preemptive_loss_avoidance_shift` case with heavy opportunity-cost baggage.
-- Conclusion: The repo now has a sharper prioritization tool than “find repeated shift dates.�?It can focus on symbols that already cross the action-state boundary.
+- Conclusion: The repo now has a sharper prioritization tool than “find repeated shift dates.�?It can focus on symbols that already cross the action-state boundary.
 - Next Step: Use action-state trigger dates as the first filter for any future theme-side replay or structural repair work.
 
 ### JOURNAL-0067
@@ -1442,10 +1442,10 @@
 - Protocol Version: protocol_v1.0
 - Hypothesis: If the three current symbol classes are already enough to say something reusable, then the repo should be able to summarize a single transition boundary that separates latent theme-side path shifts from real trade damage.
 - What Changed: Added `damage_transition_analysis.py`, `run_damage_transition_analysis.py`, and `theme_damage_transition_analysis_v1.yaml`, then aggregated the existing `300750`, `002466`, and `002902` symbol reports into one structural classification report.
-- Expected Impact: Replace “we have three interesting examples�?with one reusable research statement that can guide the next cycle.
+- Expected Impact: Replace “we have three interesting examples�?with one reusable research statement that can guide the next cycle.
 - Observed Result: The report [theme_damage_transition_analysis_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/theme_damage_transition_analysis_v1.json) cleanly separates the current cases into one damage case (`300750`) and two latent cases (`002466`, `002902`). The useful boundary is now explicit: repeated approval/permission or assignment splits only become promotion-relevant when they also change emitted actions or active-position state.
 - Side Effects / Risks: This is a good structural rule for the next cycle, but it is still a working hypothesis from a small case set, not a final theorem.
-- Conclusion: The repo can stop asking “does a path shift exist?�?and start asking “does this path shift cross the action-state boundary?�?- Next Step: Use this rule to prioritize the next `theme` diagnosis cases and ignore repeated but economically silent split dates unless they coincide with action-state divergence.
+- Conclusion: The repo can stop asking “does a path shift exist?�?and start asking “does this path shift cross the action-state boundary?�?- Next Step: Use this rule to prioritize the next `theme` diagnosis cases and ignore repeated but economically silent split dates unless they coincide with action-state divergence.
 - Date: 2026-03-29
 - Author: Codex
 - Title: `carry_in_basis_advantage` now repeats across `mainline_trend_b / c`
@@ -2202,7 +2202,7 @@
     - `close_market_q4_drawdown_slice_as_avoidance_plus_reduced_loss_mix`
     - `do_continue_q4_drawdown_replay = false`
 - Side Effects / Risks: This closes q4 under current evidence, not forever. Reopening q4 later would now need explicit reason.
-- Conclusion: q4 is no longer just “open but low novelty�? It is now a bounded mixed drawdown slice: one clean avoidance driver and one reduced-loss driver.
+- Conclusion: q4 is no longer just “open but low novelty�? It is now a bounded mixed drawdown slice: one clean avoidance driver and one reduced-loss driver.
 - Next Step: Continue specialist work only on other slices unless a q4 candidate is expected to break the current mixed-slice verdict.
 
 ### JOURNAL-0126
@@ -2339,7 +2339,7 @@
 - Protocol Version: protocol_v1.1
 - Hypothesis: Once the current loop is paused, the next batch should not simply be "larger"; it should target context environments that are currently missing from the closed-slice geography.
 - What Changed: Added a bounded batch-design report on top of the current context audit and continuation gate.
-- Expected Impact: Turn “prepare a new suspect batch�?into a concrete, auditable design rule.
+- Expected Impact: Turn “prepare a new suspect batch�?into a concrete, auditable design rule.
 - Observed Result:
   - [next_suspect_batch_design_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_design_v1.json) shows:
     - `current_loop_paused = true`
@@ -2365,7 +2365,7 @@
 - Protocol Version: protocol_v1.1
 - Hypothesis: A next-batch seed should only move forward if it adds new symbols, covers the targeted missing archetypes, and does not overlap the current `market_research_v1` substrate.
 - What Changed: Added a concrete v2-seed universe, manifest, bootstrap config, and a manifest audit.
-- Expected Impact: Convert the abstract “prepare a new suspect batch�?decision into a concrete, auditable next data step.
+- Expected Impact: Convert the abstract “prepare a new suspect batch�?decision into a concrete, auditable next data step.
 - Observed Result:
   - [next_suspect_batch_manifest_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/next_suspect_batch_manifest_v1.json) shows:
     - `seed_universe_count = 9`
@@ -2707,7 +2707,7 @@
   - `market_research_v2_refresh` is now the intended next data-expansion target
   - feature/factor preparation is now explicitly a first-class phase objective
 - Side Effects / Risks: Very low; this is a phase-definition change, not a replay restart.
-- Conclusion: The repo now has a clean post-`V1.1` direction instead of a vague ��keep going�� posture.
+- Conclusion: The repo now has a clean post-`V1.1` direction instead of a vague ��keep going�� posture.
 - Next Step: Finalize data-source policy and then open the first `V1.2` data-refresh design.
 
 ### JOURNAL-0149
@@ -2741,7 +2741,7 @@
   - `market_research_v2_refresh` is now the intended next data-expansion target
   - feature/factor preparation is now explicitly a first-class phase objective
 - Side Effects / Risks: Very low; this is a phase-definition change, not a replay restart.
-- Conclusion: The repo now has a clean post-`V1.1` direction instead of a vague ��keep going�� posture.
+- Conclusion: The repo now has a clean post-`V1.1` direction instead of a vague ��keep going�� posture.
 - Next Step: Finalize data-source policy and then open the first `V1.2` data-refresh design.
 
 ### JOURNAL-0149
@@ -3264,3 +3264,583 @@ Result:
 Artifacts:
 - `reports/analysis/market_research_v5_carry_row_diversity_refresh_manifest_v1.json`
 - 2026-03-30: Completed the `v5` pack bootstrap chain and moved `market_research_v5_carry_row_diversity_refresh` into the active validation map. The pack is `baseline_ready`, appears in the eight-pack validation report, and enters the specialist geography without yet changing the main `V1.2` bottleneck reading.
+- 2026-03-30: Formalized long-horizon autonomy with charter, stop, waiting-state, and cross-phase rules in `PROJECT_LIMITATION/86_LONG_HORIZON_AUTONOMY_POLICY.md`.
+- 2026-03-30: `v5` produced its first active lane on `002273 / q2 / B`, but the lane closed as opening-led rather than carry-supporting. `V1.2` therefore stays constrained by the same carry-row-diversity bottleneck.
+- 2026-03-30: `v5` exhausted its remaining bounded lanes without producing an acceptance-grade clean persistence row or true carry row. The final probe `000099 / q2 / B` closed as opening-led, and `v12_v5_exhaustion_phase_check_v1.json` fixed `v5` as a bounded-but-non-repairing refresh.
+- 2026-03-30: After the exhaustion check, I initialized only the next legal entry: `v12_next_refresh_entry_v3.json` freezes `market_research_v6_catalyst_supported_carry_persistence_refresh` as the next criteria-first batch. Catalyst context is allowed to support symbol selection, but not to replace the carry-row-diversity objective.- 2026-03-30: After `v5` exhausted, I froze `v6` criteria rather than reopening old replay. The new batch keeps training-gap repair primary and uses catalyst context only as bounded support.
+- 2026-03-30: `market_research_v6_catalyst_supported_carry_persistence_refresh` is now manifest-ready with `4` new symbols and a clean `2 true carry + 2 clean persistence` split.
+- 2026-03-30: The first bounded v6 lane (`600118 / q3 / C`) produced a clean opening edge on 2024-07-22 but no persistence. Follow-on gate work showed no acceptance-grade remaining local v6 candidate, so v6 stays active while local second-lane expansion is held.
+
+- 2026-03-30: `V1.2` now sits in explicit waiting state. The active `v6` substrate did not justify a second local lane, and policy-based review prevented forced branch expansion into `v7`.
+
+- 2026-03-30: `V1.3` opened as bounded catalyst/concept infrastructure rather than as direct signal work. The first concept-focused cycle stayed replay-independent and showed usable context separation with full resolved source coverage on the bounded theme-scope seed.
+
+- 2026-03-30: Concept stock handling in `V1.3` now has explicit confidence rules. Cross-industry concept mappings are no longer treated as flat tags; they are stratified by link mode, source quality, and market confirmation before they can enter bounded context.
+
+- 2026-03-30: `V1.3` now has a consumable concept registry. The important guardrail held: resolved concept rows are usable for bounded context, but still stay provisional until manual symbol-link mode assignment confirms whether they are primary-business, investment-holding, supply-chain, or weaker mappings.
+
+- 2026-03-30: Completed bounded manual symbol-link assignment for the four current concept rows, then reclassified the concept registry. The registry is now proof-backed instead of fully provisional: 3 rows are core_confirmed and 1 row remains market_confirmed_indirect.
+- 2026-03-30: Froze bounded concept-registry usage rules. The key boundary held: even proof-backed concept rows stay infrastructure only and cannot integrate into the strategy mainline.
+- 2026-03-30: Ran v13_phase_closure_check_v1 and closed V1.3 as bounded context infrastructure success. The phase now enters explicit waiting state rather than widening ingestion or inventing a follow-on branch.
+- 2026-03-30: V1.4 is now open. The first lawful move was not a model or replay action, but a context-consumption protocol freeze built on top of V1.3 usage rules and the bounded catalyst audit.
+- 2026-03-30: The current V1.4 branch remains replay-independent and report-only. It can now proceed to schema-level context feature work, but it still cannot integrate into the strategy mainline.
+- 2026-03-30: V1.4 now has a concrete report-only context feature schema instead of only a protocol. The work is still replay-independent, and the next bounded step is discrimination review rather than model expansion.
+- 2026-03-30: V1.4 completed its first full cycle: charter, protocol, report-only context feature schema, bounded discrimination review, phase check, and closure check.
+- 2026-03-30: The important result is not promotion, but bounded consumption proof. V1.4 showed that the frozen concept/catalyst infrastructure can be consumed as report-only context with stable directional discrimination, then closed cleanly into waiting state.
+- 2026-03-30: `V1.5` is now open. The first lawful move was a candidacy protocol freeze rather than promotion. This keeps the branch aligned with the evidence chain from `V1.4` without skipping straight into retained-feature decisions.
+- 2026-03-30: The current `V1.5` branch is review-only. It can now proceed to per-feature admissibility judgments, but it still cannot promote features into the strategy mainline.
+- 2026-03-30: `V1.5` completed its first full cycle: charter, candidacy protocol, per-feature admissibility review, phase check, and closure check.
+- 2026-03-30: The key result is bounded candidacy sorting rather than promotion. Four context features remain inside provisional candidacy review; one indirectness feature stays on hold for more evidence. The phase closes cleanly into waiting state.
+- 2026-03-30: `V1.6` is now open. The first lawful move was a bounded stability-review protocol freeze built on the provisional candidacy outputs of `V1.5`.
+- 2026-03-30: The current `V1.6` branch is still review-only. It can now proceed to per-feature stability judgments, but it still cannot promote features or open local-model work.
+- 2026-03-30: `V1.6` completed its first full cycle: charter, stability protocol, per-feature stability review, phase check, and closure check.
+- 2026-03-30: The important result is bounded stability confirmation rather than promotion. All four provisional candidacy features remain alive under bounded review, and the phase closes cleanly into waiting state.- 2026-03-30: `V1.7 Promotion-Evidence Generation` opened as the first lawful phase after `V1.6` stability review. The branch is explicitly not a promotion phase; it exists to state what evidence is still missing.
+- 2026-03-30: Froze `v17_promotion_evidence_protocol_v1.json`. The current bounded protocol tracks four promotion-evidence gaps: sample breadth, cross-pocket or cross-regime support, non-redundancy stress, and safe consumption beyond report-only use.
+- 2026-03-30: `V1.7` completed its first full cycle: charter, promotion-evidence protocol, per-feature promotion-gap review, phase check, and closure check.
+- 2026-03-30: The key result is explicit promotion shortfall mapping rather than advancement. All four provisional features remain alive, but each still lacks bounded evidence required to change promotion judgment.
+- 2026-03-30: `V1.8A` opened as the highest-leverage next phase after `V1.7` because two provisional features share the same primary shortfall: `sample_breadth_gap`.
+- 2026-03-30: The first bounded protocol now freezes `single_pulse_support` and `policy_followthrough_support` as the only lawful sample-breadth targets. This keeps the phase narrow and prevents it from sliding into generic replay growth.
+- 2026-03-30: `V1.8A` completed its first full cycle: charter, sample-breadth protocol, breadth-entry design, phase check, and closure check.
+- 2026-03-30: The key result is lawful breadth-entry specification rather than sample acquisition. Both breadth-target features now have bounded candidate source pools and sample limits, but no sample collection was authorized inside this phase.
+- 2026-03-30: `V1.8B` completed its first full cycle: charter, sample admission protocol, per-feature admission gate review, phase check, and closure check.
+- 2026-03-30: The key result is bounded admission readiness rather than collection. Both breadth-target features now have explicit lawful gates for future screened collection, but no samples were collected in this phase.
+- 2026-03-30: `V1.8C` completed its first full cycle: charter, screened collection protocol, actual screened bounded collection, phase check, and closure check.
+- 2026-03-30: This is the first phase in the promotion-evidence branch that produced real new breadth evidence instead of only design or gate artifacts. The collection stayed within frozen pools and sample limits, and still did not trigger promotion.
+- 2026-03-30: `V1.9` completed a bounded breadth-evidence re-review cycle.
+- 2026-03-30: The important result is not promotion but shortfall refresh. `single_pulse_support` now looks less breadth-starved and more blocked by non-redundancy; `policy_followthrough_support` still needs broader evidence beyond one symbol-family.
+- 2026-03-30: `V1.9` therefore closes as bounded breadth-evidence re-review success and now sits in explicit waiting state.
+- 2026-03-30: `V1.10A` completed a single cross-family breadth probe for `policy_followthrough_support`.
+- 2026-03-30: The important result is a hard negative conclusion rather than a new case: under the current bounded pool, no policy-followthrough candidate survives the cross-family non-redundancy gate beyond the existing `300750` family.
+- 2026-03-30: `V1.10A` therefore closes as successful negative probe and now sits in explicit waiting state, with no automatic `V1.10B+`.
+- 2026-03-30: Governance was loosened only where it needed to be loosened. The project now explicitly allows exploration-layer outputs that change the future decision basis, while keeping admission, promotion, and strategy-mainline standards tight.
+- 2026-03-30: Added a stronger anti-loop governance layer. Future autonomy now must stop if it is only restating the same evidence-pool conclusion under new micro-phase names, and repeated waiting-state outcomes now force a `Solution Shift Memo` instead of more review churn.
+- 2026-03-30: `V1.11` completed the first real solution-shift away from same-pool review loops.
+- 2026-03-30: The important result is not a new case but a new upstream capability: the project now has a frozen acquisition basis for sustained catalyst evidence instead of relying on ad hoc case scavenging.
+- 2026-03-30: `V1.11` therefore closes as sustained acquisition infrastructure success and now sits in explicit waiting state pending owner review of the bounded first pilot.
+- 2026-03-30: `V1.11A` completed the first real bounded execution on top of the new acquisition basis.
+- 2026-03-30: The important distinction is that the pilot validated the acquisition path without pretending to fix the original feature bottleneck. Two non-anchor candidates were admitted under frozen rules, but direct `policy_followthrough_support` breadth still did not expand beyond the old anchor family.
+- 2026-03-30: `V1.11A` therefore closes as bounded first acquisition pilot success and now sits in explicit waiting state. The system has moved from ad hoc case scavenging to reusable acquisition plus one lawful execution cycle.
+- 2026-03-30: `V1.12` deliberately changes the unit of progress from “more cases” to “one clean training experiment.”
+- 2026-03-30: The important result is not a trained model yet, but a frozen pilot grammar: one carry family, one cycle archetype, one sample unit, one label set, and one validation discipline. This should reduce the chance that later scaling turns into uncontrolled object sprawl.
+- 2026-03-30: `V1.12` therefore closes as single price-cycle training definition success and now sits in explicit waiting state pending owner review of bounded pilot data assembly.
+- 2026-03-30: `V1.12A` turns that frozen grammar into the first human-correctable pilot sheet instead of jumping straight into fitting.
+- 2026-03-30: The important result is a bounded collaboration surface: a small object pool, draft role guesses, empty cycle-window slots, and explicit owner correction fields for missing objects or wrong labels.
+- 2026-03-30: `V1.12A` therefore closes as owner-correction-ready pilot data assembly success and now sits in explicit waiting state pending owner edits before any training starts.
+- 2026-03-30: The first owner correction has now been absorbed without reopening the whole phase chain.
+- 2026-03-30: `300308` now has a concrete multi-stage cycle sketch (first rise, long consolidation, major markup, pullback, rebound), which makes it the first partially resolved benchmark row in the pilot dataset draft.
+- 2026-03-30: This confirms the collaboration pattern is working: the system can present a bounded draft, the owner can inject market-grounded corrections, and the draft can evolve without pretending that unresolved rows are already clean enough for training.
+- 2026-03-30: The next high-value move after the first owner anchor was not more protocol work, but a price-structure pass on the unresolved symbols.
+- 2026-03-30: `300502` and `300394` now have coarse cycle drafts inferred from daily bars and aggregated weekly/monthly structure. They are intentionally calibration-grade, so the owner can correct windows instead of starting from blank rows.
+- 2026-03-30: The owner then asked to remove the special handling on `300308` and let it be inferred under the same method as the other two names.
+- 2026-03-30: `V1.12A` now has a fully unified calibration draft: all three optical-link symbols carry price-inferred cycle windows, while the old manual `300308` window is preserved only as a comparison baseline.
+- 2026-03-30: The owner then accepted the unified draft, so the optical-link pilot crossed from calibration into execution.
+- 2026-03-30: `V1.12B` now gives the project its first frozen trainable pilot dataset and first report-only time-split baseline readout. The important change is not the raw score itself, but that the single-cycle training chain is now executable end to end instead of stopping at schemas and review sheets.
+- 2026-03-30: The first baseline is intentionally simple and bounded: `2238` daily samples, `carry_constructive / watch_constructive / failed` as the first three carry-outcome classes, and `0.4509` test accuracy from a nearest-centroid readout. This is enough to review labeling, stage boundaries, and training grammar quality without pretending that the system is ready for live deployment.
+- 2026-03-30: `V1.12C` turns the first baseline from a score into a diagnosis. The current baseline does not fail uniformly; it is specifically too optimistic in late `major_markup` and `high_level_consolidation`.
+- 2026-03-30: This matters because the next black-box comparison now has a precise target. We are no longer asking whether a sidecar model is generically "better"; we are asking whether it reduces optimistic false positives in the exact stages where the first bounded baseline is weak.
+- 2026-03-30: The first sidecar protocol is therefore frozen on the same dataset, same labels, and same time split. This keeps the next comparison honest by preventing data-scope drift from masquerading as model improvement.
+- 2026-03-30: `V1.12D` then turned that protocol into a real model comparison instead of another planning artifact.
+- 2026-03-30: The important result is not merely that a black-box model scored higher. The key signal is that the best sidecar (`hist_gradient_boosting_classifier`) materially reduced the exact optimistic false-positive zones that `V1.12C` highlighted, especially in `high_level_consolidation`.
+- 2026-03-30: This is the first place where the project has evidence that a non-linear sidecar may be capturing structure the simple interpretable baseline misses. But it is still only a sidecar result on one bounded pilot dataset, so the correct posture remains review, not deployment.
+- 2026-03-30: `V1.12E` then asked the next non-cosmetic question: why did the first sidecar help? The answer is now explicit at block level.
+- 2026-03-30: `catalyst_state` is the current main contributor to hotspot control. Removing it does not worsen `major_markup` false positives, but it destroys `high_level_consolidation` control (`1 -> 53` false positives), which means the current sidecar gain is tightly linked to how catalyst-state features interact with late-stage structure.
+- 2026-03-30: This changes the next research basis. The project does not most urgently need a larger model family; it more likely needs feature or label refinement around late-stage catalyst persistence and high-level consolidation semantics.
+- 2026-03-30: `V1.12F` then forced the next question into one primary cause instead of leaving everything blurred together.
+- 2026-03-30: The current answer is now explicit: the immediate bottleneck is not missing samples inside the frozen pilot, and not a simple catalyst-weight problem. It is a `feature_definition_or_non_redundancy_gap`.
+- 2026-03-30: The current best refinement path is to enrich `catalyst_state` with freshness, cross-day persistence, and breadth-confirmation semantics before doing any broad label rewrite or new model escalation.
+- 2026-03-30: `V1.12G` executed that bounded refinement path instead of jumping to label surgery. Three semantic catalyst-state features were added and the same frozen pilot was rerun end to end.
+- 2026-03-30: The important result is not only a small metric lift. The meaningful delta is concentrated in `high_level_consolidation`: even the simple baseline cut optimistic carry false positives from `46` to `34`, while GBDT removed the last remaining one (`1 -> 0`).
+- 2026-03-30: This means the project is now isolating a real semantic asset: late-stage catalyst freshness/persistence/breadth context. The next question is no longer whether semantics matter, but whether this delta should stay feature-side only or motivate a bounded label split inside `high_level_consolidation`.
+- 2026-03-30: The current subagent question is now narrowed enough to answer precisely. There are lawful repetitive tasks, but only a few, and they must stay additive rather than directive.
+- 2026-03-30: The current ready-now subagent work is not "train until something useful appears." It is bounded support exploration: hotspot bucketization and semantic-field ablation on the same frozen pilot.
+- 2026-03-30: This is an important governance distinction. Mainline remains the convergence layer; subagents, if used later, will act only as low-cost exploratory bandwidth for repetitive evidence formatting and filtering.
+- 2026-03-30: The subagent role was then sharpened further. Exploration alone is too narrow a frame; what the project actually needs is low-governance candidate-structure generation.
+- 2026-03-30: The updated posture now distinguishes four lawful subagent task types: exploration, drafting, structuring, and execution. This matters because candidate label-split discovery sits in drafting/structuring, not in formal governance.
+- 2026-03-30: A hard review cadence is now frozen alongside this role split. Subagents may produce one bounded batch, then mainline must review before any further batch can begin. This prevents a quiet slide into infinite low-quality experimentation.
+- 2026-03-30: That review cadence then needed one more correction: not all batches are alike. Repetitive pipeline work and candidate-structure drafting should not be reviewed on the same rhythm.
+- 2026-03-30: The updated rule now distinguishes cadence by task type. `structuring` / `execution` can accumulate to a bounded task-count or time window; `drafting` / `exploration` still require review at a bounded thematic stage. This should preserve throughput without weakening governance.
+- 2026-03-30: `V1.12I` then froze the missing review standard. The project now has a fixed rule for deciding whether candidate bucket structures are strong enough to justify bounded label refinement.
+- 2026-03-30: This matters because the first subagent structuring output did arrive cleanly. `v112h_hotspot_bucketization_v1.json` shows that the current hotspot misreads can be organized into eight reviewable buckets rather than one undifferentiated error cloud.
+- 2026-03-30: The next judgment is therefore sharper: not "should we invent new labels," but "do these candidate structures clear the review gates strongly enough to warrant a bounded label-refinement phase?"
+- 2026-03-30: `V1.12J` answered that question with a bounded review judgment rather than a schema change.
+- 2026-03-30: The answer is asymmetric. `high_level_consolidation` does show enough structured semantic/error differentiation to justify bounded drafting follow-up. `major_markup` does not; it remains too mixed and should stay on the feature side for now.
+- 2026-03-30: This is a good narrowing move. The project does not need to debate generic label refinement anymore. It now only needs to decide whether to open one bounded drafting follow-up inside `high_level_consolidation`.
+- 2026-03-30: `V1.12K` then executed that narrow drafting follow-up instead of jumping into formal labels.
+- 2026-03-30: The draft now has two directly reviewable candidate substates plus one large mixed stall cluster that still needs inner drafting. This is the right shape: not too abstract, not prematurely formal.
+- 2026-03-30: The project now has a concrete review object for `high_level_consolidation`, while still keeping the governance boundary intact. The next decision is no longer whether to split labels broadly; it is whether the mixed stall cluster deserves one more bounded inner-drafting pass.
+- 2026-03-30: The first bounded structuring subagent task has now run: hotspot bucketization on `high_level_consolidation` and `major_markup`.
+- 2026-03-30: The important outcome is that the hotspot rows are not random noise. They collapse into `8` reviewable buckets, with `4` semantic buckets per stage. This is a usable draft for owner review, not a formal label split.
+- 2026-03-30: This validates the subagent role split in practice: repetitive structuring work can be delegated safely, then reviewed in one bounded pass, without letting the subagent decide any formal schema or phase direction.
+- 2026-03-30: `V1.12L` then performed the owner-level preserve/reject review on top of the `V1.12K` draft instead of diving straight into inner splitting.
+- 2026-03-30: The result is cleaner than the original draft: two candidate substates survive as review-only assets, while the mixed stall cluster is explicitly downgraded to an optional future inner-drafting target.
+- 2026-03-30: This is the right stopping point for now. The system is no longer asking whether `high_level_consolidation` deserves any substate structure at all; it now knows exactly which parts are preservable and which part remains mixed.
+- 2026-03-30: The owner then explicitly reopened only that mixed stall target, so `V1.12M` ran one bounded inner-drafting pass instead of widening the whole label-refinement problem again.
+- 2026-03-30: That pass was useful. The mixed stall cluster is not irreducible noise: it now separates into a recoverable quiet-contraction pocket, a residual-breadth exhaustion pocket, and one still-unresolved residue.
+- 2026-03-30: This is another good narrowing step. We now know the unresolved area is smaller than the original mixed cluster, while the two clearer inner candidates can remain frozen as review-only assets.
+- 2026-03-30: `V1.12N` then answered the natural next question: do these inner-draft pieces actually improve the frozen pilot if treated as shadow features?
+- 2026-03-30: The answer is no. The rerun is flat for both the simple baseline and GBDT. That is a strong negative result, not a disappointment: it means the current inner draft is more useful for understanding than for immediate predictive lift.
+- 2026-03-30: This prevents a common mistake. We now know not to over-read the inner draft as a feature promotion candidate just because it looks semantically meaningful.
+- 2026-03-30: That negative result justified a clean resource shift instead of more sunk-cost pocket refinement.
+- 2026-03-30: `V1.13` therefore reopens the project at a higher-leverage layer: `theme_diffusion_carry` is now the selected next carry family, with three bounded seed archetypes and a schema-first posture.
+- 2026-03-30: This is the right reset. The project is no longer asking how to squeeze one more local gain out of `high_level_consolidation`; it is asking how to formalize the A-share carry grammar that likely matters most.
+- 2026-03-30: `V1.13A` then freezes the first usable grammar for that line. The project now separates theme-diffusion carry into state, role, strength, and driver layers instead of treating "mainline strength" as one mixed intuition bucket.
+- 2026-03-30: This phase also records an important governance distinction: many strong-mainline drivers are still only partially known. They should be searched and drafted as `review-only candidate drivers`, often via subagents, but they should not be legislated into formal schema variables before review.
+- 2026-03-30: The first preserved review-only candidates include policy strength, industrial advantage, market tailwind, event resonance, leader height, mid-core confirmation, cross-day breadth diffusion, absorption quality / A-kill suppression, catalyst freshness / reinforcement, and mapping clarity. These now exist as structured review memory instead of loose owner intuition.
+- 2026-03-30: `V1.13B` then performs the first narrowing pass on those candidates. This is important because the project no longer needs to carry all ten unknowns as equal hypotheses.
+- 2026-03-30: The strongest bounded next-step set is now reduced to four drivers: policy backing, industrial advantage, market regime tailwind, and event resonance. These are the best current explanation layer for why some themes become true mainlines instead of short spikes.
+- 2026-03-30: The remaining five candidates still matter, but they now have a lower and cleaner status: review-only support drivers rather than immediate schema-budget claimants. `mapping_clarity_and_tradeable_story` remains preserved but explicitly deferred as a noisy borderline idea.
+- 2026-03-30: `V1.13C` then answers the next governance question: how may the strongest driver quartet actually be used?
+- 2026-03-30: The answer is deliberately narrow. They may now enter theme-diffusion work only as schema-review context, not as model features, execution variables, or strategy signals. This is the right intermediate layer because it lets the project start using driver language without pretending those drivers are already quantified alpha inputs.
+- 2026-03-30: The project is now materially closer to usable archetype review. It has state, role, strength, high-priority drivers, and lawful usage boundaries for those drivers. The next bounded move can therefore shift from "what are the drivers?" to "how do these drivers illuminate specific archetypes?"
+- 2026-03-30: `V1.13D` then tests exactly that. The result is positive but not uniform: the grammar is archetype-usable, which is the threshold we needed to clear, but only one seed (`commercial_space_mainline`) is currently clean enough to act as a strong core review asset.
+- 2026-03-30: This is a good result. It means the grammar is real, not decorative, but it also means the project should resist the temptation to treat every seed theme as equally mature. `stablecoin_theme_cycle` and `low_altitude_economy_cycle` still carry more driver/role mixing and should remain bounded review assets.
+- 2026-03-30: The correct posture after `V1.13D` is therefore discipline, not escalation: preserve the archetype review assets, keep model and execution lines closed, and only reopen if a later owner decision wants to deepen the template line further.
+- 2026-03-30: `V1.13E` then opens the first lawful downstream pilot entry for the `theme_diffusion_carry` line.
+- 2026-03-30: The project does not jump into training broadly. It chooses the cleanest current seed (`commercial_space_mainline`) and freezes a single-archetype, report-only pilot basis with four label blocks: state, role, strength, and driver-presence review flags.
+- 2026-03-30: This is the right bridge toward the ultimate quant goal. The line is no longer only a review grammar; it now has a lawful path into bounded pilot labeling and training, while still keeping execution, signal, and automatic archetype expansion closed.
+- 2026-03-30: `V1.13F` then turns that pilot basis into a real draft object pool. This is an important shift because the line is no longer just describable; it is now inspectable. The first commercial-space pool is intentionally tiny and asymmetric: one dense local leader seed, plus two weaker owner-correctable draft objects.
+- 2026-03-30: That asymmetry is exactly what we want at this stage. It means the project is not pretending to have a clean truth universe where it does not. The draft is lawful, useful, and still honest about uncertainty.
+- 2026-03-30: The correct next move after `V1.13F` is owner correction, not auto-labeling and not training. This keeps the first theme-diffusion pilot anchored in review discipline before it touches downstream fitting.
+- 2026-03-30: The owner then clarified something more important than a few object edits: commercial-space should be treated as a major archetype study because it compresses many A-share behaviors into one line. That changes the problem from "which three pilot objects do we freeze?" to "what is the lawful deep-study boundary for this archetype?"
+- 2026-03-30: `V1.13G` freezes exactly that boundary. The project now records commercial-space as a multi-wave, hierarchy-rich, decay-and-revival archetype with explicit study dimensions and a split between validated local seeds and broader owner-named candidates.
+- 2026-03-30: This is the right intermediate posture. The line becomes deeper without pretending that every named object is already validated or ready for training. The project keeps governance intact while preserving a much richer study surface.
+- 2026-03-30: I then lowered the friction on the still-open `V1.13F` owner work by freezing a compact owner review guide. That matters because otherwise the draft object pool remains technically correct but operationally annoying. The guide now says, in plain Chinese terms, what each of the three first pilot objects currently is and what the owner actually needs to correct.
+- 2026-03-30: The owner then reprioritized again: commercial-space remains valuable, but `CPO / optical-link` should be eaten through first. The correct response was not to reopen the exhausted `high_level_consolidation` pocket. Instead, the line was lifted from a finished three-symbol pilot into `V1.12O Optical-Link Deep Archetype Scope`.
+- 2026-03-30: `V1.12O` preserves the original three trainable anchors (`300308 / 300502 / 300394`) while recording a bounded adjacent review-only cohort (`002281 / 603083 / 688205 / 301205 / 300620 / 300548`). This is the right altitude change: stop burning time inside an exhausted pocket, but keep CPO as the current high-value earnings-transmission mainline.
+- 2026-03-30: The next frontier for the CPO line is now explicit and above-board: not more stall splitting, but lawful adjacent-candidate validation or bounded cohort-widening review.
+- 2026-03-30: `V1.12P` then widened the CPO line from a deep-study archetype scope into a true full-cycle information registry. The project now preserves `20` names across core, direct-related, extension, and mixed-relevance tiers, plus `6` distinct information layers covering catalysts, earnings, technology chain, price structure, liquidity/sentiment, and spillover noise.
+- 2026-03-30: This is intentionally not a purity move. It is an omission-control move: some weak or noisy rows are preserved on purpose so later factor work can test whether they matter, instead of losing them before review.
+- 2026-03-30: The next discussion now has a clean basis. The registry already shows where the line is still thin: full daily concept-index turnover history, official-report anchors for the whole adjacent cohort, a normalized future-catalyst calendar, and truth-checking on mixed-relevance spillover rows.
+
+## 2026-03-30 V1.12Q CPO registry schema hardening
+- Built a harder CPO information-registry schema because omission risk was becoming more important than incremental object discovery.
+- The schema now starts before the visible markup window via `pre_ignition_watch` and keeps separate layers for technical path, catalysts, earnings, price/technical structure, role/cohort, branch extension, liquidity, noise, and stage attachment.
+- First bounded parallel collection drafts were preserved as review-only memory instead of being left in conversational context.
+
+## 2026-03-30 V1.12R adjacent cohort validation
+- The CPO adjacent pool is now less ambiguous: some rows are clean enough to preserve as review assets, while several others are clearly blocked by role-coarseness rather than pure lack of information.
+- This pass confirmed that object-pool cleaning should precede chronology normalization and spillover truth-check.
+
+## 2026-03-30 V1.12S CPO chronology normalization
+- The chronology layer is no longer a flat list of conferences and earnings dates.
+- It now explicitly separates pre-event watch, event window, post-event follow-through, quiet dead zones, pre-earnings drift, post-earnings reset, and the main lag structures that matter for CPO cycle reading.
+
+## 2026-03-30 V1.12T CPO spillover truth-check
+- The CPO line now has a cleaner answer to the hardest omission-control question: noisy spillover rows are not being deleted, but they are no longer mixed with cleaner adjacent assets.
+- This matters because some of these rows may later become A-share-specific spillover factors, while others are better remembered as weaker board-follow or name-bonus phenomena.
+- With adjacent validation, chronology normalization, and spillover truth-check now all completed, the CPO foundation is much closer to research-ready than to training-ready.
+
+## 2026-03-30 V1.12U CPO foundation completeness and research-readiness review
+- The project now has an explicit readiness boundary for the CPO line instead of an intuitive one.
+- The right reading is not that the information foundation is complete in some absolute sense; the right reading is that it is structured enough for bounded research and still below the threshold for formal training.
+- This matters because future work can now move forward without pretending that registry completeness automatically implies trainability.
+
+## 2026-03-30 V1.12V CPO daily board chronology operationalization
+- The board chronology gap is no longer only a sentence in a readiness review.
+- The project now has a concrete operational target for what a day-level board chronology table should look like, how missingness should be recorded, and which source classes should be trusted first.
+- This is still not a full data backfill, but it sharply reduces ambiguity around what the next collection layer should build.
+
+## 2026-03-30 V1.12W CPO future catalyst calendar operationalization
+- The future catalyst gap is no longer just a pile of useful dates and source links.
+- The project now has a recurring calendar target with cadence buckets, forward window fields, confidence tiers, and explicit missingness handling.
+- This still does not create trigger logic, but it makes later forward-timing review much less ambiguous.
+
+## 2026-03-30 V1.12X CPO spillover sidecar probe
+- The spillover layer is no longer trapped between two bad options: either treat it as meaningless noise or over-promote it into formal factors.
+- A bounded sidecar-style probe is the right altitude here. It keeps two rows alive as A-share-specific factor candidates while explicitly leaving one row as weak memory only.
+- This sharpens the residual ambiguity in the CPO foundation without pretending that sidecar evidence equals trainable truth.
+
+## 2026-03-30 V1.12Y CPO adjacent role-split sidecar probe
+- The adjacent unresolved bucket is now much less blunt. Instead of nine rows all being equally pending, most of them now carry explicit review-only split suggestions.
+- This is exactly where a bounded sidecar helps: it reduces structural ambiguity without pretending to create final truth.
+- The remaining ambiguity is now concentrated in a small residual set rather than spread across the whole adjacent layer.
+
+## 2026-03-30 V1.12Z CPO bounded cycle reconstruction entry
+- The CPO line has now crossed from “foundation hardening” into “bounded experiment setup.”
+- This is the right place to move. Further desk cleaning would have produced diminishing returns, while the remaining high-value questions now require reconstruction-style exposure.
+- The key guardrail is preserved: the experiment is ambiguity-preserving and still does not open training.
+## 2026-03-30 CPO process-record consolidation
+- I consolidated the whole `V1.12P -> V1.12Z` CPO chain into one reusable process record for paper writing and later sector transfer.
+- The record explicitly preserves the ordering of:
+  - registry construction
+  - schema hardening
+  - adjacent / chronology / spillover cleaning
+  - readiness boundary freezing
+  - operational gap reduction
+  - sidecar disambiguation
+  - subagent challenge
+  - lawful experiment entry
+- This should reduce the chance that future sector studies skip omission control and jump too early from partial information into training.
+
+## 2026-03-30 V1.12Z operational charter hardening
+- I froze an operational charter on top of `V1.12Z` so the next work is judged by the right success criteria.
+- The key shift is that cycle absorption is now the primary objective, not early factor neatness.
+- The execution stack is now explicit:
+  - black-box discovers
+  - white-box constrains
+  - narrative validates
+- This should prevent the line from sliding into one of two bad regimes:
+  - over-cleaned but under-absorbed research
+  - strong black-box fit without owner-facing understanding
+
+## 2026-03-30 V1.12Z report-only model payoff probe
+- I ran the first payoff-oriented comparison on the frozen optical-link pilot instead of relying only on classification accuracy.
+- The important result is not just that the primary black-box (`GBDT`) scored higher. It also showed better bounded trade-quality characteristics than the guardrail baseline:
+  - higher hit rate
+  - shallower average drawdown
+  - much stronger profit factor
+- This strengthens the working hypothesis that black-box discovery should lead the next cycle-absorption work, while white-box remains the audit rail.
+
+## 2026-03-30 V1.12Z bounded cycle reconstruction pass
+- This was the first point where the cleaned CPO information layers became a full owner-facing cycle narrative rather than only a registry plus a few probes.
+- The reconstruction makes the cycle readable as multiple waves with explicit role transitions:
+  - leader / high-beta core / upstream platform
+  - adjacent challengers and domestic optics bridges
+  - branch extensions
+  - late-cycle spillover and weak name-bonus memory
+- The most important negative discipline is intact: I did not delete the remaining ambiguity just to make the cycle look cleaner. The pending adjacent rows and operational gaps remain visible.
+- This is a meaningful threshold: the line is now explainable enough for bounded downstream review, but still not clean enough to claim automatic training rights.
+
+## 2026-03-30 V1.12AA CPO bounded cohort map
+- This phase turns the reconstruction narrative into a downstream-safe skeleton.
+- The most valuable part is not the count of rows; it is the fact that each object now has:
+  - a cohort layer
+  - a role family
+  - bounded stage windows
+  - evidence axes
+  - a current posture
+- That should reduce the biggest downstream risk: writing mixed or spillover objects into formal labels too early.
+- The map also confirms that not all non-core rows should be treated equally:
+  - some are secondary review assets
+  - some are branch or maturity assets
+  - some are spillover overlays
+  - some still need to remain pending
+
+## 2026-03-30 V1.12AB CPO bounded labeling review
+- This phase turns cohort structure into label-surface discipline without pretending labels are already final.
+- The most important result is not the counts; it is the explicit separation between:
+  - rows that may later carry label truth
+  - rows that may only support review
+  - rows that should stay as overlay signals
+  - rows that still must remain excluded
+- That should make the eventual label-draft step much safer and should reduce the chance that spillover or unresolved rows leak into formal truth.
+
+## 2026-03-30 V1.12AC CPO unsupervised role-challenge probe
+- This phase was deliberately not allowed to become a replacement for the cohort map.
+- The useful result is exactly the tension we wanted:
+  - part of the manual role grammar is supported by latent structure
+  - part of it is challenged
+- The strongest supportive finding is the quiet-window pending pocket:
+  - `300620 / 300548 / 000988`
+- The strongest challenging findings are:
+  - late-cycle extension vs spillover mixing
+  - core rows vs advanced-component branch rows mixing during strong markup windows
+- That means the current manual map is not fake, but it is also not the last word.
+- The correct use of this phase is:
+  - keep the manual map as governed truth
+  - keep the challenger output as review-only candidate structure
+
+## 2026-03-30 V1.12AD CPO dynamic role-transition feature review
+- This phase upgrades the role language from static classification to stage-conditioned migration.
+- The most important gain is not count inflation; it is that the system can now represent:
+  - role persistence
+  - challenger activation
+  - role demotion
+  - route-depth upgrade
+  - requalification after quiet windows
+  - late spillover saturation
+  - residual core vs spillover collapse
+- This is the right response to a real market fact:
+  - the same row can be leader-like in one window and much less important in another
+  - the same row can be branch or spillover in one window and gain strategic relevance in another
+- These dynamic features remain review-only, which is correct at this stage.
+
+## 2026-03-30 V1.12AE CPO feature-brainstorm integration
+- I used a bounded first batch of explorer-style brainstorms instead of letting “more feature ideas” stay as loose chat content.
+- The integrated shortlist clearly points at three under-built regions:
+  - chronology time geometry
+  - role handoff and vacancy
+  - weak-cohort migration / late-cycle false diffusion
+- The strongest new candidates are not generic “better alpha factors”; they are structural missing pieces in the current CPO grammar.
+- The batch also surfaced real blind spots that should stay explicit:
+  - breadth formula is still not frozen
+  - turnover normalization is still not frozen
+  - name/alias/concept-tag structure is still missing
+  - some A-share microstructure layer is still missing
+
+## 2026-03-30 V1.12AF CPO feature-family design review
+- This phase turns a brainstorm list into a governed design layer.
+- The most important gain is not more feature names. The gain is that the strongest candidates now have:
+  - point-in-time definitions
+  - allowed input bundles
+  - duplicate guards
+  - anti-leakage rules
+  - explicit allowed surfaces
+- The current family layout is already informative:
+  - chronology geometry
+  - catalyst sequence
+  - dynamic role handoff
+  - board concentration divergence
+  - spillover maturity
+  - overlay boundary
+- This should make the next label-draft step materially safer because the system no longer needs to consume raw brainstorm nouns.
+
+## 2026-03-30 V1.12AG CPO bounded label-draft assembly
+- The key move here is not "writing labels faster." It is checking whether label language is actually supportable by the current cohort, role, chronology, and feature-family structure.
+- The most valuable outputs are:
+  - the family-support matrix
+  - the anti-leakage posture review
+  - the ambiguity-preservation layer
+- The draft is intentionally uneven in places:
+  - some labels are supportable now
+  - some need provisional vs confirmed posture
+  - some remain review-only
+- This is a good sign because it means the draft is preserving uncertainty instead of hiding it.
+
+## 2026-03-30 V1.12AH factor candidate preservation rule
+- This rule exists because the current danger is no longer "too few ideas." The danger is "cleaning away weak-looking ideas before bounded experiments have a chance to test them."
+- The important distinction is:
+  - not every candidate deserves promotion
+  - but many candidates still deserve memory, archive, or later re-check status
+- This should protect A-share specific structures that first appear as noisy spillover, late-cycle overlays, weak board-follow, or awkward adjacent roles.
+
+## 2026-03-30 V1.12AI CPO label-draft integrity owner review
+- This pass is useful because it translates the integrity draft into a bounded owner disposition map instead of leaving the next step ambiguous.
+- The strongest result is not that some labels are ready. The strongest result is that nothing useful had to be thrown away to get a workable downstream subset.
+- The downstream lesson is clear:
+- use the ready and guarded labels next
+- keep branch-upgrade and residual-collapse language out of ex-ante dataset truth
+
+## 2026-03-30 V1.12AJ CPO bounded label-draft dataset assembly
+- This pass is the first point where the label language becomes dataset-shaped without pretending it is trainable truth.
+- The most important split is not row count. It is:
+  - truth-candidate rows
+  - context-only rows
+- That split keeps support, overlay, and pending structure alive without letting them contaminate the truth layer.
+
+## 2026-03-30 V1.12AK CPO bounded feature binding review
+- This pass matters because global label admission can create a false sense of readiness.
+- The key discovery is that the current truth-candidate geometry is still narrower than the globally admitted label bundle.
+- That is a good result, not a bad one. It means row-level usability is now explicit before any training-readiness claim.
+
+## 2026-03-30 V1.12AL CPO bounded training readiness review
+- This phase is valuable because it stops two failure modes at once:
+  - endless pre-pilot auditing
+  - premature training optimism
+- The important split is now explicit:
+  - a tiny core-skeleton pilot may be lawful
+  - broader representative training is still not lawful
+- The current limiting factor is not the existence of labels alone.
+- The main bottleneck is implementation maturity:
+  - board-series operational rules are not fully frozen
+  - recurring catalyst-calendar rules are not fully frozen
+- Row geometry is the next bottleneck because quiet-window and spillover truth surfaces are still outside the current truth set.
+
+## 2026-03-30 V1.12AM CPO extremely small core-skeleton training pilot
+- This phase is important because it converts the readiness conclusion into bounded failure exposure instead of one more audit layer.
+- The strongest result is not just that the pilot ran. The strongest result is that `GBDT` learned the current skeleton materially better than the guardrail:
+  - `phase_progression_label`: `0.6265 -> 1.0000`
+  - `role_state_label`: `0.4784 -> 0.7377`
+  - `catalyst_sequence_label`: `0.6265 -> 1.0000`
+- The phase model also improved the small constructive-stage payoff side reading:
+  - guardrail predicted constructive phase avg forward return: `0.0626`
+  - `GBDT`: `0.0891`
+- This still does **not** imply broad training readiness.
+- The right interpretation is narrower:
+  - the current core skeleton is learnable
+  - the project now has real experimental evidence
+  - broader representativeness and implementation maturity are still open questions
+
+## 2026-03-30 V1.12AN CPO core-skeleton pilot result review
+- This phase matters because it stops the team from over-celebrating the first tiny pilot.
+- The main finding is sharp:
+  - `phase_progression_label` and `catalyst_sequence_label` are being learned mostly through the current `catalyst_presence_proxy`
+  - they are not yet proving that chronology geometry is fully doing the heavy lifting
+- That is not a failure, but it is a warning:
+  - the tiny pilot currently learns more from an explicit stage-aligned catalyst proxy than from richer timing geometry
+- `role_state_label` remains the hardest layer, and the confusion is concentrated in the secondary high-beta extension cluster:
+  - `603083`
+  - `688205`
+  - `301205`
+- This indicates the next real choice is not "more generic review." It is:
+  - widen the pilot carefully
+  - or patch the role layer before widening
+
+## 2026-03-30 V1.12AO CPO role-layer patch pilot
+- This phase matters because it answers the most immediate post-pilot question with an experiment instead of another audit layer.
+- The key result is not only that `role_state` improved.
+- The key result is that it improved **without widening the pilot geometry**.
+- The strongest patch signal comes from:
+  - market microstructure
+  - limit-regime differences
+  - short-horizon behavior signatures
+- This is a useful warning as well as a win:
+  - the current role layer is partly an A-share structure problem, not just a pure business-role problem
+- That means later widening should test whether this gain survives beyond the current tiny row set.
+
+## 2026-03-30 V1.12AP CPO bounded secondary widen pilot
+- This phase matters because it tests whether the patched core skeleton survives one lawful widen step before any broader training claim.
+- The widen is intentionally narrow:
+  - same `7` truth rows
+  - same core targets
+  - only `3` guarded targets added on lawful subsets
+- The strongest result is that the widen did **not** collapse the core layer.
+- All guarded targets were learnable, and `role_transition_label` produced the largest gain.
+- That is useful, but still not the same as broad readiness.
+- The next real question shifts back to:
+  - is the main bottleneck now feature implementation,
+  - or is row geometry already the limiting factor for the next widen?
+
+## 2026-03-30 V1.12AQ CPO feature implementation patch review
+- This phase matters because it prevents the project from widening geometry just because the first guarded widen survived.
+- The strongest result is not the number of gaps. The strongest result is the ordering:
+  - implementation remains the narrowest lawful aperture
+  - geometry remains important, but should wait
+- That is useful because it keeps the next experiment interpretable:
+  - if the project widens rows too early, it will not know whether later failures come from geometry or from unfinished implementation rules
+
+## 2026-03-30 V1.12AR CPO feature implementation patch spec freeze
+- This phase matters because it turns implementation ambiguity into a bounded and auditable patch set.
+- The strongest result is not "more documentation." The strongest result is that the project now has a concrete next move:
+  - bounded implementation backfill on the current truth rows
+- This keeps the workflow out of two traps at once:
+  - infinite readiness review
+  - premature row-geometry widen
+
+## 2026-03-30 V1.12AS CPO bounded implementation backfill
+- This phase matters because it converts the frozen patch rules into explicit sample-level fields on the current truth rows.
+- The strongest result is not the sample count. The strongest result is that implementation ambiguity is no longer an abstract excuse on the current row set.
+- After this phase, if a rerun still fails or plateaus, the project can attribute that more confidently to geometry or mechanism limits rather than unfinished board/calendar implementation.
+
+## 2026-03-30 V1.12AT CPO post-patch rerun
+- This phase matters because it refuses to assume that explicit implementation backfill automatically creates model gains.
+- The strongest result is actually the absence of new `GBDT` gain on the current tiny row set.
+- That absence is informative:
+  - implementation is no longer the hidden reason to avoid the next step
+  - the next live uncertainty is now row geometry, not unfinished board/calendar rules
+- This is exactly the kind of bounded experiment that prevents infinite audit drift.
+
+## 2026-03-30 V1.12AU CPO bounded row-geometry widen pilot
+- This phase matters because it converts row geometry from a theory question into a real failure-exposure question.
+- The strongest result is not that the widen "mostly worked."
+- The strongest result is that branch-row admission broke `role_state_label` while leaving the guarded layer intact.
+- That is useful because it localizes the next problem:
+  - not implementation
+  - not generic training readiness
+  - specifically branch-role geometry
+- This is the right kind of failure: narrow, interpretable, and actionable.
+
+## 2026-03-30 V1.12AV CPO branch role geometry patch pilot
+- This phase matters because it tests whether the `V1.12AU` branch-row failure was a dead end or a patchable geometry issue.
+- The strongest result is not just that `role_state` improved again.
+- The strongest result is that widened geometry recovered without reopening the whole system.
+- That means the branch layer is not globally untrainable; it was missing a local geometry description.
+
+## 2026-03-30 V1.12AW CPO branch guarded admission review
+- This phase matters because it converts a successful local patch into an explicit admissibility split.
+- The strongest result is not that branch rows are now "all fixed."
+- The strongest result is that the project can admit some branch rows into guarded context while keeping the mixed connector/MPO branch out.
+- That keeps the next experiment narrower and more interpretable than a blunt all-branch widen.
+
+## 2026-03-30 V1.12AX CPO guarded branch-admitted pilot
+- This phase matters because it tests the `V1.12AW` admissibility decision under real bounded pilot conditions.
+- The strongest result is not the extra row count.
+- The strongest result is that the admitted branch subset can be tested without recreating the earlier branch-role collapse.
+- That means branch admission can now be discussed at the next bounded layer without pretending the whole branch space is solved.
+
+## 2026-03-30 V1.12AY CPO guarded branch training-layer review
+- This phase matters because it separates "can be tested in a bounded pilot" from "can enter the next training-facing layer."
+- The strongest result is that the same three branch rows survive this second cut without reopening the mixed connector/MPO branch.
+- That keeps the next move narrow and lawful instead of turning into a generic branch expansion.
+
+## 2026-03-30 V1.12AZ CPO bounded training layer extension
+- This phase matters because it turns the branch training-layer review into a concrete training-layer asset.
+- The strongest result is not just a bigger row count.
+- The strongest result is that the project now has a single 10-row bounded layer instead of juggling a 7-row baseline plus separate guarded branch notes.
+- That makes the next readiness question sharper: can this 10-row layer replace the old 7-row baseline for the next bounded pilot?
+
+## 2026-03-30 V1.12BA CPO 10-row layer replacement review
+- This phase matters because it eliminates a lingering fork in the workflow.
+- The strongest result is that the project now has one explicit default bounded layer for the next pilot instead of two competing baselines.
+- That removes a large source of future ambiguity without opening formal training.
+
+## 2026-03-30 V1.12BB CPO default 10-row guarded-layer pilot
+- This phase matters because it converts the new default layer from a governance decision into a real experimental baseline.
+- The strongest result is not a new jump in score.
+- The strongest result is that the `10`-row guarded layer now behaves as a stable default baseline against both:
+  - the old `7`-row core baseline
+  - the earlier guarded-branch pilot
+- That means later widen decisions can be judged against one bounded baseline instead of a forked setup.
+
+## 2026-03-30 V1.12BC CPO portfolio objective protocol
+- This phase matters because the project is now close enough to portfolio experimentation that objective leakage would become a real risk.
+- The strongest result is not more model freedom.
+- The strongest result is the hard separation between:
+  - hindsight upper-bound benchmarking
+  - no-leak aggressive experimentation
+  - no-leak neutral/selective experimentation
+- That separation protects later portfolio tests from quietly inheriting oracle logic.
+
+## 2026-03-30 V1.12BD market regime overlay feature review
+- This phase matters because broad-market and board-style context clearly matter, but they should not overwrite stock-level cycle truth.
+- The strongest result is not the feature count.
+- The strongest result is that the project now has a lawful overlay family that can amplify or suppress interpretation without flattening the CPO grammar into market beta.
+
+## 2026-03-30 V1.12BE CPO oracle upper-bound benchmark
+- This phase matters because it converts the frozen portfolio protocol into the first real portfolio line.
+- The strongest result is not the giant hindsight return by itself.
+- The strongest result is that the project now has an explicit upper-bound benchmark built on the same lawful 10-row CPO layer that later no-leak tracks will use.
+- That makes future portfolio comparison much cleaner than comparing no-leak models against an undefined idea of "what could have happened."
+
+## 2026-03-30 V1.12BF CPO aggressive no-leak black-box portfolio pilot
+- This phase matters because it converts the portfolio protocol from a benchmark-only setup into a real no-leak comparison.
+- The strongest result is not that the aggressive line already looks good enough.
+- The strongest result is that the project now has a measurable no-leak gap:
+  - return gap versus oracle
+  - drawdown gap versus oracle
+- That means later work can stop arguing abstractly about missing factors and start asking which missing mechanisms explain the specific gap.
+
+## 2026-03-30 V1.12BG CPO oracle-vs-no-leak gap review
+- This phase matters because the project now has two explicit portfolio lines, so the next improvement should come from bottleneck attribution rather than generic model expansion.
+- The strongest result is that the current gap is now framed as:
+  - risk-control failure
+  - stage-maturity filtering failure
+  - not just missing factor coverage
+- That lets the next track change objective posture instead of simply chasing more aggressive fitting.
+
+## 2026-03-30 V1.12BH CPO neutral selective no-leak portfolio pilot
+- This phase matters because it proves the project can build a second no-leak line with a different objective without violating the same lawful layer.
+- The strongest result is not only lower drawdown.
+- The strongest result is that the neutral line improves:
+  - total return
+  - max drawdown
+  - profit factor
+  relative to the first aggressive track, while holding cash most of the time.
+- That means the research system is beginning to translate cycle understanding into distinct portfolio behaviors rather than a single monolithic predictor.
+
+## 2026-03-30 V1.12BI CPO cross-sectional ranker pilot
+- This phase matters because it tests whether the portfolio problem is better framed as direct cross-sectional ordering than as classifier-style winner detection.
+- The strongest result is not that ranking beats everything.
+- The strongest result is that ranking improves versus the aggressive no-leak line while still failing to beat the current neutral selective line.
+- That means target-function alignment matters, but participation discipline still matters more than switching from classification to ranking alone.
+
+## 2026-03-30 V1.12BJ CPO neutral teacher gate pilot
+- This phase matters because the current strongest no-leak line is the neutral selective track, so it is tempting to assume that its discipline can simply be learned as a second-layer gate.
+- The strongest result is not any return number.
+- The strongest result is that the naive teacher-gate imitation collapses to all-cash behavior.
+- That means the neutral line's edge is more structured and sparse than a straightforward top-candidate gate imitation can recover.
+
+## 2026-03-30 V1.12BK CPO tree/ranker search
+- This phase matters because it tests whether a cheap tree/ranker model zoo can beat the current neutral selective baseline without reopening leak or deployment risk.
+- The strongest result is not that random forest makes more money.
+- The strongest result is that the best tree variant improves return but still fails the drawdown guard relative to the neutral selective line.
+- That means the neutral line remains the best current no-leak behavior, even though tree/ranker search is now a useful comparison branch.
+
+## 2026-03-31 V1.12CH packaging mainline template freeze
+- This phase matters because the project finally has one control template that is no longer merely exploratory.
+- The strongest result is not just that `packaging_process_enabler` worked on one realized path.
+- The strongest result is that three different checks now agree:
+  - realized-path improvement
+  - broader family validation improvement
+  - no path distortion after refinement
+- That makes `packaging_process_enabler` the first cluster mainline refined template asset rather than another temporary successful branch.

@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.6
+
+paths:
+  phase_charter_report: reports/analysis/v16_phase_charter_v1.json
+  feature_stability_review_report: reports/analysis/v16_feature_stability_review_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v16_phase_check_v1

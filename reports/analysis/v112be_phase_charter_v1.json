@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112be_cpo_oracle_upper_bound_benchmark",
+    "do_open_v112be_now": true,
+    "recommended_first_action": "freeze_v112be_cpo_oracle_upper_bound_benchmark_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BE CPO Oracle Upper-Bound Benchmark",
+    "mission": "Run a hindsight-only upper-bound portfolio benchmark on the default 10-row guarded CPO layer to estimate the ex-post profit ceiling before no-leak portfolio tracks begin.",
+    "in_scope": [
+      "oracle track only",
+      "single-position or cash hindsight allocation",
+      "equity curve and drawdown curve generation",
+      "trade process trace"
+    ],
+    "out_of_scope": [
+      "no-leak model training",
+      "signal generation",
+      "deployment"
+    ],
+    "success_criteria": [
+      "the oracle benchmark is explicitly hindsight-only",
+      "the benchmark uses the frozen default 10-row layer rather than a widened ad-hoc universe",
+      "the benchmark outputs a reusable upper-bound portfolio trace for later comparison"
+    ]
+  },
+  "interpretation": [
+    "V1.12BE exists to measure the hindsight profit ceiling without contaminating later no-leak experiments.",
+    "The oracle benchmark is a benchmark line, not a trainable model line."
+  ]
+}

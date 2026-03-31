@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112c_baseline_hotspot_review_v1",
+    "hotspot_stage_count": 6,
+    "hotspot_symbol_count": 3,
+    "top_error_pair_count": 12,
+    "primary_reading": "baseline_is_overoptimistic_in_late_markup_and_high_level_consolidation",
+    "ready_for_sidecar_protocol_next": true
+  },
+  "stage_rows": [
+    {
+      "stage": "high_level_consolidation",
+      "accuracy": 0.1383,
+      "count": 94
+    },
+    {
+      "stage": "deep_box_reset",
+      "accuracy": 0.2358,
+      "count": 106
+    },
+    {
+      "stage": "pullback",
+      "accuracy": 0.4667,
+      "count": 15
+    },
+    {
+      "stage": "rebound",
+      "accuracy": 0.5,
+      "count": 2
+    },
+    {
+      "stage": "long_box_reset",
+      "accuracy": 0.5349,
+      "count": 43
+    },
+    {
+      "stage": "major_markup",
+      "accuracy": 0.568,
+      "count": 412
+    }
+  ],
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "accuracy": 0.4286,
+      "count": 224
+    },
+    {
+      "symbol": "300502",
+      "accuracy": 0.4509,
+      "count": 224
+    },
+    {
+      "symbol": "300394",
+      "accuracy": 0.4732,
+      "count": 224
+    }
+  ],
+  "top_error_rows": [
+    {
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "count": 62
+    },
+    {
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "count": 55
+    },
+    {
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "count": 44
+    },
+    {
+      "symbol": "300308",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "count": 23
+    },
+    {
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "count": 21
+    },
+    {
+      "symbol": "300394",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "count": 19
+    },
+    {
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "failed",
+      "count": 19
+    },
+    {
+      "symbol": "300502",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "failed",
+      "count": 17
+    },
+    {
+      "symbol": "300394",
+      "stage": "major_markup",
+      "predicted_label": "carry_constructive",
+      "true_label": "watch_constructive",
+      "count": 16
+    },
+    {
+      "symbol": "300502",
+      "stage": "high_level_consolidation",
+      "predicted_label": "watch_constructive",
+      "true_label": "carry_constructive",
+      "count": 16
+    },
+    {
+      "symbol": "300502",
+      "stage": "long_box_reset",
+      "predicted_label": "failed",
+      "true_label": "carry_constructive",
+      "count": 15
+    },
+    {
+      "symbol": "300308",
+      "stage": "deep_box_reset",
+      "predicted_label": "failed",
+      "true_label": "watch_constructive",
+      "count": 12
+    }
+  ],
+  "interpretation": [
+    "The first baseline's main weakness is not random noise; it concentrates in specific late-cycle and consolidation stages.",
+    "This gives the next sidecar comparison a clean target: test whether a black-box model reduces those optimistic false positives without widening data scope.",
+    "The result should change the next comparison design, not trigger immediate deployment."
+  ]
+}

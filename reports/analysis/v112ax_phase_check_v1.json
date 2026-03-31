@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112ax_as_guarded_branch_admitted_pilot",
+    "do_open_v112ax_now": true,
+    "row_count_after_guarded_branch_admission": 10,
+    "core_targets_stable_after_guarded_branch_admission": true,
+    "guarded_targets_stable_after_guarded_branch_admission": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "review_if_guarded_branch_rows_can_enter_the_next_bounded_training_layer"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ax_guarded_branch_admitted_pilot",
+      "actual": {
+        "row_count_after_guarded_branch_admission": 10,
+        "admitted_branch_row_count": 3,
+        "core_targets_stable_after_guarded_branch_admission": true,
+        "guarded_targets_stable_after_guarded_branch_admission": true
+      },
+      "reading": "The guarded branch pilot is only useful if the admitted subset remains stable without reopening generic widen risk."
+    }
+  ],
+  "interpretation": [
+    "V1.12AX is a bounded admitted-branch pilot, not a promotion to formal training.",
+    "Formal training and signal rights remain closed."
+  ]
+}

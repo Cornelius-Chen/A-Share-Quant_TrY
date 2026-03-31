@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v19_feature_breadth_rereview_v1_as_bounded_rereview",
+    "reviewed_feature_count": 2,
+    "shortfall_changed_count": 1,
+    "breadth_gap_materially_reduced_count": 1,
+    "breadth_gap_partially_reduced_count": 1,
+    "promotion_ready_now_count": 0,
+    "ready_for_v19_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "feature_name": "policy_followthrough_support",
+      "prior_primary_shortfall": "sample_breadth_gap",
+      "new_admitted_case_count": 2,
+      "new_admitted_symbol_count": 1,
+      "new_admitted_symbols": [
+        "300750"
+      ],
+      "new_admitted_lane_ids": [
+        "mainline_trend_b::2024-11-05::300750",
+        "mainline_trend_c::2024-11-05::300750"
+      ],
+      "breadth_gap_reduction": "partial",
+      "updated_primary_shortfall": "sample_breadth_gap",
+      "promotion_ready_now": false,
+      "rereview_outcome": "continue_provisional_but_breadth_still_thin",
+      "review_reading": "The new breadth cases help, but they remain concentrated inside one symbol-family, so the original sample-breadth shortfall is reduced only partially and does not justify promotion."
+    },
+    {
+      "feature_name": "single_pulse_support",
+      "prior_primary_shortfall": "sample_breadth_gap",
+      "new_admitted_case_count": 3,
+      "new_admitted_symbol_count": 3,
+      "new_admitted_symbols": [
+        "002049",
+        "002273",
+        "002371"
+      ],
+      "new_admitted_lane_ids": [
+        "mainline_trend_c::2024-06-05::002371",
+        "mainline_trend_c::2024-11-05::002049",
+        "mainline_trend_b::2024-05-10::002273"
+      ],
+      "breadth_gap_reduction": "material",
+      "updated_primary_shortfall": "non_redundancy_stress_gap",
+      "promotion_ready_now": false,
+      "rereview_outcome": "continue_provisional_with_breadth_improvement",
+      "review_reading": "The new breadth cases materially reduce the original sample-breadth shortfall, but the feature still looks too entangled with opening-led structure to support promotion."
+    }
+  ],
+  "interpretation": [
+    "V1.9 does not ask whether these features should be promoted today; it asks whether new bounded breadth evidence changes the shortfall ordering.",
+    "single_pulse_support now has meaningfully broader support, but not enough orthogonality for promotion.",
+    "policy_followthrough_support improved, but the new evidence is still too concentrated to remove the breadth constraint entirely."
+  ]
+}

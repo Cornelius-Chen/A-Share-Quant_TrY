@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113d_bounded_archetype_usage_pass_v1",
+    "archetype_count_reviewed": 3,
+    "clean_template_review_asset_count": 1,
+    "formal_template_promotion_now": false,
+    "ready_for_phase_check_next": true
+  },
+  "archetype_review_rows": [
+    {
+      "archetype_name": "commercial_space_mainline",
+      "state_role_clarity": "high",
+      "strength_clarity": "high",
+      "driver_overreach_risk": "medium",
+      "review_disposition": "preserve_as_clean_template_review_asset",
+      "reading": "This archetype fits the grammar cleanly: policy and event resonance can be used without immediately collapsing role, strength, and driver into one bucket."
+    },
+    {
+      "archetype_name": "stablecoin_theme_cycle",
+      "state_role_clarity": "medium",
+      "strength_clarity": "medium",
+      "driver_overreach_risk": "high",
+      "review_disposition": "preserve_as_fast_cycle_review_asset_but_not_template_core_yet",
+      "reading": "Useful for fast diffusion review, but event resonance and narrative spillover risk over-dominating the archetype."
+    },
+    {
+      "archetype_name": "low_altitude_economy_cycle",
+      "state_role_clarity": "medium",
+      "strength_clarity": "medium",
+      "driver_overreach_risk": "medium",
+      "review_disposition": "preserve_as_policy_industry_review_asset_with_mapping_noise",
+      "reading": "The grammar works, but mapping activation and policy-story overlap create more role/driver mixing than the strongest seed."
+    }
+  ],
+  "interpretation": [
+    "V1.13D is a template-usage review, not an execution or feature phase.",
+    "The grammar appears archetype-usable, but not all archetypes are equally clean.",
+    "The result is sufficient to preserve one strong core archetype and two bounded review assets without over-promoting them."
+  ]
+}

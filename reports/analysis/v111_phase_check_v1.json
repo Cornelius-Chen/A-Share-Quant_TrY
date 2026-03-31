@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v111_active_but_exploration_layer_only",
+    "v111_open": true,
+    "ready_for_bounded_first_pilot_next": true,
+    "allow_strategy_integration_now": false,
+    "allow_retained_promotion_now": false,
+    "recommended_next_posture": "prepare_v111_closure_or_owner_review_for_first_pilot"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "solution_shift_memo_to_v111",
+      "actual": {
+        "phase_open": true
+      },
+      "reading": "V1.11 was opened as the solution-shift response to an exhausted evidence pool."
+    },
+    {
+      "evidence_name": "acquisition_infrastructure_plan",
+      "actual": {
+        "acquisition_scope_count": 4,
+        "source_hierarchy_count": 4,
+        "ready_for_bounded_first_pilot_next": true
+      },
+      "reading": "The phase now has a reusable upstream acquisition basis instead of another same-pool review loop."
+    }
+  ],
+  "interpretation": [
+    "V1.11 has produced an exploration-layer infrastructure result rather than a direct evidence or promotion result.",
+    "This is enough to change the future decision basis without relaxing any admission or mainline gates.",
+    "The next legal move is an owner-reviewed first pilot, not automatic strategy integration."
+  ]
+}

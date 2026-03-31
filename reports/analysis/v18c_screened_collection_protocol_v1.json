@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v18c_screened_collection_protocol_v1",
+    "target_feature_count": 2,
+    "allow_retained_promotion_now": false,
+    "ready_for_screened_collection_next": true
+  },
+  "protocol": {
+    "target_feature_rows": [
+      {
+        "feature_name": "single_pulse_support",
+        "candidate_source_pool": "closed_opening_led_lanes_with_context_rows",
+        "sample_limit": 3,
+        "screening_mode": "bounded_additional_opening_cases",
+        "required_collection_artifacts": [
+          "admission_record",
+          "evidence_case_record",
+          "collection_summary_row"
+        ]
+      },
+      {
+        "feature_name": "policy_followthrough_support",
+        "candidate_source_pool": "closed_followthrough_like_lanes_with_policy_or_industry_context",
+        "sample_limit": 3,
+        "screening_mode": "bounded_additional_followthrough_cases",
+        "required_collection_artifacts": [
+          "admission_record",
+          "evidence_case_record",
+          "collection_summary_row"
+        ]
+      }
+    ],
+    "collection_rules": [
+      "screen candidates only from the frozen source pool",
+      "respect current sample limits strictly",
+      "record every admitted case with an admission record",
+      "stop collection for a feature when its limit is reached or the screened pool is exhausted"
+    ],
+    "forbidden_actions": [
+      "sample_limit_override",
+      "generic_replay_growth",
+      "retained_feature_promotion",
+      "strategy_integration",
+      "mixed_shortfall_collection"
+    ]
+  },
+  "interpretation": [
+    "V1.8C does not widen collection scope; it executes only against the two already approved breadth targets.",
+    "The protocol keeps collection screened, sample-limited, and fully recordable.",
+    "The next legal action is actual screened bounded collection, not promotion or new replay widening."
+  ]
+}

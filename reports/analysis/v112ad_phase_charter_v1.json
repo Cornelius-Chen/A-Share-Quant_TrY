@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ad_dynamic_role_transition_feature_review",
+    "do_open_v112ad_now": true,
+    "selected_parent_line": "v112z_v112aa_v112ac_cpo_cycle_role_challenge",
+    "recommended_first_action": "freeze_v112ad_dynamic_role_transition_feature_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AD CPO Dynamic Role-Transition Feature Review",
+    "mission": "Turn stage-dependent role migration, leader persistence, challenger activation, spillover saturation, and late-cycle demotion risk into bounded review-first features so future modeling is not forced to treat roles as timeless static buckets.",
+    "in_scope": [
+      "freeze stage-to-stage role transition events",
+      "freeze dynamic role-transition feature candidates",
+      "capture review-only role replacement and demotion signals"
+    ],
+    "out_of_scope": [
+      "formal label freeze",
+      "formal training rights",
+      "signal generation",
+      "automatic role replacement"
+    ],
+    "success_criteria": [
+      "static role grammar is upgraded into stage-conditioned transition grammar",
+      "leader change, spillover saturation, and demotion risk become explicit review features",
+      "the result stays bounded and review-first rather than drifting into stealth labeling"
+    ],
+    "stop_criteria": [
+      "role transitions are backfilled with future truth instead of stage-local evidence",
+      "dynamic features are treated as deployable signals",
+      "the phase tries to replace the existing cohort map rather than augment it"
+    ]
+  },
+  "interpretation": [
+    "V1.12AD exists because static role labels are not enough once cycles contain re-ignition, demotion, and late spillover.",
+    "The goal is to quantify role movement, not to overwrite the current governed cohort map.",
+    "Formal labels and training remain closed during this review layer."
+  ]
+}

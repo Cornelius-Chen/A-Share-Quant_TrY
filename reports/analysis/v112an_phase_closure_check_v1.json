@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112an_as_core_skeleton_pilot_result_review_success",
+    "v112an_success_criteria_met": true,
+    "enter_v112an_waiting_state_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "recommended_next_posture": "owner_decide_whether_to_widen_pilot_or_patch_role_layer"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112an_phase_check",
+      "actual": {
+        "best_family_for_phase": "catalyst_presence_family",
+        "best_family_for_role_state": "role_prior_family",
+        "correction_bucket_count": 11
+      },
+      "reading": "The tiny pilot has now been translated into actionable mechanism hypotheses instead of raw score deltas alone."
+    }
+  ],
+  "interpretation": [
+    "V1.12AN closes once the tiny pilot can be explained in language and next-step pressure is narrowed.",
+    "The next step must come from owner choice, not automatic expansion."
+  ]
+}

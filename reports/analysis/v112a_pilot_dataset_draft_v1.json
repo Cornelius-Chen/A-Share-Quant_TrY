@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112a_partial_pilot_dataset_draft_v1",
+    "dataset_row_count": 3,
+    "resolved_training_row_count": 1,
+    "pending_training_row_count": 2,
+    "ready_for_more_owner_corrections_next": true
+  },
+  "dataset_rows": [
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "final_role_label_cn": "高弹性核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {},
+      "cycle_notes": "",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "pending_more_owner_input",
+      "pending_fields": [
+        "cycle_window",
+        "owner_notes"
+      ],
+      "owner_notes": ""
+    },
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "final_role_label_cn": "龙头/核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-03",
+        "first_markup_end": "2023-07",
+        "box_consolidation_start": "2023-08",
+        "box_consolidation_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2026-01",
+        "pullback_window": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_notes": "月K视角下，2023-03到2023-07为第一波上涨；2023-08到2025-05箱体震荡；2025-06到2026-01主升浪；2026-02约18%回调，2026-03反弹约10%并重新站回5日线。",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "ready_for_next_labeling_step",
+      "pending_fields": [],
+      "owner_notes": "优先作为第一版周期窗口标杆。"
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "final_role_label_cn": "上游核心器件平台受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {},
+      "cycle_notes": "",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "pending_more_owner_input",
+      "pending_fields": [
+        "cycle_window",
+        "owner_notes"
+      ],
+      "owner_notes": ""
+    }
+  ],
+  "interpretation": [
+    "The pilot dataset draft is allowed to be partial as long as readiness and pending fields are explicit.",
+    "This gives the owner a concrete experimental surface instead of forcing full correctness before any draft exists.",
+    "The next useful move is more owner correction on unresolved objects, not automatic model fitting."
+  ]
+}

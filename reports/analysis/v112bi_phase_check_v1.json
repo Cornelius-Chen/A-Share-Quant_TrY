@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bi_as_cpo_cross_sectional_ranker_pilot",
+    "do_open_v112bi_now": true,
+    "trade_count": 19,
+    "cash_ratio": 0.2759,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bi_ranker_pilot",
+      "actual": {
+        "total_return": 2.0374,
+        "aggressive_return_delta": 0.4969,
+        "neutral_return_delta": -0.2107
+      },
+      "reading": "The phase is only meaningful if the ranker produces a real bounded portfolio line and an explicit comparison against current classifier tracks."
+    }
+  ],
+  "interpretation": [
+    "V1.12BI is valid because it tests target-function alignment on the same lawful layer instead of adding a new uncontrolled objective."
+  ]
+}

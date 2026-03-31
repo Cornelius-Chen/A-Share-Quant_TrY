@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112s_cpo_chronology_normalization_v1",
+    "chronology_segment_count": 9,
+    "timing_gap_count": 10,
+    "normalized_calendar_anchor_count": 10,
+    "ready_for_phase_check_next": true
+  },
+  "chronology_segment_rows": [
+    {
+      "segment_name": "pre_event_watch_window",
+      "reading": "The bounded watch window before a known conference, earnings print, or route event.",
+      "default_relative_span": "T-20_to_T-1"
+    },
+    {
+      "segment_name": "event_window",
+      "reading": "The anchor window where the conference, earnings release, or public route event actually happens.",
+      "default_relative_span": "T0_to_T+2"
+    },
+    {
+      "segment_name": "post_event_followthrough_window",
+      "reading": "The first reaction and digestion window after the public event, when narrative reset often matters most.",
+      "default_relative_span": "T+3_to_T+15"
+    },
+    {
+      "segment_name": "between_event_quiet_window",
+      "reading": "The dead zone between large public events where procurement, design, and qualification can still move.",
+      "default_relative_span": "between_major_public_anchors"
+    },
+    {
+      "segment_name": "pre_earnings_channel_check_window",
+      "reading": "The pre-print window where channel checks and expectation drift often move before formal results.",
+      "default_relative_span": "earnings_T-15_to_T-1"
+    },
+    {
+      "segment_name": "post_earnings_reset_window",
+      "reading": "The 1-3 week period after earnings when backlog, guidance, and tone reset the chronology.",
+      "default_relative_span": "earnings_T+1_to_T+15"
+    },
+    {
+      "segment_name": "capex_to_order_conversion_window",
+      "reading": "The lagged window between hyperscaler capex talk and optical order conversion.",
+      "default_relative_span": "quarter_plus_lag"
+    },
+    {
+      "segment_name": "launch_to_ramp_window",
+      "reading": "The lag between a product or route announcement and visible shipment or revenue inflection.",
+      "default_relative_span": "announcement_to_ramp"
+    },
+    {
+      "segment_name": "design_win_to_volume_window",
+      "reading": "The latency between design-win or qualification news and true volume production.",
+      "default_relative_span": "win_to_volume_lag"
+    }
+  ],
+  "timing_gap_rows": [
+    {
+      "timing_gap_name": "post_earnings_gap_after_major_vendor_reports",
+      "why_it_matters": "Narrative reset often happens in the 1-3 weeks after earnings, not only on conference dates.",
+      "best_target_layer_or_stage": "post_earnings_reset_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "between_conference_dead_zones",
+      "why_it_matters": "Multi-month quiet periods can still contain procurement and qualification drift.",
+      "best_target_layer_or_stage": "between_event_quiet_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "fiscal_quarter_boundary_sequencing",
+      "why_it_matters": "Demand and capex narratives can shift at quarter boundaries even without a large optical event.",
+      "best_target_layer_or_stage": "pre_earnings_channel_check_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "pre_earnings_channel_check_window",
+      "why_it_matters": "Expectation drift before prints can invert cause-and-effect if not marked separately.",
+      "best_target_layer_or_stage": "pre_earnings_channel_check_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "capex_announcement_to_order_conversion_lag",
+      "why_it_matters": "Hyperscaler capex references often lead actual optical orders by a quarter or more.",
+      "best_target_layer_or_stage": "capex_to_order_conversion_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "product_launch_to_revenue_inflection_lag",
+      "why_it_matters": "Product announcements can materially precede shipment ramps.",
+      "best_target_layer_or_stage": "launch_to_ramp_window",
+      "suggested_review_priority": "medium"
+    },
+    {
+      "timing_gap_name": "standards_milestone_sequencing",
+      "why_it_matters": "Spec or interoperability milestones are not the same as commercial demand timing.",
+      "best_target_layer_or_stage": "event_window",
+      "suggested_review_priority": "medium"
+    },
+    {
+      "timing_gap_name": "customer_design_win_latency",
+      "why_it_matters": "Design wins often arrive long before volume revenue.",
+      "best_target_layer_or_stage": "design_win_to_volume_window",
+      "suggested_review_priority": "high"
+    },
+    {
+      "timing_gap_name": "budget_cycle_overlap_with_calendar_events",
+      "why_it_matters": "Planning-cycle and conference timing can align or conflict, distorting attribution.",
+      "best_target_layer_or_stage": "between_event_quiet_window",
+      "suggested_review_priority": "medium"
+    },
+    {
+      "timing_gap_name": "supply_chain_lead_time_transition",
+      "why_it_matters": "Lead-time compression or stretch changes the effective chronology of demand realization.",
+      "best_target_layer_or_stage": "launch_to_ramp_window",
+      "suggested_review_priority": "medium"
+    }
+  ],
+  "catalyst_calendar_rows": [
+    {
+      "source_name": "ofc_official_event_page",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "annual",
+      "why_it_helps": "Primary anchor for OFC timing and exhibit window."
+    },
+    {
+      "source_name": "nvidia_gtc_official",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "annual",
+      "why_it_helps": "Key AI-infrastructure event where optical-link and CPO roadmap items surface."
+    },
+    {
+      "source_name": "optica_executive_forum_at_ofc",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "annual",
+      "why_it_helps": "CEO or CTO optical-market discussion adjacent to OFC."
+    },
+    {
+      "source_name": "oif_ofc_2026_demo_listing",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "semiannual",
+      "why_it_helps": "Concrete date anchor for standards and interoperability showcases."
+    },
+    {
+      "source_name": "broadcom_ofc_announcements",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "event_driven",
+      "why_it_helps": "Proxy for product-event timing around OFC and optical interconnect demos."
+    },
+    {
+      "source_name": "lumentum_ofc_announcements",
+      "normalized_bucket": "conference_or_route_event",
+      "target_layer": "message_and_catalyst",
+      "likely_refresh_frequency": "event_driven",
+      "why_it_helps": "Captures OFC-timed product reveals and demo sets."
+    },
+    {
+      "source_name": "alphabet_results_and_capex_guidance",
+      "normalized_bucket": "csp_capex_or_results_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "likely_refresh_frequency": "quarterly",
+      "why_it_helps": "Public capex-guidance anchor for CSP demand context."
+    },
+    {
+      "source_name": "microsoft_investor_earnings_events",
+      "normalized_bucket": "csp_capex_or_results_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "likely_refresh_frequency": "quarterly",
+      "why_it_helps": "Public cloud-infrastructure and capex timing anchor."
+    },
+    {
+      "source_name": "amazon_investor_results",
+      "normalized_bucket": "csp_capex_or_results_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "likely_refresh_frequency": "quarterly",
+      "why_it_helps": "Public AWS-related infrastructure-spend timing anchor."
+    },
+    {
+      "source_name": "meta_capex_materials",
+      "normalized_bucket": "csp_capex_or_results_anchor",
+      "target_layer": "earnings_and_business_performance",
+      "likely_refresh_frequency": "quarterly",
+      "why_it_helps": "Official capex-guidance reference point for hyperscale infrastructure cycles."
+    }
+  ],
+  "interpretation": [
+    "V1.12S turns flat event anchors into a bounded chronology grammar with explicit lag windows.",
+    "The goal is not more dates; the goal is more usable timing structure for later review.",
+    "This still does not authorize training or execution logic."
+  ]
+}

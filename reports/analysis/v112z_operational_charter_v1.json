@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112z_operational_charter_v1",
+    "cycle_absorption_is_primary_objective": true,
+    "black_box_primary_family": "hist_gradient_boosting_classifier",
+    "white_box_role": "guardrail_and_audit_baseline",
+    "owner_facing_narrative_required": true,
+    "formal_training_still_forbidden": true,
+    "ready_for_reconstruction_pass": true
+  },
+  "charter": {
+    "top_objective": "Use bounded cycle reconstruction plus dual-track modeling to absorb one full CPO cycle as completely as possible, then translate the discovered mechanism back into owner-facing, auditable, no-leak research language before any downstream training rights are considered.",
+    "governing_principle": "black_box_discovers_white_box_constrains_narrative_validates",
+    "three_layer_structure": {
+      "cycle_reconstruction_layer": [
+        "reconstruct stage ordering across one bounded CPO cycle",
+        "reconstruct catalyst ordering and board chronology overlays",
+        "keep mixed-role and spillover ambiguity visible instead of over-cleaning it away"
+      ],
+      "black_box_absorption_layer": [
+        "use tabular black-box models to absorb heterogeneous and weakly structured information faster than linear-only baselines",
+        "treat the black-box layer as a mechanism finder rather than a truth legislator",
+        "require same-dataset and same-time-split comparisons against simpler baselines"
+      ],
+      "translation_and_audit_layer": [
+        "translate model discoveries into owner-facing cycle narrative",
+        "state which stage, role, catalyst, structure, or spillover mechanism the model appears to be capturing",
+        "reject any gain that cannot survive no-leak and audit review"
+      ]
+    },
+    "model_stack": {
+      "white_box_guardrail_baseline": {
+        "role": "audit_baseline_and_leak_detector",
+        "why": [
+          "keeps a minimum interpretable benchmark",
+          "makes stage-specific false-positive zones explicit",
+          "prevents black-box-only progress from becoming unauditable"
+        ]
+      },
+      "primary_black_box_family": {
+        "model": "hist_gradient_boosting_classifier",
+        "why": [
+          "currently best same-dataset sidecar result",
+          "robust on tabular heterogeneous features",
+          "low enough compute to support repeated bounded reruns",
+          "captures nonlinear interactions without requiring large sequence-scale data"
+        ],
+        "current_readout": {
+          "v1_test_accuracy": 0.558,
+          "v2_test_accuracy": 0.5655,
+          "high_level_consolidation_false_positives_v2": 0
+        }
+      },
+      "secondary_black_box_family": {
+        "model": "small_mlp_classifier",
+        "role": "nonlinear_comparison_model_not_primary_driver",
+        "why": [
+          "checks whether a different nonlinear family captures residual structure",
+          "should remain secondary until chronology and labels stabilize further"
+        ]
+      },
+      "deferred_model_families": [
+        "temporal_convolution_network",
+        "transformer_like_sequence_model",
+        "deeper_attention_based_sequence_family"
+      ]
+    },
+    "immediate_success_criteria": [
+      "produce a review-only reconstructed cycle map covering stage, catalyst, role, board chronology, and spillover overlays",
+      "produce an owner-facing narrative reconstruction that can explain the cycle in time order and role order",
+      "produce a black-box residual-mechanism memo that states what the black box sees beyond the guardrail baseline",
+      "keep mixed-role entities, spillover candidates, and residual pending rows visible",
+      "avoid any slide into auto training, auto label freeze, or auto signal logic"
+    ],
+    "narrative_acceptance_tests": [
+      "time narration: explain what the market was seeing before ignition and why each major transition happened",
+      "role narration: explain who acted as leader, mid-core, high-beta extension, branch extension, spillover, and weak-memory row",
+      "catalyst narration: separate pre-visible catalysts, reinforcement catalysts, and post-hoc explanation noise",
+      "structure narration: explain when the cycle was earnings-driven, board-driven, or mixed",
+      "counterexample narration: explain which names looked core but should not be treated as true core",
+      "trading-boundary narration: explain which windows look attackable, watch-only, or de-risking-only"
+    ],
+    "downstream_trading_objective": {
+      "primary": "maximize return capture under drawdown control",
+      "secondary": "improve profit_factor_and_risk_adjusted_participation",
+      "must_not_replace": "no_leak_and_narrative_audit_requirements"
+    },
+    "no_leak_guardrails": [
+      "time_split_only_no_random_shuffle",
+      "all catalysts and events must be attached by point-in-time visibility",
+      "no future-known role truth may be backfilled into earlier feature rows",
+      "mixed-role, spillover, and pending rows must remain explicit instead of being silently deleted",
+      "black-box output may not auto-legislate feature truth or label truth"
+    ],
+    "recommended_next_chain": [
+      "run_v112z_bounded_cycle_reconstruction_pass",
+      "freeze_bounded_cpo_cohort_map_and_labeling_pilot",
+      "run_dual_track_guardrail_vs_black_box_benchmark",
+      "write_black_box_residual_mechanism_memo",
+      "review_return_drawdown_profit_factor_before_any_training_rights_change"
+    ],
+    "training_protocol_reference": {
+      "sample_unit": "symbol_day_within_one_price_cycle_window",
+      "feature_block_count": 4,
+      "label_count": 3
+    }
+  },
+  "interpretation": [
+    "The highest current priority is cycle absorption, not early explainable-feature completeness.",
+    "Black-box models are allowed to lead discovery, but they remain bounded by no-leak rules, white-box guardrails, and owner-facing narrative audit.",
+    "V1.12Z should be judged not only by predictive deltas but by whether the cycle can be reconstructed and verbally explained in a stable, auditable way."
+  ]
+}

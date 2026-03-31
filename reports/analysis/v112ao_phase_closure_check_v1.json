@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112ao_as_role_layer_patch_pilot_success",
+    "v112ao_success_criteria_met": true,
+    "enter_v112ao_waiting_state_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "recommended_next_posture": "consider_bounded_secondary_widen_pilot_under_same_report_only_boundary"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112ao_phase_check",
+      "actual": {
+        "role_state_accuracy_gain_after_patch": 0.2623,
+        "best_role_patch_family": "role_patch_microstructure_family"
+      },
+      "reading": "The role patch pilot has now been reduced to a next-step decision instead of one more audit layer."
+    }
+  ],
+  "interpretation": [
+    "V1.12AO closes once the team knows whether role-state can be improved and what family drove that improvement.",
+    "The next step must remain bounded and report-only."
+  ]
+}

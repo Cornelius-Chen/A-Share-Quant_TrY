@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112an_cpo_core_skeleton_pilot_result_review",
+    "do_open_v112an_now": true,
+    "recommended_first_action": "freeze_v112an_cpo_core_skeleton_pilot_result_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AN CPO Core-Skeleton Pilot Result Review",
+    "mission": "Review why phase and catalyst-sequence labels were learned well, why role-state remains harder, and what the black-box model captured beyond the guardrail baseline.",
+    "in_scope": [
+      "feature-family ablation for current pilot-local families",
+      "role-state confusion review",
+      "baseline-wrong / gbdt-right correction bucket review"
+    ],
+    "out_of_scope": [
+      "new training expansion",
+      "formal training promotion",
+      "formal signal generation",
+      "generic extra audit layers"
+    ],
+    "success_criteria": [
+      "the phase explains current pilot behavior in language rather than just listing scores",
+      "it identifies why role-state remains the harder layer",
+      "it produces a concrete next-step bottleneck reading"
+    ]
+  },
+  "interpretation": [
+    "V1.12AN is the explanation layer that turns the first tiny pilot into usable research knowledge.",
+    "The goal is not another audit loop; the goal is to understand what the pilot learned and what it still failed to learn."
+  ]
+}

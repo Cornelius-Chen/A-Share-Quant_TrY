@@ -1,0 +1,44 @@
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+import yaml
+
+from a_share_quant.strategy.v112a_pilot_dataset_draft_v1 import (
+    V112APilotDatasetDraftAnalyzer,
+    load_json_report,
+    write_v112a_pilot_dataset_draft_report,
+)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run V1.12A pilot dataset draft.")
+    parser.add_argument("--config", required=True, help="Path to the YAML config file.")
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    config_path = Path(args.config)
+    with config_path.open("r", encoding="utf-8") as handle:
+        config = yaml.safe_load(handle)
+
+    analyzer = V112APilotDatasetDraftAnalyzer()
+    result = analyzer.analyze(
+        owner_correction_integration_payload=load_json_report(
+            Path(config["paths"]["v112a_owner_correction_integration_report"])
+        ),
+        training_protocol_payload=load_json_report(Path(config["paths"]["v112_training_protocol_report"])),
+    )
+    output_path = write_v112a_pilot_dataset_draft_report(
+        reports_dir=Path(config["paths"]["reports_dir"]),
+        report_name=str(config["report"]["name"]),
+        result=result,
+    )
+    print(f"V1.12A pilot dataset draft report: {output_path}")
+    print(f"Summary: {result.summary}")
+
+
+if __name__ == "__main__":
+    main()

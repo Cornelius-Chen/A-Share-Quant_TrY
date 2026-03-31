@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112at_as_post_patch_rerun_success",
+    "v112at_success_criteria_met": true,
+    "enter_v112at_waiting_state_now": true,
+    "allow_row_geometry_widen_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "recommended_next_posture": "consider_bounded_row_geometry_widen_pilot_now_that_current_truth_rows_are_post_patch_stable"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112at_phase_check",
+      "actual": {
+        "core_targets_stable_after_post_patch_rerun": true,
+        "guarded_targets_stable_after_post_patch_rerun": true,
+        "implementation_family_role_accuracy_drop": 0.0
+      },
+      "reading": "The phase closes once post-patch stability on current truth rows is explicit enough to move the next uncertainty to row geometry."
+    }
+  ],
+  "interpretation": [
+    "V1.12AT closes with post-patch current-row stability made explicit.",
+    "The next lawful move may discuss bounded row-geometry widen, but formal training and signal rights remain closed."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v113_as_template_reentry_success",
+    "v113_success_criteria_met": true,
+    "enter_v113_waiting_state_now": true,
+    "allow_auto_model_open_now": false,
+    "recommended_next_posture": "open_bounded_theme_diffusion_state_schema_when_owner_continues"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v113_phase_check",
+      "actual": {
+        "selected_template_family": "theme_diffusion_carry",
+        "seed_archetype_count": 3,
+        "schema_first_posture": true
+      },
+      "reading": "V1.13 closes once the reentry target and bounded archetype basis are frozen cleanly."
+    }
+  ],
+  "interpretation": [
+    "V1.13 is a successful reallocation phase.",
+    "It does not yet authorize models or execution logic inside the new template line."
+  ]
+}

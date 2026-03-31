@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: review_v1.7
+
+paths:
+  v17_promotion_evidence_protocol_report: reports/analysis/v17_promotion_evidence_protocol_v1.json
+  v16_feature_stability_review_report: reports/analysis/v16_feature_stability_review_v1.json
+  v15_feature_admissibility_review_report: reports/analysis/v15_feature_admissibility_review_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v17_feature_promotion_gap_review_v1

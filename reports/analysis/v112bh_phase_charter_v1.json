@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bh_cpo_neutral_selective_no_leak_portfolio_pilot",
+    "do_open_v112bh_now": true,
+    "recommended_first_action": "freeze_v112bh_cpo_neutral_selective_no_leak_portfolio_pilot_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BH CPO Neutral Selective No-Leak Portfolio Pilot",
+    "mission": "Run a no-leak selective portfolio line on the same lawful 10-row CPO layer with explicit cash admission, stricter probability gates, and drawdown-aware participation discipline.",
+    "in_scope": [
+      "point-in-time only training cutoff",
+      "cash-allowed selective participation",
+      "oracle-gap and aggressive-gap comparison",
+      "equity, drawdown, and trade trace output"
+    ],
+    "out_of_scope": [
+      "oracle hindsight logic",
+      "formal signal generation",
+      "deployment"
+    ],
+    "success_criteria": [
+      "the pilot preserves no-leak discipline",
+      "the pilot can remain in cash when the gate stack is not met",
+      "the pilot reports its comparison to both oracle and aggressive tracks"
+    ]
+  },
+  "interpretation": [
+    "V1.12BH is not a smaller aggressive track; it is a different objective line that explicitly values cash, drawdown control, and profit-factor quality.",
+    "The neutral track remains experimental and non-deployable."
+  ]
+}

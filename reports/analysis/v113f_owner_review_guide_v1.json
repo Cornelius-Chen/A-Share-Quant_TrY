@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113f_owner_review_guide_v1",
+    "guide_row_count": 3,
+    "ready_for_owner_review_now": true
+  },
+  "guide_rows": [
+    {
+      "symbol": "002085",
+      "display_name": "万丰奥威",
+      "current_role_guess_cn": "龙头",
+      "evidence_strength_reading_cn": "本地证据最强",
+      "current_window_guess": {
+        "start": "2024-01-02",
+        "end": "2024-12-31"
+      },
+      "owner_should_review": [
+        "是否保留在第一版 pilot",
+        "角色是否要改",
+        "周期起止是否要改",
+        "是否需要补充同层级对象"
+      ],
+      "current_reading": "Dense commercial-space concept presence makes this the cleanest local mainline leader seed."
+    },
+    {
+      "symbol": "000738",
+      "display_name": "航发控制",
+      "current_role_guess_cn": "映射激活",
+      "evidence_strength_reading_cn": "跨题材映射偏多",
+      "current_window_guess": {
+        "start": "2024-02-19",
+        "end": "2024-12-13"
+      },
+      "owner_should_review": [
+        "是否保留在第一版 pilot",
+        "角色是否要改",
+        "周期起止是否要改",
+        "是否需要补充同层级对象"
+      ],
+      "current_reading": "The symbol appears in commercial-space mapping intermittently and therefore reads more like a mapping activation draft than a clean core."
+    },
+    {
+      "symbol": "600118",
+      "display_name": "中国卫星",
+      "current_role_guess_cn": "中军",
+      "evidence_strength_reading_cn": "政策锚点较强但直连证据偏弱",
+      "current_window_guess": {
+        "start": "2024-07-24",
+        "end": "2024-07-30"
+      },
+      "owner_should_review": [
+        "是否保留在第一版 pilot",
+        "角色是否要改",
+        "周期起止是否要改",
+        "是否需要补充同层级对象"
+      ],
+      "current_reading": "Policy and aerospace anchoring make this a plausible mid-core review seed despite sparse direct commercial-space mapping."
+    }
+  ],
+  "interpretation": [
+    "This guide converts the raw draft object pool into a compact owner-facing review surface.",
+    "It does not change the pilot itself; it only lowers the friction of correcting roles and windows.",
+    "The next useful move remains owner review of the three draft objects."
+  ]
+}

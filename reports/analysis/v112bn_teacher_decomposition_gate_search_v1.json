@@ -1,0 +1,1002 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112bn_teacher_decomposition_gate_search_v1",
+    "track_name": "teacher_decomposition_gate_search_track",
+    "no_leak_enforced": true,
+    "training_layer_row_count": 10,
+    "sample_count": 53,
+    "teacher_decision_row_count": 53,
+    "candidate_row_count": 30,
+    "core_candidate_count": 15,
+    "overlay_candidate_count": 15,
+    "non_cash_candidate_count": 0,
+    "best_candidate_rule_count": 0,
+    "best_candidate_stage": "cash_only",
+    "trade_count": 0,
+    "equity_curve_point_count": 1,
+    "drawdown_curve_point_count": 1,
+    "total_return": 0.0,
+    "max_drawdown": 0.0,
+    "profit_factor": "inf",
+    "hit_rate": 0.0,
+    "cash_ratio": 1.0,
+    "teacher_alignment_recall": 0.0,
+    "teacher_alignment_precision": 0.0,
+    "teacher_alignment_f1": 0.0,
+    "teacher_exact_alignment_recall": 0.0,
+    "teacher_exact_alignment_precision": 0.0,
+    "teacher_exact_alignment_f1": 0.0,
+    "neutral_return_delta": -2.2481,
+    "aggressive_return_delta": -1.5405,
+    "ranker_return_delta": -2.0374,
+    "oracle_return_gap": 752.0861,
+    "all_non_cash_failed_proven": true,
+    "best_non_cash_candidate_found": false,
+    "best_candidate_non_cash": false,
+    "best_candidate_cash_ratio_gap_to_teacher": 0.2717,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "prove_that_all_non_cash_candidates_fail_before_any_gate_stack_is_promoted"
+  },
+  "candidate_rows": [
+    {
+      "stage": "core",
+      "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18",
+      "rule_depth": 2,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "probability_margin"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "probability_margin>=0.18 & rollforward_state_numeric>=0.5",
+      "rule_depth": 2,
+      "feature_names": [
+        "probability_margin",
+        "rollforward_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "probability_margin>=0.18 & turnover_state_numeric<=0.85",
+      "rule_depth": 2,
+      "feature_names": [
+        "probability_margin",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "probability_margin>=0.18 & weighted_breadth_ratio>=0.45",
+      "rule_depth": 2,
+      "feature_names": [
+        "probability_margin",
+        "weighted_breadth_ratio"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "weighted_breadth_ratio>=0.45"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "catalyst_presence_proxy>=0.35 & probability_margin>=0.18",
+      "rule_depth": 2,
+      "feature_names": [
+        "catalyst_presence_proxy",
+        "probability_margin"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "catalyst_presence_proxy>=0.35"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "confidence_tier_numeric>=1 & rollforward_state_numeric>=0.5",
+      "rule_depth": 2,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "rollforward_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "confidence_tier_numeric>=1",
+        "rollforward_state_numeric>=0.5"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "confidence_tier_numeric>=1 & turnover_state_numeric<=0.85",
+      "rule_depth": 2,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "confidence_tier_numeric>=1",
+        "turnover_state_numeric<=0.85"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "confidence_tier_numeric>=1 & weighted_breadth_ratio>=0.45",
+      "rule_depth": 2,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "weighted_breadth_ratio"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "confidence_tier_numeric>=1",
+        "weighted_breadth_ratio>=0.45"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "catalyst_presence_proxy>=0.35 & confidence_tier_numeric>=1",
+      "rule_depth": 2,
+      "feature_names": [
+        "catalyst_presence_proxy",
+        "confidence_tier_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "confidence_tier_numeric>=1",
+        "catalyst_presence_proxy>=0.35"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "rollforward_state_numeric>=0.5 & turnover_state_numeric<=0.85",
+      "rule_depth": 2,
+      "feature_names": [
+        "rollforward_state_numeric",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 1,
+      "drawdown_curve_point_count": 1,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": true,
+      "rule_atom_signatures": [
+        "rollforward_state_numeric>=0.5",
+        "turnover_state_numeric<=0.85"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "rollforward_state_numeric>=0.5 & weighted_breadth_ratio>=0.45",
+      "rule_depth": 2,
+      "feature_names": [
+        "rollforward_state_numeric",
+        "weighted_breadth_ratio"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "rollforward_state_numeric>=0.5",
+        "weighted_breadth_ratio>=0.45"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "catalyst_presence_proxy>=0.35 & rollforward_state_numeric>=0.5",
+      "rule_depth": 2,
+      "feature_names": [
+        "catalyst_presence_proxy",
+        "rollforward_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "rollforward_state_numeric>=0.5",
+        "catalyst_presence_proxy>=0.35"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "turnover_state_numeric<=0.85 & weighted_breadth_ratio>=0.45",
+      "rule_depth": 2,
+      "feature_names": [
+        "turnover_state_numeric",
+        "weighted_breadth_ratio"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "turnover_state_numeric<=0.85",
+        "weighted_breadth_ratio>=0.45"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "catalyst_presence_proxy>=0.35 & turnover_state_numeric<=0.85",
+      "rule_depth": 2,
+      "feature_names": [
+        "catalyst_presence_proxy",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "turnover_state_numeric<=0.85",
+        "catalyst_presence_proxy>=0.35"
+      ]
+    },
+    {
+      "stage": "core",
+      "rule_signature": "catalyst_presence_proxy>=0.35 & weighted_breadth_ratio>=0.45",
+      "rule_depth": 2,
+      "feature_names": [
+        "catalyst_presence_proxy",
+        "weighted_breadth_ratio"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "weighted_breadth_ratio>=0.45",
+        "catalyst_presence_proxy>=0.35"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "broad_index_trend_state>=0.02 & confidence_tier_numeric>=1 & probability_margin>=0.18",
+      "rule_depth": 3,
+      "feature_names": [
+        "broad_index_trend_state",
+        "confidence_tier_numeric",
+        "probability_margin"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1",
+        "broad_index_trend_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18 & risk_appetite_heat_state>=0.02",
+      "rule_depth": 3,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "probability_margin",
+        "risk_appetite_heat_state"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1",
+        "risk_appetite_heat_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18 & turnover_pressure_overlay_state<=0.05",
+      "rule_depth": 3,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "probability_margin",
+        "turnover_pressure_overlay_state"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1",
+        "turnover_pressure_overlay_state<=0.05"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18 & window_uncertainty_numeric<=0.5",
+      "rule_depth": 3,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "probability_margin",
+        "window_uncertainty_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1",
+        "window_uncertainty_numeric<=0.5"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18 & sector_rotation_conflict_state<=0.02",
+      "rule_depth": 3,
+      "feature_names": [
+        "confidence_tier_numeric",
+        "probability_margin",
+        "sector_rotation_conflict_state"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 1,
+      "drawdown_curve_point_count": 1,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": true,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "confidence_tier_numeric>=1",
+        "sector_rotation_conflict_state<=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "broad_index_trend_state>=0.02 & probability_margin>=0.18 & rollforward_state_numeric>=0.5",
+      "rule_depth": 3,
+      "feature_names": [
+        "broad_index_trend_state",
+        "probability_margin",
+        "rollforward_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 1,
+      "drawdown_curve_point_count": 1,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": true,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5",
+        "broad_index_trend_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & risk_appetite_heat_state>=0.02 & rollforward_state_numeric>=0.5",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "risk_appetite_heat_state",
+        "rollforward_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5",
+        "risk_appetite_heat_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & rollforward_state_numeric>=0.5 & turnover_pressure_overlay_state<=0.05",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "rollforward_state_numeric",
+        "turnover_pressure_overlay_state"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5",
+        "turnover_pressure_overlay_state<=0.05"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & rollforward_state_numeric>=0.5 & window_uncertainty_numeric<=0.5",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "rollforward_state_numeric",
+        "window_uncertainty_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5",
+        "window_uncertainty_numeric<=0.5"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & rollforward_state_numeric>=0.5 & sector_rotation_conflict_state<=0.02",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "rollforward_state_numeric",
+        "sector_rotation_conflict_state"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 1,
+      "drawdown_curve_point_count": 1,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": true,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "rollforward_state_numeric>=0.5",
+        "sector_rotation_conflict_state<=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "broad_index_trend_state>=0.02 & probability_margin>=0.18 & turnover_state_numeric<=0.85",
+      "rule_depth": 3,
+      "feature_names": [
+        "broad_index_trend_state",
+        "probability_margin",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85",
+        "broad_index_trend_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & risk_appetite_heat_state>=0.02 & turnover_state_numeric<=0.85",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "risk_appetite_heat_state",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85",
+        "risk_appetite_heat_state>=0.02"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & turnover_pressure_overlay_state<=0.05 & turnover_state_numeric<=0.85",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "turnover_pressure_overlay_state",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85",
+        "turnover_pressure_overlay_state<=0.05"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & turnover_state_numeric<=0.85 & window_uncertainty_numeric<=0.5",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "turnover_state_numeric",
+        "window_uncertainty_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 7,
+      "drawdown_curve_point_count": 7,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": false,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85",
+        "window_uncertainty_numeric<=0.5"
+      ]
+    },
+    {
+      "stage": "overlay_augmented",
+      "rule_signature": "probability_margin>=0.18 & sector_rotation_conflict_state<=0.02 & turnover_state_numeric<=0.85",
+      "rule_depth": 3,
+      "feature_names": [
+        "probability_margin",
+        "sector_rotation_conflict_state",
+        "turnover_state_numeric"
+      ],
+      "trade_count": 0,
+      "equity_curve_point_count": 1,
+      "drawdown_curve_point_count": 1,
+      "total_return": 0.0,
+      "max_drawdown": 0.0,
+      "profit_factor": "inf",
+      "hit_rate": 0.0,
+      "cash_ratio": 1.0,
+      "teacher_alignment_recall": 0.0,
+      "teacher_alignment_precision": 0.0,
+      "teacher_exact_alignment_recall": 0.0,
+      "teacher_exact_alignment_precision": 0.0,
+      "teacher_alignment_f1": 0.0,
+      "teacher_date_f1": 0.0,
+      "teacher_pair_f1": 0.0,
+      "cash_only": true,
+      "rule_atom_signatures": [
+        "probability_margin>=0.18",
+        "turnover_state_numeric<=0.85",
+        "sector_rotation_conflict_state<=0.02"
+      ]
+    }
+  ],
+  "trade_rows": [],
+  "equity_curve_rows": [
+    {
+      "trade_date": "2023-05-09",
+      "equity": 1.0,
+      "position_state": "cash",
+      "symbol": "CASH"
+    }
+  ],
+  "drawdown_curve_rows": [
+    {
+      "trade_date": "2023-05-09",
+      "drawdown": 0.0
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "return_vs_neutral",
+      "neutral_value": 2.2481,
+      "teacher_decomposition_value": 0.0,
+      "delta": -2.2481
+    },
+    {
+      "comparison_name": "return_vs_aggressive",
+      "aggressive_value": 1.5405,
+      "teacher_decomposition_value": 0.0,
+      "delta": -1.5405
+    },
+    {
+      "comparison_name": "return_vs_ranker",
+      "ranker_value": 2.0374,
+      "teacher_decomposition_value": 0.0,
+      "delta": -2.0374
+    },
+    {
+      "comparison_name": "return_gap_vs_oracle",
+      "oracle_value": 752.0861,
+      "teacher_decomposition_value": 0.0,
+      "gap": 752.0861
+    }
+  ],
+  "plot_bundle_rows": [
+    {
+      "plot_name": "teacher_decomposition_equity_curve",
+      "series_name": "equity",
+      "point_count": 1
+    },
+    {
+      "plot_name": "teacher_decomposition_drawdown_curve",
+      "series_name": "drawdown",
+      "point_count": 1
+    }
+  ],
+  "interpretation": [
+    "V1.12BN searches a bounded factorization of the current neutral selective teacher instead of training a new monolithic policy.",
+    "It remains report-only and no-leak; the objective is to learn whether the neutral gate can be approximated by a small conjunction of quantized conditions.",
+    "A non-cash decomposition that materially improves teacher alignment would suggest the teacher is factorable; otherwise the neutral line is dominated by a harder-to-factor decision surface."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v17_promotion_evidence_generation",
+    "v16_waiting_state_present": true,
+    "continuing_provisional_candidate_count": 4,
+    "do_open_v17_now": true,
+    "recommended_first_action": "freeze_v17_promotion_evidence_protocol_v1"
+  },
+  "charter": {
+    "mission": "Generate bounded promotion-evidence targets for current provisional context features by identifying the minimum new evidence required to change retained-feature promotion judgment without promoting or integrating any feature now.",
+    "in_scope": [
+      "promotion-evidence gap definition",
+      "per-feature promotion shortfall analysis",
+      "bounded admissible proof-type design",
+      "minimal evidence-generation path design"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "formal model work",
+      "local regime segmentation",
+      "new wide replay or refresh expansion",
+      "repeating bounded stability review"
+    ],
+    "success_criteria": [
+      "freeze a bounded promotion-evidence protocol",
+      "identify explicit promotion shortfalls for current provisional candidates",
+      "define the minimum lawful evidence paths that could change promotion judgment",
+      "close the phase with a clear continue-waiting or evidence-generation-entry posture"
+    ],
+    "stop_criteria": [
+      "if promotion-evidence design drifts into direct promotion or integration",
+      "if current provisional features lack enough bounded definition to state concrete evidence gaps",
+      "if no admissible new evidence path can be defined without violating current guardrails"
+    ],
+    "handoff_condition": "After the charter opens, only replay-independent promotion-evidence artifacts are allowed until a bounded evidence-generation entry is explicit."
+  },
+  "interpretation": [
+    "V1.6 already answered whether current provisional candidates remain alive under bounded stability review.",
+    "The next lawful question is not another stability loop, but what new evidence would be required to change promotion judgment.",
+    "So V1.7 should open as a bounded promotion-evidence generation phase, not as a promotion, integration, or local-model phase."
+  ]
+}

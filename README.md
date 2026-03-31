@@ -18,6 +18,15 @@ The repository currently contains:
 - suite comparison reports with ranking, segment overview, trade overview, and window breakdowns
 - configurable segmentation methods across `index_trend`, `sector_trend`, and `resonance`
 - matrix comparison across strategy families and segmentation methods
+- active schema-first research assets for:
+  - `earnings_transmission_carry`
+  - `theme_diffusion_carry`
+- bounded CPO cycle-reconstruction, cohort-map, labeling-surface, dynamic-role, and feature-family design layers
+- bounded review-only candidate-driver preservation for mainline-strength research
+- bounded mainline-driver prioritization for `theme_diffusion_carry`
+- schema-review-only usage boundaries for the high-priority `theme_diffusion_carry` driver quartet
+- bounded archetype-level validation for `theme_diffusion_carry`
+- first lawful bounded labeling/training pilot entry for `theme_diffusion_carry`
 - sample CSV data and a demo config
 - tests for the phase-1 foundation
 
@@ -556,8 +565,8 @@ Notes:
   - `2024-01-19`: approved sector splits between electronics and `BK1173`
   - `2024-02-05`: incumbent keeps permission while challenger loses it
   but `002466` still ends with identical trades and identical pnl on both sides
-  - this is useful because it separates “path-shift shape exists�?from
-    “path-shift causes actual trade damage�?  - current interpretation:
+  - this is useful because it separates “path-shift shape exists�?from
+    “path-shift causes actual trade damage�?  - current interpretation:
     `300750` is the first clear damage case, while `002466` is the first
     repeated-mechanism-but-no-damage case
 - a third tradable replay now sharpens that picture again:
@@ -1290,7 +1299,7 @@ Notes:
   using canonical trigger types rather than free-form labels
 - the default A-share broker commission assumption is now aligned to the
   owner's live contract:
-  - `commission_bps = 1.2` (`0.12��`)
+  - `commission_bps = 1.2` (`0.12��`)
   - `min_commission = 5.0`
 - the repo now also aligns the statutory A-share stock-fee assumptions to the
   current public fee schedule:
@@ -1609,3 +1618,932 @@ Current reading:
 - Added `PROJECT_LIMITATION/85_MARKET_RESEARCH_V5_CARRY_ROW_DIVERSITY_REFRESH_PLAN.md`.
 - Current reading: `market_research_v5_carry_row_diversity_refresh` is ready to bootstrap with `4` new symbols across `true_carry_row` and `clean_persistence_row` targets.
 - `market_research_v5_carry_row_diversity_refresh` is now fully bootstrapped (`baseline_ready = true`), validated in the eight-pack `time_slice_validation_v9` run (`reports/20260330T041451Z_b6297292_comparison.json`), and included in `reports/analysis/specialist_alpha_analysis_v8.json`.
+- Added long-horizon autonomy governance: [86_LONG_HORIZON_AUTONOMY_POLICY.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/86_LONG_HORIZON_AUTONOMY_POLICY.md)
+- `market_research_v5_carry_row_diversity_refresh` first lane (`002273 / 2024_q2 / mainline_trend_b`) closes as opening-led, not a carry breakthrough: [market_v5_q2_first_lane_acceptance_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v5_q2_first_lane_acceptance_v1.json)
+- `market_research_v5_carry_row_diversity_refresh` is now locally exhausted as a bounded refresh. The final true-carry probe `000099 / 2024_q2 / mainline_trend_b` closes as opening-led, not true carry: [market_v5_q2_last_carry_probe_acceptance_000099_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_v5_q2_last_carry_probe_acceptance_000099_v1.json)
+- `V1.2` therefore stays constrained by `carry_row_diversity_gap`, and the next legal action has been frozen as a new entry rather than a widened replay: [v12_next_refresh_entry_v3.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v12_next_refresh_entry_v3.json)- `market_research_v6_catalyst_supported_carry_persistence_refresh` is now manifest-ready: [market_research_v6_catalyst_supported_carry_persistence_refresh_manifest_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/market_research_v6_catalyst_supported_carry_persistence_refresh_manifest_v1.json)
+- `v6` keeps the primary objective unchanged (`2` true carry rows plus `2` clean persistence rows) while using catalyst context only as bounded symbol-selection support.
+### 2026-03-30 update
+- `market_research_v6_catalyst_supported_carry_persistence_refresh` is active and baseline-ready.
+- Its first bounded lane (`600118 / 2024_q3 / mainline_trend_c`) closed as opening-led, not true carry.
+- `v12_v6_first_lane_phase_check_v1` and `v12_v6_reassessment_v1` now block local second-lane widening while keeping `v6` as an active substrate.
+
+### 2026-03-30 waiting-state update
+- `V1.2` has entered explicit waiting state after `v6` local actions exhausted without changing the primary bottleneck.
+- No `v7` branch was opened; valid next actions are now limited to waiting-state summaries and restart-entry preservation until a new trigger or owner phase switch appears.
+
+### 2026-03-30 V1.3 update
+- `V1.3 Catalyst And Concept Context Infrastructure` is now open.
+- Early V1.3 artifacts are bounded and replay-independent: concept mapping inventory, concept seed, concept source fill, concept context audit, and phase check.
+- Current V1.3 posture is `keep_v13_active_but_bounded_as_context_infrastructure`.
+
+### 2026-03-30 concept confidence update
+- `V1.3` now includes frozen concept mapping confidence and symbol-link rules.
+- Concept mappings must pass source-quality and market-confirmation gates before they can be treated as bounded research context.
+
+### 2026-03-30 concept registry update
+- `V1.3` now includes a bounded provisional concept registry.
+- Current concept rows are usable for bounded context but remain `provisional_market_confirmed_indirect` until manual symbol-link mode assignment is completed.
+
+### 2026-03-30 concept registry reclassification update
+- V1.3 now includes bounded manual symbol-link proof and a reclassified concept registry.
+- Current split: 3 core_confirmed rows and 1 market_confirmed_indirect row.
+- Bounded usage rules are frozen: concept rows can support bounded research context, but none can enter the strategy mainline.
+- V1.3 has therefore closed as bounded context-infrastructure success and now sits in explicit waiting state pending a new owner phase switch or trigger.
+### 2026-03-30 V1.4 update
+- V1.4 Context Consumption Pilot is now open.
+- The first bounded context consumption protocol is frozen and remains report-only.
+- V1.4 can consume bounded concept and catalyst context, but it still cannot integrate into the strategy mainline or formal model work.
+### 2026-03-30 V1.4 context feature schema update
+- V1.4 now includes a bounded report-only context feature schema.
+- The next legal step is a bounded discrimination check; strategy integration and formal model work remain disallowed.
+### 2026-03-30 V1.4 discrimination and closure update
+- V1.4 completed a bounded report-only discrimination cycle.
+- Stable directional separation is present, but promotion and strategy integration remain disallowed.
+- V1.4 therefore closes as bounded context-consumption success and now sits in explicit waiting state.
+### 2026-03-30 V1.5 update
+- `V1.5 Retained-Feature Candidacy Review` is now open.
+- The first bounded candidacy-review protocol is frozen.
+- `V1.5` may review report-only context features for candidacy, but promotion and strategy integration remain disallowed.
+### 2026-03-30 V1.5 review and closure update
+- `V1.5` completed a bounded retained-feature candidacy review.
+- Current result: `4` provisional candidacy features, `1` hold-for-more-evidence feature, `0` promotions.
+- `V1.5` therefore closes as bounded candidacy-review success and now sits in explicit waiting state.
+### 2026-03-30 V1.6 update
+- `V1.6 Provisional Candidacy Stability Review` is now open.
+- The first bounded stability-review protocol is frozen.
+- `V1.6` may review provisional candidacy stability, but promotion and strategy integration remain disallowed.
+### 2026-03-30 V1.6 review and closure update
+- `V1.6` completed a bounded provisional-candidacy stability review.
+- Current result: `4` features continue provisional candidacy, `0` hold, `0` drop, and `0` promotions.
+- `V1.6` therefore closes as bounded stability-review success and now sits in explicit waiting state.### 2026-03-30 V1.7 update
+- `V1.7 Promotion-Evidence Generation` is now open.
+- The first bounded promotion-evidence protocol is frozen.
+- `V1.7` may define what new evidence is required to change promotion judgment, but it still cannot promote features, integrate into strategy, or open local-model work.
+### 2026-03-30 V1.7 review and closure update
+- `V1.7` completed a bounded promotion-evidence generation cycle.
+- Current result: `4` features remain below promotion threshold, but each now has explicit bounded shortfalls and minimum evidence paths.
+- `V1.7` therefore closes as bounded promotion-evidence generation success and now sits in explicit waiting state.
+### 2026-03-30 V1.8A update
+- `V1.8A Sample Breadth Expansion` is now open.
+- The first bounded sample-breadth protocol is frozen.
+- `V1.8A` currently targets only `single_pulse_support` and `policy_followthrough_support`, and it still cannot promote features, integrate into strategy, or widen into generic replay growth.
+### 2026-03-30 V1.8A review and closure update
+- `V1.8A` completed a bounded sample-breadth expansion cycle.
+- Current result: `2` target features now have explicit lawful breadth-entry designs, but sample collection, promotion, and strategy integration remain disallowed.
+- `V1.8A` therefore closes as bounded sample-breadth expansion success and now sits in explicit waiting state.
+### 2026-03-30 V1.8B review and closure update
+- `V1.8B` completed a bounded breadth sample admission-gate cycle.
+- Current result: both breadth-target features now have explicit lawful admission gates, but sample collection, promotion, and strategy integration remain disallowed.
+- `V1.8B` therefore closes as bounded admission-gate success and now sits in explicit waiting state.
+### 2026-03-30 V1.8C review and closure update
+- `V1.8C` completed a screened bounded collection cycle.
+- Current result: `5` lawful new breadth-evidence cases were admitted across the two target features, with `0` sample-limit breaches.
+- `V1.8C` therefore closes as bounded screened collection success and now sits in explicit waiting state.
+### 2026-03-30 V1.9 review and closure update
+- `V1.9 Breadth Evidence Re-Review` completed a bounded re-review cycle after `V1.8C` collection.
+- Current result: `single_pulse_support` materially reduced its breadth gap and shifted primary shortfall to `non_redundancy_stress_gap`; `policy_followthrough_support` improved only partially and remains primarily breadth-limited.
+- `V1.9` therefore closes as bounded breadth-evidence re-review success and now sits in explicit waiting state.
+### 2026-03-30 V1.10A review and closure update
+- `V1.10A Policy Followthrough Cross-Family Breadth Probe` completed as a one-off owner-led probe.
+- Current result: the bounded pool exposed `2` visible policy-followthrough candidates and `0` admissible cross-family cases; both visible candidates remained inside the current `300750` anchor family.
+- `V1.10A` therefore closes as successful negative probe and now sits in explicit waiting state, with no automatic `V1.10B+`.
+### 2026-03-30 Governance tuning update
+- The autonomy policy now distinguishes `exploration_layer` from `admission_and_mainline_layer`.
+- Design-first memos, acquisition plans, feature hypotheses, trigger-source maps, and time-boxed exception phases are now explicitly legal at the exploration layer.
+- Promotion, validation, retained-feature admission, and strategy-mainline integration remain strict and unchanged.
+### 2026-03-30 Governance upgrade
+- Strengthened the long-horizon autonomy policy to block same-pool micro-phase repetition.
+- Added `Solution Shift Mode`, which forces future stalled branches to output a memo choosing between data acquisition, feature hypothesis, method change, or freeze, instead of continuing bounded review loops.
+### 2026-03-30 V1.11 review and closure update
+- `V1.11 Sustained Catalyst Evidence Acquisition Infrastructure` completed as an exploration-layer infrastructure phase.
+- Current result: the project now has a frozen acquisition basis for future catalyst evidence, including acquisition scope, source hierarchy, admissibility, family novelty rules, point-in-time recording rules, refresh cadence, and a bounded first-pilot plan.
+- `V1.11` therefore closes as sustained acquisition infrastructure success and now sits in explicit waiting state; the bounded first pilot is prepared but not auto-opened.
+### 2026-03-30 V1.11A review and closure update
+- `V1.11A Bounded First Catalyst Acquisition Pilot` completed as the first owner-reviewed execution phase on top of the frozen `V1.11` infrastructure.
+- Current result: the pilot screened `5` resolved catalyst rows and admitted `2` new non-anchor candidates (`000155`, `300502`) with `0` cap breaches, validating the acquisition path under bounded rules.
+- Important boundary: this did **not** create direct new `policy_followthrough` breadth evidence and did **not** open retained-feature promotion or strategy integration.
+- `V1.11A` therefore closes as bounded first acquisition pilot success and now sits in explicit waiting state with no automatic follow-on.
+### 2026-03-30 V1.12 review and closure update
+- `V1.12 Single Price-Cycle Experimental Training Pilot` completed as a bounded training-definition phase.
+- Current result: the project froze one first experiment rather than widening immediately: `earnings_transmission_carry` with `optical_link_price_and_demand_upcycle` as the pilot archetype.
+- The first training grammar is now explicit: one sample unit (`symbol_day_within_one_price_cycle_window`), four feature blocks (catalyst state, earnings transmission bridge, expectation gap, price confirmation), three label targets, and time-split/report-only validation rules.
+- `V1.12` therefore closes as single-cycle training definition success and now sits in explicit waiting state; bounded pilot data assembly is prepared but not auto-opened.
+### 2026-03-30 V1.12A review and closure update
+- `V1.12A Bounded Pilot Data Assembly` completed as the first owner-correction-ready pilot dataset draft.
+- Current result: the first bounded object pool contains `300502` 新易盛, `300308` 中际旭创, and `300394` 天孚通信, with explicit correction slots for object inclusion, role guesses, cycle windows, and owner notes.
+- Important boundary: this is still a draft review sheet, not a trained dataset, and training remains blocked until owner correction happens.
+- `V1.12A` therefore closes as owner-correction-ready pilot data assembly success and now sits in explicit waiting state.
+### 2026-03-30 V1.12A owner-correction integration update
+- The first owner correction has been integrated into the pilot draft.
+- Current result: `300308` 中际旭创 now carries an explicit multi-stage cycle sketch and becomes the first benchmark row inside the partial pilot dataset draft.
+- Remaining gap: `300502` 新易盛 and `300394` 天孚通信 still need cycle-window correction before the pilot dataset can move to the next labeling step.
+### 2026-03-30 V1.12A price-cycle inference update
+- A first price-structure inference pass has now been added for the two unresolved symbols.
+- Current result: `300502` 新易盛 and `300394` 天孚通信 now carry coarse cycle-window drafts derived from daily bars plus weekly/monthly aggregation, while `300308` remains the owner-corrected benchmark anchor.
+- Important boundary: this is still a calibration draft only. Training remains blocked until the owner confirms or corrects these two inferred windows.
+### 2026-03-30 V1.12A unified calibration draft update
+- `300308` is no longer treated as a special owner-only anchor.
+- Current result: all three pilot symbols now carry cycle-window drafts generated under one unified price-structure method; the older `300308` owner window is kept only as a calibration reference.
+- Important boundary: this is still a calibration draft only. Training remains blocked until the owner confirms or corrects the unified draft.
+### 2026-03-30 V1.12B first trainable pilot dataset and baseline update
+- The unified `V1.12A` draft has now been accepted and frozen into the first trainable optical-link pilot dataset.
+- The project now has its first report-only time-split baseline readout on that dataset: `2238` samples, `3` carry-outcome classes, `0.4509` test accuracy.
+- This is the first executable training-chain checkpoint for the new single-cycle experiment, but it still does **not** authorize strategy training, black-box deployment, or wider object expansion.
+### 2026-03-30 V1.12C hotspot review and sidecar-protocol update
+- The first baseline error map is now explicit: the current model is too optimistic in `major_markup` and `high_level_consolidation`.
+- The project now has a first frozen black-box sidecar comparison basis on the same dataset, same labels, and same time split as `V1.12B`.
+- This still does **not** authorize sidecar deployment; it only prepares the next bounded comparison experiment.
+### 2026-03-30 V1.12D first same-dataset black-box sidecar result
+- The first black-box sidecar comparison has now been executed on the exact same optical-link pilot dataset and time split as `V1.12B`.
+- `hist_gradient_boosting_classifier` is the current best sidecar: test accuracy improved from `0.4509` to `0.558`, and optimistic carry false positives fell sharply in the known hotspot stages.
+- This is the first evidence that a bounded non-linear sidecar may capture structure the simple baseline misses, but it remains strictly **report-only** and does **not** authorize deployment.
+### 2026-03-30 V1.12E GBDT attribution review result
+- The first sidecar gain is now explained at block level instead of only by leaderboard score.
+- The current most useful block is `catalyst_state`: removing it leaves `major_markup` false positives flat but blows up `high_level_consolidation` false positives from `1` to `53`.
+- This shifts the next decision basis toward feature/label refinement around late-stage catalyst persistence rather than immediate model-family widening or deployment.
+### 2026-03-30 V1.12F refinement-design result
+- The next immediate problem is now classified more cleanly: it is **not** primarily a data-gap issue and **not** primarily a catalyst-weight issue.
+- The current primary bottleneck is `feature_definition_or_non_redundancy_gap`.
+- The next bounded refinement should target `catalyst_state` semantics first, especially:
+  - freshness
+  - cross-day persistence
+  - breadth confirmation
+### 2026-03-30 V1.12G semantic-v2 rerun result
+- The catalyst-state refinement path has now been executed on the same frozen optical-link pilot without widening scope or touching deployment posture.
+- Three new semantic fields were added: `catalyst_freshness_state`, `cross_day_catalyst_persistence`, and `theme_breadth_confirmation_proxy`.
+- The bounded rerun is directionally positive in both models:
+  - baseline accuracy: `0.4509 -> 0.4628`
+  - GBDT accuracy: `0.558 -> 0.5655`
+- The real gain is phase-specific rather than global. `high_level_consolidation` optimistic carry false positives fell:
+  - baseline: `46 -> 34`
+  - GBDT: `1 -> 0`
+- Current posture: preserve this semantic-v2 delta for owner review before any label split, dataset widening, or stronger model escalation.
+### 2026-03-30 Subagent exploration posture update
+- The project now has a frozen subagent exploration policy and first bounded backlog.
+- Subagents are **not** treated as replacement thinkers for the mainline. They are reserved for repetitive, low-risk exploratory support under fixed data, fixed rules, and fixed outputs.
+- Current lawful ready-now tasks are narrow:
+  - hotspot bucketization for `high_level_consolidation` / `major_markup`
+  - bounded ablation on the three semantic catalyst-state fields
+- Current posture remains conservative: no label rewrite, no phase switching, no open-ended model search, and no automatic dataset growth through subagent use.
+### 2026-03-30 Subagent drafting/structuring refinement
+- The subagent role is now defined more precisely as four task types:
+  - exploration
+  - drafting
+  - structuring
+  - execution
+- This matters because some valuable work is not pure exploration. Candidate substate discovery for `high_level_consolidation` is now explicitly lawful as a review-only drafting/structuring task.
+- Review cadence is now typed rather than uniform:
+  - `structuring` / `execution`: review by bounded volume or time
+  - `drafting` / `exploration`: review by bounded thematic stage
+- No candidate draft may directly become a formal label, schema, or phase decision.
+### 2026-03-30 V1.12I label-refinement review protocol
+- The project now has a frozen review standard for deciding whether a candidate stage split deserves bounded follow-up.
+- This phase does **not** split labels. It only defines what future candidate buckets must prove:
+  - distinct error behavior
+  - distinct semantic-v2 profiles
+  - review value without excessive fragmentation
+- Current posture: review-only governance success, now waiting for candidate-structure evaluation.
+### 2026-03-30 First subagent hotspot bucketization result
+- The first lawful subagent output is now usable.
+- `high_level_consolidation` and `major_markup` misreads are not random; they can be organized into `8` reviewable buckets.
+- Current posture: still no automatic label split, but the project now has both:
+  - a candidate-structure draft
+  - a frozen protocol for judging that draft
+### 2026-03-30 V1.12J candidate-structure review result
+- The first candidate-structure draft has now been judged against the frozen `V1.12I` protocol.
+- Result:
+  - `high_level_consolidation`: eligible for bounded drafting follow-up
+  - `major_markup`: keep on the feature side for now
+  - no formal label split authorized
+- This sharply narrows the next legal move. If any bounded label-adjacent follow-up is opened, it should stay inside `high_level_consolidation` only.
+### 2026-03-30 V1.12K high-level consolidation candidate-substate draft
+- The bounded follow-up has now been executed only inside `high_level_consolidation`.
+- Current result:
+  - `3` review-only candidate substates drafted
+  - `1` thin bucket excluded
+  - still no formal label split
+- This means the project now has a concrete candidate-substate draft to review, rather than only bucket-level structure.
+### 2026-03-30 Subagent hotspot bucketization result
+- The first bounded subagent task has now completed: hotspot bucketization for `high_level_consolidation` and `major_markup`.
+- Result shape:
+  - `8` total buckets
+  - `306` target-stage rows considered
+  - `255` baseline misreads
+  - `200` GBDT misreads
+  - `149` rows misread by both
+- The buckets are reviewable and stage-specific, but still coarse enough to be useful only as a structuring draft. They do not change labels or phase judgment.
+### 2026-03-30 V1.12L candidate-substate owner review
+- The `V1.12K` draft has now been reduced through owner-level review rather than widened immediately.
+- Result:
+  - `2` preserved review-only candidate substates
+  - `1` mixed inner-drafting target
+  - `0` formal label splits
+- Current posture:
+  - keep the two preserved review-only substates frozen
+  - keep the mixed stall cluster only as an optional future target
+  - do not auto-open any further drafting step
+### 2026-03-30 V1.12M mixed stall inner drafting
+- The owner then explicitly reopened only the mixed high-level stall target for one bounded inner pass.
+- Result:
+  - `2` preserved review-only inner candidates
+  - `1` unresolved residue
+  - `0` formal label splits
+- The most useful new pocket is `candidate_quiet_contraction_stall_recoverable`, which is carry-heavy even though price and relative strength remain soft.
+- Current posture:
+  - keep the inner draft frozen for review
+  - do not auto-open schema change
+  - do not auto-open further follow-up
+### 2026-03-30 V1.12N review-only shadow rerun
+- The inner-draft pieces from `V1.12M` were then tested as review-only shadow features on the same frozen pilot.
+- Result:
+  - baseline: `0.4628 -> 0.4628`
+  - GBDT: `0.5655 -> 0.5655`
+  - stage-specific false positives unchanged
+- Interpretation:
+  - the inner draft is currently descriptive, not incrementally predictive
+  - this is a useful negative result
+  - no feature promotion or label action is justified from this rerun
+### 2026-03-30 V1.13 theme-diffusion carry reentry
+- After `V1.12N`, the project formally stops treating the `high_level_consolidation` inner-refinement line as a predictive frontier.
+- `theme_diffusion_carry` is now selected as the next higher-leverage carry family.
+- Frozen seed archetypes:
+- `commercial_space_mainline`
+- `stablecoin_theme_cycle`
+- `low_altitude_economy_cycle`
+- Current posture:
+  - schema-first
+  - review-only
+  - no automatic model escalation
+### 2026-03-30 V1.13F commercial-space pilot data assembly
+- The first lawful downstream pilot is now concrete rather than abstract.
+- A bounded draft object pool has been frozen for `commercial_space_mainline`.
+- Current draft objects:
+  - `002085`
+  - `000738`
+  - `600118`
+- Current reading:
+  - one dense leader seed
+  - two weaker owner-correctable draft objects
+- Current posture:
+  - owner review required before label freeze
+  - no auto training
+  - no auto archetype widening
+### 2026-03-30 V1.13G commercial-space deep archetype scope
+- The owner then widened the commercial-space line from a small pilot correction task into a deeper archetype study.
+- The project now freezes this as a lawful bounded study scope rather than jumping straight into training.
+- Current structure:
+  - `3` validated local seeds
+  - `16` owner-named candidates
+  - `8` bounded study dimensions
+- Current posture:
+  - deep-study scope is open and preserved
+  - training still closed
+  - label freeze still closed
+### 2026-03-30 V1.12O optical-link deep archetype scope
+- The owner then reprioritized back to `CPO / optical-link` before commercial-space pilot widening.
+- The project now freezes the optical-link line as a lawful deep-study archetype instead of returning to the already-closed `high_level_consolidation` refinement pocket.
+- Current structure:
+  - `3` validated local seeds
+  - `6` review-only adjacent candidates
+  - `8` bounded study dimensions
+- Current posture:
+  - automatic dataset widening closed
+  - automatic training closed
+  - next lawful move is bounded adjacent-candidate validation or bounded cohort-widening review
+### 2026-03-30 V1.12P CPO full-cycle information registry
+- The CPO line now has a broad review-first registry rather than only a narrow three-name training pilot.
+- Current structure:
+  - `6` information layers
+  - `20` cohort rows
+  - `10` source anchors
+  - `4` explicit remaining gaps
+- Current posture:
+  - omission control prioritized over early purity
+  - training still closed
+  - feature promotion still closed
+  - next lawful move is owner discussion on missing information, then bounded adjacent-candidate validation
+
+### 2026-03-30 V1.12Q CPO registry schema hardening
+- `V1.12Q` froze a harder CPO full-cycle registry schema with `6` cycle stages, `9` information layers, `5` buckets, and `38` review-first feature slots.
+- Parallel collection is now bounded by schema: first draft batch preserved `14` adjacent official anchors, `6` chronology-source anchors, and `10` future catalyst-calendar anchors.
+- Training, feature promotion, execution, and signal generation remain closed.
+
+### 2026-03-30 V1.12R adjacent cohort validation
+- `V1.12R` reviewed `14` adjacent/branch-extension CPO rows using the first official-anchor batch.
+- `5` rows were preserved as bounded validated review assets; `9` remain pending role-split or branch cleanup.
+- Training and feature promotion remain closed; chronology normalization is next.
+
+### 2026-03-30 V1.12S CPO chronology normalization
+- `V1.12S` normalized the CPO timing surface into `9` chronology segments, `10` timing-gap rows, and `10` normalized catalyst-calendar anchors.
+- Training and feature promotion remain closed; spillover truth-check is the next cleaning step.
+
+### 2026-03-30 V1.12T CPO spillover truth-check
+- `V1.12T` reviewed `3` mixed-relevance CPO spillover rows after chronology normalization.
+- All `3` rows were preserved; `2` are now explicit A-share spillover-factor candidates and `1` is retained as a weaker pure name-bonus / board-follow row.
+- Training and feature promotion remain closed; the next lawful move is owner review of overall CPO foundation completeness and research readiness.
+
+### 2026-03-30 V1.12U CPO foundation completeness and research-readiness review
+- `V1.12U` froze the explicit readiness judgment for the cleaned CPO information foundation.
+- The foundation is now considered normed and complete enough for bounded deep research, but still not complete enough for formal training.
+- `4` material gaps remain open: unresolved adjacent role splits, missing daily board chronology series, future catalyst calendar operationalization, and spillover factor truth-testing.
+
+### 2026-03-30 V1.12V CPO daily board chronology operationalization
+- `V1.12V` operationalized the board chronology gap into a bounded daily table target.
+- The phase froze `5` daily series, `12` operational columns, and `4` source-precedence tiers.
+- Training and feature promotion remain closed; the board chronology layer is now operationalized but not fully backfilled.
+
+### 2026-03-30 V1.12W CPO future catalyst calendar operationalization
+- `V1.12W` operationalized the future-visible catalyst gap into a bounded recurring calendar target.
+- The phase froze `10` recurring anchors, `12` operational columns, and `4` source-precedence tiers.
+- Training and feature promotion remain closed; the future catalyst calendar is now operationalized but not fully maintained.
+
+### 2026-03-30 V1.12X CPO spillover sidecar probe
+- `V1.12X` reviewed the `3` preserved spillover rows with a bounded sidecar posture.
+- `2` rows remain bounded A-share spillover-factor candidates and `1` remains weaker name-bonus / board-follow memory only.
+- Training and feature promotion remain closed; the spillover layer now has explicit candidate-vs-memory separation.
+
+### 2026-03-30 V1.12Y CPO adjacent role-split sidecar probe
+- `V1.12Y` reviewed the `9` unresolved adjacent rows from `V1.12R` with a bounded sidecar posture.
+- `6` rows are now split-ready review assets and `3` remain still-pending mixed rows.
+- Training and feature promotion remain closed; the adjacent layer is now materially cleaner.
+
+### 2026-03-30 V1.12Z CPO bounded cycle reconstruction entry
+- `V1.12Z` opened the first bounded downstream experiment for the cleaned CPO line.
+- The phase froze an ambiguity-preserving cycle-reconstruction protocol using the cleaned adjacent and spillover layers.
+- Training and feature promotion remain closed; the next lawful move is the bounded reconstruction pass itself.
+### 2026-03-30 CPO research-process record
+- Added a reusable process record for the whole `V1.12P -> V1.12Z` CPO foundation chain:
+  - [323_CPO_DATA_COLLECTION_AND_RESEARCH_PROCESS_RECORD_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/323_CPO_DATA_COLLECTION_AND_RESEARCH_PROCESS_RECORD_V1.md)
+  - [v112_cpo_data_collection_and_research_process_record_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112_cpo_data_collection_and_research_process_record_v1.json)
+- This record is intended to support paper writing and later sector transfer, especially around:
+  - omission-control ordering
+  - review-only preservation of noise and spillover
+  - bounded subagent usage
+  - experiment-entry gating
+
+### 2026-03-30 V1.12Z operational charter
+- Added:
+  - [324_V112Z_OPERATIONAL_CHARTER.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/324_V112Z_OPERATIONAL_CHARTER.md)
+  - [325_V112Z_OPERATIONAL_CHARTER_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/325_V112Z_OPERATIONAL_CHARTER_V1.md)
+  - [v112z_operational_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112z_operational_charter_v1.json)
+- This freezes the current execution doctrine for the CPO line:
+  - cycle absorption first
+  - black-box as primary discovery layer
+  - white-box as guardrail
+  - owner-facing narrative as mandatory acceptance layer
+
+### 2026-03-30 V1.12Z report-only model payoff probe
+- Added:
+  - [326_V112Z_REPORT_ONLY_MODEL_PAYOFF_PROBE.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/326_V112Z_REPORT_ONLY_MODEL_PAYOFF_PROBE.md)
+  - [327_V112Z_MODEL_PAYOFF_PROBE_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/327_V112Z_MODEL_PAYOFF_PROBE_V1.md)
+  - [v112z_model_payoff_probe_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112z_model_payoff_probe_v1.json)
+- Current same-dataset payoff readout:
+  - guardrail baseline remains useful
+  - `hist_gradient_boosting_classifier_v2` is currently the strongest report-only model by bounded non-overlap trade quality
+
+### 2026-03-30 V1.12Z bounded cycle reconstruction pass
+- Added:
+  - [328_V112Z_BOUNDED_CYCLE_RECONSTRUCTION_PASS.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/328_V112Z_BOUNDED_CYCLE_RECONSTRUCTION_PASS.md)
+  - [329_V112Z_BOUNDED_CYCLE_RECONSTRUCTION_PASS_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/329_V112Z_BOUNDED_CYCLE_RECONSTRUCTION_PASS_V1.md)
+  - [v112z_bounded_cycle_reconstruction_pass_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112z_bounded_cycle_reconstruction_pass_v1.json)
+- Current result:
+  - the CPO line is now reconstructable as a multi-wave cycle with explicit role transitions and spillover overlays
+  - residual ambiguity remains explicit
+  - bounded cohort mapping or bounded labeling review is now supportable
+  - formal training and execution remain closed
+
+### 2026-03-30 V1.12AA CPO bounded cohort map
+- Added:
+  - [330_V112AA_CPO_BOUNDED_COHORT_MAP.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/330_V112AA_CPO_BOUNDED_COHORT_MAP.md)
+  - [331_V112AA_CPO_BOUNDED_COHORT_MAP_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/331_V112AA_CPO_BOUNDED_COHORT_MAP_V1.md)
+  - [v112aa_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aa_phase_charter_v1.json)
+  - [v112aa_cpo_bounded_cohort_map_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aa_cpo_bounded_cohort_map_v1.json)
+  - [v112aa_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aa_phase_check_v1.json)
+  - [v112aa_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aa_phase_closure_check_v1.json)
+- Current result:
+  - the CPO line now has a frozen object-role-time matrix
+  - later admissibility is explicit
+  - spillover remains outside core truth
+  - pending rows remain explicit
+  - labeling and training remain closed
+
+### 2026-03-30 V1.12AB CPO bounded labeling review
+- Added:
+  - [332_V112AB_CPO_BOUNDED_LABELING_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/332_V112AB_CPO_BOUNDED_LABELING_REVIEW.md)
+  - [333_V112AB_CPO_BOUNDED_LABELING_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/333_V112AB_CPO_BOUNDED_LABELING_REVIEW_V1.md)
+  - [v112ab_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ab_phase_charter_v1.json)
+  - [v112ab_cpo_bounded_labeling_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ab_cpo_bounded_labeling_review_v1.json)
+  - [v112ab_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ab_phase_check_v1.json)
+  - [v112ab_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ab_phase_closure_check_v1.json)
+- Current result:
+  - later labeling surfaces are explicit
+  - overlay and pending rows remain outside formal truth
+  - formal label freeze and training remain closed
+
+### 2026-03-30 V1.12AC CPO unsupervised role-challenge probe
+- Added:
+  - [334_V112AC_UNSUPERVISED_ROLE_CHALLENGE_PROBE.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/334_V112AC_UNSUPERVISED_ROLE_CHALLENGE_PROBE.md)
+  - [335_V112AC_UNSUPERVISED_ROLE_CHALLENGE_PROBE_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/335_V112AC_UNSUPERVISED_ROLE_CHALLENGE_PROBE_V1.md)
+  - [336_V112AC_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/336_V112AC_PHASE_CHECK_V1.md)
+  - [337_V112AC_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/337_V112AC_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ac_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ac_phase_charter_v1.json)
+  - [v112ac_unsupervised_role_challenge_probe_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ac_unsupervised_role_challenge_probe_v1.json)
+  - [v112ac_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ac_phase_check_v1.json)
+  - [v112ac_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ac_phase_closure_check_v1.json)
+- Current result:
+  - the current manual role grammar is partly supported and partly challenged by latent structure
+  - a clean pending quiet-window pocket exists
+  - late-cycle extension and spillover still mix in data-side structure
+  - clustering remains review-only and cannot legislate new formal roles
+
+### 2026-03-30 V1.12AD CPO dynamic role-transition feature review
+- Added:
+  - [338_V112AD_DYNAMIC_ROLE_TRANSITION_FEATURE_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/338_V112AD_DYNAMIC_ROLE_TRANSITION_FEATURE_REVIEW.md)
+  - [339_V112AD_DYNAMIC_ROLE_TRANSITION_FEATURE_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/339_V112AD_DYNAMIC_ROLE_TRANSITION_FEATURE_REVIEW_V1.md)
+  - [340_V112AD_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/340_V112AD_PHASE_CHECK_V1.md)
+  - [341_V112AD_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/341_V112AD_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ad_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ad_phase_charter_v1.json)
+  - [v112ad_dynamic_role_transition_feature_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ad_dynamic_role_transition_feature_review_v1.json)
+  - [v112ad_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ad_phase_check_v1.json)
+  - [v112ad_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ad_phase_closure_check_v1.json)
+- Current result:
+  - static role buckets have been upgraded into a bounded dynamic role-transition layer
+  - role migration and role replacement risk are now explicit review features
+  - governance remains closed
+
+### 2026-03-30 V1.12AE CPO feature-brainstorm integration
+- Added:
+  - [342_V112AE_CPO_FEATURE_BRAINSTORM_INTEGRATION.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/342_V112AE_CPO_FEATURE_BRAINSTORM_INTEGRATION.md)
+  - [343_V112AE_CPO_FEATURE_BRAINSTORM_INTEGRATION_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/343_V112AE_CPO_FEATURE_BRAINSTORM_INTEGRATION_V1.md)
+  - [v112ae_feature_brainstorm_integration_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ae_feature_brainstorm_integration_v1.json)
+- Current result:
+  - the first multi-explorer feature brainstorm batch is now compressed into a bounded shortlist
+  - strongest additions are time-geometry, role-handoff, and weak-cohort migration features
+  - all outputs remain review-only
+
+### 2026-03-30 V1.12AG CPO bounded label-draft assembly
+- Added:
+  - [348_V112AG_CPO_BOUNDED_LABEL_DRAFT_ASSEMBLY.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/348_V112AG_CPO_BOUNDED_LABEL_DRAFT_ASSEMBLY.md)
+  - [349_V112AG_CPO_BOUNDED_LABEL_DRAFT_ASSEMBLY_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/349_V112AG_CPO_BOUNDED_LABEL_DRAFT_ASSEMBLY_V1.md)
+  - [350_V112AG_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/350_V112AG_PHASE_CHECK_V1.md)
+  - [351_V112AG_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/351_V112AG_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ag_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ag_phase_charter_v1.json)
+  - [v112ag_cpo_bounded_label_draft_assembly_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ag_cpo_bounded_label_draft_assembly_v1.json)
+  - [v112ag_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ag_phase_check_v1.json)
+  - [v112ag_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ag_phase_closure_check_v1.json)
+- Current result:
+  - the CPO draft label layer is now assembled as a bounded integrity object rather than a hidden training launch
+  - major labels now have explicit family support and anti-leakage posture
+  - pending, overlay-only, and confirmed-only regions remain explicitly preserved
+
+### 2026-03-30 V1.12AH factor candidate preservation rule
+- Added:
+  - [352_V112AH_FACTOR_CANDIDATE_PRESERVATION_RULE.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/352_V112AH_FACTOR_CANDIDATE_PRESERVATION_RULE.md)
+  - [353_V112AH_FACTOR_CANDIDATE_PRESERVATION_RULE_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/353_V112AH_FACTOR_CANDIDATE_PRESERVATION_RULE_V1.md)
+  - [v112ah_factor_candidate_preservation_rule_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ah_factor_candidate_preservation_rule_v1.json)
+- Current result:
+  - speculative, overlay, blind-spot, and pending candidates now have an explicit preservation rule
+  - future trimming must state explicit reasons rather than silently dropping weak-looking candidates
+
+### 2026-03-30 V1.12AI CPO label-draft integrity owner review
+- Added:
+  - [354_V112AI_CPO_LABEL_DRAFT_INTEGRITY_OWNER_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/354_V112AI_CPO_LABEL_DRAFT_INTEGRITY_OWNER_REVIEW.md)
+  - [355_V112AI_CPO_LABEL_DRAFT_INTEGRITY_OWNER_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/355_V112AI_CPO_LABEL_DRAFT_INTEGRITY_OWNER_REVIEW_V1.md)
+  - [356_V112AI_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/356_V112AI_PHASE_CHECK_V1.md)
+  - [357_V112AI_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/357_V112AI_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ai_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ai_phase_charter_v1.json)
+  - [v112ai_cpo_label_draft_integrity_owner_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ai_cpo_label_draft_integrity_owner_review_v1.json)
+  - [v112ai_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ai_phase_check_v1.json)
+  - [v112ai_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ai_phase_closure_check_v1.json)
+- Current result:
+  - the CPO bounded label draft is now owner-tiered without any silent drop
+  - only the ready and guarded labels may move into the next bounded dataset assembly step
+
+### 2026-03-30 V1.12AJ CPO bounded label-draft dataset assembly
+- Added:
+  - [358_V112AJ_CPO_BOUNDED_LABEL_DRAFT_DATASET_ASSEMBLY.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/358_V112AJ_CPO_BOUNDED_LABEL_DRAFT_DATASET_ASSEMBLY.md)
+  - [359_V112AJ_CPO_BOUNDED_LABEL_DRAFT_DATASET_ASSEMBLY_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/359_V112AJ_CPO_BOUNDED_LABEL_DRAFT_DATASET_ASSEMBLY_V1.md)
+  - [360_V112AJ_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/360_V112AJ_PHASE_CHECK_V1.md)
+  - [361_V112AJ_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/361_V112AJ_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112aj_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aj_phase_charter_v1.json)
+  - [v112aj_cpo_bounded_label_draft_dataset_assembly_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aj_cpo_bounded_label_draft_dataset_assembly_v1.json)
+  - [v112aj_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aj_phase_check_v1.json)
+  - [v112aj_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aj_phase_closure_check_v1.json)
+- Current result:
+  - the first dataset-shaped CPO label draft now exists
+  - truth-candidate rows and context-only rows are explicitly separated
+  - review-only and confirmed-only labels remain outside draft truth
+
+### 2026-03-30 V1.12AK CPO bounded feature binding review
+- Added:
+  - [362_V112AK_CPO_BOUNDED_FEATURE_BINDING_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/362_V112AK_CPO_BOUNDED_FEATURE_BINDING_REVIEW.md)
+  - [363_V112AK_CPO_BOUNDED_FEATURE_BINDING_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/363_V112AK_CPO_BOUNDED_FEATURE_BINDING_REVIEW_V1.md)
+  - [364_V112AK_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/364_V112AK_PHASE_CHECK_V1.md)
+  - [365_V112AK_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/365_V112AK_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ak_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ak_phase_charter_v1.json)
+  - [v112ak_cpo_bounded_feature_binding_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ak_cpo_bounded_feature_binding_review_v1.json)
+  - [v112ak_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ak_phase_check_v1.json)
+  - [v112ak_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ak_phase_closure_check_v1.json)
+- Current result:
+  - row-level feature binding is now explicit on the current truth-candidate set
+  - not every admitted label binds meaningfully on current rows
+
+### 2026-03-30 V1.12AL CPO bounded training readiness review
+- Added:
+  - [366_V112AL_CPO_BOUNDED_TRAINING_READINESS_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/366_V112AL_CPO_BOUNDED_TRAINING_READINESS_REVIEW.md)
+  - [367_V112AL_CPO_BOUNDED_TRAINING_READINESS_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/367_V112AL_CPO_BOUNDED_TRAINING_READINESS_REVIEW_V1.md)
+  - [368_V112AL_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/368_V112AL_PHASE_CHECK_V1.md)
+  - [369_V112AL_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/369_V112AL_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112al_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112al_phase_charter_v1.json)
+  - [v112al_cpo_bounded_training_readiness_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112al_cpo_bounded_training_readiness_review_v1.json)
+  - [v112al_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112al_phase_check_v1.json)
+  - [v112al_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112al_phase_closure_check_v1.json)
+- Current result:
+  - current CPO draft data is sufficient for an **extremely small** core-skeleton pilot
+  - representative training is still not lawful
+  - the current primary bottleneck is `feature_implementation`
+  - the current secondary bottleneck is `row_geometry`
+
+### 2026-03-30 V1.12AM CPO extremely small core-skeleton training pilot
+- Added:
+  - [370_V112AM_CPO_EXTREMELY_SMALL_CORE_SKELETON_TRAINING_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/370_V112AM_CPO_EXTREMELY_SMALL_CORE_SKELETON_TRAINING_PILOT.md)
+  - [371_V112AM_CPO_EXTREMELY_SMALL_CORE_SKELETON_TRAINING_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/371_V112AM_CPO_EXTREMELY_SMALL_CORE_SKELETON_TRAINING_PILOT_V1.md)
+  - [372_V112AM_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/372_V112AM_PHASE_CHECK_V1.md)
+  - [373_V112AM_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/373_V112AM_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112am_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112am_phase_charter_v1.json)
+  - [v112am_cpo_extremely_small_core_skeleton_training_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112am_cpo_extremely_small_core_skeleton_training_pilot_v1.json)
+  - [v112am_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112am_phase_check_v1.json)
+  - [v112am_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112am_phase_closure_check_v1.json)
+- Current result:
+  - the first lawful core-skeleton experiment has now been run
+  - `GBDT` outperformed the guardrail on all `3` current core targets
+  - the strongest gain was on `phase_progression_label`
+  - formal training and signal rights remain closed
+
+### 2026-03-30 V1.12AN CPO core-skeleton pilot result review
+- Added:
+  - [374_V112AN_CPO_CORE_SKELETON_PILOT_RESULT_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/374_V112AN_CPO_CORE_SKELETON_PILOT_RESULT_REVIEW.md)
+  - [375_V112AN_CPO_CORE_SKELETON_PILOT_RESULT_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/375_V112AN_CPO_CORE_SKELETON_PILOT_RESULT_REVIEW_V1.md)
+  - [376_V112AN_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/376_V112AN_PHASE_CHECK_V1.md)
+  - [377_V112AN_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/377_V112AN_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112an_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112an_phase_charter_v1.json)
+  - [v112an_cpo_core_skeleton_pilot_result_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112an_cpo_core_skeleton_pilot_result_review_v1.json)
+  - [v112an_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112an_phase_check_v1.json)
+  - [v112an_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112an_phase_closure_check_v1.json)
+- Current result:
+  - `phase` and `catalyst_sequence` are currently learned mainly through `catalyst_presence_family`
+  - `role_state` is currently learned mainly through `role_prior_family`
+  - the hardest residual problem is secondary-row role separation
+
+### 2026-03-30 V1.12AO CPO role-layer patch pilot
+- Added:
+  - [378_V112AO_CPO_ROLE_LAYER_PATCH_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/378_V112AO_CPO_ROLE_LAYER_PATCH_PILOT.md)
+  - [379_V112AO_CPO_ROLE_LAYER_PATCH_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/379_V112AO_CPO_ROLE_LAYER_PATCH_PILOT_V1.md)
+  - [380_V112AO_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/380_V112AO_PHASE_CHECK_V1.md)
+  - [381_V112AO_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/381_V112AO_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ao_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ao_phase_charter_v1.json)
+  - [v112ao_cpo_role_layer_patch_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ao_cpo_role_layer_patch_pilot_v1.json)
+  - [v112ao_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ao_phase_check_v1.json)
+  - [v112ao_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ao_phase_closure_check_v1.json)
+- Current result:
+  - `role_state` improved materially without widening geometry
+  - `role_state` GBDT accuracy: `0.7377 -> 1.0000`
+  - max role confusion bucket: `58 -> 0`
+  - the most important new family is `role_patch_microstructure_family`
+  - formal training and signal rights remain closed
+
+### 2026-03-30 V1.12AP CPO bounded secondary widen pilot
+- Added:
+  - [382_V112AP_CPO_BOUNDED_SECONDARY_WIDEN_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/382_V112AP_CPO_BOUNDED_SECONDARY_WIDEN_PILOT.md)
+  - [383_V112AP_CPO_BOUNDED_SECONDARY_WIDEN_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/383_V112AP_CPO_BOUNDED_SECONDARY_WIDEN_PILOT_V1.md)
+  - [384_V112AP_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/384_V112AP_PHASE_CHECK_V1.md)
+  - [385_V112AP_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/385_V112AP_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ap_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ap_phase_charter_v1.json)
+  - [v112ap_cpo_bounded_secondary_widen_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ap_cpo_bounded_secondary_widen_pilot_v1.json)
+  - [v112ap_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ap_phase_check_v1.json)
+  - [v112ap_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ap_phase_closure_check_v1.json)
+- Current result:
+  - the patched CPO core skeleton survived one lawful widen step without widening row geometry
+  - all `3` guarded targets remained learnable
+  - best guarded target: `role_transition_label`
+  - formal training and signal rights remain closed
+
+### 2026-03-30 V1.12AQ CPO feature implementation patch review
+- Added:
+  - [386_V112AQ_CPO_FEATURE_IMPLEMENTATION_PATCH_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/386_V112AQ_CPO_FEATURE_IMPLEMENTATION_PATCH_REVIEW.md)
+  - [387_V112AQ_CPO_FEATURE_IMPLEMENTATION_PATCH_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/387_V112AQ_CPO_FEATURE_IMPLEMENTATION_PATCH_REVIEW_V1.md)
+  - [390_V112AQ_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/390_V112AQ_PHASE_CHECK_V1.md)
+  - [391_V112AQ_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/391_V112AQ_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112aq_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aq_phase_charter_v1.json)
+  - [v112aq_cpo_feature_implementation_patch_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aq_cpo_feature_implementation_patch_review_v1.json)
+  - [v112aq_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aq_phase_check_v1.json)
+  - [v112aq_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aq_phase_closure_check_v1.json)
+- Current result:
+  - implementation patching must precede any row-geometry widen
+  - minimum bounded patch scope = `6` rules
+  - row-geometry widen remains closed
+
+### 2026-03-30 V1.12AR CPO feature implementation patch spec freeze
+- Added:
+  - [388_V112AR_CPO_FEATURE_IMPLEMENTATION_PATCH_SPEC_FREEZE.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/388_V112AR_CPO_FEATURE_IMPLEMENTATION_PATCH_SPEC_FREEZE.md)
+  - [389_V112AR_CPO_FEATURE_IMPLEMENTATION_PATCH_SPEC_FREEZE_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/389_V112AR_CPO_FEATURE_IMPLEMENTATION_PATCH_SPEC_FREEZE_V1.md)
+  - [392_V112AR_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/392_V112AR_PHASE_CHECK_V1.md)
+  - [393_V112AR_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/393_V112AR_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ar_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ar_phase_charter_v1.json)
+  - [v112ar_cpo_feature_implementation_patch_spec_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ar_cpo_feature_implementation_patch_spec_v1.json)
+  - [v112ar_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ar_phase_check_v1.json)
+  - [v112ar_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ar_phase_closure_check_v1.json)
+- Current result:
+  - the minimum board/calendar patch rule set is now frozen
+  - the next lawful move is `bounded_implementation_backfill_on_current_truth_rows`
+  - row-geometry widen and formal training remain closed
+
+### 2026-03-30 V1.12AS CPO bounded implementation backfill
+- Added:
+  - [394_V112AS_CPO_BOUNDED_IMPLEMENTATION_BACKFILL.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/394_V112AS_CPO_BOUNDED_IMPLEMENTATION_BACKFILL.md)
+  - [395_V112AS_CPO_BOUNDED_IMPLEMENTATION_BACKFILL_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/395_V112AS_CPO_BOUNDED_IMPLEMENTATION_BACKFILL_V1.md)
+  - [396_V112AS_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/396_V112AS_PHASE_CHECK_V1.md)
+  - [397_V112AS_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/397_V112AS_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112as_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112as_phase_charter_v1.json)
+  - [v112as_cpo_bounded_implementation_backfill_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112as_cpo_bounded_implementation_backfill_v1.json)
+  - [v112as_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112as_phase_check_v1.json)
+  - [v112as_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112as_phase_closure_check_v1.json)
+- Current result:
+  - all `6` frozen implementation rules are now backfilled on the current `7` truth rows
+  - board/calendar coverage is explicit at `1.0`
+  - the next lawful move is a post-patch rerun before any row-geometry widen
+
+### 2026-03-30 V1.12AT CPO post-patch rerun
+- Added:
+  - [398_V112AT_CPO_POST_PATCH_RERUN.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/398_V112AT_CPO_POST_PATCH_RERUN.md)
+  - [399_V112AT_CPO_POST_PATCH_RERUN_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/399_V112AT_CPO_POST_PATCH_RERUN_V1.md)
+  - [400_V112AT_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/400_V112AT_PHASE_CHECK_V1.md)
+  - [401_V112AT_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/401_V112AT_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112at_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112at_phase_charter_v1.json)
+  - [v112at_cpo_post_patch_rerun_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112at_cpo_post_patch_rerun_v1.json)
+  - [v112at_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112at_phase_check_v1.json)
+  - [v112at_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112at_phase_closure_check_v1.json)
+- Current result:
+  - current-row post-patch rerun stayed stable on both core and guarded targets
+  - implementation backfill did not create extra `GBDT` gain on the current tiny pilot
+  - implementation is therefore no longer the active blocker on the current truth rows
+  - the next lawful move is to consider a bounded row-geometry widen pilot
+
+### 2026-03-30 V1.12AU CPO bounded row-geometry widen pilot
+- Added:
+  - [402_V112AU_CPO_BOUNDED_ROW_GEOMETRY_WIDEN_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/402_V112AU_CPO_BOUNDED_ROW_GEOMETRY_WIDEN_PILOT.md)
+  - [403_V112AU_CPO_BOUNDED_ROW_GEOMETRY_WIDEN_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/403_V112AU_CPO_BOUNDED_ROW_GEOMETRY_WIDEN_PILOT_V1.md)
+  - [404_V112AU_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/404_V112AU_PHASE_CHECK_V1.md)
+  - [405_V112AU_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/405_V112AU_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112au_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112au_phase_charter_v1.json)
+  - [v112au_cpo_bounded_row_geometry_widen_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112au_cpo_bounded_row_geometry_widen_pilot_v1.json)
+  - [v112au_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112au_phase_check_v1.json)
+  - [v112au_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112au_phase_closure_check_v1.json)
+- Current result:
+  - branch-row widen did not preserve full core stability
+  - the break is concentrated in `role_state_label`
+  - guarded targets remain stable
+  - branch rows should stay review-only for now
+
+### 2026-03-30 V1.12AV CPO branch role geometry patch pilot
+- Added:
+  - [406_V112AV_CPO_BRANCH_ROLE_GEOMETRY_PATCH_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/406_V112AV_CPO_BRANCH_ROLE_GEOMETRY_PATCH_PILOT.md)
+  - [407_V112AV_CPO_BRANCH_ROLE_GEOMETRY_PATCH_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/407_V112AV_CPO_BRANCH_ROLE_GEOMETRY_PATCH_PILOT_V1.md)
+  - [408_V112AV_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/408_V112AV_PHASE_CHECK_V1.md)
+  - [409_V112AV_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/409_V112AV_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112av_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112av_phase_charter_v1.json)
+  - [v112av_cpo_branch_role_geometry_patch_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112av_cpo_branch_role_geometry_patch_pilot_v1.json)
+  - [v112av_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112av_phase_check_v1.json)
+  - [v112av_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112av_phase_closure_check_v1.json)
+- Current result:
+  - widened branch geometry is patchable
+  - `role_state` recovered from `0.8972` to `1.0000`
+  - core and guarded targets are stable again
+  - next lawful move is to review whether branch rows can leave review-only and enter a guarded training context
+
+### 2026-03-30 V1.12AW CPO branch guarded admission review
+- Added:
+  - [410_V112AW_CPO_BRANCH_GUARDED_ADMISSION_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/410_V112AW_CPO_BRANCH_GUARDED_ADMISSION_REVIEW.md)
+  - [411_V112AW_CPO_BRANCH_GUARDED_ADMISSION_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/411_V112AW_CPO_BRANCH_GUARDED_ADMISSION_REVIEW_V1.md)
+  - [412_V112AW_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/412_V112AW_PHASE_CHECK_V1.md)
+  - [413_V112AW_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/413_V112AW_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112aw_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aw_phase_charter_v1.json)
+  - [v112aw_cpo_branch_guarded_admission_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aw_cpo_branch_guarded_admission_review_v1.json)
+  - [v112aw_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aw_phase_check_v1.json)
+  - [v112aw_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112aw_phase_closure_check_v1.json)
+- Current result:
+  - `688498 / 688313 / 300757` can move from review-only into guarded training context
+  - `300570` remains review-only
+  - the next lawful move is to run a guarded branch-admitted pilot before any broader row widen
+
+### 2026-03-30 V1.12AX CPO guarded branch-admitted pilot
+- Added:
+  - [414_V112AX_CPO_GUARDED_BRANCH_ADMITTED_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/414_V112AX_CPO_GUARDED_BRANCH_ADMITTED_PILOT.md)
+  - [415_V112AX_CPO_GUARDED_BRANCH_ADMITTED_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/415_V112AX_CPO_GUARDED_BRANCH_ADMITTED_PILOT_V1.md)
+  - [416_V112AX_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/416_V112AX_PHASE_CHECK_V1.md)
+  - [417_V112AX_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/417_V112AX_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ax_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ax_phase_charter_v1.json)
+  - [v112ax_cpo_guarded_branch_admitted_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ax_cpo_guarded_branch_admitted_pilot_v1.json)
+  - [v112ax_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ax_phase_check_v1.json)
+  - [v112ax_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ax_phase_closure_check_v1.json)
+- Current result:
+  - the `3` guarded-admitted branch rows can be tested without recreating the earlier branch collapse
+  - core and guarded targets remain stable
+  - the next lawful move is to review whether these guarded branch rows can enter the next bounded training layer
+
+### 2026-03-30 V1.12AY CPO guarded branch training-layer review
+- Added:
+  - [418_V112AY_CPO_GUARDED_BRANCH_TRAINING_LAYER_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/418_V112AY_CPO_GUARDED_BRANCH_TRAINING_LAYER_REVIEW.md)
+  - [419_V112AY_CPO_GUARDED_BRANCH_TRAINING_LAYER_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/419_V112AY_CPO_GUARDED_BRANCH_TRAINING_LAYER_REVIEW_V1.md)
+  - [420_V112AY_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/420_V112AY_PHASE_CHECK_V1.md)
+  - [421_V112AY_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/421_V112AY_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ay_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ay_phase_charter_v1.json)
+  - [v112ay_cpo_guarded_branch_training_layer_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ay_cpo_guarded_branch_training_layer_review_v1.json)
+  - [v112ay_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ay_phase_check_v1.json)
+  - [v112ay_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ay_phase_closure_check_v1.json)
+- Current result:
+  - the same `3` branch rows can enter the next bounded training-facing layer under guarded posture
+  - `300570` remains review-only
+  - the next lawful move is to consider extending the bounded training layer with guarded branch rows only
+
+### 2026-03-30 V1.12AZ CPO bounded training layer extension
+- Added:
+  - [422_V112AZ_CPO_BOUNDED_TRAINING_LAYER_EXTENSION.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/422_V112AZ_CPO_BOUNDED_TRAINING_LAYER_EXTENSION.md)
+  - [423_V112AZ_CPO_BOUNDED_TRAINING_LAYER_EXTENSION_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/423_V112AZ_CPO_BOUNDED_TRAINING_LAYER_EXTENSION_V1.md)
+  - [424_V112AZ_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/424_V112AZ_PHASE_CHECK_V1.md)
+  - [425_V112AZ_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/425_V112AZ_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112az_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112az_phase_charter_v1.json)
+  - [v112az_cpo_bounded_training_layer_extension_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112az_cpo_bounded_training_layer_extension_v1.json)
+  - [v112az_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112az_phase_check_v1.json)
+  - [v112az_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112az_phase_closure_check_v1.json)
+- Current result:
+  - the bounded training-facing layer now contains `10` rows
+  - the added `3` branch rows remain guarded
+  - `300570` remains outside
+  - the next lawful move is to review whether this 10-row layer can replace the old 7-row baseline for the next pilot
+
+### 2026-03-30 V1.12BA CPO 10-row layer replacement review
+- Added:
+  - [426_V112BA_CPO_10_ROW_LAYER_REPLACEMENT_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/426_V112BA_CPO_10_ROW_LAYER_REPLACEMENT_REVIEW.md)
+  - [427_V112BA_CPO_10_ROW_LAYER_REPLACEMENT_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/427_V112BA_CPO_10_ROW_LAYER_REPLACEMENT_REVIEW_V1.md)
+  - [428_V112BA_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/428_V112BA_PHASE_CHECK_V1.md)
+  - [429_V112BA_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/429_V112BA_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112ba_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ba_phase_charter_v1.json)
+  - [v112ba_cpo_10_row_layer_replacement_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ba_cpo_10_row_layer_replacement_review_v1.json)
+  - [v112ba_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ba_phase_check_v1.json)
+  - [v112ba_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ba_phase_closure_check_v1.json)
+- Current result:
+  - the `10`-row guarded layer replaces the `7`-row baseline for the next bounded pilot
+  - guarded branch boundaries remain active
+  - the next lawful move is to open the next bounded pilot on the `10`-row guarded layer
+
+### 2026-03-30 V1.12BB CPO default 10-row guarded-layer pilot
+- Added:
+  - [430_V112BB_CPO_DEFAULT_10_ROW_GUARDED_LAYER_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/430_V112BB_CPO_DEFAULT_10_ROW_GUARDED_LAYER_PILOT.md)
+  - [431_V112BB_CPO_DEFAULT_10_ROW_GUARDED_LAYER_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/431_V112BB_CPO_DEFAULT_10_ROW_GUARDED_LAYER_PILOT_V1.md)
+  - [432_V112BB_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/432_V112BB_PHASE_CHECK_V1.md)
+  - [433_V112BB_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/433_V112BB_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bb_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bb_phase_charter_v1.json)
+  - [v112bb_cpo_default_10_row_guarded_layer_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bb_cpo_default_10_row_guarded_layer_pilot_v1.json)
+  - [v112bb_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bb_phase_check_v1.json)
+  - [v112bb_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bb_phase_closure_check_v1.json)
+- Current result:
+  - the `10`-row guarded layer is now the default bounded experimental baseline
+  - core and guarded targets both stay stable against the prior lawful baselines
+  - later row widen should be judged against this frozen `10`-row baseline, not the old `7`-row skeleton
+
+### 2026-03-30 V1.12BC CPO portfolio objective protocol
+- Added:
+  - [434_V112BC_CPO_PORTFOLIO_OBJECTIVE_PROTOCOL.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/434_V112BC_CPO_PORTFOLIO_OBJECTIVE_PROTOCOL.md)
+  - [435_V112BC_CPO_PORTFOLIO_OBJECTIVE_PROTOCOL_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/435_V112BC_CPO_PORTFOLIO_OBJECTIVE_PROTOCOL_V1.md)
+  - [436_V112BC_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/436_V112BC_PHASE_CHECK_V1.md)
+  - [437_V112BC_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/437_V112BC_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bc_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bc_phase_charter_v1.json)
+  - [v112bc_cpo_portfolio_objective_protocol_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bc_cpo_portfolio_objective_protocol_v1.json)
+  - [v112bc_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bc_phase_check_v1.json)
+  - [v112bc_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bc_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a frozen three-track portfolio objective grammar
+  - hindsight upper-bound benchmarking is separated from no-leak experimental tracks
+  - a hard marginal-gain stop rule is frozen for later model-zoo exploration
+
+### 2026-03-30 V1.12BD market regime overlay feature review
+- Added:
+  - [438_V112BD_MARKET_REGIME_OVERLAY_FEATURE_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/438_V112BD_MARKET_REGIME_OVERLAY_FEATURE_REVIEW.md)
+  - [439_V112BD_MARKET_REGIME_OVERLAY_FEATURE_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/439_V112BD_MARKET_REGIME_OVERLAY_FEATURE_REVIEW_V1.md)
+  - [440_V112BD_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/440_V112BD_PHASE_CHECK_V1.md)
+  - [441_V112BD_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/441_V112BD_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bd_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bd_phase_charter_v1.json)
+  - [v112bd_market_regime_overlay_feature_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bd_market_regime_overlay_feature_review_v1.json)
+  - [v112bd_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bd_phase_check_v1.json)
+  - [v112bd_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bd_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a lawful market-regime overlay family
+  - broad market, liquidity, board-style, and sector ETF context can be tested as overlay context without replacing core CPO truth
+
+### 2026-03-30 V1.12BE CPO oracle upper-bound benchmark
+- Added:
+  - [442_V112BE_CPO_ORACLE_UPPER_BOUND_BENCHMARK.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/442_V112BE_CPO_ORACLE_UPPER_BOUND_BENCHMARK.md)
+  - [443_V112BE_CPO_ORACLE_UPPER_BOUND_BENCHMARK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/443_V112BE_CPO_ORACLE_UPPER_BOUND_BENCHMARK_V1.md)
+  - [444_V112BE_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/444_V112BE_PHASE_CHECK_V1.md)
+  - [445_V112BE_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/445_V112BE_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112be_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112be_phase_charter_v1.json)
+  - [v112be_cpo_oracle_upper_bound_benchmark_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112be_cpo_oracle_upper_bound_benchmark_v1.json)
+  - [v112be_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112be_phase_check_v1.json)
+  - [v112be_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112be_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a hindsight-only upper-bound portfolio benchmark on the same lawful `10`-row CPO layer
+  - future no-leak aggressive and neutral tracks can compare themselves against an explicit upper-bound line instead of an abstract ceiling
+
+### 2026-03-30 V1.12BF CPO aggressive no-leak black-box portfolio pilot
+- Added:
+  - [446_V112BF_CPO_AGGRESSIVE_NO_LEAK_BLACK_BOX_PORTFOLIO_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/446_V112BF_CPO_AGGRESSIVE_NO_LEAK_BLACK_BOX_PORTFOLIO_PILOT.md)
+  - [447_V112BF_CPO_AGGRESSIVE_NO_LEAK_BLACK_BOX_PORTFOLIO_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/447_V112BF_CPO_AGGRESSIVE_NO_LEAK_BLACK_BOX_PORTFOLIO_PILOT_V1.md)
+  - [448_V112BF_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/448_V112BF_PHASE_CHECK_V1.md)
+  - [449_V112BF_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/449_V112BF_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bf_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bf_phase_charter_v1.json)
+  - [v112bf_cpo_aggressive_no_leak_black_box_portfolio_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bf_cpo_aggressive_no_leak_black_box_portfolio_pilot_v1.json)
+  - [v112bf_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bf_phase_check_v1.json)
+  - [v112bf_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bf_phase_closure_check_v1.json)
+- Current result:
+  - the project now has its first true no-leak aggressive portfolio line on the lawful `10`-row CPO layer
+  - the line is profitable, but still very far from the oracle ceiling and still much worse on drawdown
+
+### 2026-03-30 V1.12BG CPO oracle-vs-no-leak gap review
+- Added:
+  - [450_V112BG_CPO_ORACLE_VS_NO_LEAK_GAP_REVIEW.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/450_V112BG_CPO_ORACLE_VS_NO_LEAK_GAP_REVIEW.md)
+  - [451_V112BG_CPO_ORACLE_VS_NO_LEAK_GAP_REVIEW_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/451_V112BG_CPO_ORACLE_VS_NO_LEAK_GAP_REVIEW_V1.md)
+  - [452_V112BG_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/452_V112BG_PHASE_CHECK_V1.md)
+  - [453_V112BG_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/453_V112BG_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bg_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bg_phase_charter_v1.json)
+  - [v112bg_cpo_oracle_vs_no_leak_gap_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bg_cpo_oracle_vs_no_leak_gap_review_v1.json)
+  - [v112bg_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bg_phase_check_v1.json)
+  - [v112bg_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bg_phase_closure_check_v1.json)
+- Current result:
+  - the remaining gap is now explicitly attributed to risk-control and stage-maturity filtering
+  - the next lawful no-leak line can therefore use a selective gate stack instead of blindly copying the aggressive objective
+
+### 2026-03-30 V1.12BH CPO neutral selective no-leak portfolio pilot
+- Added:
+  - [454_V112BH_CPO_NEUTRAL_SELECTIVE_NO_LEAK_PORTFOLIO_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/454_V112BH_CPO_NEUTRAL_SELECTIVE_NO_LEAK_PORTFOLIO_PILOT.md)
+  - [455_V112BH_CPO_NEUTRAL_SELECTIVE_NO_LEAK_PORTFOLIO_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/455_V112BH_CPO_NEUTRAL_SELECTIVE_NO_LEAK_PORTFOLIO_PILOT_V1.md)
+  - [456_V112BH_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/456_V112BH_PHASE_CHECK_V1.md)
+  - [457_V112BH_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/457_V112BH_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bh_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bh_phase_charter_v1.json)
+  - [v112bh_cpo_neutral_selective_no_leak_portfolio_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bh_cpo_neutral_selective_no_leak_portfolio_pilot_v1.json)
+  - [v112bh_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bh_phase_check_v1.json)
+  - [v112bh_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bh_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a cash-accepting selective no-leak line on the same lawful `10`-row CPO layer
+  - this line currently improves both total return and max drawdown versus the aggressive no-leak track
+
+### 2026-03-30 V1.12BI CPO cross-sectional ranker pilot
+- Added:
+  - [458_V112BI_CPO_CROSS_SECTIONAL_RANKER_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/458_V112BI_CPO_CROSS_SECTIONAL_RANKER_PILOT.md)
+  - [459_V112BI_CPO_CROSS_SECTIONAL_RANKER_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/459_V112BI_CPO_CROSS_SECTIONAL_RANKER_PILOT_V1.md)
+  - [460_V112BI_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/460_V112BI_PHASE_CHECK_V1.md)
+  - [461_V112BI_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/461_V112BI_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bi_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bi_phase_charter_v1.json)
+  - [v112bi_cpo_cross_sectional_ranker_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bi_cpo_cross_sectional_ranker_pilot_v1.json)
+  - [v112bi_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bi_phase_check_v1.json)
+  - [v112bi_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bi_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a direct ranking no-leak comparison line on the same lawful `10`-row CPO layer
+  - ranking improves versus the aggressive line, but still does not beat the current neutral selective baseline
+
+### 2026-03-30 V1.12BJ CPO neutral teacher gate pilot
+- Added:
+  - [462_V112BJ_CPO_NEUTRAL_TEACHER_GATE_PILOT.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/462_V112BJ_CPO_NEUTRAL_TEACHER_GATE_PILOT.md)
+  - [463_V112BJ_CPO_NEUTRAL_TEACHER_GATE_PILOT_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/463_V112BJ_CPO_NEUTRAL_TEACHER_GATE_PILOT_V1.md)
+  - [464_V112BJ_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/464_V112BJ_PHASE_CHECK_V1.md)
+  - [465_V112BJ_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/465_V112BJ_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bj_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bj_phase_charter_v1.json)
+  - [v112bj_cpo_neutral_teacher_gate_pilot_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bj_cpo_neutral_teacher_gate_pilot_v1.json)
+  - [v112bj_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bj_phase_check_v1.json)
+  - [v112bj_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bj_phase_closure_check_v1.json)
+- Current result:
+  - the project now has an explicit teacher-distillation comparison line for the neutral selective track
+  - the current naive gate-imitation version collapses to all cash and therefore does not add a usable portfolio behavior
+
+### 2026-03-30 V1.12BK CPO tree/ranker search
+- Added:
+  - [466_V112BK_CPO_TREE_RANKER_SEARCH.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/466_V112BK_CPO_TREE_RANKER_SEARCH.md)
+  - [467_V112BK_CPO_TREE_RANKER_SEARCH_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/467_V112BK_CPO_TREE_RANKER_SEARCH_V1.md)
+  - [468_V112BK_PHASE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/468_V112BK_PHASE_CHECK_V1.md)
+  - [469_V112BK_PHASE_CLOSURE_CHECK_V1.md](D:/Creativity/A-Share-Quant_TrY/PROJECT_LIMITATION/469_V112BK_PHASE_CLOSURE_CHECK_V1.md)
+  - [v112bk_phase_charter_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bk_phase_charter_v1.json)
+  - [v112bk_cpo_tree_ranker_search_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bk_cpo_tree_ranker_search_v1.json)
+  - [v112bk_phase_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bk_phase_check_v1.json)
+  - [v112bk_phase_closure_check_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112bk_phase_closure_check_v1.json)
+- Current result:
+  - the project now has a bounded no-leak tree/ranker search branch on the lawful `10`-row CPO layer
+  - the best cheap tree variant improves return versus the neutral line, but fails the drawdown guard, so it is still not a replacement for the neutral selective baseline
+
+### 2026-03-31 V1.12CH packaging mainline template freeze
+- Added:
+  - [v112ch_packaging_mainline_template_freeze_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v112ch_packaging_mainline_template_freeze_v1.json)
+- Current result:
+  - `packaging_process_enabler` is now frozen as the first refined cluster mainline template asset
+  - `laser_chip_component` remains an `eligibility-only` template member
+  - `silicon_photonics_component` remains outside the template mainline as an isolated diagnostic path

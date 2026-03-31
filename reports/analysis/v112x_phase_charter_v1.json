@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112x_cpo_spillover_sidecar_probe",
+    "do_open_v112x_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112x_cpo_spillover_sidecar_probe_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12X CPO Spillover Sidecar Probe",
+    "mission": "Use a bounded black-box sidecar posture to score whether the preserved CPO spillover rows show enough repeatable structure to remain as A-share-specific spillover-factor candidates, without confusing probe results with formal feature promotion.",
+    "in_scope": [
+      "probe only the three spillover rows frozen in V1.12T",
+      "separate bounded spillover-factor candidates from weaker name-bonus memory rows",
+      "freeze review-only sidecar scores and candidacy posture"
+    ],
+    "out_of_scope": [
+      "formal feature promotion",
+      "training",
+      "signal generation",
+      "new spillover discovery",
+      "general board-factor modeling"
+    ],
+    "success_criteria": [
+      "the spillover rows are no longer only preserved noise memory",
+      "bounded A-share-specific spillover-factor candidacy is probed explicitly",
+      "weaker rows remain preserved without being over-promoted"
+    ],
+    "stop_criteria": [
+      "the phase turns review candidacy into formal feature action",
+      "the phase silently drops preserved spillover memory",
+      "the phase expands beyond the frozen three-row spillover set"
+    ]
+  },
+  "interpretation": [
+    "V1.12X attacks the last unresolved spillover-factor gap from the CPO foundation line.",
+    "Its purpose is bounded black-box sidecar probing, not model integration.",
+    "The result should keep weak spillover memory and explicit candidate status separate."
+  ]
+}

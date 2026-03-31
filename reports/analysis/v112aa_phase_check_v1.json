@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112aa_as_bounded_cohort_map_only",
+    "do_open_v112aa_now": true,
+    "object_row_count": 20,
+    "primary_core_truth_row_count": 3,
+    "pending_ambiguous_count": 3,
+    "allow_auto_labeling_now": false,
+    "allow_auto_training_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "owner_review_then_bounded_labeling_review"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112aa_bounded_cohort_map",
+      "actual": {
+        "object_row_count": 20,
+        "primary_core_truth_row_count": 3,
+        "pending_ambiguous_count": 3
+      },
+      "reading": "The CPO line now has a usable cohort map with explicit core, extension, spillover, and pending layers."
+    }
+  ],
+  "interpretation": [
+    "V1.12AA is a boundary-hardening phase, not a training-opening phase.",
+    "Later labeling remains closed until the owner consumes the cohort map."
+  ]
+}

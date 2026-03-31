@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v18b_sample_admission_protocol_v1",
+    "target_feature_count": 2,
+    "allow_sample_collection_now": false,
+    "ready_for_per_feature_admission_gate_review_next": true
+  },
+  "protocol": {
+    "target_feature_rows": [
+      {
+        "feature_name": "single_pulse_support",
+        "candidate_source_pool": "closed_opening_led_lanes_with_context_rows",
+        "sample_limit": 3,
+        "admission_axes": [
+          "source_pool_match",
+          "point_in_time_clean",
+          "context_alignment_confirmed",
+          "exclusion_free",
+          "priority_rankable_under_limit"
+        ],
+        "mandatory_exclusions": [
+          "ambiguous_context_alignment",
+          "source_or_market_confirmation_break",
+          "mixed_shortfall_candidate",
+          "queue_widening_only_case"
+        ]
+      },
+      {
+        "feature_name": "policy_followthrough_support",
+        "candidate_source_pool": "closed_followthrough_like_lanes_with_policy_or_industry_context",
+        "sample_limit": 3,
+        "admission_axes": [
+          "source_pool_match",
+          "point_in_time_clean",
+          "context_alignment_confirmed",
+          "exclusion_free",
+          "priority_rankable_under_limit"
+        ],
+        "mandatory_exclusions": [
+          "ambiguous_context_alignment",
+          "source_or_market_confirmation_break",
+          "mixed_shortfall_candidate",
+          "queue_widening_only_case"
+        ]
+      }
+    ],
+    "global_gate_rules": [
+      "candidates must remain inside the frozen breadth-entry source pool",
+      "candidates must preserve point_in_time and source-aware constraints",
+      "candidates must preserve the target feature reading without relabeling",
+      "admission does not authorize collection beyond current sample limits"
+    ],
+    "forbidden_actions": [
+      "sample_collection",
+      "retained_feature_promotion",
+      "strategy_integration",
+      "generic_replay_growth",
+      "mixed_shortfall_expansion"
+    ]
+  },
+  "interpretation": [
+    "V1.8B does not admit actual samples yet; it freezes the gate that future candidates must pass.",
+    "The protocol keeps admission bounded to the two breadth targets and preserves all point-in-time and source-aware guardrails.",
+    "The next legal action is per-feature admission gate review, not collection or promotion."
+  ]
+}

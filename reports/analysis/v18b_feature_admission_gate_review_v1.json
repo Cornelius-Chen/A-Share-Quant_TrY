@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v18b_feature_admission_gate_review_v1_as_bounded_review",
+    "reviewed_feature_count": 2,
+    "admission_gate_ready_count": 2,
+    "allow_sample_collection_now": false,
+    "ready_for_v18b_phase_check_next": true
+  },
+  "review_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "source_pool_match": true,
+      "point_in_time_clean": true,
+      "context_alignment_confirmed": true,
+      "exclusion_free": true,
+      "priority_rankable_under_limit": true,
+      "admission_gate_ready": true,
+      "sample_limit": 3,
+      "review_reading": "The admission gate is ready for future bounded collection screening, but still does not authorize actual sample collection."
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "source_pool_match": true,
+      "point_in_time_clean": true,
+      "context_alignment_confirmed": true,
+      "exclusion_free": true,
+      "priority_rankable_under_limit": true,
+      "admission_gate_ready": true,
+      "sample_limit": 3,
+      "review_reading": "The admission gate is ready for future bounded collection screening, but still does not authorize actual sample collection."
+    }
+  ],
+  "interpretation": [
+    "V1.8B asks whether the frozen breadth targets already have clean admission gates, not whether samples should be collected now.",
+    "A ready gate only means future bounded collection can be screened lawfully; it is not itself an authorization to collect.",
+    "The next legal step is a V1.8B phase check, not sample collection or promotion."
+  ]
+}

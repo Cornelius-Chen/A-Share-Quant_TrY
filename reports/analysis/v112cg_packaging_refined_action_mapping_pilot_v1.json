@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cg_packaging_refined_action_mapping_pilot_v1",
+    "realized_path_changed": false,
+    "cd_total_return": 2.8309,
+    "cd_max_drawdown": -0.1854,
+    "cf_validation_accuracy": 0.8824,
+    "recommended_next_posture": "freeze_refined_packaging_template_and_apply_only_when_future_packaging_like_states_reappear"
+  },
+  "comparison_rows": [
+    {
+      "comparison_name": "realized_path_invariance",
+      "reading": "The refined packaging boundary improves broader action mapping accuracy, but does not alter the currently realized baseline path because the two realized packaging states remain veto and eligibility after refinement."
+    },
+    {
+      "comparison_name": "validation_accuracy_gain",
+      "old_value": 0.6471,
+      "new_value": 0.8824,
+      "delta": 0.2353
+    }
+  ],
+  "interpretation": [
+    "V1.12CG confirms that the refined packaging veto/de-risk boundary is a template-stabilizing change, not a realized-path-distorting change.",
+    "The path-level outcome remains the same as V1.12CD, while the broader packaging family validation improves materially under V1.12CF."
+  ]
+}

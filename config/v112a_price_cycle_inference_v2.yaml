@@ -1,0 +1,10 @@
+report:
+  name: v112a_price_cycle_inference_v2
+paths:
+  reports_dir: reports/analysis
+  v112a_pilot_dataset_draft_v1_report: reports/analysis/v112a_pilot_dataset_draft_v1.json
+symbols:
+  inference_symbols:
+    - "300308"
+    - "300502"
+    - "300394"

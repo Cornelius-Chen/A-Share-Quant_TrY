@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112g_now_for_catalyst_state_v2_rerun",
+    "do_open_v112g_now": true,
+    "ready_for_feature_schema_v2_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12G Catalyst-State Semantics V2 Rerun",
+    "mission": "Add three bounded catalyst-state semantic features and rerun the same pilot baseline plus GBDT sidecar on the same frozen dataset to test whether hotspot optimism improves.",
+    "in_scope": [
+      "freeze a catalyst-state feature schema v2",
+      "rerun the nearest-centroid baseline on the same frozen pilot dataset",
+      "rerun the GBDT sidecar on the same frozen pilot dataset",
+      "compare v2 hotspot metrics against v1 baseline and v1 GBDT"
+    ],
+    "out_of_scope": [
+      "dataset widening",
+      "new symbols",
+      "intraday features",
+      "deployment",
+      "new model families beyond the bounded GBDT rerun"
+    ],
+    "success_criteria": [
+      "the v2 feature schema is explicit and bounded",
+      "the same frozen dataset can be rerun with the new features",
+      "the rerun changes hotspot metrics enough to inform the next feature/label decision"
+    ],
+    "stop_criteria": [
+      "the v2 semantics cannot be expressed without changing data scope",
+      "the rerun drifts into a new model search rather than a same-scope comparison",
+      "the result adds no decision value beyond V1.12F"
+    ]
+  },
+  "interpretation": [
+    "V1.12G keeps the same data and labels, but upgrades catalyst-state representation.",
+    "The phase exists to test representation value, not to search for a new model family.",
+    "The correct output is a same-scope before/after comparison on known hotspot stages."
+  ]
+}

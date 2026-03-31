@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v111_sustained_catalyst_evidence_acquisition_infrastructure",
+    "solution_shift_memo_type": "Data Acquisition Plan",
+    "primary_bottleneck_category": "data_or_evidence_gap",
+    "do_open_v111_now": true,
+    "recommended_first_action": "freeze_v111_acquisition_infrastructure_plan_v1"
+  },
+  "charter": {
+    "mission": "Build sustained catalyst evidence acquisition infrastructure that can repeatedly produce new point-in-time, source-aware, market-confirmed followthrough and carry-capable evidence candidates.",
+    "in_scope": [
+      "acquisition scope definition",
+      "source hierarchy",
+      "admissibility rules",
+      "family novelty rules",
+      "point-in-time recording rules",
+      "refresh cadence",
+      "bounded first-pilot plan"
+    ],
+    "out_of_scope": [
+      "retained-feature promotion",
+      "strategy integration",
+      "same-pool policy-followthrough re-probing",
+      "wide replay expansion",
+      "heavy dependency introduction"
+    ],
+    "success_criteria": [
+      "define what sustained catalyst evidence should be collected",
+      "freeze source hierarchy and admissibility rules",
+      "freeze family novelty and point-in-time recording rules",
+      "state a bounded first-pilot collection plan"
+    ],
+    "stop_criteria": [
+      "if the phase drifts into ad hoc case scavenging",
+      "if the phase proposes direct strategy integration",
+      "if the phase cannot produce a reusable acquisition protocol"
+    ],
+    "handoff_condition": "After opening, only exploration-layer infrastructure design artifacts are allowed until the acquisition basis is explicit.",
+    "exploration_layer_phase": true
+  },
+  "interpretation": [
+    "V1.11 is not a case-hunt phase; it is an exploration-layer infrastructure phase.",
+    "Its purpose is to create a repeatable upstream evidence source rather than to patch the old pool with one-off finds.",
+    "The next legal action is an acquisition infrastructure plan, not replay or promotion."
+  ]
+}

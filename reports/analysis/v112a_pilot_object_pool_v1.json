@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112a_pilot_object_pool_v1",
+    "pilot_object_count": 3,
+    "repo_seen_object_count": 1,
+    "owner_seeded_object_count": 2,
+    "ready_for_label_review_sheet_next": true
+  },
+  "object_rows": [
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "pool_role_guess": "core_beta_beneficiary",
+      "cycle_fit": "high",
+      "local_evidence_status": "repo_seen",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    },
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "pool_role_guess": "leader_or_core_beneficiary",
+      "cycle_fit": "high",
+      "local_evidence_status": "owner_seeded_name",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "pool_role_guess": "mid_core_component_beneficiary",
+      "cycle_fit": "high",
+      "local_evidence_status": "owner_seeded_name",
+      "cycle_window_status": "owner_review_needed",
+      "missing_object_override_allowed": true
+    }
+  ],
+  "interpretation": [
+    "The first pilot object pool stays intentionally small so the owner can inspect every object and correct omissions.",
+    "Only one object is already present inside repo evidence; the other two are owner-seeded expansion objects and therefore explicitly marked as requiring review.",
+    "This pool is a bounded draft, not a final truth set."
+  ]
+}

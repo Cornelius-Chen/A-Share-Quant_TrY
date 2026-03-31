@@ -1,0 +1,346 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112ac_unsupervised_role_challenge_probe_v1",
+    "row_count": 20,
+    "feature_dimension_count": 43,
+    "stage_feature_count": 10,
+    "evidence_axis_feature_count": 33,
+    "preferred_clustering_family": "agglomerative_clustering",
+    "cluster_count": 4,
+    "kmeans_agglomerative_ari": 0.5278,
+    "supportive_cluster_count": 2,
+    "challenging_cluster_count": 2,
+    "spillover_separation_supported": false,
+    "pending_quiet_window_supported": true,
+    "formal_role_replacement_forbidden": true,
+    "formal_label_freeze_still_forbidden": true,
+    "formal_training_still_forbidden": true,
+    "ready_for_phase_check_next": true
+  },
+  "feature_axes": {
+    "stage_windows": [
+      "deep_reset_quiet_window",
+      "diffusion_1",
+      "divergence_decay_1",
+      "divergence_decay_3",
+      "ignition_1",
+      "laggard_catchup_3",
+      "main_markup_1",
+      "major_markup_3",
+      "pre_ignition_watch_1",
+      "re_ignition_markup_2"
+    ],
+    "evidence_axes": [
+      "advanced_component_alignment",
+      "beta_extension",
+      "board_follow",
+      "branch_rotation",
+      "breadth_participation",
+      "business_purity",
+      "core_beta_sensitivity",
+      "crowding_sensitivity",
+      "diffusion_confirmation",
+      "domestic_platform_bridge",
+      "drawdown_risk_readout",
+      "earnings_confirmation",
+      "hardware_sentiment",
+      "high_end_beta_extension",
+      "implementation_depth",
+      "insufficient_role_clarity",
+      "late_breadth",
+      "late_cycle_noise",
+      "late_stage_signal",
+      "leader_persistence",
+      "markup_acceleration",
+      "mixed_enabler",
+      "platform_confirmation",
+      "platform_width",
+      "process_enabler",
+      "route_depth",
+      "route_depth_confirmation",
+      "route_granularity",
+      "small_cap_beta_extension",
+      "spillover_intensity",
+      "stage_maturity",
+      "upstream_alignment",
+      "weak_name_bonus"
+    ]
+  },
+  "cluster_rows": [
+    {
+      "cluster_id": 0,
+      "posture": "challenging_mixed_cluster",
+      "member_symbols": [
+        "601869",
+        "600487",
+        "600522",
+        "000070",
+        "603228",
+        "001267"
+      ],
+      "manual_bucket_mix": {
+        "branch_or_late": 3,
+        "spillover_or_memory": 3
+      },
+      "labeling_surface_mix": {
+        "review_support_surface": 3,
+        "overlay_only_surface": 3
+      },
+      "top_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "top_evidence_axes": [
+        "late_breadth",
+        "stage_maturity",
+        "spillover_intensity",
+        "late_stage_signal",
+        "board_follow"
+      ],
+      "candidate_reading": "candidate_diffusion_extension_signature",
+      "reading": "Branch and late extension rows can cluster around cycle-maturity rather than core-business purity."
+    },
+    {
+      "cluster_id": 1,
+      "posture": "challenging_mixed_cluster",
+      "member_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "688498",
+        "688313",
+        "300757"
+      ],
+      "manual_bucket_mix": {
+        "core": 3,
+        "branch_or_late": 3
+      },
+      "labeling_surface_mix": {
+        "primary_labeling_surface": 3,
+        "review_support_surface": 3
+      },
+      "top_stage_windows": [
+        "major_markup_3",
+        "re_ignition_markup_2",
+        "main_markup_1",
+        "ignition_1"
+      ],
+      "top_evidence_axes": [
+        "advanced_component_alignment",
+        "route_depth",
+        "business_purity",
+        "leader_persistence",
+        "earnings_confirmation"
+      ],
+      "candidate_reading": "candidate_core_markup_strength_signature",
+      "reading": "Data-side structure still recognizes a relatively coherent core group centered on markup-bearing rows."
+    },
+    {
+      "cluster_id": 2,
+      "posture": "supportive_cluster",
+      "member_symbols": [
+        "300620",
+        "300548",
+        "000988"
+      ],
+      "manual_bucket_mix": {
+        "pending": 3
+      },
+      "labeling_surface_mix": {
+        "excluded_pending_surface": 3
+      },
+      "top_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "top_evidence_axes": [
+        "insufficient_role_clarity",
+        "mixed_enabler",
+        "platform_width"
+      ],
+      "candidate_reading": "candidate_quiet_window_pending_signature",
+      "reading": "Data-side structure keeps a quiet-window pending pocket that should not be force-labeled."
+    },
+    {
+      "cluster_id": 3,
+      "posture": "supportive_cluster",
+      "member_symbols": [
+        "002281",
+        "603083",
+        "688205",
+        "301205",
+        "300570"
+      ],
+      "manual_bucket_mix": {
+        "adjacent": 4,
+        "branch_or_late": 1
+      },
+      "labeling_surface_mix": {
+        "secondary_labeling_surface": 4,
+        "review_support_surface": 1
+      },
+      "top_stage_windows": [
+        "diffusion_1",
+        "major_markup_3",
+        "re_ignition_markup_2",
+        "laggard_catchup_3"
+      ],
+      "top_evidence_axes": [
+        "breadth_participation",
+        "domestic_platform_bridge",
+        "diffusion_confirmation",
+        "beta_extension",
+        "high_end_beta_extension"
+      ],
+      "candidate_reading": "candidate_diffusion_extension_signature",
+      "reading": "The cluster is partially supportive, but still bounded and review-only."
+    }
+  ],
+  "challenge_rows": [
+    {
+      "challenge_name": "cluster_0_mixed_boundary",
+      "member_symbols": [
+        "601869",
+        "600487",
+        "600522",
+        "000070",
+        "603228",
+        "001267"
+      ],
+      "why_it_matters": "The data-side structure does not cleanly respect the current manual boundary here, so later label drafting should treat this region as review-first.",
+      "manual_bucket_mix": {
+        "branch_or_late": 3,
+        "spillover_or_memory": 3
+      },
+      "top_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ]
+    },
+    {
+      "challenge_name": "cluster_1_mixed_boundary",
+      "member_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "688498",
+        "688313",
+        "300757"
+      ],
+      "why_it_matters": "The data-side structure does not cleanly respect the current manual boundary here, so later label drafting should treat this region as review-first.",
+      "manual_bucket_mix": {
+        "core": 3,
+        "branch_or_late": 3
+      },
+      "top_stage_windows": [
+        "major_markup_3",
+        "re_ignition_markup_2",
+        "main_markup_1",
+        "ignition_1"
+      ]
+    }
+  ],
+  "candidate_structure_rows": [
+    {
+      "candidate_structure_name": "candidate_diffusion_extension_signature",
+      "source_cluster_id": 0,
+      "status": "review_only_candidate_structure",
+      "member_symbols": [
+        "601869",
+        "600487",
+        "600522",
+        "000070",
+        "603228",
+        "001267"
+      ],
+      "top_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "top_evidence_axes": [
+        "late_breadth",
+        "stage_maturity",
+        "spillover_intensity",
+        "late_stage_signal",
+        "board_follow"
+      ],
+      "do_not_treat_as": "formal_label_or_formal_role"
+    },
+    {
+      "candidate_structure_name": "candidate_core_markup_strength_signature",
+      "source_cluster_id": 1,
+      "status": "review_only_candidate_structure",
+      "member_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "688498",
+        "688313",
+        "300757"
+      ],
+      "top_stage_windows": [
+        "major_markup_3",
+        "re_ignition_markup_2",
+        "main_markup_1",
+        "ignition_1"
+      ],
+      "top_evidence_axes": [
+        "advanced_component_alignment",
+        "route_depth",
+        "business_purity",
+        "leader_persistence",
+        "earnings_confirmation"
+      ],
+      "do_not_treat_as": "formal_label_or_formal_role"
+    },
+    {
+      "candidate_structure_name": "candidate_quiet_window_pending_signature",
+      "source_cluster_id": 2,
+      "status": "review_only_candidate_structure",
+      "member_symbols": [
+        "300620",
+        "300548",
+        "000988"
+      ],
+      "top_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "top_evidence_axes": [
+        "insufficient_role_clarity",
+        "mixed_enabler",
+        "platform_width"
+      ],
+      "do_not_treat_as": "formal_label_or_formal_role"
+    },
+    {
+      "candidate_structure_name": "candidate_diffusion_extension_signature",
+      "source_cluster_id": 3,
+      "status": "review_only_candidate_structure",
+      "member_symbols": [
+        "002281",
+        "603083",
+        "688205",
+        "301205",
+        "300570"
+      ],
+      "top_stage_windows": [
+        "diffusion_1",
+        "major_markup_3",
+        "re_ignition_markup_2",
+        "laggard_catchup_3"
+      ],
+      "top_evidence_axes": [
+        "breadth_participation",
+        "domestic_platform_bridge",
+        "diffusion_confirmation",
+        "beta_extension",
+        "high_end_beta_extension"
+      ],
+      "do_not_treat_as": "formal_label_or_formal_role"
+    }
+  ],
+  "interpretation": [
+    "The unsupervised probe is a challenger, not a legislator.",
+    "Current manual roles are partly supported by data-side latent structure, but some adjacent/branch boundaries remain mixed.",
+    "Any new latent signatures remain review-only candidate structures until later owner review says otherwise."
+  ]
+}

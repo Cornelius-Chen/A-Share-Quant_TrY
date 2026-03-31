@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112aw_as_branch_guarded_admission_review_success",
+    "v112aw_success_criteria_met": true,
+    "enter_v112aw_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "recommended_next_posture": "run_guarded_branch_admitted_pilot_before_any_broader_row_widen"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112aw_phase_check",
+      "actual": {
+        "branch_rows_under_review": 4,
+        "guarded_training_context_admissible_count": 3,
+        "retained_review_only_count": 1
+      },
+      "reading": "The phase closes once branch-row admissibility has been cut into guarded and still-review-only buckets."
+    }
+  ],
+  "interpretation": [
+    "V1.12AW closes with a bounded branch admission decision.",
+    "Formal training and signal rights remain closed."
+  ]
+}

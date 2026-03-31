@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bn_as_teacher_decomposition_gate_search_success",
+    "v112bn_success_criteria_met": true,
+    "enter_v112bn_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bn_phase_check",
+      "actual": {
+        "candidate_row_count": 30,
+        "best_candidate_non_cash": false,
+        "teacher_alignment_f1": 0.0
+      },
+      "reading": "The phase closes once the bounded rule search produces an auditable best candidate or a proof that no non-cash candidate survives."
+    }
+  ],
+  "interpretation": [
+    "V1.12BN closes the teacher decomposition search branch without opening formal training or signaling."
+  ]
+}

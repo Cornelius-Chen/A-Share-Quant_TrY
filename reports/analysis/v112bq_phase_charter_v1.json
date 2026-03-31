@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112bq_cpo_gate_precision_sweep",
+    "do_open_v112bq_now": true,
+    "recommended_first_action": "freeze_v112bq_cpo_gate_precision_sweep_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12BQ CPO Gate Precision Sweep",
+    "mission": "Treat the fusion selector as fixed alpha backbone, then run a bounded coarse-to-fine sweep on eligibility and veto thresholds to compress drawdown toward the neutral baseline without collapsing participation into all-cash behavior.",
+    "in_scope": [
+      "coarse-to-fine gate threshold sweep on top of the frozen fusion selector",
+      "neutral-style eligibility skeleton reuse",
+      "internal maturity overlay veto precision",
+      "regime support as auxiliary threshold only",
+      "report-only evaluation against fusion and neutral baselines"
+    ],
+    "out_of_scope": [
+      "new selector family expansion",
+      "formal training opening",
+      "formal signal generation",
+      "row-geometry widening",
+      "promotion of unsupervised bundles into truth"
+    ],
+    "success_criteria": [
+      "the sweep produces at least one non-cash candidate configuration",
+      "best candidate is evaluated on return retention and drawdown compression together",
+      "the phase outputs candidate gate or veto rules rather than abstract observations"
+    ]
+  },
+  "interpretation": [
+    "V1.12BQ exists because the main bottleneck is no longer selector quality; it is eligibility discipline.",
+    "Teacher decomposition and regime-only gating both failed to replace the neutral baseline on their own, so the lawful next step is a bounded threshold sweep on top of the frozen selector backbone."
+  ]
+}

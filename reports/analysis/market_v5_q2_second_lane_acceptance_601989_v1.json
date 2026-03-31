@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "close_market_v5_q2_second_lane_as_no_active_structural_lane",
+    "target_symbol": "601989",
+    "target_pnl_delta": 0.0,
+    "opening_present": false,
+    "persistence_present": false,
+    "lane_changes_training_reading": false,
+    "phase_allowed_second_lane": true,
+    "do_continue_current_symbol_now": false,
+    "do_open_third_v5_lane_now": true,
+    "recommended_next_symbol": ""
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "phase_gate",
+      "actual": {
+        "phase_acceptance_posture": "open_second_v5_lane_on_clean_persistence_track",
+        "recommended_next_track": "clean_persistence_row",
+        "phase_allowed_second_lane": true
+      },
+      "reading": "The second v5 lane is only legal because the phase check kept the batch bounded and redirected it to the clean-persistence track."
+    },
+    {
+      "evidence_name": "divergence_signature",
+      "actual": {
+        "target_symbol": "601989",
+        "target_pnl_delta": 0.0,
+        "incumbent_trade_count": 5,
+        "challenger_trade_count": 5
+      },
+      "reading": "The clean-persistence target must show at least some structural divergence before persistence can be meaningfully checked."
+    },
+    {
+      "evidence_name": "window_checks",
+      "actual": {
+        "opening_present": false,
+        "opening_trade_date": null,
+        "persistence_present": false,
+        "persistence_trade_date": null
+      },
+      "reading": "Only a clean persistence edge upgrades the second v5 lane into a training-gap-relevant result."
+    }
+  ],
+  "interpretation": [
+    "The second v5 lane exists to probe the clean-persistence track after the first v5 lane closed as opening-led.",
+    "A second lane that only reproduces opening does not solve the training-gap problem even if it is structurally real.",
+    "So the lane should only change the v5 reading when it surfaces a clean persistence edge; otherwise the batch stays bounded and moves to the last remaining clean-persistence symbol."
+  ]
+}

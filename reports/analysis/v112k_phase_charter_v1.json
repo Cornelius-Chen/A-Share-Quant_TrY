@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112k_high_level_consolidation_candidate_substate_drafting",
+    "phase_name": "V1.12K High-Level Consolidation Candidate Substate Drafting",
+    "ready_for_drafting_next": true
+  },
+  "mission": {
+    "goal": "Turn the high_level_consolidation candidate buckets into a small review-only candidate-substate draft without freezing any formal label changes.",
+    "why_now": "V1.12J concluded that only high_level_consolidation deserves bounded drafting follow-up."
+  },
+  "in_scope": [
+    "review-only candidate substates for high_level_consolidation",
+    "mapping from bucket structure to candidate draft names and meanings",
+    "readiness judgment for which draft pieces are usable now versus still mixed"
+  ],
+  "out_of_scope": [
+    "formal label split",
+    "major_markup follow-up",
+    "dataset widening",
+    "model escalation",
+    "strategy integration"
+  ],
+  "success_criteria": [
+    "a small candidate-substate draft exists for high_level_consolidation",
+    "the draft distinguishes strong candidates from mixed or too-thin buckets",
+    "the output remains review-only and does not legislate new formal labels"
+  ],
+  "stop_criteria": [
+    "drafting collapses into a formal relabeling attempt",
+    "drafting requires scope growth before any useful draft can be written"
+  ],
+  "handoff_condition": "owner can review the candidate draft and decide whether any bounded draft should be refined further"
+}

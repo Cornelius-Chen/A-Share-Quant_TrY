@@ -1,0 +1,11 @@
+project:
+  name: a_share_quant
+  protocol_version: phase_charter_v1.8a
+
+paths:
+  v17_phase_closure_report: reports/analysis/v17_phase_closure_check_v1.json
+  v17_feature_promotion_gap_review_report: reports/analysis/v17_feature_promotion_gap_review_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v18a_phase_charter_v1

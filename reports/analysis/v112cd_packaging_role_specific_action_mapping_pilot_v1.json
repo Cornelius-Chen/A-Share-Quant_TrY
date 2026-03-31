@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cd_packaging_role_specific_action_mapping_pilot_v1",
+    "trade_count": 6,
+    "packaging_entry_veto_count": 1,
+    "packaging_de_risk_count": 0,
+    "packaging_eligibility_count": 1,
+    "total_return": 2.8309,
+    "max_drawdown": -0.1854,
+    "profit_factor": "inf",
+    "bp_return_delta": 0.6391,
+    "bp_drawdown_delta": 0.1748,
+    "bw_return_delta": 1.121,
+    "bw_drawdown_delta": -0.0168,
+    "neutral_return_delta": 0.5828,
+    "neutral_drawdown_delta": 0.0252,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "recommended_next_posture": "use_packaging_role_specific_action_mapping_as_candidate_template_control"
+  },
+  "band_action_rows": [
+    {
+      "entry_date": "2024-03-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "predicted_band": "veto_band",
+      "control_action": "entry_veto"
+    },
+    {
+      "entry_date": "2024-04-18",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "predicted_band": "eligibility_band",
+      "control_action": "eligibility"
+    }
+  ],
+  "trade_rows": [
+    {
+      "entry_date": "2024-02-06",
+      "exit_date": "2024-03-13",
+      "symbol": "002281",
+      "stage_family": "main_markup",
+      "role_family": "domestic_optics_platform_bridge",
+      "holding_days": 20,
+      "realized_forward_return": 0.7673,
+      "path_max_drawdown": -0.0821,
+      "entry_equity": 1.0,
+      "exit_equity": 1.7673
+    },
+    {
+      "entry_date": "2024-04-18",
+      "exit_date": "2024-05-21",
+      "symbol": "300757",
+      "stage_family": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "holding_days": 20,
+      "realized_forward_return": 0.1787,
+      "path_max_drawdown": -0.1686,
+      "entry_equity": 1.7673,
+      "exit_equity": 2.0832
+    },
+    {
+      "entry_date": "2025-07-25",
+      "exit_date": "2025-08-22",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "holding_days": 20,
+      "realized_forward_return": 0.583,
+      "path_max_drawdown": -0.0574,
+      "entry_equity": 2.0832,
+      "exit_equity": 3.2977
+    },
+    {
+      "entry_date": "2025-09-15",
+      "exit_date": "2025-10-21",
+      "symbol": "300502",
+      "stage_family": "main_markup",
+      "role_family": "high_beta_core_module",
+      "holding_days": 20,
+      "realized_forward_return": 0.0432,
+      "path_max_drawdown": -0.1854,
+      "entry_equity": 3.2977,
+      "exit_equity": 3.44
+    },
+    {
+      "entry_date": "2025-11-07",
+      "exit_date": "2025-12-05",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "holding_days": 20,
+      "realized_forward_return": 0.0959,
+      "path_max_drawdown": -0.0715,
+      "entry_equity": 3.44,
+      "exit_equity": 3.7699
+    },
+    {
+      "entry_date": "2025-12-29",
+      "exit_date": "2026-01-28",
+      "symbol": "300308",
+      "stage_family": "main_markup",
+      "role_family": "core_module_leader",
+      "holding_days": 20,
+      "realized_forward_return": 0.0162,
+      "path_max_drawdown": -0.0793,
+      "entry_equity": 3.7699,
+      "exit_equity": 3.8309
+    }
+  ],
+  "comparison_rows": [
+    {
+      "comparison_name": "return_vs_bp",
+      "baseline_value": 2.1918,
+      "pilot_value": 2.8309,
+      "delta": 0.6391
+    },
+    {
+      "comparison_name": "drawdown_vs_bp",
+      "baseline_value": -0.3602,
+      "pilot_value": -0.1854,
+      "delta": 0.1748
+    },
+    {
+      "comparison_name": "return_vs_bw",
+      "baseline_value": 1.7099,
+      "pilot_value": 2.8309,
+      "delta": 1.121
+    },
+    {
+      "comparison_name": "drawdown_vs_bw",
+      "baseline_value": -0.1686,
+      "pilot_value": -0.1854,
+      "delta": -0.0168
+    },
+    {
+      "comparison_name": "return_vs_neutral",
+      "baseline_value": 2.2481,
+      "pilot_value": 2.8309,
+      "delta": 0.5828
+    },
+    {
+      "comparison_name": "drawdown_vs_neutral",
+      "baseline_value": -0.2106,
+      "pilot_value": -0.1854,
+      "delta": 0.0252
+    }
+  ],
+  "interpretation": [
+    "V1.12CD applies role-specific band edges to packaging_process_enabler trades only, while leaving laser-chip states as eligibility-only template members.",
+    "The aim is to operationalize the three-layer action template on the one template-capable role that currently has empirical veto/de-risk/eligibility coverage."
+  ]
+}

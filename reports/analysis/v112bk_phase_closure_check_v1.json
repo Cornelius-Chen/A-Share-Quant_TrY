@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bk_as_cpo_tree_ranker_search_success",
+    "v112bk_success_criteria_met": true,
+    "enter_v112bk_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bk_phase_check",
+      "actual": {
+        "best_variant_name": "random_forest_overlay_ranker",
+        "best_variant_total_return": 7.511,
+        "best_variant_max_drawdown": -0.5181
+      },
+      "reading": "The phase closes once the cheap tree/ranker search has a lawful report-only result and the neutral comparison is preserved for owner review."
+    }
+  ],
+  "interpretation": [
+    "V1.12BK closes with a bounded tree/ranker search that found a strong random-forest variant but still did not beat neutral on drawdown-guarded criteria."
+  ]
+}

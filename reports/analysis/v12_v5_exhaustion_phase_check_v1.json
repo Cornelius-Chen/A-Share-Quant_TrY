@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v5_as_bounded_but_non_repairing_refresh",
+    "v5_manifest_exhausted": true,
+    "last_probe_opening_led": true,
+    "v5_repaired_carry_gap": false,
+    "primary_bottleneck_still_carry_row_diversity": true,
+    "remaining_clean_persistence_gap": 2,
+    "remaining_true_carry_gap": 2,
+    "catalyst_branch_support_only": true,
+    "do_reopen_v5_now": false,
+    "do_prepare_next_refresh_entry_now": true,
+    "recommended_next_posture": "prepare_v12_next_refresh_entry_for_market_research_v6"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v5_reassessment_gate",
+      "actual": {
+        "clean_persistence_track_exhausted": true,
+        "do_open_last_true_carry_probe_now": true
+      },
+      "reading": "The v5 manifest only reaches exhaustion after the clean-persistence track fails and the last true-carry probe is consumed."
+    },
+    {
+      "evidence_name": "last_true_carry_probe",
+      "actual": {
+        "acceptance_posture": "close_market_v5_q2_last_true_carry_probe_as_opening_led_not_true_carry",
+        "opening_present": true,
+        "persistence_present": false,
+        "lane_changes_training_reading": false
+      },
+      "reading": "The last true-carry probe can exhaust the current manifest without repairing the carry-row-diversity gap."
+    },
+    {
+      "evidence_name": "remaining_training_gap",
+      "actual": {
+        "remaining_clean_persistence_gap": 2,
+        "remaining_true_carry_gap": 2,
+        "catalyst_branch_support_only": true
+      },
+      "reading": "Once v5 exhausts without new acceptance-grade rows, the remaining training gaps still justify another criteria-first refresh, with catalyst context staying in a support-only role."
+    }
+  ],
+  "interpretation": [
+    "V5 has now used up its bounded lanes without repairing the carry-row-diversity gap.",
+    "That is a valid negative result, not a reason to widen replay inside v5.",
+    "The correct next move is to prepare the next criteria-first refresh entry rather than reopening v5 locally or promoting the catalyst branch."
+  ]
+}

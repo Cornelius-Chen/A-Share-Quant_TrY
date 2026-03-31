@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bt_as_phase_conditioned_veto_and_eligibility_extraction",
+    "eligibility_rule_count": 2,
+    "entry_veto_count": 4,
+    "holding_veto_count": 2,
+    "risk_off_override_count": 3,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "phase_conditioned_control_objects",
+      "actual": {
+        "eligibility_rule_count": 2,
+        "entry_veto_count": 4,
+        "holding_veto_count": 2,
+        "risk_off_override_count": 3
+      },
+      "reading": "The phase is only useful if dangerous regions are translated into explicit control objects."
+    }
+  ],
+  "interpretation": [
+    "V1.12BT phase check confirms that risk regions are now being translated into concrete eligibility and veto objects instead of staying as abstract pockets."
+  ]
+}

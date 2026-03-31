@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bo_as_cpo_internal_maturity_overlay_review",
+    "do_open_v112bo_now": true,
+    "overlay_feature_count": 8,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bo_overlay_review",
+      "actual": {
+        "overlay_feature_count": 8,
+        "recommended_next_posture": "use_internal_maturity_overlay_in_later_gate_or_selector_fusion_before_any_large_data_widen"
+      },
+      "reading": "The phase is only useful if internal maturity is frozen as a distinct overlay family instead of getting mixed into regime or role truth."
+    }
+  ],
+  "interpretation": [
+    "V1.12BO is valid because it isolates the internal maturity layer the BL regime experiment failed to recover by itself."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112aw_branch_guarded_admission_review",
+    "do_open_v112aw_now": true,
+    "recommended_first_action": "freeze_v112aw_cpo_branch_guarded_admission_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AW CPO Branch Guarded Admission Review",
+    "mission": "Review whether the patched branch rows can move from review-only context into a guarded training-facing context without opening formal training or signal rights.",
+    "in_scope": [
+      "reuse the four branch rows tested in V1.12AU and patched in V1.12AV",
+      "compare review-only versus guarded-context admissibility",
+      "allow partial admission instead of forcing all-or-nothing branch promotion"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "formal signal generation",
+      "spillover admission",
+      "pending ambiguous row admission"
+    ],
+    "success_criteria": [
+      "the project can make a bounded branch-row admission decision",
+      "at least one branch row can be classified more precisely than review-only",
+      "the next lawful move becomes narrower than generic branch review"
+    ]
+  },
+  "interpretation": [
+    "V1.12AW converts the branch patch result into an admissibility decision instead of reopening generic geometry review.",
+    "This remains bounded, report-only, and non-deployable."
+  ]
+}

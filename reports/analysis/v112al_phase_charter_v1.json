@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112al_cpo_bounded_training_readiness_review",
+    "do_open_v112al_now": true,
+    "recommended_first_action": "freeze_v112al_cpo_bounded_training_readiness_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AL CPO Bounded Training Readiness Review",
+    "mission": "Determine whether the current CPO draft dataset can legally support an extremely small bounded training pilot, and attribute the real bottleneck across row geometry, label binding, and feature implementation layers.",
+    "in_scope": [
+      "review row geometry readiness for the current truth-candidate set",
+      "review label binding readiness for ready and guarded labels",
+      "review feature implementation readiness against current operational gaps",
+      "define core-trainable, guarded-trainable, and not-yet-trainable regions"
+    ],
+    "out_of_scope": [
+      "formal training launch",
+      "formal label freeze",
+      "formal signal generation",
+      "pretending that a bounded pilot implies representative readiness"
+    ],
+    "success_criteria": [
+      "the phase produces an action-grade answer rather than another generic review loop",
+      "the primary bottleneck layer is explicit",
+      "the lawful upper bound of any current pilot is explicit",
+      "formal training remains closed unless a later bounded pilot is opened explicitly"
+    ]
+  },
+  "interpretation": [
+    "V1.12AL is not a training launch; it is the gate that decides whether any tiny bounded pilot is lawful at all.",
+    "The point is to separate bundle readiness, row geometry, and implementation maturity before the project risks over-reading its own progress."
+  ]
+}

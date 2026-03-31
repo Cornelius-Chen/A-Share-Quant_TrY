@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112e_gbdt_attribution_review_v1",
+    "block_count": 4,
+    "full_model_test_accuracy": 0.558,
+    "baseline_test_accuracy": 0.4509,
+    "most_useful_block_by_hotspot_impact": "catalyst_state",
+    "ready_for_phase_check_next": true
+  },
+  "base_model_row": {
+    "model_name": "hist_gradient_boosting_classifier",
+    "test_accuracy": 0.558,
+    "carry_constructive_precision": 0.6024,
+    "carry_constructive_recall": 0.6211,
+    "false_positive_count_in_major_markup": 125,
+    "false_positive_count_in_high_level_consolidation": 1,
+    "baseline_test_accuracy": 0.4509,
+    "baseline_major_markup_fp": 178,
+    "baseline_high_level_consolidation_fp": 46
+  },
+  "block_ablation_rows": [
+    {
+      "model_name": "hist_gradient_boosting_minus_catalyst_state",
+      "test_accuracy": 0.506,
+      "carry_constructive_precision": 0.5383,
+      "carry_constructive_recall": 0.677,
+      "false_positive_count_in_major_markup": 125,
+      "false_positive_count_in_high_level_consolidation": 53,
+      "ablated_block": "catalyst_state",
+      "removed_feature_count": 4,
+      "accuracy_delta_vs_full": -0.052,
+      "major_markup_fp_delta_vs_full": 0,
+      "high_level_consolidation_fp_delta_vs_full": 52
+    },
+    {
+      "model_name": "hist_gradient_boosting_minus_earnings_transmission_bridge",
+      "test_accuracy": 0.5134,
+      "carry_constructive_precision": 0.5942,
+      "carry_constructive_recall": 0.5093,
+      "false_positive_count_in_major_markup": 104,
+      "false_positive_count_in_high_level_consolidation": 0,
+      "ablated_block": "earnings_transmission_bridge",
+      "removed_feature_count": 3,
+      "accuracy_delta_vs_full": -0.0446,
+      "major_markup_fp_delta_vs_full": -21,
+      "high_level_consolidation_fp_delta_vs_full": -1
+    },
+    {
+      "model_name": "hist_gradient_boosting_minus_expectation_gap",
+      "test_accuracy": 0.5253,
+      "carry_constructive_precision": 0.5821,
+      "carry_constructive_recall": 0.6056,
+      "false_positive_count_in_major_markup": 136,
+      "false_positive_count_in_high_level_consolidation": 0,
+      "ablated_block": "expectation_gap",
+      "removed_feature_count": 2,
+      "accuracy_delta_vs_full": -0.0327,
+      "major_markup_fp_delta_vs_full": 11,
+      "high_level_consolidation_fp_delta_vs_full": -1
+    },
+    {
+      "model_name": "hist_gradient_boosting_minus_price_confirmation",
+      "test_accuracy": 0.561,
+      "carry_constructive_precision": 0.6052,
+      "carry_constructive_recall": 0.6522,
+      "false_positive_count_in_major_markup": 134,
+      "false_positive_count_in_high_level_consolidation": 0,
+      "ablated_block": "price_confirmation",
+      "removed_feature_count": 3,
+      "accuracy_delta_vs_full": 0.003,
+      "major_markup_fp_delta_vs_full": 9,
+      "high_level_consolidation_fp_delta_vs_full": -1
+    }
+  ],
+  "interpretation": [
+    "This review explains the first GBDT gain by removing one feature block at a time under the same dataset and split.",
+    "The most useful block is the one whose removal hurts hotspot false-positive control the most.",
+    "This should inform whether the next move is feature refinement, label refinement, or further sidecar comparison."
+  ]
+}

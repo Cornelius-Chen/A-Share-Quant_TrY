@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v16_as_bounded_stability_review_success",
+    "v16_success_criteria_met": true,
+    "continue_provisional_candidacy_count": 4,
+    "hold_for_more_stability_evidence_count": 0,
+    "enter_v16_waiting_state_now": true,
+    "promote_retained_now": false,
+    "open_local_regime_phase_now": false,
+    "recommended_next_posture": "preserve_v16_stability_results_and_wait_for_owner_phase_switch_or_trigger"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v16_charter",
+      "actual": {
+        "acceptance_posture": "open_v16_provisional_candidacy_stability_review",
+        "do_open_v16_now": true
+      },
+      "reading": "V1.6 opened lawfully as a bounded stability review phase."
+    },
+    {
+      "evidence_name": "feature_stability_review",
+      "actual": {
+        "continue_provisional_candidacy_count": 4,
+        "hold_for_more_stability_evidence_count": 0,
+        "drop_from_provisional_candidacy_count": 0
+      },
+      "reading": "The current review answered which provisional candidates remain stable enough to stay alive."
+    },
+    {
+      "evidence_name": "phase_check",
+      "actual": {
+        "acceptance_posture": "keep_v16_active_but_bounded_as_stability_review",
+        "promote_retained_now": false,
+        "do_integrate_into_strategy_now": false
+      },
+      "reading": "The branch remains below promotion threshold, so closure should preserve stability-review results rather than force promotion or new branches."
+    }
+  ],
+  "interpretation": [
+    "V1.6 has now answered its core question: which provisional candidacy features remain stable enough to stay alive under bounded review.",
+    "That is enough to close the phase successfully without promoting any feature into retained status.",
+    "Per the autonomy policy, the correct move is to enter waiting state until a new owner phase switch or trigger appears."
+  ]
+}

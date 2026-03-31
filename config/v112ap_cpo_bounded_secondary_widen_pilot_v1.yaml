@@ -1,0 +1,9 @@
+report:
+  name: v112ap_cpo_bounded_secondary_widen_pilot_v1
+paths:
+  reports_dir: reports/analysis
+  v112ap_phase_charter_report: reports/analysis/v112ap_phase_charter_v1.json
+  v112ao_role_patch_report: reports/analysis/v112ao_cpo_role_layer_patch_pilot_v1.json
+  v112aj_dataset_report: reports/analysis/v112aj_cpo_bounded_label_draft_dataset_assembly_v1.json
+  v112ak_binding_review_report: reports/analysis/v112ak_cpo_bounded_feature_binding_review_v1.json
+  v112z_cycle_reconstruction_report: reports/analysis/v112z_bounded_cycle_reconstruction_pass_v1.json

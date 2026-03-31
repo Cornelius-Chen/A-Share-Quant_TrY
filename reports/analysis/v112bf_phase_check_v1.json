@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bf_as_cpo_aggressive_no_leak_black_box_portfolio_pilot",
+    "do_open_v112bf_now": true,
+    "trade_count": 20,
+    "no_leak_enforced": true,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bf_aggressive_pilot",
+      "actual": {
+        "trade_count": 20,
+        "total_return": 1.5405,
+        "oracle_return_gap": 750.5456
+      },
+      "reading": "The pilot is only useful if it produces a real no-leak trade path and an explicit oracle gap."
+    }
+  ],
+  "interpretation": [
+    "V1.12BF is valid because it produces a no-leak aggressive portfolio trace rather than only a model score."
+  ]
+}

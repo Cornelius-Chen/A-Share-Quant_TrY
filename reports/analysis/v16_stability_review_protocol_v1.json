@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v16_stability_review_protocol_v1",
+    "provisional_candidate_count": 4,
+    "review_axis_count": 4,
+    "allow_retained_promotion_now": false,
+    "ready_for_feature_stability_review_next": true
+  },
+  "protocol": {
+    "provisional_candidate_feature_names": [
+      "single_pulse_support",
+      "multi_day_reinforcement_support",
+      "policy_followthrough_support",
+      "concept_confirmation_depth"
+    ],
+    "review_axes": [
+      "cross_artifact_consistency",
+      "bounded_definition_stability",
+      "continued_safe_containment",
+      "hold_or_continue_decision"
+    ],
+    "minimum_stability_requirements": [
+      "admissibility_result_remains_consistent",
+      "feature_definition_has_not drifted",
+      "report_only boundary still holds",
+      "no promotion dependency is required to keep the feature alive"
+    ],
+    "stability_outcomes": [
+      "continue_provisional_candidacy",
+      "hold_for_more_stability_evidence",
+      "drop_from_provisional_candidacy"
+    ],
+    "forbidden_actions": [
+      "retained_feature_promotion",
+      "strategy_integration",
+      "new replay or refresh expansion",
+      "local_model_opening"
+    ]
+  },
+  "interpretation": [
+    "V1.6 does not reopen admissibility; it tests whether provisional candidacy is stable enough to remain alive under bounded review.",
+    "The protocol is still review-only and keeps all promotion and integration actions forbidden.",
+    "The next legal action is per-feature stability review, not a jump to retained features or local models."
+  ]
+}

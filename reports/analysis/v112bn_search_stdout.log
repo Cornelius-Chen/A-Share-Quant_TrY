@@ -1,0 +1,10 @@
+[v112bn] building decision frame...
+[v112bn] decision frame rows=2756 cols=52
+[v112bn] search frame rows=53 teacher_dates=7
+[v112bn] searching core gate space...
+[v112bn] core candidates=15
+[v112bn] overlay candidates=64
+[v112bn] total [v112bn] overlay candidates=15
+[v112bn] total candidates=30
+V1.12BN teacher decomposition gate search report: reports\analysis\v112bn_teacher_decomposition_gate_search_v1.json
+Summary: {'acceptance_posture': 'freeze_v112bn_teacher_decomposition_gate_search_v1', 'track_name': 'teacher_decomposition_gate_search_track', 'no_leak_enforced': True, 'training_layer_row_count': 10, 'sample_count': 53, 'teacher_decision_row_count': 53, 'candidate_row_count': 30, 'core_candidate_count': 15, 'overlay_candidate_count': 15, 'non_cash_candidate_count': 0, 'best_candidate_rule_count': 0, 'best_candidate_stage': 'cash_only', 'trade_count': 0, 'equity_curve_point_count': 1, 'drawdown_curve_point_count': 1, 'total_return': 0.0, 'max_drawdown': 0.0, 'profit_factor': 'inf', 'hit_rate': 0.0, 'cash_ratio': 1.0, 'teacher_alignment_recall': 0.0, 'teacher_alignment_precision': 0.0, 'teacher_alignment_f1': 0.0, 'teacher_exact_alignment_recall': 0.0, 'teacher_exact_alignment_precision': 0.0, 'teacher_exact_alignment_f1': 0.0, 'neutral_return_delta': -2.2481, 'aggressive_return_delta': -1.5405, 'ranker_return_delta': -2.0374, 'oracle_return_gap': 752.0861, 'all_non_cash_failed_proven': True, 'best_non_cash_candidate_found': False, 'best_candidate_non_cash': False, 'best_candidate_cash_ratio_gap_to_teacher': 0.2717, 'formal_training_now': False, 'formal_signal_generation_now': False, 'ready_for_phase_check_next': True, 'recommended_next_posture': 'prove_that_all_non_cash_candidates_fail_before_any_gate_stack_is_promoted'}

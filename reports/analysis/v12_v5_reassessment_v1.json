@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "open_last_v5_true_carry_probe_after_persistence_track_exhaustion",
+    "first_lane_opening_led": true,
+    "clean_persistence_track_exhausted": true,
+    "remaining_true_carry_symbols": [
+      "000099"
+    ],
+    "do_open_last_true_carry_probe_now": true,
+    "recommended_next_symbol": "000099",
+    "do_open_new_refresh_now": false,
+    "do_widen_v5_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "first_v5_lane",
+      "actual": {
+        "top_driver": "002273",
+        "opening_present": true,
+        "persistence_present": false,
+        "lane_changes_carry_reading": false
+      },
+      "reading": "The first v5 lane stayed opening-led, so the true-carry mission is still unresolved."
+    },
+    {
+      "evidence_name": "clean_persistence_track",
+      "actual": {
+        "clean_persistence_symbols": [
+          "600760",
+          "601989"
+        ],
+        "second_lane_acceptance": "close_market_v5_q2_second_lane_as_divergent_but_not_acceptance_grade",
+        "third_lane_acceptance": "close_market_v5_q2_second_lane_as_no_active_structural_lane",
+        "clean_persistence_track_exhausted": true
+      },
+      "reading": "Once both clean-persistence symbols fail to produce an acceptance-grade persistence edge, the persistence track is locally exhausted."
+    },
+    {
+      "evidence_name": "remaining_true_carry_probe",
+      "actual": {
+        "remaining_true_carry_symbols": [
+          "000099"
+        ],
+        "recommended_next_symbol": "000099"
+      },
+      "reading": "After the clean-persistence track exhausts, one bounded true-carry probe remains legal before any new refresh or broader replay decision."
+    }
+  ],
+  "interpretation": [
+    "V5 has not solved the carry-row-diversity bottleneck yet: its first lane is opening-led and its two clean-persistence probes failed to produce acceptance-grade persistence.",
+    "That does not justify widening replay or opening a new refresh batch immediately.",
+    "But one bounded true-carry probe still remains inside the current v5 manifest, so the correct next move is to test that final symbol before another higher-level V1.2 decision."
+  ]
+}

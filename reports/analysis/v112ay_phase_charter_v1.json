@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112ay_guarded_branch_training_layer_review",
+    "do_open_v112ay_now": true,
+    "recommended_first_action": "freeze_v112ay_cpo_guarded_branch_training_layer_review_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12AY CPO Guarded Branch Training-Layer Review",
+    "mission": "Decide whether the three guarded-admitted branch rows can enter the next bounded training-facing layer without opening formal training or broader row-geometry widen.",
+    "in_scope": [
+      "review the three guarded-admitted branch rows from V1.12AW/V1.12AX",
+      "determine bounded training-layer admissibility",
+      "preserve connector/MPO branch as out-of-layer if still mixed"
+    ],
+    "out_of_scope": [
+      "formal training promotion",
+      "formal signal generation",
+      "connector/MPO branch admission",
+      "spillover or pending row admission"
+    ],
+    "success_criteria": [
+      "a bounded training-layer admissibility decision exists",
+      "the guarded branch rows can be split from broader unresolved branch space",
+      "the next lawful move becomes narrower than generic branch expansion"
+    ]
+  },
+  "interpretation": [
+    "V1.12AY turns the successful guarded branch-admitted pilot into a training-layer admissibility judgment.",
+    "This remains bounded, report-only, and non-deployable."
+  ]
+}

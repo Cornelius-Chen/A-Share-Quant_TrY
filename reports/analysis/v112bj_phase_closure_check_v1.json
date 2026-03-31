@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112bj_as_cpo_neutral_teacher_gate_pilot_success",
+    "v112bj_success_criteria_met": true,
+    "enter_v112bj_waiting_state_now": true,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bj_phase_check",
+      "actual": {
+        "trade_count": 0,
+        "teacher_alignment_recall": 0.0
+      },
+      "reading": "The phase closes once the teacher-gate line exists as a lawful comparison line against the current neutral baseline."
+    }
+  ],
+  "interpretation": [
+    "V1.12BJ closes with the first learned participation-discipline line derived from the neutral selective teacher."
+  ]
+}

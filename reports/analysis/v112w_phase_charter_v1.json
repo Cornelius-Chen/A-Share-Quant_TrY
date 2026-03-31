@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112w_cpo_future_catalyst_calendar_operationalization",
+    "do_open_v112w_now": true,
+    "selected_archetype": "optical_link_price_and_demand_upcycle",
+    "recommended_first_action": "freeze_v112w_cpo_future_catalyst_calendar_operationalization_v1"
+  },
+  "charter": {
+    "phase_name": "V1.12W CPO Future Catalyst Calendar Operationalization",
+    "mission": "Turn the frozen future-visible CPO catalyst anchors into an operational recurring calendar table so forward event timing can later be attached consistently without mixing it with execution logic.",
+    "in_scope": [
+      "operationalize the future catalyst calendar gap called out in V1.12U",
+      "freeze a bounded recurring calendar table schema",
+      "freeze cadence, bucket, and confidence fields for forward-visible catalyst rows"
+    ],
+    "out_of_scope": [
+      "daily board chronology backfill",
+      "spillover factor testing",
+      "adjacent role split cleanup",
+      "training authorization",
+      "signal generation"
+    ],
+    "success_criteria": [
+      "future-visible catalyst anchors are turned into an operational calendar target rather than a loose list",
+      "the calendar has explicit recurring fields and review flags",
+      "forward catalyst handling is auditable and separated from execution semantics"
+    ],
+    "stop_criteria": [
+      "the phase turns into event prediction or trigger logic",
+      "the phase silently opens training or signal work",
+      "the calendar is widened into general macro scheduling beyond the CPO line"
+    ]
+  },
+  "interpretation": [
+    "V1.12W attacks one remaining material gap from V1.12U.",
+    "It stays in the information-foundation layer and does not authorize training or execution.",
+    "The purpose is operational clarity for future-visible catalysts, not prediction."
+  ]
+}

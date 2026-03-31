@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v6_as_active_but_hold_local_second_lane_after_opening_first_lane",
+    "v6_still_active_substrate": true,
+    "first_lane_phase_holds_local_expansion": true,
+    "primary_bottleneck_still_carry_row_diversity": true,
+    "do_open_second_v6_lane_now": false,
+    "do_prepare_next_refresh_now": false,
+    "recommended_next_posture": "return_to_v12_level_batch_or_substrate_decision"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v6_first_lane_phase_check",
+      "actual": {
+        "acceptance_posture": "hold_second_v6_lane_until_new_positive_or_acceptance_grade_candidate",
+        "do_open_second_v6_lane_now": false,
+        "recommended_next_posture": "run_v12_v6_reassessment_before_any_second_lane"
+      },
+      "reading": "The v6 local picture should not widen after an opening-only first lane when the remaining candidates do not improve enough."
+    },
+    {
+      "evidence_name": "v6_specialist_map_position",
+      "actual": {
+        "v6_still_active_substrate": true,
+        "v6_top_opportunity_count": 1,
+        "top_v6_rows": [
+          {
+            "dataset_name": "market_research_v6_catalyst_supported_carry_persistence_refresh",
+            "slice_name": "2024_q3",
+            "strategy_name": "mainline_trend_c",
+            "primary_advantage_vs_anchors": 0.099927,
+            "secondary_penalty_vs_anchors": 0.000105,
+            "total_return_delta_vs_anchors": -5e-05,
+            "specialist_candidate": "baseline_expansion_branch"
+          }
+        ]
+      },
+      "reading": "V6 can remain a real substrate in the wider specialist map even if its first local lane does not yet justify a second local probe."
+    },
+    {
+      "evidence_name": "global_v12_bottleneck",
+      "actual": {
+        "primary_bottleneck_still_carry_row_diversity": true
+      },
+      "reading": "The global V1.2 problem remains the carry-row-diversity gap, so local widening still needs a stronger structure than an opening-only first lane."
+    }
+  ],
+  "interpretation": [
+    "V6 remains a valid active substrate, so this is not a batch failure.",
+    "But its first local lane only closed as opening-led, and the current local candidate set does not justify automatic second-lane expansion.",
+    "The correct posture is to hold local widening and return to a higher-level V1.2 batch or substrate decision."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112at_as_post_patch_rerun",
+    "do_open_v112at_now": true,
+    "core_targets_stable_after_post_patch_rerun": true,
+    "guarded_targets_stable_after_post_patch_rerun": true,
+    "implementation_family_role_accuracy_drop": 0.0,
+    "allow_row_geometry_widen_now": true,
+    "allow_auto_training_now": false,
+    "allow_auto_signal_generation_now": false,
+    "ready_for_phase_closure_next": true,
+    "recommended_next_posture": "consider_bounded_row_geometry_widen_pilot_now_that_current_truth_rows_are_post_patch_stable"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112at_rerun",
+      "actual": {
+        "sample_count": 2160,
+        "implementation_feature_count": 7,
+        "core_targets_stable_after_post_patch_rerun": true,
+        "guarded_targets_stable_after_post_patch_rerun": true
+      },
+      "reading": "The post-patch rerun matters only if the patched implementation layer remains stable on the current truth rows."
+    }
+  ],
+  "interpretation": [
+    "V1.12AT should end by deciding whether current-row stability survives explicit board/calendar implementation backfill.",
+    "Formal training and signal rights remain closed even if row-geometry widen becomes discussable."
+  ]
+}

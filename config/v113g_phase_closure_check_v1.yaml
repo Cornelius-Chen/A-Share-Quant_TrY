@@ -1,0 +1,10 @@
+project:
+  name: a_share_quant
+  protocol_version: v113g_phase_closure_check_v1
+
+paths:
+  v113g_phase_check_report: reports/analysis/v113g_phase_check_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113g_phase_closure_check_v1

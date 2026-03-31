@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bc_as_cpo_portfolio_objective_protocol",
+    "do_open_v112bc_now": true,
+    "objective_track_count": 3,
+    "marginal_stop_threshold": 0.005,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bc_protocol",
+      "actual": {
+        "objective_track_count": 3,
+        "no_leak_track_count": 2,
+        "oracle_track_count": 1,
+        "marginal_stop_threshold": 0.005
+      },
+      "reading": "The protocol is only useful if it separates the oracle benchmark from no-leak portfolio experiments and freezes a stopping rule."
+    }
+  ],
+  "interpretation": [
+    "V1.12BC keeps black-box exploration bounded by objective separation and a hard stop rule.",
+    "Formal training and signal rights remain closed."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112aw_cpo_branch_guarded_admission_review_v1",
+    "branch_rows_under_review": 4,
+    "guarded_training_context_admissible_count": 3,
+    "retained_review_only_count": 1,
+    "core_targets_stable_after_branch_patch": true,
+    "guarded_targets_stable_after_branch_patch": true,
+    "role_state_patch_gain": 0.1028,
+    "formal_training_now": false,
+    "formal_signal_generation_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "run_guarded_branch_admitted_pilot_before_any_broader_row_widen"
+  },
+  "branch_review_rows": [
+    {
+      "symbol": "300570",
+      "role_family": "connector_mpo_branch",
+      "active_stage_windows": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ],
+      "dataset_posture_before_review": "review_support_context_row",
+      "recommended_posture_after_review": "review_support_context_row",
+      "guarded_training_context_admissible": false,
+      "reading": "Retain as review-only because connector/MPO branch behavior still overlaps diffusion and late-cycle catch-up, which makes guarded truth usage too mixed for now."
+    },
+    {
+      "symbol": "688498",
+      "role_family": "laser_chip_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "dataset_posture_before_review": "review_support_context_row",
+      "recommended_posture_after_review": "guarded_training_context_row",
+      "guarded_training_context_admissible": true,
+      "reading": "Promote into guarded training context because the branch patch restored role geometry and these rows stay concentrated in re-ignition/major-markup windows."
+    },
+    {
+      "symbol": "688313",
+      "role_family": "silicon_photonics_component",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "dataset_posture_before_review": "review_support_context_row",
+      "recommended_posture_after_review": "guarded_training_context_row",
+      "guarded_training_context_admissible": true,
+      "reading": "Promote into guarded training context because the branch patch restored role geometry and these rows stay concentrated in re-ignition/major-markup windows."
+    },
+    {
+      "symbol": "300757",
+      "role_family": "packaging_process_enabler",
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "dataset_posture_before_review": "review_support_context_row",
+      "recommended_posture_after_review": "guarded_training_context_row",
+      "guarded_training_context_admissible": true,
+      "reading": "Promote into guarded training context because packaging/process enabler now binds cleanly enough to the strengthened branch role geometry."
+    }
+  ],
+  "interpretation": [
+    "V1.12AW does not promote all branch rows at once; it uses the patch evidence to make a narrower guarded-admission split.",
+    "Rows admitted here move only into a guarded training-facing context, not into formal training rights.",
+    "The connector/MPO branch remains review-only because its late-cycle and diffusion overlap is still structurally mixed."
+  ]
+}

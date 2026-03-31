@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "close_v112av_as_branch_role_geometry_patch_pilot_success",
+    "v112av_success_criteria_met": true,
+    "enter_v112av_waiting_state_now": true,
+    "allow_formal_training_now": false,
+    "allow_formal_signal_generation_now": false,
+    "recommended_next_posture": "review_if_branch_rows_can_move_from_review_only_to_guarded_training_context"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112av_phase_check",
+      "actual": {
+        "role_state_patch_gain": 0.1028,
+        "core_targets_stable_after_branch_patch": true,
+        "guarded_targets_stable_after_branch_patch": true
+      },
+      "reading": "The branch patch closes once the widened geometry has a clear post-patch posture."
+    }
+  ],
+  "interpretation": [
+    "V1.12AV closes with branch-role geometry either repaired or explicitly still blocked.",
+    "Formal training and signal rights remain closed."
+  ]
+}

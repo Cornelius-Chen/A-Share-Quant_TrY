@@ -1,0 +1,555 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112aj_cpo_bounded_label_draft_dataset_assembly_v1",
+    "dataset_row_count": 20,
+    "truth_candidate_row_count": 7,
+    "context_only_row_count": 13,
+    "ready_label_count": 3,
+    "guarded_label_count": 5,
+    "review_only_label_count": 1,
+    "confirmed_only_label_count": 1,
+    "formal_label_freeze_now": false,
+    "formal_training_now": false,
+    "ready_for_phase_check_next": true,
+    "recommended_next_posture": "bounded_feature_binding_review_before_any_training_readiness_claim"
+  },
+  "dataset_draft_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "labeling_surface": "primary_labeling_surface",
+      "dataset_posture": "primary_truth_candidate_row",
+      "truth_tier": "primary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "pre_ignition_watch_1",
+        "ignition_1",
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "labeling_surface": "primary_labeling_surface",
+      "dataset_posture": "primary_truth_candidate_row",
+      "truth_tier": "primary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "ignition_1",
+        "main_markup_1",
+        "divergence_decay_1",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "labeling_surface": "primary_labeling_surface",
+      "dataset_posture": "primary_truth_candidate_row",
+      "truth_tier": "primary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "main_markup_1",
+        "re_ignition_markup_2",
+        "major_markup_3",
+        "divergence_decay_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "labeling_surface": "secondary_labeling_surface",
+      "dataset_posture": "secondary_truth_candidate_row",
+      "truth_tier": "secondary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "diffusion_1",
+        "re_ignition_markup_2"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "labeling_surface": "secondary_labeling_surface",
+      "dataset_posture": "secondary_truth_candidate_row",
+      "truth_tier": "secondary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "labeling_surface": "secondary_labeling_surface",
+      "dataset_posture": "secondary_truth_candidate_row",
+      "truth_tier": "secondary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "labeling_surface": "secondary_labeling_surface",
+      "dataset_posture": "secondary_truth_candidate_row",
+      "truth_tier": "secondary",
+      "include_in_truth_candidate_rows": true,
+      "active_stage_windows": [
+        "diffusion_1",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [
+        "phase_progression_label",
+        "role_state_label",
+        "catalyst_sequence_label"
+      ],
+      "allowed_guarded_labels": [
+        "role_transition_label",
+        "board_condition_label",
+        "quiet_window_survival_label",
+        "failed_role_promotion_label",
+        "spillover_maturity_boundary_label"
+      ],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "truth-candidate row"
+    },
+    {
+      "symbol": "300570",
+      "cohort_layer": "branch_extension",
+      "role_family": "connector_mpo_branch",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "diffusion_1",
+        "laggard_catchup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "re_ignition_markup_2",
+        "major_markup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "601869",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "600487",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "600522",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "labeling_surface": "review_support_surface",
+      "dataset_posture": "review_support_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "laggard_catchup_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "000070",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "telecom_adjacent_board_follow_factor",
+      "labeling_surface": "overlay_only_surface",
+      "dataset_posture": "overlay_only_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "603228",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "hardware_sentiment_spillover_factor",
+      "labeling_surface": "overlay_only_surface",
+      "dataset_posture": "overlay_only_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "laggard_catchup_3",
+        "divergence_decay_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "001267",
+      "cohort_layer": "weak_memory",
+      "role_family": "name_bonus_or_board_follow_memory",
+      "labeling_surface": "overlay_only_surface",
+      "dataset_posture": "overlay_only_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "divergence_decay_3"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "300620",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "upstream_photonics_enabler",
+      "labeling_surface": "excluded_pending_surface",
+      "dataset_posture": "excluded_pending_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "300548",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "module_or_silicon_photonics_adjacency",
+      "labeling_surface": "excluded_pending_surface",
+      "dataset_posture": "excluded_pending_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    },
+    {
+      "symbol": "000988",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "vertical_optoelectronic_platform",
+      "labeling_surface": "excluded_pending_surface",
+      "dataset_posture": "excluded_pending_context_row",
+      "truth_tier": "context_only",
+      "include_in_truth_candidate_rows": false,
+      "active_stage_windows": [
+        "deep_reset_quiet_window"
+      ],
+      "allowed_ready_labels": [],
+      "allowed_guarded_labels": [],
+      "excluded_from_truth_labels": [
+        "branch_upgrade_label",
+        "residual_core_vs_collapse_label"
+      ],
+      "context_reading": "preserve as context only; do not promote into draft truth"
+    }
+  ],
+  "label_bundle_rows": [
+    {
+      "label_name": "phase_progression_label",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle",
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "role_state_label",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle",
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "catalyst_sequence_label",
+      "owner_disposition": "preserve_as_draft_ready_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle",
+      "reading": "This label is sufficiently supported to enter the later dataset draft as a bounded draft-ready label."
+    },
+    {
+      "label_name": "role_transition_label",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle_with_guard",
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "board_condition_label",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle_with_guard",
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "quiet_window_survival_label",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle_with_guard",
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "failed_role_promotion_label",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle_with_guard",
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "spillover_maturity_boundary_label",
+      "owner_disposition": "preserve_as_guarded_draft_label",
+      "dataset_bundle_posture": "allow_into_truth_candidate_bundle_with_guard",
+      "reading": "This label may enter the later dataset draft only with its guard posture explicitly preserved."
+    },
+    {
+      "label_name": "branch_upgrade_label",
+      "owner_disposition": "preserve_as_review_only_future_target",
+      "dataset_bundle_posture": "exclude_from_truth_candidate_bundle",
+      "reading": "This label remains useful, but only as a future draft target until unresolved support gaps are reduced."
+    },
+    {
+      "label_name": "residual_core_vs_collapse_label",
+      "owner_disposition": "preserve_as_confirmed_only_review_label",
+      "dataset_bundle_posture": "exclude_from_truth_candidate_bundle",
+      "reading": "This label remains valuable for review and explanation, but stays outside ex-ante draft truth."
+    }
+  ],
+  "interpretation": [
+    "V1.12AJ assembles the first dataset-shaped CPO label draft without pretending every row or label is truth-ready.",
+    "Primary and secondary surfaces become truth-candidate rows; support, overlay, and pending rows remain explicit context.",
+    "Only ready and guarded labels enter the truth-candidate bundle."
+  ]
+}

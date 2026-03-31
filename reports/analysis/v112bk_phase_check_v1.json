@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bk_as_cpo_tree_ranker_search_track",
+    "do_open_v112bk_now": true,
+    "trade_count": 19,
+    "cash_ratio": 0.2759,
+    "best_variant_name": "random_forest_overlay_ranker",
+    "best_variant_total_return": 7.511,
+    "best_variant_max_drawdown": -0.5181,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "v112bk_tree_ranker_search",
+      "actual": {
+        "best_variant_name": "random_forest_overlay_ranker",
+        "best_variant_total_return": 7.511,
+        "best_variant_max_drawdown": -0.5181,
+        "beats_neutral_without_material_drawdown_worsening": false
+      },
+      "reading": "The phase is only meaningful if the bounded tree/ranker search remains lawful, returns a report-only benchmark, and preserves the neutral-baseline comparison."
+    }
+  ],
+  "interpretation": [
+    "V1.12BK is valid because it searches a cheap tree/ranker zoo on the lawful CPO layer without opening formal training."
+  ]
+}

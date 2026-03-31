@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112y_cpo_adjacent_role_split_sidecar_probe_v1",
+    "reviewed_pending_adjacent_row_count": 9,
+    "split_ready_review_asset_count": 6,
+    "still_pending_row_count": 3,
+    "formal_training_candidate_count": 0,
+    "ready_for_phase_check_next": true
+  },
+  "probe_rows": [
+    {
+      "symbol": "603083",
+      "existing_chain_role": "high_beta_module_extension",
+      "previous_pending_cluster": "high_beta_module_extension_cluster",
+      "candidate_role_family": "high_beta_module_extension",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.61,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "Cambridge looks clean enough to preserve as a high-beta module-extension review asset."
+    },
+    {
+      "symbol": "688205",
+      "existing_chain_role": "high_end_module_extension",
+      "previous_pending_cluster": "high_beta_module_extension_cluster",
+      "candidate_role_family": "high_end_module_extension",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.58,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The high-end module-extension row is distinct enough to keep as a separate review asset."
+    },
+    {
+      "symbol": "301205",
+      "existing_chain_role": "smaller_cap_high_beta_module",
+      "previous_pending_cluster": "high_beta_module_extension_cluster",
+      "candidate_role_family": "smaller_cap_high_beta_module",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.57,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The smaller-cap challenger can stay as its own high-beta review role rather than hiding in a mixed cluster."
+    },
+    {
+      "symbol": "300620",
+      "existing_chain_role": "upstream_photonics_cpo_adjacent",
+      "previous_pending_cluster": "cpo_enabler_cluster",
+      "candidate_role_family": "upstream_photonics_enabler",
+      "review_candidacy_status": "keep_pending_mixed_enabler_row",
+      "sidecar_probe_score": 0.43,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The upstream photonics row still looks too broad and should remain pending."
+    },
+    {
+      "symbol": "300548",
+      "existing_chain_role": "module_and_cpo_adjacency",
+      "previous_pending_cluster": "cpo_enabler_cluster",
+      "candidate_role_family": "module_or_silicon_photonics_adjacency",
+      "review_candidacy_status": "keep_pending_mixed_enabler_row",
+      "sidecar_probe_score": 0.46,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "Module and silicon-photonics adjacency is still mixed and should not yet be treated as clean."
+    },
+    {
+      "symbol": "300757",
+      "existing_chain_role": "equipment_and_cpo_process_adjacency",
+      "previous_pending_cluster": "cpo_enabler_cluster",
+      "candidate_role_family": "packaging_process_enabler",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.63,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "Packaging and process adjacency now looks strong enough to preserve as a separate review asset."
+    },
+    {
+      "symbol": "000988",
+      "existing_chain_role": "optoelectronic_vertical_platform",
+      "previous_pending_cluster": "vertical_platform_pending",
+      "candidate_role_family": "vertical_optoelectronic_platform",
+      "review_candidacy_status": "keep_pending_vertical_platform_row",
+      "sidecar_probe_score": 0.41,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The vertical platform row remains too wide and should stay pending."
+    },
+    {
+      "symbol": "688498",
+      "existing_chain_role": "optical_chip_and_laser",
+      "previous_pending_cluster": "advanced_component_cluster",
+      "candidate_role_family": "laser_chip_component",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.65,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The laser-chip row is clean enough to preserve as a separate advanced-component review asset."
+    },
+    {
+      "symbol": "688313",
+      "existing_chain_role": "silicon_photonics_and_chip_adjacency",
+      "previous_pending_cluster": "advanced_component_cluster",
+      "candidate_role_family": "silicon_photonics_component",
+      "review_candidacy_status": "keep_as_split_ready_review_asset",
+      "sidecar_probe_score": 0.59,
+      "probe_mode": "bounded_black_box_sidecar_readout",
+      "formal_feature_rights_now": "none",
+      "training_rights_now": "none",
+      "reading": "The silicon-photonics row is distinct enough to preserve as its own advanced-component review asset."
+    }
+  ],
+  "interpretation": [
+    "V1.12Y upgrades the unresolved adjacent rows from one pending bucket into split-ready review assets versus still-mixed residual rows.",
+    "Six rows now look clean enough to preserve as separate review assets, while three should remain pending.",
+    "This still does not authorize training or formal role freeze."
+  ]
+}

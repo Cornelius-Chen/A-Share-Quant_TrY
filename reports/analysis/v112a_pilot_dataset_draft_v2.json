@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112a_pilot_dataset_draft_v2_with_price_inference",
+    "dataset_row_count": 3,
+    "owner_anchor_ready_count": 1,
+    "price_inferred_waiting_owner_calibration_count": 2,
+    "ready_for_owner_calibration_next": true
+  },
+  "dataset_rows": [
+    {
+      "symbol": "300308",
+      "name": "中际旭创",
+      "final_role_label_cn": "龙头/核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-03",
+        "first_markup_end": "2023-07",
+        "box_consolidation_start": "2023-08",
+        "box_consolidation_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2026-01",
+        "pullback_window": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_notes": "月K视角下，2023-03到2023-07为第一波上涨；2023-08到2025-05箱体震荡；2025-06到2026-01主升浪；2026-02约18%回调，2026-03反弹约10%并重新站回5日线。",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "ready_for_next_labeling_step",
+      "pending_fields": [],
+      "owner_notes": "优先作为第一版周期窗口标杆。"
+    },
+    {
+      "symbol": "300502",
+      "name": "新易盛",
+      "final_role_label_cn": "高弹性核心受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-05",
+        "cooling_and_box_start": "2023-06",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-06",
+        "long_box_reset_start": "2024-07",
+        "long_box_reset_end": "2025-05",
+        "major_markup_start": "2025-06",
+        "major_markup_end": "2025-09",
+        "high_level_consolidation_start": "2025-10",
+        "high_level_consolidation_end": "2026-02",
+        "rebound_window": "2026-03"
+      },
+      "cycle_notes": "价格结构更像 2023Q1-Q2 第一轮主升，2024Q1-Q2 第二轮抬升，2025-06 之后进入更陡的主升段，2026-03 形成一次明显反弹窗口。",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "price_inferred_waiting_owner_calibration",
+      "pending_fields": [
+        "owner_cycle_confirmation"
+      ],
+      "owner_notes": "待 owner 校准价格推断窗口。"
+    },
+    {
+      "symbol": "300394",
+      "name": "天孚通信",
+      "final_role_label_cn": "上游核心器件平台受益股",
+      "include_in_first_pilot": true,
+      "cycle_window": {
+        "first_markup_start": "2023-02",
+        "first_markup_end": "2023-06",
+        "cooling_and_box_start": "2023-07",
+        "cooling_and_box_end": "2024-01",
+        "second_markup_start": "2024-02",
+        "second_markup_end": "2024-04",
+        "deep_box_reset_start": "2024-05",
+        "deep_box_reset_end": "2025-06",
+        "major_markup_start": "2025-07",
+        "major_markup_end": "2026-02",
+        "pullback_window": "2026-03"
+      },
+      "cycle_notes": "价格结构更像 2023Q1-Q2 第一轮主升，2024Q1 的二次抬升较短，2024-05 到 2025-06 属于较长重置区，2025-07 到 2026-02 为最新主升段。",
+      "label_set": [
+        "forward_return_bucket",
+        "max_drawdown_bucket",
+        "carry_outcome_class"
+      ],
+      "training_readiness": "price_inferred_waiting_owner_calibration",
+      "pending_fields": [
+        "owner_cycle_confirmation"
+      ],
+      "owner_notes": "待 owner 校准价格推断窗口。"
+    }
+  ],
+  "interpretation": [
+    "V2 keeps the owner-corrected 300308 anchor untouched and fills the remaining symbols with price-only inferred cycle windows.",
+    "This is still a calibration draft, not a training-ready freeze.",
+    "The next high-value move is owner confirmation or correction on the two inferred windows."
+  ]
+}

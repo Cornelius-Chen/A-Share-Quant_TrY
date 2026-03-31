@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "keep_v112bn_as_teacher_decomposition_gate_search",
+    "do_open_v112bn_now": true,
+    "candidate_row_count": 30,
+    "non_cash_candidate_count": 0,
+    "best_candidate_non_cash": false,
+    "teacher_alignment_f1": 0.0,
+    "trade_count": 0,
+    "cash_ratio": 1.0,
+    "ready_for_phase_closure_next": true
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "best_candidate_row",
+      "actual": {
+        "rule_signature": "confidence_tier_numeric>=1 & probability_margin>=0.18",
+        "teacher_alignment_f1": 0.0
+      },
+      "reading": "The phase is only meaningful if the search enumerates bounded rule stacks and returns a concrete best non-cash candidate or a proven all-cash failure state."
+    }
+  ],
+  "interpretation": [
+    "V1.12BN is valid because it tests teacher factorization with bounded rule search rather than a new opaque model class."
+  ]
+}

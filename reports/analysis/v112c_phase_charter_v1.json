@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v112c_now_for_hotspot_review_and_sidecar_protocol",
+    "do_open_v112c_now": true,
+    "ready_for_hotspot_review_next": true
+  },
+  "charter": {
+    "phase_name": "V1.12C Baseline Hotspot Review And Sidecar Protocol",
+    "mission": "Turn the first report-only optical-link baseline into a hotspot map and freeze the first same-dataset black-box sidecar comparison protocol.",
+    "in_scope": [
+      "review baseline misclassification hotspots by symbol and stage",
+      "identify where the current interpretable baseline is structurally too optimistic or too blunt",
+      "freeze a report-only black-box sidecar protocol on the same dataset and labels"
+    ],
+    "out_of_scope": [
+      "strategy integration",
+      "dataset widening",
+      "intraday execution modeling",
+      "promotion or retained-feature elevation",
+      "unbounded model search"
+    ],
+    "success_criteria": [
+      "baseline error hotspots are explicitly summarized",
+      "the first sidecar comparison protocol is frozen on the same sample unit and time split",
+      "the phase clarifies what the next model comparison should test before any expansion"
+    ],
+    "stop_criteria": [
+      "the hotspot review adds no new decision value beyond the existing baseline report",
+      "the sidecar protocol would require wider data or looser validation to proceed",
+      "the phase starts drifting toward deployment instead of bounded comparison"
+    ]
+  },
+  "interpretation": [
+    "V1.12C keeps the same pilot dataset and labels, but changes the task from pipeline construction to error-focused comparison design.",
+    "The sidecar remains report-only and same-dataset so the next comparison isolates model choice rather than data drift.",
+    "This phase should end with a clear next experiment, not with automatic model deployment."
+  ]
+}

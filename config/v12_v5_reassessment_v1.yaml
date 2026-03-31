@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: protocol_v1.2
+
+paths:
+  manifest_report: reports/analysis/market_research_v5_carry_row_diversity_refresh_manifest_v1.json
+  first_lane_report: reports/analysis/market_v5_q2_first_lane_acceptance_v1.json
+  phase_check_report: reports/analysis/v12_v5_phase_check_v1.json
+  second_lane_report: reports/analysis/market_v5_q2_second_lane_acceptance_600760_v1.json
+  third_lane_report: reports/analysis/market_v5_q2_second_lane_acceptance_601989_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v12_v5_reassessment_v1

@@ -1,0 +1,87 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v18c_screened_collection_v1_as_bounded_collection",
+    "target_feature_count": 2,
+    "admitted_case_count": 5,
+    "targets_with_admitted_cases_count": 2,
+    "sample_limit_breaches": 0,
+    "ready_for_v18c_phase_check_next": true
+  },
+  "collection_rows": [
+    {
+      "feature_name": "single_pulse_support",
+      "admission_status": "admit",
+      "candidate_rank": 1,
+      "lane_id": "mainline_trend_c::2024-06-05::002371",
+      "symbol": "002371",
+      "event_date": "2024-06-05",
+      "dataset_name": "seed_from_closed_opening_lane",
+      "screening_reason": "matches_frozen_source_pool_and_target_reading"
+    },
+    {
+      "feature_name": "single_pulse_support",
+      "admission_status": "admit",
+      "candidate_rank": 2,
+      "lane_id": "mainline_trend_c::2024-11-05::002049",
+      "symbol": "002049",
+      "event_date": "2024-11-05",
+      "dataset_name": "seed_from_closed_opening_lane",
+      "screening_reason": "matches_frozen_source_pool_and_target_reading"
+    },
+    {
+      "feature_name": "single_pulse_support",
+      "admission_status": "admit",
+      "candidate_rank": 3,
+      "lane_id": "mainline_trend_b::2024-05-10::002273",
+      "symbol": "002273",
+      "event_date": "2024-05-10",
+      "dataset_name": "seed_from_closed_opening_lane",
+      "screening_reason": "matches_frozen_source_pool_and_target_reading"
+    },
+    {
+      "feature_name": "single_pulse_support",
+      "admission_status": "collection_summary",
+      "candidate_rank": null,
+      "lane_id": null,
+      "symbol": null,
+      "event_date": null,
+      "dataset_name": null,
+      "screening_reason": "admitted_3_of_5_available_cases_under_limit_3"
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "admission_status": "admit",
+      "candidate_rank": 1,
+      "lane_id": "mainline_trend_b::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "dataset_name": "seed_from_carry_observable_schema",
+      "screening_reason": "matches_frozen_source_pool_and_target_reading"
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "admission_status": "admit",
+      "candidate_rank": 2,
+      "lane_id": "mainline_trend_c::2024-11-05::300750",
+      "symbol": "300750",
+      "event_date": "2024-11-05",
+      "dataset_name": "seed_from_carry_observable_schema",
+      "screening_reason": "matches_frozen_source_pool_and_target_reading"
+    },
+    {
+      "feature_name": "policy_followthrough_support",
+      "admission_status": "collection_summary",
+      "candidate_rank": null,
+      "lane_id": null,
+      "symbol": null,
+      "event_date": null,
+      "dataset_name": null,
+      "screening_reason": "admitted_2_of_2_available_cases_under_limit_3"
+    }
+  ],
+  "interpretation": [
+    "V1.8C executes only against the already-approved target features and source pools.",
+    "Admitted cases are bounded by the frozen sample limits and remain below any promotion or strategy threshold.",
+    "The next legal step is a V1.8C phase check and collection summary, not retained-feature promotion."
+  ]
+}

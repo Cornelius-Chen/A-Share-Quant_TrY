@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112f_refinement_design_v1",
+    "primary_bottleneck_type": "feature_definition_or_non_redundancy_gap",
+    "top_hotspot_reading": "baseline_is_overoptimistic_in_late_markup_and_high_level_consolidation",
+    "most_useful_block_by_hotspot_impact": "catalyst_state",
+    "recommend_feature_refinement_first": true,
+    "recommend_label_refinement_first": false,
+    "ready_for_phase_check_next": true
+  },
+  "bottleneck_classification": {
+    "primary_bottleneck_type": "feature_definition_or_non_redundancy_gap",
+    "why_not_data_gap": "The same-dataset sidecar already improved materially without widening scope, so the immediate blocker is not lack of samples inside the current pilot.",
+    "why_not_weight_only": "The current reading is semantic rather than scalar: removing catalyst_state destroys consolidation control, which points to missing state meaning instead of a simple coefficient problem.",
+    "why_label_is_secondary": "Label review still matters, but attribution says the first high-leverage move should refine catalyst-state meaning around late-cycle persistence and exhaustion before relabeling the full dataset."
+  },
+  "catalyst_state_refinement_rows": [
+    {
+      "new_feature_name": "catalyst_freshness_state",
+      "target_stage": "major_markup,high_level_consolidation",
+      "semantic_question": "Is the catalyst newly strengthening, still active, or already stale?",
+      "reading": "Distinguishes fresh continuation from late-stage carry optimism."
+    },
+    {
+      "new_feature_name": "cross_day_catalyst_persistence",
+      "target_stage": "high_level_consolidation",
+      "semantic_question": "Does the catalyst keep receiving cross-day confirmation instead of fading into one-off narrative memory?",
+      "reading": "Should help separate healthy high-level bases from overextended stalls."
+    },
+    {
+      "new_feature_name": "theme_breadth_confirmation_proxy",
+      "target_stage": "major_markup,high_level_consolidation",
+      "semantic_question": "Is the catalyst still expanding through the cohort, or is only the core name holding up?",
+      "reading": "Adds the missing distinction between shared continuation and isolated late-stage overstay."
+    }
+  ],
+  "label_boundary_review_rows": [
+    {
+      "label_boundary_name": "carry_constructive_in_high_level_consolidation",
+      "priority": "secondary",
+      "review_question": "Should high-level consolidation require stronger catalyst persistence before staying carry_constructive?"
+    },
+    {
+      "label_boundary_name": "late_major_markup_carry_vs_watch",
+      "priority": "secondary",
+      "review_question": "Should late major-markup windows downgrade to watch_constructive when catalyst freshness is already decaying?"
+    }
+  ],
+  "interpretation": [
+    "The next move should not start by tuning weights.",
+    "The strongest current evidence says catalyst-state semantics are underdefined in late major-markup and high-level consolidation.",
+    "Label-boundary review remains useful, but as a second move after bounded catalyst-state refinement design."
+  ]
+}
