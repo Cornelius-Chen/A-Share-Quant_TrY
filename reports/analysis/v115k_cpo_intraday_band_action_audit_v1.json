@@ -1,0 +1,438 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v115k_cpo_intraday_band_action_audit_v1",
+    "band_count": 4,
+    "candidate_add_band_count": 3,
+    "candidate_reduce_band_count": 1,
+    "annotated_row_count": 450,
+    "top_miss_day_count": 6,
+    "candidate_add_row_count": 29,
+    "candidate_reduce_row_count": 421,
+    "recommended_next_posture": "candidate_only_band_overlay_audit_before_any_replay_binding"
+  },
+  "band_registry_rows": [
+    {
+      "state_band": "pc1_low__pc2_low",
+      "row_count": 15,
+      "increase_rate": 0.466667,
+      "decrease_rate": 0.066667,
+      "hold_rate": 0.466667,
+      "avg_expectancy_proxy_3d": 0.085547,
+      "avg_max_adverse_return_3d": -0.041371,
+      "band_posture": "candidate_add_band"
+    },
+    {
+      "state_band": "pc1_high__pc2_low",
+      "row_count": 4,
+      "increase_rate": 0.25,
+      "decrease_rate": 0.0,
+      "hold_rate": 0.75,
+      "avg_expectancy_proxy_3d": 0.102491,
+      "avg_max_adverse_return_3d": -0.020674,
+      "band_posture": "candidate_add_band"
+    },
+    {
+      "state_band": "pc1_low__pc2_high",
+      "row_count": 10,
+      "increase_rate": 0.2,
+      "decrease_rate": 0.1,
+      "hold_rate": 0.7,
+      "avg_expectancy_proxy_3d": 0.007426,
+      "avg_max_adverse_return_3d": -0.07448,
+      "band_posture": "candidate_add_band"
+    },
+    {
+      "state_band": "pc1_mid__pc2_mid",
+      "row_count": 421,
+      "increase_rate": 0.0,
+      "decrease_rate": 0.410926,
+      "hold_rate": 0.589074,
+      "avg_expectancy_proxy_3d": -0.007384,
+      "avg_max_adverse_return_3d": -0.051406,
+      "band_posture": "candidate_reduce_band"
+    }
+  ],
+  "context_hit_rows": [
+    {
+      "action_context": "add_vs_hold",
+      "row_count": 17,
+      "candidate_add_band_rate": 1.0,
+      "candidate_reduce_band_rate": 0.0,
+      "top_miss_candidate_add_rate": 0.588235,
+      "avg_expectancy_proxy_3d": 0.054552
+    },
+    {
+      "action_context": "close_vs_hold",
+      "row_count": 85,
+      "candidate_add_band_rate": 0.035294,
+      "candidate_reduce_band_rate": 0.964706,
+      "top_miss_candidate_add_rate": 0.0,
+      "avg_expectancy_proxy_3d": -0.195435
+    },
+    {
+      "action_context": "entry_vs_skip",
+      "row_count": 8,
+      "candidate_add_band_rate": 1.0,
+      "candidate_reduce_band_rate": 0.0,
+      "top_miss_candidate_add_rate": 0.0,
+      "avg_expectancy_proxy_3d": 0.13567
+    },
+    {
+      "action_context": "reduce_vs_hold",
+      "row_count": 340,
+      "candidate_add_band_rate": 0.002941,
+      "candidate_reduce_band_rate": 0.997059,
+      "top_miss_candidate_add_rate": 0.0,
+      "avg_expectancy_proxy_3d": 0.038994
+    }
+  ],
+  "selected_add_rows": [
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "is_top_miss_date": true
+    },
+    {
+      "signal_trade_date": "2025-08-29",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.429857,
+      "max_adverse_return_3d": -0.003906,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_high__pc2_low",
+      "expectancy_proxy_3d": 0.315625,
+      "max_adverse_return_3d": -0.0125,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2023-06-07",
+      "symbol": "300308",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.196418,
+      "max_adverse_return_3d": -0.026673,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-07-24",
+      "symbol": "300308",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.186156,
+      "max_adverse_return_3d": -0.009677,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-08-28",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.167195,
+      "max_adverse_return_3d": -0.080824,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-10-31",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.132765,
+      "max_adverse_return_3d": -0.010408,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2025-12-19",
+      "symbol": "300308",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_high__pc2_low",
+      "expectancy_proxy_3d": 0.115905,
+      "max_adverse_return_3d": 0.0,
+      "is_top_miss_date": false
+    },
+    {
+      "signal_trade_date": "2023-12-20",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "state_band": "pc1_high__pc2_low",
+      "expectancy_proxy_3d": 0.023265,
+      "max_adverse_return_3d": -0.022449,
+      "is_top_miss_date": false
+    }
+  ],
+  "selected_reduce_rows": [
+    {
+      "signal_trade_date": "2023-06-06",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.573981,
+      "max_adverse_return_3d": -0.337053
+    },
+    {
+      "signal_trade_date": "2025-05-23",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.581624,
+      "max_adverse_return_3d": -0.307436
+    },
+    {
+      "signal_trade_date": "2024-12-31",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.561763,
+      "max_adverse_return_3d": -0.285714
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.50011,
+      "max_adverse_return_3d": -0.252578
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.305938,
+      "max_adverse_return_3d": -0.2335
+    },
+    {
+      "signal_trade_date": "2023-06-21",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.390658,
+      "max_adverse_return_3d": -0.212541
+    },
+    {
+      "signal_trade_date": "2025-04-15",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.245159,
+      "max_adverse_return_3d": -0.193084
+    },
+    {
+      "signal_trade_date": "2024-01-26",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.360297,
+      "max_adverse_return_3d": -0.188746
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.344098,
+      "max_adverse_return_3d": -0.185486
+    },
+    {
+      "signal_trade_date": "2025-04-16",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.307118,
+      "max_adverse_return_3d": -0.183816
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300308",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.331623,
+      "max_adverse_return_3d": -0.183701
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.293229,
+      "max_adverse_return_3d": -0.176928
+    },
+    {
+      "signal_trade_date": "2024-12-13",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.32975,
+      "max_adverse_return_3d": -0.17375
+    },
+    {
+      "signal_trade_date": "2023-10-18",
+      "symbol": "300502",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.310983,
+      "max_adverse_return_3d": -0.16986
+    },
+    {
+      "signal_trade_date": "2024-04-30",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.312725,
+      "max_adverse_return_3d": -0.169012
+    },
+    {
+      "signal_trade_date": "2025-04-07",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.065633,
+      "max_adverse_return_3d": -0.168035
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.263949,
+      "max_adverse_return_3d": -0.163949
+    },
+    {
+      "signal_trade_date": "2025-02-28",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.261269,
+      "max_adverse_return_3d": -0.162284
+    },
+    {
+      "signal_trade_date": "2025-09-30",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.264159,
+      "max_adverse_return_3d": -0.157291
+    },
+    {
+      "signal_trade_date": "2024-10-15",
+      "symbol": "300757",
+      "action_context": "close_vs_hold",
+      "state_band": "pc1_mid__pc2_mid",
+      "expectancy_proxy_3d": -0.012242,
+      "max_adverse_return_3d": -0.156043
+    }
+  ],
+  "interpretation": [
+    "V1.15K is an action audit on top of V115J bands, not a replay promotion. It asks which continuous-state bands behave like candidate add zones and which behave like reduce zones.",
+    "The purpose is to turn PCA band discovery into candidate action semantics without forcing hard clustering or immediate execution-law promotion.",
+    "If the same bands repeatedly align with repaired miss days and favorable expectancy, they can later be tested as overlay candidates; until then they remain candidate-only."
+  ]
+}

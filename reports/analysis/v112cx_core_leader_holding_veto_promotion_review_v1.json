@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cx_core_leader_holding_veto_promotion_review_v1",
+    "promotion_ready": true,
+    "promotion_posture": "core_residual_promotable_holding_veto_candidate",
+    "packaging_mainline_surface_frozen": true,
+    "joint_core_promotion_ready": false,
+    "recommended_next_posture": "freeze_300308_as_promotable_holding_veto_candidate_but_keep_separate_from_joint_core_promotion"
+  },
+  "promotion_rows": [
+    {
+      "promotion_target": "300308_core_module_leader_holding_veto",
+      "posture": "core_residual_promotable_holding_veto_candidate",
+      "selected_rule_name": "late_main_markup_ma10_break_with_peak_drawdown_and_retained_gain_buffer",
+      "min_holding_day": 5,
+      "drawdown_threshold": 0.05,
+      "retained_gain_buffer": 0.1,
+      "require_ma5_break": true,
+      "beats_neutral_return": true,
+      "beats_neutral_drawdown": true,
+      "neutral_return_delta": 0.1448,
+      "neutral_drawdown_delta": 0.028,
+      "holding_veto_count": 3,
+      "continue_count": 3
+    }
+  ],
+  "boundary_rows": [
+    {
+      "boundary_name": "packaging_surface_boundary",
+      "reading": "300308 holding-veto promotion remains outside the already frozen packaging mainline surface.",
+      "packaging_mainline_surface_frozen": true
+    },
+    {
+      "boundary_name": "joint_core_boundary",
+      "reading": "300308 may be promotable on its own while joint 300308/300502 core residual promotion remains deferred.",
+      "joint_core_promotion_ready": false
+    },
+    {
+      "boundary_name": "blunt_exit_boundary",
+      "reading": "The promotion is justified because the selected state-conditioned holding veto beats both neutral and the blunt uniform half-life cut.",
+      "beats_uniform_10d_return": true
+    }
+  ],
+  "interpretation": [
+    "V1.12CX converts 300308's late-stage main-markup holding-veto from a residual candidate into a governed promotion decision.",
+    "The review supports promotion of 300308 as a standalone holding-veto candidate while preserving separation from packaging's frozen mainline surface and the deferred joint core stack."
+  ]
+}

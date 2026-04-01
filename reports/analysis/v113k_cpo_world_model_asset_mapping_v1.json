@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113k_cpo_world_model_asset_mapping_v1",
+    "board_name": "CPO",
+    "object_count": 6,
+    "relation_count": 5,
+    "transition_count": 4,
+    "constraint_count": 4,
+    "recommended_next_posture": "reuse_v113k_mapping_as_board_world_model_seed_for_future_board_level_training_and_execution_priors"
+  },
+  "object_rows": [
+    {
+      "object_id": "cpo_theme_board",
+      "object_type": "theme_board",
+      "status": "active_world_model_anchor",
+      "description": "CPO board under study with frozen packaging mainline surface and controlled residual stack."
+    },
+    {
+      "object_id": "packaging_process_enabler",
+      "object_type": "role_family",
+      "status": "cluster_mainline_template_asset",
+      "control_language": [
+        "entry_veto",
+        "de_risk",
+        "eligibility"
+      ]
+    },
+    {
+      "object_id": "packaging_admission_extension",
+      "object_type": "admission_extension",
+      "status": "controlled_mainline_extension",
+      "control_language": [
+        "full_20d_admission"
+      ]
+    },
+    {
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "status": "holding_veto_candidate",
+      "control_language": [
+        "continue",
+        "holding_veto"
+      ]
+    },
+    {
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "status": "split_derisk_sidecar",
+      "control_language": [
+        "neutral_safe_mild_derisk",
+        "evidence_optimizing_stronger_derisk"
+      ]
+    },
+    {
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "status": "eligibility_only_template_member",
+      "control_language": [
+        "eligibility",
+        "fringe_watch"
+      ]
+    }
+  ],
+  "relation_rows": [
+    {
+      "relation_id": "packaging_belongs_to_cpo_mainline_surface",
+      "source_object": "packaging_process_enabler",
+      "target_object": "cpo_theme_board",
+      "relation_type": "mainline_surface_member"
+    },
+    {
+      "relation_id": "packaging_admission_extends_packaging_surface",
+      "source_object": "packaging_admission_extension",
+      "target_object": "packaging_process_enabler",
+      "relation_type": "admission_extension_of"
+    },
+    {
+      "relation_id": "core_leader_outside_packaging_surface",
+      "source_object": "core_module_leader",
+      "target_object": "packaging_process_enabler",
+      "relation_type": "separate_residual_control"
+    },
+    {
+      "relation_id": "high_beta_core_sidecar_to_core_stack",
+      "source_object": "high_beta_core_module",
+      "target_object": "core_module_leader",
+      "relation_type": "sidecar_to_residual_stack"
+    },
+    {
+      "relation_id": "laser_member_of_template_capable_cluster",
+      "source_object": "laser_chip_component",
+      "target_object": "packaging_process_enabler",
+      "relation_type": "eligibility_only_cluster_member"
+    }
+  ],
+  "transition_rows": [
+    {
+      "transition_id": "packaging_eligibility_to_admission_extension",
+      "from_state": "miss_while_cash",
+      "to_state": "controlled_mainline_extension",
+      "anchor_object": "packaging_admission_extension"
+    },
+    {
+      "transition_id": "core_leader_continue_to_holding_veto",
+      "from_state": "continue",
+      "to_state": "holding_veto",
+      "anchor_object": "core_module_leader",
+      "trigger_rule": "late_main_markup_ma10_break_with_peak_drawdown_and_retained_gain_buffer"
+    },
+    {
+      "transition_id": "high_beta_core_eligibility_to_mild_derisk",
+      "from_state": "eligibility",
+      "to_state": "neutral_safe_mild_derisk",
+      "anchor_object": "high_beta_core_module"
+    },
+    {
+      "transition_id": "laser_eligibility_to_fringe_watch",
+      "from_state": "eligibility",
+      "to_state": "fringe_watch",
+      "anchor_object": "laser_chip_component"
+    }
+  ],
+  "constraint_rows": [
+    {
+      "constraint_id": "packaging_learning_frozen",
+      "constraint_type": "learning_boundary",
+      "reading": "Packaging template learning is frozen; only governed extension replay may be added."
+    },
+    {
+      "constraint_id": "joint_core_promotion_deferred",
+      "constraint_type": "promotion_boundary",
+      "reading": "300308 and 300502 cannot be jointly promoted into a unified core stack at the current stage."
+    },
+    {
+      "constraint_id": "high_beta_core_strong_derisk_not_default",
+      "constraint_type": "sidecar_boundary",
+      "reading": "Evidence-optimizing stronger de-risk for 300502 may not replace the neutral-safe mild band as default behavior."
+    },
+    {
+      "constraint_id": "laser_not_three_layer",
+      "constraint_type": "template_boundary",
+      "reading": "Laser-chip may not inherit packaging's full three-layer action language."
+    }
+  ],
+  "interpretation": [
+    "V1.13K maps the current frozen CPO assets into the four-layer world-model structure defined by V1.13J.",
+    "The output is not a signal sheet; it is a reusable world-model seed containing entities, links, transitions, and hard boundaries.",
+    "This gives future board-level training a mechanism prior instead of forcing it to memorize single-cycle answers."
+  ]
+}

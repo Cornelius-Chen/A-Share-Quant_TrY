@@ -1,0 +1,14 @@
+project:
+  name: a_share_quant
+  protocol_version: v113n_cpo_real_board_episode_population_v1
+
+paths:
+  v113m_report: reports/analysis/v113m_board_level_training_table_assembly_v1.json
+  v112ct_report: reports/analysis/v112ct_packaging_eligibility_admission_probe_v1.json
+  v112cn_report: reports/analysis/v112cn_core_leader_state_conditioned_holding_veto_probe_v1.json
+  v112co_report: reports/analysis/v112co_high_beta_core_derisk_probe_review_v1.json
+  v112ci_report: reports/analysis/v112ci_laser_maturation_probe_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113n_cpo_real_board_episode_population_v1

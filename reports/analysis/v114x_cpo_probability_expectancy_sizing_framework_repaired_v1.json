@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114x_cpo_probability_expectancy_sizing_framework_repaired_v1",
+    "primary_gap_reading": "under_exposure_still_present_after_replay_integrity_repair",
+    "current_peak_gross_exposure_repaired": 0.5517,
+    "recommended_strong_board_min_gross_exposure_repaired": 0.3,
+    "recommended_two_line_strong_board_min_gross_exposure_repaired": 0.45,
+    "framework_ready_for_replay_injection_next": true,
+    "recommended_next_posture": "rebuild_future_cpo_sizing_trials_on_v114t_not_v113v"
+  },
+  "exposure_floor_rows": [
+    {
+      "board_state": "strong_board_with_one_high_probability_line",
+      "trigger": {
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.6
+      },
+      "minimum_target_gross_exposure": 0.3
+    },
+    {
+      "board_state": "strong_board_with_two_or_more_credible_lines",
+      "trigger": {
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8
+      },
+      "minimum_target_gross_exposure": 0.45
+    },
+    {
+      "board_state": "mixed_board_or_probe_only",
+      "trigger": {
+        "board_avg_return_min": 0.0,
+        "board_breadth_min": 0.0
+      },
+      "minimum_target_gross_exposure": 0.1
+    }
+  ],
+  "source_sizing_rows": [
+    {
+      "source_family": "core_module_leader",
+      "expression_reading": "highest_expression",
+      "repaired_weight_band": [
+        0.16,
+        0.24
+      ]
+    },
+    {
+      "source_family": "packaging_process_enabler",
+      "expression_reading": "medium_to_high_expression",
+      "repaired_weight_band": [
+        0.1,
+        0.18
+      ]
+    },
+    {
+      "source_family": "high_beta_core_module",
+      "expression_reading": "medium_expression_with_derisk_readiness",
+      "repaired_weight_band": [
+        0.08,
+        0.14
+      ]
+    },
+    {
+      "source_family": "laser_chip_component",
+      "expression_reading": "probe_expression_only",
+      "repaired_weight_band": [
+        0.03,
+        0.08
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.14X reissues the sizing grammar on the repaired replay surface instead of the optimistic same-day replay.",
+    "The core conclusion survives, but the floor recommendations are trimmed slightly to respect more realistic execution and cost drag.",
+    "This repaired sizing grammar should replace the earlier V1.13X line for any future CPO experiments."
+  ]
+}

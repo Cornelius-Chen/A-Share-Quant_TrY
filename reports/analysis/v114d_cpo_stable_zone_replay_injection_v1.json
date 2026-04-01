@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114d_cpo_stable_zone_replay_injection_v1",
+    "candidate_count": 3,
+    "baseline_curve": 1.8401,
+    "baseline_max_drawdown": 0.1347,
+    "recommended_candidate_name": "expectancy_max_injection",
+    "recommended_curve": 2.3083,
+    "recommended_max_drawdown": 0.1853,
+    "recommended_capture_ratio_vs_board": 0.4077,
+    "recommended_next_posture": "promote_recommended_stable_zone_injection_as_default_probability_expectancy_sizing_candidate"
+  },
+  "candidate_rows": [
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 0.867,
+      "score": 0.926369,
+      "candidate_name": "expectancy_max_injection",
+      "curve_delta_vs_baseline": 0.4682,
+      "drawdown_delta_vs_baseline": 0.0506,
+      "efficiency_score": 0.306735
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 1.7616,
+      "score": 0.702709,
+      "candidate_name": "balanced_injection",
+      "curve_delta_vs_baseline": 0.4682,
+      "drawdown_delta_vs_baseline": 0.0506,
+      "efficiency_score": 0.127815
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "executed_order_count": 11,
+      "under_exposure_penalty": 2.0033,
+      "score": 0.546629,
+      "candidate_name": "conservative_stable_injection",
+      "curve_delta_vs_baseline": 0.3684,
+      "drawdown_delta_vs_baseline": 0.0422,
+      "efficiency_score": -0.017005
+    }
+  ],
+  "recommended_candidate_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.05,
+      "board_breadth_min": 0.8,
+      "strong_board_uplift": 0.04,
+      "derisk_keep_fraction": 0.5,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.3083,
+    "max_drawdown": 0.1853,
+    "capture_ratio_vs_board": 0.4077,
+    "executed_order_count": 12,
+    "under_exposure_penalty": 0.867,
+    "score": 0.926369,
+    "candidate_name": "expectancy_max_injection",
+    "curve_delta_vs_baseline": 0.4682,
+    "drawdown_delta_vs_baseline": 0.0506,
+    "efficiency_score": 0.306735
+  },
+  "interpretation": [
+    "V1.14D no longer searches. It injects three representative stable-zone points back into replay so the default sizing candidate is chosen from actual path behavior rather than only parameter scores.",
+    "The three representatives intentionally span the current frontier: expectancy-max, balanced, and conservative-stable.",
+    "This is the last step before promotion: decide which stable-zone representative should become the default probability-expectancy sizing candidate in the live replay stack."
+  ]
+}

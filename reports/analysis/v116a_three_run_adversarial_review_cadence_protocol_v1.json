@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116a_three_run_adversarial_review_cadence_protocol_v1",
+    "cadence_interval_runs": 3,
+    "required_reviewers": 3,
+    "current_triage_window_size": 3,
+    "current_triage_window_start": "V115P",
+    "current_triage_window_end": "V115R",
+    "recommended_next_posture": "bind_adversarial_triage_after_every_three_new_runs_before_any_promotion_step"
+  },
+  "cadence_rules": [
+    {
+      "rule_id": "every_three_runs_force_adversarial_review",
+      "trigger": "three_consecutive_new_runs_completed",
+      "required_reviewers": 3,
+      "review_axes": [
+        "methodology_and_overfit",
+        "execution_and_timing_realism",
+        "training_and_label_quality"
+      ],
+      "promotion_gate": "no_new_promotion_without_triage_pass"
+    },
+    {
+      "rule_id": "triage_is_audit_not_promotion",
+      "trigger": "triage_window_locked",
+      "required_output": [
+        "keep",
+        "do_not_promote",
+        "single_most_important_next_constraint"
+      ],
+      "note": "subagent review can narrow or freeze, but cannot by itself promote new law"
+    },
+    {
+      "rule_id": "triage_rolls_forward",
+      "trigger": "triage_completed",
+      "next_window_rule": "start_counting_next_three_runs_after_current_triage",
+      "note": "prevent infinite drift and ensure cadence remains periodic rather than ad hoc"
+    }
+  ],
+  "current_triage_window": {
+    "run_ids": [
+      "V115P",
+      "V115Q",
+      "V115R"
+    ],
+    "status": "active_now"
+  },
+  "interpretation": [
+    "V1.16A formalizes a recurring anti-drift checkpoint: every three consecutive runs, force a three-angle adversarial review before allowing new promotion steps.",
+    "The triage is not another source of promotion; it is a brake against local overconfidence and execution drift.",
+    "The first active window under this cadence is V115P/V115Q/V115R."
+  ]
+}

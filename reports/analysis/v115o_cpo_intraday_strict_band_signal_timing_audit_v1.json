@@ -1,0 +1,232 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v115o_cpo_intraday_strict_band_signal_timing_audit_v1",
+    "strict_signal_count": 4,
+    "intraday_same_session_count": 4,
+    "late_session_count": 0,
+    "post_close_or_next_day_count": 0,
+    "unresolved_count": 0,
+    "recommended_next_posture": "bind_intraday_same_session_and_late_session_signals_to_timing_aware_execution_before_relying_on_t_plus_1_open"
+  },
+  "timing_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "strict_band_from_v115m": "pc1_low__pc2_low",
+      "earliest_strict_checkpoint": "10:30",
+      "earliest_state_band": "pc1_low__pc2_low",
+      "timing_bucket": "intraday_same_session"
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "strict_band_from_v115m": "pc1_low__pc2_low",
+      "earliest_strict_checkpoint": "10:30",
+      "earliest_state_band": "pc1_low__pc2_low",
+      "timing_bucket": "intraday_same_session"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "strict_band_from_v115m": "pc1_low__pc2_low",
+      "earliest_strict_checkpoint": "10:30",
+      "earliest_state_band": "pc1_low__pc2_low",
+      "timing_bucket": "intraday_same_session"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "strict_band_from_v115m": "pc1_low__pc2_low",
+      "earliest_strict_checkpoint": "10:30",
+      "earliest_state_band": "pc1_low__pc2_low",
+      "timing_bucket": "intraday_same_session"
+    }
+  ],
+  "checkpoint_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -1682810257.208173,
+      "pc2_score": -760884629.878079,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -1312287408.319347,
+      "pc2_score": -858376118.956573,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -2030090517.427773,
+      "pc2_score": -229716308.197285,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -1916574812.869156,
+      "pc2_score": -255133874.236209,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -1519697317.459929,
+      "pc2_score": -247364925.464238,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -1001166292.480021,
+      "pc2_score": -812314781.751103,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -840964799.67804,
+      "pc2_score": -943711391.857934,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -2200589982.6939,
+      "pc2_score": -213913107.343803,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -2242166390.654154,
+      "pc2_score": -206200682.845035,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1794433783.028831,
+      "pc2_score": -340843068.44843,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -1971542765.188754,
+      "pc2_score": -564782296.55828,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -2070964426.605373,
+      "pc2_score": -507264705.651842,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -2076439617.692419,
+      "pc2_score": -76836669.485404,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -2173642756.922656,
+      "pc2_score": -135194232.44329,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -1986529810.891286,
+      "pc2_score": -102420921.470201,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -2344101436.216928,
+      "pc2_score": -150065239.547737,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -2201628549.232895,
+      "pc2_score": -289765907.080105,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -2118682555.525773,
+      "pc2_score": -50592746.28125,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -2212168446.852283,
+      "pc2_score": -1651295.787638,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1680777326.676695,
+      "pc2_score": -321088314.866286,
+      "state_band": "pc1_low__pc2_low",
+      "is_strict_band": true
+    }
+  ],
+  "interpretation": [
+    "V1.15O audits the earliest legal checkpoint at which strict intraday add-band signals appear, instead of assuming all such signals belong to the same execution bucket.",
+    "This separates intraday, late-session, and post-close signal timing and prevents the project from overusing T+1-open execution for signals that are already visible during the session.",
+    "The output should feed a timing-aware replay layer rather than be read as another standalone factor study."
+  ]
+}

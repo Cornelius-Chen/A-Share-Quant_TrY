@@ -1,0 +1,312 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114m_cpo_posture_environment_split_review_v1",
+    "posture_count": 4,
+    "segment_count": 5,
+    "recommended_next_posture": "use_environment_split_to_keep_parallel_postures_and_avoid_over-collapsing_future_board_judgement"
+  },
+  "posture_segment_rows": [
+    {
+      "posture_name": "default_expectancy_mainline",
+      "segment_name": "all_strong",
+      "day_count": 41,
+      "segment_curve": 2.661,
+      "mean_exposure": 0.452636,
+      "mean_readiness": 0.365914,
+      "under_floor_count": 11,
+      "action_count": 7,
+      "add_count": 5,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "default_expectancy_mainline",
+      "segment_name": "high_readiness_strong",
+      "day_count": 4,
+      "segment_curve": 2.4647,
+      "mean_exposure": 0.612035,
+      "mean_readiness": 0.400655,
+      "under_floor_count": 0,
+      "action_count": 0,
+      "add_count": 0,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "default_expectancy_mainline",
+      "segment_name": "ordinary_strong",
+      "day_count": 29,
+      "segment_curve": 2.1326,
+      "mean_exposure": 0.400732,
+      "mean_readiness": 0.327664,
+      "under_floor_count": 10,
+      "action_count": 5,
+      "add_count": 4,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "default_expectancy_mainline",
+      "segment_name": "euphoric_strong",
+      "day_count": 8,
+      "segment_curve": 2.6219,
+      "mean_exposure": 0.561089,
+      "mean_readiness": 0.487204,
+      "under_floor_count": 1,
+      "action_count": 2,
+      "add_count": 1,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "default_expectancy_mainline",
+      "segment_name": "weak_or_mixed",
+      "day_count": 611,
+      "segment_curve": 2.6247,
+      "mean_exposure": 0.404238,
+      "mean_readiness": 0.089362,
+      "under_floor_count": 182,
+      "action_count": 2,
+      "add_count": 0,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "segment_name": "all_strong",
+      "day_count": 41,
+      "segment_curve": 2.5498,
+      "mean_exposure": 0.435987,
+      "mean_readiness": 0.370191,
+      "under_floor_count": 16,
+      "action_count": 6,
+      "add_count": 4,
+      "full_curve": 2.5043,
+      "full_max_drawdown": 0.235
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "segment_name": "high_readiness_strong",
+      "day_count": 5,
+      "segment_curve": 2.568,
+      "mean_exposure": 0.515123,
+      "mean_readiness": 0.402458,
+      "under_floor_count": 2,
+      "action_count": 0,
+      "add_count": 0,
+      "full_curve": 2.5043,
+      "full_max_drawdown": 0.235
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "segment_name": "ordinary_strong",
+      "day_count": 28,
+      "segment_curve": 2.0623,
+      "mean_exposure": 0.391649,
+      "mean_readiness": 0.330212,
+      "under_floor_count": 12,
+      "action_count": 4,
+      "add_count": 3,
+      "full_curve": 2.5043,
+      "full_max_drawdown": 0.235
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "segment_name": "euphoric_strong",
+      "day_count": 8,
+      "segment_curve": 2.5034,
+      "mean_exposure": 0.541709,
+      "mean_readiness": 0.48995,
+      "under_floor_count": 2,
+      "action_count": 2,
+      "add_count": 1,
+      "full_curve": 2.5043,
+      "full_max_drawdown": 0.235
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "segment_name": "weak_or_mixed",
+      "day_count": 611,
+      "segment_curve": 2.52,
+      "mean_exposure": 0.388912,
+      "mean_readiness": 0.093411,
+      "under_floor_count": 218,
+      "action_count": 2,
+      "add_count": 0,
+      "full_curve": 2.5043,
+      "full_max_drawdown": 0.235
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "segment_name": "all_strong",
+      "day_count": 41,
+      "segment_curve": 2.661,
+      "mean_exposure": 0.452636,
+      "mean_readiness": 0.369398,
+      "under_floor_count": 16,
+      "action_count": 7,
+      "add_count": 5,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "segment_name": "high_readiness_strong",
+      "day_count": 5,
+      "segment_curve": 2.6876,
+      "mean_exposure": 0.533594,
+      "mean_readiness": 0.401468,
+      "under_floor_count": 2,
+      "action_count": 0,
+      "add_count": 0,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "segment_name": "ordinary_strong",
+      "day_count": 28,
+      "segment_curve": 2.1326,
+      "mean_exposure": 0.407193,
+      "mean_readiness": 0.32939,
+      "under_floor_count": 12,
+      "action_count": 5,
+      "add_count": 4,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "segment_name": "euphoric_strong",
+      "day_count": 8,
+      "segment_curve": 2.6219,
+      "mean_exposure": 0.561089,
+      "mean_readiness": 0.489381,
+      "under_floor_count": 2,
+      "action_count": 2,
+      "add_count": 1,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "segment_name": "weak_or_mixed",
+      "day_count": 611,
+      "segment_curve": 2.6247,
+      "mean_exposure": 0.404238,
+      "mean_readiness": 0.092657,
+      "under_floor_count": 218,
+      "action_count": 2,
+      "add_count": 0,
+      "full_curve": 2.6071,
+      "full_max_drawdown": 0.2429
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "segment_name": "all_strong",
+      "day_count": 41,
+      "segment_curve": 3.1461,
+      "mean_exposure": 0.520531,
+      "mean_readiness": 0.365031,
+      "under_floor_count": 6,
+      "action_count": 12,
+      "add_count": 10,
+      "full_curve": 3.0841,
+      "full_max_drawdown": 0.2862
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "segment_name": "high_readiness_strong",
+      "day_count": 4,
+      "segment_curve": 2.8418,
+      "mean_exposure": 0.688867,
+      "mean_readiness": 0.400655,
+      "under_floor_count": 0,
+      "action_count": 1,
+      "add_count": 1,
+      "full_curve": 3.0841,
+      "full_max_drawdown": 0.2862
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "segment_name": "ordinary_strong",
+      "day_count": 29,
+      "segment_curve": 2.4734,
+      "mean_exposure": 0.465691,
+      "mean_readiness": 0.326496,
+      "under_floor_count": 5,
+      "action_count": 9,
+      "add_count": 8,
+      "full_curve": 3.0841,
+      "full_max_drawdown": 0.2862
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "segment_name": "euphoric_strong",
+      "day_count": 8,
+      "segment_curve": 3.0907,
+      "mean_exposure": 0.635157,
+      "mean_readiness": 0.486907,
+      "under_floor_count": 1,
+      "action_count": 2,
+      "add_count": 1,
+      "full_curve": 3.0841,
+      "full_max_drawdown": 0.2862
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "segment_name": "weak_or_mixed",
+      "day_count": 611,
+      "segment_curve": 3.1049,
+      "mean_exposure": 0.471002,
+      "mean_readiness": 0.088128,
+      "under_floor_count": 159,
+      "action_count": 2,
+      "add_count": 0,
+      "full_curve": 3.0841,
+      "full_max_drawdown": 0.2862
+    }
+  ],
+  "segment_leader_rows": [
+    {
+      "segment_name": "all_strong",
+      "leading_posture_name": "vector_overlay_experimental",
+      "segment_curve": 3.1461,
+      "mean_exposure": 0.520531,
+      "under_floor_count": 6
+    },
+    {
+      "segment_name": "high_readiness_strong",
+      "leading_posture_name": "vector_overlay_experimental",
+      "segment_curve": 2.8418,
+      "mean_exposure": 0.688867,
+      "under_floor_count": 0
+    },
+    {
+      "segment_name": "ordinary_strong",
+      "leading_posture_name": "vector_overlay_experimental",
+      "segment_curve": 2.4734,
+      "mean_exposure": 0.465691,
+      "under_floor_count": 5
+    },
+    {
+      "segment_name": "euphoric_strong",
+      "leading_posture_name": "vector_overlay_experimental",
+      "segment_curve": 3.0907,
+      "mean_exposure": 0.635157,
+      "under_floor_count": 1
+    },
+    {
+      "segment_name": "weak_or_mixed",
+      "leading_posture_name": "vector_overlay_experimental",
+      "segment_curve": 3.1049,
+      "mean_exposure": 0.471002,
+      "under_floor_count": 159
+    }
+  ],
+  "interpretation": [
+    "V1.14M compares retained CPO sizing postures inside the same board but across different environment slices instead of only comparing one total curve.",
+    "The goal is to preserve multiple posture candidates for later board transfer: default, conservative, balanced, and vector-overlay do not need to win the same segment to stay useful.",
+    "This keeps CPO from being over-collapsed into one universal parameter truth before other boards arrive."
+  ]
+}

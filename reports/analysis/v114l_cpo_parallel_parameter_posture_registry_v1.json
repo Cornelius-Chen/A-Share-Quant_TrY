@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114l_cpo_parallel_parameter_posture_registry_v1",
+    "retained_posture_count": 4,
+    "default_posture_name": "default_expectancy_mainline",
+    "parallel_retained_count": 2,
+    "candidate_only_count": 1,
+    "recommended_next_posture": "carry_multiple_parameter_postures_forward_for_future_board_judgement_instead_of_collapsing_to_single_cpo_winner"
+  },
+  "posture_rows": [
+    {
+      "posture_name": "default_expectancy_mainline",
+      "status": "default_promoted",
+      "source_run": "V114E",
+      "curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "usage_rule": "current_default_cpo_sizing_surface"
+    },
+    {
+      "posture_name": "conservative_guardrail",
+      "status": "parallel_retained",
+      "source_run": "V114D",
+      "curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "usage_rule": "future_lower_drawdown_cross_board_candidate"
+    },
+    {
+      "posture_name": "balanced_shadow",
+      "status": "parallel_retained",
+      "source_run": "V114D",
+      "curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "usage_rule": "tie_case_reference_not_default"
+    },
+    {
+      "posture_name": "vector_overlay_experimental",
+      "status": "candidate_only",
+      "source_run": "V114K",
+      "curve": 3.0841,
+      "max_drawdown": 0.2862,
+      "capture_ratio_vs_board": null,
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25,
+        "candidate_add_threshold": 0.398127,
+        "candidate_extra_uplift": 0.02,
+        "candidate_floor": 0.35,
+        "max_expression_weight": 0.14
+      },
+      "usage_rule": "do_not_promote_until_cross_board_or_harsher_environment_judgement"
+    }
+  ],
+  "interpretation": [
+    "V1.14L freezes multiple CPO sizing postures in parallel instead of pretending one local winner is the only useful parameterization.",
+    "The default posture stays the replay-promoted expectancy-max surface, while conservative and balanced variants are retained as future cross-board judgement candidates.",
+    "The vector-overlay posture remains candidate-only because its replay gain is real but too expensive in drawdown to promote without harsher judgement."
+  ]
+}

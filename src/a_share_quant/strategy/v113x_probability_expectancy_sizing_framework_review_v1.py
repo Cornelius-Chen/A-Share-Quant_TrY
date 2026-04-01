@@ -1,0 +1,244 @@
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+
+@dataclass(slots=True)
+class V113XProbabilityExpectancySizingFrameworkReviewReport:
+    summary: dict[str, Any]
+    probability_expectancy_band_rows: list[dict[str, Any]]
+    source_sizing_rows: list[dict[str, Any]]
+    exposure_floor_rows: list[dict[str, Any]]
+    risk_cap_rows: list[dict[str, Any]]
+    interpretation: list[str]
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "summary": self.summary,
+            "probability_expectancy_band_rows": self.probability_expectancy_band_rows,
+            "source_sizing_rows": self.source_sizing_rows,
+            "exposure_floor_rows": self.exposure_floor_rows,
+            "risk_cap_rows": self.risk_cap_rows,
+            "interpretation": self.interpretation,
+        }
+
+
+def load_json_report(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Report at {path} must decode to a mapping.")
+    return payload
+
+
+class V113XProbabilityExpectancySizingFrameworkReviewAnalyzer:
+    def analyze(
+        self,
+        *,
+        v113v_payload: dict[str, Any],
+        v113w_payload: dict[str, Any],
+    ) -> V113XProbabilityExpectancySizingFrameworkReviewReport:
+        summary_v = dict(v113v_payload.get("summary", {}))
+        summary_w = dict(v113w_payload.get("summary", {}))
+        if str(summary_v.get("acceptance_posture")) != "freeze_v113v_cpo_full_board_execution_main_feed_replay_v1":
+            raise ValueError("V1.13X expects the V1.13V full-board replay report.")
+        if str(summary_w.get("acceptance_posture")) != "freeze_v113w_cpo_under_exposure_attribution_review_v1":
+            raise ValueError("V1.13X expects the V1.13W under-exposure attribution review.")
+
+        replay_day_rows = list(v113v_payload.get("replay_day_rows", []))
+        if not replay_day_rows:
+            raise ValueError("V1.13X requires replay day rows from V1.13V.")
+
+        peak_exposure = max(float(row["gross_exposure_after_close"]) for row in replay_day_rows)
+        strong_miss_rows = list(v113w_payload.get("top_opportunity_miss_rows", []))
+
+        probability_expectancy_band_rows = [
+            {
+                "band_name": "high_probability_high_expectancy",
+                "reading": "Confirmed board strength plus mature role semantics. This is where the system should stop being timid.",
+                "default_expression": "high_expression",
+                "target_gross_exposure_band": [0.45, 0.65],
+                "single_name_weight_band": [0.18, 0.28],
+                "cash_posture": "cash_is_drag_not_safety",
+            },
+            {
+                "band_name": "high_probability_medium_expectancy",
+                "reading": "Reliable continuation or admission path, but payoff depth is shallower than the strongest core line.",
+                "default_expression": "medium_expression",
+                "target_gross_exposure_band": [0.25, 0.45],
+                "single_name_weight_band": [0.12, 0.20],
+                "cash_posture": "cash_allowed_but_should_not_dominate",
+            },
+            {
+                "band_name": "medium_probability_high_expectancy",
+                "reading": "Higher-variance high-payoff sidecar where upside is real but path quality is noisier.",
+                "default_expression": "medium_expression",
+                "target_gross_exposure_band": [0.18, 0.35],
+                "single_name_weight_band": [0.08, 0.16],
+                "cash_posture": "probe_then_scale_if_quality_holds",
+            },
+            {
+                "band_name": "medium_probability_medium_expectancy",
+                "reading": "Useful for participation, but should enter as probe sizing until more evidence arrives.",
+                "default_expression": "probe_expression",
+                "target_gross_exposure_band": [0.08, 0.18],
+                "single_name_weight_band": [0.03, 0.08],
+                "cash_posture": "cash_still_primary",
+            },
+            {
+                "band_name": "low_probability_or_low_expectancy",
+                "reading": "Noise, unresolved structure, or weak board support. Default is skip and keep capital free.",
+                "default_expression": "skip_or_flat",
+                "target_gross_exposure_band": [0.0, 0.08],
+                "single_name_weight_band": [0.0, 0.03],
+                "cash_posture": "cash_is_correct",
+            },
+        ]
+
+        source_sizing_rows = [
+            {
+                "source_family": "core_module_leader:eligibility",
+                "probability_band": "high_probability_high_expectancy",
+                "default_expression": "high_expression",
+                "reading": "The board already treats this line as core leadership, so the sizing layer should reflect that conviction instead of leaving it underweight.",
+            },
+            {
+                "source_family": "packaging_process_enabler:eligibility_or_admission_extension",
+                "probability_band": "high_probability_medium_expectancy",
+                "default_expression": "medium_expression",
+                "reading": "Packaging is already a frozen mainline surface. It deserves real size, but not identical weight to the strongest core leader by default.",
+            },
+            {
+                "source_family": "high_beta_core_module:eligibility",
+                "probability_band": "medium_probability_high_expectancy",
+                "default_expression": "medium_expression",
+                "reading": "This line has meaningful upside and should not be reduced to token size, but it still needs stronger de-risk handling than the core leader.",
+            },
+            {
+                "source_family": "laser_chip_component:eligibility",
+                "probability_band": "medium_probability_medium_expectancy",
+                "default_expression": "probe_expression",
+                "reading": "Laser remains eligibility-only. It can participate, but should not steal size from better-proven expressions.",
+            },
+            {
+                "source_family": "core_module_leader:holding_veto",
+                "probability_band": "risk_action",
+                "default_expression": "must_exit_or_reduce",
+                "reading": "Holding-veto remains an execution action, not a new entry score. It should collapse expression regardless of earlier conviction.",
+            },
+            {
+                "source_family": "high_beta_core_module:de_risk",
+                "probability_band": "risk_action",
+                "default_expression": "cut_to_mild_band",
+                "reading": "De-risk should trim expression, not erase the line. This is where sidecar realism matters most.",
+            },
+        ]
+
+        exposure_floor_rows = [
+            {
+                "board_state": "strong_board_with_one_high_probability_high_expectancy_line",
+                "trigger": {
+                    "board_avg_return_min": 0.03,
+                    "board_breadth_min": 0.60,
+                },
+                "minimum_target_gross_exposure": 0.35,
+                "reading": "Once the board is clearly strong and a top-tier line is active, staying below roughly one-third exposure becomes a systematic under-expression problem.",
+            },
+            {
+                "board_state": "strong_board_with_two_or_more_credible_lines",
+                "trigger": {
+                    "board_avg_return_min": 0.05,
+                    "board_breadth_min": 0.80,
+                },
+                "minimum_target_gross_exposure": 0.50,
+                "reading": "This directly answers the V113W miss rows: on obvious board-strength days, the system should not remain stuck below 0.2 gross exposure.",
+            },
+            {
+                "board_state": "mixed_board_or_single_probe_only",
+                "trigger": {
+                    "board_avg_return_min": 0.00,
+                    "board_breadth_min": 0.00,
+                },
+                "minimum_target_gross_exposure": 0.12,
+                "reading": "Probe participation is enough here. The point is not to force size where expectancy has not matured.",
+            },
+        ]
+
+        risk_cap_rows = [
+            {
+                "risk_cap": "account_gross_exposure_cap",
+                "value": 0.75,
+                "role": "cap_not_primary_decider",
+                "reading": "Risk should clip runaway exposure, but should not keep the system structurally underinvested on confirmed board strength.",
+            },
+            {
+                "risk_cap": "single_name_weight_cap_core_leader",
+                "value": 0.30,
+                "role": "upper_bound",
+                "reading": "High-conviction leader can be large, but still must respect concentration control.",
+            },
+            {
+                "risk_cap": "single_name_weight_cap_packaging",
+                "value": 0.22,
+                "role": "upper_bound",
+                "reading": "Packaging earns meaningful size, but remains a step below the pure core leader concentration allowance.",
+            },
+            {
+                "risk_cap": "single_name_weight_cap_high_beta_core",
+                "value": 0.16,
+                "role": "upper_bound",
+                "reading": "This prevents high-beta expressions from absorbing the whole sizing upgrade by themselves.",
+            },
+            {
+                "risk_cap": "de_risk_multiplier",
+                "value": 0.50,
+                "role": "expression_trimmer",
+                "reading": "De-risk trims to a mild band instead of forcing zero unless a separate veto exists.",
+            },
+            {
+                "risk_cap": "holding_veto_action",
+                "value": "force_exit_or_reduce_to_zero",
+                "role": "hard_trigger",
+                "reading": "Holding-veto remains non-negotiable. Probability and expectancy cannot override a validated hard exit trigger.",
+            },
+        ]
+
+        summary = {
+            "acceptance_posture": "freeze_v113x_probability_expectancy_sizing_framework_review_v1",
+            "primary_gap_reading": "persistent_under_exposure_not_primary_stock_selection_failure",
+            "current_peak_gross_exposure": round(peak_exposure, 4),
+            "recommended_strong_board_min_gross_exposure": 0.35,
+            "recommended_two_line_strong_board_min_gross_exposure": 0.50,
+            "top_opportunity_miss_count": len(strong_miss_rows),
+            "framework_ready_for_replay_injection_next": True,
+            "recommended_next_posture": "inject_probability_expectancy_sizing_into_cpo_replay_before_expanding_more_symbol_logic",
+        }
+        interpretation = [
+            "V1.13X converts the V1.13W under-exposure diagnosis into a first-pass sizing grammar instead of continuing to debug only symbol logic.",
+            "The central rule change is sequencing: probability and expectancy decide desired expression first, and risk caps trim from above rather than deciding everything upfront.",
+            "This keeps the current control stack intact while addressing the main replay weakness: the system was too often correct in structure but too light in capital deployment.",
+        ]
+        return V113XProbabilityExpectancySizingFrameworkReviewReport(
+            summary=summary,
+            probability_expectancy_band_rows=probability_expectancy_band_rows,
+            source_sizing_rows=source_sizing_rows,
+            exposure_floor_rows=exposure_floor_rows,
+            risk_cap_rows=risk_cap_rows,
+            interpretation=interpretation,
+        )
+
+
+def write_v113x_probability_expectancy_sizing_framework_review_report(
+    *,
+    reports_dir: Path,
+    report_name: str,
+    result: V113XProbabilityExpectancySizingFrameworkReviewReport,
+) -> Path:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    output_path = reports_dir / f"{report_name}.json"
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(result.as_dict(), handle, indent=2, ensure_ascii=False)
+    return output_path

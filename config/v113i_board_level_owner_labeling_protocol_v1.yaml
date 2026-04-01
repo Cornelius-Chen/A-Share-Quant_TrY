@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: v113i_board_level_owner_labeling_protocol_v1
+
+inputs:
+  owner_board_level_only: true
+
+paths:
+  v113h_phase_charter_report: reports/analysis/v113h_phase_charter_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113i_board_level_owner_labeling_protocol_v1

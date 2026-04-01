@@ -3844,3 +3844,716 @@ Artifacts:
   - broader family validation improvement
   - no path distortion after refinement
 - That makes `packaging_process_enabler` the first cluster mainline refined template asset rather than another temporary successful branch.
+
+### JOURNAL-0195 Board-level world model plus execution feedback becomes the new main learning posture
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Stop treating structure research and execution replay as separate universes
+- Related Decision: DEC-0195
+- Related Runs: V113I, V113J, V113K, V113L, V113M, V113N, V113V
+- Protocol Version: protocol_v1.13
+- Hypothesis: The project had reached the point where more structure-only refinement would add less value than wiring board-level structure into a replay environment that can impose actual action consequences.
+- What Changed: Formalized the split of responsibilities: owner labels the board truth, assistant labels internal structure, early batch board research becomes a world-model prior layer, and execution replay becomes the place where research language must pay cost and prove usefulness.
+- Expected Impact: Reduce drift toward elegant but consequence-free research loops and keep the system learning from board structure without collapsing into single-symbol overfit.
+- Observed Result: The architecture now has the right layers to support this posture: no-leak board schema, CPO world-model mapping, populated board episodes, execution main feed, and full-board replay.
+- Side Effects / Risks: Board-level labels remain powerful and can still create narrative comfort if they stop being audited by replay and future out-of-regime checks.
+- Conclusion: The project should continue learning mainly at the board-state level, but it should no longer let execution remain a downstream afterthought.
+- Next Step: Use replay to judge which structure improvements actually change expression, add/reduce behavior, or risk containment.
+
+### JOURNAL-0196 Under-exposure diagnosis reframes the next phase from “better structure” to “better expression”
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: The first real replay showed that the main bottleneck is under-exposure, not primary stock selection failure
+- Related Decision: DEC-0196
+- Related Runs: V113W, V113X, V113Y, V113Z, V114A, V114B, V114C, V114D
+- Protocol Version: protocol_v1.13
+- Hypothesis: If the system’s main weakness is low expression rather than poor object choice, then upgrading sizing, add, and reduce behavior should improve curve capture more directly than adding yet another stock-logic branch.
+- What Changed: Replaced the old “gate everything harder” posture with a new stack:
+  - hard veto only for truly invalid states
+  - soft sizing for valid-but-uncertain states
+  - probability/expectancy before risk caps
+  - constrained add/reduce learning instead of binary exposure changes
+  - structural batch search instead of random parameter probing
+- Expected Impact: Improve board capture without reopening already-frozen selection logic or pretending the system needs a brand-new stock picker.
+- Observed Result: The local frontier now exists. Stable-zone representatives consistently beat the original replay baseline, and the `expectancy_max_injection` representative became the default candidate:
+  - baseline: `1.8401 / 0.1347`
+  - default stable-zone candidate: `2.3083 / 0.1853`
+- Side Effects / Risks: The stronger expression layer raises drawdown and therefore must keep respecting hard-veto semantics and future cross-environment audits.
+- Conclusion: The project has now moved from “can it identify the right structure?” to “can it express that structure with enough size without becoming reckless?”
+- Next Step: Promote the default stable-zone sizing candidate into the next replay phase and then audit it across longer windows and harsher environments instead of endlessly re-searching the same local neighborhood.
+
+### JOURNAL-0197 Unsupervised discovery is upgraded from cluster hunting to candidate-state auditing for expression settlement
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Keep the vector line, but stop letting attractive discovery drift into half-legislated action structure
+- Related Decision: DEC-0197
+- Related Runs: V113X, V113Y, V113Z, V114A, V114B, V114C, V114D
+- Protocol Version: protocol_v1.13
+- Hypothesis: Unsupervised vectors are still useful, but only if the project stops treating high-dimensional discovery as inherently actionable. The next useful role for unsupervised work is to surface candidate states that can materially improve sizing, add, reduce, and under-exposure correction.
+- What Changed: Reframed the vector lane around five active target objects:
+  - market-voice states
+  - strategy-position joint states
+  - board-internal relative structure
+  - interference / false-signal structure
+  - state transitions
+  Also preserved one optional follow-on extension:
+  - benchmark-relative residual states
+  State-transition vectors were moved into the active set because expression upgrades after V113X/V114C now depend heavily on whether the system can identify accelerating, exhausting, or rolling-over states rather than only classify static conditions.
+  At the same time, added four mandatory audit gates before any discovered structure may influence action:
+  - stability
+  - action relevance
+  - boundary clarity
+  - incremental value
+  Also made one methodological correction explicit: this lane must allow continuous bands and transition manifolds, not just hard clusters.
+- Expected Impact: Increase the chance that unsupervised work produces real expression improvements instead of only more elegant descriptions.
+- Observed Result: The project now has a much clearer standard for what counts as a valuable unsupervised output: not “interesting geometry,” but candidate state information that survives audit and changes replay behavior for the better.
+- Side Effects / Risks: Promotion will slow down because more discoveries will remain candidate-only for longer. This is desirable at the current stage because CPO is structurally rich but not repeatable enough to tolerate casual over-promotion.
+- Conclusion: The vector lane remains valuable, but only as a disciplined discovery-and-audit tool for expression settlement, not as a parallel truth system.
+- Next Step: Start with the five active vector families, and treat state-transition vectors as a first-class candidate-state lane for add/reduce and high-expression timing. Only benchmark-residual vectors remain as a secondary extension.
+
+### JOURNAL-0198 Default sizing promotion freezes the first replay-worthy expression surface
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Stop re-searching the same local neighborhood and promote the replay-validated stable-zone winner
+- Related Decision: DEC-0198
+- Related Runs: V114A, V114B, V114C, V114D, V114E
+- Protocol Version: protocol_v1.13
+- Hypothesis: The project had already learned enough about the CPO sizing frontier to stop treating every good point as temporary. The next useful step was not more local search, but freezing the best replay-validated stable-zone representative as the default expression surface.
+- What Changed: Promoted `expectancy_max_injection` from a candidate stable-zone representative into the default probability-expectancy sizing candidate. The promoted default is:
+  - `strong_board_uplift = 0.04`
+  - `under_exposure_floor = 0.25`
+  - `de-risk_keep_fraction = 0.50`
+  This keeps hard-veto semantics intact and only changes the expression layer.
+- Expected Impact: Replace chronic under-exposure with a lawful stronger default posture, while giving the replay stack a stable sizing reference for future audits.
+- Observed Result: The promoted default remains the strongest replay-validated candidate from the stable zone:
+  - baseline: `1.8401 / 0.1347`
+  - promoted default: `2.3083 / 0.1853`
+  It increases curve and capture materially while keeping drawdown below the soft 0.20 guardrail.
+- Side Effects / Risks: Promotion may create a false sense of completion if the project skips the next stage of judgement. The right next move is not another local search loop but longer-window and harsher-environment replay audit.
+- Conclusion: The sizing line has crossed from exploration into a first frozen default posture. The project should now test this posture, not keep searching the same narrow neighborhood.
+- Next Step: Run the promoted default as the new replay baseline and start judging where it still under- or over-expresses outside the current CPO-rich environment.
+
+### JOURNAL-0199 The board method is now formalized enough to become a bounded autonomous queue instead of a manually reissued ritual
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Convert the board-research ritual into a one-shot queue protocol with explicit stops
+- Related Decision: DEC-0199
+- Related Runs: V114F, V114G
+- Protocol Version: protocol_v1.14
+- Hypothesis: The project no longer needs the user to restate orchestration intent every phase. The board workflow has become structured enough to run as a queue-driven bounded worker as long as stop conditions and promotion gates remain explicit.
+- What Changed: Added a formal autonomous orchestrator protocol and seeded the first queue. The worker no longer asks for a new prompt between board phases; it runs until terminal board status or hard stop. The fixed phase stack is:
+  - board world model
+  - role grammar
+  - control extraction
+  - paper replay
+  - bottleneck diagnosis
+  - sizing upgrade
+  - unsupervised candidate-state audit
+  - promotion gate
+- Expected Impact: Reduce orchestration friction while keeping research bounded, auditable, and anti-overfit.
+- Observed Result: The protocol now exists as a first-class project asset, and the first queue seed is ready with `CPO` as the head board. This means the user no longer needs to keep saying “继续编排” for every board phase.
+- Side Effects / Risks: Autonomy can drift into over-refinement if the worker keeps running after incremental value disappears. The stop rules therefore matter as much as the phase stack.
+- Conclusion: The project has moved from manual phase prompting to a bounded autonomous board-worker posture.
+- Next Step: Start the first queue head under the new protocol, then expand the queue board by board only after the runner and logs stay stable.
+
+### JOURNAL-0200 Existing daily information still has real headroom for add/reduce learning, but only if it is replay-audited as a candidate overlay
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Turn market-voice persistence and state-transition prototypes into a candidate add-band replay audit
+- Related Decision: DEC-0200
+- Related Runs: V114H, V114I, V114J, V114K
+- Protocol Version: protocol_v1.14
+- Hypothesis: The remaining under-expressed strong CPO days are not purely an intraday problem yet. Existing daily board information should still contain enough structure to improve add/reduce settlement through market-voice persistence and state-transition prototypes.
+- What Changed: Built a candidate-only replay layer that computes online market-voice and state-transition scores from existing daily board context and uses them only to strengthen adds on already-mature holdings. Hard vetoes, de-risk semantics, and symbol admission logic remain unchanged.
+- Expected Impact: Reduce the remaining under-expressed strong-board days without secretly turning new vector scores into direct policy law.
+- Observed Result: The candidate overlay materially reduced the count of remaining under-expressed strong days:
+  - promoted default remaining under-expressed strong days: `14`
+  - candidate overlay remaining under-expressed strong days: `6`
+  Replay curve also improved:
+  - promoted default: `2.3083 / 0.1853`
+  - candidate overlay: `3.0841 / 0.2862`
+  But drawdown expanded sharply, which means this is not promotion-ready law.
+- Side Effects / Risks: The gain is real but too expensive to ignore. The overlay improved capture by adding more aggressively into a few strong windows, but current thresholds and uplift sizing are still too hot for default promotion.
+- Conclusion: Existing daily information still contains meaningful add/reduce signal. However, the right status for market-voice and state-transition scores is still candidate-only until thresholds and guardrails are refined or later validated by richer data.
+- Next Step: Compare the newly improved dates to the drawdown expansion, then decide whether to refine candidate thresholds, soften the extra uplift, or escalate the need for intraday confirmation on same-day expression upgrades.
+
+### JOURNAL-0201 CPO now has a retained multi-posture sizing registry instead of a single frozen future truth
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Keep multiple CPO sizing postures alive for later board judgement
+- Related Decision: DEC-0201
+- Related Runs: V114D, V114E, V114K, V114L
+- Protocol Version: protocol_v1.14
+- Hypothesis: CPO is too idiosyncratic to justify collapsing future board research onto a single local sizing winner. A retained registry of distinct postures will better support later cross-board judgement.
+- What Changed: Built a parallel posture registry with one promoted default and multiple retained alternates:
+  - `default_expectancy_mainline`
+  - `conservative_guardrail`
+  - `balanced_shadow`
+  - `vector_overlay_experimental`
+- Expected Impact: Preserve optionality for later boards while keeping current CPO governance explicit.
+- Observed Result: The posture registry is now a first-class project asset instead of an implied memory spread across V114D, V114E, and V114K.
+- Side Effects / Risks: Registry sprawl becomes a risk if too many variants are retained without clear status labels.
+- Conclusion: CPO should now be treated as a board that produced a small posture family, not a board that already discovered one final universal sizing truth.
+- Next Step: Use this registry when future boards arrive, and compare posture behavior before deciding whether any one posture deserves broader promotion.
+
+### JOURNAL-0202 Segment leadership inside one board is useful evidence, but still not enough for promotion
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Compare CPO posture family across strong and weak environment slices
+- Related Decision: DEC-0202
+- Related Runs: V114L, V114M
+- Protocol Version: protocol_v1.14
+- Hypothesis: The retained CPO posture family should not be judged only by full-curve totals. Segment splits inside the same board can reveal whether an aggressive posture is merely lucky or genuinely better at expressing strong-board conditions.
+- What Changed: Replayed the retained posture family and compared:
+  - `default_expectancy_mainline`
+  - `conservative_guardrail`
+  - `balanced_shadow`
+  - `vector_overlay_experimental`
+  across:
+  - `all_strong`
+  - `high_readiness_strong`
+  - `ordinary_strong`
+  - `euphoric_strong`
+  - `weak_or_mixed`
+- Expected Impact: Separate "high return because of one lucky patch" from "high return because the posture systematically expresses strong-board conditions better."
+- Observed Result: `vector_overlay_experimental` led every strong segment inside CPO, not just one isolated patch. However, total replay drawdown remained too high for promotion.
+- Side Effects / Risks: Internal segment dominance can create false confidence if it is mistaken for cross-board robustness.
+- Conclusion: Segment leadership is real evidence, but still not enough to turn the overlay into law.
+- Next Step: Refine the overlay locally, trim heat if possible, and keep it candidate-only until harsher judgement arrives.
+
+### JOURNAL-0203 Local vector-overlay refinement found a cleaner experimental variant, but not a new promoted default
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Trim vector-overlay heat without pretending CPO has discovered a universal sizing winner
+- Related Decision: DEC-0203
+- Related Runs: V114N
+- Protocol Version: protocol_v1.14
+- Hypothesis: A bounded local refinement around the experimental vector overlay may reduce drawdown without destroying its strong-segment advantage.
+- What Changed: Searched a small structured neighborhood across:
+  - `candidate_add_threshold`
+  - `candidate_extra_uplift`
+  - `candidate_floor`
+  while keeping symbol admission, hard vetoes, and the promoted default base fixed.
+- Expected Impact: Find a risk-trimmed overlay candidate that is easier to carry forward for later board transfer tests.
+- Observed Result: Lowering `candidate_extra_uplift` from `0.02` to `0.01` produced the best risk-trimmed candidate:
+  - hot overlay: `3.0841 / 0.2862`
+  - refined overlay: `2.9771 / 0.2800`
+  The refined version still beat the default posture in the key strong segments, but did not justify replacing the promoted default.
+- Side Effects / Risks: The gain remains CPO-specific until other boards or harsher windows say otherwise.
+- Conclusion: The overlay line survives, but only as an experimental family with a cleaner preferred variant.
+- Next Step: Carry the refined overlay alongside the default and conservative postures, then judge them outside CPO before any broader promotion.
+
+### JOURNAL-0204 Current CPO execution-axis search says the overlay heat is a confirmation problem, not a cap problem
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Test whether cleaner overlay behavior comes from smaller caps or from requiring better add confirmation
+- Related Decision: DEC-0204
+- Related Runs: V114O
+- Protocol Version: protocol_v1.14
+- Hypothesis: After threshold/uplift/floor refinement, the remaining overlay heat might be reduced either by smaller expression caps, tighter daily add caps, or by making adds require stronger confirmation.
+- What Changed: Ran a bounded local search over:
+  - `max_expression_weight`
+  - `max_order_notional`
+  - `add_confirmation_offset`
+  while holding the refined overlay discovery layer fixed.
+- Expected Impact: Separate structural heat from pure execution heat and identify the next execution axis worth refining.
+- Observed Result: Only `add_confirmation_offset` changed replay behavior in the current CPO window. The tested `max_expression_weight` and daily add-cap ranges were effectively inactive. The cleanest execution-trimmed candidate became:
+  - `mx_0.12_cap_200k_confirm_0.00`
+  with:
+  - `2.5705 / 0.2309`
+  versus the refined overlay baseline:
+  - `2.9771 / 0.2800`
+  This means cleaner behavior is achievable, but at the cost of giving back a meaningful amount of curve.
+- Side Effects / Risks: The inactive-cap conclusion may be local to current CPO because the board did not generate enough dense add traffic for those caps to bind.
+- Conclusion: If CPO keeps refining, the next real lever is confirmation design, not more local cap tuning.
+- Next Step: Either refine confirmation logic from existing daily information, or defer further execution tuning until intraday confirmation can be added.
+
+### JOURNAL-0205 Daily confirmation logic has now been pushed about as far as current CPO information can credibly take it
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Test conditional daily confirmation modes against the execution-trimmed overlay reference
+- Related Decision: DEC-0205
+- Related Runs: V114O, V114P
+- Protocol Version: protocol_v1.14
+- Hypothesis: Existing daily information might still support a smarter confirmation layer than a blunt constant offset, especially using persistence, market voice, thin coverage, and simple staged confirmation.
+- What Changed: Built and replayed six daily-only confirmation candidates:
+  - `constant_offset_0.03`
+  - `persistence_relaxed`
+  - `voice_relaxed`
+  - `thin_coverage_relaxed`
+  - `two_stage_confirmation`
+  - `execution_trimmed_reference`
+- Expected Impact: Recover some of the hot overlay's curve while preserving the drawdown reduction gained by adding confirmation.
+- Observed Result: None of the conditional daily confirmation modes materially beat the simpler execution-trimmed reference. The cleanest candidate remained:
+  - `execution_trimmed_reference`
+  - `2.5705 / 0.2309`
+  while the hot overlay stayed:
+  - `3.0841 / 0.2862`
+  This means the project has likely extracted most of the credible confirmation value available from current daily inputs.
+- Side Effects / Risks: Continuing to invent more local daily confirmation branches now looks more like overfitting than genuine model improvement.
+- Conclusion: Daily-only confirmation is locally exhausted for CPO. If cleaner confirmation is still required, the project should move to a narrow intraday confirmation layer rather than continue daily micro-heuristic search.
+- Next Step: Keep current CPO posture family intact and, if further refinement is needed, add intraday confirmation only for the mature symbols and action names instead of broadening the whole board.
+
+### JOURNAL-0206 Three-way critique forced the intraday layer to become a board-state audit and expectancy-label problem, not just a finer confirmation problem
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Expand CPO intraday work beyond single-name confirmation after parallel attack review
+- Related Decision: DEC-0206
+- Related Runs: V114Q, V114R, V114S
+- Protocol Version: protocol_v1.14
+- Hypothesis: The initial intraday plan was directionally correct, but may still be too narrow if the real goal is to maximize capture of diffusion-style main-uptrend boards while controlling unnecessary drawdown.
+- What Changed: Three independent critiques attacked the plan from:
+  - goal coverage
+  - data sufficiency
+  - action semantics / trainability
+  Their shared outcome forced a revision:
+  - add board-level intraday state layers for diffusion authenticity, persistence, board decay risk, and role migration
+  - promote several field groups from optional to must-have
+  - define action-outcome label families so `add / reduce / close` can later be trained as expectancy revisions
+- Expected Impact: Prevent the project from using richer intraday data merely to re-express 'structure looks stronger' and instead push it toward conditional probability / expectancy supervision.
+- Observed Result: The revised protocol now treats:
+  - board-state audit
+  - single-name confirmation
+  - action-outcome labeling
+  as one connected layer. This is a stricter and more expensive design, but much closer to the stated objective.
+- Side Effects / Risks: The revised layer is no longer runnable from current repository inputs alone because several promoted must-have fields and the action-outcome label table do not yet exist.
+- Conclusion: The earlier intraday plan was useful as a narrow prototype, but not yet complete enough for serious learning. The revised version is a better foundation even though it raises the build burden.
+- Next Step: Collect the revised narrow-symbol intraday dataset and define the first action-outcome label table before attempting any intraday learning run.
+
+### JOURNAL-0207 CPO replay integrity had to be repaired before the project could credibly continue promoting sizing and overlay results
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Replace optimistic same-day-close replay assumptions with next-day-open costed execution
+- Related Decision: DEC-0207
+- Related Runs: V113V, V114T
+- Protocol Version: protocol_v1.14
+- Hypothesis: The largest execution realism bug was not in the research ideas themselves, but in the replay surface: same-day close execution and zero transaction costs were making CPO results look better than a realistic paper implementation.
+- What Changed: Built `V114T` as an integrity-repaired replay with:
+  - signal generated on day `T` close
+  - execution moved to day `T+1` open
+  - explicit commission, stamp tax, and slippage
+  - stricter pretrade checks for cash usage, turnover, and ADV share
+- Expected Impact: Lower the optimism bias in all later CPO judgement layers and create a replay surface worth reusing for further promotion decisions.
+- Observed Result: The repaired replay now clearly shows delayed execution and non-zero costs. Example: the first `300502` buy signal from `2023-04-28` executes on `2023-05-04` open at `68.02`, not on the signal-day close, and incurs explicit transaction cost. Final equity also drops from the older optimistic replay surface.
+- Side Effects / Risks: A large slice of later CPO sizing and overlay work was built on `V113V`, so those reports are now directionally useful but no longer the final truth surface.
+- Conclusion: This repair does not invalidate the whole CPO line, but it does mean future promotion claims must migrate to `V114T` or a later repaired replay instead of resting on the optimistic baseline.
+- Next Step: Quantify the delta between `V113V` and `V114T`, then rerun the most decision-relevant CPO posture and under-exposure analyses on the repaired replay.
+
+### JOURNAL-0208 Intraday work now needs second-level event visibility discipline, not just better market bars
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Treat news and catalyst timing as a first-class legality problem for future intraday replay
+- Related Decision: DEC-0208
+- Related Runs: V114U
+- Protocol Version: protocol_v1.14
+- Hypothesis: Once the project introduces intraday decisions, market bars alone are not enough; external information timing can create a new forward-leak channel unless event visibility is recorded precisely.
+- What Changed: Defined a new timestamp discipline requiring second-level timing for external information that may alter intraday actions, including:
+  - `event_occurred_time`
+  - `public_release_time`
+  - `system_visible_time`
+  - explicit timezone and source identifier
+- Expected Impact: Make future intraday training and replay legally point-in-time instead of merely bar-aligned.
+- Observed Result: The protocol now distinguishes between what happened in the world, what became public, and what the system could actually see. This sharply reduces the chance of smuggling later-known news into earlier intraday decisions.
+- Side Effects / Risks: Some data sources will become unusable or downgraded until they provide adequate timestamp fidelity.
+- Conclusion: If intraday work is going to be credible, event visibility timing must be treated as seriously as price timing.
+- Next Step: Enforce this timestamp discipline in future intraday news/event collection before minute-level learning begins.
+
+### JOURNAL-0209 Benchmark repair materially changed the narrative: CPO still under-expresses, but not nearly as badly as the old board-equal comparison implied
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Separate opportunity ceiling from fairer sparse-action comparison after replay repair
+- Related Decision: DEC-0209
+- Related Runs: V114T, V114V
+- Protocol Version: protocol_v1.14
+- Hypothesis: Once replay integrity is repaired, the old full-board equal-weight comparison may still be directionally useful but is likely overstating practical underperformance for a sparse-action strategy.
+- What Changed: Built `V114V` to distinguish:
+  - repaired strategy curve
+  - full-board equal-weight opportunity curve
+  - action-coverage proxy curve
+- Expected Impact: A clearer benchmark hierarchy for future CPO decisions.
+- Observed Result: The repaired strategy finished near `1.7665`, while the action-coverage proxy was `1.8301` and the board equal-weight opportunity curve stayed `4.2093`. This means the old board-relative shortfall was real in spirit but badly overstated in magnitude.
+- Side Effects / Risks: The proxy benchmark is still imperfect and should not be mistaken for a final institutional benchmark.
+- Conclusion: CPO underperformance versus the full board was too loose as the primary story; the fairer story is that the strategy still lags its action-coverage opportunity set, but by a much smaller amount.
+- Next Step: Use the repaired benchmark stack for all later under-exposure and sizing judgements.
+
+### JOURNAL-0210 Under-exposure survived replay repair, which means the sizing problem is real rather than a replay artifact
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Re-run the under-exposure diagnosis on the repaired replay and benchmark surfaces
+- Related Decision: DEC-0210
+- Related Runs: V114T, V114V, V114W
+- Protocol Version: protocol_v1.14
+- Hypothesis: If the earlier under-exposure diagnosis was mostly a replay artifact, it should weaken sharply once same-day execution optimism and zero-cost accounting are removed.
+- What Changed: Rebuilt the under-exposure attribution on top of `V114T` and the repaired benchmark hierarchy in `V114V`.
+- Expected Impact: Either invalidate the under-exposure story or confirm it on a cleaner surface.
+- Observed Result: Under-exposure remains, but the scale is different:
+  - repaired strategy curve: `1.7665`
+  - action-coverage proxy: `1.8301`
+  - gap: `-0.0636`
+  Strong-board low-expression misses still appear, but the core message becomes more disciplined: CPO is still too timid, not catastrophically broken.
+- Side Effects / Risks: This is still one board and one replay family, so the conclusion is not yet a universal law.
+- Conclusion: The under-exposure problem is real, but the old narrative was too dramatic because it leaned on an unfair benchmark and optimistic replay assumptions.
+- Next Step: Rebuild the sizing grammar on this repaired surface instead of carrying forward the old one.
+
+### JOURNAL-0211 The CPO sizing grammar survives replay repair, but with slightly lower exposure floors
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Reissue probability/expectancy sizing after replay realism repair
+- Related Decision: DEC-0211
+- Related Runs: V114T, V114W, V114X
+- Protocol Version: protocol_v1.14
+- Hypothesis: The logic behind the old sizing grammar may still hold after replay repair, but the exact exposure floors should likely soften once next-day execution and transaction costs are recognized.
+- What Changed: Built `V114X` as the repaired successor to the old CPO sizing grammar.
+- Expected Impact: Preserve the main insight about timid expression without overreacting to the older optimistic replay surface.
+- Observed Result: The repaired grammar still calls for stronger expression in real board strength, but trims the floors slightly:
+  - one-line strong board floor: `0.30`
+  - two-line strong board floor: `0.45`
+  This is lower than the older optimistic surface, but still materially above the replay's current realized exposure in many strong windows.
+- Side Effects / Risks: The grammar is cleaner than before, but it remains daily-layer sizing and still awaits intraday confirmation and action-outcome supervision.
+- Conclusion: The project can move forward, but only if future CPO posture work uses the repaired sizing grammar rather than the old optimistic one.
+- Next Step: Treat `V114X` as the valid CPO daily sizing base until intraday learning is ready.
+
+### JOURNAL-0212 The market-cap bug is now split cleanly into “current truth fixed” versus “historical truth still missing”
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Collect a real current free-float snapshot for the entire CPO cohort
+- Related Decision: DEC-0212
+- Related Runs: V114Y
+- Protocol Version: protocol_v1.14
+- Hypothesis: Even if a historical float time series is still missing, the project should stop pretending that a market-cap proxy is the best currently available truth for all use cases.
+- What Changed: Built `V114Y` to collect current `float_shares` and `free_float_market_cap` snapshots for all `20` CPO cohort symbols and wrote them to a dedicated reference layer.
+- Expected Impact: Replace fake precision with explicit current-truth fields wherever the workflow only needs present-day float context.
+- Observed Result: Coverage is `20/20`, with no collection failures. This fixes the old “we only have proxy market cap” statement for current-state work, while keeping the boundary explicit: historical float series are still absent.
+- Side Effects / Risks: The new snapshot is useful, but dangerous if anyone later treats it as historical point-in-time truth.
+- Conclusion: The right posture is no longer “we only have a proxy” but “we have current float truth and still lack historical float truth.”
+- Next Step: Keep historical turnover-rate work blocked on time-varying float data, but start using the snapshot where current-state normalization is enough.
+
+### JOURNAL-0213 The intraday gap is no longer abstract: we now know exactly which CPO windows we need and that the current provider does not yet deliver them
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Freeze the four-symbol intraday backlog and audit current provider failure explicitly
+- Related Decision: DEC-0213
+- Related Runs: V114Z
+- Protocol Version: protocol_v1.14
+- Hypothesis: A narrow, concrete key-window manifest would be more useful than another round of generic “we need intraday” discussion.
+- What Changed: Built `V114Z`, which maps the four mature CPO action symbols to `19` concrete historical key windows and attempts provider access for those windows.
+- Expected Impact: Convert the intraday requirement from a vague dependency into an auditable acquisition backlog.
+- Observed Result: The backlog is now explicit, but current readiness is `false`: all attempted historical windows failed, so the project cannot honestly claim intraday replay readiness yet.
+- Side Effects / Risks: This pushes the next bottleneck into data sourcing rather than modeling, which may feel slower but is much cleaner.
+- Conclusion: The project has crossed from “knowing intraday is needed” to “knowing exactly what to collect and admitting current access is insufficient.”
+- Next Step: Treat the `V114Z` manifest as the only valid narrow-scope intraday backlog for CPO until real minute files begin landing.
+
+### JOURNAL-0214 The intraday story is now properly split: rolling 1-minute collection exists, and historical mid-frequency backfill is already partially solved
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Validate Baostock as the first historical mid-frequency backfill rail for CPO
+- Related Decision: DEC-0214
+- Related Runs: V115A
+- Protocol Version: protocol_v1.15
+- Hypothesis: The right intraday plan is not “all or nothing”; rolling 1-minute collection and historical backfill can be solved with different providers.
+- What Changed: Added `V115A` to audit Baostock against the frozen CPO key-window manifest from `V114Z`.
+- Expected Impact: Clarify whether historical intraday confirmation work can start before a full historical 1-minute archive is available.
+- Observed Result: `73/76` requests returned non-empty bars across `5/15/30/60min`, which is strong enough to treat Baostock as a real historical confirmation source. This means the project does not need to wait for perfect 1-minute archives to begin historical intraday refinement.
+- Side Effects / Risks: A few requests still failed and should be handled with retry logic or provider fallback; Baostock remains a mid-frequency layer, not a replacement for true 1-minute history.
+- Conclusion: The earlier statement “historical intraday is not ready” was too broad. The accurate statement is now:
+  - rolling 1-minute collection: ready via Sina
+  - historical mid-frequency backfill: materially ready via Baostock
+  - historical 1-minute archive: still not solved
+- Next Step: Use Baostock for historical `5/15/30/60min` confirmation studies on the four mature CPO action objects.
+
+### JOURNAL-0215 Mid-frequency intraday has now crossed from "nice factor table" into "candidate action evidence" on repaired CPO miss days
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Audit repaired under-exposure miss days with Baostock `30/60min` bars
+- Related Decision: DEC-0215
+- Related Runs: V114T, V114W, V115B, V115C
+- Protocol Version: protocol_v1.15
+- Hypothesis: If the repaired CPO under-exposure diagnosis is real, then at least some of the strongest miss days should already show add-like confirmation in the mid-frequency bars of the core names we were actually holding.
+- What Changed: Built `V115C`, reconstructed the held-symbol set on the six repaired top-opportunity miss days, fetched `30/60min` Baostock bars for those held names, and scored them with a narrow candidate confirmation function.
+- Expected Impact: Tell us whether mid-frequency intraday is merely descriptive, or whether it is already capable of producing candidate action evidence on top of the repaired replay base.
+- Observed Result: The first pass is directionally strong: all `10` audited held-name miss windows cleared the current candidate confirmation threshold. That means the intraday line is no longer hypothetical. It already has action-layer signal. At the same time, the result is clearly too permissive to be promoted directly.
+- Side Effects / Risks: The threshold is lenient because it is anchored on a small repaired reference set. If left unchallenged, it could silently over-promote intraday confirmation.
+- Conclusion: Mid-frequency intraday is now useful for CPO action research, but only as candidate evidence. The next task is not to celebrate the `10/10`, but to harden the threshold on a broader repaired sample before letting it influence default replay behavior.
+- Next Step: Expand the repaired intraday audit window set beyond the six top misses and retest the confirmation threshold before any promotion.
+
+### JOURNAL-0216 The intraday line now has a real supervised training table, not just factor rows and miss-day audits
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Align Baostock mid-frequency windows with repaired replay timing and action contexts
+- Related Decision: DEC-0216
+- Related Runs: V114T, V115B, V115C, V115D
+- Protocol Version: protocol_v1.15
+- Hypothesis: Once mid-frequency bars are aligned to repaired `T-close -> T+1-open` execution timing and paired with forward path labels, they should become trainable action-timepoint samples rather than static descriptive windows.
+- What Changed: Built `V115D`, which merges the original `V115B` window factors with the repaired replay state from `V114T`, adds miss-window coverage from `V115C`, and emits an action-context table with four contexts: `entry_vs_skip`, `add_vs_hold`, `reduce_vs_hold`, and `close_vs_hold`.
+- Expected Impact: Give the project a lawful first dataset for candidate supervised intraday learning on top of the repaired replay base.
+- Observed Result: The first table contains `29` rows, including `10` repaired miss-window rows. It now exposes forward-return, favorable-excursion, adverse-excursion, and expectancy-proxy labels at `1d/3d/5d` horizons. This is enough to begin harder thresholding work, but not enough to claim fully mature action-expectancy supervision.
+- Side Effects / Risks: The current action labels are still proxy labels, and the repaired miss windows are overrepresented inside `add_vs_hold`, so the table remains candidate-only.
+- Conclusion: CPO mid-frequency research has crossed a real threshold: it is no longer just “we have intraday data”; it is now “we have a first repaired, action-aligned intraday training table.”
+- Next Step: Expand the repaired window set and rebuild the labels toward the full `V114S` conditional-expectancy family before any promotion into default replay behavior.
+
+
+### JOURNAL-0217 The Baostock confirmation line now has a harder candidate gate calibrated on the broader repaired action table
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Replace the narrow miss-day threshold with a broader repaired threshold calibration
+- Related Decision: DEC-0217
+- Related Runs: V115C, V115D, V115E
+- Protocol Version: protocol_v1.15
+- Hypothesis: If the intraday line is real, it should survive a harder calibration regime built on the broader repaired action-timepoint table rather than only the six top miss days.
+- What Changed: Built `V115E`, which recalibrates the `30/60min` confirmation thresholds on the broader repaired action table from `V115D` instead of the narrow miss-day slice from `V115C`.
+- Expected Impact: Move the Baostock line from ?everything on miss days looks confirmatory? toward a stricter candidate gate that can actually reject weaker windows.
+- Observed Result: The harder calibration settled around:
+  - `f30_best_threshold = 0.60`
+  - `f60_best_threshold = 0.60`
+  with `9` of the `10` repaired miss-window rows still passing. That is materially stricter than the earlier permissive posture and still leaves the line useful.
+- Side Effects / Risks: The broader table still relies on proxy action-outcome labels and small negative-reference counts, so this remains candidate-only.
+- Conclusion: The mid-frequency line has now crossed from a permissive miss-day explainer into a harder candidate overlay gate grounded in the repaired action table.
+- Next Step: Keep `V115E` as the current intraday candidate baseline and expand the action-outcome label family before any replay promotion.
+
+
+### JOURNAL-0218 The Baostock action table is no longer add-only, but the first negative enrichment pass overshot and created a new imbalance
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Thicken reduce/close supervision with repaired replay risk days
+- Related Decision: DEC-0218
+- Related Runs: V114T, V115D, V115F
+- Protocol Version: protocol_v1.15
+- Hypothesis: The next meaningful quality jump for intraday learning would come not from more positive confirmation windows, but from thickening the weak negative side: reduce and close.
+- What Changed: Built `V115F`, which scans repaired replay risk days with open positions and converts them into candidate `reduce_vs_hold` and `close_vs_hold` samples, adding first-pass proxy labels such as:
+  - `P_reduce_avoided_drawdown_proxy_3d`
+  - `reduce_payoff_decay_vs_hold_proxy_3d`
+  - `P_close_invalidation_realized_proxy_3d`
+  - `P_close_opportunity_cost_proxy_3d`
+- Expected Impact: Make the intraday table less add-biased and more usable for actual action-value learning.
+- Observed Result: The action table expanded from `29` rows to `450`, with the negative side now dominating:
+  - `reduce_vs_hold = 340`
+  - `close_vs_hold = 85`
+  - `add_vs_hold = 17`
+  This is useful because the weak side is no longer empty, but it also means the raw enriched table is now too negative-heavy to use naively.
+- Side Effects / Risks: The project has moved from one imbalance to another. Future training must rebalance or weight contexts instead of learning directly from the raw row counts.
+- Conclusion: The main defect in the intraday table has changed. It is no longer ?not enough negative supervision?; it is now ?negative supervision exists, but must be reweighted before it can train anything sensible.?
+- Next Step: Build a balanced training view on top of `V115F` before re-running any intraday overlay calibration or promotion tests.
+
+
+### JOURNAL-0219 The right intraday discovery base is not the 4 manual vectors, but a de-redundant high-dimensional table
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Replace manual semantic compression with a higher-dimensional discovery substrate before unsupervised learning
+- Related Decision: DEC-0219
+- Related Runs: V115F, V115G, V115H
+- Protocol Version: protocol_v1.15
+- Hypothesis: If the project wants more objective intraday discovery, it should delay semantic naming and instead preserve more raw state directions while stripping out pseudo-dimensions and identity leakage.
+- What Changed: Built `V115H`, a high-dimensional intraday feature base table that:
+  - keeps `30/60min` main-state fields,
+  - keeps `5/15min` only as differential support features,
+  - applies robust-standardization-ready columns,
+  - and explicitly moves identity, action labels, and outcome labels out of the discovery distance space.
+- Expected Impact: Make the next unsupervised pass less definition-heavy than `V115G` while avoiding a naive raw-field dump that would be dominated by frequency duplication and price-scale noise.
+- Observed Result: The base table now contains:
+  - `450` actionable rows
+  - `25` discoverable features
+  - `15` audit-only fields
+  - `19` dropped fields
+  and fixes the discovery posture as `high_dimensional_base_table_before_unsupervised_discovery`.
+- Side Effects / Risks: This is still not a promotable learning set. The sample is path-dependent and the downstream action labels remain partly proxy-based, so unsupervised outputs must still be audited as candidate-only.
+- Conclusion: The intraday line should no longer treat the manually precompressed 4-vector view as its objective substrate. `V115H` is the new base table for discovery; naming comes later.
+- Next Step: Run PCA/sparse-PCA and band-oriented unsupervised discovery on `V115H`, then audit whether any discovered state directions truly improve `add/reduce/close` expectancy judgments.
+
+
+### JOURNAL-0220 The V115H intraday base table already supports a guarded candidate training view, but not promotion
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Build the first weighted action-learning pilot on the high-dimensional intraday base table
+- Related Decision: DEC-0220
+- Related Runs: V115H, V115I
+- Protocol Version: protocol_v1.15
+- Hypothesis: If `V115H` is a useful substrate, a guarded training view built on top of it should at least recover some candidate action-separation signal before unsupervised discovery is run.
+- What Changed: Built `V115I`, which:
+  - derives coarse action-expression labels,
+  - constructs a weighted balanced training view,
+  - screens features on the train split only,
+  - and compares a weighted nearest-centroid guardrail against a weighted ridge multiclass candidate.
+- Expected Impact: Sanity-check whether the high-dimensional base table has genuine action-learning value instead of being only a discovery substrate.
+- Observed Result: `V115I` selected `12` top features dominated by:
+  - `high_time_ratio`
+  - `close_location`
+  - `breakout_efficiency`
+  - `afternoon_volume_share`
+  - `last_bar_volume_share`
+  The weighted ridge candidate improved over the nearest-centroid guardrail on macro recall, but the smallest train class remained only `5`, so the whole result remains candidate-only.
+- Side Effects / Risks: The training table still inherits repaired-replay path dependence and the increase-expression class is extremely thin; the pilot can validate learnability, but not justify policy promotion.
+- Conclusion: `V115H` is not just a discovery table; it already supports a guarded candidate training view. But it is still far from a promotable action learner.
+- Next Step: Keep `V115I` as a supervised sanity check and move on to PCA/sparse-PCA plus continuous-band unsupervised discovery on `V115H`.
+
+
+### JOURNAL-0221 The current intraday discovery space behaves more like a continuous band than a natural cluster family
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Use PCA band audit to narrow strict add zones before any replay overlay
+- Related Decision: DEC-0221
+- Related Runs: V115J, V115K, V115L
+- Protocol Version: protocol_v1.15
+- Hypothesis: If the intraday discovery space is genuinely smooth rather than discretely clustered, a PCA band audit should reveal that broad positive-looking regions need to be narrowed before they can be used in any add-overlay test.
+- What Changed: Built:
+  - `V115J`, which runs PCA and continuous-band audit on the `V115H` base table,
+  - `V115K`, which maps those bands into candidate add/reduce semantics,
+  - `V115L`, which then tightens the add-band set into a strict subset.
+- Expected Impact: Prevent the project from leaking all positive-looking states into the next overlay and instead force a stricter band selection before any replay-facing test.
+- Observed Result: The PCA result is heavily dominated by `PC1` (`~93%` explained ratio), supporting a band-first reading. `V115K` initially marked `3` add-looking bands, but `V115L` trimmed that down to `2` strict add bands:
+  - `pc1_low__pc2_low`
+  - `pc1_high__pc2_low`
+  while leaving `pc1_low__pc2_high` as a softer review-only region.
+- Side Effects / Risks: The state-band map is still candidate-only and still inherits the repaired CPO sample bias. It is useful for the next overlay audit, not for direct law extraction.
+- Conclusion: The intraday line should currently be treated as a continuous-band problem with a strict add-band subset, not as a mature clustering problem.
+- Next Step: Run the next candidate overlay audit using only the strict add bands and keep all weaker positive-looking regions out of the first replay-facing test.
+
+
+### JOURNAL-0222 The strict add-band overlay is cleaner than the permissive band map, but too leaky to become admission law
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Audit strict intraday add bands only against repaired miss days before any replay binding
+- Related Decision: DEC-0222
+- Related Runs: V115M
+- Protocol Version: protocol_v1.15
+- Hypothesis: If `V115L` really isolated the cleanest add-looking intraday bands, then auditing only those bands against repaired miss days should produce better expectancy/adverse quality than the broader top-miss set, while still revealing whether they are safe enough to become a replay-facing overlay.
+- What Changed: Built `V115M` to audit only:
+  - `pc1_low__pc2_low`
+  - `pc1_high__pc2_low`
+  against repaired miss-day rows, and compared their hit quality, miss-day coverage, and context leakage against the broader top-miss pool.
+- Expected Impact: Determine whether the strict band subset is clean enough for the next replay-facing overlay test without accidentally turning intraday discovery into a new-entry law.
+- Observed Result: The strict bands improved average miss-row quality:
+  - `strict_hit_expectancy_mean = 0.101147`
+  - vs `all_top_miss_expectancy_mean = 0.075894`
+  and improved adverse-path quality:
+  - `strict_hit_adverse_mean = -0.043511`
+  - vs `all_top_miss_adverse_mean = -0.056003`
+  but they only covered `2/6` repaired top miss days and still leaked heavily into `entry_vs_skip` (`0.875` rate).
+- Side Effects / Risks: The strict overlay is cleaner but sparse, and the admission leakage is far too high to let these bands open fresh names. This remains a candidate-only held-position overlay idea.
+- Conclusion: The strict bands are useful enough to survive narrowing, but only as a constrained overlay on already-held mature names. They are not safe enough to become a generic intraday add/admission law.
+- Next Step: If a replay-facing test is run next, keep it narrow: held-position overlay only, no soft band, no fresh admissions.
+
+
+### JOURNAL-0223 Wick features can be added cleanly, but the current mid-frequency sample is too coarse for them to matter yet
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Add explicit upper/lower shadow structure to the intraday base table and check whether current CPO windows actually use it
+- Related Decision: DEC-0223
+- Related Runs: V115B, V115H, V115I, V115J, V115K, V115L, V115M
+- Protocol Version: protocol_v1.15
+- Hypothesis: If wick/shadow structure really carries useful confirmation information, then explicitly adding it to the intraday base table should either change the selected training features, alter the PCA/band map, or improve the downstream strict-band action audit.
+- What Changed: Added explicit shadow-derived features into the factor extraction and high-dimensional base table:
+  - `upper_shadow_ratio`
+  - `lower_shadow_ratio`
+  - `body_ratio`
+  - `last_bar_upper_shadow_ratio`
+  - `last_bar_lower_shadow_ratio`
+  and corresponding cross-frequency differential fields. Then reran the downstream chain from `V115H` through `V115M`.
+- Expected Impact: Either the new features would surface as meaningful structure in the current `Baostock 30/60min` sample, or they would prove that the current intraday bar granularity is too coarse for wick-style microstructure to contribute.
+- Observed Result: The schema expanded successfully and all downstream tests still passed, but the current sample showed little to no useful variation in the new shadow fields. The selected feature set in `V115I` did not change materially, the PCA structure in `V115J` remained dominated by the same primary direction, and the strict-band conclusions in `V115L/V115M` were effectively unchanged.
+- Side Effects / Risks: This means the feature family is structurally correct but presently low-value. If the team overreads it now, it will create false confidence rather than real action gain.
+- Conclusion: Wick/shadow structure belongs in the discovery substrate, but the present `Baostock 30/60min` windows are too coarse for it to become a meaningful confirmation driver. The likely path to real value is later `1min` or richer intraday data.
+- Next Step: Keep wick features in the base table, stop trying to promote them on current mid-frequency evidence, and revisit them after `1min` supplementation or a richer intraday sample arrives.
+
+
+### JOURNAL-0224 The strict intraday add-band line now has replay-facing incremental value, but only in a very narrow held-position setting
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Bind strict add bands into repaired replay and check whether the candidate line survives contact with actual PnL
+- Related Decision: DEC-0224
+- Related Runs: V115N
+- Protocol Version: protocol_v1.15
+- Hypothesis: If the strict bands from `V115L/V115M` really carry action value rather than only descriptive structure, then a narrow held-position overlay on the repaired replay should show some incremental equity gain without needing to become a new-entry law.
+- What Changed: Built `V115N`, which replays a strict held-position overlay on top of `V114T` using:
+  - only already-held mature names,
+  - only strict add-band hits on repaired miss days,
+  - and `T` signal / `T+1 open` execution with costs intact.
+- Expected Impact: Reveal whether the strict intraday line has any real replay-facing upside while preserving the rule that intraday discovery cannot open fresh names or override baseline sell-side controls.
+- Observed Result: The narrow overlay generated `4` add orders across `2` repaired miss days and lifted repaired final equity from `1.7665M` to `2.1544M`, while max drawdown rose from `0.1343` to `0.1734`.
+- Side Effects / Risks: The uplift is real, but the sample is extremely thin and still path-dependent. This is enough to prove candidate value, not enough to declare a new law.
+- Conclusion: The strict intraday band line has crossed the threshold from “pure audit object” into “candidate replay overlay,” but only in a narrow held-position setting. It remains candidate-only and must not be generalized into admission or generic intraday add logic.
+- Next Step: Keep the line narrow, expand repaired-window revalidation, and test whether similar overlay behavior survives outside `CPO` before any promotion.
+### JOURNAL-0225 The repaired replay was materially understating strict intraday add-band value by forcing same-session signals into next-day execution
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Audit intraday signal visibility and rerun strict held-position overlay with same-session next-bar execution
+- Related Decision: DEC-0225
+- Related Runs: V115O, V115P
+- Protocol Version: protocol_v1.15
+- Hypothesis: If strict intraday add-band hits are already visible during the same session, then `V115N` is materially understating the line by forcing those signals into `T+1 open` execution.
+- What Changed: Built `V115O` to reconstruct historical intraday prefixes and identify the earliest legal checkpoint for each strict hit, then built `V115P` to execute intraday-visible strict hits at the same-session next `30min` bar open instead of `T+1 open`.
+- Expected Impact: Clarify how much of the previously observed under-exposure came from timing semantics rather than from the add-band logic itself.
+- Observed Result: All `4` strict overlay hits were already visible by `10:30`, with no late-session or post-close cases. Replaying them with same-session next-bar execution lifted repaired final equity from `1.7665M` to `2.4276M`, versus `2.1544M` under `V115N`. Max drawdown rose from `0.1343` to `0.1925`.
+- Side Effects / Risks: The signal-timing conclusion is clean for this narrow sample, but the sample remains small and path-dependent. This proves semantic relevance, not promotion readiness.
+- Conclusion: Strict intraday add-bands should no longer be described as generic `T+1` overlays. Their natural candidate semantics are timing-aware:
+  - same-session next-bar execution for intraday-visible hits,
+  - while still preserving held-position-only scope and all baseline sell-side controls.
+- Next Step: Keep the line candidate-only, expand repaired-window coverage, and verify whether timing-aware same-session execution survives outside the current narrow `CPO` sample.
+
+
+### JOURNAL-0226 Widening the strict intraday add-context sample confirms that timing-aware execution survives, but raw expansion is too loose
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Expand strict add-band timing audit beyond top-miss days and compare broader timing-aware overlay filters
+- Related Decision: DEC-0226
+- Related Runs: V115Q, V115R
+- Protocol Version: protocol_v1.15
+- Hypothesis: If timing-aware intraday execution is a real semantic improvement rather than a top-miss artifact, then it should still show value once the sample widens to all strict `add_vs_hold` rows.
+- What Changed: Built `V115Q` to widen timing audit from the repaired top-miss subset to all strict `add_vs_hold` rows, then built `V115R` to compare four timing-aware held-position overlay filters on top of the repaired replay:
+  - all strict rows
+  - positive expectancy only
+  - action-favored only
+  - positive and favored
+- Expected Impact: Distinguish whether broader timing-aware semantics remain useful once negative and marginal strict hits are allowed back into the sample.
+- Observed Result: All `9` strict `add_vs_hold` rows were already intraday-visible by `10:30`. On replay, the raw broader expansion (`all_strict_add_context`) produced the highest equity (`2.5200M`) but also admitted negative-expectancy adds. The cleaner broader posture was `positive_expectancy_only`, which executed `3` overlay orders, lifted equity to `2.2776M`, and produced the best drawdown among the broader variants (`0.1569`).
+- Side Effects / Risks: The broader raw variant looks strongest on equity, but it is too permissive because it includes known negative-expectancy strict hits. That makes it unsuitable as a clean promotion candidate.
+- Conclusion: Timing-aware execution survives sample widening, but raw strict-add expansion is too loose. The cleaner broader reference should now be `positive_expectancy_only`, retained in parallel rather than promoted.
+- Next Step: Keep broader timing-aware variants parallel and candidate-only. Use `positive_expectancy_only` as the next cleaner reference posture when expanding repaired-window validation or testing outside `CPO`.
+
+
+### JOURNAL-0227 Visible-only checkpoint-score filtering survives the first no-future-label repair, but the cleanest candidate sits in a narrow middle band rather than at either extreme
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Rebuild intraday timing-aware filters from point-in-time-visible checkpoint scores and refine the visible-only threshold family
+- Related Decision: DEC-0227
+- Related Runs: V116C, V116D
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the strict intraday overlay line contains real signal rather than only post-hoc label leakage, then a visible-only rebuild using `10:30` checkpoint `pc1/pc2` scores should still produce executing candidate variants with meaningful uplift.
+- What Changed: Built `V116C` to remove all future labels from filter definitions and rebuild the intraday overlay using only visible checkpoint scores, then built `V116D` to sweep low-threshold variants across `pc1/pc2` quantiles and compare the resulting timing-aware held-position overlays.
+- Expected Impact: Preserve the timing-aware intraday line after leakage repair and identify whether a cleaner visible-only candidate exists between the broad all-pass posture and no-trade sparsity.
+- Observed Result: The broad visible-only ceiling (`all_intraday_strict_visible`) still executed `9` overlay orders and lifted repaired equity to `3.1247M`, but it remained too loose. The cleanest executing visible-only candidate was `pc1_only_q_0p2`, which executed `2` overlay orders, lifted equity to `2.0839M`, and kept max drawdown at `0.1571`. A more expressive middle candidate, `pc1_or_pc2_q_0p25`, executed `6` orders and reached `2.6079M` with `0.1765` drawdown.
+- Side Effects / Risks: The line now avoids future-label leakage, but all variants still sit on the same narrow `CPO` timing-aware sample. The strongest broad variant is still likely too permissive, while the cleaner variants may be too thin to generalize.
+- Conclusion: The strict intraday overlay line survives the first no-future-label repair. The real information now appears to live in a narrow band of visible checkpoint-score thresholds, not in either the raw all-pass variant or the no-trade extreme filters.
+- Next Step: Carry the visible-only executing variants forward, add two more runs on this line, and then subject the repaired family to the next mandatory three-run adversarial review.

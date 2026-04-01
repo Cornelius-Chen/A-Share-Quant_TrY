@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114c_cpo_batched_local_policy_frontier_search_v1",
+    "tested_config_count": 10,
+    "batch_count": 4,
+    "baseline_curve": 1.8401,
+    "baseline_max_drawdown": 0.1347,
+    "best_curve": 2.3083,
+    "best_max_drawdown": 0.1853,
+    "best_capture_ratio_vs_board": 0.4077,
+    "stable_zone_count": 10,
+    "stable_zone_strong_board_uplift_values": [
+      0.02,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "stable_zone_under_exposure_floor_values": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "stable_zone_derisk_keep_fraction_values": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "recommended_next_posture": "use_stable_zone_as_replay_injection_candidate_set_before_wider_search"
+  },
+  "batch_rows": [
+    {
+      "batch_name": "derisk_keep_fraction_sweep",
+      "config_count": 2,
+      "best_curve": 2.3142,
+      "best_max_drawdown": 0.1853,
+      "best_capture_ratio_vs_board": 0.4095,
+      "best_efficiency_score": -0.081405,
+      "best_config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.35
+      }
+    },
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config_count": 3,
+      "best_curve": 2.3083,
+      "best_max_drawdown": 0.1853,
+      "best_capture_ratio_vs_board": 0.4077,
+      "best_efficiency_score": 0.306735,
+      "best_config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      }
+    },
+    {
+      "batch_name": "uplift_floor_interaction",
+      "config_count": 1,
+      "best_curve": 2.2085,
+      "best_max_drawdown": 0.1769,
+      "best_capture_ratio_vs_board": 0.3765,
+      "best_efficiency_score": -0.017005,
+      "best_config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      }
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config_count": 4,
+      "best_curve": 2.3083,
+      "best_max_drawdown": 0.1853,
+      "best_capture_ratio_vs_board": 0.4077,
+      "best_efficiency_score": -0.087665,
+      "best_config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      }
+    }
+  ],
+  "top_config_rows": [
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 0.867,
+      "score": 0.926369,
+      "efficiency_score": 0.306735
+    },
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 1.7616,
+      "score": 0.702709,
+      "efficiency_score": 0.127815
+    },
+    {
+      "batch_name": "uplift_floor_interaction",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "executed_order_count": 11,
+      "under_exposure_penalty": 2.0033,
+      "score": 0.546629,
+      "efficiency_score": -0.017005
+    },
+    {
+      "batch_name": "derisk_keep_fraction_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3142,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4095,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.439847,
+      "efficiency_score": -0.081405
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.433354,
+      "efficiency_score": -0.087665
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.433354,
+      "efficiency_score": -0.087665
+    },
+    {
+      "batch_name": "derisk_keep_fraction_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.4,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3025,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4058,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.426862,
+      "efficiency_score": -0.093845
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "executed_order_count": 11,
+      "under_exposure_penalty": 3.1147,
+      "score": 0.268776,
+      "efficiency_score": -0.239285
+    },
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.4
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 4.0374,
+      "score": 0.133755,
+      "efficiency_score": -0.327345
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.02,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.1062,
+      "max_drawdown": 0.1686,
+      "capture_ratio_vs_board": 0.3447,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 3.4068,
+      "score": 0.092296,
+      "efficiency_score": -0.400895
+    }
+  ],
+  "stable_zone_rows": [
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 0.867,
+      "score": 0.926369,
+      "efficiency_score": 0.306735
+    },
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 1.7616,
+      "score": 0.702709,
+      "efficiency_score": 0.127815
+    },
+    {
+      "batch_name": "uplift_floor_interaction",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.3
+      },
+      "final_curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "executed_order_count": 11,
+      "under_exposure_penalty": 2.0033,
+      "score": 0.546629,
+      "efficiency_score": -0.017005
+    },
+    {
+      "batch_name": "derisk_keep_fraction_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3142,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4095,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.439847,
+      "efficiency_score": -0.081405
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.433354,
+      "efficiency_score": -0.087665
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.433354,
+      "efficiency_score": -0.087665
+    },
+    {
+      "batch_name": "derisk_keep_fraction_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.4,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.3025,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4058,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 2.839,
+      "score": 0.426862,
+      "efficiency_score": -0.093845
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.03,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.2085,
+      "max_drawdown": 0.1769,
+      "capture_ratio_vs_board": 0.3765,
+      "executed_order_count": 11,
+      "under_exposure_penalty": 3.1147,
+      "score": 0.268776,
+      "efficiency_score": -0.239285
+    },
+    {
+      "batch_name": "under_exposure_floor_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.4
+      },
+      "final_curve": 2.3083,
+      "max_drawdown": 0.1853,
+      "capture_ratio_vs_board": 0.4077,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 4.0374,
+      "score": 0.133755,
+      "efficiency_score": -0.327345
+    },
+    {
+      "batch_name": "uplift_sweep",
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.02,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.35
+      },
+      "final_curve": 2.1062,
+      "max_drawdown": 0.1686,
+      "capture_ratio_vs_board": 0.3447,
+      "executed_order_count": 12,
+      "under_exposure_penalty": 3.4068,
+      "score": 0.092296,
+      "efficiency_score": -0.400895
+    }
+  ],
+  "interpretation": [
+    "V1.14C uses structural batches rather than random sweeps: uplift, exposure-floor, de-risk, and the key uplift-floor interaction are tested separately and then aggregated.",
+    "This preserves interpretability. The result is not just a single best point, but a first local frontier and a first stable zone around it.",
+    "The purpose is to approach an optimal policy as a reproducible zone rather than chase a lucky point that looks good only in one replay path."
+  ]
+}

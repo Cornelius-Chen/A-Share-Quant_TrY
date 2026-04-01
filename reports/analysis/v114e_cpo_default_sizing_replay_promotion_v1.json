@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114e_cpo_default_sizing_replay_promotion_v1",
+    "promoted_default_candidate_name": "expectancy_max_injection",
+    "default_strong_board_uplift": 0.04,
+    "default_under_exposure_floor": 0.25,
+    "default_derisk_keep_fraction": 0.5,
+    "baseline_curve": 1.8401,
+    "promoted_curve": 2.3083,
+    "baseline_max_drawdown": 0.1347,
+    "promoted_max_drawdown": 0.1853,
+    "promoted_capture_ratio_vs_board": 0.4077,
+    "recommended_next_posture": "use_expectancy_max_injection_as_default_probability_expectancy_sizing_surface"
+  },
+  "promoted_default_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.05,
+      "board_breadth_min": 0.8,
+      "strong_board_uplift": 0.04,
+      "derisk_keep_fraction": 0.5,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.3083,
+    "max_drawdown": 0.1853,
+    "capture_ratio_vs_board": 0.4077,
+    "executed_order_count": 12,
+    "under_exposure_penalty": 0.867,
+    "score": 0.926369,
+    "candidate_name": "expectancy_max_injection",
+    "curve_delta_vs_baseline": 0.4682,
+    "drawdown_delta_vs_baseline": 0.0506,
+    "efficiency_score": 0.306735
+  },
+  "baseline_comparison_row": {
+    "baseline_curve": 1.8401,
+    "promoted_curve": 2.3083,
+    "curve_delta": 0.4682,
+    "baseline_max_drawdown": 0.1347,
+    "promoted_max_drawdown": 0.1853,
+    "drawdown_delta": 0.0506,
+    "promoted_capture_ratio_vs_board": 0.4077,
+    "promoted_executed_order_count": 12
+  },
+  "promotion_checks": {
+    "curve_improves_vs_baseline": true,
+    "capture_ratio_improves_vs_baseline": true,
+    "candidate_is_from_stable_zone": true,
+    "promotion_source_is_replay_validated": true,
+    "drawdown_uplift_is_positive_but_controlled": true
+  },
+  "interpretation": [
+    "V1.14E does not reopen local search. It freezes the V1.14D replay-validated winner as the default probability-expectancy sizing candidate.",
+    "The promoted default keeps the narrow hard-veto layer intact and only upgrades expression via strong-board uplift, under-exposure floor, and de-risk keep fraction.",
+    "This marks the transition from sizing discovery to sizing default posture: future audits should judge this promoted default across longer windows and harsher environments instead of repeating small local searches."
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114w_cpo_under_exposure_attribution_repaired_v1",
+    "strategy_curve_repaired": 1.7665,
+    "action_coverage_proxy_curve": 1.8301,
+    "board_equal_weight_curve": 4.2093,
+    "curve_gap_vs_action_coverage_proxy": -0.0636,
+    "curve_gap_vs_board": -2.4428,
+    "top_opportunity_miss_count": 6,
+    "primary_under_exposure_reading": "under_exposure_still_present_after_replay_integrity_repair",
+    "recommended_next_posture": "rebuild_sizing_grammar_on_repaired_replay_not_on_the_optimistic_surface"
+  },
+  "top_opportunity_miss_rows": [
+    {
+      "trade_date": "2023-05-18",
+      "board_avg_return": 0.070092,
+      "board_breadth": 0.8,
+      "gross_exposure_after_close": 0.080622,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-06-14",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "gross_exposure_after_close": 0.185538,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-09-22",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.152332,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-12-08",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "gross_exposure_after_close": 0.166214,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    },
+    {
+      "trade_date": "2024-02-06",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "gross_exposure_after_close": 0.182393,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    },
+    {
+      "trade_date": "2024-04-17",
+      "board_avg_return": 0.075345,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.089784,
+      "executed_today_order_count": 0,
+      "miss_reading": "board_strong_but_repaired_strategy_still_light"
+    }
+  ],
+  "episode_action_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_avg_return": 0.056049,
+      "board_breadth": 0.95,
+      "gross_exposure_after_close": 0.0,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2023-06-07",
+      "board_avg_return": 0.036269,
+      "board_breadth": 0.65,
+      "gross_exposure_after_close": 0.087406,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2023-12-20",
+      "board_avg_return": -0.032833,
+      "board_breadth": -0.9,
+      "gross_exposure_after_close": 0.155297,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2024-02-05",
+      "board_avg_return": -0.051245,
+      "board_breadth": -0.5,
+      "gross_exposure_after_close": 0.166559,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2024-03-15",
+      "board_avg_return": 0.031416,
+      "board_breadth": 0.7,
+      "gross_exposure_after_close": 0.243836,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2024-04-18",
+      "board_avg_return": -0.003721,
+      "board_breadth": -0.4,
+      "gross_exposure_after_close": 0.088696,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2025-06-03",
+      "board_avg_return": -0.006644,
+      "board_breadth": -0.3,
+      "gross_exposure_after_close": 0.210822,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-07-02",
+      "board_avg_return": -0.021323,
+      "board_breadth": -0.526316,
+      "gross_exposure_after_close": 0.251724,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-07-24",
+      "board_avg_return": -0.022431,
+      "board_breadth": -0.368421,
+      "gross_exposure_after_close": 0.309389,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2025-07-31",
+      "board_avg_return": 0.013546,
+      "board_breadth": 0.368421,
+      "gross_exposure_after_close": 0.400331,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-08-25",
+      "board_avg_return": 0.083989,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.504361,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-08-28",
+      "board_avg_return": 0.093034,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.532764,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-08-29",
+      "board_avg_return": -0.001126,
+      "board_breadth": -0.3,
+      "gross_exposure_after_close": 0.531381,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-09-08",
+      "board_avg_return": -0.04194,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.514724,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-09-12",
+      "board_avg_return": 0.002904,
+      "board_breadth": -0.2,
+      "gross_exposure_after_close": 0.547238,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2025-09-29",
+      "board_avg_return": 0.022276,
+      "board_breadth": 0.7,
+      "gross_exposure_after_close": 0.435012,
+      "planned_order_count": 1
+    },
+    {
+      "trade_date": "2025-10-31",
+      "board_avg_return": -0.044672,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.272787,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2025-12-19",
+      "board_avg_return": -0.005626,
+      "board_breadth": -0.2,
+      "gross_exposure_after_close": 0.295795,
+      "planned_order_count": 0
+    },
+    {
+      "trade_date": "2026-01-06",
+      "board_avg_return": -0.019078,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.305501,
+      "planned_order_count": 0
+    }
+  ],
+  "interpretation": [
+    "V1.14W reruns the core under-exposure judgement on the repaired replay surface.",
+    "The conclusion can now be trusted more than the older V1.13W line because execution timing and transaction costs are no longer optimistic.",
+    "If under-exposure still dominates here, then the sizing problem is real rather than an artifact of same-day execution assumptions."
+  ]
+}

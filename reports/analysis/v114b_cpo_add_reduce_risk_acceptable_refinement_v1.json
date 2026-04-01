@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114b_cpo_add_reduce_risk_acceptable_refinement_v1",
+    "tested_local_config_count": 576,
+    "baseline_curve": 1.8401,
+    "baseline_max_drawdown": 0.1347,
+    "curve_maximizing_curve": 2.6239,
+    "curve_maximizing_max_drawdown": 0.2092,
+    "risk_acceptable_curve": 2.2202,
+    "risk_acceptable_max_drawdown": 0.1769,
+    "recommended_curve": 2.623,
+    "recommended_max_drawdown": 0.2093,
+    "recommended_capture_ratio_vs_board": 0.5057,
+    "recommended_next_posture": "inject_recommended_risk_acceptable_add_reduce_policy_into_replay_before_more_symbol_expansion"
+  },
+  "recommended_config_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.03,
+      "board_breadth_min": 0.8,
+      "strong_board_uplift": 0.05,
+      "derisk_keep_fraction": 0.7,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.623,
+    "max_drawdown": 0.2093,
+    "capture_ratio_vs_board": 0.5057,
+    "executed_order_count": 16,
+    "under_exposure_penalty": 1.0581,
+    "score": 1.181521,
+    "efficiency_score": 0.573215
+  },
+  "curve_maximizing_config_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.03,
+      "board_breadth_min": 0.6,
+      "strong_board_uplift": 0.05,
+      "derisk_keep_fraction": 0.7,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.6239,
+    "max_drawdown": 0.2092,
+    "capture_ratio_vs_board": 0.506,
+    "executed_order_count": 15,
+    "under_exposure_penalty": 1.6662,
+    "score": 1.033212
+  },
+  "risk_acceptable_config_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.05,
+      "board_breadth_min": 0.6,
+      "strong_board_uplift": 0.03,
+      "derisk_keep_fraction": 0.7,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.2202,
+    "max_drawdown": 0.1769,
+    "capture_ratio_vs_board": 0.3802,
+    "executed_order_count": 11,
+    "under_exposure_penalty": 1.0198,
+    "score": 0.80548
+  },
+  "frontier_rows": [
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.7,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.623,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.5057,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.181521,
+      "efficiency_score": 0.573215
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.6172,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.5039,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.175028,
+      "efficiency_score": 0.567055
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.6084,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.5012,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.16529,
+      "efficiency_score": 0.557715
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.4,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.5996,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.4984,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.155551,
+      "efficiency_score": 0.548355
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.7,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.59,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.4954,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.144876,
+      "efficiency_score": 0.538155
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.5841,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.4936,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.138384,
+      "efficiency_score": 0.531895
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.5754,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.4909,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.128645,
+      "efficiency_score": 0.522655
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.7,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.7,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.6239,
+      "max_drawdown": 0.2092,
+      "capture_ratio_vs_board": 0.506,
+      "executed_order_count": 15,
+      "under_exposure_penalty": 1.3453,
+      "score": 1.11344,
+      "efficiency_score": 0.518825
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.4,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.5666,
+      "max_drawdown": 0.2093,
+      "capture_ratio_vs_board": 0.4881,
+      "executed_order_count": 16,
+      "under_exposure_penalty": 1.0581,
+      "score": 1.118907,
+      "efficiency_score": 0.513295
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.03,
+        "board_breadth_min": 0.7,
+        "strong_board_uplift": 0.05,
+        "derisk_keep_fraction": 0.6,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.6181,
+      "max_drawdown": 0.2092,
+      "capture_ratio_vs_board": 0.5042,
+      "executed_order_count": 15,
+      "under_exposure_penalty": 1.3453,
+      "score": 1.106947,
+      "efficiency_score": 0.512665
+    }
+  ],
+  "interpretation": [
+    "V1.14B does not reopen stock selection. It only refines the V1.14A sizing seed around the few parameters that determine whether stronger expression is still risk-acceptable.",
+    "The purpose is to separate three concepts that were previously mixed together: the curve-maximizing point, the risk-acceptable point, and the actual recommended point for replay injection.",
+    "This keeps the add/reduce learning path auditable while avoiding the false choice between full aggression and a return to chronically timid sizing."
+  ]
+}

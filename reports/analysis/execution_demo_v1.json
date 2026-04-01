@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "intent_count": 2,
+    "planned_order_count": 2,
+    "blocked_intent_count": 0,
+    "accepted_symbols": [
+      "300308",
+      "300757"
+    ],
+    "blocked_symbols": []
+  },
+  "orders": [
+    {
+      "trade_date": "2026-03-31",
+      "symbol": "300757",
+      "action": "buy",
+      "quantity": 1000,
+      "reference_price": 24.5,
+      "notional": 24500.0,
+      "posture": "de_risk",
+      "source": "packaging_admission_extension",
+      "rationale": "controlled packaging admission extension"
+    },
+    {
+      "trade_date": "2026-03-31",
+      "symbol": "300308",
+      "action": "sell",
+      "quantity": 500,
+      "reference_price": 180.0,
+      "notional": 90000.0,
+      "posture": "de_risk",
+      "source": "core_leader_holding_veto",
+      "rationale": "state-conditioned holding veto"
+    }
+  ],
+  "blocked_intents": [],
+  "audit_events": [
+    {
+      "event_type": "order_planned",
+      "symbol": "300757",
+      "action": "buy",
+      "accepted": true,
+      "reasons": [
+        "strategy_intraday_drawdown_limit"
+      ],
+      "payload": {
+        "quantity": 1000,
+        "reference_price": 24.5,
+        "notional": 24500.0,
+        "risk_posture": "de_risk"
+      }
+    },
+    {
+      "event_type": "order_planned",
+      "symbol": "300308",
+      "action": "sell",
+      "accepted": true,
+      "reasons": [
+        "strategy_intraday_drawdown_limit"
+      ],
+      "payload": {
+        "quantity": 500,
+        "reference_price": 180.0,
+        "notional": 90000.0,
+        "risk_posture": "de_risk"
+      }
+    }
+  ]
+}

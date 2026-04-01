@@ -1,0 +1,12 @@
+project:
+  name: a_share_quant
+  protocol_version: v113m_board_level_training_table_assembly_v1
+
+paths:
+  v113i_report: reports/analysis/v113i_board_level_owner_labeling_protocol_v1.json
+  v113k_report: reports/analysis/v113k_cpo_world_model_asset_mapping_v1.json
+  v113l_report: reports/analysis/v113l_no_leak_board_level_training_schema_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113m_board_level_training_table_assembly_v1

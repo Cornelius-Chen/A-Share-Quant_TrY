@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v115m_cpo_intraday_strict_band_overlay_audit_v1",
+    "strict_add_band_count": 2,
+    "top_miss_day_count": 6,
+    "top_miss_add_row_count": 10,
+    "strict_hit_miss_day_count": 2,
+    "strict_hit_miss_row_count": 4,
+    "strict_hit_rate_vs_top_miss_days": 0.333333,
+    "strict_hit_rate_vs_top_miss_rows": 0.4,
+    "strict_hit_expectancy_mean": 0.101147,
+    "strict_hit_adverse_mean": -0.043511,
+    "all_top_miss_expectancy_mean": 0.075894,
+    "all_top_miss_adverse_mean": -0.056003,
+    "strict_add_leakage_into_entry_rate": 0.875,
+    "strict_add_leakage_into_close_rate": 0.035294,
+    "strict_add_leakage_into_reduce_rate": 0.0,
+    "recommended_next_posture": "strict_bands_can_only_be_tested_as_held_position_overlay_not_as_new_entry_law",
+    "candidate_only_overlay": true
+  },
+  "strict_overlay_hit_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "forward_close_return_3d": 0.194996,
+      "pc1_score": -1525476848.720842,
+      "pc2_score": -253187335.529625
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "forward_close_return_3d": 0.166394,
+      "pc1_score": -1800477055.12504,
+      "pc2_score": -346959614.839558
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "forward_close_return_3d": -0.032753,
+      "pc1_score": -1992500112.932291,
+      "pc2_score": -107289225.297168
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "forward_close_return_3d": -0.011698,
+      "pc1_score": -1686518902.258994,
+      "pc2_score": -327415092.587374
+    }
+  ],
+  "miss_day_uplift_rows": [
+    {
+      "trade_date": "2023-06-14",
+      "strict_hit_symbol_count": 2,
+      "strict_hit_symbols": "300308,300502",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "current_gross_exposure_after_close": 0.185538,
+      "target_gross_exposure_floor_from_v114x": 0.45,
+      "gross_exposure_gap_to_floor": 0.264462,
+      "strict_hit_expectancy_mean": 0.246226,
+      "strict_hit_adverse_mean": -0.044485
+    },
+    {
+      "trade_date": "2023-12-08",
+      "strict_hit_symbol_count": 2,
+      "strict_hit_symbols": "300308,300502",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "current_gross_exposure_after_close": 0.166214,
+      "target_gross_exposure_floor_from_v114x": 0.45,
+      "gross_exposure_gap_to_floor": 0.283786,
+      "strict_hit_expectancy_mean": -0.043932,
+      "strict_hit_adverse_mean": -0.042536
+    }
+  ],
+  "context_leakage_rows": [
+    {
+      "action_context": "add_vs_hold",
+      "row_count": 17,
+      "strict_add_band_rate": 0.529412,
+      "avg_expectancy_proxy_3d_when_strict": 0.089492,
+      "avg_max_adverse_return_3d_when_strict": -0.033251
+    },
+    {
+      "action_context": "close_vs_hold",
+      "row_count": 85,
+      "strict_add_band_rate": 0.035294,
+      "avg_expectancy_proxy_3d_when_strict": -0.010144,
+      "avg_max_adverse_return_3d_when_strict": -0.039134
+    },
+    {
+      "action_context": "entry_vs_skip",
+      "row_count": 8,
+      "strict_add_band_rate": 0.875,
+      "avg_expectancy_proxy_3d_when_strict": 0.131166,
+      "avg_max_adverse_return_3d_when_strict": -0.040943
+    },
+    {
+      "action_context": "reduce_vs_hold",
+      "row_count": 340,
+      "strict_add_band_rate": 0.0,
+      "avg_expectancy_proxy_3d_when_strict": 0.0,
+      "avg_max_adverse_return_3d_when_strict": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.15M audits only the strict add bands from V115L against repaired miss days; it does not bind them into replay law.",
+    "The strict overlay is cleaner than the permissive V115K add posture, but it only covers a subset of repaired miss days.",
+    "Because strict add bands still leak heavily into entry_vs_skip, the next replay-facing test must stay constrained to already-held mature names rather than opening fresh admissions from intraday bands."
+  ]
+}

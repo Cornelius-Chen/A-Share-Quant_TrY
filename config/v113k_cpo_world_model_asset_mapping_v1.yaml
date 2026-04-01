@@ -1,0 +1,13 @@
+project:
+  name: a_share_quant
+  protocol_version: v113k_cpo_world_model_asset_mapping_v1
+
+paths:
+  v113j_report: reports/analysis/v113j_board_research_world_model_protocol_v1.json
+  v112cw_report: reports/analysis/v112cw_packaging_mainline_extension_status_freeze_v1.json
+  v112cx_report: reports/analysis/v112cx_core_leader_holding_veto_promotion_review_v1.json
+  v112cs_report: reports/analysis/v112cs_core_residual_stack_status_freeze_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v113k_cpo_world_model_asset_mapping_v1

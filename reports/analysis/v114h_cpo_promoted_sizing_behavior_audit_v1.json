@@ -1,0 +1,409 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114h_cpo_promoted_sizing_behavior_audit_v1",
+    "baseline_curve": 1.8401,
+    "promoted_curve": 2.3083,
+    "baseline_max_drawdown": 0.1347,
+    "promoted_max_drawdown": 0.1853,
+    "strong_board_day_count": 41,
+    "improved_expression_day_count": 24,
+    "remaining_under_exposed_strong_day_count": 14,
+    "recommended_next_posture": "use_v114h_behavior_audit_to_target_next_add_reduce_and_market_voice_learning"
+  },
+  "behavior_summary": {
+    "strong_board_day_count": 41,
+    "improved_expression_day_count": 24,
+    "remaining_under_exposed_strong_day_count": 14,
+    "promoted_action_count": 12,
+    "add_like_action_count": 4,
+    "reduce_like_action_count": 1
+  },
+  "top_improved_expression_rows": [
+    {
+      "trade_date": "2025-09-05",
+      "board_avg_return": 0.063017,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.551646,
+      "promoted_exposure": 0.746504,
+      "exposure_delta": 0.194858,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757",
+        "688498"
+      ]
+    },
+    {
+      "trade_date": "2025-08-28",
+      "board_avg_return": 0.093034,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.55249,
+      "promoted_exposure": 0.744741,
+      "exposure_delta": 0.192251,
+      "action_count": 1,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757",
+        "688498"
+      ]
+    },
+    {
+      "trade_date": "2025-09-11",
+      "board_avg_return": 0.085152,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.572427,
+      "promoted_exposure": 0.761398,
+      "exposure_delta": 0.188971,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757",
+        "688498"
+      ]
+    },
+    {
+      "trade_date": "2025-12-22",
+      "board_avg_return": 0.05541,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.327861,
+      "promoted_exposure": 0.479786,
+      "exposure_delta": 0.151925,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502",
+        "300757",
+        "688498"
+      ]
+    },
+    {
+      "trade_date": "2025-08-13",
+      "board_avg_return": 0.071964,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.444879,
+      "promoted_exposure": 0.582738,
+      "exposure_delta": 0.137859,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757"
+      ]
+    },
+    {
+      "trade_date": "2025-08-18",
+      "board_avg_return": 0.060368,
+      "board_breadth": 0.8,
+      "baseline_exposure": 0.450146,
+      "promoted_exposure": 0.587994,
+      "exposure_delta": 0.137848,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757"
+      ]
+    },
+    {
+      "trade_date": "2025-08-25",
+      "board_avg_return": 0.083989,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.505372,
+      "promoted_exposure": 0.6402,
+      "exposure_delta": 0.134828,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502",
+        "300757"
+      ]
+    },
+    {
+      "trade_date": "2025-07-17",
+      "board_avg_return": 0.052227,
+      "board_breadth": 0.9,
+      "baseline_exposure": 0.31129,
+      "promoted_exposure": 0.428262,
+      "exposure_delta": 0.116972,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502",
+        "300757"
+      ]
+    },
+    {
+      "trade_date": "2024-10-18",
+      "board_avg_return": 0.07942,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.29632,
+      "promoted_exposure": 0.409463,
+      "exposure_delta": 0.113143,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502",
+        "300757"
+      ]
+    },
+    {
+      "trade_date": "2025-07-15",
+      "board_avg_return": 0.059338,
+      "board_breadth": 0.8,
+      "baseline_exposure": 0.285393,
+      "promoted_exposure": 0.397918,
+      "exposure_delta": 0.112525,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502",
+        "300757"
+      ]
+    }
+  ],
+  "remaining_under_exposed_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_avg_return": 0.056049,
+      "board_breadth": 0.95,
+      "promoted_exposure": 0.096586,
+      "under_exposure_gap": 0.153414,
+      "action_count": 1,
+      "holding_symbols_after_close": [
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-05-18",
+      "board_avg_return": 0.070092,
+      "board_breadth": 0.8,
+      "promoted_exposure": 0.102566,
+      "under_exposure_gap": 0.147434,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-04-17",
+      "board_avg_return": 0.075345,
+      "board_breadth": 1.0,
+      "promoted_exposure": 0.138656,
+      "under_exposure_gap": 0.111344,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-11-07",
+      "board_avg_return": 0.056135,
+      "board_breadth": 0.8,
+      "promoted_exposure": 0.182512,
+      "under_exposure_gap": 0.067488,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-09-22",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "promoted_exposure": 0.200496,
+      "under_exposure_gap": 0.049504,
+      "action_count": 1,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-06-14",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "promoted_exposure": 0.205665,
+      "under_exposure_gap": 0.044335,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-01-18",
+      "board_avg_return": 0.055752,
+      "board_breadth": 1.0,
+      "promoted_exposure": 0.213092,
+      "under_exposure_gap": 0.036908,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-01-23",
+      "board_avg_return": 0.051433,
+      "board_breadth": 1.0,
+      "promoted_exposure": 0.21983,
+      "under_exposure_gap": 0.03017,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-12-08",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "promoted_exposure": 0.221332,
+      "under_exposure_gap": 0.028668,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-02-06",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "promoted_exposure": 0.222588,
+      "under_exposure_gap": 0.027412,
+      "action_count": 0,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    }
+  ],
+  "promoted_action_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "symbol": "300502",
+      "action_mode": "open",
+      "quantity": 1400,
+      "price": 68.99,
+      "notional": 96586.0,
+      "source": "high_beta_core_module:eligibility",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2023-06-07",
+      "symbol": "300308",
+      "action_mode": "open",
+      "quantity": 900,
+      "price": 108.11,
+      "notional": 97299.0,
+      "source": "core_module_leader:eligibility",
+      "board_strong": false
+    },
+    {
+      "trade_date": "2023-06-16",
+      "symbol": "300502",
+      "action_mode": "add",
+      "quantity": 100,
+      "price": 68.64,
+      "notional": 6864.0,
+      "source": "high_beta_core_module:board_strength_add",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2023-09-22",
+      "symbol": "300502",
+      "action_mode": "add",
+      "quantity": 600,
+      "price": 44.64,
+      "notional": 26784.0,
+      "source": "high_beta_core_module:board_strength_add",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300308",
+      "action_mode": "close",
+      "quantity": 900,
+      "price": 177.36,
+      "notional": 159624.0,
+      "source": "core_module_leader:holding_veto",
+      "board_strong": false
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "action_mode": "open",
+      "quantity": 800,
+      "price": 106.13,
+      "notional": 84904.0,
+      "source": "packaging_process_enabler:eligibility",
+      "board_strong": false
+    },
+    {
+      "trade_date": "2024-06-14",
+      "symbol": "300757",
+      "action_mode": "add",
+      "quantity": 400,
+      "price": 90.63,
+      "notional": 36252.0,
+      "source": "packaging_process_enabler:board_strength_add",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2024-07-09",
+      "symbol": "300757",
+      "action_mode": "add",
+      "quantity": 100,
+      "price": 83.87,
+      "notional": 8387.0,
+      "source": "packaging_process_enabler:board_strength_add",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2025-07-24",
+      "symbol": "300308",
+      "action_mode": "open",
+      "quantity": 700,
+      "price": 185.2,
+      "notional": 129640.0,
+      "source": "core_module_leader:eligibility",
+      "board_strong": false
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "688498",
+      "action_mode": "open",
+      "quantity": 500,
+      "price": 315.59,
+      "notional": 157795.0,
+      "source": "laser_chip_component:eligibility",
+      "board_strong": true
+    },
+    {
+      "trade_date": "2025-09-12",
+      "symbol": "300308",
+      "action_mode": "close",
+      "quantity": 700,
+      "price": 422.09,
+      "notional": 295463.0,
+      "source": "core_module_leader:holding_veto",
+      "board_strong": false
+    },
+    {
+      "trade_date": "2025-09-29",
+      "symbol": "300502",
+      "action_mode": "reduce",
+      "quantity": 1000,
+      "price": 388.28,
+      "notional": 388280.0,
+      "source": "high_beta_core_module:de_risk",
+      "board_strong": false
+    }
+  ],
+  "interpretation": [
+    "V1.14H audits the promoted default sizing candidate day by day instead of only comparing end-point curves.",
+    "The goal is to isolate where promoted sizing actually fixed under-exposure, where it still leaves too much board strength uncaptured, and where stronger expression might be crossing into unnecessary aggression.",
+    "This converts the sizing promotion from a parameter result into an observable daily behavior profile that can guide the next market-voice and state-transition learning steps."
+  ]
+}

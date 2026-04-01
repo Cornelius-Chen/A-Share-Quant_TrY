@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114g_multi_board_autonomous_research_queue_seed_v1",
+    "board_queue_count": 1,
+    "autonomous_queue_ready": true,
+    "recommended_next_posture": "start_autonomous_board_worker_from_queue_head"
+  },
+  "queue_rows": [
+    {
+      "queue_order": 1,
+      "board_name": "CPO",
+      "queue_status": "queued",
+      "next_phase": "board_world_model",
+      "run_until": "terminal_status_or_hard_stop"
+    }
+  ],
+  "interpretation": [
+    "V1.14G seeds the first board queue under the V1.14F bounded autonomous research protocol.",
+    "Each queued board is expected to run through the full research stack without a new user prompt until it reaches terminal status or a hard stop.",
+    "The queue is deliberately explicit so the orchestrator can be audited and extended board by board without losing run order."
+  ]
+}

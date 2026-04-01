@@ -1,0 +1,15 @@
+project:
+  name: a_share_quant
+  protocol_version: v114g_multi_board_autonomous_research_queue_seed_v1
+
+inputs:
+  board_queue:
+    - CPO
+
+paths:
+  v114f_report: reports/analysis/v114f_multi_board_autonomous_research_orchestrator_protocol_v1.json
+  reports_dir: reports/analysis
+
+report:
+  name: v114g_multi_board_autonomous_research_queue_seed_v1
+

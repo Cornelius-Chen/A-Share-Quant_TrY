@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116b_cpo_three_run_adversarial_triage_v1",
+    "triage_window": [
+      "V115P",
+      "V115Q",
+      "V115R"
+    ],
+    "reviewer_count": 3,
+    "retained_conclusion_count": 3,
+    "do_not_promote_count": 3,
+    "hard_constraint_count": 3,
+    "recommended_next_posture": "continue_candidate_revalidation_under_no_future_label_filter_constraint"
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "axis": "methodology_and_overfit",
+      "finding": "The broader timing-aware line is still being judged on a very small reused sample. V115Q widens to only 9 strict add contexts, while V115P still relies on 4 overlay orders.",
+      "evidence": {
+        "V115Q.strict_add_context_row_count": 9,
+        "V115P.strict_overlay_order_count": 4
+      }
+    },
+    {
+      "severity": "high",
+      "axis": "execution_and_timing_realism",
+      "finding": "Timing-aware execution is directionally correct, but checkpoint and fill timing remain optimistic enough to require candidate-only treatment.",
+      "evidence": {
+        "V115Q.intraday_same_session_count": 9,
+        "V115P.timing_bucket_used": "intraday_same_session_next_30m_bar_open",
+        "V115P.final_equity_delta_vs_baseline": 661089.7143
+      }
+    },
+    {
+      "severity": "high",
+      "axis": "training_and_label_quality",
+      "finding": "Future-looking labels are still bleeding into filter definitions. In V115R, positive_expectancy_only and action_favored_only are useful for audit, but not legal execution filters.",
+      "evidence": {
+        "V115Q.positive_expectancy_count": 5,
+        "V115Q.action_favored_count": 3,
+        "V115R.best_variant_by_equity": "all_strict_add_context"
+      }
+    }
+  ],
+  "retained_conclusions": [
+    {
+      "statement": "Strict intraday add-band signals are genuinely intraday-visible in the current CPO sample and should not be forced into a uniform T+1-open bucket.",
+      "evidence": {
+        "V115Q.intraday_same_session_count": 9,
+        "V115Q.post_close_or_next_day_count": 0
+      }
+    },
+    {
+      "statement": "Timing-aware execution has real candidate value on top of the repaired replay.",
+      "evidence": {
+        "V115P.baseline_final_equity": 1766466.6096,
+        "V115P.timing_aware_overlay_final_equity": 2427556.3239,
+        "V115P.timing_aware_overlay_max_drawdown": 0.192519
+      }
+    },
+    {
+      "statement": "Broader timing-aware overlay variants should be retained in parallel rather than collapsed into a single promoted law.",
+      "evidence": {
+        "V115R.variant_count": 4,
+        "V115R.cleanest_variant_by_drawdown": "positive_expectancy_only"
+      }
+    }
+  ],
+  "do_not_promote": [
+    {
+      "target": "V115R:all_strict_add_context",
+      "reason": "Highest equity but too permissive; it admits negative-expectancy strict hits and remains highly sample-bound.",
+      "evidence": {
+        "variant_name": "all_strict_add_context",
+        "candidate_signal_count": 9,
+        "executed_order_count": 6,
+        "final_equity": 2520044.0452,
+        "equity_delta_vs_baseline": 753577.4356,
+        "max_drawdown": 0.162126,
+        "overlay_total_transaction_cost": 217.6149
+      }
+    },
+    {
+      "target": "V115R:positive_expectancy_only",
+      "reason": "Cleaner than the raw broader variant, but it still uses future outcome labels in the filter definition and therefore cannot be promoted as executable law.",
+      "evidence": {
+        "variant_name": "positive_expectancy_only",
+        "candidate_signal_count": 5,
+        "executed_order_count": 3,
+        "final_equity": 2277636.3494,
+        "equity_delta_vs_baseline": 511169.7398,
+        "max_drawdown": 0.156924,
+        "overlay_total_transaction_cost": 99.1823
+      }
+    },
+    {
+      "target": "V115R:action_favored_only / positive_and_favored",
+      "reason": "Both rely on post-hoc labels and remain audit-only filters.",
+      "evidence": [
+        {
+          "variant_name": "action_favored_only",
+          "candidate_signal_count": 3,
+          "executed_order_count": 3,
+          "final_equity": 2072331.5939,
+          "equity_delta_vs_baseline": 305864.9843,
+          "max_drawdown": 0.162126,
+          "overlay_total_transaction_cost": 122.2453
+        },
+        {
+          "variant_name": "positive_and_favored",
+          "candidate_signal_count": 3,
+          "executed_order_count": 3,
+          "final_equity": 2072331.5939,
+          "equity_delta_vs_baseline": 305864.9843,
+          "max_drawdown": 0.162126,
+          "overlay_total_transaction_cost": 122.2453
+        }
+      ]
+    }
+  ],
+  "hard_constraints": [
+    {
+      "constraint_id": "no_future_label_in_filter_definition",
+      "priority": 1,
+      "statement": "Any intraday overlay filter may use only point-in-time-visible fields. expectancy_proxy_3d and action_favored_3d are audit-only labels and are forbidden inside executable filter definitions."
+    },
+    {
+      "constraint_id": "keep_intraday_line_held_position_only",
+      "priority": 2,
+      "statement": "Until broader revalidation succeeds, timing-aware intraday overlays remain held-position only and cannot open fresh admissions."
+    },
+    {
+      "constraint_id": "retain_parallel_candidate_postures",
+      "priority": 3,
+      "statement": "Carry broader timing-aware variants in parallel and compare them under future repaired-window validation rather than collapsing them into one promoted law."
+    }
+  ],
+  "interpretation": [
+    "V1.16B turns the first three-run adversarial review into a formal triage object rather than leaving the critique in chat only.",
+    "The triage does not reverse the timing-aware direction, but it sharply narrows what may be treated as executable versus what must stay audit-only.",
+    "The single most important brake is now explicit: future-looking action labels may grade intraday filters after the fact, but may not define them."
+  ]
+}

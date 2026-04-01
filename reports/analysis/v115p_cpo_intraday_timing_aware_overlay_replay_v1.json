@@ -1,0 +1,87 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v115p_cpo_intraday_timing_aware_overlay_replay_v1",
+    "candidate_only_overlay": true,
+    "overlay_scope": "strict_add_bands_on_already_held_mature_names_only",
+    "timing_bucket_used": "intraday_same_session_next_30m_bar_open",
+    "strict_overlay_order_count": 4,
+    "baseline_final_equity": 1766466.6096,
+    "timing_aware_overlay_final_equity": 2427556.3239,
+    "final_equity_delta_vs_baseline": 661089.7143,
+    "baseline_max_drawdown": 0.134272,
+    "timing_aware_overlay_max_drawdown": 0.192519,
+    "overlay_total_transaction_cost": 129.3357,
+    "recommended_next_posture": "treat_timing_aware_intraday_overlay_as_candidate_execution_semantics_not_as_promoted_law"
+  },
+  "overlay_order_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 89.1513,
+      "notional": 53490.7616,
+      "commission": 16.0472,
+      "stamp_tax": 0.0,
+      "slippage": 26.7454,
+      "total_cost": 42.7926,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "overlay_posture": "strict_intraday_timing_aware_add_only"
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 800,
+      "execution_price": 43.8707,
+      "notional": 35096.5264,
+      "commission": 10.529,
+      "stamp_tax": 0.0,
+      "slippage": 17.5483,
+      "total_cost": 28.0772,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "overlay_posture": "strict_intraday_timing_aware_add_only"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 77.5011,
+      "notional": 46500.686,
+      "commission": 13.9502,
+      "stamp_tax": 0.0,
+      "slippage": 23.2503,
+      "total_cost": 37.2005,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "overlay_posture": "strict_intraday_timing_aware_add_only"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 700,
+      "execution_price": 37.9739,
+      "notional": 26581.7112,
+      "commission": 7.9745,
+      "stamp_tax": 0.0,
+      "slippage": 13.2909,
+      "total_cost": 21.2654,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "overlay_posture": "strict_intraday_timing_aware_add_only"
+    }
+  ],
+  "interpretation": [
+    "V1.15P replaces the conservative T+1-open execution assumption with a same-session next-30min-bar-open fill, but only for strict signals that V115O proves are already visible intraday.",
+    "This remains a narrow held-position overlay and does not open fresh names or override baseline sell-side controls.",
+    "The comparison against V114T shows how much of the previous underestimation came from forcing intraday signals into a next-day execution bucket."
+  ]
+}

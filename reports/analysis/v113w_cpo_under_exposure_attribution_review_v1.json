@@ -1,0 +1,350 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113w_cpo_under_exposure_attribution_review_v1",
+    "strategy_curve": 1.8401,
+    "board_equal_weight_curve": 4.2093,
+    "curve_gap_vs_board": -2.3692,
+    "strategy_max_drawdown": 0.1347,
+    "board_equal_weight_max_drawdown": 0.4646,
+    "top_opportunity_miss_count": 6,
+    "episode_action_day_count": 19,
+    "post_exit_follow_through_count": 4,
+    "primary_under_exposure_reading": "low_coverage_and_low_sizing_dominate_more_than_exit_damage",
+    "recommended_next_posture": "open_probability_expectancy_sizing_framework_review_before_expanding_more_symbol_logic"
+  },
+  "key_findings": [
+    "The main drag is not chronic sell-too-early behaviour. The main drag is persistent low exposure on very strong board days.",
+    "Most opportunity misses happened when board breadth and average return were already very strong while gross exposure still sat below 0.2.",
+    "Core-leader exits contributed some missed follow-through, but they are secondary to admission and sizing conservatism.",
+    "Current profit is concentrated in a few names, which confirms that action logic is still sparse relative to the full board environment."
+  ],
+  "top_opportunity_miss_rows": [
+    {
+      "trade_date": "2023-09-22",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.152759,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "300502",
+        "000988",
+        "300394",
+        "300548"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    },
+    {
+      "trade_date": "2024-02-06",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "gross_exposure_after_close": 0.182902,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "300502",
+        "603083",
+        "300394",
+        "000988"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-12-08",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "gross_exposure_after_close": 0.166673,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "300502",
+        "300394",
+        "000988",
+        "002281"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    },
+    {
+      "trade_date": "2024-04-17",
+      "board_avg_return": 0.075345,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.090098,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "300394",
+        "300502",
+        "000988",
+        "002281"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-05-18",
+      "board_avg_return": 0.070092,
+      "board_breadth": 0.8,
+      "gross_exposure_after_close": 0.080702,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "300502",
+        "603083",
+        "300394",
+        "002281"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    },
+    {
+      "trade_date": "2023-06-14",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "gross_exposure_after_close": 0.186038,
+      "episode_count": 0,
+      "planned_order_count": 0,
+      "top_turnover_symbols": [
+        "300308",
+        "603083",
+        "000988",
+        "300502",
+        "002281"
+      ],
+      "miss_reading": "board_strong_but_strategy_still_light"
+    }
+  ],
+  "episode_action_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_avg_return": 0.056049,
+      "board_breadth": 0.95,
+      "gross_exposure_after_close": 0.075889,
+      "planned_order_count": 1,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2023-06-07",
+      "board_avg_return": 0.036269,
+      "board_breadth": 0.65,
+      "gross_exposure_after_close": 0.18357,
+      "planned_order_count": 1,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2023-12-20",
+      "board_avg_return": -0.032833,
+      "board_breadth": -0.9,
+      "gross_exposure_after_close": 0.168297,
+      "planned_order_count": 1,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2024-02-05",
+      "board_avg_return": -0.051245,
+      "board_breadth": -0.5,
+      "gross_exposure_after_close": 0.167034,
+      "planned_order_count": 0,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2024-03-15",
+      "board_avg_return": 0.031416,
+      "board_breadth": 0.7,
+      "gross_exposure_after_close": 0.096399,
+      "planned_order_count": 1,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2024-04-18",
+      "board_avg_return": -0.003721,
+      "board_breadth": -0.4,
+      "gross_exposure_after_close": 0.178332,
+      "planned_order_count": 1,
+      "sizing_reading": "under_exposed"
+    },
+    {
+      "trade_date": "2025-06-03",
+      "board_avg_return": -0.006644,
+      "board_breadth": -0.3,
+      "gross_exposure_after_close": 0.211515,
+      "planned_order_count": 0,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2025-07-02",
+      "board_avg_return": -0.021323,
+      "board_breadth": -0.526316,
+      "gross_exposure_after_close": 0.252508,
+      "planned_order_count": 0,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2025-07-24",
+      "board_avg_return": -0.022431,
+      "board_breadth": -0.368421,
+      "gross_exposure_after_close": 0.38297,
+      "planned_order_count": 1,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2025-07-31",
+      "board_avg_return": 0.013546,
+      "board_breadth": 0.368421,
+      "gross_exposure_after_close": 0.401303,
+      "planned_order_count": 0,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-08-25",
+      "board_avg_return": 0.083989,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.505372,
+      "planned_order_count": 0,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-08-28",
+      "board_avg_return": 0.093034,
+      "board_breadth": 1.0,
+      "gross_exposure_after_close": 0.55249,
+      "planned_order_count": 1,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-08-29",
+      "board_avg_return": -0.001126,
+      "board_breadth": -0.3,
+      "gross_exposure_after_close": 0.550719,
+      "planned_order_count": 0,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-09-08",
+      "board_avg_return": -0.04194,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.535418,
+      "planned_order_count": 0,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-09-12",
+      "board_avg_return": 0.002904,
+      "board_breadth": -0.2,
+      "gross_exposure_after_close": 0.507375,
+      "planned_order_count": 1,
+      "sizing_reading": "high_expression"
+    },
+    {
+      "trade_date": "2025-09-29",
+      "board_avg_return": 0.022276,
+      "board_breadth": 0.7,
+      "gross_exposure_after_close": 0.382651,
+      "planned_order_count": 1,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2025-10-31",
+      "board_avg_return": -0.044672,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.365377,
+      "planned_order_count": 0,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2025-12-19",
+      "board_avg_return": -0.005626,
+      "board_breadth": -0.2,
+      "gross_exposure_after_close": 0.318285,
+      "planned_order_count": 1,
+      "sizing_reading": "medium_expression"
+    },
+    {
+      "trade_date": "2026-01-06",
+      "board_avg_return": -0.019078,
+      "board_breadth": -0.8,
+      "gross_exposure_after_close": 0.328378,
+      "planned_order_count": 0,
+      "sizing_reading": "medium_expression"
+    }
+  ],
+  "post_exit_follow_through_rows": [
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300308",
+      "source": "core_module_leader:holding_veto",
+      "action_mode": "close",
+      "next5_board_avg_sum": 0.022948,
+      "next5_trade_day_count": 5,
+      "follow_reading": "post_exit_board_follow_through_positive"
+    },
+    {
+      "trade_date": "2025-09-12",
+      "symbol": "300308",
+      "source": "core_module_leader:holding_veto",
+      "action_mode": "close",
+      "next5_board_avg_sum": 0.093857,
+      "next5_trade_day_count": 5,
+      "follow_reading": "post_exit_board_follow_through_positive"
+    },
+    {
+      "trade_date": "2025-09-29",
+      "symbol": "300502",
+      "source": "high_beta_core_module:de_risk",
+      "action_mode": "reduce",
+      "next5_board_avg_sum": -0.15639,
+      "next5_trade_day_count": 5,
+      "follow_reading": "post_exit_board_follow_through_negative"
+    },
+    {
+      "trade_date": "2025-12-19",
+      "symbol": "300308",
+      "source": "core_module_leader:holding_veto",
+      "action_mode": "close",
+      "next5_board_avg_sum": 0.036798,
+      "next5_trade_day_count": 5,
+      "follow_reading": "post_exit_board_follow_through_positive"
+    }
+  ],
+  "symbol_pnl_rows": [
+    {
+      "symbol": "300308",
+      "position_quantity": 0,
+      "remaining_cost": 0.0,
+      "avg_cost": 0.0,
+      "realized_pnl": 218172.5,
+      "turnover": 597970.5
+    },
+    {
+      "symbol": "300502",
+      "position_quantity": 750,
+      "remaining_cost": 48996.6667,
+      "avg_cost": 65.3289,
+      "realized_pnl": 193770.6667,
+      "turnover": 321162.0
+    },
+    {
+      "symbol": "300757",
+      "position_quantity": 900,
+      "remaining_cost": 95517.0,
+      "avg_cost": 106.13,
+      "realized_pnl": 0.0,
+      "turnover": 95517.0
+    },
+    {
+      "symbol": "688498",
+      "position_quantity": 100,
+      "remaining_cost": 31559.0,
+      "avg_cost": 315.59,
+      "realized_pnl": 0.0,
+      "turnover": 31559.0
+    }
+  ],
+  "interpretation": [
+    "V1.13W reframes the replay gap as an under-exposure problem instead of a pure exit problem.",
+    "The strategy can already make money and keep drawdown contained, but it still under-converts confirmed board strength into portfolio expression.",
+    "The next layer should therefore start from probability and expectancy driven sizing, with risk limits applied as caps rather than as the primary decision driver."
+  ]
+}

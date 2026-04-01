@@ -1,0 +1,15 @@
+project:
+  name: a_share_quant
+  protocol_version: v114f_multi_board_autonomous_research_orchestrator_protocol_v1
+
+inputs:
+  default_phase_version: v1_board_research_autonomous
+  board_queue:
+    - CPO
+
+paths:
+  reports_dir: reports/analysis
+
+report:
+  name: v114f_multi_board_autonomous_research_orchestrator_protocol_v1
+

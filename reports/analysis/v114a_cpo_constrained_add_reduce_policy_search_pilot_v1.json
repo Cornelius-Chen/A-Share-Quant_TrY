@@ -1,0 +1,238 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114a_cpo_constrained_add_reduce_policy_search_pilot_v1",
+    "tested_config_count": 768,
+    "baseline_curve": 1.8401,
+    "best_curve": 2.0834,
+    "best_score": 0.670835,
+    "best_capture_ratio_vs_board": 0.3376,
+    "best_executed_order_count": 4,
+    "recommended_next_posture": "review_if_best_policy_search_candidate_is_risk_acceptable_for_replay_promotion"
+  },
+  "best_config_row": {
+    "config": {
+      "core_module_leader_base_weight": 0.1,
+      "packaging_process_enabler_base_weight": 0.08,
+      "high_beta_core_module_base_weight": 0.06,
+      "laser_chip_component_base_weight": 0.04,
+      "board_avg_return_min": 0.05,
+      "board_breadth_min": 0.6,
+      "strong_board_uplift": 0.04,
+      "derisk_keep_fraction": 0.5,
+      "under_exposure_floor": 0.25
+    },
+    "final_curve": 2.0834,
+    "max_drawdown": 0.2076,
+    "capture_ratio_vs_board": 0.3376,
+    "executed_order_count": 4,
+    "under_exposure_penalty": 0.8369,
+    "score": 0.670835
+  },
+  "best_vs_baseline_row": {
+    "baseline_curve": 1.8401,
+    "pilot_curve": 2.0834,
+    "curve_delta": 0.2433,
+    "baseline_max_drawdown": 0.1347,
+    "pilot_max_drawdown": 0.2076,
+    "max_drawdown_delta": 0.0729,
+    "capture_ratio_vs_board": 0.3376,
+    "pilot_executed_order_count": 4
+  },
+  "top_config_rows": [
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.67,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.67,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.06,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.06,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.67,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.06,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.06,
+        "laser_chip_component_base_weight": 0.06,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.8,
+        "strong_board_uplift": 0.04,
+        "derisk_keep_fraction": 0.67,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.08,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.02,
+        "derisk_keep_fraction": 0.5,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    },
+    {
+      "config": {
+        "core_module_leader_base_weight": 0.1,
+        "packaging_process_enabler_base_weight": 0.08,
+        "high_beta_core_module_base_weight": 0.08,
+        "laser_chip_component_base_weight": 0.04,
+        "board_avg_return_min": 0.05,
+        "board_breadth_min": 0.6,
+        "strong_board_uplift": 0.02,
+        "derisk_keep_fraction": 0.67,
+        "under_exposure_floor": 0.25
+      },
+      "final_curve": 2.0834,
+      "max_drawdown": 0.2076,
+      "capture_ratio_vs_board": 0.3376,
+      "executed_order_count": 4,
+      "under_exposure_penalty": 0.8369,
+      "score": 0.670835
+    }
+  ],
+  "interpretation": [
+    "V1.14A runs the first real constrained search over expression sizing, add-on strength, and de-risk keep fractions on the existing lawful CPO replay.",
+    "The search does not rewrite selection or hard-veto logic. It only searches how aggressively the current validated lines should be expressed.",
+    "This is the first concrete attempt to turn the under-exposure diagnosis into a measurable improvement candidate instead of a report-only observation."
+  ]
+}

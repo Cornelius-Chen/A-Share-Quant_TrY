@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116d_cpo_visible_only_intraday_filter_refinement_v1",
+    "baseline_final_equity": 1766466.6096,
+    "variant_count": 21,
+    "best_variant_by_equity": "all_intraday_strict_visible",
+    "cleanest_executing_variant": "pc1_only_q_0p2",
+    "recommended_next_posture": "carry_forward_visible_only_executing_variants_and_prepare_next_three_run_adversarial_review"
+  },
+  "threshold_rows": [
+    {
+      "quantile": 0.2,
+      "pc1_low_threshold": -1798303260.400405,
+      "pc2_low_threshold": -1155029336.294569
+    },
+    {
+      "quantile": 0.25,
+      "pc1_low_threshold": -1682810257.208173,
+      "pc2_low_threshold": -1017387207.524079
+    },
+    {
+      "quantile": 0.33,
+      "pc1_low_threshold": -1668820257.966658,
+      "pc2_low_threshold": -904880279.451742
+    },
+    {
+      "quantile": 0.4,
+      "pc1_low_threshold": -1595331008.540115,
+      "pc2_low_threshold": -835739062.279062
+    },
+    {
+      "quantile": 0.5,
+      "pc1_low_threshold": -1332851509.127354,
+      "pc2_low_threshold": -812314781.751103
+    }
+  ],
+  "variant_rows": [
+    {
+      "variant_name": "all_intraday_strict_visible",
+      "candidate_signal_count": 9,
+      "executed_order_count": 9,
+      "final_equity": 3124685.3884,
+      "equity_delta_vs_baseline": 1358218.7788,
+      "max_drawdown": 0.196068,
+      "overlay_total_transaction_cost": 304.158
+    },
+    {
+      "variant_name": "pc1_only_q_0p2",
+      "candidate_signal_count": 2,
+      "executed_order_count": 2,
+      "final_equity": 2083892.6364,
+      "equity_delta_vs_baseline": 317426.0268,
+      "max_drawdown": 0.15707,
+      "overlay_total_transaction_cost": 58.4659
+    },
+    {
+      "variant_name": "pc2_only_q_0p2",
+      "candidate_signal_count": 2,
+      "executed_order_count": 2,
+      "final_equity": 2047424.0729,
+      "equity_delta_vs_baseline": 280957.4633,
+      "max_drawdown": 0.163868,
+      "overlay_total_transaction_cost": 35.4176
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p2",
+      "candidate_signal_count": 4,
+      "executed_order_count": 4,
+      "final_equity": 2364850.0997,
+      "equity_delta_vs_baseline": 598383.4901,
+      "max_drawdown": 0.182868,
+      "overlay_total_transaction_cost": 93.8835
+    },
+    {
+      "variant_name": "pc1_and_pc2_q_0p2",
+      "candidate_signal_count": 0,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_only_q_0p25",
+      "candidate_signal_count": 3,
+      "executed_order_count": 3,
+      "final_equity": 2137416.0323,
+      "equity_delta_vs_baseline": 370949.4227,
+      "max_drawdown": 0.162126,
+      "overlay_total_transaction_cost": 101.2585
+    },
+    {
+      "variant_name": "pc2_only_q_0p25",
+      "candidate_signal_count": 3,
+      "executed_order_count": 3,
+      "final_equity": 2236925.2433,
+      "equity_delta_vs_baseline": 470458.6337,
+      "max_drawdown": 0.163868,
+      "overlay_total_transaction_cost": 77.1872
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "candidate_signal_count": 6,
+      "executed_order_count": 6,
+      "final_equity": 2607874.6659,
+      "equity_delta_vs_baseline": 841408.0563,
+      "max_drawdown": 0.176515,
+      "overlay_total_transaction_cost": 178.4457
+    },
+    {
+      "variant_name": "pc1_and_pc2_q_0p25",
+      "candidate_signal_count": 0,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_only_q_0p33",
+      "candidate_signal_count": 3,
+      "executed_order_count": 3,
+      "final_equity": 2137416.0323,
+      "equity_delta_vs_baseline": 370949.4227,
+      "max_drawdown": 0.162126,
+      "overlay_total_transaction_cost": 101.2585
+    },
+    {
+      "variant_name": "pc2_only_q_0p33",
+      "candidate_signal_count": 3,
+      "executed_order_count": 3,
+      "final_equity": 2236925.2433,
+      "equity_delta_vs_baseline": 470458.6337,
+      "max_drawdown": 0.163868,
+      "overlay_total_transaction_cost": 77.1872
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p33",
+      "candidate_signal_count": 6,
+      "executed_order_count": 6,
+      "final_equity": 2607874.6659,
+      "equity_delta_vs_baseline": 841408.0563,
+      "max_drawdown": 0.176515,
+      "overlay_total_transaction_cost": 178.4457
+    },
+    {
+      "variant_name": "pc1_and_pc2_q_0p33",
+      "candidate_signal_count": 0,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_only_q_0p4",
+      "candidate_signal_count": 4,
+      "executed_order_count": 4,
+      "final_equity": 2307096.0403,
+      "equity_delta_vs_baseline": 540629.4307,
+      "max_drawdown": 0.162126,
+      "overlay_total_transaction_cost": 161.2105
+    },
+    {
+      "variant_name": "pc2_only_q_0p4",
+      "candidate_signal_count": 4,
+      "executed_order_count": 3,
+      "final_equity": 2384475.9393,
+      "equity_delta_vs_baseline": 618009.3297,
+      "max_drawdown": 0.163868,
+      "overlay_total_transaction_cost": 121.4512
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p4",
+      "candidate_signal_count": 7,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_and_pc2_q_0p4",
+      "candidate_signal_count": 1,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_only_q_0p5",
+      "candidate_signal_count": 5,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc2_only_q_0p5",
+      "candidate_signal_count": 5,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p5",
+      "candidate_signal_count": 9,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    },
+    {
+      "variant_name": "pc1_and_pc2_q_0p5",
+      "candidate_signal_count": 1,
+      "executed_order_count": 0,
+      "final_equity": 1766466.6096,
+      "equity_delta_vs_baseline": 0.0,
+      "max_drawdown": 0.134272,
+      "overlay_total_transaction_cost": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.16D refines visible-only intraday filters by sweeping point-in-time-visible pc1/pc2 low-threshold variants, with no future labels permitted.",
+    "The goal is not promotion, but to identify whether a cleaner executing candidate exists between all-strict-visible and overly sparse no-trade variants.",
+    "Any resulting winner remains candidate-only until it survives the next three-run adversarial review cadence."
+  ]
+}

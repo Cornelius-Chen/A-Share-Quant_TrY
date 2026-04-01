@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114u_intraday_event_timestamp_discipline_protocol_v1",
+    "objective": "make_intraday_learning_and_execution_point_in_time_legal",
+    "mandatory_event_family_count": 5,
+    "mandatory_schema_field_count": 7,
+    "core_rule": "any_external_information_that_can_change_intraday_actions_must_be_recorded_with_second_level_timestamp_and_system_visible_time",
+    "recommended_next_posture": "apply_second_level_timestamp_discipline_to_all_future_intraday_news_and_event_collection"
+  },
+  "mandatory_timestamp_rows": [
+    {
+      "event_family": "news_flash",
+      "granularity_required": "second",
+      "why_required": "News flashes can change intraday add/reduce legality within minutes; minute-level bucketing is too coarse for replay integrity."
+    },
+    {
+      "event_family": "exchange_announcement",
+      "granularity_required": "second",
+      "why_required": "Announcements and trading notices often determine whether a symbol is tradable or whether a move is catalyst-backed."
+    },
+    {
+      "event_family": "company_announcement",
+      "granularity_required": "second",
+      "why_required": "Board diffusion strength can be genuine or false depending on when filings become public."
+    },
+    {
+      "event_family": "policy_or_regulation_release",
+      "granularity_required": "second",
+      "why_required": "Macro/policy events can reprice the whole board intraday and must not be backfilled as earlier-known context."
+    },
+    {
+      "event_family": "research_note_or_market_memo_public_release",
+      "granularity_required": "second",
+      "why_required": "Even if weaker than formal news, once used in intraday learning they need a legally visible timestamp."
+    }
+  ],
+  "field_schema_rows": [
+    {
+      "field_name": "event_occurred_time",
+      "required": true,
+      "definition": "Best-known timestamp for when the underlying event happened in the world."
+    },
+    {
+      "field_name": "public_release_time",
+      "required": true,
+      "definition": "Timestamp for when the event first became publicly available."
+    },
+    {
+      "field_name": "system_visible_time",
+      "required": true,
+      "definition": "Timestamp for when the project pipeline could legally observe and use the event."
+    },
+    {
+      "field_name": "source_latency_ms",
+      "required": true,
+      "definition": "Observed or assumed latency from public release to system visibility."
+    },
+    {
+      "field_name": "source_id",
+      "required": true,
+      "definition": "Unique source/feed identifier for auditability."
+    },
+    {
+      "field_name": "timezone",
+      "required": true,
+      "definition": "Explicit timezone for all intraday event stamps; no implicit local-time assumptions."
+    },
+    {
+      "field_name": "event_confidence_tier",
+      "required": false,
+      "definition": "Optional trust rating for noisy informal sources that may later be filtered."
+    }
+  ],
+  "usage_boundary_rows": [
+    {
+      "data_family": "intraday_action_inputs",
+      "timestamp_rule": "must_have_precise_timestamp",
+      "allowed_granularity": "second",
+      "examples": [
+        "news",
+        "announcements",
+        "policy releases",
+        "exchange notices",
+        "alert events"
+      ]
+    },
+    {
+      "data_family": "intraday_market_bars",
+      "timestamp_rule": "bar_time_required",
+      "allowed_granularity": "minute_or_bar_level",
+      "examples": [
+        "intraday OHLCV",
+        "intraday turnover",
+        "ETF/index intraday bars"
+      ]
+    },
+    {
+      "data_family": "slow_background_context",
+      "timestamp_rule": "day_level_is_acceptable",
+      "allowed_granularity": "daily",
+      "examples": [
+        "board regime",
+        "world model priors",
+        "daily owner labels"
+      ]
+    },
+    {
+      "data_family": "replay_legality",
+      "timestamp_rule": "system_visible_time_is_authoritative",
+      "allowed_granularity": "second",
+      "examples": [
+        "do not use event_occurred_time if public/system visibility is later",
+        "do not backfill post-close information into earlier intraday decisions"
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.14U makes timestamp discipline explicit: intraday decisions must be based on what the system could see at that moment, not on what later became knowable.",
+    "The key operational timestamp is `system_visible_time`, not merely when the event happened in the world.",
+    "This protocol prevents intraday news or event data from becoming a new forward-leak channel once minute-level replay is introduced."
+  ]
+}

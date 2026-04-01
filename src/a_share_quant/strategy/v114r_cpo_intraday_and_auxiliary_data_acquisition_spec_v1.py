@@ -1,0 +1,170 @@
+from __future__ import annotations
+
+import json
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+
+@dataclass(slots=True)
+class V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecReport:
+    summary: dict[str, Any]
+    must_have_rows: list[dict[str, Any]]
+    should_have_rows: list[dict[str, Any]]
+    nice_to_have_rows: list[dict[str, Any]]
+    current_gap_rows: list[dict[str, Any]]
+    interpretation: list[str]
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+            "summary": self.summary,
+            "must_have_rows": self.must_have_rows,
+            "should_have_rows": self.should_have_rows,
+            "nice_to_have_rows": self.nice_to_have_rows,
+            "current_gap_rows": self.current_gap_rows,
+            "interpretation": self.interpretation,
+        }
+
+
+class V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecAnalyzer:
+    def __init__(self, *, repo_root: Path) -> None:
+        self.repo_root = repo_root
+
+    def analyze(self) -> V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecReport:
+        must_have_rows = [
+            {
+                "field_group": "intraday_bars",
+                "fields": ["trade_date", "symbol", "bar_time", "open", "high", "low", "close", "volume", "turnover"],
+                "why_needed": "This is the minimum layer for same-day add/reduce confirmation.",
+                "serves": ["reclaim_after_break", "volume_price_quality", "late_session_close_quality"],
+            },
+            {
+                "field_group": "daily_turnover_and_volume",
+                "fields": ["daily_volume", "daily_turnover"],
+                "why_needed": "Intraday bars need a daily anchor to judge whether current flow is meaningful or trivial.",
+                "serves": ["intraday_concentration_shift", "failed_push_sequence"],
+            },
+            {
+                "field_group": "board_relative_reference",
+                "fields": ["same_day_board_core_intraday_bars", "communication_etf_intraday_bars_or_proxy"],
+                "why_needed": "The target is diffusion-style board expansion, so single-name intraday quality must be judged relative to the board core, not in isolation.",
+                "serves": ["relative_intraday_leadership"],
+            },
+        ]
+
+        should_have_rows = [
+            {
+                "field_group": "turnover_rate",
+                "fields": ["float_shares_or_free_float_market_cap", "intraday_turnover", "daily_turnover_rate"],
+                "why_needed": "Turnover itself is useful, but turnover rate is better for judging whether a move is constructive exchange or overheated churn.",
+                "serves": ["washout_vs_distribution", "overheat_detection"],
+            },
+            {
+                "field_group": "vwap_session_anchor",
+                "fields": ["intraday_vwap", "session_high_watermark", "session_low_watermark"],
+                "why_needed": "Reclaim-versus-fail patterns need a stable intraday anchor; raw bars alone are weaker.",
+                "serves": ["reclaim_after_break", "late_session_close_quality"],
+            },
+            {
+                "field_group": "board_internal_flow_snapshot",
+                "fields": ["top3_core_turnover_intraday", "tail_turnover_intraday", "core_vs_tail_share"],
+                "why_needed": "A diffusion main-uptrend board often concentrates incremental flow back into core names before successful add windows.",
+                "serves": ["intraday_concentration_shift"],
+            },
+            {
+                "field_group": "index_and_etf_context",
+                "fields": ["ChiNext_intraday", "STAR_intraday", "communication_etf_intraday"],
+                "why_needed": "Intraday board strength can be fake if it diverges sharply from its natural reference complex.",
+                "serves": ["relative_intraday_leadership", "risk_off_confirmation"],
+            },
+        ]
+
+        nice_to_have_rows = [
+            {
+                "field_group": "orderbook_proxy",
+                "fields": ["best_bid_ask_or_micro_liquidity_proxy"],
+                "why_needed": "Helpful for execution realism, but not necessary for the first intraday confirmation layer.",
+                "serves": ["slippage_watch", "exit_quality"],
+            },
+            {
+                "field_group": "news_timestamp_alignment",
+                "fields": ["event_time", "post_event_window_marker"],
+                "why_needed": "Useful if later we want to know whether intraday strength happened after a catalyst or just as a technical spill.",
+                "serves": ["catalyst_quality_review"],
+            },
+        ]
+
+        current_gap_rows = [
+            {
+                "gap_name": "no_intraday_raw_bars_present",
+                "current_status": "missing",
+                "evidence": "No minute/intraday files under data/raw.",
+                "impact": "Cannot yet run any intraday confirmation replay.",
+            },
+            {
+                "gap_name": "turnover_rate_not_derivable_yet",
+                "current_status": "missing",
+                "evidence": "Current security master only contains symbol/name/board/exchange/list dates; no float shares.",
+                "impact": "Turnover amount exists, but turnover rate cannot be computed cleanly.",
+            },
+            {
+                "gap_name": "intraday_board_reference_missing",
+                "current_status": "missing",
+                "evidence": "No intraday ETF/index or board-core minute files yet.",
+                "impact": "Relative leadership confirmation remains incomplete.",
+            },
+        ]
+
+        summary = {
+            "acceptance_posture": "freeze_v114r_cpo_intraday_and_auxiliary_data_acquisition_spec_v1",
+            "research_objective": "maximize_capture_of_diffusion_style_main_uptrend_while_containing_unnecessary_drawdown",
+            "must_have_group_count": len(must_have_rows),
+            "should_have_group_count": len(should_have_rows),
+            "nice_to_have_group_count": len(nice_to_have_rows),
+            "highest_priority_missing_piece": "intraday_bars_for_300308_300502_300757_688498",
+            "recommended_next_posture": "collect_narrow_intraday_bars_first_then_add_turnover_rate_and_relative_context_if_available",
+        }
+
+        interpretation = [
+            "V1.14R expands the intraday plan from 'get minute bars' to 'get the smallest complete confirmation dataset' for a diffusion-style main-uptrend board.",
+            "Turnover, volume, and relative context are all useful, but they are not equal. Minute bars and daily turnover anchors are the first layer; turnover rate needs float-share support; board-relative intraday context is the second layer.",
+            "This keeps data acquisition aligned with the real objective: eat more of the board's main-uptrend while avoiding unnecessary drawdown, not collect every imaginable field.",
+        ]
+
+        return V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecReport(
+            summary=summary,
+            must_have_rows=must_have_rows,
+            should_have_rows=should_have_rows,
+            nice_to_have_rows=nice_to_have_rows,
+            current_gap_rows=current_gap_rows,
+            interpretation=interpretation,
+        )
+
+
+def write_v114r_cpo_intraday_and_auxiliary_data_acquisition_spec_report(
+    *,
+    reports_dir: Path,
+    report_name: str,
+    result: V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecReport,
+) -> Path:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    output_path = reports_dir / f"{report_name}.json"
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(result.as_dict(), handle, indent=2, ensure_ascii=False)
+    return output_path
+
+
+def main() -> None:
+    repo_root = Path(__file__).resolve().parents[3]
+    analyzer = V114RCpoIntradayAndAuxiliaryDataAcquisitionSpecAnalyzer(repo_root=repo_root)
+    result = analyzer.analyze()
+    output_path = write_v114r_cpo_intraday_and_auxiliary_data_acquisition_spec_report(
+        reports_dir=repo_root / "reports" / "analysis",
+        report_name="v114r_cpo_intraday_and_auxiliary_data_acquisition_spec_v1",
+        result=result,
+    )
+    print(output_path)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,244 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113m_board_level_training_table_assembly_v1",
+    "board_name": "CPO",
+    "table_count": 3,
+    "field_group_count": 5,
+    "sample_episode_count": 5,
+    "training_unit": "board_state_episode_with_cross_sectional_internal_points",
+    "split_policy": "time_or_cycle_only",
+    "allowed_field_group_count": 4,
+    "blocked_field_group_count": 4,
+    "recommended_next_posture": "build_real_board_level_episode_tables_from_owner_labels_and_point_in_time_market_snapshots_only"
+  },
+  "table_rows": [
+    {
+      "table_name": "board_state_episode_table",
+      "primary_key": "episode_id",
+      "grain": "board_date_episode",
+      "role": "Top-level training table holding owner board labels, point-in-time context, and aggregated internal structure."
+    },
+    {
+      "table_name": "board_cross_section_internal_point_table",
+      "primary_key": "episode_point_id",
+      "grain": "board_date_object_point",
+      "role": "Assistant fine-grained labels for role families and residual control objects under the same board episode."
+    },
+    {
+      "table_name": "board_world_model_prior_table",
+      "primary_key": "world_model_prior_id",
+      "grain": "board_mechanism_prior_snapshot",
+      "role": "Mechanism priors from objects, relations, transitions, and constraints. Priors teach grammar, not future answers."
+    }
+  ],
+  "field_rows": [
+    {
+      "table_name": "board_state_episode_table",
+      "field_group": "owner_truth",
+      "fields": [
+        "episode_id",
+        "board_name",
+        "board_phase_label_owner",
+        "board_tradeability_label_owner",
+        "board_mainline_status_owner"
+      ]
+    },
+    {
+      "table_name": "board_state_episode_table",
+      "field_group": "market_context",
+      "fields": [
+        "breadth_snapshot",
+        "turnover_concentration_snapshot",
+        "leader_concentration_snapshot",
+        "board_relative_strength_snapshot",
+        "market_regime_overlay",
+        "cross_board_resonance_snapshot",
+        "liquidity_snapshot",
+        "sentiment_proxy_snapshot"
+      ]
+    },
+    {
+      "table_name": "board_cross_section_internal_point_table",
+      "field_group": "assistant_internal_grammar",
+      "fields": [
+        "episode_point_id",
+        "episode_id",
+        "object_id",
+        "object_type",
+        "role_label_assistant",
+        "control_label_assistant",
+        "state_label_assistant",
+        "residual_family_label_assistant",
+        "assistant_confidence_tier"
+      ]
+    },
+    {
+      "table_name": "board_world_model_prior_table",
+      "field_group": "mechanism_prior",
+      "fields": [
+        "world_model_prior_id",
+        "episode_id",
+        "object_presence_flags",
+        "relation_presence_flags",
+        "transition_template_ids",
+        "constraint_template_ids"
+      ]
+    },
+    {
+      "table_name": "blocked_fields_registry",
+      "field_group": "explicitly_blocked",
+      "fields": [
+        "future_outcomes",
+        "post_cycle_truth",
+        "direct_research_conclusions",
+        "diagnostic_and_sidecar_truth"
+      ]
+    }
+  ],
+  "sample_episode_rows": [
+    {
+      "episode_id": "cpo_main_markup_packaging_surface",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "packaging_process_enabler",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "mainline_surface_active",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "object_presence_flags": [
+        "packaging_process_enabler",
+        "core_module_leader",
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "packaging_belongs_to_cpo_mainline_surface",
+        "packaging_admission_extends_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "packaging_eligibility_to_admission_extension"
+      ],
+      "constraint_template_ids": [
+        "packaging_learning_frozen"
+      ]
+    },
+    {
+      "episode_id": "cpo_main_markup_packaging_admission",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "packaging_admission_extension",
+      "object_type": "admission_extension",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "admission_extension",
+      "state_label_assistant": "miss_while_cash_recoverable",
+      "residual_family_label_assistant": "eligibility_miss",
+      "assistant_confidence_tier": "guarded",
+      "object_presence_flags": [
+        "packaging_process_enabler",
+        "packaging_admission_extension"
+      ],
+      "relation_presence_flags": [
+        "packaging_belongs_to_cpo_mainline_surface",
+        "packaging_admission_extends_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "packaging_eligibility_to_admission_extension"
+      ],
+      "constraint_template_ids": [
+        "packaging_learning_frozen"
+      ]
+    },
+    {
+      "episode_id": "cpo_main_markup_core_leader_hold_state",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "holding_veto",
+      "state_label_assistant": "late_main_markup_overstay_risk",
+      "residual_family_label_assistant": "overstay",
+      "assistant_confidence_tier": "guarded",
+      "object_presence_flags": [
+        "core_module_leader",
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "episode_id": "cpo_diffusion_high_beta_core_expression",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "de_risk",
+      "state_label_assistant": "neutral_safe_mild_derisk_band",
+      "residual_family_label_assistant": "expression_risk",
+      "assistant_confidence_tier": "guarded",
+      "object_presence_flags": [
+        "core_module_leader",
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "episode_id": "cpo_diffusion_laser_fringe_watch",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "fringe_watch",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "review_only",
+      "object_presence_flags": [
+        "laser_chip_component",
+        "packaging_process_enabler"
+      ],
+      "relation_presence_flags": [
+        "laser_member_of_template_capable_cluster"
+      ],
+      "transition_template_ids": [
+        "laser_eligibility_to_fringe_watch"
+      ],
+      "constraint_template_ids": [
+        "laser_not_three_layer"
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.13M is the first concrete assembly of a board-level training table, rather than another protocol-only freeze.",
+    "The assembly preserves the V1.13L no-leak boundary by using board truth, internal grammar, and world-model priors only as point-in-time fields.",
+    "The sample rows are not hindsight targets; they are lawful episode templates showing how CPO board states can be serialized into trainable records."
+  ]
+}

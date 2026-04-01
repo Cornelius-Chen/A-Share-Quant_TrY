@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113j_board_research_world_model_protocol_v1",
+    "world_model_teaching_approved": true,
+    "layer_count": 4,
+    "teaching_mode": "teach_mechanism_not_answer",
+    "recommended_next_posture": "map_existing_board_research_assets_into_objects_relations_transitions_constraints_tables"
+  },
+  "world_model_layers": [
+    {
+      "layer_name": "objects",
+      "purpose": "Define the reusable board-level entities that appear across themes.",
+      "examples": [
+        "theme board",
+        "phase family",
+        "role family",
+        "driver family",
+        "noise family",
+        "risk surface"
+      ]
+    },
+    {
+      "layer_name": "relations",
+      "purpose": "Encode who leads, who follows, who merely maps, and which links are dangerous or weak.",
+      "examples": [
+        "leader_to_core relation",
+        "core_to_sidecar relation",
+        "board_to_spillover relation",
+        "driver_to_resonance relation",
+        "false_extension relation"
+      ]
+    },
+    {
+      "layer_name": "transitions",
+      "purpose": "Teach how board states and internal roles evolve over time instead of teaching static labels as answers.",
+      "examples": [
+        "ignition_to_markup",
+        "markup_to_diffusion",
+        "diffusion_to_decay",
+        "eligibility_to_de_risk",
+        "continue_to_holding_veto",
+        "admission_miss_to_wakeup_window"
+      ]
+    },
+    {
+      "layer_name": "constraints",
+      "purpose": "Freeze impossible or dangerous co-existence patterns so the model learns boundaries, not just opportunities.",
+      "examples": [
+        "high_saturation_plus_weak_resonance_is_dangerous",
+        "false_mainline_cannot_be_taught_as_true_board_eligibility",
+        "diagnostic_cluster_outputs_cannot_directly_trigger_execution",
+        "review_only_labels_cannot_override_owner_board_truth"
+      ]
+    }
+  ],
+  "teaching_boundary_rows": [
+    {
+      "boundary_name": "no_answer_injection",
+      "reading": "Board research is taught as state, relation, transition, and constraint priors rather than direct buy/sell answers."
+    },
+    {
+      "boundary_name": "owner_truth_boundary",
+      "reading": "Owner board-level labels remain the top-level truth; world-model teaching may organize them but may not silently replace them."
+    },
+    {
+      "boundary_name": "execution_boundary",
+      "reading": "World-model knowledge enters execution only through priors, eligibility context, and trigger semantics, not through forced hindsight conclusions."
+    },
+    {
+      "boundary_name": "generalization_boundary",
+      "reading": "The protocol exists to promote generalization by teaching mechanisms and transitions instead of single-cycle answers."
+    }
+  ],
+  "interpretation": [
+    "V1.13J formalizes how early broad board research can enter the system without hard-coding hindsight answers.",
+    "The protocol teaches a world model made of objects, relations, transitions, and constraints so later models can generalize rather than memorize.",
+    "This turns broad board research into an upstream prior layer for training and execution instead of a direct signal layer."
+  ]
+}

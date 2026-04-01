@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v112cw_packaging_mainline_extension_status_freeze_v1",
+    "mainline_template_asset_count": 1,
+    "mainline_extension_count": 1,
+    "core_residual_candidate_count": 1,
+    "core_residual_sidecar_count": 1,
+    "eligibility_only_member_count": 1,
+    "joint_promotion_ready": false,
+    "recommended_next_posture": "treat_packaging_template_plus_packaging_admission_as_frozen_mainline_surface_and_keep_core_residual_stack_separate"
+  },
+  "stack_rows": [
+    {
+      "stack_item": "packaging_process_enabler",
+      "status": "cluster_mainline_template_asset",
+      "control_language": [
+        "entry_veto",
+        "de_risk",
+        "eligibility"
+      ],
+      "evidence": {
+        "path_total_return": 2.8309,
+        "path_max_drawdown": -0.1854,
+        "validation_accuracy": 0.8824
+      }
+    },
+    {
+      "stack_item": "packaging_admission_extension",
+      "status": "controlled_mainline_extension",
+      "control_language": [
+        "full_20d_admission"
+      ],
+      "evidence": {
+        "replayed_total_return": 3.2435,
+        "replayed_max_drawdown": -0.1826,
+        "return_delta_vs_neutral": 0.9954,
+        "drawdown_delta_vs_neutral": 0.028,
+        "displaced_neutral_trade_count": 1
+      }
+    },
+    {
+      "stack_item": "300308_core_module_leader",
+      "status": "holding_veto_candidate",
+      "control_language": [
+        "continue",
+        "holding_veto"
+      ],
+      "evidence": {
+        "selected_total_return": 2.3929,
+        "selected_max_drawdown": -0.1826,
+        "neutral_return_delta": 0.1448,
+        "neutral_drawdown_delta": 0.028
+      }
+    },
+    {
+      "stack_item": "300502_high_beta_core_module",
+      "status": "split_derisk_sidecar",
+      "control_language": [
+        "neutral_safe_mild_derisk",
+        "evidence_optimizing_stronger_derisk"
+      ],
+      "evidence": {
+        "mild_band_neutral_safe": true,
+        "strong_band_beats_evidence_both": true,
+        "preferred_band": "neutral_safe_mild_derisk_band"
+      }
+    },
+    {
+      "stack_item": "laser_chip_component",
+      "status": "eligibility_only_template_member",
+      "control_language": [
+        "eligibility",
+        "fringe_watch"
+      ],
+      "evidence": {
+        "clean_eligibility_count": 3,
+        "de_risk_fringe_watch_count": 1
+      }
+    }
+  ],
+  "boundary_rows": [
+    {
+      "boundary_name": "mainline_surface_boundary",
+      "reading": "Packaging now owns both the frozen refined template asset and a controlled admission extension; these form the packaging mainline surface."
+    },
+    {
+      "boundary_name": "template_learning_boundary",
+      "reading": "The admission extension does not reopen packaging template learning and must remain a governed replay object."
+    },
+    {
+      "boundary_name": "core_residual_stack_boundary",
+      "reading": "300308 and 300502 remain outside packaging's mainline surface. Joint core residual promotion stays deferred.",
+      "joint_promotion_ready": false
+    }
+  ],
+  "interpretation": [
+    "V1.12CW freezes packaging's mainline status into a two-part governed surface: the refined template asset plus the controlled admission extension.",
+    "This freeze keeps packaging strong while preserving separation from the unresolved 300308/300502 core residual stack."
+  ]
+}

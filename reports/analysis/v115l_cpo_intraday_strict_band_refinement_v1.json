@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v115l_cpo_intraday_strict_band_refinement_v1",
+    "candidate_add_band_count_before_refinement": 3,
+    "strict_candidate_add_band_count": 2,
+    "strict_candidate_add_band_names": [
+      "pc1_low__pc2_low",
+      "pc1_high__pc2_low"
+    ],
+    "recommended_next_posture": "only_strict_candidate_add_bands_should_be_tested_in_overlay_audit_next"
+  },
+  "candidate_band_rows": [
+    {
+      "state_band": "pc1_low__pc2_low",
+      "row_count": 15,
+      "increase_rate": 0.466667,
+      "decrease_rate": 0.066667,
+      "hold_rate": 0.466667,
+      "avg_expectancy_proxy_3d": 0.085547,
+      "avg_max_adverse_return_3d": -0.041371,
+      "band_posture": "candidate_add_band"
+    },
+    {
+      "state_band": "pc1_high__pc2_low",
+      "row_count": 4,
+      "increase_rate": 0.25,
+      "decrease_rate": 0.0,
+      "hold_rate": 0.75,
+      "avg_expectancy_proxy_3d": 0.102491,
+      "avg_max_adverse_return_3d": -0.020674,
+      "band_posture": "candidate_add_band"
+    },
+    {
+      "state_band": "pc1_low__pc2_high",
+      "row_count": 10,
+      "increase_rate": 0.2,
+      "decrease_rate": 0.1,
+      "hold_rate": 0.7,
+      "avg_expectancy_proxy_3d": 0.007426,
+      "avg_max_adverse_return_3d": -0.07448,
+      "band_posture": "candidate_add_band"
+    }
+  ],
+  "strict_registry_rows": [
+    {
+      "state_band": "pc1_low__pc2_low",
+      "row_count": 15,
+      "increase_rate": 0.466667,
+      "avg_expectancy_proxy_3d": 0.085547,
+      "avg_max_adverse_return_3d": -0.041371,
+      "strict_posture": "strict_candidate_add_band"
+    },
+    {
+      "state_band": "pc1_high__pc2_low",
+      "row_count": 4,
+      "increase_rate": 0.25,
+      "avg_expectancy_proxy_3d": 0.102491,
+      "avg_max_adverse_return_3d": -0.020674,
+      "strict_posture": "strict_candidate_add_band"
+    },
+    {
+      "state_band": "pc1_low__pc2_high",
+      "row_count": 10,
+      "increase_rate": 0.2,
+      "avg_expectancy_proxy_3d": 0.007426,
+      "avg_max_adverse_return_3d": -0.07448,
+      "strict_posture": "soft_candidate_add_band"
+    }
+  ],
+  "interpretation": [
+    "V1.15L accepts that the first band audit is too permissive if every positive-looking band is treated equally.",
+    "The refinement step narrows add-band candidates using expectancy, adverse path quality, and minimum support count.",
+    "This keeps the next overlay test focused on the cleanest bands instead of letting all positive-looking regions leak into action logic at once."
+  ]
+}

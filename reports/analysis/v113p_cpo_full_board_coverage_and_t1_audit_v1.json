@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113p_cpo_full_board_coverage_and_t1_audit_v1",
+    "board_name": "CPO",
+    "cohort_symbol_count": 20,
+    "daily_feed_covered_symbol_count": 2,
+    "snapshot_feed_covered_symbol_count": 2,
+    "action_replay_ready_symbol_count": 2,
+    "full_board_content_complete_now": false,
+    "full_board_action_replay_ready_now": false,
+    "t_plus_one_enabled_in_execution_layer": true,
+    "recommended_next_posture": "complete_full_board_market_feed_binding_before_claiming_full_cpo_board_t_plus_one_replay_readiness"
+  },
+  "cohort_symbol_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "current_posture": "primary_core_truth_row",
+      "in_daily_market_feed": true,
+      "in_stock_snapshot_feed": true,
+      "has_internal_episode_label": true,
+      "action_replay_ready_now": true
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "current_posture": "primary_core_truth_row",
+      "in_daily_market_feed": true,
+      "in_stock_snapshot_feed": true,
+      "has_internal_episode_label": true,
+      "action_replay_ready_now": true
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "current_posture": "primary_core_truth_row",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "current_posture": "secondary_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "current_posture": "secondary_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "current_posture": "secondary_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "current_posture": "secondary_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "300570",
+      "cohort_layer": "branch_extension",
+      "role_family": "connector_mpo_branch",
+      "current_posture": "review_only_branch_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "current_posture": "review_only_branch_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": true,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "current_posture": "review_only_branch_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "current_posture": "review_only_branch_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": true,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "601869",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "current_posture": "late_cycle_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "600487",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "current_posture": "late_cycle_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "600522",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "current_posture": "late_cycle_review_asset",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "000070",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "telecom_adjacent_board_follow_factor",
+      "current_posture": "review_only_spillover_candidate",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "603228",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "hardware_sentiment_spillover_factor",
+      "current_posture": "review_only_spillover_candidate",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "001267",
+      "cohort_layer": "weak_memory",
+      "role_family": "name_bonus_or_board_follow_memory",
+      "current_posture": "memory_only_row",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "300620",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "upstream_photonics_enabler",
+      "current_posture": "keep_pending",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "300548",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "module_or_silicon_photonics_adjacency",
+      "current_posture": "keep_pending",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    },
+    {
+      "symbol": "000988",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "vertical_optoelectronic_platform",
+      "current_posture": "keep_pending",
+      "in_daily_market_feed": false,
+      "in_stock_snapshot_feed": false,
+      "has_internal_episode_label": false,
+      "action_replay_ready_now": false
+    }
+  ],
+  "interpretation": [
+    "V1.13P audits full-board CPO coverage against the bounded cohort map instead of only the already-promoted replay subset.",
+    "Current replay readiness is narrower than full board coverage: only symbols with lawful market feed plus internal action labels can trade now.",
+    "T+1 is now enforced in the execution layer, but full-board T+1 replay readiness still depends on filling the missing CPO market feeds and labels."
+  ]
+}

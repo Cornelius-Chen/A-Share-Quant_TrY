@@ -1,0 +1,794 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113n_cpo_real_board_episode_population_v1",
+    "board_name": "CPO",
+    "board_episode_count": 19,
+    "internal_point_count": 19,
+    "world_model_prior_count": 19,
+    "packaging_row_count": 2,
+    "core_leader_row_count": 6,
+    "high_beta_core_row_count": 7,
+    "laser_row_count": 4,
+    "recommended_next_posture": "use_v113n_real_cpo_episode_rows_as_first_board_level_training_seed_and_only_expand_with_point_in_time lawful rows"
+  },
+  "board_episode_rows": [
+    {
+      "episode_id": "cpo_2023-04-28_main_markup",
+      "trade_date": "2023-04-28",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2023-06-07_main_markup",
+      "trade_date": "2023-06-07",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2023-12-20_divergence_and_decay",
+      "trade_date": "2023-12-20",
+      "board_name": "CPO",
+      "board_phase_label_owner": "divergence_and_decay",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2024-02-05_main_markup",
+      "trade_date": "2024-02-05",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2024-03-15_main_markup",
+      "trade_date": "2024-03-15",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2024-04-18_main_markup",
+      "trade_date": "2024-04-18",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-06-03_main_markup",
+      "trade_date": "2025-06-03",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-07-02_main_markup",
+      "trade_date": "2025-07-02",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-07-24_main_markup",
+      "trade_date": "2025-07-24",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-07-31_main_markup",
+      "trade_date": "2025-07-31",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-08-25_main_markup",
+      "trade_date": "2025-08-25",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-08-28_diffusion",
+      "trade_date": "2025-08-28",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-08-29_diffusion",
+      "trade_date": "2025-08-29",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-09-08_diffusion",
+      "trade_date": "2025-09-08",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-09-12_main_markup",
+      "trade_date": "2025-09-12",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-09-29_main_markup",
+      "trade_date": "2025-09-29",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-10-31_diffusion",
+      "trade_date": "2025-10-31",
+      "board_name": "CPO",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2025-12-19_main_markup",
+      "trade_date": "2025-12-19",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline"
+    },
+    {
+      "episode_id": "cpo_2026-01-06_main_markup",
+      "trade_date": "2026-01-06",
+      "board_name": "CPO",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline"
+    }
+  ],
+  "internal_point_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2023-06-07",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "hold_valid_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2023-12-20",
+      "board_phase_label_owner": "divergence_and_decay",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2024-02-05",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "hold_valid_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2024-03-15",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "holding_veto",
+      "state_label_assistant": "late_main_markup_overstay_risk",
+      "residual_family_label_assistant": "overstay",
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2024-04-18",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "packaging_process_enabler",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "mainline_surface_active",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112ct"
+    },
+    {
+      "trade_date": "2025-06-03",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2025-07-02",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2025-07-24",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "hold_valid_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2025-07-31",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2025-08-25",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "packaging_process_enabler",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "mainline_surface_active",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112ct"
+    },
+    {
+      "trade_date": "2025-08-28",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "clean_eligibility_member",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112ci"
+    },
+    {
+      "trade_date": "2025-08-29",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "clean_eligibility_member",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112ci"
+    },
+    {
+      "trade_date": "2025-09-08",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "clean_eligibility_member",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112ci"
+    },
+    {
+      "trade_date": "2025-09-12",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "holding_veto",
+      "state_label_assistant": "late_main_markup_overstay_risk",
+      "residual_family_label_assistant": "overstay",
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2025-09-29",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "de_risk",
+      "state_label_assistant": "neutral_safe_mild_derisk_band",
+      "residual_family_label_assistant": "expression_risk",
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112co"
+    },
+    {
+      "trade_date": "2025-10-31",
+      "board_phase_label_owner": "diffusion",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "laser_chip_component",
+      "object_type": "role_family",
+      "role_label_assistant": "sidecar",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "de_risk_fringe_watch",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "review_only",
+      "source_report": "v112ci"
+    },
+    {
+      "trade_date": "2025-12-19",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "guarded",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "core_module_leader",
+      "object_type": "role_family",
+      "role_label_assistant": "leader",
+      "control_label_assistant": "holding_veto",
+      "state_label_assistant": "late_main_markup_overstay_risk",
+      "residual_family_label_assistant": "overstay",
+      "assistant_confidence_tier": "guarded",
+      "source_report": "v112cn"
+    },
+    {
+      "trade_date": "2026-01-06",
+      "board_phase_label_owner": "main_markup",
+      "board_tradeability_label_owner": "tradable",
+      "board_mainline_status_owner": "mainline",
+      "object_id": "high_beta_core_module",
+      "object_type": "role_family",
+      "role_label_assistant": "core",
+      "control_label_assistant": "eligibility",
+      "state_label_assistant": "expression_stays_eligible_under_current_state_band",
+      "residual_family_label_assistant": null,
+      "assistant_confidence_tier": "hard",
+      "source_report": "v112co"
+    }
+  ],
+  "world_model_prior_rows": [
+    {
+      "world_model_prior_id": "cpo_2023-04-28_high_beta_core_module_prior",
+      "trade_date": "2023-04-28",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2023-06-07_core_module_leader_prior",
+      "trade_date": "2023-06-07",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2023-12-20_high_beta_core_module_prior",
+      "trade_date": "2023-12-20",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2024-02-05_core_module_leader_prior",
+      "trade_date": "2024-02-05",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2024-03-15_core_module_leader_prior",
+      "trade_date": "2024-03-15",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2024-04-18_packaging_process_enabler_prior",
+      "trade_date": "2024-04-18",
+      "board_name": "CPO",
+      "object_id": "packaging_process_enabler",
+      "object_presence_flags": [
+        "packaging_process_enabler"
+      ],
+      "relation_presence_flags": [
+        "packaging_belongs_to_cpo_mainline_surface",
+        "packaging_admission_extends_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "packaging_eligibility_to_admission_extension"
+      ],
+      "constraint_template_ids": [
+        "packaging_learning_frozen"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-06-03_high_beta_core_module_prior",
+      "trade_date": "2025-06-03",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-07-02_high_beta_core_module_prior",
+      "trade_date": "2025-07-02",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-07-24_core_module_leader_prior",
+      "trade_date": "2025-07-24",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-07-31_high_beta_core_module_prior",
+      "trade_date": "2025-07-31",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-08-25_packaging_process_enabler_prior",
+      "trade_date": "2025-08-25",
+      "board_name": "CPO",
+      "object_id": "packaging_process_enabler",
+      "object_presence_flags": [
+        "packaging_process_enabler"
+      ],
+      "relation_presence_flags": [
+        "packaging_belongs_to_cpo_mainline_surface",
+        "packaging_admission_extends_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "packaging_eligibility_to_admission_extension"
+      ],
+      "constraint_template_ids": [
+        "packaging_learning_frozen"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-08-28_laser_chip_component_prior",
+      "trade_date": "2025-08-28",
+      "board_name": "CPO",
+      "object_id": "laser_chip_component",
+      "object_presence_flags": [
+        "laser_chip_component"
+      ],
+      "relation_presence_flags": [
+        "laser_member_of_template_capable_cluster"
+      ],
+      "transition_template_ids": [
+        "laser_eligibility_to_fringe_watch"
+      ],
+      "constraint_template_ids": [
+        "laser_not_three_layer"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-08-29_laser_chip_component_prior",
+      "trade_date": "2025-08-29",
+      "board_name": "CPO",
+      "object_id": "laser_chip_component",
+      "object_presence_flags": [
+        "laser_chip_component"
+      ],
+      "relation_presence_flags": [
+        "laser_member_of_template_capable_cluster"
+      ],
+      "transition_template_ids": [
+        "laser_eligibility_to_fringe_watch"
+      ],
+      "constraint_template_ids": [
+        "laser_not_three_layer"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-09-08_laser_chip_component_prior",
+      "trade_date": "2025-09-08",
+      "board_name": "CPO",
+      "object_id": "laser_chip_component",
+      "object_presence_flags": [
+        "laser_chip_component"
+      ],
+      "relation_presence_flags": [
+        "laser_member_of_template_capable_cluster"
+      ],
+      "transition_template_ids": [
+        "laser_eligibility_to_fringe_watch"
+      ],
+      "constraint_template_ids": [
+        "laser_not_three_layer"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-09-12_core_module_leader_prior",
+      "trade_date": "2025-09-12",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-09-29_high_beta_core_module_prior",
+      "trade_date": "2025-09-29",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-10-31_laser_chip_component_prior",
+      "trade_date": "2025-10-31",
+      "board_name": "CPO",
+      "object_id": "laser_chip_component",
+      "object_presence_flags": [
+        "laser_chip_component"
+      ],
+      "relation_presence_flags": [
+        "laser_member_of_template_capable_cluster"
+      ],
+      "transition_template_ids": [
+        "laser_eligibility_to_fringe_watch"
+      ],
+      "constraint_template_ids": [
+        "laser_not_three_layer"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2025-12-19_core_module_leader_prior",
+      "trade_date": "2025-12-19",
+      "board_name": "CPO",
+      "object_id": "core_module_leader",
+      "object_presence_flags": [
+        "core_module_leader"
+      ],
+      "relation_presence_flags": [
+        "core_leader_outside_packaging_surface"
+      ],
+      "transition_template_ids": [
+        "core_leader_continue_to_holding_veto"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred"
+      ]
+    },
+    {
+      "world_model_prior_id": "cpo_2026-01-06_high_beta_core_module_prior",
+      "trade_date": "2026-01-06",
+      "board_name": "CPO",
+      "object_id": "high_beta_core_module",
+      "object_presence_flags": [
+        "high_beta_core_module"
+      ],
+      "relation_presence_flags": [
+        "high_beta_core_sidecar_to_core_stack"
+      ],
+      "transition_template_ids": [
+        "high_beta_core_eligibility_to_mild_derisk"
+      ],
+      "constraint_template_ids": [
+        "joint_core_promotion_deferred",
+        "high_beta_core_strong_derisk_not_default"
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.13N upgrades the V1.13M sample schema into real dated CPO episode rows sourced from already frozen lawful control assets.",
+    "The populated rows still obey the no-leak boundary: they serialize board truth, internal grammar, and world-model priors, but do not inject future returns into feature space.",
+    "This is the first usable board-level training seed with actual trade dates rather than abstract placeholders."
+  ]
+}

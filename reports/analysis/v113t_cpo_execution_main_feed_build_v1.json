@@ -1,0 +1,218 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113t_cpo_execution_main_feed_build_v1",
+    "board_name": "CPO",
+    "cohort_symbol_count": 20,
+    "execution_main_feed_symbol_count": 20,
+    "execution_main_feed_row_count": 19920,
+    "output_csv": "data\\raw\\daily_bars\\sina_daily_bars_cpo_execution_main_feed_v1.csv",
+    "recommended_next_posture": "audit_execution_main_feed_completeness_and_then_bind_it_into_full_board_cpo_replay"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "cohort_layer": "core_anchor",
+      "role_family": "core_module_leader",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "300502",
+      "cohort_layer": "core_beta",
+      "role_family": "high_beta_core_module",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "300394",
+      "cohort_layer": "core_platform_confirmation",
+      "role_family": "upstream_component_platform",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "002281",
+      "cohort_layer": "adjacent_bridge",
+      "role_family": "domestic_optics_platform_bridge",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "603083",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_beta_module_extension",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "688205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "high_end_module_extension",
+      "row_count": 881,
+      "first_trade_date": "2022-08-09",
+      "last_trade_date": "2026-03-31",
+      "board": "STAR",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "301205",
+      "cohort_layer": "adjacent_high_beta_extension",
+      "role_family": "smaller_cap_high_beta_module",
+      "row_count": 857,
+      "first_trade_date": "2022-09-13",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "300570",
+      "cohort_layer": "branch_extension",
+      "role_family": "connector_mpo_branch",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "688498",
+      "cohort_layer": "branch_extension",
+      "role_family": "laser_chip_component",
+      "row_count": 791,
+      "first_trade_date": "2022-12-21",
+      "last_trade_date": "2026-03-31",
+      "board": "STAR",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "688313",
+      "cohort_layer": "branch_extension",
+      "role_family": "silicon_photonics_component",
+      "row_count": 1023,
+      "first_trade_date": "2021-12-23",
+      "last_trade_date": "2026-03-31",
+      "board": "STAR",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "300757",
+      "cohort_layer": "branch_extension",
+      "role_family": "packaging_process_enabler",
+      "row_count": 1023,
+      "first_trade_date": "2021-12-08",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "601869",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "600487",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "600522",
+      "cohort_layer": "late_extension",
+      "role_family": "fiber_cable_extension",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "000070",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "telecom_adjacent_board_follow_factor",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-04",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "603228",
+      "cohort_layer": "spillover_candidate",
+      "role_family": "hardware_sentiment_spillover_factor",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SSE"
+    },
+    {
+      "symbol": "001267",
+      "cohort_layer": "weak_memory",
+      "role_family": "name_bonus_or_board_follow_memory",
+      "row_count": 1023,
+      "first_trade_date": "2021-12-30",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "300620",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "upstream_photonics_enabler",
+      "row_count": 1023,
+      "first_trade_date": "2021-12-22",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "300548",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "module_or_silicon_photonics_adjacency",
+      "row_count": 1023,
+      "first_trade_date": "2021-12-30",
+      "last_trade_date": "2026-03-31",
+      "board": "ChiNext",
+      "exchange": "SZSE"
+    },
+    {
+      "symbol": "000988",
+      "cohort_layer": "pending_ambiguous",
+      "role_family": "vertical_optoelectronic_platform",
+      "row_count": 1023,
+      "first_trade_date": "2022-01-06",
+      "last_trade_date": "2026-03-31",
+      "board": "Main",
+      "exchange": "SZSE"
+    }
+  ],
+  "interpretation": [
+    "V1.13T builds a single CPO-wide daily execution main feed candidate with uniform columns and symbol coverage.",
+    "Unlike the training proxy framing in V1.13R, this feed is intended to become the execution-layer primary price table for paper replay and stricter simulation.",
+    "This still needs a completeness audit before claiming full-board replay readiness."
+  ]
+}

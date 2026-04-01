@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v113h_execution_decision_layer_phase",
+    "do_open_v113h_now": true,
+    "selected_program": "cpo_execution_decision_layer_transition",
+    "packaging_mainline_surface_ready": true,
+    "core_leader_promotable_ready": true,
+    "recommended_first_action": "freeze_v113h_hard_trigger_semantics_and_cost_function_ledger_v1"
+  },
+  "charter": {
+    "mission": "Convert the current CPO structure-adjudication stack into an execution-adjudication program by hardening control semantics, introducing explicit cost functions, and subjecting the frozen mainline surface plus promotable residual controls to dirty-market and out-of-regime judgement.",
+    "in_scope": [
+      "hard-trigger semantics for entry_veto, de_risk, holding_veto, and admission-extension actions",
+      "explicit layered cost function for false promotion, late de-risk, missed mainline, and overstay errors",
+      "dirty-market stress design against fake extension, false resonance, and adversarial late-stage traps",
+      "out-of-cycle and out-of-regime judgement of the current CPO control surface",
+      "preservation of packaging mainline surface and standalone 300308 holding-veto posture during execution-layer hardening"
+    ],
+    "out_of_scope": [
+      "reopening packaging template learning",
+      "joint 300308/300502 promotion",
+      "automatic training release",
+      "automatic signal deployment",
+      "broad model-zoo expansion unrelated to execution hardening"
+    ],
+    "success_criteria": [
+      "rewrite current control objects into trigger, action, reversibility, and reset semantics",
+      "freeze a first explicit cost-function ledger for the main CPO control families",
+      "show which parts of the current stack survive dirty-market stress and which fail",
+      "show which parts of the current stack remain valid outside the in-cycle comfort zone"
+    ],
+    "stop_criteria": [
+      "if new exploratory templates are opened before hard-trigger semantics are frozen",
+      "if the phase drifts back into unconstrained structure discovery",
+      "if stress results are explained away instead of recorded as binding execution costs"
+    ],
+    "handoff_condition": "After hard-trigger and cost-function freeze, the next legal move is bounded execution replay or stress-result-driven revision, not automatic deployment.",
+    "selected_focus": [
+      "hard-trigger semantics",
+      "cost-function ledger",
+      "dirty-market stress",
+      "out-of-regime judgement"
+    ],
+    "frozen_inputs": [
+      "packaging mainline surface",
+      "300308 promotable standalone holding-veto candidate",
+      "300502 split de-risk sidecar kept outside joint promotion"
+    ]
+  },
+  "interpretation": [
+    "V1.13H exists because the project now has structure selection and promotion discipline, but still needs a unified execution adjudication layer.",
+    "The phase does not widen discovery; it hardens already-frozen CPO assets into trigger, cost, and judgement objects.",
+    "Dirty-market stress and out-of-regime judgement are now first-class requirements rather than optional later validation."
+  ]
+}

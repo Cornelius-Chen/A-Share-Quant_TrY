@@ -1,0 +1,159 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114p_cpo_add_confirmation_logic_refinement_v1",
+    "candidate_count": 6,
+    "recommended_candidate_name": "execution_trimmed_reference",
+    "recommended_curve": 2.5705,
+    "recommended_max_drawdown": 0.2309,
+    "recommended_drawdown_reduction_vs_hot_overlay": 0.0553,
+    "recommended_curve_gap_vs_hot_overlay": -0.5136,
+    "recommended_next_posture": "use_daily_confirmation_logic_if_it_preserves_more_curve_than_constant_offset_else_prepare_intraday_confirmation_layer"
+  },
+  "candidate_rows": [
+    {
+      "candidate_name": "execution_trimmed_reference",
+      "config": {
+        "add_confirmation_mode": "constant",
+        "add_confirmation_offset": 0.0,
+        "max_expression_weight": 0.12,
+        "max_order_notional": 200000.0
+      },
+      "full_curve": 2.5705,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4893,
+      "all_strong_curve": 2.6284,
+      "high_readiness_strong_curve": 2.4171,
+      "executed_order_count": 7,
+      "add_action_count": 3,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5136,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    },
+    {
+      "candidate_name": "persistence_relaxed",
+      "config": {
+        "add_confirmation_mode": "persistence_relaxed",
+        "add_confirmation_offset": 0.03,
+        "max_expression_weight": 0.14,
+        "max_order_notional": 300000.0
+      },
+      "full_curve": 2.5704,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4893,
+      "all_strong_curve": 2.6283,
+      "high_readiness_strong_curve": 2.417,
+      "executed_order_count": 7,
+      "add_action_count": 3,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5137,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    },
+    {
+      "candidate_name": "voice_relaxed",
+      "config": {
+        "add_confirmation_mode": "voice_relaxed",
+        "add_confirmation_offset": 0.03,
+        "max_expression_weight": 0.14,
+        "max_order_notional": 300000.0
+      },
+      "full_curve": 2.5704,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4893,
+      "all_strong_curve": 2.6283,
+      "high_readiness_strong_curve": 2.417,
+      "executed_order_count": 7,
+      "add_action_count": 3,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5137,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    },
+    {
+      "candidate_name": "two_stage_confirmation",
+      "config": {
+        "add_confirmation_mode": "two_stage",
+        "add_confirmation_offset": 0.03,
+        "max_expression_weight": 0.14,
+        "max_order_notional": 300000.0
+      },
+      "full_curve": 2.5704,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4893,
+      "all_strong_curve": 2.6283,
+      "high_readiness_strong_curve": 2.417,
+      "executed_order_count": 7,
+      "add_action_count": 3,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5137,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    },
+    {
+      "candidate_name": "constant_offset_0.03",
+      "config": {
+        "add_confirmation_mode": "constant",
+        "add_confirmation_offset": 0.03,
+        "max_expression_weight": 0.14,
+        "max_order_notional": 300000.0
+      },
+      "full_curve": 2.551,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4833,
+      "all_strong_curve": 2.6283,
+      "high_readiness_strong_curve": 2.417,
+      "executed_order_count": 6,
+      "add_action_count": 2,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5331,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    },
+    {
+      "candidate_name": "thin_coverage_relaxed",
+      "config": {
+        "add_confirmation_mode": "thin_coverage_relaxed",
+        "add_confirmation_offset": 0.03,
+        "max_expression_weight": 0.14,
+        "max_order_notional": 300000.0
+      },
+      "full_curve": 2.551,
+      "full_max_drawdown": 0.2309,
+      "capture_ratio_vs_board": 0.4833,
+      "all_strong_curve": 2.6283,
+      "high_readiness_strong_curve": 2.417,
+      "executed_order_count": 6,
+      "add_action_count": 2,
+      "drawdown_reduction_vs_hot_overlay": 0.0553,
+      "curve_gap_vs_hot_overlay": -0.5331,
+      "beats_default_all_strong": false,
+      "beats_default_high_readiness": false
+    }
+  ],
+  "recommended_row": {
+    "candidate_name": "execution_trimmed_reference",
+    "config": {
+      "add_confirmation_mode": "constant",
+      "add_confirmation_offset": 0.0,
+      "max_expression_weight": 0.12,
+      "max_order_notional": 200000.0
+    },
+    "full_curve": 2.5705,
+    "full_max_drawdown": 0.2309,
+    "capture_ratio_vs_board": 0.4893,
+    "all_strong_curve": 2.6284,
+    "high_readiness_strong_curve": 2.4171,
+    "executed_order_count": 7,
+    "add_action_count": 3,
+    "drawdown_reduction_vs_hot_overlay": 0.0553,
+    "curve_gap_vs_hot_overlay": -0.5136,
+    "beats_default_all_strong": false,
+    "beats_default_high_readiness": false
+  },
+  "interpretation": [
+    "V1.14P no longer searches generic caps. It asks a narrower question: can conditional daily confirmation outperform a blunt constant confirmation offset?",
+    "The candidate modes use only existing daily information already judged useful: persistence, market voice, thin coverage, and simple two-stage confirmation.",
+    "This is the last daily-only confirmation pass before intraday becomes the cleaner next layer if conditional confirmation still gives away too much curve."
+  ]
+}

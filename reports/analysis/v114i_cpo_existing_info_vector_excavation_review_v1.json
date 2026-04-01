@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114i_cpo_existing_info_vector_excavation_review_v1",
+    "improved_expression_group_count": 10,
+    "remaining_under_exposed_group_count": 10,
+    "candidate_vector_count": 5,
+    "existing_info_has_actionable_vector_headroom": true,
+    "strongest_existing_info_separator": "portfolio_coverage_gap_plus_market_voice_persistence",
+    "intraday_required_now": false,
+    "recommended_next_posture": "prototype_market_voice_and_state_transition_vectors_before_requesting_intraday"
+  },
+  "group_comparison": {
+    "improved_expression_group": {
+      "row_count": 10,
+      "mean_baseline_exposure": 0.429782,
+      "mean_promoted_exposure": 0.5779,
+      "mean_holding_count": 3.0,
+      "mean_role_coverage_count": 3.0,
+      "mean_prev_strong_count_5d": 0.6,
+      "mean_top3_turnover_ratio": 0.514805,
+      "mean_avg_return_accel_5d": 0.064356
+    },
+    "remaining_under_exposed_group": {
+      "row_count": 10,
+      "mean_baseline_exposure": 0.142414,
+      "mean_promoted_exposure": 0.180332,
+      "mean_holding_count": 1.7,
+      "mean_role_coverage_count": 1.7,
+      "mean_prev_strong_count_5d": 0.1,
+      "mean_top3_turnover_ratio": 0.485341,
+      "mean_avg_return_accel_5d": 0.070195
+    }
+  },
+  "candidate_vector_rows": [
+    {
+      "vector_name": "market_voice_persistence_vector",
+      "vector_family": "market_voice",
+      "fields": [
+        "board_avg_return",
+        "board_breadth",
+        "prev_strong_count_5d",
+        "avg_return_accel_5d",
+        "breadth_accel_5d"
+      ],
+      "why_it_matters": "Remaining under-exposed strong days are much more likely to be first-wave or low-persistence strong days; improved expression days more often sit inside already-persisting strong regimes.",
+      "evidence": {
+        "improved_prev_strong_count_5d_mean": 0.6,
+        "under_prev_strong_count_5d_mean": 0.1
+      },
+      "action_target": "add / stronger early admission on repeated strong-board sequences"
+    },
+    {
+      "vector_name": "portfolio_coverage_gap_vector",
+      "vector_family": "position_add_reduce",
+      "fields": [
+        "baseline_exposure",
+        "promoted_exposure",
+        "holding_count",
+        "role_coverage_count"
+      ],
+      "why_it_matters": "The largest separator is not board strength itself but how little structure coverage the portfolio had before the strong day hit.",
+      "evidence": {
+        "improved_holding_count_mean": 3.0,
+        "under_holding_count_mean": 1.7,
+        "improved_baseline_exposure_mean": 0.429782,
+        "under_baseline_exposure_mean": 0.142414
+      },
+      "action_target": "faster add / admission when board is strong but role coverage is still thin"
+    },
+    {
+      "vector_name": "relative_structure_concentration_vector",
+      "vector_family": "board_internal_relative_structure",
+      "fields": [
+        "top3_turnover_ratio",
+        "top3_turnover_delta_5d",
+        "role_coverage_count"
+      ],
+      "why_it_matters": "Improved expression days tend to arrive with a denser internal turnover core and broader internal role coverage; early under-exposed days look strong but structurally thinner.",
+      "evidence": {
+        "improved_top3_turnover_ratio_mean": 0.514805,
+        "under_top3_turnover_ratio_mean": 0.485341
+      },
+      "action_target": "distinguish mature strong-board consensus from early thin strong-board spikes"
+    },
+    {
+      "vector_name": "false_breakout_interference_proxy_vector",
+      "vector_family": "interference_false_signal",
+      "fields": [
+        "board_avg_return",
+        "board_breadth",
+        "top3_turnover_delta_5d",
+        "avg_return_accel_5d"
+      ],
+      "why_it_matters": "Some strong days may still be broad but structurally noisy. Existing daily information can only produce a weak proxy here; it can warn, but it cannot cleanly separate washout from engineered intraday shake.",
+      "evidence": {
+        "current_status": "weak_proxy_only_from_daily"
+      },
+      "action_target": "guard against overreacting to broad hot days that lack clean internal confirmation"
+    },
+    {
+      "vector_name": "state_transition_acceleration_vector",
+      "vector_family": "state_transition",
+      "fields": [
+        "prev_strong_count_5d",
+        "avg_return_accel_5d",
+        "breadth_accel_5d",
+        "top3_turnover_delta_5d"
+      ],
+      "why_it_matters": "Add/reduce is often a transition problem. Existing daily information already exposes whether the board is entering a durable strong regime or only flashing strong for a day.",
+      "evidence": {
+        "improved_avg_return_accel_5d_mean": 0.064356,
+        "under_avg_return_accel_5d_mean": 0.070195
+      },
+      "action_target": "better early add timing and better discrimination between durable acceleration and one-day spikes"
+    }
+  ],
+  "intraday_boundary": {
+    "daily_information_still_useful_now": true,
+    "intraday_required_now": false,
+    "current_daily_limit": "cannot cleanly distinguish constructive shakeout from intraday distribution on the same strong day",
+    "intraday_becomes_mandatory_for": [
+      "same-day add confirmation",
+      "same-day reduce confirmation",
+      "washout vs distribution separation",
+      "tail risk / close-quality confirmation"
+    ],
+    "recommended_posture": "start with existing-info vectors first, then add intraday only after daily-vector uplift is exhausted"
+  },
+  "interpretation": [
+    "V1.14I asks a narrow question: can the current daily board/replay information still yield useful vector directions before the project must request intraday support?",
+    "The answer is yes. The strongest separations are not hidden in mysterious geometry; they are visible in persistence of board strength, thin portfolio role coverage, and the transition from first-wave strength to already-persisting strong regimes.",
+    "Daily information is still enough to build the first market-voice and state-transition candidate vectors. Intraday should be added later for shakeout-vs-distribution confirmation, not as the first response."
+  ]
+}

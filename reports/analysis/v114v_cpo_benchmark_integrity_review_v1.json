@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114v_cpo_benchmark_integrity_review_v1",
+    "strategy_curve": 1.7665,
+    "board_equal_weight_curve": 4.2093,
+    "action_coverage_proxy_curve": 1.8301,
+    "board_benchmark_is_opportunity_ceiling": true,
+    "recommended_primary_comparison": "strategy_vs_action_coverage_proxy",
+    "recommended_next_posture": "rerun_under_exposure_and_sizing_on_repaired_replay_using_action_coverage_proxy_as_the_fairer_reference"
+  },
+  "benchmark_rows": [
+    {
+      "benchmark_name": "strategy_repaired_replay",
+      "curve": 1.7665,
+      "coverage_basis": "actual_sparse_action_strategy",
+      "use_case": "primary_judgement_surface"
+    },
+    {
+      "benchmark_name": "board_equal_weight_opportunity",
+      "curve": 4.2093,
+      "coverage_basis": "all_20_board_symbols_equal_weight_opportunity",
+      "use_case": "opportunity_ceiling_not_execution_fair_benchmark"
+    },
+    {
+      "benchmark_name": "action_coverage_proxy",
+      "curve": 1.8301,
+      "coverage_basis": "leadership-participation_proxy_from_3_action_symbols",
+      "use_case": "fairer_comparison_for_sparse_action_logic"
+    }
+  ],
+  "interpretation": [
+    "V1.14V separates opportunity benchmarking from executable benchmarking.",
+    "Board equal-weight remains useful, but only as an opportunity ceiling; it is too loose as the main benchmark for a sparse-action strategy.",
+    "The repaired replay should now be judged primarily against the action-coverage proxy and only secondarily against the full-board opportunity curve."
+  ]
+}

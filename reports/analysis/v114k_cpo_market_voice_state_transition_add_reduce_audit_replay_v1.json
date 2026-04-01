@@ -1,0 +1,270 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v114k_cpo_market_voice_state_transition_add_reduce_audit_replay_v1",
+    "promoted_curve": 2.3083,
+    "candidate_curve": 2.681,
+    "promoted_max_drawdown": 0.1853,
+    "candidate_max_drawdown": 0.2418,
+    "curve_delta_vs_promoted": 0.3727,
+    "drawdown_delta_vs_promoted": 0.0565,
+    "candidate_add_band_days": 3,
+    "remaining_under_exposed_reduction": 3,
+    "recommended_next_posture": "use_v114k_candidate_add_reduce_audit_to_decide_if_market_voice_and_state_transition_scores_deserve_candidate_binding"
+  },
+  "candidate_policy_summary": {
+    "strong_board_day_count": 41,
+    "candidate_add_band_days": 3,
+    "newly_improved_expression_day_count": 1,
+    "promoted_remaining_under_exposed_count": 14,
+    "candidate_remaining_under_exposed_count": 11,
+    "candidate_action_count": 8,
+    "candidate_add_action_count": 4,
+    "candidate_reduce_action_count": 0,
+    "candidate_add_threshold": 0.398127,
+    "candidate_extra_uplift": 0.02,
+    "candidate_floor": 0.35,
+    "candidate_max_expression_weight": 0.14
+  },
+  "top_newly_improved_rows": [
+    {
+      "trade_date": "2024-04-17",
+      "board_avg_return": 0.075345,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.090098,
+      "promoted_exposure": 0.138656,
+      "candidate_exposure": 0.313035,
+      "candidate_delta_vs_promoted": 0.174379,
+      "candidate_add_band": true,
+      "combined_add_readiness": 0.40127,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    }
+  ],
+  "remaining_under_exposed_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_avg_return": 0.056049,
+      "board_breadth": 0.95,
+      "candidate_exposure": 0.096586,
+      "under_exposure_gap": 0.153414,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.366293,
+      "holding_symbols_after_close": [
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-05-18",
+      "board_avg_return": 0.070092,
+      "board_breadth": 0.8,
+      "candidate_exposure": 0.102566,
+      "under_exposure_gap": 0.147434,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.310239,
+      "holding_symbols_after_close": [
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-11-07",
+      "board_avg_return": 0.056135,
+      "board_breadth": 0.8,
+      "candidate_exposure": 0.203496,
+      "under_exposure_gap": 0.046504,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.240333,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-06-14",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "candidate_exposure": 0.205665,
+      "under_exposure_gap": 0.044335,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.276745,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-09-22",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "candidate_exposure": 0.223043,
+      "under_exposure_gap": 0.026957,
+      "candidate_add_band": true,
+      "combined_add_readiness": 0.463335,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-06-16",
+      "board_avg_return": 0.066185,
+      "board_breadth": 1.0,
+      "candidate_exposure": 0.226163,
+      "under_exposure_gap": 0.023837,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.380283,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-01-18",
+      "board_avg_return": 0.055752,
+      "board_breadth": 1.0,
+      "candidate_exposure": 0.238311,
+      "under_exposure_gap": 0.011689,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.332634,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-06-19",
+      "board_avg_return": 0.063588,
+      "board_breadth": 0.9,
+      "candidate_exposure": 0.23933,
+      "under_exposure_gap": 0.01067,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.350246,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2024-01-23",
+      "board_avg_return": 0.051433,
+      "board_breadth": 1.0,
+      "candidate_exposure": 0.245643,
+      "under_exposure_gap": 0.004357,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.386465,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    },
+    {
+      "trade_date": "2023-12-08",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "candidate_exposure": 0.246863,
+      "under_exposure_gap": 0.003137,
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.294823,
+      "holding_symbols_after_close": [
+        "300308",
+        "300502"
+      ]
+    }
+  ],
+  "candidate_action_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "symbol": "300502",
+      "action_mode": "open",
+      "quantity": 1400,
+      "price": 68.99,
+      "notional": 96586.0,
+      "source": "high_beta_core_module:eligibility",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.366293
+    },
+    {
+      "trade_date": "2023-06-07",
+      "symbol": "300308",
+      "action_mode": "open",
+      "quantity": 900,
+      "price": 108.11,
+      "notional": 97299.0,
+      "source": "core_module_leader:eligibility",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.235021
+    },
+    {
+      "trade_date": "2023-09-22",
+      "symbol": "300502",
+      "action_mode": "add",
+      "quantity": 1200,
+      "price": 44.64,
+      "notional": 53568.0,
+      "source": "high_beta_core_module:candidate_add_band",
+      "candidate_add_band": true,
+      "combined_add_readiness": 0.463335
+    },
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "action_mode": "open",
+      "quantity": 800,
+      "price": 106.13,
+      "notional": 84904.0,
+      "source": "packaging_process_enabler:eligibility",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.080167
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "688498",
+      "action_mode": "open",
+      "quantity": 500,
+      "price": 315.59,
+      "notional": 157795.0,
+      "source": "laser_chip_component:eligibility",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.475996
+    },
+    {
+      "trade_date": "2025-08-28",
+      "symbol": "300757",
+      "action_mode": "add",
+      "quantity": 100,
+      "price": 267.98,
+      "notional": 26798.0,
+      "source": "packaging_process_enabler:board_strength_add",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.475996
+    },
+    {
+      "trade_date": "2025-09-11",
+      "symbol": "300757",
+      "action_mode": "add",
+      "quantity": 100,
+      "price": 265.0,
+      "notional": 26500.0,
+      "source": "packaging_process_enabler:board_strength_add",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.485986
+    },
+    {
+      "trade_date": "2025-12-17",
+      "symbol": "300757",
+      "action_mode": "add",
+      "quantity": 500,
+      "price": 212.78,
+      "notional": 106390.0,
+      "source": "packaging_process_enabler:board_strength_add",
+      "candidate_add_band": false,
+      "combined_add_readiness": 0.399107
+    }
+  ],
+  "interpretation": [
+    "V1.14K does not let market-voice and state-transition scores legislate new symbols. It only uses them as a candidate add-band overlay on top of the promoted default sizing surface.",
+    "The audit question is narrow: can candidate scores reduce the remaining under-expressed strong-board days by accelerating adds on already-mature holdings?",
+    "This keeps hard vetoes intact and treats the vector scores as a replay-judged candidate layer rather than a new source of law."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113o_cpo_time_ordered_market_replay_prototype_v1",
+    "board_name": "CPO",
+    "initial_capital": 1000000.0,
+    "margin_enabled": false,
+    "shorting_enabled": false,
+    "t_plus_one_enabled": true,
+    "supported_action_modes": [
+      "open",
+      "add",
+      "reduce",
+      "close",
+      "flat"
+    ],
+    "realized_action_modes": [
+      "close",
+      "open"
+    ],
+    "replay_trade_day_count": 3,
+    "executed_order_count": 2,
+    "blocked_intent_count": 1,
+    "final_cash": 1056352.0,
+    "final_equity": 1056352.0,
+    "recommended_next_posture": "connect_more_cpo_symbol_price_feeds_and_then_upgrade_from_subset_replay_to_full_cpo_market_environment_replay"
+  },
+  "replay_day_rows": [
+    {
+      "trade_date": "2024-02-05",
+      "episode_count": 1,
+      "intent_count": 1,
+      "planned_order_count": 1,
+      "blocked_intent_count": 0,
+      "cash_after_close": 904900.0,
+      "equity_after_close": 1000000.0,
+      "gross_exposure_after_close": 0.0951,
+      "day_turnover_notional": 95100.0,
+      "index_context": {
+        "000001": {
+          "close": 2702.19,
+          "day_return": -0.010241
+        },
+        "399006": {
+          "close": 1562.61,
+          "day_return": 0.007895
+        }
+      },
+      "advisory_stock_snapshots": [
+        {
+          "symbol": "300308",
+          "expected_upside": 1.0,
+          "drive_strength": 0.803812,
+          "stability": 0.38572,
+          "liquidity": 0.429477,
+          "late_mover_quality": 0.450089,
+          "resonance": 0.68363
+        }
+      ]
+    },
+    {
+      "trade_date": "2024-03-15",
+      "episode_count": 1,
+      "intent_count": 1,
+      "planned_order_count": 1,
+      "blocked_intent_count": 0,
+      "cash_after_close": 1056352.0,
+      "equity_after_close": 1056352.0,
+      "gross_exposure_after_close": 0.0,
+      "day_turnover_notional": 151452.0,
+      "index_context": {
+        "000001": {
+          "close": 3054.64,
+          "day_return": 0.005401
+        },
+        "399006": {
+          "close": 1884.09,
+          "day_return": 0.000568
+        }
+      },
+      "advisory_stock_snapshots": [
+        {
+          "symbol": "300308",
+          "expected_upside": 0.629882,
+          "drive_strength": 0.802927,
+          "stability": 0.489434,
+          "liquidity": 0.447816,
+          "late_mover_quality": 0.672165,
+          "resonance": 0.73904
+        }
+      ]
+    },
+    {
+      "trade_date": "2024-04-18",
+      "episode_count": 1,
+      "intent_count": 1,
+      "planned_order_count": 0,
+      "blocked_intent_count": 1,
+      "cash_after_close": 1056352.0,
+      "equity_after_close": 1056352.0,
+      "gross_exposure_after_close": 0.0,
+      "day_turnover_notional": 0.0,
+      "index_context": {
+        "000001": {
+          "close": 3074.22,
+          "day_return": 0.000925
+        },
+        "399006": {
+          "close": 1787.49,
+          "day_return": -0.005464
+        }
+      },
+      "advisory_stock_snapshots": []
+    }
+  ],
+  "executed_order_rows": [
+    {
+      "trade_date": "2024-02-05",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 1200,
+      "reference_price": 79.25,
+      "notional": 95100.0,
+      "posture": "allow",
+      "source": "core_module_leader:eligibility",
+      "rationale": "open_from_board_state_episode",
+      "action_mode": "open"
+    },
+    {
+      "trade_date": "2024-03-15",
+      "symbol": "300308",
+      "action": "sell",
+      "quantity": 1200,
+      "reference_price": 126.21,
+      "notional": 151452.0,
+      "posture": "allow",
+      "source": "core_module_leader:holding_veto",
+      "rationale": "close_from_holding_veto",
+      "action_mode": "close"
+    }
+  ],
+  "blocked_intent_rows": [
+    {
+      "trade_date": "2024-04-18",
+      "symbol": "300757",
+      "action": "buy",
+      "requested_quantity": 0,
+      "source": "packaging_process_enabler:eligibility",
+      "reason": "market_state_missing_in_local_dataset"
+    }
+  ],
+  "interpretation": [
+    "V1.13O is the first time-ordered CPO market replay prototype with a real execution engine, initial capital, and explicit no-margin posture.",
+    "The prototype only trades symbols with lawful local market data. Missing-feed CPO objects are preserved as blocked intents instead of being silently dropped.",
+    "This is still paper replay, but it already combines board episodes, market context, execution gating, and position accounting in one daily loop."
+  ]
+}

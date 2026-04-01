@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113q_cpo_training_material_readiness_audit_v1",
+    "board_name": "CPO",
+    "time_order_ready": true,
+    "full_board_information_complete": false,
+    "full_board_training_ready_now": false,
+    "subset_training_ready_now": true,
+    "t_plus_one_enabled": true,
+    "recommended_next_posture": "do_not_claim_full_board_training_readiness_until_missing_cpo_symbol_market_feeds_and_internal_labels_are_completed"
+  },
+  "checks": [
+    {
+      "check_name": "board_episode_rows_time_sorted",
+      "passed": true
+    },
+    {
+      "check_name": "internal_point_rows_time_sorted",
+      "passed": true
+    },
+    {
+      "check_name": "world_model_prior_rows_time_sorted",
+      "passed": true
+    },
+    {
+      "check_name": "full_board_symbol_market_feed_complete",
+      "passed": false
+    },
+    {
+      "check_name": "full_board_action_replay_ready",
+      "passed": false
+    },
+    {
+      "check_name": "t_plus_one_enabled",
+      "passed": true
+    }
+  ],
+  "interpretation": [
+    "V1.13Q separates time-order readiness from full-board completeness so the project does not confuse a lawful subset seed with a complete board-level training corpus.",
+    "Current CPO seed tables can support ordered subset training and replay, but they still do not satisfy full-board completeness.",
+    "T+1 is now enabled, but that only hardens execution legality; it does not by itself complete the missing board-wide market feeds and labels."
+  ]
+}

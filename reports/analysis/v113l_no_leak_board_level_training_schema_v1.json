@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v113l_no_leak_board_level_training_schema_v1",
+    "allowed_group_count": 4,
+    "blocked_group_count": 4,
+    "labeling_rule_count": 5,
+    "training_unit": "board_state_episode_with_cross_sectional_internal_points",
+    "split_policy": "time_or_cycle_only",
+    "recommended_next_posture": "build_board_level_training_tables_under_v113l_allow_block_schema"
+  },
+  "allowed_field_rows": [
+    {
+      "field_group": "board_state_inputs",
+      "allowed_fields": [
+        "board_phase_label_owner",
+        "board_tradeability_label_owner",
+        "board_mainline_status_owner",
+        "breadth_snapshot",
+        "turnover_concentration_snapshot",
+        "leader_concentration_snapshot",
+        "board_relative_strength_snapshot"
+      ],
+      "reason": "Top-level board state and market-observable structure are point-in-time lawful."
+    },
+    {
+      "field_group": "world_model_priors",
+      "allowed_fields": [
+        "object_presence_flags",
+        "relation_presence_flags",
+        "transition_template_ids",
+        "constraint_template_ids"
+      ],
+      "reason": "World-model priors teach mechanism grammar, not realized future outcomes."
+    },
+    {
+      "field_group": "fine_grained_internal_labels",
+      "allowed_fields": [
+        "role_label_assistant",
+        "control_label_assistant",
+        "state_label_assistant",
+        "residual_family_label_assistant",
+        "assistant_confidence_tier"
+      ],
+      "reason": "Fine-grained labels are allowed only when derived from point-in-time structure and kept below owner board truth."
+    },
+    {
+      "field_group": "market_context_inputs",
+      "allowed_fields": [
+        "market_regime_overlay",
+        "cross_board_resonance_snapshot",
+        "liquidity_snapshot",
+        "sentiment_proxy_snapshot"
+      ],
+      "reason": "Context inputs are lawful when sourced from same-day or prior observable market state."
+    }
+  ],
+  "blocked_field_rows": [
+    {
+      "field_group": "future_outcomes",
+      "blocked_fields": [
+        "forward_return_any_horizon",
+        "future_max_drawdown",
+        "future_peak_gain",
+        "future_trade_quality_label"
+      ],
+      "reason": "Direct future outcomes are target-side information and may not enter features."
+    },
+    {
+      "field_group": "post_cycle_truth",
+      "blocked_fields": [
+        "final_promoted_status",
+        "final_mainline_winner_flag",
+        "final_leader_flag",
+        "full_cycle_realized_role"
+      ],
+      "reason": "Final cycle knowledge is exactly the hindsight leakage we must prevent."
+    },
+    {
+      "field_group": "direct_research_conclusions",
+      "blocked_fields": [
+        "owner_after_the_fact_summary_text",
+        "manual_postmortem_conclusion_embedding",
+        "promotion_memo_result",
+        "phase_closure_result_flag"
+      ],
+      "reason": "Research conclusions may guide protocol design but cannot be injected as training answers."
+    },
+    {
+      "field_group": "diagnostic_and_sidecar_truth",
+      "blocked_fields": [
+        "diagnostic_cluster_outputs_as_main_features",
+        "strong_derisk_sidecar_as_default_truth",
+        "review_only_labels_as_hard_truth"
+      ],
+      "reason": "Diagnostic, sidecar, and review-only objects are governance tools, not default main training truth."
+    }
+  ],
+  "labeling_rule_rows": [
+    {
+      "rule_name": "cycle_split_only",
+      "reading": "Train, validation, and test must be split by time or by whole cycle, never by random mixing."
+    },
+    {
+      "rule_name": "point_in_time_labeling",
+      "reading": "All assistant fine-grained labels must be generated from information visible at or before the labeled date."
+    },
+    {
+      "rule_name": "owner_board_precedence",
+      "reading": "Owner board-level labels are the top truth layer. Assistant labels refine internally but may not overrule board truth."
+    },
+    {
+      "rule_name": "sidecar_exclusion",
+      "reading": "Sidecar and diagnostic structures may be logged for audit but cannot automatically enter the main training feature set."
+    },
+    {
+      "rule_name": "world_model_mechanism_only",
+      "reading": "World-model tables may contribute objects, relations, transitions, and constraints, but not realized future answers."
+    }
+  ],
+  "interpretation": [
+    "V1.13L converts the current board-labeling and world-model protocols into an explicit no-leak training schema.",
+    "The schema allows mechanism priors and point-in-time board structure, but blocks all post-cycle truth and future outcome fields from feature space.",
+    "This is the minimum governance layer needed before any real board-level training tables should be assembled."
+  ]
+}
