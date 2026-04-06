@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gj_commercial_aerospace_single_slot_fallback_supervision_audit_v1",
+    "observed_single_slot_day_count": 0,
+    "weak_surrogate_count": 1,
+    "surrogate_slot_name": "reset_slot",
+    "surrogate_symbol": "002085",
+    "dual_slot_reference_trade_date": "20251219",
+    "authoritative_rule": "single-slot fallback remains unobserved on the current strict active-wave surface; at most, the reset slot can be retained as a weak local surrogate when a forced one-slot reading is needed"
+  },
+  "fallback_rows": [
+    {
+      "fallback_state": "observed_single_slot_fallback",
+      "status": "unobserved",
+      "trade_date": "",
+      "slot_name": "",
+      "symbol": "",
+      "supporting_reading": "no single-slot active-wave day exists on the current strict surface"
+    },
+    {
+      "fallback_state": "forced_local_surrogate",
+      "status": "weak_reset_slot_surrogate_only",
+      "trade_date": "20251219",
+      "slot_name": "reset_slot",
+      "symbol": "002085",
+      "supporting_reading": "weight_ratio=2.04828842|clean_reset_higher_metric_count=2|same_symbol_higher_metric_count=1"
+    },
+    {
+      "fallback_state": "continuation_slot_counterpart",
+      "status": "retain_as_companion_not_fallback",
+      "trade_date": "20251219",
+      "slot_name": "continuation_slot",
+      "symbol": "000738",
+      "supporting_reading": "secondary_weight=0.033507|local_edge=open_to_15m"
+    }
+  ],
+  "interpretation": [
+    "V1.34GJ asks the next honest question after slot-capacity hierarchy: if the branch cannot yet observe a true single-slot day, is there at least a weak local surrogate?",
+    "The answer is narrow. A real single-slot fallback remains unobserved. The reset slot only earns weak surrogate status because the lone dual-slot day already shows reset-primary plus continuation-secondary structure."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124h_multi_board_queue_expansion_v1",
+    "source_sector_snapshot": "market_research_sector_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+    "source_stock_snapshot": "market_research_stock_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+    "current_terminal_board": "CPO",
+    "current_terminal_status": "frozen_heat_only_execution_stack",
+    "next_primary_board": "商业航天",
+    "next_primary_sector_id": "BK0963",
+    "alternate_shadow_boards": [
+      "航天航空",
+      "军民融合"
+    ],
+    "queue_count": 4,
+    "candidate_board_count": 3,
+    "recommended_next_posture": "start_autonomous_board_worker_from_商业航天_then_keep_航天航空_and_军民融合_as_shadow_queue"
+  },
+  "board_candidate_rows": [
+    {
+      "sector_id": "BK0963",
+      "sector_name": "商业航天",
+      "row_count": 242,
+      "active_days": 167,
+      "avg_persistence": 0.539256,
+      "avg_diffusion": 0.529614,
+      "avg_money_making": 0.526914,
+      "avg_leader_strength": 0.541613,
+      "avg_relative_strength": 0.529884,
+      "avg_activity": 0.920024,
+      "composite": 0.597884,
+      "recommended_core_symbols": [
+        "002085",
+        "000738",
+        "600118"
+      ],
+      "core_symbol_rows": [
+        {
+          "symbol": "002085",
+          "row_count": 242,
+          "composite": 0.519214,
+          "robustness": "robust"
+        },
+        {
+          "symbol": "000738",
+          "row_count": 25,
+          "composite": 0.50088,
+          "robustness": "robust"
+        },
+        {
+          "symbol": "600118",
+          "row_count": 3,
+          "composite": 0.543918,
+          "robustness": "sparse_alt"
+        }
+      ],
+      "queue_role": "next_primary"
+    },
+    {
+      "sector_id": "BK0480",
+      "sector_name": "航天航空",
+      "row_count": 92,
+      "active_days": 72,
+      "avg_persistence": 0.603261,
+      "avg_diffusion": 0.630435,
+      "avg_money_making": 0.583944,
+      "avg_leader_strength": 0.597449,
+      "avg_relative_strength": 0.486374,
+      "avg_activity": 0.129708,
+      "composite": 0.505195,
+      "recommended_core_symbols": [
+        "000738",
+        "600118"
+      ],
+      "core_symbol_rows": [
+        {
+          "symbol": "000738",
+          "row_count": 85,
+          "composite": 0.535895,
+          "robustness": "robust"
+        },
+        {
+          "symbol": "600118",
+          "row_count": 23,
+          "composite": 0.513609,
+          "robustness": "robust"
+        }
+      ],
+      "queue_role": "alternate_shadow"
+    },
+    {
+      "sector_id": "BK0808",
+      "sector_name": "军民融合",
+      "row_count": 242,
+      "active_days": 149,
+      "avg_persistence": 0.438017,
+      "avg_diffusion": 0.454545,
+      "avg_money_making": 0.492203,
+      "avg_leader_strength": 0.492203,
+      "avg_relative_strength": 0.485267,
+      "avg_activity": 0.476582,
+      "composite": 0.473136,
+      "recommended_core_symbols": [
+        "300474"
+      ],
+      "core_symbol_rows": [
+        {
+          "symbol": "300474",
+          "row_count": 242,
+          "composite": 0.4835,
+          "robustness": "robust"
+        }
+      ],
+      "queue_role": "alternate_shadow"
+    }
+  ],
+  "queue_rows": [
+    {
+      "queue_order": 1,
+      "board_name": "CPO",
+      "queue_status": "terminal_frozen",
+      "terminal_status": "frozen_heat_only_execution_stack",
+      "next_phase": null,
+      "run_until": "already_terminal"
+    },
+    {
+      "queue_order": 2,
+      "board_name": "商业航天",
+      "sector_id": "BK0963",
+      "queue_status": "queued",
+      "terminal_status": null,
+      "next_phase": "board_world_model",
+      "run_until": "terminal_status_or_hard_stop",
+      "recommended_core_symbols": "002085|000738|600118"
+    },
+    {
+      "queue_order": 3,
+      "board_name": "航天航空",
+      "sector_id": "BK0480",
+      "queue_status": "queued_shadow",
+      "terminal_status": null,
+      "next_phase": "board_world_model",
+      "run_until": "terminal_status_or_hard_stop",
+      "recommended_core_symbols": "000738|600118"
+    },
+    {
+      "queue_order": 4,
+      "board_name": "军民融合",
+      "sector_id": "BK0808",
+      "queue_status": "queued_shadow",
+      "terminal_status": null,
+      "next_phase": "board_world_model",
+      "run_until": "terminal_status_or_hard_stop",
+      "recommended_core_symbols": "300474"
+    }
+  ],
+  "interpretation": [
+    "V1.24H formalizes the post-CPO handoff instead of leaving the next board choice implicit.",
+    "Commercial aerospace becomes the primary next board because it leads the current sector snapshot on composite strength, active days, and sample depth at the same time.",
+    "Aerospace and military-civil fusion remain queued as shadow alternates so the board worker can pivot without having to rebuild the queue from scratch."
+  ]
+}

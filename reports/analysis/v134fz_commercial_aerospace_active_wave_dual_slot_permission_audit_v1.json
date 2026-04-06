@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fz_commercial_aerospace_active_wave_dual_slot_permission_audit_v1",
+    "selected_candidate_count": 2,
+    "slot_count": 2,
+    "same_symbol_higher_metric_count": 1,
+    "clean_reset_higher_metric_count": 2,
+    "authoritative_rule": "the current active-wave sample is better explained by a dual-slot permission view than by a forced single positive ranker"
+  },
+  "slot_rows": [
+    {
+      "slot_name": "continuation_slot",
+      "selection_state": "same_symbol_continuation_selected",
+      "role_reading": "reuse existing same-wave strength without forcing a fresh reset narrative",
+      "local_edge": "stronger early opening impulse",
+      "supporting_metric": "open_to_15m",
+      "supporting_value": 0.02739726
+    },
+    {
+      "slot_name": "reset_slot",
+      "selection_state": "clean_reset_candidate",
+      "role_reading": "allow a clean reset candidate to participate without inheriting recent residue",
+      "local_edge": "better close-location and hour-end continuation",
+      "supporting_metric": "close_loc_15m_plus_open_to_60m",
+      "supporting_value": {
+        "close_loc_15m": 0.96153846,
+        "open_to_60m": 0.0227882
+      }
+    }
+  ],
+  "interpretation": [
+    "V1.34FZ asks whether the two retained active-wave states should still be forced into a winner-take-all ranking problem.",
+    "The answer is no. Their strengths are complementary enough that the current local surface supports a dual-slot permission reading more naturally than a single best-symbol ranker."
+  ]
+}

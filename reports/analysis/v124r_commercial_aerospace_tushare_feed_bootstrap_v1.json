@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124r_commercial_aerospace_tushare_feed_bootstrap_v1",
+    "provider": "tushare",
+    "scope": "commercial_aerospace_merged_universe",
+    "symbol_count": 51,
+    "start_date": "2024-01-01",
+    "end_date": "2026-04-03",
+    "daily_rows": 27711,
+    "daily_basic_rows": 27711,
+    "moneyflow_rows": 27711,
+    "stk_limit_rows": 27744
+  },
+  "output_rows": [
+    {
+      "dataset": "daily_bars",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\raw\\daily_bars\\tushare_commercial_aerospace_daily_bars_v1.csv",
+      "row_count": 27711
+    },
+    {
+      "dataset": "daily_basic",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\tushare_daily_basic\\tushare_commercial_aerospace_daily_basic_v1.csv",
+      "row_count": 27711
+    },
+    {
+      "dataset": "moneyflow",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\raw\\moneyflow\\tushare_commercial_aerospace_moneyflow_v1.csv",
+      "row_count": 27711
+    },
+    {
+      "dataset": "stk_limit",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\stk_limit\\tushare_commercial_aerospace_stk_limit_v1.csv",
+      "row_count": 27744
+    }
+  ],
+  "interpretation": [
+    "V1.24R bootstraps local Tushare feeds for the merged commercial aerospace universe rather than relying on web-only concept membership.",
+    "This is the bridge from a broad A-share concept list to a machine-readable local support plane.",
+    "Replay remains blocked until machine triage and control extraction are rebuilt on this wider supported set."
+  ]
+}

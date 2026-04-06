@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132m_commercial_aerospace_local_1min_hit_concentration_audit_v1",
+    "expanded_hit_count": 24,
+    "unique_hit_trade_date_count": 14,
+    "main_window": "20260112->20260212",
+    "main_window_hit_count": 14,
+    "main_window_hit_share": 0.58333333,
+    "top_month_bucket": "2026-01",
+    "top_regime_semantic": "risk_off_deterioration",
+    "same_day_continuation_enabler": 0,
+    "same_day_turning_point_watch": 2,
+    "same_day_termination_or_regulation_risk": 0,
+    "same_day_any_decisive_event": 2,
+    "authoritative_rule": "the broader local 1min hit surface is more credible when it clusters in the board's main risk window and aligns with risk-oriented regime structure rather than spraying uniformly through time"
+  },
+  "month_rows": [
+    {
+      "month_bucket": "2025-11",
+      "hit_count": 2
+    },
+    {
+      "month_bucket": "2025-12",
+      "hit_count": 3
+    },
+    {
+      "month_bucket": "2026-01",
+      "hit_count": 14
+    },
+    {
+      "month_bucket": "2026-03",
+      "hit_count": 2
+    },
+    {
+      "month_bucket": "2026-04",
+      "hit_count": 3
+    }
+  ],
+  "regime_rows": [
+    {
+      "regime_semantic": "risk_off_deterioration",
+      "hit_count": 14,
+      "hit_share": 0.58333333
+    },
+    {
+      "regime_semantic": "sentiment_overdrive_transition",
+      "hit_count": 1,
+      "hit_share": 0.04166667
+    },
+    {
+      "regime_semantic": "weak_drift_chop",
+      "hit_count": 9,
+      "hit_share": 0.375
+    }
+  ],
+  "event_overlap_rows": [
+    {
+      "event_overlap_metric": "same_day_continuation_enabler",
+      "count": 0
+    },
+    {
+      "event_overlap_metric": "same_day_turning_point_watch",
+      "count": 2
+    },
+    {
+      "event_overlap_metric": "same_day_termination_or_regulation_risk",
+      "count": 0
+    },
+    {
+      "event_overlap_metric": "same_day_any_decisive_event",
+      "count": 2
+    }
+  ],
+  "interpretation": [
+    "V1.32M studies whether the broader 1-minute hit surface is temporally concentrated in the board's major risk windows and structure regimes.",
+    "The goal is to distinguish a semantically aligned downside detector from a generic weakness screen that would fire uniformly across unrelated sessions."
+  ]
+}

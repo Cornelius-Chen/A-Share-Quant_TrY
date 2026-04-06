@@ -1,0 +1,442 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117o_cpo_breakout_damage_external_pool_audit_v1",
+    "candidate_discriminator_name": "breakout_damage_containment_score_candidate",
+    "external_pool_row_count": 24,
+    "add_row_count": 16,
+    "positive_add_row_count": 5,
+    "negative_add_row_count": 11,
+    "entry_row_count": 8,
+    "positive_vs_negative_add_gap": -139451036.581818,
+    "external_pool_signal_clear": false,
+    "best_threshold": -1346496002.0,
+    "best_balanced_accuracy": 0.545455,
+    "best_threshold_entry_leakage_rate": 0.5,
+    "recommended_next_posture": "time_split_validate_breakout_damage_on_broader_add_pool_before_any_replay_facing_use"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1510912000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 1,
+      "tn": 10,
+      "positive_add_recall": 0.0,
+      "negative_add_reject_rate": 0.909091,
+      "entry_leakage_rate": 0.0,
+      "balanced_accuracy": 0.454545
+    },
+    {
+      "threshold": 1302939000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 2,
+      "tn": 9,
+      "positive_add_recall": 0.0,
+      "negative_add_reject_rate": 0.818182,
+      "entry_leakage_rate": 0.0,
+      "balanced_accuracy": 0.409091
+    },
+    {
+      "threshold": 1188938000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 3,
+      "tn": 8,
+      "positive_add_recall": 0.0,
+      "negative_add_reject_rate": 0.727273,
+      "entry_leakage_rate": 0.0,
+      "balanced_accuracy": 0.363636
+    },
+    {
+      "threshold": 1188918000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 3,
+      "tn": 8,
+      "positive_add_recall": 0.2,
+      "negative_add_reject_rate": 0.727273,
+      "entry_leakage_rate": 0.0,
+      "balanced_accuracy": 0.463636
+    },
+    {
+      "threshold": 1106029000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 4,
+      "tn": 7,
+      "positive_add_recall": 0.2,
+      "negative_add_reject_rate": 0.636364,
+      "entry_leakage_rate": 0.125,
+      "balanced_accuracy": 0.418182
+    },
+    {
+      "threshold": 1096927000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_add_recall": 0.4,
+      "negative_add_reject_rate": 0.636364,
+      "entry_leakage_rate": 0.125,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 439392000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 5,
+      "tn": 6,
+      "positive_add_recall": 0.4,
+      "negative_add_reject_rate": 0.545455,
+      "entry_leakage_rate": 0.125,
+      "balanced_accuracy": 0.472727
+    },
+    {
+      "threshold": 425281000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 6,
+      "tn": 5,
+      "positive_add_recall": 0.4,
+      "negative_add_reject_rate": 0.454545,
+      "entry_leakage_rate": 0.125,
+      "balanced_accuracy": 0.427273
+    },
+    {
+      "threshold": 319526000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 7,
+      "tn": 4,
+      "positive_add_recall": 0.4,
+      "negative_add_reject_rate": 0.363636,
+      "entry_leakage_rate": 0.125,
+      "balanced_accuracy": 0.381818
+    },
+    {
+      "threshold": -35789000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 8,
+      "tn": 3,
+      "positive_add_recall": 0.4,
+      "negative_add_reject_rate": 0.272727,
+      "entry_leakage_rate": 0.375,
+      "balanced_accuracy": 0.336364
+    },
+    {
+      "threshold": -127076000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 8,
+      "tn": 3,
+      "positive_add_recall": 0.6,
+      "negative_add_reject_rate": 0.272727,
+      "entry_leakage_rate": 0.375,
+      "balanced_accuracy": 0.436364
+    },
+    {
+      "threshold": -136912000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 9,
+      "tn": 2,
+      "positive_add_recall": 0.6,
+      "negative_add_reject_rate": 0.181818,
+      "entry_leakage_rate": 0.375,
+      "balanced_accuracy": 0.390909
+    },
+    {
+      "threshold": -144300000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 9,
+      "tn": 2,
+      "positive_add_recall": 0.8,
+      "negative_add_reject_rate": 0.181818,
+      "entry_leakage_rate": 0.375,
+      "balanced_accuracy": 0.490909
+    },
+    {
+      "threshold": -591089000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 10,
+      "tn": 1,
+      "positive_add_recall": 0.8,
+      "negative_add_reject_rate": 0.090909,
+      "entry_leakage_rate": 0.5,
+      "balanced_accuracy": 0.445455
+    },
+    {
+      "threshold": -1346496002.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_add_recall": 1.0,
+      "negative_add_reject_rate": 0.090909,
+      "entry_leakage_rate": 0.5,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -2525725002.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_add_recall": 1.0,
+      "negative_add_reject_rate": 0.0,
+      "entry_leakage_rate": 1.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "external_pool_rows": [
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1188918000.0,
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1096927000.0,
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -127076000.0,
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -144300000.0,
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -1346496002.0,
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1510912000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1302939000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1188938000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 1106029000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 439392000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 425281000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 319526000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -35789000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -136912000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -591089000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -2525725002.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748
+    },
+    {
+      "signal_trade_date": "2025-08-28",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "candidate_damage_score": 1136127000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.167195,
+      "max_adverse_return_3d": -0.080824
+    },
+    {
+      "signal_trade_date": "2023-04-28",
+      "symbol": "300502",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "candidate_damage_score": 266396000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.210379,
+      "max_adverse_return_3d": -0.139959
+    },
+    {
+      "signal_trade_date": "2024-04-18",
+      "symbol": "300757",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -28834000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.132278,
+      "max_adverse_return_3d": -0.083475
+    },
+    {
+      "signal_trade_date": "2023-06-07",
+      "symbol": "300308",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -340088000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196418,
+      "max_adverse_return_3d": -0.026673
+    },
+    {
+      "signal_trade_date": "2025-10-31",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "candidate_damage_score": -1465454002.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.132765,
+      "max_adverse_return_3d": -0.010408
+    },
+    {
+      "signal_trade_date": "2025-07-24",
+      "symbol": "300308",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "candidate_damage_score": -1525626000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.186156,
+      "max_adverse_return_3d": -0.009677
+    },
+    {
+      "signal_trade_date": "2025-08-29",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "candidate_damage_score": -1971640000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.429857,
+      "max_adverse_return_3d": -0.003906
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "688498",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "candidate_damage_score": -2135932000.0,
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.315625,
+      "max_adverse_return_3d": -0.0125
+    }
+  ],
+  "interpretation": [
+    "V1.17O moves the breakout-damage branch off the tiny retained family and onto a broader add-vs-hold external pool.",
+    "It still treats entry rows only as leakage checks, not as training targets for the add discriminator.",
+    "This keeps the branch aligned with held-position add semantics while finally testing it on a wider and dirtier surface."
+  ]
+}

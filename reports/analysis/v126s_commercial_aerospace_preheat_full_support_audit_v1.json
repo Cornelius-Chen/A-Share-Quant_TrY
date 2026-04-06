@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126s_commercial_aerospace_preheat_full_support_audit_v1",
+    "preheat_full_label_count": 45,
+    "preheat_dates_with_matured_full_support": 13,
+    "first_preheat_date_with_matured_full_support": "20251205",
+    "matured_preheat_full_on_20251205": 2,
+    "matured_preheat_full_on_20251224": 18,
+    "matured_any_full_on_20251224": 18,
+    "authoritative_rule": "preheat_full_support_exists_and_should_not_be_collapsed_back_to_probe_only_if_replay_is_attempting_to_capture_the_11_14_to_12_23_segment"
+  },
+  "interpretation": [
+    "V1.26S audits whether V1.26M already contains lawful preheat full-support that V1.26O failed to express in replay sizing.",
+    "If matured preheat full-support exists before the main impulse dates, replay should test a stronger preheat tier instead of forcing all preheat into probe size."
+  ]
+}

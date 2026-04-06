@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "positive_preheat_hold_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_007",
+      "final_training_admission": "positive_sample_ready_but_not_final_training",
+      "recommendation": "keep_as_positive_preheat_sample_but_do_not_upgrade_over_january_ignition_archetype"
+    }
+  ]
+}

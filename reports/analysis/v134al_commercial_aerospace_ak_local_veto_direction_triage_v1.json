@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134al_commercial_aerospace_ak_local_veto_direction_triage_v1",
+    "authoritative_status": "promote_local_rebound_cost_veto_experiment",
+    "triage_csv": "data\\training\\commercial_aerospace_ak_local_veto_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "local_rebound_cost_veto",
+      "status": "promote_local_experiment",
+      "detail": "precision = 1.0, coverage = 0.5, followthrough_hit_count = 0"
+    },
+    {
+      "component": "phase2_wider_reference",
+      "status": "unchanged_for_now",
+      "detail": "The local veto scan itself does not change the current wider reference unless the precision is convincingly narrow."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Any local veto remains supervision-only until separately audited inside the phase-2 simulator."
+    }
+  ],
+  "interpretation": [
+    "V1.34AL turns the local rebound-cost veto scan into the next supervision judgment.",
+    "Only a very clean, very narrow veto is allowed to move on to the next experiment; otherwise the clue remains supervision-only."
+  ]
+}

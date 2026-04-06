@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131g_commercial_aerospace_intraday_data_readiness_gap_audit_v1",
+    "traded_symbol_count_in_primary": 12,
+    "retained_override_symbol_count": 2,
+    "reversal_watch_symbol_count": 2,
+    "required_intraday_symbol_count": 4,
+    "required_intraday_symbol_coverage_rate": 0.0,
+    "missing_required_symbol_count": 4,
+    "missing_required_symbols": [
+      "000738",
+      "300045",
+      "300342",
+      "601698"
+    ],
+    "authoritative_rule": "do_not_start_commercial_aerospace_minute_level_override_modeling_until_required_failure-seed symbols have local minute-bar support"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "000738",
+      "required_role": "reversal_watch",
+      "minute_support_present": false,
+      "minute_file_count": 0,
+      "minute_files": ""
+    },
+    {
+      "symbol": "300045",
+      "required_role": "reversal_watch",
+      "minute_support_present": false,
+      "minute_file_count": 0,
+      "minute_files": ""
+    },
+    {
+      "symbol": "300342",
+      "required_role": "override_positive",
+      "minute_support_present": false,
+      "minute_file_count": 0,
+      "minute_files": ""
+    },
+    {
+      "symbol": "601698",
+      "required_role": "override_positive",
+      "minute_support_present": false,
+      "minute_file_count": 0,
+      "minute_files": ""
+    }
+  ],
+  "interpretation": [
+    "V1.31G audits whether the commercial-aerospace intraday-override supervision bundle has the local minute-bar support needed for any lawful next-step intraday work.",
+    "The audit is intentionally narrow: it only checks the retained override positives and reversal watches, because those are the current future supervision seeds."
+  ]
+}

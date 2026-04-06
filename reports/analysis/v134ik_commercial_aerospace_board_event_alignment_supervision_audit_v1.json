@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ik_commercial_aerospace_board_event_alignment_supervision_audit_v1",
+    "event_seed_count": 6,
+    "aligned_board_supportive_count": 1,
+    "turning_point_alignment_count": 1,
+    "pre_turn_watch_count": 1,
+    "lockout_misaligned_count": 2,
+    "raw_only_alignment_absent_count": 1,
+    "alignment_csv": "data\\training\\commercial_aerospace_board_event_alignment_supervision_v1.csv",
+    "authoritative_rule": "board-event alignment now exists as its own supervision layer: some events align with board-supportive response, some with turning-point risk, some with lockout misalignment, and post-lockout raw-only dates remain explicitly unaligned rather than silently guessed"
+  },
+  "alignment_rows": [
+    {
+      "registry_id": "ca_source_010",
+      "trade_date": "20251224",
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "event_semantic": "continuation_enabler",
+      "event_state": "board_supportive_continuation_seed",
+      "same_day_expectancy_state_count": 1,
+      "same_day_expectancy_states": "unlock_worthy",
+      "board_event_alignment_label": "aligned_board_supportive_response",
+      "board_event_alignment_reading": "event lands inside a positive revival/continuation board state with strong breadth and positive forward expectancy"
+    },
+    {
+      "registry_id": "ca_source_001",
+      "trade_date": "20260108",
+      "symbol": "",
+      "display_name": "",
+      "event_semantic": "continuation_enabler",
+      "event_state": "pre_turn_continuation_watch",
+      "same_day_expectancy_state_count": 0,
+      "same_day_expectancy_states": "",
+      "board_event_alignment_label": "pre_turn_alignment_watch",
+      "board_event_alignment_reading": "event is retained, but board alignment is still pre-turn and should be treated as a watch rather than a confirmed supportive response"
+    },
+    {
+      "registry_id": "ca_source_007",
+      "trade_date": "20260113",
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "event_semantic": "turning_point_watch",
+      "event_state": "turning_point_risk_seed",
+      "same_day_expectancy_state_count": 0,
+      "same_day_expectancy_states": "",
+      "board_event_alignment_label": "turning_point_overheat_alignment",
+      "board_event_alignment_reading": "event aligns with the decisive overheating and board-turning regime rather than with renewed participation"
+    },
+    {
+      "registry_id": "ca_source_005",
+      "trade_date": "20260121",
+      "symbol": "",
+      "display_name": "",
+      "event_semantic": "continuation_enabler",
+      "event_state": "lockout_misaligned_continuation_watch",
+      "same_day_expectancy_state_count": 0,
+      "same_day_expectancy_states": "",
+      "board_event_alignment_label": "lockout_misaligned_board_response",
+      "board_event_alignment_reading": "event remains board-misaligned because the board is inside lockout or false-bounce conditions"
+    },
+    {
+      "registry_id": "ca_source_009",
+      "trade_date": "20260306",
+      "symbol": "",
+      "display_name": "",
+      "event_semantic": "continuation_enabler",
+      "event_state": "lockout_misaligned_continuation_watch",
+      "same_day_expectancy_state_count": 0,
+      "same_day_expectancy_states": "",
+      "board_event_alignment_label": "lockout_misaligned_board_response",
+      "board_event_alignment_reading": "event remains board-misaligned because the board is inside lockout or false-bounce conditions"
+    },
+    {
+      "registry_id": "ca_source_006",
+      "trade_date": "20260328",
+      "symbol": "",
+      "display_name": "",
+      "event_semantic": "continuation_enabler",
+      "event_state": "raw_only_post_lockout_continuation_watch",
+      "same_day_expectancy_state_count": 0,
+      "same_day_expectancy_states": "",
+      "board_event_alignment_label": "raw_only_post_lockout_alignment_absent",
+      "board_event_alignment_reading": "raw dates exist but legal board-state derivation is absent beyond the frozen boundary, so no lawful board alignment can be assigned"
+    }
+  ],
+  "interpretation": [
+    "V1.34IK resolves part of the named gap by making board-event alignment explicit instead of leaving it as an intuition.",
+    "The layer remains honest about incompleteness: post-lockout raw-only dates still do not receive legal board alignment labels beyond 'alignment absent'."
+  ]
+}

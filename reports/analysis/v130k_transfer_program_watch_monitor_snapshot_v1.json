@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130k_transfer_program_watch_monitor_snapshot_v1",
+    "candidate_board_count": 5,
+    "reopen_ready_count": 0,
+    "closest_candidate_sector_id": "BK0808",
+    "closest_candidate_sector_name": "军民融合",
+    "authoritative_status": "freeze_transfer_program_and_monitor_gap_closure",
+    "authoritative_rule": "keep_the_transfer_program_frozen_until_any_watchlist_candidate_closes_the_same_plane_non_bridge_and_board_strength_gaps_together"
+  },
+  "monitor_rows": [
+    {
+      "sector_id": "BK0808",
+      "sector_name": "军民融合",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.473136,
+      "missing_trigger_count": 2,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.0,
+      "bridge_only_or_not_ready": true,
+      "reopen_ready": false,
+      "monitor_priority": "m2_g0.000000_c0.473136"
+    },
+    {
+      "sector_id": "BK0994",
+      "sector_name": "空间站概念",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 0,
+      "current_v6_board_composite": 0.426425,
+      "missing_trigger_count": 3,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.023575000000000013,
+      "bridge_only_or_not_ready": true,
+      "reopen_ready": false,
+      "monitor_priority": "m3_g0.023575_c0.426425"
+    },
+    {
+      "sector_id": "BK0715",
+      "sector_name": "航母概念",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.373132,
+      "missing_trigger_count": 3,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.07686799999999999,
+      "bridge_only_or_not_ready": true,
+      "reopen_ready": false,
+      "monitor_priority": "m3_g0.076868_c0.373132"
+    },
+    {
+      "sector_id": "BK0814",
+      "sector_name": "大飞机",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.352149,
+      "missing_trigger_count": 3,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.09785100000000002,
+      "bridge_only_or_not_ready": true,
+      "reopen_ready": false,
+      "monitor_priority": "m3_g0.097851_c0.352149"
+    },
+    {
+      "sector_id": "BK0490",
+      "sector_name": "军工",
+      "current_v6_symbol_count": 0,
+      "current_v5_symbol_count": 2,
+      "current_v6_board_composite": null,
+      "missing_trigger_count": 3,
+      "same_plane_symbol_gap": 2,
+      "board_composite_gap": null,
+      "bridge_only_or_not_ready": true,
+      "reopen_ready": false,
+      "monitor_priority": "m3_gna_cna"
+    }
+  ],
+  "interpretation": [
+    "V1.30K converts the reopen watchlist into a ranked monitor snapshot.",
+    "The goal is not to reopen a worker early, but to make the gap-to-readiness explicit and comparable across boards."
+  ]
+}

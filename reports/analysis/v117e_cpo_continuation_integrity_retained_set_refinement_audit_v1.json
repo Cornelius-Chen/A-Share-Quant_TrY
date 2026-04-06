@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117e_cpo_continuation_integrity_retained_set_refinement_audit_v1",
+    "retained_row_count": 8,
+    "retained_positive_count": 6,
+    "retained_weak_count": 2,
+    "positive_mean_score": 3298040000.0,
+    "weak_mean_score": 3285198500.0,
+    "mean_score_gap_positive_minus_weak": 12841500.0,
+    "best_retained_threshold": 3704106000.0,
+    "best_retained_balanced_accuracy": 0.75,
+    "retained_set_refinement_value_clear": true,
+    "recommended_next_posture": "if_retained_refinement_gap_stays_weak_keep_continuation_integrity_as_explanatory_component_not_new_gate"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 4096546000.0,
+      "tp": 1,
+      "fn": 5,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.166667,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.583333
+    },
+    {
+      "threshold": 3761437000.0,
+      "tp": 2,
+      "fn": 4,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.333333,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.666667
+    },
+    {
+      "threshold": 3704106000.0,
+      "tp": 3,
+      "fn": 3,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.5,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 3524512000.0,
+      "tp": 3,
+      "fn": 3,
+      "fp": 1,
+      "tn": 1,
+      "positive_recall": 0.5,
+      "weak_reject_rate": 0.5,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "threshold": 3453524000.0,
+      "tp": 4,
+      "fn": 2,
+      "fp": 1,
+      "tn": 1,
+      "positive_recall": 0.666667,
+      "weak_reject_rate": 0.5,
+      "balanced_accuracy": 0.583333
+    },
+    {
+      "threshold": 3045885000.0,
+      "tp": 4,
+      "fn": 2,
+      "fp": 2,
+      "tn": 0,
+      "positive_recall": 0.666667,
+      "weak_reject_rate": 0.0,
+      "balanced_accuracy": 0.333333
+    },
+    {
+      "threshold": 2493410000.0,
+      "tp": 5,
+      "fn": 1,
+      "fp": 2,
+      "tn": 0,
+      "positive_recall": 0.833333,
+      "weak_reject_rate": 0.0,
+      "balanced_accuracy": 0.416667
+    },
+    {
+      "threshold": 2279217000.0,
+      "tp": 6,
+      "fn": 0,
+      "fp": 2,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "weak_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "retained_score_rows": [
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "quality_positive_score": 4096546000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 4096546000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "quality_positive_score": 3761437000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 3761437000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "quality_positive_score": 3704106000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 3704106000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "quality_positive_score": 3524512000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 3524512000.0,
+      "positive_under_proxy_definition": false
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "quality_positive_score": 3453524000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 3453524000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "quality_positive_score": 3045885000.0,
+      "quality_negative_score": 0.0,
+      "candidate_quality_score": 3045885000.0,
+      "positive_under_proxy_definition": false
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.020214,
+      "max_adverse_return_3d": -0.017008,
+      "quality_positive_score": 4081813000.0,
+      "quality_negative_score": 1588403000.0,
+      "candidate_quality_score": 2493410000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.064312,
+      "max_adverse_return_3d": -0.021501,
+      "quality_positive_score": 3858041000.0,
+      "quality_negative_score": 1578824000.0,
+      "candidate_quality_score": 2279217000.0,
+      "positive_under_proxy_definition": true
+    }
+  ],
+  "interpretation": [
+    "V1.17E asks a harder question than V1.17D: not whether the continuation-integrity score separates retained hits from hot-only rows, but whether it adds discrimination inside the retained q=0.25 line itself.",
+    "This is the real standalone-law test for the current quality component. If the score cannot separate positive retained rows from weak retained rows, then it is descriptive but not a useful new gate.",
+    "The report is therefore still candidate-only and should be read as a refinement audit, not a replay-facing promotion step."
+  ]
+}

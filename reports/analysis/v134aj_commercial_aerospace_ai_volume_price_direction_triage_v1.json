@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134aj_commercial_aerospace_ai_volume_price_direction_triage_v1",
+    "authoritative_status": "retain_volume_price_confirmation_as_supervision_only_inside_current_phase2_reference",
+    "triage_csv": "data\\training\\commercial_aerospace_ai_volume_price_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "volume_price_confirmation_layer",
+      "status": "retain_as_supervision_only",
+      "detail": "strongest_feature = post_reversal_up_amount_share, gap = 0.097386"
+    },
+    {
+      "component": "execution_rule_change",
+      "status": "not_yet_authorized",
+      "detail": "The audit measures separation only; it does not authorize direct rule edits yet."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Volume-price confirmation remains a supervisory refinement inside phase 2."
+    }
+  ],
+  "interpretation": [
+    "V1.34AJ turns the first reversal-focused volume-price confirmation audit into the next supervision judgment.",
+    "The branch keeps the layer as supervision only until the separation is stable enough to justify a narrower local rule experiment."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125u_commercial_aerospace_lawful_supervised_leakage_audit_v1",
+    "training_row_count": 6180,
+    "feature_field_count": 18,
+    "label_field_count": 4,
+    "potential_leakage_feature_count": 0,
+    "authoritative_status": "field_level_lawful_for_eod_supervised_training_pending_adversarial_review"
+  },
+  "audit_rows": [
+    {
+      "audit_item": "feature_label_overlap",
+      "status": "pass",
+      "detail": "no feature/label overlap"
+    },
+    {
+      "audit_item": "future_named_feature_fields",
+      "status": "pass",
+      "detail": "no future-only fields inside feature set"
+    },
+    {
+      "audit_item": "point_in_time_regime_proxy",
+      "status": "pass",
+      "detail": "regime_proxy_semantic is derived from same-day board state and history-only thresholds, not full-sample clustering backfill"
+    },
+    {
+      "audit_item": "event_state_eod_legality",
+      "status": "pass",
+      "detail": "event_state is day-level lawful for EOD learning because it is built from public_release_time <= trade_date"
+    },
+    {
+      "audit_item": "future_labels_offline_only",
+      "status": "pass",
+      "detail": "future path quantities remain label-only and are not used as features"
+    }
+  ],
+  "interpretation": [
+    "V1.25U reruns the leakage audit after replacing full-sample regime semantics with a point-in-time regime proxy.",
+    "This clears the main semantic lookahead blocker for EOD supervised training, while keeping intraday legality out of scope."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129k_commercial_aerospace_governance_stack_packaging_v1",
+    "governance_layer_count": 7,
+    "current_primary_variant": "tail_weakdrift_full",
+    "authoritative_output": "commercial_aerospace_governance_stack_frozen_for_state_management_and_portability_work"
+  },
+  "governance_rows": [
+    {
+      "layer": "timechain_transparency",
+      "status": "retained_governance",
+      "rule": "all commercial-aerospace replay audits should show signal_date, execution_date, and pre_open_event_status together",
+      "source_status": "retain_time_chain_triplet_and_preopen_veto_as_governance_layers_without_claiming_economic_improvement_yet"
+    },
+    {
+      "layer": "pre_open_decisive_event_veto",
+      "status": "retained_governance",
+      "rule": "decisive adverse events are checked in the pre-open window, but they do not alter replay economics until a lawful trigger population exists",
+      "source_status": "retain_time_chain_triplet_and_preopen_veto_as_governance_layers_without_claiming_economic_improvement_yet"
+    },
+    {
+      "layer": "failure_library",
+      "status": "retained_supervision",
+      "rule": "lawful-but-suspicious trades should be preserved as failure cases even when they cannot yet translate into replay-facing actions",
+      "source_status": "use retained cases as supervision objects for future intraday collapse override grammar without contaminating current EOD lawful replay"
+    },
+    {
+      "layer": "intraday_collapse_override",
+      "status": "supervision_only",
+      "rule": "intraday collapse override remains a retained supervision object and must not be mixed into current EOD lawful replay",
+      "source_status": "retain_supervision_only_not_replay_facing"
+    },
+    {
+      "layer": "phase_state_machine",
+      "status": "authoritative_supervision_surface",
+      "rule": "commercial aerospace must be represented as probe / full_pre / full / de_risk rather than a binary probe/full ladder",
+      "source_status": "retain_probe_full_pre_full_de_risk_state_machine_for_translation"
+    },
+    {
+      "layer": "phase_specific_walk_forward",
+      "status": "partial_support_only",
+      "rule": "full_pre may continue as phase-specific walk-forward supervision; full remains phase-contextual until thicker lawful support exists",
+      "source_status": "move_to_phase_specific_walk_forward_for_full_pre_only_and_keep_full_phase_contextual"
+    },
+    {
+      "layer": "late_preheat_mismatch_governance",
+      "status": "retained_governance_rule",
+      "rule": "late-preheat full entries that do not align with the full_pre supervision state must be tracked as governance failures before any replay-side expansion",
+      "source_status": "retain_governance_rule_and_failure_cases"
+    }
+  ],
+  "interpretation": [
+    "V1.29K packages the commercial-aerospace governance stack after replay-side micro-tuning was stopped.",
+    "The output is not a new alpha family; it is the authoritative supervision/governance surface that should accompany the frozen primary replay."
+  ]
+}

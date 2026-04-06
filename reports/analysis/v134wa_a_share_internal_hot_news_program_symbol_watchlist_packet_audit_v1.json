@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "watchlist_row_count": 2,
+    "unique_symbol_count": 2,
+    "top_watch_symbol": "600760",
+    "top_primary_theme_slug": "defense_industry",
+    "top_mapping_confidence": "medium",
+    "top_linkage_class": "direct_beneficiary",
+    "authoritative_output": "a_share_internal_hot_news_program_symbol_watchlist_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_symbol_watchlist_packet",
+      "component_state": "read_ready_internal_only",
+      "metric": "watchlist_row_count",
+      "value": "2"
+    },
+    {
+      "component": "unique_symbols",
+      "component_state": "materialized",
+      "metric": "unique_symbol_count",
+      "value": "2"
+    },
+    {
+      "component": "top_watch_symbol",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "component": "top_primary_theme",
+      "component_state": "materialized",
+      "metric": "top_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_mapping_confidence",
+      "component_state": "materialized",
+      "metric": "top_mapping_confidence",
+      "value": "medium"
+    },
+    {
+      "component": "top_linkage_class",
+      "component_state": "materialized",
+      "metric": "top_linkage_class",
+      "value": "direct_beneficiary"
+    }
+  ],
+  "interpretation": [
+    "This packet converts the symbol watch surface into a program-facing watchlist that is already deduplicated by symbol.",
+    "The top-ranked symbol now carries the governed primary theme, so downstream watch consumers do not need to repeat overlap resolution.",
+    "It also exposes linkage class so the consumer can distinguish direct beneficiaries from weaker proxies.",
+    "This is the most direct symbol-level opportunity packet under the current internal hot-news pipeline."
+  ]
+}

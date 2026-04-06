@@ -1,0 +1,4 @@
+﻿component,component_state,artifact_path,coverage_note
+adapter_registry,materialized_contracts,data\reference\info_center\automation_registry\a_share_network_fetch_adapter_registry_v1.csv,adapter_count = 3
+host_binding_registry,materialized_stub_bindings,data\reference\info_center\automation_registry\a_share_network_fetch_host_registry_v1.csv,host_binding_count = 22
+adapter_residual_backlog,materialized_named_residuals,data\reference\info_center\automation_registry\a_share_network_fetch_adapter_residual_backlog_v1.csv,residual_count = 3

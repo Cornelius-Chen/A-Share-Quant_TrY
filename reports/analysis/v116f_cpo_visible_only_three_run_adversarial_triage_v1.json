@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116f_cpo_visible_only_three_run_adversarial_triage_v1",
+    "triage_window": [
+      "V116C",
+      "V116D",
+      "V116E"
+    ],
+    "retained_count": 3,
+    "blocked_count": 2,
+    "must_fix_next": "time_split_threshold_rebuild_and_strict_checkpoint_to_fill_alignment",
+    "recommended_next_posture": "carry_pc2_only_q_0p25_and_pc1_or_pc2_q_0p25_forward_as_candidate_only_after_time_split_rebuild"
+  },
+  "retained_rows": [
+    {
+      "variant_name": "all_intraday_strict_visible",
+      "retention_posture": "audit_ceiling_only",
+      "reason": "visible-only rebuild direction is valid, but the all-pass ceiling remains too loose for promotion",
+      "final_equity": 3124685.3884,
+      "max_drawdown": 0.196068
+    },
+    {
+      "variant_name": "pc2_only_q_0p25",
+      "retention_posture": "clean_coherent_candidate",
+      "reason": "best current balance between visible-only execution, positive audit coherence, and moderate drawdown",
+      "final_equity": 2236925.2433,
+      "max_drawdown": 0.163868,
+      "positive_expectancy_hit_rate": 0.666667
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "retention_posture": "expressive_shadow_candidate",
+      "reason": "most expressive visible-only middle candidate, worth carrying as a shadow posture but not promoting",
+      "final_equity": 2607874.6659,
+      "max_drawdown": 0.176515,
+      "positive_expectancy_hit_rate": 0.5
+    }
+  ],
+  "blocked_rows": [
+    {
+      "variant_name": "pc1_only_q_0p2",
+      "block_reason": "audit_and_replay_direction_diverge",
+      "final_equity": 2083892.6364,
+      "max_drawdown": 0.15707,
+      "positive_expectancy_hit_rate": 0.0,
+      "avg_expectancy_proxy_3d": -0.043932
+    },
+    {
+      "variant_name": "all_intraday_strict_visible",
+      "block_reason": "too_loose_for_promotion",
+      "final_equity": 3124685.3884,
+      "max_drawdown": 0.196068
+    }
+  ],
+  "interpretation": [
+    "The first visible-only three-run adversarial review keeps the no-future-label rebuild but rejects immediate promotion of every executing variant.",
+    "pc1_only_q_0p2 is no longer treated as the main clean candidate because audit coherence turns negative after the V116E alignment repair.",
+    "The next mandatory repair is no longer filter tweaking inside the same sample, but time-split threshold rebuilding plus stricter checkpoint-to-fill semantics."
+  ]
+}

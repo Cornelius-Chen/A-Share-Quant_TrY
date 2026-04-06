@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "selective_candidate_host_count": 20,
+    "authoritative_status": "selective_network_activation_kept_closed_until_license_and_scheduler_gates_open"
+  },
+  "triage_rows": [
+    {
+      "component": "license_review_gate",
+      "direction": "resolve_host_allowlist_before_any_selective_network_activation"
+    },
+    {
+      "component": "runtime_scheduler_gate",
+      "direction": "bind_policy_bound_adapters_to_runtime_scheduler_before_activation"
+    }
+  ],
+  "interpretation": [
+    "The next source-side work is explicit and bounded: allowlist review, then scheduler runtime binding.",
+    "No live activation should happen before both gates move from closed to explicitly open."
+  ]
+}

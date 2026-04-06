@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "license_review_row_count": 22,
+    "scheduler_runtime_row_count": 3,
+    "manual_review_pending_count": 20,
+    "scheduler_stub_count": 3,
+    "status_csv": "data\\training\\a_share_network_activation_operational_registry_status_v1.csv",
+    "authoritative_output": "a_share_network_activation_operational_registries_materialized"
+  },
+  "rows": [
+    {
+      "component": "license_review_registry",
+      "component_state": "materialized_pending_review_surface",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_license_review_registry_v1.csv",
+      "coverage_note": "manual_review_pending_count = 20"
+    },
+    {
+      "component": "scheduler_runtime_registry",
+      "component_state": "materialized_runtime_stub_surface",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_scheduler_runtime_registry_v1.csv",
+      "coverage_note": "scheduler_stub_count = 3"
+    },
+    {
+      "component": "operational_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_activation_operational_residual_v1.csv",
+      "coverage_note": "review_only_excluded_count = 2"
+    }
+  ],
+  "interpretation": [
+    "Selective activation now has operational registries instead of only policy conclusions.",
+    "The remaining source-side work is explicit queue processing and runtime deployment, not registry design."
+  ]
+}

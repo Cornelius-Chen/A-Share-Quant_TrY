@@ -1,0 +1,5 @@
+﻿failure_id,symbol,failure_type,signal_trade_date,execution_trade_date,required_session_window,required_use_case,minimum_fields,priority
+20260113_601698,601698,intraday_collapse_override_required,20260112,20260113,20260113_0930_1500,intraday_override_supervision,"open,high,low,close,volume,amount",high
+20260126_300342,300342,intraday_collapse_override_required,20260123,20260126,20260126_0930_1500,intraday_override_supervision,"open,high,low,close,volume,amount",high
+20260113_000738,000738,intraday_reversal_watch,20260112,20260113,20260113_0930_1500,intraday_override_supervision,"open,high,low,close,volume,amount",medium
+20260126_300045,300045,intraday_reversal_watch,20260123,20260126,20260126_0930_1500,intraday_override_supervision,"open,high,low,close,volume,amount",medium

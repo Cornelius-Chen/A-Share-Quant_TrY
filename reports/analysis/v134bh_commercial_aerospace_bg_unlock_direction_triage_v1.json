@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bh_commercial_aerospace_bg_unlock_direction_triage_v1",
+    "authoritative_status": "freeze_board_revival_unlock_supervision_and_continue_board_level_unlock_governance_only",
+    "triage_csv": "data\\training\\commercial_aerospace_bg_unlock_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "board_revival_unlock_seed",
+      "status": "retained_as_supervision",
+      "detail": "positive_seed_count = 8, false_bounce_seed_count = 10."
+    },
+    {
+      "component": "lockout_release_condition",
+      "status": "approved_as_board_level_guard",
+      "detail": "Lockout release discussion must require broad revival seed, not small-range rebound."
+    },
+    {
+      "component": "execution_binding",
+      "status": "still_blocked",
+      "detail": "Unlock supervision remains governance-only and does not authorize reentry simulation or replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34BH turns the board revival unlock audit into the next direction judgment.",
+    "The unlock seed may release the cooling lockout only in governance, but it still does not authorize execution binding or simulator work."
+  ]
+}

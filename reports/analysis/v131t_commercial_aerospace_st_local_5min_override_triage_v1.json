@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131t_commercial_aerospace_st_local_5min_override_triage_v1",
+    "authoritative_status": "retain_commercial_aerospace_local_5min_override_prototype_as_governed_supervision",
+    "override_positive_hit_count": 2,
+    "override_positive_total": 2,
+    "reversal_watch_hit_count": 2,
+    "reversal_watch_total": 2,
+    "clean_control_hit_count": 0,
+    "clean_control_total": 30,
+    "authoritative_rule": "the first local 5min prototype is retained only as a governance-bound supervision layer unless later minute-level work proves it lawful and replay-worthy"
+  },
+  "triage_rows": [
+    {
+      "component": "local_5min_collapse_override_prototype",
+      "status": "retain_commercial_aerospace_local_5min_override_prototype_as_governed_supervision",
+      "rationale": "the prototype is only valuable if it cleanly covers retained severe cases while staying off clean controls"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the new 5min prototype is supervision/governance only and does not directly modify the current primary replay stack"
+    }
+  ],
+  "interpretation": [
+    "V1.31T turns the narrow local 5-minute prototype into a governance verdict.",
+    "The correct current posture is supervision-first: the prototype can guide future minute-level work without being allowed to contaminate the lawful EOD replay stack."
+  ]
+}

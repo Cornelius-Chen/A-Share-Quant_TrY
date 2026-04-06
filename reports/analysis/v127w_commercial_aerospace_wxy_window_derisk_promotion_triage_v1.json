@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127w_commercial_aerospace_wxy_window_derisk_promotion_triage_v1",
+    "old_primary_variant": "veto_drag_trio_impulse_only",
+    "old_primary_final_equity": 1276010.378,
+    "old_primary_max_drawdown": 0.11536441,
+    "new_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "new_primary_final_equity": 1298439.6031,
+    "new_primary_max_drawdown": 0.09889703,
+    "authoritative_status": "promote_window_specific_derisk_fix_to_primary_reference",
+    "cleaner_alternative": "v126q_cleaner_reference",
+    "aggressive_shadow": "weak_drift_event_neutral_half"
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "promote_primary_reference",
+      "reason": "It improves final equity, drawdown, and order count simultaneously."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "promote_primary_reference",
+      "reason": "This is a clean frontier improvement, not a style substitution."
+    },
+    {
+      "subagent": "James",
+      "vote": "promote_primary_reference",
+      "reason": "The window-specific grammar upgrades downside control without sacrificing the economic path."
+    }
+  ],
+  "interpretation": [
+    "V1.27W promotes the first successful window-specific de-risk grammar to the new primary reference after a unanimous subagent vote.",
+    "Commercial aerospace should now treat window_riskoff_full_weakdrift_075_impulse_half as the authoritative replay-facing primary reference."
+  ]
+}

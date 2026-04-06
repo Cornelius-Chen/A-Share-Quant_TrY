@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125c_commercial_aerospace_control_semantics_narrowing_scan_v1",
+    "variant_count": 4,
+    "best_variant": "base_reference",
+    "best_eligibility_year_spread_mean": -0.0024955,
+    "best_de_risk_year_spread_mean": -0.00672069
+  },
+  "variant_rows": [
+    {
+      "variant": "base_reference",
+      "eligibility_forward_spread_10": 0.00677486,
+      "de_risk_avoidance_spread_10": -0.00230172,
+      "eligibility_year_spread_mean": -0.0024955,
+      "eligibility_year_spread_min": -0.02974733,
+      "de_risk_year_spread_mean": -0.00672069,
+      "de_risk_year_spread_min": -0.01888307,
+      "eligibility_flag_count": 1545,
+      "de_risk_flag_count": 2060
+    },
+    {
+      "variant": "primary_only_top2_proxy",
+      "eligibility_forward_spread_10": 0.00969082,
+      "de_risk_avoidance_spread_10": -0.03534365,
+      "eligibility_year_spread_mean": -0.00337648,
+      "eligibility_year_spread_min": -0.04247362,
+      "de_risk_year_spread_mean": -0.03343283,
+      "de_risk_year_spread_min": -0.03646159,
+      "eligibility_flag_count": 302,
+      "de_risk_flag_count": 169
+    },
+    {
+      "variant": "primary_only_top3_proxy",
+      "eligibility_forward_spread_10": 0.00060633,
+      "de_risk_avoidance_spread_10": -0.02034243,
+      "eligibility_year_spread_mean": -0.00597079,
+      "eligibility_year_spread_min": -0.03213668,
+      "de_risk_year_spread_mean": -0.02113206,
+      "de_risk_year_spread_min": -0.02608638,
+      "eligibility_flag_count": 475,
+      "de_risk_flag_count": 331
+    },
+    {
+      "variant": "primary_plus_support_highconviction",
+      "eligibility_forward_spread_10": -0.00196896,
+      "de_risk_avoidance_spread_10": -0.01140475,
+      "eligibility_year_spread_mean": -0.00438208,
+      "eligibility_year_spread_min": -0.02359674,
+      "de_risk_year_spread_mean": -0.01625619,
+      "de_risk_year_spread_min": -0.02945338,
+      "eligibility_flag_count": 833,
+      "de_risk_flag_count": 609
+    }
+  ],
+  "interpretation": [
+    "V1.25C scans a few thinner control semantics instead of forcing replay on the first wide control surface.",
+    "The purpose is to see whether a thinner primary-oriented definition restores chronological directionality."
+  ]
+}

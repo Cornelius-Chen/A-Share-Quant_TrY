@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121z_cpo_recent_1min_burst_fade_trap_candidate_discovery_v1",
+    "candidate_family_name": "burst_fade_trap_1min_band_candidate",
+    "candidate_band_count": 3,
+    "candidate_band_names": [
+      "pc1_high__pc2_high",
+      "pc1_high__pc2_low",
+      "pc1_high__pc2_mid"
+    ],
+    "recommended_next_posture": "keep_as_non_replay_candidate_family_until_label_aligned_audit"
+  },
+  "candidate_band_rows": [
+    {
+      "band": "pc1_high__pc2_high",
+      "row_count": 1069,
+      "mean_close_vs_vwap": -0.01029461,
+      "mean_push_efficiency": -0.81496804,
+      "mean_burst_then_fade_score": 0.00169054,
+      "mean_late_session_integrity_score": -0.09947969
+    },
+    {
+      "band": "pc1_high__pc2_low",
+      "row_count": 773,
+      "mean_close_vs_vwap": -0.0033004,
+      "mean_push_efficiency": -0.403534,
+      "mean_burst_then_fade_score": 0.00701089,
+      "mean_late_session_integrity_score": -0.01282021
+    },
+    {
+      "band": "pc1_high__pc2_mid",
+      "row_count": 785,
+      "mean_close_vs_vwap": -0.00602765,
+      "mean_push_efficiency": -0.65017143,
+      "mean_burst_then_fade_score": 0.00307151,
+      "mean_late_session_integrity_score": -0.03398136
+    }
+  ],
+  "interpretation": [
+    "V1.21Z extracts the negative/trap 1-minute bands from the PCA structure instead of pretending they are already rules.",
+    "These bands look like burst-then-fade or upper-shadow-heavy trap states: weak push efficiency and poor late-session integrity with elevated fade score.",
+    "This is a candidate family only and should be treated as non-replay until label-aligned audit exists."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "global_component_count": 5,
+    "source_blocker_count": 2,
+    "replay_true_source_gap_count": 1,
+    "authoritative_status": "information_center_should_now_be_steered_by_dual_stopline_governance"
+  },
+  "triage_rows": [
+    {
+      "component": "framework_core",
+      "direction": "keep_framework_frozen_and_stop_scaffold_reopening"
+    },
+    {
+      "component": "source_side",
+      "direction": "treat_manual_review_record_closure_as_the_only_meaningful_next_source_side_gain"
+    },
+    {
+      "component": "replay_side",
+      "direction": "retain_replay_promotion_as_nonpromotive_until_index_daily_source_boundary_moves"
+    },
+    {
+      "component": "index_daily_frontier",
+      "direction": "treat_index_daily_extension_as_deferred_prelaunch_not_active_research"
+    },
+    {
+      "component": "live_like_execution",
+      "direction": "keep_live_like_and_execution_closed_while_source_and_replay_stoplines_remain"
+    }
+  ],
+  "interpretation": [
+    "The project should now be managed as a dual-stopline system rather than as a single open-ended buildout.",
+    "That dual stopline is source-side manual closure pending plus replay-side true source gap."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bd_commercial_aerospace_bc_reentry_ladder_direction_triage_v1",
+    "authoritative_status": "freeze_reentry_ladder_supervision_and_continue_seed_level_ladder_supervision",
+    "triage_csv": "data\\training\\commercial_aerospace_bc_reentry_ladder_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "same_day_reentry",
+      "status": "still_blocked",
+      "detail": "same_day_entry_authorized_seed_count = 0; no seed authorizes same-day rebuild."
+    },
+    {
+      "component": "seed_level_reentry_ladder",
+      "status": "approved_to_continue",
+      "detail": "Use the ladder states for deeper supervision: block, observe, open rebuild watch, then later confirmation. persistent_recovery_seed_count = 2."
+    },
+    {
+      "component": "reentry_simulator_lane",
+      "status": "still_blocked",
+      "detail": "Ladder supervision still does not authorize execution simulation or replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34BD turns the timing ladder into the next direction judgment.",
+    "The branch may continue deeper seed-level ladder supervision, but no simulator or replay-facing lane is authorized from this ladder yet."
+  ]
+}

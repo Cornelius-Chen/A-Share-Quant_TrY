@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122n_cpo_klm_1min_supportive_triage_v1",
+    "supportive_continuation_status": "explanatory_only",
+    "reviewer_consensus": "unanimous",
+    "forbidden_next_step": "any_further_same_family_add_side_tuning_or_replay",
+    "recommended_next_posture": "recenter_1min_plane_on_downside_reduce_close_microstructure"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "supportive_continuation_status": "explanatory_only",
+      "reason": "add_reduce_separation_fails_under_time_split",
+      "recommended_next_step": "shift_1min_plane_to_downside_reduce_close_microstructure"
+    },
+    {
+      "reviewer": "Tesla",
+      "supportive_continuation_status": "explanatory_only",
+      "reason": "gap_too_small_and_chronology_near_random",
+      "recommended_next_step": "shift_1min_plane_to_downside_reduce_close_microstructure"
+    },
+    {
+      "reviewer": "James",
+      "supportive_continuation_status": "explanatory_only",
+      "reason": "cannot_be_narrowed_into_clean_add_rule",
+      "recommended_next_step": "shift_1min_plane_to_downside_reduce_close_microstructure"
+    }
+  ],
+  "interpretation": [
+    "The supportive continuation 1-minute family can no longer be treated as a surviving add-side candidate after the failed add-vs-reduce separation attempt.",
+    "It is retained only as explanatory microstructure context.",
+    "The correct next step is to shift the 1-minute plane away from add-side tuning and toward downside/reduce/close-side microstructure audit."
+  ]
+}

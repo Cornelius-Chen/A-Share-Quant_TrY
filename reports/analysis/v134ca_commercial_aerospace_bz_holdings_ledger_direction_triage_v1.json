@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ca_commercial_aerospace_bz_holdings_ledger_direction_triage_v1",
+    "authoritative_status": "freeze_holdings_ledger_and_open_isolated_sell_side_shadow_lane_next",
+    "ledger_row_count": 584,
+    "collision_session_count": 8,
+    "triage_csv": "data\\training\\commercial_aerospace_bz_holdings_ledger_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "start_of_day_holdings_ledger",
+      "status": "ready_as_binding_input",
+      "detail": "The frozen EOD primary now has a concrete carried-inventory ledger with explicit same-day new-lot separation."
+    },
+    {
+      "component": "same_day_precedence_policy",
+      "status": "ready_as_binding_guardrail",
+      "detail": "Use the existing precedence families to prevent intraday sells from consuming same-day open/add lots or double-consuming against EOD reduce/close."
+    },
+    {
+      "component": "next_real_work",
+      "status": "build_isolated_sell_side_shadow_lane",
+      "detail": "The justified next step is now an isolated sell-side shadow lane wired to the holdings ledger and precedence policy."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "Keep the lane sell-side only; do not pull reentry execution or full replay binding into this buildout."
+    }
+  ],
+  "interpretation": [
+    "V1.34CA converts the new holdings ledger plus existing precedence policy into the next binding direction.",
+    "With carried inventory now explicit, the next justified build is the isolated sell-side shadow lane and not more semantic research."
+  ]
+}

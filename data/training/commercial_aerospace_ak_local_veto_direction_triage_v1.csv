@@ -1,0 +1,4 @@
+﻿component,status,detail
+local_rebound_cost_veto,promote_local_experiment,"precision = 1.0, coverage = 0.5, followthrough_hit_count = 0"
+phase2_wider_reference,unchanged_for_now,The local veto scan itself does not change the current wider reference unless the precision is convincingly narrow.
+phase3_replay_lane,still_blocked,Any local veto remains supervision-only until separately audited inside the phase-2 simulator.

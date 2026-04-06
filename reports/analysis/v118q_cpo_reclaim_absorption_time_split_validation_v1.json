@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118q_cpo_reclaim_absorption_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.430556,
+    "min_test_balanced_accuracy": 0.375,
+    "stability_posture": "candidate_unstable_under_time_split",
+    "recommended_next_posture": "send_OPQ_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 9,
+      "test_row_count": 7,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 1973780000.0,
+      "train_best_balanced_accuracy": 0.65,
+      "test_balanced_accuracy": 0.416667,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.833333
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 12,
+      "test_row_count": 4,
+      "train_positive_count": 2,
+      "test_positive_count": 3,
+      "train_best_threshold": 455326000.0,
+      "train_best_balanced_accuracy": 0.55,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 11,
+      "test_row_count": 5,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 1973780000.0,
+      "train_best_balanced_accuracy": 0.678571,
+      "test_balanced_accuracy": 0.375,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.18Q applies the same immediate chronology discipline to the reclaim-absorption branch.",
+    "A branch that cannot survive crude year splits should not absorb more research budget, even if the full-sample gap looks attractive.",
+    "This keeps discovery honest and prevents semantic restatement from masquerading as robust action logic."
+  ]
+}

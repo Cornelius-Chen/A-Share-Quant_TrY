@@ -1,0 +1,5 @@
+﻿consensus_item,status,detail
+phase_2_direction,approved_for_implementation,the simulator specification is sufficiently explicit to begin implementation under the existing shadow-only guardrails
+seed_scope_only,mandatory,implementation starts on the six canonical seed sessions only; broader all-session simulation remains blocked
+execution_clock,mandatory,"trigger at minute-close, fill at next-bar open, with no same-bar trading exceptions"
+phase_3_boundary,still_blocked,separate intraday replay lane may not open until the simulator exists and passes a deterministic seed audit

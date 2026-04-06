@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134k_commercial_aerospace_ijk_phase2_widening_triage_v1",
+    "authoritative_status": "approve_broader_hit_phase2_widening_with_guardrails_but_keep_all_session_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_ijk_phase2_widening_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "phase2_seed_training_result",
+      "status": "reasonable",
+      "detail": "reasonable_with_targeted_optimization_space"
+    },
+    {
+      "component": "broader_hit_widening",
+      "status": "approved_with_guardrails",
+      "detail": "allowed_surface = broader_hit_sessions_only, allowed_execution_tiers = reversal_watch, severe_override_positive"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "Do not jump from six seeds to the full all-session surface; widen only to the already-flagged broader-hit sessions first."
+    },
+    {
+      "component": "mild_execution_promotion",
+      "status": "blocked",
+      "detail": "mild_override_watch remains governance-only and is not promotable into an execution sell tier."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "No replay binding is authorized by the current phase-2 supervision review or widening protocol."
+    }
+  ],
+  "interpretation": [
+    "V1.34K is the direction judgment after supervising the current phase-2 seed training outputs.",
+    "The branch is now mature enough to widen once, but only to the already-flagged broader-hit sessions and only with reversal/severe execution tiers under the same intraday simulator clock."
+  ]
+}

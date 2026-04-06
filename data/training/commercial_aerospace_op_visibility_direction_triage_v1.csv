@@ -1,0 +1,4 @@
+﻿component,status,rationale
+phase_1_visibility_spec,approved_for_implementation,"the spec now hard-codes first_visible_ts, close-bar activation, and shadow-only boundaries"
+phase_2_simulation_surface,blocked_until_phase_1_audit_passes,simulator work is premature until the point-in-time feed can reconstruct canonical seed sessions without leakage
+phase_3_replay_lane,blocked_until_phase_2_exists,replay binding remains downstream and must not be reopened before visibility and simulator infrastructure exist

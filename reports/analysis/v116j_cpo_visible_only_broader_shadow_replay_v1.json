@@ -1,0 +1,708 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116j_cpo_visible_only_broader_shadow_replay_v1",
+    "candidate_posture": "shadow_only_not_promotable",
+    "filter_name": "pc1_or_pc2_q_0p25",
+    "wider_candidate_row_count": 10,
+    "intraday_same_session_candidate_count": 10,
+    "executed_overlay_order_count": 10,
+    "baseline_final_equity": 1766466.6096,
+    "shadow_replay_final_equity": 3862407.3777,
+    "final_equity_delta_vs_baseline": 2095940.7681,
+    "baseline_max_drawdown": 0.134272,
+    "shadow_replay_max_drawdown": 0.267821,
+    "overlay_total_transaction_cost": 317.6989,
+    "recommended_next_posture": "use_v116j_as_broader_visible_only_shadow_reference_before_any_new_promotion_discussion"
+  },
+  "timing_rows": [
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -1980776742.166278,
+      "visible_pc2_score": -345972663.307957,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -1682810257.208173,
+      "visible_pc2_score": -760884629.878079,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "14:00",
+      "visible_pc1_score": -2200589982.6939,
+      "visible_pc2_score": -213913107.343803,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -2377449073.137061,
+      "visible_pc2_score": 22161578.849386,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -2390968686.829432,
+      "visible_pc2_score": 47506578.336485,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -1971542765.188754,
+      "visible_pc2_score": -564782296.55828,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -2344101436.216928,
+      "visible_pc2_score": -150065239.547737,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -1762262299.877264,
+      "visible_pc2_score": -99023789.916444,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -2153774191.772055,
+      "visible_pc2_score": -49266399.475016,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "earliest_visible_checkpoint": "10:30",
+      "visible_pc1_score": -1934707777.85624,
+      "visible_pc2_score": -513129677.758603,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198
+    }
+  ],
+  "checkpoint_rows": [
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -1980776742.166278,
+      "pc2_score": -345972663.307957,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -2103212202.96887,
+      "pc2_score": -264074997.85449,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -1657154612.952554,
+      "pc2_score": 396455765.256569,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -1628393438.583929,
+      "pc2_score": 416083543.459123,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1507513393.947223,
+      "pc2_score": 529839525.057047,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -1682810257.208173,
+      "pc2_score": -760884629.878079,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -1312287408.319347,
+      "pc2_score": -858376118.956573,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -2030090517.427773,
+      "pc2_score": -229716308.197285,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -1916574812.869156,
+      "pc2_score": -255133874.236209,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -1519697317.459929,
+      "pc2_score": -247364925.464238,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -1001166292.480021,
+      "pc2_score": -812314781.751103,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -840964799.67804,
+      "pc2_score": -943711391.857934,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -2200589982.6939,
+      "pc2_score": -213913107.343803,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -2242166390.654154,
+      "pc2_score": -206200682.845035,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1794433783.028831,
+      "pc2_score": -340843068.44843,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -2377449073.137061,
+      "pc2_score": 22161578.849386,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -2416999338.940575,
+      "pc2_score": 42918427.021135,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -1585128680.256635,
+      "pc2_score": 274732592.889225,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -1901774547.946623,
+      "pc2_score": 166435090.503458,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -2142023478.436635,
+      "pc2_score": 197213262.820152,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -2390968686.829432,
+      "pc2_score": 47506578.336485,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -2444842520.47762,
+      "pc2_score": 83221486.779331,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -1639992089.246321,
+      "pc2_score": 223185875.983863,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -1928258864.819891,
+      "pc2_score": 208503272.655006,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -2186782351.982461,
+      "pc2_score": 298227512.630925,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -1971542765.188754,
+      "pc2_score": -564782296.55828,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -2070964426.605373,
+      "pc2_score": -507264705.651842,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -2076439617.692419,
+      "pc2_score": -76836669.485404,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -2173642756.922656,
+      "pc2_score": -135194232.44329,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -1986529810.891286,
+      "pc2_score": -102420921.470201,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -2344101436.216928,
+      "pc2_score": -150065239.547737,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -2201628549.232895,
+      "pc2_score": -289765907.080105,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -2118682555.525773,
+      "pc2_score": -50592746.28125,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -2212168446.852283,
+      "pc2_score": -1651295.787638,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1680777326.676695,
+      "pc2_score": -321088314.866286,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "checkpoint": "10:30",
+      "pc1_score": -1762262299.877264,
+      "pc2_score": -99023789.916444,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "checkpoint": "11:00",
+      "pc1_score": -1705077539.680244,
+      "pc2_score": -44560296.158693,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "checkpoint": "14:00",
+      "pc1_score": -2074683943.862224,
+      "pc2_score": -24906564.850565,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "checkpoint": "14:30",
+      "pc1_score": -2022805640.250521,
+      "pc2_score": 19670667.671759,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "checkpoint": "15:00",
+      "pc1_score": -2379020786.718352,
+      "pc2_score": 244077536.520827,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -2153774191.772055,
+      "pc2_score": -49266399.475016,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -2069329709.180281,
+      "pc2_score": 79653922.553455,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -2161077407.235462,
+      "pc2_score": 46683785.665225,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -2127765146.383736,
+      "pc2_score": 97596458.952611,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -2098288076.71267,
+      "pc2_score": 375943733.585821,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "checkpoint": "10:30",
+      "pc1_score": -1934707777.85624,
+      "pc2_score": -513129677.758603,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "checkpoint": "11:00",
+      "pc1_score": -1949425449.393424,
+      "pc2_score": -298295222.855658,
+      "passes_pc1_or_pc2_q_0p25": true
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "checkpoint": "14:00",
+      "pc1_score": -1278164954.482962,
+      "pc2_score": 204113730.855211,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "checkpoint": "14:30",
+      "pc1_score": -1274220130.535186,
+      "pc2_score": 206469459.692245,
+      "passes_pc1_or_pc2_q_0p25": false
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "checkpoint": "15:00",
+      "pc1_score": -1300204471.605264,
+      "pc2_score": 296000482.678972,
+      "passes_pc1_or_pc2_q_0p25": false
+    }
+  ],
+  "overlay_order_rows": [
+    {
+      "signal_trade_date": "2023-05-18",
+      "execution_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 1100,
+      "execution_price": 36.4327,
+      "notional": 40075.9312,
+      "commission": 12.0228,
+      "stamp_tax": 0.0,
+      "slippage": 20.038,
+      "total_cost": 32.0607,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -1980776742.166278,
+      "visible_pc2_score": -345972663.307957,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 89.1513,
+      "notional": 53490.7616,
+      "commission": 16.0472,
+      "stamp_tax": 0.0,
+      "slippage": 26.7454,
+      "total_cost": 42.7926,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -1682810257.208173,
+      "visible_pc2_score": -760884629.878079,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 700,
+      "execution_price": 46.7764,
+      "notional": 32743.4961,
+      "commission": 9.823,
+      "stamp_tax": 0.0,
+      "slippage": 16.3717,
+      "total_cost": 26.1948,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "14:00",
+      "visible_pc1_score": -2200589982.6939,
+      "visible_pc2_score": -213913107.343803,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "execution_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 76.503,
+      "notional": 45901.7812,
+      "commission": 13.7705,
+      "stamp_tax": 0.0,
+      "slippage": 22.9509,
+      "total_cost": 36.7214,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -2377449073.137061,
+      "visible_pc2_score": 22161578.849386,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "execution_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 700,
+      "execution_price": 30.9759,
+      "notional": 21683.1171,
+      "commission": 6.5049,
+      "stamp_tax": 0.0,
+      "slippage": 10.8416,
+      "total_cost": 17.3465,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -2390968686.829432,
+      "visible_pc2_score": 47506578.336485,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 77.5011,
+      "notional": 46500.686,
+      "commission": 13.9502,
+      "stamp_tax": 0.0,
+      "slippage": 23.2503,
+      "total_cost": 37.2005,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -1971542765.188754,
+      "visible_pc2_score": -564782296.55828,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 700,
+      "execution_price": 37.9739,
+      "notional": 26581.7112,
+      "commission": 7.9745,
+      "stamp_tax": 0.0,
+      "slippage": 13.2909,
+      "total_cost": 21.2654,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -2344101436.216928,
+      "visible_pc2_score": -150065239.547737,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "execution_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "action": "buy",
+      "quantity": 600,
+      "execution_price": 83.6043,
+      "notional": 50162.5616,
+      "commission": 15.0488,
+      "stamp_tax": 0.0,
+      "slippage": 25.0813,
+      "total_cost": 40.13,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -1762262299.877264,
+      "visible_pc2_score": -99023789.916444,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "execution_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 1000,
+      "execution_price": 34.5282,
+      "notional": 34528.1616,
+      "commission": 10.3584,
+      "stamp_tax": 0.0,
+      "slippage": 17.2641,
+      "total_cost": 27.6225,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -2153774191.772055,
+      "visible_pc2_score": -49266399.475016,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "execution_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "action": "buy",
+      "quantity": 900,
+      "execution_price": 50.5063,
+      "notional": 45455.6853,
+      "commission": 13.6367,
+      "stamp_tax": 0.0,
+      "slippage": 22.7278,
+      "total_cost": 36.3645,
+      "timing_bucket": "intraday_same_session",
+      "timing_checkpoint": "10:30",
+      "visible_pc1_score": -1934707777.85624,
+      "visible_pc2_score": -513129677.758603,
+      "overlay_posture": "visible_only_broader_repaired_window_shadow_replay"
+    }
+  ],
+  "interpretation": [
+    "V1.16J rebuilds the broader repaired-window shadow replay from point-in-time-visible checkpoint scores rather than relying on prior miss-window hit tables.",
+    "The replay remains held-position only, timing-aware, and add-only; it does not open new names or override baseline sell-side controls.",
+    "This is a replay-facing shadow candidate for wider repaired under-exposure windows, not a promotable add law."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134d_commercial_aerospace_cd_seed_simulator_triage_v1",
+    "simulated_order_count": 8,
+    "pending_out_of_window_count": 0,
+    "authoritative_status": "retain_phase_2_seed_simulator_but_keep_replay_lane_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_cd_seed_simulator_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "seed_shadow_simulator",
+      "status": "retain_as_phase_2_seed_surface",
+      "detail": "the first canonical-seed simulator exists and respects next-bar-open execution timing"
+    },
+    {
+      "component": "same_bar_execution_boundary",
+      "status": "accepted",
+      "detail": "all seed fills occur on trigger_minute + 1 with no same-bar execution exception"
+    },
+    {
+      "component": "first_hour_horizon_limit",
+      "status": "explicitly_bounded",
+      "detail": "pending_out_of_window_count = 0"
+    },
+    {
+      "component": "phase_3_replay_lane",
+      "status": "still_blocked",
+      "detail": "seed simulation does not authorize binding into a separate intraday replay lane yet"
+    }
+  ],
+  "interpretation": [
+    "V1.34D converts the first seed-session intraday simulator run into a governance triage result.",
+    "The branch may keep building inside phase 2, but replay binding remains blocked and the first-hour horizon limit must stay explicit."
+  ]
+}

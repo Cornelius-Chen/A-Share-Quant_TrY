@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119o_cpo_lmn_three_run_adversarial_triage_v1",
+    "triage_scope": "V119L_V119M_V119N",
+    "branch_name": "participation_turnover_elg_support_score_candidate",
+    "branch_status": "hard_candidate_non_replay_only",
+    "hard_candidate_allowed": true,
+    "candidate_only_allowed": true,
+    "soft_expectancy_component_allowed": false,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "authoritative_current_problem": "still_needs_one_non_replay_cycle_before_any_execution_surface_but_no_longer_deserves_candidate_only_language",
+    "recommended_next_posture": "retain_as_first_non_replay_hard_candidate_and_continue_one_more_non_replay_audit_cycle_before_any_replay_consideration"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "The branch is materially stronger than HIJ but should still clear one more adversarial cycle before hard-candidate language is frozen."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "hard_candidate_non_replay_only",
+      "key_reason": "External and chronology surfaces are now strong enough to upgrade the branch beyond candidate-only while still blocking replay-facing use."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "hard_candidate_non_replay_only",
+      "key_reason": "This is the strongest live CPO line so far and already deserves hard-candidate language, but replay remains premature."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "hard_candidate_consensus_majority_non_replay_only",
+      "key_reason": "V119L gap=1.810537, V119M best_bal_acc=0.909091, V119N mean/min_test_bal_acc=0.875/0.833333."
+    }
+  ],
+  "interpretation": [
+    "V1.19O is the scheduled three-run adversarial review for the ELG-supported participation-turnover combo branch.",
+    "The reviewers agree the branch is materially stronger than the prior HIJ combo; the only disagreement is whether to stay candidate-only for one more cycle or already admit hard-candidate language.",
+    "The authoritative freeze accepts the majority view: this becomes the first non-replay hard candidate in the current CPO intraday quality-side program, while replay and shadow replay remain blocked."
+  ]
+}

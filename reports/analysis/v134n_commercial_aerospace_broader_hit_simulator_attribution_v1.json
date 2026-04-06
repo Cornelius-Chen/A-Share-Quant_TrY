@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134n_commercial_aerospace_broader_hit_simulator_attribution_v1",
+    "session_count": 24,
+    "same_day_loss_avoided_total": 20525.3818,
+    "best_tier": "severe_override_positive",
+    "worst_tier": "mild_override_watch",
+    "best_symbol": "688066",
+    "worst_symbol": "000738",
+    "attribution_csv": "data\\training\\commercial_aerospace_broader_hit_simulator_attribution_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_hit_simulator_attribution_ready_for_supervision_failure_review"
+  },
+  "tier_rows": [
+    {
+      "predicted_tier": "mild_override_watch",
+      "session_count": 6,
+      "mean_same_day_loss_avoided": -901.5844,
+      "same_day_loss_avoided_total": -5409.5064,
+      "same_day_loss_avoided_share": -0.26355205,
+      "positive_session_count": 1,
+      "negative_session_count": 4
+    },
+    {
+      "predicted_tier": "reversal_watch",
+      "session_count": 13,
+      "mean_same_day_loss_avoided": 971.8774,
+      "same_day_loss_avoided_total": 12634.4056,
+      "same_day_loss_avoided_share": 0.61555033,
+      "positive_session_count": 12,
+      "negative_session_count": 1
+    },
+    {
+      "predicted_tier": "severe_override_positive",
+      "session_count": 5,
+      "mean_same_day_loss_avoided": 2660.0965,
+      "same_day_loss_avoided_total": 13300.4826,
+      "same_day_loss_avoided_share": 0.64800171,
+      "positive_session_count": 5,
+      "negative_session_count": 0
+    }
+  ],
+  "symbol_rows": [
+    {
+      "symbol": "000738",
+      "session_count": 1,
+      "same_day_loss_avoided_total": 774.724,
+      "same_day_loss_avoided_share": 0.03774468,
+      "positive_session_count": 1,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "300045",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 1140.2196,
+      "same_day_loss_avoided_share": 0.05555169,
+      "positive_session_count": 2,
+      "negative_session_count": 1
+    },
+    {
+      "symbol": "300342",
+      "session_count": 5,
+      "same_day_loss_avoided_total": 4696.2888,
+      "same_day_loss_avoided_share": 0.22880397,
+      "positive_session_count": 4,
+      "negative_session_count": 1
+    },
+    {
+      "symbol": "601698",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 3304.3536,
+      "same_day_loss_avoided_share": 0.16098865,
+      "positive_session_count": 3,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "688066",
+      "session_count": 6,
+      "same_day_loss_avoided_total": 8328.6948,
+      "same_day_loss_avoided_share": 0.40577539,
+      "positive_session_count": 4,
+      "negative_session_count": 1
+    },
+    {
+      "symbol": "688523",
+      "session_count": 6,
+      "same_day_loss_avoided_total": 2281.101,
+      "same_day_loss_avoided_share": 0.11113562,
+      "positive_session_count": 4,
+      "negative_session_count": 2
+    }
+  ],
+  "interpretation": [
+    "V1.34N attributes the first broader-hit phase-2 simulator by predicted tier and symbol.",
+    "The point is not replay promotion; it is to supervise whether the guarded widening remains directionally sensible and where the newly introduced drag lives."
+  ]
+}

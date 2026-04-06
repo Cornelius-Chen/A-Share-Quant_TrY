@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kf_a_share_ke_taxonomy_direction_triage_v1",
+    "concept_covered_symbol_count": 48,
+    "sector_covered_symbol_count": 82,
+    "authoritative_status": "taxonomy_foundation_complete_enough_to_freeze_and_shift_into_business_reference_population"
+  },
+  "triage_rows": [
+    {
+      "taxonomy_component": "concept_membership",
+      "direction": "retain_as_current_concept_surface_and_expand_coverage_later_without_reopening_identity"
+    },
+    {
+      "taxonomy_component": "sector_membership",
+      "direction": "retain_as_current_sector_surface_and use_as_business_reference_context_seed"
+    },
+    {
+      "taxonomy_component": "business_reference",
+      "direction": "fill_backlog_symbol_by_symbol_using_canonical_identity_and current taxonomy context"
+    },
+    {
+      "taxonomy_component": "concept_purity",
+      "direction": "fill_backlog_after_business_reference_so_purity_is_judged_against_real_business anchors"
+    },
+    {
+      "taxonomy_component": "next_frontier",
+      "direction": "move_into_business_reference_population_without_reopening_identity_or_faking_purity_labels"
+    }
+  ],
+  "interpretation": [
+    "V1.34KF converts the taxonomy audit into operating direction.",
+    "The correct next move is not to fake concept purity now; it is to use current concept and sector surfaces as context while filling business-reference backlog first."
+  ]
+}

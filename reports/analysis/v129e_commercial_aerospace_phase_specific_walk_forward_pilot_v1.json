@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129e_commercial_aerospace_phase_specific_walk_forward_pilot_v1",
+    "fold_count": 2,
+    "full_pre_test_balanced_accuracy": 0.5625,
+    "full_pre_test_positive_recall": 1.0,
+    "full_test_balanced_accuracy": 0.5,
+    "full_test_positive_recall": 1.0,
+    "authoritative_status": "full_pre_partial_learnability_but_full_still_too_thin",
+    "authoritative_rule": "commercial-aerospace phase-specific supervision may continue for full_pre, but full should remain phase-contextual until a thicker lawful fold exists"
+  },
+  "fold_rows": [
+    {
+      "fold_name": "full_pre_dedicated_fold",
+      "target_state": "full_pre",
+      "train_positive_count": 21,
+      "test_positive_count": 24,
+      "best_train_threshold": -1.06025373,
+      "train_balanced_accuracy": 0.80348219,
+      "test_balanced_accuracy": 0.5625,
+      "test_positive_recall": 1.0,
+      "test_positive_precision": 0.27586207
+    },
+    {
+      "fold_name": "full_dedicated_fold",
+      "target_state": "full",
+      "train_positive_count": 32,
+      "test_positive_count": 4,
+      "best_train_threshold": -105.68696635,
+      "train_balanced_accuracy": 0.97761461,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_positive_precision": 0.08333333
+    }
+  ],
+  "interpretation": [
+    "V1.29E runs the smallest lawful phase-specific walk-forward pilots instead of forcing one global multiclass classifier.",
+    "The goal is not replay promotion; it is to check whether any high-intensity state is learnable under a lawful fold before more tuning is attempted."
+  ]
+}

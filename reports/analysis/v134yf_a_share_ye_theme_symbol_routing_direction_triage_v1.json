@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "case_count": 33,
+    "routed_count": 33,
+    "direct_route_count": 33,
+    "unresolved_primary_count": 0,
+    "authoritative_status": "use theme-symbol routing drill as the end-to-end curation validation layer before adding more long-tail theme families"
+  },
+  "triage_rows": [
+    {
+      "component": "direct_routes",
+      "direction": "treat direct-routed cases as the highest-confidence evidence that the theme registry can support symbol-first consumers"
+    },
+    {
+      "component": "resolved_but_proxy_routes",
+      "direction": "use proxy-routed cases as a curation-improvement queue rather than a routing failure"
+    },
+    {
+      "component": "unresolved_primary_cases",
+      "direction": "treat unresolved-primary cases as governance or registry coverage debt before further theme expansion"
+    }
+  ],
+  "interpretation": [
+    "This drill tells you whether simulated theme headlines can actually reach a governed top symbol route.",
+    "It is the closest synthetic validation layer before live multi-source samples become broader."
+  ]
+}

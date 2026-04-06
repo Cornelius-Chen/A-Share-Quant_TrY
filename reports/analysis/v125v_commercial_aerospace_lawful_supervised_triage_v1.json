@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125v_commercial_aerospace_lawful_supervised_triage_v1",
+    "training_row_count": 6180,
+    "hard_lookahead_detected": false,
+    "eod_lawful": true,
+    "intraday_lawful": false,
+    "authoritative_status": "commercial_aerospace_lawful_supervised_table_unblocked_for_eod_training_but_blocked_for_intraday_or_direct_execution",
+    "authoritative_rule": "use_v125t_for_eod_supervised_learning_only_do_not_promote_to_intraday_or_replay_directly"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "verdict": "EOD_lawful_for_supervised_training_pending_adversarial_review",
+      "hard_lookahead": false,
+      "intraday_lawful": false
+    },
+    {
+      "reviewer": "Tesla",
+      "verdict": "eod_lawful_for_supervised_training_non_intraday_pending_adversarial_review",
+      "hard_lookahead": false,
+      "intraday_lawful": false
+    },
+    {
+      "reviewer": "James",
+      "verdict": "eod_lawful_for_supervised_training_non_intraday_pending_adversarial_review",
+      "hard_lookahead": false,
+      "intraday_lawful": false
+    }
+  ],
+  "interpretation": [
+    "The commercial-aerospace supervised table is now lawful for EOD supervised training because the main semantic hindsight blocker has been removed.",
+    "This does not unlock intraday legality or direct execution; the table remains an offline EOD learning substrate only."
+  ]
+}

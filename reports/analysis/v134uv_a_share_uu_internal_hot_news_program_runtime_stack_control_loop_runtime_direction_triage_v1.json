@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "envelope_row_count": 1,
+    "runtime_consumer_mode": "passive_polling_only",
+    "runtime_attention_level": "low",
+    "suggested_poll_interval_seconds": "300",
+    "reopen_target": "none",
+    "authoritative_status": "continue_serving_runtime-stack_control-loop_runtime-envelope_above_the_narrow_runtime-stack_control-loop_signal"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_runtime_branch",
+      "direction": "keep_longer_polling_intervals_when_runtime_consumer_mode_stays_passive_polling_only"
+    },
+    {
+      "component": "elevated_runtime_branch",
+      "direction": "shorten_polling_and_reopen_the_requested_target_when_runtime_consumer_mode_rotates_into_elevate_and_reopen_or_elevate_polling"
+    },
+    {
+      "component": "interrupt_runtime_branch",
+      "direction": "drop_poll_interval_to_zero_and_interrupt_the_current_loop_when_runtime_consumer_mode_rotates_into_interrupt_and_reopen"
+    }
+  ],
+  "interpretation": [
+    "This is the execution-facing runtime envelope above the narrow runtime-stack control-loop signal.",
+    "An outer controller can use it to derive polling cadence and escalation behavior without reinterpreting lower layers."
+  ]
+}

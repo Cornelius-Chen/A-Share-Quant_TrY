@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "business_reference_count": 82,
+    "concept_purity_count": 82,
+    "residual_count": 34,
+    "authoritative_status": "business_reference_and_concept_purity_complete_enough_to_freeze_as_bootstrap"
+  },
+  "triage_rows": [
+    {
+      "component": "business_reference",
+      "direction": "freeze_as_current_business_anchor_surface"
+    },
+    {
+      "component": "concept_purity",
+      "direction": "freeze_as_current_cross_theme_and_purity_guardrail_surface"
+    },
+    {
+      "component": "residual_backlog",
+      "direction": "retain_for_future_fundamental_text_and_cross_theme_enrichment"
+    }
+  ],
+  "interpretation": [
+    "The information center now has first-pass business anchors and concept-purity guardrails, which closes one of the biggest remaining taxonomy backlogs.",
+    "Future external fundamentals can enrich this layer, but they no longer need to create it from zero."
+  ]
+}

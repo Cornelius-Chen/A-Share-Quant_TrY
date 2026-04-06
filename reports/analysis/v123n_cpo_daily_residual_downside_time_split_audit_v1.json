@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123n_cpo_daily_residual_downside_time_split_audit_v1",
+    "candidate_name": "held_pair_deterioration_score",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.568327,
+    "min_test_balanced_accuracy": 0.556833,
+    "chronology_posture": "candidate_survives_time_split",
+    "recommended_next_posture": "boundary_false_positive_audit_before_any_triage"
+  },
+  "split_rows": [
+    {
+      "split_name": "train_55_test_45",
+      "train_start": "2023-06-08",
+      "train_end": "2023-09-13",
+      "test_start": "2023-09-14",
+      "test_end": "2023-12-08",
+      "train_row_count": 68,
+      "test_row_count": 56,
+      "train_best_threshold": -4.164615,
+      "train_best_balanced_accuracy": 0.725,
+      "test_balanced_accuracy": 0.556833,
+      "test_positive_recall": 0.965517,
+      "test_negative_reject_rate": 0.148148
+    },
+    {
+      "split_name": "train_65_test_35",
+      "train_start": "2023-06-08",
+      "train_end": "2023-10-09",
+      "test_start": "2023-10-10",
+      "test_end": "2023-12-08",
+      "train_row_count": 80,
+      "test_row_count": 44,
+      "train_best_threshold": -4.164615,
+      "train_best_balanced_accuracy": 0.722222,
+      "test_balanced_accuracy": 0.574074,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.148148
+    },
+    {
+      "split_name": "train_75_test_25",
+      "train_start": "2023-06-08",
+      "train_end": "2023-10-26",
+      "test_start": "2023-10-27",
+      "test_end": "2023-12-08",
+      "train_row_count": 93,
+      "test_row_count": 31,
+      "train_best_threshold": -4.164615,
+      "train_best_balanced_accuracy": 0.726471,
+      "test_balanced_accuracy": 0.574074,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.148148
+    }
+  ],
+  "interpretation": [
+    "V1.23N checks whether the residual downside line is just a static interval marker or whether it survives chronology splits.",
+    "This matters because the residual branch is built from a single problematic drawdown family and can easily overfit interval shape.",
+    "Only a line that stays above random under chronological splits deserves triage budget."
+  ]
+}

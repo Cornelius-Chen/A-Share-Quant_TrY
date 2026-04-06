@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "decision_unit_count": 4,
+    "pending_manual_decision_count": 4,
+    "authoritative_status": "batch_one_allowlist_decision_surface_ready_for_manual_review_but_closed"
+  },
+  "triage_rows": [
+    {
+      "component": "manual_decision_fields",
+      "direction": "retain_explicit_license_and_runtime_fields_for_all_batch_one_hosts"
+    },
+    {
+      "component": "decision_order",
+      "direction": "review_primary_sina_host_first_then_independent_hosts_then_sibling_host"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "keep_promotion_closed_until_manual_decision_fields_change_from_pending"
+    }
+  ],
+  "interpretation": [
+    "Batch-one can now be reviewed reproducibly without reopening queue design.",
+    "The next gain comes only from manual decisions being filled, not from further reshaping the same surface."
+  ]
+}

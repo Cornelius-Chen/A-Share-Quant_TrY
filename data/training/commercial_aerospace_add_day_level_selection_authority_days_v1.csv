@@ -1,0 +1,5 @@
+﻿trade_date,authority_family,candidate_symbol_count,candidate_symbols,actual_add_symbol_count,actual_add_symbols,overlap_symbol_count,overlap_symbols,displaced_candidate_count,displaced_candidate_symbols,max_trading_day_gap_from_prior_allowed_seed,reference_prior_allowed_trade_date,rationale
+20251218,displaced_selection_day,1,002465,1,000738,0,,1,002465,4,20251210,"strong local candidates existed, but the live add day selected different symbols; the blocker is cross-symbol day-level selection authority"
+20251219,aligned_selection_day,2,000738|002085,2,000738|002085,2,000738|002085,0,,19,20251121,all strong local candidates were actually selected on the same day
+20251224,post_wave_echo_day,1,600879,0,,0,,1,600879,9,20251210,"strong local candidates appeared on a no-order day, so they behave like late echoes after the earlier add wave rather than fresh permission"
+20251225,post_wave_echo_day,1,600879,0,,0,,1,600879,10,20251210,"strong local candidates appeared on a no-order day, so they behave like late echoes after the earlier add wave rather than fresh permission"

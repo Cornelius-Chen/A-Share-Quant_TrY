@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "window_count": 10,
+    "primary_fit_count": 2,
+    "auxiliary_fit_count": 4,
+    "non_fit_count": 4
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_001",
+      "package_tier": "auxiliary_fit",
+      "recommendation": "fit_as_auxiliary_context_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_002",
+      "package_tier": "locked_holdout",
+      "recommendation": "keep_locked_out_of_fit"
+    },
+    {
+      "sample_window_id": "ca_train_window_003",
+      "package_tier": "primary_fit",
+      "recommendation": "fit_directly_under_current_negative_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_004",
+      "package_tier": "auxiliary_fit",
+      "recommendation": "fit_as_auxiliary_context_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_005",
+      "package_tier": "primary_fit",
+      "recommendation": "fit_directly_under_current_negative_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_006",
+      "package_tier": "auxiliary_fit",
+      "recommendation": "fit_as_auxiliary_context_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_007",
+      "package_tier": "reference_only",
+      "recommendation": "keep_for_reference_and_subwindow_learning_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_008",
+      "package_tier": "reference_only",
+      "recommendation": "keep_for_reference_and_subwindow_learning_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_009",
+      "package_tier": "auxiliary_fit",
+      "recommendation": "fit_as_auxiliary_context_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_010",
+      "package_tier": "reference_only",
+      "recommendation": "keep_for_reference_and_subwindow_learning_only"
+    }
+  ]
+}

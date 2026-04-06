@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127k_commercial_aerospace_chronic_drag_symbol_veto_audit_v1",
+    "reference_variant": "broad_half_reference",
+    "reference_final_equity": 1261238.592,
+    "reference_max_drawdown": 0.12870312,
+    "drag_symbols_ranked": [
+      "688066",
+      "002085",
+      "688523"
+    ],
+    "best_variant": "veto_688066_002085",
+    "best_variant_final_equity": 1175877.5541,
+    "best_variant_max_drawdown": 0.10843509
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "veto_symbols": [],
+      "final_equity": 1261238.592,
+      "max_drawdown": 0.12870312,
+      "executed_order_count": 251
+    },
+    {
+      "variant": "veto_688066",
+      "veto_symbols": [
+        "688066"
+      ],
+      "final_equity": 1247539.9956,
+      "max_drawdown": 0.15533761,
+      "executed_order_count": 229
+    },
+    {
+      "variant": "veto_688066_002085",
+      "veto_symbols": [
+        "688066",
+        "002085"
+      ],
+      "final_equity": 1175877.5541,
+      "max_drawdown": 0.10843509,
+      "executed_order_count": 197
+    },
+    {
+      "variant": "veto_688066_002085_688523",
+      "veto_symbols": [
+        "688066",
+        "002085",
+        "688523"
+      ],
+      "final_equity": 1251943.1718,
+      "max_drawdown": 0.11423466,
+      "executed_order_count": 188
+    }
+  ],
+  "interpretation": [
+    "V1.27K tests the simplest attribution-driven next step after the de-risk budget stopline: remove chronic drag symbols from the primary replay and see if the frontier improves.",
+    "This is not a new family; it is a symbol-level veto audit derived directly from the attribution surface."
+  ]
+}

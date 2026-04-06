@@ -1,0 +1,180 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119m_cpo_participation_turnover_elg_support_external_audit_v1",
+    "candidate_discriminator_name": "participation_turnover_elg_support_score_candidate",
+    "positive_mean_score": 1.244744,
+    "negative_mean_score": -0.565793,
+    "mean_gap_positive_minus_negative": 1.810537,
+    "best_threshold": 0.388352,
+    "best_balanced_accuracy": 0.909091,
+    "external_pool_signal_clear": true,
+    "recommended_next_posture": "time_split_validate_elg_supported_combo_candidate_if_external_pool_stays_clean"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1.663872,
+      "tp": 1,
+      "fn": 4,
+      "fp": 0,
+      "tn": 11,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 1.0,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": 1.632599,
+      "tp": 2,
+      "fn": 3,
+      "fp": 0,
+      "tn": 11,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 1.0,
+      "balanced_accuracy": 0.7
+    },
+    {
+      "threshold": 1.357004,
+      "tp": 3,
+      "fn": 2,
+      "fp": 0,
+      "tn": 11,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 1.0,
+      "balanced_accuracy": 0.8
+    },
+    {
+      "threshold": 1.219698,
+      "tp": 3,
+      "fn": 2,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.754545
+    },
+    {
+      "threshold": 1.181895,
+      "tp": 4,
+      "fn": 1,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.854545
+    },
+    {
+      "threshold": 0.821725,
+      "tp": 4,
+      "fn": 1,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.809091
+    },
+    {
+      "threshold": 0.388352,
+      "tp": 5,
+      "fn": 0,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.909091
+    },
+    {
+      "threshold": 0.255882,
+      "tp": 5,
+      "fn": 0,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.863636
+    },
+    {
+      "threshold": -0.049234,
+      "tp": 5,
+      "fn": 0,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.818182
+    },
+    {
+      "threshold": -0.130608,
+      "tp": 5,
+      "fn": 0,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.772727
+    },
+    {
+      "threshold": -0.14977,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.727273
+    },
+    {
+      "threshold": -0.625769,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.681818
+    },
+    {
+      "threshold": -0.811636,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.636364
+    },
+    {
+      "threshold": -1.235759,
+      "tp": 5,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.590909
+    },
+    {
+      "threshold": -2.600029,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -2.918221,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.19M checks whether the extra-large-flow support term improves broad-pool ordering rather than just patching one holdout bucket.",
+    "A true orthogonal support should strengthen or at least preserve the full external surface without blowing up false positives.",
+    "If the broad add pool stays clear, the branch deserves chronology budget; otherwise it should be killed quickly."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120b_cpo_surviving_candidate_shadow_replay_plots_v1",
+    "equity_curve_png": "reports\\analysis\\v120b_cpo_surviving_candidate_shadow_equity_curve_v1.png",
+    "daily_close_marker_png": "reports\\analysis\\v120b_cpo_surviving_candidate_daily_close_markers_v1.png",
+    "candidate_count_plotted": 4,
+    "symbol_count_plotted": 2,
+    "baseline_max_drawdown": 0.134272
+  },
+  "interpretation": [
+    "V1.20B turns the unified shadow replay comparison into two visual surfaces: total equity curves and symbol-level daily-close marker charts.",
+    "Markers are execution-date markers, not same-day intraday fills. This plot is intentionally aligned with the conservative T+1 comparison grammar used in V120A.",
+    "The user can now inspect both payoff dispersion and whether each candidate tends to add at obviously bad or obviously useful daily locations."
+  ]
+}

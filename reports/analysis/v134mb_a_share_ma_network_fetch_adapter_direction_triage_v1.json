@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "adapter_count": 3,
+    "host_binding_count": 22,
+    "authoritative_status": "network_fetch_adapter_foundation_complete_enough_to_freeze_as_scaffold"
+  },
+  "triage_rows": [
+    {
+      "component": "network_fetch_adapter",
+      "direction": "freeze_as_contract_and_stub_binding_surface"
+    },
+    {
+      "component": "next_frontier",
+      "direction": "bind_selected_adapters_to_orchestration_license_review_and_retry_policy_before_activation"
+    }
+  ],
+  "interpretation": [
+    "The network-fetch problem is now scoped to activation policy rather than missing structure.",
+    "Actual fetch activation should happen selectively per source class after scheduler, licensing, and retry policy are attached."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "cluster_row_count": 20,
+    "deduped_row_count": 20,
+    "duplicate_reduction_count": 0,
+    "authoritative_status": "continue_feeding_trading_from_deduped_event_stream_not_raw_duplicate_news_rows"
+  },
+  "triage_rows": [
+    {
+      "component": "event_clustering",
+      "direction": "keep_clustering_fast_news_into_event_groups_before_trading_delivery"
+    },
+    {
+      "component": "deduped_delivery",
+      "direction": "prefer_the_deduped_event_stream_for_downstream_consumption_when_cluster_rows_exist"
+    },
+    {
+      "component": "duplicate_control",
+      "direction": "treat_duplicate_reduction_as_a_quality_gain_not_as_data_loss"
+    }
+  ],
+  "interpretation": [
+    "The hot-news pipeline can now reduce duplicate message fan-out before the trading layer consumes the stream.",
+    "The next refinement should improve clustering quality and important-event promotion rather than reopen source selection."
+  ]
+}

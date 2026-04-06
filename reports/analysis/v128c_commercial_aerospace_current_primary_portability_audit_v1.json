@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128c_commercial_aerospace_current_primary_portability_audit_v1",
+    "current_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "prior_primary_variant": "veto_drag_trio_impulse_only",
+    "equity_delta_new_minus_old": 22429.2251,
+    "top1_symbol_share_of_total_delta": 0.505751,
+    "top3_positive_symbol_share_of_total_delta": 1.188741,
+    "pre_window_delta_new_minus_old": 0.0,
+    "main_window_delta_new_minus_old": 23693.6184,
+    "post_window_delta_new_minus_old": -2917.1643,
+    "portability_status": "moderately_concentrated_but_not_single_symbol_only"
+  },
+  "symbol_delta_rows": [
+    {
+      "symbol": "688568",
+      "old_total_pnl": 25614.2409,
+      "new_total_pnl": 36957.8371,
+      "delta_new_minus_old": 11343.5962,
+      "share_of_total_delta": 0.505751
+    },
+    {
+      "symbol": "600118",
+      "old_total_pnl": 67868.8166,
+      "new_total_pnl": 76851.3571,
+      "delta_new_minus_old": 8982.5405,
+      "share_of_total_delta": 0.400484
+    },
+    {
+      "symbol": "600879",
+      "old_total_pnl": 71087.0896,
+      "new_total_pnl": 77423.4811,
+      "delta_new_minus_old": 6336.3915,
+      "share_of_total_delta": 0.282506
+    },
+    {
+      "symbol": "003009",
+      "old_total_pnl": 5555.2443,
+      "new_total_pnl": 7554.4548,
+      "delta_new_minus_old": 1999.2105,
+      "share_of_total_delta": 0.089134
+    },
+    {
+      "symbol": "002085",
+      "old_total_pnl": 1973.4917,
+      "new_total_pnl": 1973.4917,
+      "delta_new_minus_old": 0.0,
+      "share_of_total_delta": 0.0
+    },
+    {
+      "symbol": "002465",
+      "old_total_pnl": 2605.3031,
+      "new_total_pnl": 2605.3031,
+      "delta_new_minus_old": 0.0,
+      "share_of_total_delta": 0.0
+    },
+    {
+      "symbol": "688066",
+      "old_total_pnl": 6689.4882,
+      "new_total_pnl": 6689.4882,
+      "delta_new_minus_old": 0.0,
+      "share_of_total_delta": 0.0
+    },
+    {
+      "symbol": "688523",
+      "old_total_pnl": 20055.6689,
+      "new_total_pnl": 20055.6689,
+      "delta_new_minus_old": 0.0,
+      "share_of_total_delta": 0.0
+    },
+    {
+      "symbol": "601698",
+      "old_total_pnl": -27510.4973,
+      "new_total_pnl": -27635.9461,
+      "delta_new_minus_old": -125.4488,
+      "share_of_total_delta": -0.005593
+    },
+    {
+      "symbol": "300045",
+      "old_total_pnl": 6740.8176,
+      "new_total_pnl": 6467.77,
+      "delta_new_minus_old": -273.0476,
+      "share_of_total_delta": -0.012174
+    },
+    {
+      "symbol": "000738",
+      "old_total_pnl": 5228.013,
+      "new_total_pnl": 2661.641,
+      "delta_new_minus_old": -2566.372,
+      "share_of_total_delta": -0.114421
+    },
+    {
+      "symbol": "300342",
+      "old_total_pnl": 90102.7014,
+      "new_total_pnl": 86835.0562,
+      "delta_new_minus_old": -3267.6452,
+      "share_of_total_delta": -0.145687
+    }
+  ],
+  "period_rows": [
+    {
+      "period_label": "pre_window",
+      "start_trade_date": "20251017",
+      "end_trade_date": "20260111",
+      "old_change": 338978.4653,
+      "new_change": 338978.4653,
+      "delta_new_minus_old": 0.0
+    },
+    {
+      "period_label": "main_window",
+      "start_trade_date": "20260112",
+      "end_trade_date": "20260212",
+      "old_change": -165988.7862,
+      "new_change": -142295.1678,
+      "delta_new_minus_old": 23693.6184
+    },
+    {
+      "period_label": "post_window",
+      "start_trade_date": "20260213",
+      "end_trade_date": "20260320",
+      "old_change": -1793.3456,
+      "new_change": -4710.5099,
+      "delta_new_minus_old": -2917.1643
+    }
+  ],
+  "interpretation": [
+    "V1.28C audits whether the current primary's edge looks portable or is merely concentrated in one symbol or one time segment.",
+    "The key test is not universality; it is whether the improvement remains distributed enough that the execution grammar can be treated as a board-level object rather than a single-name accident."
+  ]
+}

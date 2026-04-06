@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128i_commercial_aerospace_hij_tail_repair_promotion_triage_v1",
+    "old_primary_variant": "mainwin_overdrive_075_impulse_075",
+    "old_primary_final_equity": 1306704.6132,
+    "old_primary_max_drawdown": 0.09309927,
+    "new_primary_variant": "tail_weakdrift_full",
+    "new_primary_final_equity": 1309426.5555,
+    "new_primary_max_drawdown": 0.09309927,
+    "authoritative_status": "promote_tail_weakdrift_full_to_primary_reference",
+    "canonical_name_rationale": "tail_weakdrift_full_is_the_minimal_and_sufficient_increment"
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "promote_primary_reference",
+      "canonical_name": "tail_weakdrift_full",
+      "reason": "It raises final equity without increasing drawdown and does so with fewer trades."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "promote_primary_reference",
+      "canonical_name": "tail_weakdrift_full",
+      "reason": "The real incremental edge is post-window weak-drift full selling; wider labels would overstate what actually earned its keep."
+    },
+    {
+      "subagent": "James",
+      "vote": "promote_primary_reference",
+      "canonical_name": "tail_weakdrift_full",
+      "reason": "Sentiment-full and impulse-full extras did not add more economic value, so the canonical name should stay narrow."
+    }
+  ],
+  "interpretation": [
+    "V1.28I promotes the successful post-window tail repair to the new commercial-aerospace primary reference.",
+    "The new primary is now a two-stage downside grammar: deeper main-window impulse-target selling plus post-window weak-drift full selling."
+  ]
+}

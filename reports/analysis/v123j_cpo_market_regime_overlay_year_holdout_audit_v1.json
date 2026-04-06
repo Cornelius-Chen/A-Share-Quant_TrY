@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123j_cpo_market_regime_overlay_year_holdout_audit_v1",
+    "chosen_score_name": "liquidity_drought_regime_score",
+    "year_count": 0,
+    "mean_test_balanced_accuracy": 0.0,
+    "min_test_balanced_accuracy": 0.0,
+    "evaluability": "not_evaluable_single_year_only",
+    "recommended_next_posture": "triage_as_pooled_explanatory_or_wait_for_longer_history"
+  },
+  "year_rows": [],
+  "interpretation": [
+    "V1.23J cannot perform year holdout because the available index bootstrap only covers a single year.",
+    "This means the regime overlay can only be judged on pooled and chronology evidence for now, not on cross-year transfer."
+  ]
+}

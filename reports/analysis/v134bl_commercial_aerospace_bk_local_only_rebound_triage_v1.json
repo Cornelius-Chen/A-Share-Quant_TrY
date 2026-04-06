@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bl_commercial_aerospace_bk_local_only_rebound_triage_v1",
+    "authoritative_status": "freeze_local_only_rebound_guard_and_keep_board_unlock_strict",
+    "triage_csv": "data\\training\\commercial_aerospace_bk_local_only_rebound_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "local_only_rebound_seed",
+      "status": "retained_as_board_false_bounce_guard",
+      "detail": "local_only_rebound_seed_count = 10."
+    },
+    {
+      "component": "unlock_override",
+      "status": "blocked",
+      "detail": "Local-only rebound seeds cannot release board_cooling_lockout or substitute for board_revival_unlock."
+    },
+    {
+      "component": "symbol_reentry_interpretation",
+      "status": "subordinate_only",
+      "detail": "When this guard fires, strong symbols may be watched but board-level reentry discussion stays blocked."
+    }
+  ],
+  "interpretation": [
+    "V1.34BL turns local-only rebound seeds into a direction judgment.",
+    "The branch should treat these days as evidence that a few names are strong inside a weak board, not as evidence that the board lockout is over."
+  ]
+}

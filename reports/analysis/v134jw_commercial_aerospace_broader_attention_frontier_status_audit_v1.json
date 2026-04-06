@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jw_commercial_aerospace_broader_attention_frontier_status_audit_v1",
+    "frontier_state": "opened_protocol_only",
+    "ready_local_broader_source_count": 3,
+    "same_plane_ready_source_count": 1,
+    "formalized_same_plane_branch_count": 3,
+    "promotive_branch_count": 0,
+    "blocked_consumer_count": 1,
+    "status_csv": "data\\training\\commercial_aerospace_broader_attention_frontier_status_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_attention_frontier_status_ready_for_direction_triage"
+  },
+  "status_rows": [
+    {
+      "branch": "broader_symbol_pool_expander",
+      "branch_state": "formalized_same_plane_branch",
+      "progress_type": "source_ready_but_not_materialized",
+      "operative_blocker": "name_to_symbol_coverage_gap",
+      "promotion_state": "blocked",
+      "detail": "materialized_symbol_count = 0"
+    },
+    {
+      "branch": "heat_axis_and_counterpanel_expander",
+      "branch_state": "formalized_same_plane_branch",
+      "progress_type": "singleton_reinforcement_only",
+      "operative_blocker": "counterpanel_not_thickened",
+      "promotion_state": "blocked",
+      "detail": "same_plane_counterpanel_expansion_ready_count = 1"
+    },
+    {
+      "branch": "carrier_follow_search_expander",
+      "branch_state": "formalized_same_plane_branch",
+      "progress_type": "known_case_reinforcement_only",
+      "operative_blocker": "branch_not_promotive",
+      "promotion_state": "blocked",
+      "detail": "linked_local_case_count = 2"
+    },
+    {
+      "branch": "capital_true_selection",
+      "branch_state": "downstream_consumer",
+      "progress_type": "not_open",
+      "operative_blocker": "all_three_live_branches_stop_before_promotion",
+      "promotion_state": "blocked",
+      "detail": "same-plane branches exist but none crosses into promotive evidence"
+    }
+  ],
+  "interpretation": [
+    "V1.34JW consolidates the broader-attention-evidence frontier after all three same-plane branches have been formally opened.",
+    "The frontier is real, but every live branch still stops short of promotion for a different explicit reason: materialization gap, counterpanel thinness, or reinforcement-only evidence."
+  ]
+}

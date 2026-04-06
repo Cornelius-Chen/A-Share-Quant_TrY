@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "shadow_snapshot_row_count": 1,
+    "current_top_opportunity_theme": "gold",
+    "shadow_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "shadow_top_watch_symbol": "600887",
+    "shadow_source_family": "sina",
+    "shadow_rotation_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_shadow_snapshot_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_snapshot",
+      "component_state": "materialized",
+      "metric": "current_top_opportunity_theme",
+      "value": "gold"
+    },
+    {
+      "component": "shadow_snapshot",
+      "component_state": "materialized",
+      "metric": "shadow_top_opportunity_theme",
+      "value": "consumer_staples"
+    },
+    {
+      "component": "shadow_snapshot",
+      "component_state": "materialized",
+      "metric": "current_top_watch_symbol",
+      "value": "601899"
+    },
+    {
+      "component": "shadow_snapshot",
+      "component_state": "materialized",
+      "metric": "shadow_top_watch_symbol",
+      "value": "600887"
+    }
+  ],
+  "interpretation": [
+    "This shadow snapshot shows the top-level consumer state after accepting the rotation, without mutating the live primary snapshot.",
+    "It is the closest shadow analogue of the accepted post-rotation state."
+  ]
+}

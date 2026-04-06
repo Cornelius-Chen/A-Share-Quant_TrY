@@ -1,0 +1,7 @@
+﻿key,value
+reduce_status,frozen_mainline
+broad_reduce_tuning,stopped
+local_residue_policy,supervision_only
+execution_blocker_count,4
+next_frontier_state,intraday_add_deferred
+next_reduce_action,do_not_reopen_without_explicit_gate_or_local_residue_need

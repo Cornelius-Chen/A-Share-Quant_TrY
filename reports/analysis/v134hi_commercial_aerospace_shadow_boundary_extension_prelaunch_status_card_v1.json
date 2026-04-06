@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hi_commercial_aerospace_shadow_boundary_extension_prelaunch_status_card_v1",
+    "frontier_name": "shadow_boundary_extension",
+    "frontier_state": "deferred_prelaunch",
+    "opening_gate_count": 8,
+    "ready_to_open_now": false,
+    "silent_opening_allowed": false,
+    "status_csv": "data\\training\\commercial_aerospace_shadow_boundary_extension_prelaunch_status_card_v1.csv",
+    "authoritative_output": "commercial_aerospace_shadow_boundary_extension_prelaunch_status_card_ready"
+  },
+  "status_rows": [
+    {
+      "key": "frontier_name",
+      "value": "shadow_boundary_extension"
+    },
+    {
+      "key": "frontier_state",
+      "value": "deferred_prelaunch"
+    },
+    {
+      "key": "boundary_classification",
+      "value": "lockout_aligned_derivation_boundary"
+    },
+    {
+      "key": "current_policy",
+      "value": "retain_current_boundary"
+    },
+    {
+      "key": "future_policy_option",
+      "value": "explicit_boundary_extension_for_shadow_only"
+    },
+    {
+      "key": "opening_gate_count",
+      "value": 8
+    },
+    {
+      "key": "ready_to_open_now",
+      "value": "False"
+    },
+    {
+      "key": "silent_opening_allowed",
+      "value": "False"
+    },
+    {
+      "key": "execution_authority",
+      "value": "blocked"
+    },
+    {
+      "key": "authoritative_status",
+      "value": "freeze_shadow_boundary_extension_opening_checklist_and_keep_derivation_boundary_frozen_until_explicit_shadow_only_shift"
+    }
+  ],
+  "interpretation": [
+    "V1.34HI turns the current boundary-extension governance state into a compact prelaunch card.",
+    "It makes explicit that the option now exists as a future frontier, but the current state is still deferred and blocked from silent opening."
+  ]
+}

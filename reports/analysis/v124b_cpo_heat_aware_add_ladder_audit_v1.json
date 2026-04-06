@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124b_cpo_heat_aware_add_ladder_audit_v1",
+    "baseline_final_equity": 1766466.6096,
+    "baseline_max_drawdown": 0.134272,
+    "variant_count": 5,
+    "best_tradeoff_variant_name": "balanced_heat_reference",
+    "recommended_next_posture": "compare_best_heat_ladder_to_top_drawdown_intervals_before_triage"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "balanced_heat_reference",
+      "overlay_order_count": 8,
+      "overlay_notional_total": 422878.0,
+      "final_equity": 4148870.3072,
+      "max_drawdown": 0.376524,
+      "delta_vs_baseline": 2382403.6976
+    },
+    {
+      "variant_name": "balanced_ladder_mid_20_30_40",
+      "overlay_order_count": 9,
+      "overlay_notional_total": 374160.0,
+      "final_equity": 3798847.2816,
+      "max_drawdown": 0.350561,
+      "delta_vs_baseline": 2032380.672
+    },
+    {
+      "variant_name": "balanced_ladder_soft_15_25_35",
+      "overlay_order_count": 11,
+      "overlay_notional_total": 327320.0,
+      "final_equity": 3451156.726,
+      "max_drawdown": 0.313248,
+      "delta_vs_baseline": 1684690.1164
+    },
+    {
+      "variant_name": "balanced_ladder_flat_20_25_30",
+      "overlay_order_count": 11,
+      "overlay_notional_total": 333226.0,
+      "final_equity": 3487002.9933,
+      "max_drawdown": 0.312659,
+      "delta_vs_baseline": 1720536.3837
+    },
+    {
+      "variant_name": "balanced_ladder_convex_10_25_45",
+      "overlay_order_count": 8,
+      "overlay_notional_total": 350730.0,
+      "final_equity": 3636503.1155,
+      "max_drawdown": 0.336872,
+      "delta_vs_baseline": 1870036.5059
+    }
+  ],
+  "interpretation": [
+    "V1.24B keeps heat as the only live execution control and only changes the add ladder under that heat budget.",
+    "The purpose is to test whether the research line is still over-aggressive because of per-hit add size, not because heat control itself is wrong."
+  ]
+}

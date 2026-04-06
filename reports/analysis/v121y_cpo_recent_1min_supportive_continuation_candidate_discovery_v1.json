@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121y_cpo_recent_1min_supportive_continuation_candidate_discovery_v1",
+    "candidate_family_name": "supportive_continuation_1min_band_candidate",
+    "candidate_band_count": 2,
+    "candidate_band_names": [
+      "pc1_low__pc2_low",
+      "pc1_low__pc2_mid"
+    ],
+    "recommended_next_posture": "keep_as_non_replay_candidate_family_until_label_aligned_audit"
+  },
+  "candidate_band_rows": [
+    {
+      "band": "pc1_low__pc2_low",
+      "row_count": 1195,
+      "mean_close_vs_vwap": -6.56e-05,
+      "mean_push_efficiency": 0.73693466,
+      "mean_burst_then_fade_score": 0.00060825,
+      "mean_late_session_integrity_score": 0.08485862
+    },
+    {
+      "band": "pc1_low__pc2_mid",
+      "row_count": 1001,
+      "mean_close_vs_vwap": -0.00818288,
+      "mean_push_efficiency": 0.6688398,
+      "mean_burst_then_fade_score": 0.00014206,
+      "mean_late_session_integrity_score": 0.17788463
+    }
+  ],
+  "interpretation": [
+    "V1.21Y extracts the positive-support 1-minute bands from the PCA structure instead of inventing a rule first.",
+    "These bands look like continuation/repair states: strong push efficiency, acceptable close-vs-VWAP, and better late-session integrity.",
+    "This is still a candidate family only and should not be promoted without label-aligned audit."
+  ]
+}

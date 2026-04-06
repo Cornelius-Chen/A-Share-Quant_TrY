@@ -1,0 +1,7 @@
+﻿blocker_id,blocker_layer,blocker_state,blocking_reason
+execution_authority_gate_closed,governance,active,information center remains research-shadow only
+live_like_opening_gate_closed,governance,active,governance and automation bindings must exist before live_like serving opens
+source_promotion_preconditions_unsatisfied,source_activation,active,unsatisfied_precondition_count = 1
+replay_execution_journal_stub_only,replay,active,execution_journal_stub_count = 17
+replay_market_context_boundary_residuals,replay,active,base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2
+live_like_materialized_but_blocked,serving,active,materialized_live_like_view_count = 2

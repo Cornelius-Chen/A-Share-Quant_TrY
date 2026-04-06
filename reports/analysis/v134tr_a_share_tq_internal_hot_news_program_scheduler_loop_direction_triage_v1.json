@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "scheduler_loop_signal_mode": "steady_polling",
+    "signal_priority": "p2",
+    "reschedule_target": "none",
+    "authoritative_status": "continue_serving_scheduler-loop_signal-feed_above_the_scheduler-packet_and_change-signal"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_loop_branch",
+      "direction": "keep_the_scheduler_loop_on_steady polling when scheduler_loop_signal_mode remains steady_polling"
+    },
+    {
+      "component": "tight_loop_branch",
+      "direction": "tighten_the_scheduler loop and reschedule the queue when scheduler_loop_signal_mode rotates into tight_poll_requeue"
+    },
+    {
+      "component": "interrupt_loop_branch",
+      "direction": "interrupt_the_scheduler loop immediately when scheduler_loop_signal_mode rotates into interrupt_requeue"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest scheduler-loop routing surface in the internal hot-news stack.",
+    "An outer scheduler can stop here without reading lower scheduler packet layers unless it wants deeper detail."
+  ]
+}

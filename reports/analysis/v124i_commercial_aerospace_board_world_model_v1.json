@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124i_commercial_aerospace_board_world_model_v1",
+    "board_name": "商业航天",
+    "sector_id": "BK0963",
+    "next_phase": "role_grammar",
+    "board_row_count": 242,
+    "active_day_count": 167,
+    "board_composite": 0.597884,
+    "recommended_next_posture": "start_commercial_aerospace_role_grammar_with_current_symbol_triplet"
+  },
+  "board_label_summary": {
+    "board_name": "商业航天",
+    "sector_id": "BK0963",
+    "board_character": "high_activity_diffusion_capable_aerospace_theme",
+    "board_strength_posture": "best_next_board_after_cpo_freeze",
+    "primary_liquid_leader": "002085",
+    "stable_core_support": "000738",
+    "high_quality_sparse_alt": "600118"
+  },
+  "world_model_prior": {
+    "thesis": "商业航天 currently looks like the cleanest next portability target because it combines strong activity, broad active-day coverage, and a role structure that is not purely single-symbol fragile.",
+    "object_stack": [
+      {
+        "object_type": "board",
+        "object_name": "商业航天",
+        "role": "diffusion_capable_main_board"
+      },
+      {
+        "object_type": "symbol",
+        "object_name": "002085",
+        "role": "primary_liquid_leader"
+      },
+      {
+        "object_type": "symbol",
+        "object_name": "000738",
+        "role": "stable_core_support"
+      },
+      {
+        "object_type": "symbol",
+        "object_name": "600118",
+        "role": "high_quality_sparse_alt"
+      }
+    ],
+    "risk_note": "activity is unusually high, so later phases should explicitly watch for hype-driven false diffusion and sparse-symbol leadership concentration.",
+    "next_phase_recommendation": "role_grammar"
+  },
+  "role_rows": [
+    {
+      "symbol": "600118",
+      "row_count": 3,
+      "avg_expected_upside": 0.601683,
+      "avg_non_junk": 0.626587,
+      "avg_drive_strength": 0.623225,
+      "avg_stability": 0.707316,
+      "avg_liquidity": 0.040243,
+      "avg_resonance": 0.664452,
+      "symbol_composite": 0.543918,
+      "role_label": "high_quality_sparse_alt"
+    },
+    {
+      "symbol": "002085",
+      "row_count": 242,
+      "avg_expected_upside": 0.53438,
+      "avg_non_junk": 0.602415,
+      "avg_drive_strength": 0.517349,
+      "avg_stability": 0.37245,
+      "avg_liquidity": 0.567873,
+      "avg_resonance": 0.520814,
+      "symbol_composite": 0.519214,
+      "role_label": "primary_liquid_leader"
+    },
+    {
+      "symbol": "000738",
+      "row_count": 25,
+      "avg_expected_upside": 0.556788,
+      "avg_non_junk": 0.578615,
+      "avg_drive_strength": 0.518312,
+      "avg_stability": 0.702199,
+      "avg_liquidity": 0.036788,
+      "avg_resonance": 0.61258,
+      "symbol_composite": 0.50088,
+      "role_label": "stable_core_support"
+    }
+  ],
+  "interpretation": [
+    "V1.24I starts the next board worker instead of stopping at queue expansion.",
+    "Commercial aerospace enters with one liquid primary leader, one stable core support name, and one sparse but high-quality alternate.",
+    "That is enough structure to move into role grammar without pretending the board is already solved."
+  ]
+}

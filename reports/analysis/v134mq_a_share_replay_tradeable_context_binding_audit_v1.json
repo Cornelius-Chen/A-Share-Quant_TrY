@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "binding_row_count": 17,
+    "date_level_bound_count": 14,
+    "missing_date_context_count": 3,
+    "status_csv": "data\\training\\a_share_replay_tradeable_context_binding_status_v1.csv",
+    "authoritative_output": "a_share_replay_tradeable_context_date_level_binding_materialized"
+  },
+  "rows": [
+    {
+      "component": "tradeable_context_binding",
+      "component_state": "materialized_date_level_binding",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_replay_tradeable_context_binding_v1.csv",
+      "coverage_note": "date_level_bound_count = 14"
+    },
+    {
+      "component": "binding_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_replay_tradeable_context_binding_residual_v1.csv",
+      "coverage_note": "missing_date_context_count = 3"
+    }
+  ],
+  "interpretation": [
+    "Replay now has an explicit tradeable-context coverage surface instead of an unexamined assumption about market linkage.",
+    "In the current repository state, the dominant outcome is still missing date coverage rather than successful date-level binding."
+  ]
+}

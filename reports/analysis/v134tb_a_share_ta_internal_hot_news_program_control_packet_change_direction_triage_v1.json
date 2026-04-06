@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "program_driver_signal_mode_change": "stable",
+    "interrupt_required_change": "stable",
+    "top_risk_reference_change": "stable",
+    "top_opportunity_reference_change": "stable",
+    "top_watch_symbol_change": "stable",
+    "top_watch_bundle_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_control-packet_change_signal_above_the_single-row_control-packet"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_control_packet_branch",
+      "direction": "keep_the_program_on_low-cost_single-row_control-packet polling when the packet-change signal remains stable"
+    },
+    {
+      "component": "driver_rotation_branch",
+      "direction": "treat_program_driver_signal_mode_change_or_interrupt_required_change_as_the_most_important_top-level packet flips"
+    },
+    {
+      "component": "risk_reference_rotation_branch",
+      "direction": "treat_top_risk_reference_change_as_a_legitimate_top-level packet update because it changes the current dominant risk anchor"
+    },
+    {
+      "component": "opportunity_reference_rotation_branch",
+      "direction": "treat_top_opportunity_reference_change_as_a_legitimate top-level packet update because it changes the current dominant opportunity anchor"
+    },
+    {
+      "component": "symbol_watch_rotation_branch",
+      "direction": "treat_top_watch_symbol_change_or_top_watch_bundle_change_as_a_legitimate top-level packet update because it changes the current symbol-first watchset"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost change detector for the single-row control packet.",
+    "A consumer can stay on this layer most of the time and only reopen the control packet when it changes.",
+    "The layer now also captures symbol-watch rotations, so symbol-first consumers can stop one layer higher."
+  ]
+}

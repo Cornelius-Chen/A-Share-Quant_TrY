@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "preview_row_count": 14,
+    "additive_preview_count": 13,
+    "top_opportunity_change_if_promoted": "would_change",
+    "top_watch_change_if_promoted": "would_change",
+    "promotable_now": false,
+    "promotion_gate_state": "promotion_gate_hold",
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_candidate_promotion_gate_materialized"
+  },
+  "rows": [
+    {
+      "component": "promotion_gate",
+      "component_state": "materialized",
+      "metric": "preview_row_count",
+      "value": "14"
+    },
+    {
+      "component": "promotion_gate",
+      "component_state": "materialized",
+      "metric": "additive_preview_count",
+      "value": "13"
+    },
+    {
+      "component": "promotion_gate",
+      "component_state": "measured",
+      "metric": "top_opportunity_change_if_promoted",
+      "value": "would_change"
+    },
+    {
+      "component": "promotion_gate",
+      "component_state": "measured",
+      "metric": "top_watch_change_if_promoted",
+      "value": "would_change"
+    },
+    {
+      "component": "promotion_gate",
+      "component_state": "decision_ready",
+      "metric": "promotable_now",
+      "value": "false"
+    }
+  ],
+  "interpretation": [
+    "This gate turns downstream consumer impact into an explicit promotion decision.",
+    "It prevents silent second-source merge from rotating top opportunity or top watch without an intentional gate decision."
+  ]
+}

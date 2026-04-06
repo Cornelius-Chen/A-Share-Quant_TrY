@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "watchlist_row_count": 1,
+    "unique_symbol_count": 1,
+    "top_watch_symbol": "601899",
+    "top_primary_theme_slug": "gold",
+    "top_mapping_confidence": "medium",
+    "top_linkage_class": "direct_beneficiary",
+    "authoritative_status": "continue_serving_symbol-first_watchlist_packets_to_downstream_program_consumers"
+  },
+  "triage_rows": [
+    {
+      "component": "symbol_watch_consumer",
+      "direction": "prefer_this_packet_when_the_consumer_wants_a_ranked_symbol_watchlist_without_re-reading_theme-level_opportunity_rows"
+    },
+    {
+      "component": "theme_watch_consumer",
+      "direction": "stay_on_the_opportunity_feed_or_snapshot_when_only_theme-level_context_is_needed"
+    }
+  ],
+  "interpretation": [
+    "This packet is narrower than the opportunity feed and more direct than the raw symbol watch surface.",
+    "Its purpose is to provide a ranked symbol-first watchlist that is already governed by primary and secondary theme logic.",
+    "Downstream consumers can treat this as the default opportunity watch entrypoint when they need symbol-level focus immediately."
+  ]
+}

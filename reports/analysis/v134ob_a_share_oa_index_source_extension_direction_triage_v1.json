@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "opening_gate_count": 4,
+    "closed_gate_count": 0,
+    "authoritative_status": "index_daily_source_extension_opened_for_downstream_reaudit"
+  },
+  "triage_rows": [
+    {
+      "component": "raw_source_acquisition",
+      "direction": "retain_new_raw_index_source_as_opening_trigger_and_stop_using_true_gap_language"
+    },
+    {
+      "component": "materialization_review",
+      "direction": "reopen_index_daily_materialization_and_candidate_review_under_the_new_raw_horizon"
+    },
+    {
+      "component": "paired_surface_promotion",
+      "direction": "advance_to_downstream_paired_surface_recheck_instead_of_freezing_extension"
+    }
+  ],
+  "interpretation": [
+    "Index-daily extension is no longer deferred-prelaunch because the opening gates are now materially open.",
+    "The valid next move is downstream re-audit and promotion review, not another raw-source acquisition loop."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125l_commercial_aerospace_event_coverage_gap_audit_v1",
+    "best_variant": "quality_event_gate",
+    "zero_coverage_years": [
+      "2024"
+    ],
+    "negative_tail_years": [
+      "2026"
+    ]
+  },
+  "year_rows": [
+    {
+      "year": "2024",
+      "historical_source_count": 0,
+      "event_day_count": 0,
+      "non_theme_event_day_count": 0,
+      "theme_heat_source_count": 0,
+      "capital_supply_source_count": 0,
+      "eligibility_flag_count": 0,
+      "eligibility_day_count": 0,
+      "eligibility_forward_spread_10": 0.0
+    },
+    {
+      "year": "2025",
+      "historical_source_count": 4,
+      "event_day_count": 4,
+      "non_theme_event_day_count": 3,
+      "theme_heat_source_count": 1,
+      "capital_supply_source_count": 2,
+      "eligibility_flag_count": 18,
+      "eligibility_day_count": 6,
+      "eligibility_forward_spread_10": 0.39292292
+    },
+    {
+      "year": "2026",
+      "historical_source_count": 8,
+      "event_day_count": 6,
+      "non_theme_event_day_count": 4,
+      "theme_heat_source_count": 3,
+      "capital_supply_source_count": 5,
+      "eligibility_flag_count": 18,
+      "eligibility_day_count": 6,
+      "eligibility_forward_spread_10": -0.03551163
+    }
+  ],
+  "interpretation": [
+    "V1.25L explains whether replay remains blocked because the event layer is absent, hype-dominated, or simply too sparse in a given year.",
+    "This is the direct blocker audit after the first event-conditioned control rebuild looked alive on pooled statistics but still failed chronology tails."
+  ]
+}

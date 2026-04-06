@@ -1,0 +1,240 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131m_commercial_aerospace_5min_feasibility_audit_v1",
+    "manifest_row_count": 4,
+    "attempt_count": 4,
+    "success_nonempty_count": 3,
+    "success_empty_count": 0,
+    "error_count": 1,
+    "five_min_partially_ready": true,
+    "five_min_fully_ready": false,
+    "availability_csv": "data\\raw\\intraday_requests\\commercial_aerospace_5min_feasibility_rows_v1.csv",
+    "authoritative_rule": "use 5min only if the retained override manifest has nonempty local or backfillable support; otherwise keep intraday modeling blocked"
+  },
+  "availability_rows": [
+    {
+      "failure_id": "20260113_601698",
+      "symbol": "601698",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "provider": "baostock",
+      "frequency": "5",
+      "fetch_status": "success_nonempty",
+      "row_count": 48,
+      "sample_head": [
+        [
+          "2026-01-13",
+          "20260113093500000",
+          "sh.601698",
+          "53.8700000000",
+          "53.8700000000",
+          "48.4900000000",
+          "48.4900000000",
+          "28156500",
+          "1421882548.0000",
+          "2"
+        ],
+        [
+          "2026-01-13",
+          "20260113094000000",
+          "sh.601698",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "6150300",
+          "298228047.0000",
+          "2"
+        ]
+      ],
+      "sample_tail": [
+        [
+          "2026-01-13",
+          "20260113145500000",
+          "sh.601698",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "582600",
+          "28250274.0000",
+          "2"
+        ],
+        [
+          "2026-01-13",
+          "20260113150000000",
+          "sh.601698",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "48.4900000000",
+          "632700",
+          "30679623.0000",
+          "2"
+        ]
+      ]
+    },
+    {
+      "failure_id": "20260126_300342",
+      "symbol": "300342",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "provider": "baostock",
+      "frequency": "5",
+      "fetch_status": "success_nonempty",
+      "row_count": 48,
+      "sample_head": [
+        [
+          "2026-01-26",
+          "20260126093500000",
+          "sz.300342",
+          "60.0000000000",
+          "60.1800000000",
+          "58.0100000000",
+          "59.2400000000",
+          "13067139",
+          "772957019.1700",
+          "2"
+        ],
+        [
+          "2026-01-26",
+          "20260126094000000",
+          "sz.300342",
+          "59.1800000000",
+          "60.6700000000",
+          "59.1100000000",
+          "60.0900000000",
+          "5050852",
+          "301996046.4000",
+          "2"
+        ]
+      ],
+      "sample_tail": [
+        [
+          "2026-01-26",
+          "20260126145500000",
+          "sz.300342",
+          "54.9900000000",
+          "54.9900000000",
+          "54.5900000000",
+          "54.6000000000",
+          "1900869",
+          "104049346.9100",
+          "2"
+        ],
+        [
+          "2026-01-26",
+          "20260126150000000",
+          "sz.300342",
+          "54.5800000000",
+          "54.7700000000",
+          "54.4000000000",
+          "54.6000000000",
+          "1921701",
+          "104858631.6700",
+          "2"
+        ]
+      ]
+    },
+    {
+      "failure_id": "20260113_000738",
+      "symbol": "000738",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "provider": "baostock",
+      "frequency": "5",
+      "fetch_status": "error",
+      "row_count": 0,
+      "sample_head": [],
+      "sample_tail": [],
+      "error_type": "RuntimeError",
+      "error_message": "baostock_query_failed:10001001:用户未登录"
+    },
+    {
+      "failure_id": "20260126_300045",
+      "symbol": "300045",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "provider": "baostock",
+      "frequency": "5",
+      "fetch_status": "success_nonempty",
+      "row_count": 48,
+      "sample_head": [
+        [
+          "2026-01-26",
+          "20260126093500000",
+          "sz.300045",
+          "31.0100000000",
+          "31.0100000000",
+          "30.2400000000",
+          "30.4300000000",
+          "10881175",
+          "333139176.2400",
+          "2"
+        ],
+        [
+          "2026-01-26",
+          "20260126094000000",
+          "sz.300045",
+          "30.4300000000",
+          "31.2000000000",
+          "30.4300000000",
+          "30.7800000000",
+          "5571845",
+          "172416425.7000",
+          "2"
+        ]
+      ],
+      "sample_tail": [
+        [
+          "2026-01-26",
+          "20260126145500000",
+          "sz.300045",
+          "28.8600000000",
+          "28.8600000000",
+          "28.7200000000",
+          "28.7400000000",
+          "1647802",
+          "47421381.1900",
+          "2"
+        ],
+        [
+          "2026-01-26",
+          "20260126150000000",
+          "sz.300045",
+          "28.7500000000",
+          "28.7600000000",
+          "28.7100000000",
+          "28.7400000000",
+          "1288852",
+          "37034216.4400",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.31M directly tests whether the current commercial-aerospace override manifest can be backfilled with Baostock 5-minute bars.",
+    "This is narrower than generic intraday expansion: it only checks the exact high-value failure sessions already retained by governance."
+  ]
+}

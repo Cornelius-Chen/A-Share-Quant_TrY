@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125o_commercial_aerospace_event_control_regime_audit_v1",
+    "best_variant": "quality_event_gate",
+    "regime_count": 4,
+    "positive_eligibility_regimes": [
+      "impulse_expansion",
+      "risk_off_deterioration"
+    ],
+    "negative_eligibility_regimes": [
+      "sentiment_overdrive_transition",
+      "weak_drift_chop"
+    ],
+    "authoritative_rule": "commercial_aerospace_control_semantics_should_now_be_discussed_in_structure_regimes_not_calendar_years"
+  },
+  "regime_rows": [
+    {
+      "regime_semantic": "impulse_expansion",
+      "row_count": 192,
+      "eligibility_flag_count": 24,
+      "de_risk_flag_count": 16,
+      "eligibility_forward_spread_10": 0.20916771,
+      "de_risk_avoidance_spread_10": 0.15644387
+    },
+    {
+      "regime_semantic": "risk_off_deterioration",
+      "row_count": 168,
+      "eligibility_flag_count": 3,
+      "de_risk_flag_count": 0,
+      "eligibility_forward_spread_10": 0.03015916,
+      "de_risk_avoidance_spread_10": 0.0
+    },
+    {
+      "regime_semantic": "sentiment_overdrive_transition",
+      "row_count": 2892,
+      "eligibility_flag_count": 6,
+      "de_risk_flag_count": 880,
+      "eligibility_forward_spread_10": -0.1836343,
+      "de_risk_avoidance_spread_10": -0.00544768
+    },
+    {
+      "regime_semantic": "weak_drift_chop",
+      "row_count": 2928,
+      "eligibility_flag_count": 3,
+      "de_risk_flag_count": 820,
+      "eligibility_forward_spread_10": -0.18966357,
+      "de_risk_avoidance_spread_10": -0.00526091
+    }
+  ],
+  "interpretation": [
+    "V1.25O asks the question the right way: not whether 2024 or 2026 was good, but which machine-discovered structure regimes actually support lawful eligibility and de-risk semantics.",
+    "This turns commercial aerospace chronology from calendar language into structural行情 language."
+  ]
+}

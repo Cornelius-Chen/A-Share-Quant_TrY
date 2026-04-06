@@ -1,0 +1,4700 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117k_cpo_reverse_signal_candidate_discovery_v1",
+    "negative_row_count": 175,
+    "non_negative_row_count": 281,
+    "top_separation_feature": "f60_high_time_ratio_rz",
+    "candidate_discriminator_name": "continuation_failure_damage_score_candidate",
+    "candidate_score_mean_gap_negative_minus_non_negative": 308615394.351805,
+    "recommended_next_posture": "audit_reverse_signal_candidate_as_drawdown_control_component_and_keep_candidate_only"
+  },
+  "feature_separation_rows": [
+    {
+      "feature_name": "f60_high_time_ratio_rz",
+      "negative_mean": 7142857.142857,
+      "non_negative_mean": 74733096.085409,
+      "mean_separation": -67590238.942552,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 67590238.942552
+    },
+    {
+      "feature_name": "f30_close_location_rz",
+      "negative_mean": 8282388.571429,
+      "non_negative_mean": 74758583.629893,
+      "mean_separation": -66476195.058465,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 66476195.058465
+    },
+    {
+      "feature_name": "f60_close_location_rz",
+      "negative_mean": 8282388.571429,
+      "non_negative_mean": 74758583.629893,
+      "mean_separation": -66476195.058465,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 66476195.058465
+    },
+    {
+      "feature_name": "f30_high_time_ratio_rz",
+      "negative_mean": 6428571.428571,
+      "non_negative_mean": 65391459.074733,
+      "mean_separation": -58962887.646162,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 58962887.646162
+    },
+    {
+      "feature_name": "f30_afternoon_volume_share_rz",
+      "negative_mean": 4496377.142857,
+      "non_negative_mean": 42317548.042705,
+      "mean_separation": -37821170.899847,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 37821170.899847
+    },
+    {
+      "feature_name": "f60_afternoon_volume_share_rz",
+      "negative_mean": 4496377.142857,
+      "non_negative_mean": 42317548.042705,
+      "mean_separation": -37821170.899847,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 37821170.899847
+    },
+    {
+      "feature_name": "f30_breakout_efficiency_rz",
+      "negative_mean": 7730685.714286,
+      "non_negative_mean": 37843960.854093,
+      "mean_separation": -30113275.139807,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 30113275.139807
+    },
+    {
+      "feature_name": "f60_breakout_efficiency_rz",
+      "negative_mean": 7730685.714286,
+      "non_negative_mean": 37843960.854093,
+      "mean_separation": -30113275.139807,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 30113275.139807
+    },
+    {
+      "feature_name": "f30_upper_shadow_ratio_rz",
+      "negative_mean": 0.0,
+      "non_negative_mean": 5758693.950178,
+      "mean_separation": -5758693.950178,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 5758693.950178
+    },
+    {
+      "feature_name": "f60_upper_shadow_ratio_rz",
+      "negative_mean": 0.0,
+      "non_negative_mean": 5357978.647687,
+      "mean_separation": -5357978.647687,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 5357978.647687
+    },
+    {
+      "feature_name": "f30_close_vs_vwap_rz",
+      "negative_mean": 51525.714286,
+      "non_negative_mean": 1692861.209964,
+      "mean_separation": -1641335.495679,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 1641335.495679
+    },
+    {
+      "feature_name": "f60_close_vs_vwap_rz",
+      "negative_mean": 82491.428571,
+      "non_negative_mean": 1423238.434164,
+      "mean_separation": -1340747.005592,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 1340747.005592
+    },
+    {
+      "feature_name": "f30_failed_push_proxy",
+      "negative_mean": 0.0,
+      "non_negative_mean": 0.017794,
+      "mean_separation": -0.017794,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 0.017794
+    },
+    {
+      "feature_name": "f60_failed_push_proxy",
+      "negative_mean": 0.0,
+      "non_negative_mean": 0.017794,
+      "mean_separation": -0.017794,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 0.017794
+    },
+    {
+      "feature_name": "d15_60_failed_push_proxy",
+      "negative_mean": 0.0,
+      "non_negative_mean": 0.0,
+      "mean_separation": 0.0,
+      "preferred_direction": "lower_is_riskier",
+      "abs_separation": 0.0
+    }
+  ],
+  "candidate_score_rows": [
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": 964468000.0,
+      "reverse_damage_score": 2.0,
+      "candidate_reverse_score": 964468002.0
+    },
+    {
+      "signal_trade_date": "2023-12-20",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": 821280000.0,
+      "reverse_damage_score": 2.0,
+      "candidate_reverse_score": 821280002.0
+    },
+    {
+      "signal_trade_date": "2025-12-19",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "close_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": 695186000.0,
+      "reverse_damage_score": 2.0,
+      "candidate_reverse_score": 695186002.0
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "688498",
+      "coarse_label": "increase_expression",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "reverse_weakness_score": 612370000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 612370000.0
+    },
+    {
+      "signal_trade_date": "2025-08-29",
+      "symbol": "688498",
+      "coarse_label": "increase_expression",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "reverse_weakness_score": 116166000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 116166000.0
+    },
+    {
+      "signal_trade_date": "2023-05-04",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "mixed_risk",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-05-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-05-11",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-05-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-05-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-05-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-06",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-21",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-21",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-26",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-28",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-06-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-07",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-07",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-10",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-10",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-12",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-12",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-19",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-20",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-20",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-21",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-21",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-26",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-27",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-07-27",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-03",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-03",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-09",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-09",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-10",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-10",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-11",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-11",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-15",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-15",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-16",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-18",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-18",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-23",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-25",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-08-25",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-01",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-01",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-07",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-07",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-13",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-13",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-15",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-15",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-18",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-18",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-19",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-09-19",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-12",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-12",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-13",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-13",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-16",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-16",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-18",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-18",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-19",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-20",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-20",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-23",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-31",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-10-31",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-02",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-10",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-16",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-22",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-24",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-24",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-29",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-11-29",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-05",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-12",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-12",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-13",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-13",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-14",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-14",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-15",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-15",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-18",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-18",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-19",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-20",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-20",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-22",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-22",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-26",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2023-12-26",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-02",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-02",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-03",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-03",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-05",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-08",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-08",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-10",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-12",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-12",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-16",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-17",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-17",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-26",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-29",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-29",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-30",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-30",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-31",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-01-31",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-02",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-28",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-02-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-03-07",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-03-07",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-03-25",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-03-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-03-27",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-02",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-03",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-19",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-19",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-22",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-25",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-25",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-30",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-04-30",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-07",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-07",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-08",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-08",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-10",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-10",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-21",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-21",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-23",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-23",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-24",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-24",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-28",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-28",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-29",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-05-29",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-05",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-05",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-06",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-06",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-19",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-24",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-24",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-25",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-25",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-27",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-06-27",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-02",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-03",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-03",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-04",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-04",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-12",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-12",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-15",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-15",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-17",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-17",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-18",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-18",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-23",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-25",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-07-25",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-02",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-05",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-08",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-08",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-12",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-12",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-14",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-14",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-20",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-20",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-22",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-26",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-27",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-08-27",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-02",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-02",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-06",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-06",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-11",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-11",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-18",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-18",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-20",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-09-20",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-09",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-09",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-10",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-11",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-11",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-15",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-15",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-10-16",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-01",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-01",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-06",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-06",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-12",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-12",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-14",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-14",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-15",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-15",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-18",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-18",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-21",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-21",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-22",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-22",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-11-28",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-03",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-03",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-04",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-04",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-09",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-09",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-13",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-13",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-23",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-27",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-27",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-31",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2024-12-31",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-03",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-03",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-09",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-09",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-10",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-27",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-01-27",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-05",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-05",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-13",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-13",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-18",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-18",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-25",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-25",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-27",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-27",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-28",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-02-28",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-07",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-07",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-11",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-11",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-13",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-13",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-19",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-19",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-21",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-21",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-25",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-25",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-03-28",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-07",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-07",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-15",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-15",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-16",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-22",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-24",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-24",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-04-28",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-09",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-09",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-13",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-13",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-15",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-15",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-22",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-22",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-23",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-23",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-27",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-27",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-30",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-05-30",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-10",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-10",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-13",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-13",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-19",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-06-19",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-04",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-04",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-11",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-11",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-07-16",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-01",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-01",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-01",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-14",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-14",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-14",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-21",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-21",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-08-21",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-02",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-02",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-02",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-04",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-04",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-04",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-09",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-09",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-09",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-15",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-15",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-24",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-24",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-26",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-26",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-30",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-09-30",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-10",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-10",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-13",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-13",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-14",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-14",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-17",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-17",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-23",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-23",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-30",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-30",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-31",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-31",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-04",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-04",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-07",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-07",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-10",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-10",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-11",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-11",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-14",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-14",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-21",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-11-21",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-02",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-11",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-11",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-15",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-15",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-16",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-16",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-25",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-25",
+      "symbol": "300757",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-26",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-26",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-31",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-12-31",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "divergence_and_decay",
+      "reverse_weakness_score": -0.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": 0.0
+    },
+    {
+      "signal_trade_date": "2025-10-31",
+      "symbol": "688498",
+      "coarse_label": "increase_expression",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "reverse_weakness_score": -46762000.0,
+      "reverse_damage_score": 2.0,
+      "candidate_reverse_score": -46761998.0
+    },
+    {
+      "signal_trade_date": "2025-07-24",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -98990000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -98990000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -233494000.0,
+      "reverse_damage_score": 2.0,
+      "candidate_reverse_score": -233493998.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -2254478000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -2254478000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -2978222000.0,
+      "reverse_damage_score": 576874000.0,
+      "candidate_reverse_score": -2401348000.0
+    },
+    {
+      "signal_trade_date": "2025-09-12",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "close_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -2437572000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -2437572000.0
+    },
+    {
+      "signal_trade_date": "2023-06-07",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -2658732000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -2658732000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -2869140000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -2869140000.0
+    },
+    {
+      "signal_trade_date": "2025-09-29",
+      "symbol": "300502",
+      "coarse_label": "decrease_expression",
+      "action_context": "reduce_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3058256000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3058256000.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3199828000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3199828000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3242876000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3242876000.0
+    },
+    {
+      "signal_trade_date": "2024-04-18",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3378294000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3378294000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3567972000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3567972000.0
+    },
+    {
+      "signal_trade_date": "2023-11-07",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4381940000.0,
+      "reverse_damage_score": 547039000.0,
+      "candidate_reverse_score": -3834901000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4545456000.0,
+      "reverse_damage_score": 685543000.0,
+      "candidate_reverse_score": -3859913000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -3969474000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -3969474000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4109264000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4109264000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4155426000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4155426000.0
+    },
+    {
+      "signal_trade_date": "2025-08-28",
+      "symbol": "688498",
+      "coarse_label": "hold_or_skip",
+      "action_context": "entry_vs_skip",
+      "board_phase": "diffusion",
+      "reverse_weakness_score": -4229656000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4229656000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4769780000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4769780000.0
+    },
+    {
+      "signal_trade_date": "2023-04-28",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "entry_vs_skip",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4819478000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4819478000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4828238000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4828238000.0
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5343838000.0,
+      "reverse_damage_score": 481517000.0,
+      "candidate_reverse_score": -4862321000.0
+    },
+    {
+      "signal_trade_date": "2024-03-15",
+      "symbol": "300308",
+      "coarse_label": "decrease_expression",
+      "action_context": "close_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -4921320000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -4921320000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5232660000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -5232660000.0
+    },
+    {
+      "signal_trade_date": "2023-11-07",
+      "symbol": "300502",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5791470000.0,
+      "reverse_damage_score": 518946000.0,
+      "candidate_reverse_score": -5272524000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5340462000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -5340462000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5529624000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -5529624000.0
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300308",
+      "coarse_label": "hold_or_skip",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5954084000.0,
+      "reverse_damage_score": 313866000.0,
+      "candidate_reverse_score": -5640218000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "coarse_label": "increase_expression",
+      "action_context": "add_vs_hold",
+      "board_phase": "main_markup",
+      "reverse_weakness_score": -5899890000.0,
+      "reverse_damage_score": 0.0,
+      "candidate_reverse_score": -5899890000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17K opens the reverse-signal branch explicitly instead of treating drawdown control as merely the absence of positive signals.",
+    "The resulting candidate score is built around continuation failure: weak close location, weak high-time ratio, weak breakout efficiency, plus explicit damage proxies.",
+    "This branch is candidate-only. The goal is to discover a downside-control vector that can later sit beside the positive-side branch, not to promote a new sell law immediately."
+  ]
+}

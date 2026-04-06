@@ -1,0 +1,5 @@
+﻿component,status,detail
+phase2_wider_reference_mapping,not_execution_bindable_as_is,Do not treat the current wider sell shadow as if its reference quantities were real holdings; most sessions are only partially funded or unfunded relative to the frozen EOD primary.
+next_real_work,build_start_of_day_holdings_ledger,The next justified step is a holdings-aware ledger that converts frozen EOD positions into sellable start-of-day intraday state.
+same_day_precedence_policy,mandatory,A same-day precedence rule is required because some sell-side candidates collide with same-day primary open/add/reduce actions.
+scope_guardrail,mandatory,Keep this step sell-side only; do not pull reentry execution or full replay binding into the holdings-aware buildout.

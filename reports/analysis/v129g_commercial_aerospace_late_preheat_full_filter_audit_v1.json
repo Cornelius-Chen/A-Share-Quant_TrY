@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129g_commercial_aerospace_late_preheat_full_filter_audit_v1",
+    "reference_variant": "tail_weakdrift_full_reference",
+    "reference_final_equity": 1309426.5555,
+    "reference_max_drawdown": 0.09309927,
+    "best_variant": "tail_weakdrift_full_reference",
+    "best_variant_final_equity": 1309426.5555,
+    "best_variant_max_drawdown": 0.09309927,
+    "late_preheat_score_thresholds": {
+      "0.8": 0.24139935,
+      "0.85": 1.08981742,
+      "0.9": 2.29132255
+    }
+  },
+  "variant_rows": [
+    {
+      "variant": "tail_weakdrift_full_reference",
+      "final_equity": 1309426.5555,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 211,
+      "late_preheat_filter_hits": 0
+    },
+    {
+      "variant": "late_preheat_full_q80_downgrade",
+      "final_equity": 1307550.1332,
+      "max_drawdown": 0.09322084,
+      "executed_order_count": 210,
+      "late_preheat_filter_hits": 7
+    },
+    {
+      "variant": "late_preheat_full_q85_downgrade",
+      "final_equity": 1287884.622,
+      "max_drawdown": 0.10787209,
+      "executed_order_count": 212,
+      "late_preheat_filter_hits": 8
+    },
+    {
+      "variant": "late_preheat_full_q90_downgrade",
+      "final_equity": 1287884.622,
+      "max_drawdown": 0.10787209,
+      "executed_order_count": 212,
+      "late_preheat_filter_hits": 15
+    },
+    {
+      "variant": "late_preheat_full_q80_block",
+      "final_equity": 1305093.4293,
+      "max_drawdown": 0.09338049,
+      "executed_order_count": 199,
+      "late_preheat_filter_hits": 10
+    },
+    {
+      "variant": "late_preheat_full_q85_block",
+      "final_equity": 1285799.9704,
+      "max_drawdown": 0.10776015,
+      "executed_order_count": 197,
+      "late_preheat_filter_hits": 13
+    },
+    {
+      "variant": "late_preheat_full_q90_block",
+      "final_equity": 1285799.9704,
+      "max_drawdown": 0.10776015,
+      "executed_order_count": 197,
+      "late_preheat_filter_hits": 20
+    }
+  ],
+  "interpretation": [
+    "V1.29G tests whether the newly unblocked full-pre phase-specific supervision can improve the current primary replay by filtering only late-preheat full adds.",
+    "This remains intentionally narrow and lawful: it only governs 2025-12-12 to 2025-12-23 preheat-full entries, leaving the rest of the primary replay unchanged."
+  ]
+}

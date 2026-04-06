@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119b_cpo_tushare_data_bootstrap_v1",
+    "provider": "tushare",
+    "scope": "cpo_bounded_cohort",
+    "symbol_count": 20,
+    "start_date": "2023-01-01",
+    "end_date": "2026-04-02",
+    "daily_basic_rows": 15665,
+    "moneyflow_rows": 15665,
+    "stk_limit_rows": 15700
+  },
+  "output_rows": [
+    {
+      "dataset": "daily_basic",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\tushare_daily_basic\\tushare_cpo_daily_basic_v1.csv",
+      "row_count": 15665
+    },
+    {
+      "dataset": "moneyflow",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\raw\\moneyflow\\tushare_cpo_moneyflow_v1.csv",
+      "row_count": 15665
+    },
+    {
+      "dataset": "stk_limit",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\stk_limit\\tushare_cpo_stk_limit_v1.csv",
+      "row_count": 15700
+    }
+  ],
+  "interpretation": [
+    "V1.19B bootstraps the first Tushare-backed CPO data pack using the bounded cohort universe from V112AA.",
+    "The purpose is to replace proxy free-float and turnover context with direct Tushare daily_basic fields, while also pulling moneyflow and daily price-limit references.",
+    "This is a data-layer completion step, not a new trading branch."
+  ]
+}

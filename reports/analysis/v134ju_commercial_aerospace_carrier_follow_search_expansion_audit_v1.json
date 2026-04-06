@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ju_commercial_aerospace_carrier_follow_search_expansion_audit_v1",
+    "retained_supply_chain_source_count": 3,
+    "linked_local_case_count": 2,
+    "persistent_link_count": 1,
+    "moderate_link_count": 1,
+    "outside_named_watch_count": 1,
+    "branch_formalized": true,
+    "branch_promotive": false,
+    "expansion_csv": "data\\training\\commercial_aerospace_carrier_follow_search_expansion_v1.csv",
+    "authoritative_output": "commercial_aerospace_carrier_follow_search_expansion_ready_for_direction_triage"
+  },
+  "expansion_rows": [
+    {
+      "registry_id": "ca_source_009",
+      "linked_symbol": "outside_named_candidate_watch",
+      "branch_role": "outside_named_supply_chain_watch",
+      "followthrough_label": "unobserved_in_current_local_surface",
+      "source_hardness": "retained_continuation_support_source",
+      "expansion_reading": "same_plane_registry_support_exists_but_local_symbol_surface_not_materialized"
+    },
+    {
+      "registry_id": "ca_source_010",
+      "linked_symbol": "603601",
+      "branch_role": "linked_carrier_case",
+      "followthrough_label": "persistent_symbol_followthrough_without_board_unlock",
+      "source_hardness": "retained_continuation_support_source",
+      "expansion_reading": "same_plane_carrier_reinforcement_without_true_selection_promotion"
+    },
+    {
+      "registry_id": "ca_source_011",
+      "linked_symbol": "301306",
+      "branch_role": "linked_follow_case",
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "source_hardness": "retained_follow_support_source",
+      "expansion_reading": "same_plane_follow_reinforcement_without_anchor_upgrade"
+    }
+  ],
+  "interpretation": [
+    "V1.34JU formalizes the carrier-follow branch using retained supply-chain validation sources.",
+    "The branch adds real same-plane reinforcement for 603601 and 301306, while also surfacing one outside-named supply-chain watch, but it still does not justify true-selection promotion."
+  ]
+}

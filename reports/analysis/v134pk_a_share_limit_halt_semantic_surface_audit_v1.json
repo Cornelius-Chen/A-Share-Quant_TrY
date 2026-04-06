@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "surface_row_count": 27711,
+    "symbol_count": 51,
+    "coverage_start": "20240102",
+    "coverage_end": "20260403",
+    "st_proxy_row_count": 226,
+    "suspended_row_count": 3,
+    "missing_stk_limit_count": 0,
+    "status_csv": "data\\training\\a_share_limit_halt_semantic_surface_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_semantic_surface_ready_for_replay_recheck"
+  },
+  "rows": [
+    {
+      "component": "limit_halt_semantic_surface",
+      "component_state": "materialized_semantic_replay_surface",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_semantic_surface_v1.csv",
+      "coverage_note": "surface_row_count = 27711"
+    },
+    {
+      "component": "semantic_residuals",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_semantic_surface_residual_v1.csv",
+      "coverage_note": "missing_stk_limit_count = 0"
+    }
+  ],
+  "interpretation": [
+    "The replay-facing limit-halt layer is no longer purely heuristic or source-missing; it is now a semantic surface built from retained side-input families.",
+    "Residual uncertainty remains explicit, but replay can now be rechecked against a materially richer limit-halt context than the original 2024-only bootstrap surface."
+  ]
+}

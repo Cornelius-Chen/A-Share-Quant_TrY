@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122h_cpo_recent_1min_proxy_action_timepoint_label_base_v1",
+    "row_count": 7700,
+    "horizon_bars": 5,
+    "label_counts": {
+      "add_probe": 488,
+      "reduce_probe": 1149,
+      "close_probe": 490,
+      "hold_probe": 5573
+    },
+    "output_path": "data\\training\\cpo_recent_1min_proxy_action_timepoint_label_base_v1.csv",
+    "recommended_next_posture": "audit_candidate_families_against_proxy_action_labels"
+  },
+  "label_rows": [
+    {
+      "label": "add_probe",
+      "count": 488,
+      "rate": 0.06337662
+    },
+    {
+      "label": "reduce_probe",
+      "count": 1149,
+      "rate": 0.14922078
+    },
+    {
+      "label": "close_probe",
+      "count": 490,
+      "rate": 0.06363636
+    },
+    {
+      "label": "hold_probe",
+      "count": 5573,
+      "rate": 0.72376623
+    }
+  ],
+  "interpretation": [
+    "V1.22H creates a strict proxy action-timepoint label base on the recent 1-minute plane instead of continuing unlabeled family discovery.",
+    "These are still proxy labels, not production action truth, but they are stricter and more actionable than pooled forward-return checks alone.",
+    "The next step is to re-audit surviving 1-minute families against this label base rather than inventing more scores first."
+  ]
+}

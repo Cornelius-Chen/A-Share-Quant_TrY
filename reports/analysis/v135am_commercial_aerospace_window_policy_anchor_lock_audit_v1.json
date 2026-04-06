@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "row_count": 4,
+    "covered_window_count": 1,
+    "direction_anchor_count": 2,
+    "reinforcement_anchor_count": 2,
+    "exact_january_ignition_text_locked_count": 0,
+    "gate_hold_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_002",
+      "direction_anchor_count": "2",
+      "reinforcement_anchor_count": "2",
+      "exact_january_ignition_text_locked": "false",
+      "direction_anchor_strength_state": "strong_enough_preconditioning_anchor_present",
+      "reinforcement_state": "present_but_not_gate_releasing",
+      "final_training_admission": "hold_until_policy_wording_locked",
+      "strict_supervisor_conclusion": "Window 002 now has a locked policy stack: a formal national direction anchor plus central-system and scale-up reinforcements. That is sufficient to explain why January ignition was not random, but still insufficient to release the final-training gate because the exact January 8/12 ignition text is not locked."
+    }
+  ],
+  "interpretation": [
+    "Window 002 now has a locked policy stack rather than a vague policy story.",
+    "The strict conclusion is not that January lacked policy support, but that the exact January 8/12 ignition text is still not locked.",
+    "This artifact prevents premature final-training admission while preserving the genuine top-down backdrop."
+  ]
+}

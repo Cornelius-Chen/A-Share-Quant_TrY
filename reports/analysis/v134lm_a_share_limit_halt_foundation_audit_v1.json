@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lm_a_share_limit_halt_foundation_audit_v1",
+    "surface_row_count": 1936,
+    "limit_up_hit_count": 16,
+    "limit_down_hit_count": 6,
+    "halt_or_suspend_count": 0,
+    "residual_count": 3,
+    "status_csv": "data\\training\\a_share_limit_halt_foundation_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_foundation_ready_for_direction_triage"
+  },
+  "rows": [
+    {
+      "component": "limit_halt_surface",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_surface_v1.csv",
+      "coverage_note": "surface_row_count = 1936"
+    },
+    {
+      "component": "limit_halt_residual_backlog",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_residual_backlog_v1.csv",
+      "coverage_note": "residual_count = 3"
+    }
+  ],
+  "interpretation": [
+    "This closes the first limit-halt backlog with a transparent board-rule bootstrap surface rather than leaving market constraints implicit.",
+    "The surface is useful for research and replay guardrails, while still explicitly carrying exchange-precision and intraday-state residual gaps."
+  ]
+}

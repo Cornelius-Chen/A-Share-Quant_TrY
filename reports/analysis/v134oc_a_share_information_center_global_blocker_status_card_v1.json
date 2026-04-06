@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "global_component_count": 7,
+    "source_blocker_count": 1,
+    "replay_true_source_gap_count": 0,
+    "index_extension_ready_to_open_now": true,
+    "status_csv": "data\\training\\a_share_information_center_global_blocker_status_card_v1.csv",
+    "authoritative_output": "a_share_information_center_global_blocker_status_card_materialized"
+  },
+  "rows": [
+    {
+      "global_component": "information_center_core",
+      "global_state": "foundation_complete_enough",
+      "decisive_metric": "foundation_complete_count = 13",
+      "next_governance_mode": "freeze_framework_and_close_only_named_blockers"
+    },
+    {
+      "global_component": "source_side_closure",
+      "global_state": "single_runtime_opening_review_lane_pending_scheduler_and_governance_movement",
+      "decisive_metric": "priority_runtime_candidate_count = 1; scheduler_pending_count = 1; governance_closed_count = 1",
+      "next_governance_mode": "continue_only_through_the_single_html-article_scheduler_governance_opening_review_lane"
+    },
+    {
+      "global_component": "replay_promotion",
+      "global_state": "promotable_subset_materialized",
+      "decisive_metric": "promotable_now_count = 14",
+      "next_governance_mode": "recheck_replay_internal_build_preconditions_from_the_controlled_promotable_subset"
+    },
+    {
+      "global_component": "index_daily_extension_frontier",
+      "global_state": "opened_for_downstream_reaudit",
+      "decisive_metric": "closed_gate_count = 0",
+      "next_governance_mode": "keep_source-acquisition lane retired while downstream replay blockers close"
+    },
+    {
+      "global_component": "limit_halt_derivation_frontier",
+      "global_state": "semantic_materialization_complete_for_recheck",
+      "decisive_metric": "limit_halt_materialized_count = 14",
+      "next_governance_mode": "carry_named_semantic_residuals_into_replay_recheck_without_reopening_derivation_hunting"
+    },
+    {
+      "global_component": "market_context_residual_frontier",
+      "global_state": "external_boundary_residuals_only_under_shadow_overlay",
+      "decisive_metric": "base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2",
+      "next_governance_mode": "retain_shadow_overlay_and_treat_market_context_work_as_boundary_handling_not_full_surface_extension"
+    },
+    {
+      "global_component": "live_like_execution",
+      "global_state": "explicitly_blocked",
+      "decisive_metric": "total_blocker_count = 6",
+      "next_governance_mode": "retain_research_shadow_only_until_source_and_replay_closure_progresses"
+    }
+  ],
+  "interpretation": [
+    "The information center now has one global control view that merges foundation status, source-side closure, replay-side promotion status, and the reopened index-daily downstream re-audit lane.",
+    "Current progress is no longer a construction problem: source-side has narrowed to a single runtime scheduler gate lane, while replay-side has moved past both source-boundary blockage and limit-halt derivation blockage into internal recheck mode with only external boundary residuals left under the shadow overlay.",
+    "Active source-side blockers are source_promotion_preconditions_unsatisfied."
+  ]
+}

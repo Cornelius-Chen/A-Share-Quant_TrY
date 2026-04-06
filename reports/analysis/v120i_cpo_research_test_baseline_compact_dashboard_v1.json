@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120i_cpo_research_test_baseline_compact_dashboard_v1",
+    "compact_dashboard_png": "reports\\analysis\\v120i_cpo_research_test_baseline_compact_dashboard_v1.png",
+    "action_count": 20
+  },
+  "compact_rows": [
+    {
+      "id": 1,
+      "trade_date": "2023-05-04",
+      "symbol": "300502",
+      "label": "OPEN",
+      "weight": 0.0748
+    },
+    {
+      "id": 2,
+      "trade_date": "2023-06-08",
+      "symbol": "300308",
+      "label": "OPEN",
+      "weight": 0.0955
+    },
+    {
+      "id": 3,
+      "trade_date": "2023-06-15",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0536
+    },
+    {
+      "id": 4,
+      "trade_date": "2023-06-15",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0336
+    },
+    {
+      "id": 5,
+      "trade_date": "2023-09-25",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0666
+    },
+    {
+      "id": 6,
+      "trade_date": "2023-09-25",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.022
+    },
+    {
+      "id": 7,
+      "trade_date": "2023-12-11",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0938
+    },
+    {
+      "id": 8,
+      "trade_date": "2023-12-11",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.053
+    },
+    {
+      "id": 9,
+      "trade_date": "2023-12-21",
+      "symbol": "300502",
+      "label": "ADD",
+      "weight": 0.0123
+    },
+    {
+      "id": 10,
+      "trade_date": "2024-01-19",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0674
+    },
+    {
+      "id": 11,
+      "trade_date": "2024-01-19",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0417
+    },
+    {
+      "id": 12,
+      "trade_date": "2024-02-06",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0996
+    },
+    {
+      "id": 13,
+      "trade_date": "2024-02-07",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0985
+    },
+    {
+      "id": 14,
+      "trade_date": "2024-02-07",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0975
+    },
+    {
+      "id": 15,
+      "trade_date": "2024-03-18",
+      "symbol": "300308",
+      "label": "CLOSE",
+      "weight": 0.1609
+    },
+    {
+      "id": 16,
+      "trade_date": "2024-04-19",
+      "symbol": "300757",
+      "label": "OPEN",
+      "weight": 0.0955
+    },
+    {
+      "id": 17,
+      "trade_date": "2025-06-04",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0974
+    },
+    {
+      "id": 18,
+      "trade_date": "2025-07-25",
+      "symbol": "300308",
+      "label": "ADD",
+      "weight": 0.093
+    },
+    {
+      "id": 19,
+      "trade_date": "2025-09-15",
+      "symbol": "300308",
+      "label": "CLOSE",
+      "weight": 0.205
+    },
+    {
+      "id": 20,
+      "trade_date": "2025-09-30",
+      "symbol": "300502",
+      "label": "REDUCE",
+      "weight": 0.2334
+    }
+  ]
+}

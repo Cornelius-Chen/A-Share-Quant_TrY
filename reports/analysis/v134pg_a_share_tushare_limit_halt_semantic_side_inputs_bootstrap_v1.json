@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "provider": "tushare",
+    "scope": "commercial_aerospace_universe",
+    "symbol_count": 51,
+    "start_date": "20240101",
+    "end_date": "20260405",
+    "namechange_row_count": 1,
+    "namechange_symbol_count": 1,
+    "suspend_row_count": 23,
+    "suspend_symbol_count": 3
+  },
+  "output_rows": [
+    {
+      "dataset": "namechange",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\namechange\\tushare_commercial_aerospace_namechange_v1.csv",
+      "row_count": 1
+    },
+    {
+      "dataset": "suspend_d",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\reference\\suspend_d\\tushare_commercial_aerospace_suspend_d_v1.csv",
+      "row_count": 23
+    }
+  ],
+  "interpretation": [
+    "This bootstrap adds the two semantic side-input families that are most relevant to replay-facing limit-halt derivation: name-change history and suspension records.",
+    "These feeds do not by themselves complete replay promotion, but they convert ST/suspension from a vague future need into retained local source families."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ak_commercial_aerospace_rebound_cost_local_veto_audit_v1",
+    "best_up_share_threshold": 0.45,
+    "best_open_burst_floor": -0.01,
+    "best_matched_count": 2,
+    "best_rebound_cost_hit_count": 2,
+    "best_followthrough_hit_count": 0,
+    "best_precision_rebound": 1.0,
+    "best_rebound_coverage": 0.5,
+    "threshold_csv": "data\\training\\commercial_aerospace_rebound_cost_local_veto_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_rebound_cost_local_veto_audit_ready_for_direction_triage"
+  },
+  "threshold_rows": [
+    {
+      "up_share_threshold": 0.45,
+      "open_burst_floor": -0.02,
+      "matched_count": 4,
+      "rebound_cost_hit_count": 3,
+      "followthrough_hit_count": 1,
+      "precision_rebound": 0.75,
+      "rebound_coverage": 0.75
+    },
+    {
+      "up_share_threshold": 0.45,
+      "open_burst_floor": -0.01,
+      "matched_count": 2,
+      "rebound_cost_hit_count": 2,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.5
+    },
+    {
+      "up_share_threshold": 0.45,
+      "open_burst_floor": 0.0,
+      "matched_count": 2,
+      "rebound_cost_hit_count": 2,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.5
+    },
+    {
+      "up_share_threshold": 0.5,
+      "open_burst_floor": -0.02,
+      "matched_count": 2,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 1,
+      "precision_rebound": 0.5,
+      "rebound_coverage": 0.25
+    },
+    {
+      "up_share_threshold": 0.5,
+      "open_burst_floor": -0.01,
+      "matched_count": 1,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.25
+    },
+    {
+      "up_share_threshold": 0.5,
+      "open_burst_floor": 0.0,
+      "matched_count": 1,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.25
+    },
+    {
+      "up_share_threshold": 0.55,
+      "open_burst_floor": -0.02,
+      "matched_count": 1,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.25
+    },
+    {
+      "up_share_threshold": 0.55,
+      "open_burst_floor": -0.01,
+      "matched_count": 1,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.25
+    },
+    {
+      "up_share_threshold": 0.55,
+      "open_burst_floor": 0.0,
+      "matched_count": 1,
+      "rebound_cost_hit_count": 1,
+      "followthrough_hit_count": 0,
+      "precision_rebound": 1.0,
+      "rebound_coverage": 0.25
+    }
+  ],
+  "matched_rows": [
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "reversal_minute": "43",
+      "horizon_pnl_5d": "3036.0",
+      "regime_label": "rebound_cost_case",
+      "open_burst_return_5m": "0.000444",
+      "return_15m": "-0.015556",
+      "down_amount_share_60": "0.496608",
+      "up_amount_share_60": "0.400555",
+      "burst_amount_share_5": "0.241382",
+      "burst_amount_share_15": "0.460409",
+      "post_reversal_up_amount_share": "0.482301",
+      "post_reversal_close_return_to_hour_close": "-0.004217"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "reversal_minute": "41",
+      "horizon_pnl_5d": "3077.0",
+      "regime_label": "rebound_cost_case",
+      "open_burst_return_5m": "0.01649",
+      "return_15m": "-0.000868",
+      "down_amount_share_60": "0.548765",
+      "up_amount_share_60": "0.425217",
+      "burst_amount_share_5": "0.233922",
+      "burst_amount_share_15": "0.438838",
+      "post_reversal_up_amount_share": "0.626315",
+      "post_reversal_close_return_to_hour_close": "-0.006777"
+    }
+  ],
+  "interpretation": [
+    "V1.34AK tries a very narrow local veto shape for rebound-cost reversal sessions.",
+    "The goal is not global rule replacement; it is to see whether a small volume-price conjunction can catch a subset of rebound-cost cases without swallowing too many follow-through cases."
+  ]
+}

@@ -1,0 +1,4 @@
+﻿component,status,rationale
+broader_hit_visibility_surface,accepted_as_phase_1_broader_surface,the broader 24-session surface passes the same point-in-time legality checks as the canonical seed surface
+all_session_visibility_expansion,next_allowed_move,"the next lawful expansion is from the broader hit surface to a still-wider minute visibility surface, not to simulation"
+intraday_execution_simulator,still_blocked,passing broader visibility audits still does not satisfy the separate simulator or replay-lane prerequisites

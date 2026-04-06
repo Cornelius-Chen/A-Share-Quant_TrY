@@ -1,0 +1,6 @@
+﻿precondition,precondition_state,supporting_count,blocking_reason
+single_runtime_candidate_isolated,satisfied,1,single html-article runtime candidate has been isolated
+activation_policy_bound,satisfied,1,html-article adapter already has selective-after-license-review activation policy
+retry_policy_bound,satisfied,1,html-article adapter already has retry policy binding
+scheduler_runtime_activation,unsatisfied,1,runtime binding still remains scheduler_stub_not_activated
+scheduler_stub_replacement_lane_materialized,satisfied_foundation_only,1,single html-article scheduler stub replacement lane has been materialized

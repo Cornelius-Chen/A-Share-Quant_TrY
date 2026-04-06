@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kv_a_share_replay_foundation_audit_v1",
+    "shadow_surface_row_count": 17,
+    "shadow_context_ready_count": 0,
+    "intraday_only_watch_count": 9,
+    "blocked_count": 8,
+    "replay_status_csv": "data\\training\\a_share_replay_foundation_status_v1.csv",
+    "authoritative_output": "a_share_replay_foundation_ready_for_direction_triage"
+  },
+  "replay_rows": [
+    {
+      "replay_component": "shadow_surface",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\derived\\info_center\\replay\\shadow\\a_share_shadow_replay_surface_v1.csv",
+      "coverage_note": "shadow_surface_row_count = 17"
+    },
+    {
+      "replay_component": "shadow_lane_registry",
+      "component_state": "materialized_read_only_lane",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_lane_registry_v1.csv",
+      "coverage_note": "shadow_context_ready_count = 0"
+    },
+    {
+      "replay_component": "shadow_replay_backlog",
+      "component_state": "backlog_materialized_not_bound_to_execution",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_replay_backlog_v1.csv",
+      "coverage_note": "blocked_count = 8"
+    }
+  ],
+  "interpretation": [
+    "V1.34KV creates the first read-only shadow replay surface by binding PTI time slices to market coverage status.",
+    "The result is intentionally non-promotive: it is a lawful replay view, not an execution surface, and it preserves market-context gaps instead of faking them away."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "fetch_row_count": 20,
+    "fastlane_row_count": 20,
+    "important_row_count": 2,
+    "authoritative_status": "continue_news_ingest_from_internal_only_fastlane_then_refine_message_grading_in_pipeline"
+  },
+  "triage_rows": [
+    {
+      "component": "source_choice",
+      "direction": "use_cls_telegraph_as_the_single_internal_fastlane_source_to_minimize_duplicate_news_fan-out"
+    },
+    {
+      "component": "pipeline",
+      "direction": "send_news_to_the_trading_program_from_the_fastlane_surface_first_then_iterate_message_grading"
+    },
+    {
+      "component": "retention",
+      "direction": "keep_hot_copy_for_5_days_and_retain_only_promoted_important_rows_beyond_ttl"
+    }
+  ],
+  "interpretation": [
+    "The fastest safe next step is no longer source expansion; it is refining message grading on top of an already-running single-source fast lane.",
+    "This lane is intentionally internal-only so it can feed research/shadow workflows without silently opening execution authority."
+  ]
+}

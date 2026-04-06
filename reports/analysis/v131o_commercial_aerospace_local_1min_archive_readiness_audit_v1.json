@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131o_commercial_aerospace_local_1min_archive_readiness_audit_v1",
+    "manifest_row_count": 4,
+    "ready_count": 4,
+    "missing_zip_count": 0,
+    "symbol_missing_count": 0,
+    "local_1min_fully_ready": true,
+    "readiness_csv": "data\\raw\\intraday_requests\\commercial_aerospace_local_1min_readiness_rows_v1.csv",
+    "authoritative_rule": "once the exact retained override sessions are locally present in 1min archives, intraday modeling no longer depends on external providers for those sessions"
+  },
+  "readiness_rows": [
+    {
+      "failure_id": "20260113_601698",
+      "symbol": "601698",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "month_dir": "data\\raw\\intraday_a_share_1min_monthly\\2026-01",
+      "zip_name": "20260113_1min.zip",
+      "archive_member": "sh601698.csv",
+      "zip_exists": true,
+      "readiness_status": "ready",
+      "minute_row_count": 241,
+      "sample_head": [
+        "时间,代码,名称,开盘价,收盘价,最高价,最低价,成交量,成交额,涨幅,振幅",
+        "2026/01/13 09:30,sh601698,中国卫通,53.87,53.87,53.87,53.87,49063,264302381,0.0,0.0",
+        "2026/01/13 09:31,sh601698,中国卫通,53.87,51.95,53.87,51.9,41060,216880147,-3.56,3.66"
+      ]
+    },
+    {
+      "failure_id": "20260126_300342",
+      "symbol": "300342",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "month_dir": "data\\raw\\intraday_a_share_1min_monthly\\2026-01",
+      "zip_name": "20260126_1min.zip",
+      "archive_member": "sz300342.csv",
+      "zip_exists": true,
+      "readiness_status": "ready",
+      "minute_row_count": 241,
+      "sample_head": [
+        "时间,代码,名称,开盘价,收盘价,最高价,最低价,成交量,成交额,涨幅,振幅",
+        "2026/01/26 09:30,sz300342,天银机电,60.0,60.0,60.0,60.0,12743,76458000,0.0,0.0",
+        "2026/01/26 09:31,sz300342,天银机电,59.99,59.0,60.18,59.0,31601,189252816,-1.67,1.97"
+      ]
+    },
+    {
+      "failure_id": "20260113_000738",
+      "symbol": "000738",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "month_dir": "data\\raw\\intraday_a_share_1min_monthly\\2026-01",
+      "zip_name": "20260113_1min.zip",
+      "archive_member": "sz000738.csv",
+      "zip_exists": true,
+      "readiness_status": "ready",
+      "minute_row_count": 241,
+      "sample_head": [
+        "时间,代码,名称,开盘价,收盘价,最高价,最低价,成交量,成交额,涨幅,振幅",
+        "2026/01/13 09:30,sz000738,航发控制,24.65,24.65,24.65,24.65,7868,19394620,0.0,0.0",
+        "2026/01/13 09:31,sz000738,航发控制,24.65,23.92,24.65,23.9,18573,44986028,-2.96,3.04"
+      ]
+    },
+    {
+      "failure_id": "20260126_300045",
+      "symbol": "300045",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "month_dir": "data\\raw\\intraday_a_share_1min_monthly\\2026-01",
+      "zip_name": "20260126_1min.zip",
+      "archive_member": "sz300045.csv",
+      "zip_exists": true,
+      "readiness_status": "ready",
+      "minute_row_count": 241,
+      "sample_head": [
+        "时间,代码,名称,开盘价,收盘价,最高价,最低价,成交量,成交额,涨幅,振幅",
+        "2026/01/26 09:30,sz300045,华力创通,31.01,31.01,31.01,31.01,11347,35187047,0.0,0.0",
+        "2026/01/26 09:31,sz300045,华力创通,30.93,30.5,30.93,30.43,27259,83789337,-1.64,1.61"
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.31O checks the new local 1-minute monthly archive against the exact commercial-aerospace retained override manifest.",
+    "It is intentionally narrow: the question is not broad intraday completeness, but whether the governance-retained failure sessions are now locally covered end to end."
+  ]
+}

@@ -1,0 +1,8 @@
+﻿blocker_id,blocker_layer,blocker_state,blocking_reason
+execution_authority_gate_closed,governance,active,information center remains research-shadow only
+live_like_opening_gate_closed,governance,active,governance and automation bindings must exist before live_like serving opens
+replay_execution_binding_backlog,replay,active,shadow replay is read-only and not yet linked to lawful execution journals
+replay_cost_model_backlog,replay,active,cost model registry remains deferred until live_like serving is in place
+network_license_review_gate_closed,source_activation,active,selective candidate hosts exist but all require manual license review before activation
+network_runtime_scheduler_gate_closed,source_activation,active,network adapters are policy-bound but not attached to a live scheduler runtime
+live_like_materialized_but_blocked,serving,active,materialized_live_like_view_count = 2

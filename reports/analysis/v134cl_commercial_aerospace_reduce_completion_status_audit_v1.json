@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cl_commercial_aerospace_reduce_completion_status_audit_v1",
+    "governance_stack_ready": true,
+    "sell_side_binding_reference_ready": true,
+    "broad_reduce_tuning_stopped": true,
+    "local_residue_supervision_only": true,
+    "full_execution_binding_still_blocked": true,
+    "remaining_execution_blocker_count": 4,
+    "residue_seed_count": 4,
+    "status_csv": "data\\training\\commercial_aerospace_reduce_completion_status_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_completion_status_ready_for_direction_triage"
+  },
+  "status_rows": [
+    {
+      "component": "governance_stack",
+      "status": "complete_for_research",
+      "detail": "closure_stage_count = 5"
+    },
+    {
+      "component": "sell_side_binding_surface",
+      "status": "first_real_binding_reference_ready",
+      "detail": "authoritative_status = retain_isolated_sell_side_binding_surface_and_audit_horizon_quality_next"
+    },
+    {
+      "component": "sell_side_horizon_quality",
+      "status": "understood_with_caveat",
+      "detail": "authoritative_status = retain_isolated_sell_side_binding_surface_with_horizon_caveat_and_audit_local_binding_attribution_next"
+    },
+    {
+      "component": "broad_reduce_tuning",
+      "status": "stopline_reached",
+      "detail": "authoritative_status = retain_local_rebound_residue_registry_as_supervision_only_and_stop_broad_reduce_tuning"
+    },
+    {
+      "component": "execution_binding",
+      "status": "still_blocked",
+      "detail": "full_reduce_binding_blocker_count = 4"
+    }
+  ],
+  "interpretation": [
+    "V1.34CL answers a narrower question than replay readiness: whether reduce has been sufficiently researched and compressed into a stable mainline.",
+    "The branch is now mature enough to separate research completion from execution closure. Those are no longer the same question."
+  ]
+}

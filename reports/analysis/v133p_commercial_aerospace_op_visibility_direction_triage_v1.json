@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133p_commercial_aerospace_op_visibility_direction_triage_v1",
+    "protocol_phase_count": 3,
+    "visibility_spec_column_count": 12,
+    "authoritative_status": "start_phase_1_visibility_only_and_keep_later_phases_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_op_visibility_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "phase_1_visibility_spec",
+      "status": "approved_for_implementation",
+      "rationale": "the spec now hard-codes first_visible_ts, close-bar activation, and shadow-only boundaries"
+    },
+    {
+      "component": "phase_2_simulation_surface",
+      "status": "blocked_until_phase_1_audit_passes",
+      "rationale": "simulator work is premature until the point-in-time feed can reconstruct canonical seed sessions without leakage"
+    },
+    {
+      "component": "phase_3_replay_lane",
+      "status": "blocked_until_phase_2_exists",
+      "rationale": "replay binding remains downstream and must not be reopened before visibility and simulator infrastructure exist"
+    }
+  ],
+  "interpretation": [
+    "V1.33P converts the visibility specification into an explicit start/stop decision for the intraday build chain.",
+    "Only phase_1_visibility should move now; later phases remain blocked by design."
+  ]
+}

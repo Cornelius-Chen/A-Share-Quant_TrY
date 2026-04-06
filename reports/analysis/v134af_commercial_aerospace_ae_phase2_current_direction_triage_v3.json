@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134af_commercial_aerospace_ae_phase2_current_direction_triage_v3",
+    "authoritative_status": "freeze_phase2_shadow_stack_v3_and_keep_all_session_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_ae_phase2_current_direction_triage_v3.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "current_phase2_wider_reference",
+      "status": "frozen",
+      "detail": "broader_hit_current_plus_reversal_100pct"
+    },
+    {
+      "component": "multi_stage_sell_ladder_refinement",
+      "status": "promoted_inside_current_wider_reference",
+      "detail": "best_reversal_fraction = 1.0 under the same-day shadow objective"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "The sell-ladder refinement does not authorize expansion beyond the current broader-hit boundary."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The sell-ladder refinement remains shadow-only and does not bind into replay."
+    }
+  ],
+  "interpretation": [
+    "V1.34AF converts the multi-stage sell-fraction supervision pass into the current phase-2 direction judgment.",
+    "The branch should treat the new wider reference as current while explicitly remembering that the optimization target is still same-day shadow benefit, not replay readiness."
+  ]
+}

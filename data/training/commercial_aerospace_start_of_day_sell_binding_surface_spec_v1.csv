@@ -1,0 +1,6 @@
+﻿surface_component,status,definition,why_it_exists
+start_of_day_holdings_ledger,must_build,"per symbol, per trade_date quantity carried into the open from the frozen EOD primary",intraday sell binding must know real inventory before any same-day open/add/reduce happens
+eligible_intraday_sell_quantity,must_build,sellable quantity starts equal to start_of_day_holdings_ledger and can only decrease intraday,prevents the sell lane from liquidating same-day opens or same-day adds that were never in opening inventory
+same_day_new_lots_bucket,must_build,same-day open/add quantity is tracked separately and is not eligible for intraday sell binding on that day,keeps intraday sell binding aligned with actual held-over inventory rather than newly-created lots
+sell_consumption_ledger,must_build,each intraday sell event consumes remaining eligible sell quantity in trigger-time order,turns minute shadow sells into quantity-aware state transitions
+end_of_day_residual_bridge,must_build,maps remaining eligible quantity and same-day new lots back into the frozen primary after market close,lets the sell-side lane stay read-only during the day while still reconciling against the primary state boundary

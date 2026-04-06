@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "orchestration_mode": "steady_orchestration",
+    "scheduler_loop_signal_mode": "steady_polling",
+    "runtime_consumer_mode": "passive_polling_only",
+    "sleep_strategy_seconds": "300",
+    "authoritative_status": "continue_serving_orchestration-packet_above_scheduler-and-runtime_layers"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_orchestration_branch",
+      "direction": "keep_the_outer_orchestrator_on_steady supervision when orchestration_mode remains steady_orchestration"
+    },
+    {
+      "component": "tight_orchestration_branch",
+      "direction": "tighten_outer supervision and shorten orchestration cadence when orchestration_mode rotates into tight_orchestration"
+    },
+    {
+      "component": "interrupt_orchestration_branch",
+      "direction": "interrupt_the_outer orchestration loop immediately when orchestration_mode rotates into interrupt_orchestration"
+    }
+  ],
+  "interpretation": [
+    "This is the highest orchestration-facing packet in the internal hot-news stack.",
+    "An external orchestrator can stop here without reading lower scheduler or runtime layers unless it needs detail."
+  ]
+}

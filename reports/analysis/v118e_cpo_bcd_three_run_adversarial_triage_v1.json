@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118e_cpo_bcd_three_run_adversarial_triage_v1",
+    "triage_scope": "V118B_V118C_V118D",
+    "add_vs_entry_branch_status": "retain_candidate_only_for_one_more_non_replay_adversarial_cycle",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "shadow_replay_allowed": false,
+    "mainline_investment_allowed": false,
+    "candidate_only_allowed": true,
+    "authoritative_current_problem": "chronology_instability_in_add_vs_entry_thresholding",
+    "recommended_next_posture": "continue_candidate_only_with_non_replay_adversarial_and_out_of_set_audit"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "one_more_cycle_only_not_mainline",
+      "key_reason": "The branch has real external-pool separation, but threshold behavior flips across time splits and blocks any replay-facing work."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "candidate_only_with_chronology_failure",
+      "key_reason": "The branch solves the right problem on the full add-vs-entry surface, but chronology turns it into an unstable threshold rather than a reliable discriminator."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "keep_alive_but_not_replay_facing",
+      "key_reason": "There is enough signal to keep auditing, but not enough stability to justify replay or shadow replay."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "continue_candidate_only_under_strict_replay_ban",
+      "key_reason": "V118C best_bal_acc=0.775, V118D mean_test_bal_acc=0.466667, V118D min_test_bal_acc=0.4."
+    }
+  ],
+  "interpretation": [
+    "V1.18E is the scheduled three-run adversarial review over the add-vs-strong-entry branch.",
+    "All three reviewers converged that B/C/D found a real problem-specific signal, because the branch separates positive add windows from the full entry surface better than the current cooling-reacceleration control branch separates add from generic non-add contexts.",
+    "They also converged that chronology instability is still too strong. The branch stays alive only as candidate-only and only for one more non-replay cycle."
+  ]
+}

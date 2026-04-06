@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 5,
+    "covered_window_count": 1,
+    "formal_or_industrial_confirmation_count": 3,
+    "emotion_confirmation_count": 2,
+    "gate_hold_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_007",
+      "representative_symbol_count": "5",
+      "formal_or_industrial_confirmation_count": "3",
+      "emotion_confirmation_count": "2",
+      "positive_preheat_sample_state": "policy_preheat_with_real_board_confirmation",
+      "final_training_admission": "positive_sample_ready_but_not_final_training",
+      "strict_supervisor_conclusion": "Window 007 is no longer policy-only. It already shows broad preheat confirmation with both formal/industrial names and emotion-mirror names responding together. Still, it should remain below final training because the cleaner January ignition archetype is handled by window 002."
+    }
+  ],
+  "interpretation": [
+    "Window 007 is now evidence-backed as a policy-preheat window with real board confirmation and early-ignition characteristics.",
+    "It should teach early policy-backed ignition formation rather than replace the cleaner January ignition archetype.",
+    "This keeps 007 useful as a positive preheat sample while still preventing it from overruling window 002."
+  ]
+}

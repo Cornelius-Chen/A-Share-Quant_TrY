@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fl_commercial_aerospace_full_quality_module_portability_audit_v1",
+    "scenario_count": 5,
+    "best_scenario_name": "unlock_high_role_full_archetype_with_burst",
+    "best_scenario_non_seed_to_seed_ratio": 1.5,
+    "best_scenario_seed_kept_count": 2,
+    "best_scenario_non_seed_kept_count": 3,
+    "authoritative_rule": "the strongest local add archetype still does not port cleanly into a broader high-confidence module; it remains a local supervision anchor"
+  },
+  "scenario_rows": [
+    {
+      "scenario_name": "archetype_only",
+      "kept_positive_hit_count": 260,
+      "seed_kept_count": 22,
+      "non_seed_kept_count": 238,
+      "non_seed_to_seed_ratio": 10.81818182,
+      "reading": "the pure full-quality archetype anchor applied directly to the broader positive add surface"
+    },
+    {
+      "scenario_name": "local_confirmation_plus_archetype",
+      "kept_positive_hit_count": 65,
+      "seed_kept_count": 4,
+      "non_seed_kept_count": 61,
+      "non_seed_to_seed_ratio": 15.25,
+      "reading": "the strongest local confirmation chain plus the full-quality archetype anchor"
+    },
+    {
+      "scenario_name": "unlock_high_role_module",
+      "kept_positive_hit_count": 24,
+      "seed_kept_count": 5,
+      "non_seed_kept_count": 19,
+      "non_seed_to_seed_ratio": 3.8,
+      "reading": "the narrow high-confidence permission clue from V1.34EZ"
+    },
+    {
+      "scenario_name": "unlock_high_role_full_archetype",
+      "kept_positive_hit_count": 7,
+      "seed_kept_count": 2,
+      "non_seed_kept_count": 5,
+      "non_seed_to_seed_ratio": 2.5,
+      "reading": "slow-context gating plus the full-quality archetype inside the broader positive surface"
+    },
+    {
+      "scenario_name": "unlock_high_role_full_archetype_with_burst",
+      "kept_positive_hit_count": 5,
+      "seed_kept_count": 2,
+      "non_seed_kept_count": 3,
+      "non_seed_to_seed_ratio": 1.5,
+      "reading": "the strongest portable-looking candidate once the archetype, slow context, and burst moderation are all applied together"
+    }
+  ],
+  "interpretation": [
+    "V1.34FL tests whether the strongest local add archetype can escape the narrow supervision ladder and become a broader high-confidence module.",
+    "The answer is still no: even the best portable-looking scenario remains too noisy relative to the number of retained seed sessions."
+  ]
+}

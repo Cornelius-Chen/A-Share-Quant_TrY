@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132z_commercial_aerospace_yz_intraday_case_panel_triage_v1",
+    "authoritative_status": "retain_intraday_seed_case_panel_as_governance_visual_reference",
+    "seed_case_count": 6,
+    "authoritative_rule": "the commercial-aerospace minute branch should preserve a canonical visual case panel so future lawful intraday work can be anchored to inspectable sessions rather than only abstract rules"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_seed_case_panel",
+      "status": "retain_intraday_seed_case_panel_as_governance_visual_reference",
+      "rationale": "the governance stack is stronger when its minute tiers and escalation rules remain tied to explicit inspectable sessions"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the case panel improves supervision transparency without changing the frozen replay path"
+    }
+  ],
+  "interpretation": [
+    "V1.32Z freezes the intraday seed case panel as the visual reference layer for the commercial-aerospace minute branch.",
+    "The panel is governance infrastructure, not replay promotion."
+  ]
+}

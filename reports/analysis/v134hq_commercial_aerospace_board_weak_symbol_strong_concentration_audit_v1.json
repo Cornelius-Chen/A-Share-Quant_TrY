@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hq_commercial_aerospace_board_weak_symbol_strong_concentration_audit_v1",
+    "analysis_symbol_count": 6,
+    "module_member_count": 3,
+    "outside_member_count": 3,
+    "module_member_symbols": [
+      "002361",
+      "300342",
+      "603601"
+    ],
+    "module_csv": "data\\training\\commercial_aerospace_board_weak_symbol_strong_concentration_v1.csv",
+    "authoritative_output": "commercial_aerospace_board_weak_symbol_strong_concentration_ready_for_direction_triage"
+  },
+  "module_rows": [
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "named_counterexample_family": "locked_board_weak_repair_only",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "avg_turnover_rate_f": 22.9258,
+      "max_turnover_rate_f": 56.1441,
+      "avg_volume_ratio": 1.08411765,
+      "max_volume_ratio": 3.35,
+      "net_mf_amount_total": -127147.68,
+      "learning_reading": "near-high or breakout raw-only recovery with high turnover concentration fits crowding-like shelter rebound rather than board restart",
+      "module_label": "board_weak_symbol_strong_concentration",
+      "module_reading": "symbol_can run near or through prior highs while the board remains non-restarted"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "named_counterexample_family": "lockout_outlier_breakout_then_fade",
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "post_lockout_max_vs_pre_lockout_peak": 0.1,
+      "max_date_zone": "lockout_window",
+      "avg_turnover_rate_f": 17.83263725,
+      "max_turnover_rate_f": 32.6589,
+      "avg_volume_ratio": 0.99686275,
+      "max_volume_ratio": 2.29,
+      "net_mf_amount_total": 75629.04,
+      "learning_reading": "breakout inside lockout still reads as local outlier strength under a closed board, not as legal board unlock",
+      "module_label": "board_weak_symbol_strong_concentration",
+      "module_reading": "symbol_can run near or through prior highs while the board remains non-restarted"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "named_counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "avg_turnover_rate_f": 26.1588098,
+      "max_turnover_rate_f": 62.0638,
+      "avg_volume_ratio": 1.0727451,
+      "max_volume_ratio": 2.9,
+      "net_mf_amount_total": -631363.0,
+      "learning_reading": "near-high or breakout raw-only recovery with high turnover concentration fits crowding-like shelter rebound rather than board restart",
+      "module_label": "board_weak_symbol_strong_concentration",
+      "module_reading": "symbol_can run near or through prior highs while the board remains non-restarted"
+    }
+  ],
+  "contrast_rows": [
+    {
+      "contrast_name": "peak_proximity_vs_other_negative_labels",
+      "module_mean": 0.03741812,
+      "outside_mean": -0.08773485,
+      "mean_gap": 0.12515297,
+      "reading": "module members stay materially closer to prior highs than the rest of the negative-label set"
+    },
+    {
+      "contrast_name": "avg_turnover_vs_other_negative_labels",
+      "module_mean": 22.30574902,
+      "outside_mean": 20.19939608,
+      "mean_gap": 2.10635294,
+      "reading": "module members sustain heavier turnover than the rest of the negative-label set"
+    },
+    {
+      "contrast_name": "max_turnover_vs_other_negative_labels",
+      "module_mean": 50.28893333,
+      "outside_mean": 40.514,
+      "mean_gap": 9.77493333,
+      "reading": "module members produce stronger peak turnover concentration than the rest of the negative-label set"
+    }
+  ],
+  "interpretation": [
+    "V1.34HQ asks whether crowded shelter rebounds and lockout outlier breakouts are really separate families or members of one higher-level board-weak / symbol-strong concentration module.",
+    "The module is intentionally negative: strong symbol-level concentration near prior highs still does not authorize board restart when breadth and board context remain absent."
+  ]
+}

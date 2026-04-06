@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134t_commercial_aerospace_st_phase2_current_direction_triage_v1",
+    "authoritative_status": "freeze_current_phase2_shadow_stack_and_keep_all_session_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_st_phase2_current_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "current_phase2_wider_reference",
+      "status": "frozen",
+      "detail": "broader_hit_mild_blocked"
+    },
+    {
+      "component": "next_optimization_direction",
+      "status": "supervise_before_any_more_widening",
+      "detail": "Use the mild-blocked broader-hit lane as the only wider reference and supervise it before any additional surface growth."
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "The branch is still not authorized to jump to all-session expansion."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Phase-2 shadow progress still does not authorize replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34T converts the updated phase-2 shadow stack into the current direction judgment.",
+    "The branch now has a current narrow reference and a current wider reference; no further widening is justified until the refined wider lane itself is supervised more deeply."
+  ]
+}

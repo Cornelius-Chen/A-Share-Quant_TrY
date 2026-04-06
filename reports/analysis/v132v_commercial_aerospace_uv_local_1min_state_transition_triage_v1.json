@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132v_commercial_aerospace_uv_local_1min_state_transition_triage_v1",
+    "authoritative_status": "retain_local_1min_branch_as_state_transition_aligned_governance",
+    "severe_hits_with_prior_reversal_share": 0.8,
+    "top_transition_pattern": "neutral>mild_override_watch>reversal_watch>severe_override_positive",
+    "authoritative_rule": "the local 1min branch becomes stronger governance when hit sessions exhibit ordered intraday escalation patterns that match the proposed action ladder"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_state_transition_audit",
+      "status": "retain_local_1min_branch_as_state_transition_aligned_governance",
+      "rationale": "ordered intraday escalation strengthens the case that the minute branch is a real governance state machine rather than only a static label screen"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "better state-transition semantics still do not authorize direct replay modification"
+    }
+  ],
+  "interpretation": [
+    "V1.32V converts the intraday state-transition audit into a governance verdict.",
+    "The branch remains governance-first; the question is whether it should now be treated as an actual escalation ladder inside the commercial-aerospace state machine."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122g_cpo_def_1min_family_triage_v1",
+    "burst_fade_trap_status": "dead",
+    "supportive_continuation_family_status": "candidate_family_only",
+    "supportive_continuation_quality_score_status": "explanatory_only",
+    "reviewer_consensus_on_burst_fade_trap": "unanimous_dead",
+    "reviewer_majority_on_quality_score": "explanatory_only",
+    "forbidden_next_step": "any_replay_promotion_or_further_same_family_score_tuning",
+    "recommended_next_posture": "build_stricter_1min_action_timepoint_label_base"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "burst_fade_trap_status": "dead",
+      "supportive_continuation_quality_score_status": "explanatory_only",
+      "recommended_next_step": "stop_1min_family_scoring_and_move_to_action_timepoint_labels"
+    },
+    {
+      "reviewer": "Tesla",
+      "burst_fade_trap_status": "dead",
+      "supportive_continuation_quality_score_status": "dead",
+      "recommended_next_step": "stop_current_1min_discovery_until_data_or_labels_improve"
+    },
+    {
+      "reviewer": "James",
+      "burst_fade_trap_status": "dead",
+      "supportive_continuation_quality_score_status": "explanatory_only",
+      "recommended_next_step": "rebuild_1min_action_timepoint_label_base"
+    }
+  ],
+  "interpretation": [
+    "The burst-fade trap family is dead and should not receive more resources.",
+    "The supportive continuation family itself remains alive, but its first quality-score hardening attempt failed chronology and is downgraded to explanatory only.",
+    "The next step is not more family scoring, but a stricter 1-minute action-timepoint label base."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kg_a_share_event_foundation_audit_v1",
+    "input_registry_row_count": 52,
+    "materialized_source_count": 36,
+    "materialized_document_count": 52,
+    "materialized_event_count": 52,
+    "event_status_csv": "data\\training\\a_share_event_foundation_status_v1.csv",
+    "authoritative_output": "a_share_event_foundation_ready_for_direction_triage"
+  },
+  "event_rows": [
+    {
+      "event_component": "source_master",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\source_master\\a_share_source_master_v1.csv",
+      "coverage_note": "materialized_source_count = 36"
+    },
+    {
+      "event_component": "document_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\document_registry\\a_share_document_registry_v1.csv",
+      "coverage_note": "materialized_document_count = 52"
+    },
+    {
+      "event_component": "claim_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\claim_registry\\a_share_claim_registry_v1.csv",
+      "coverage_note": "materialized_claim_count = 52"
+    },
+    {
+      "event_component": "event_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\event_registry\\a_share_event_registry_v1.csv",
+      "coverage_note": "materialized_event_count = 52"
+    },
+    {
+      "event_component": "evidence_span_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\evidence_span_registry\\a_share_evidence_span_registry_v1.csv",
+      "coverage_note": "materialized_evidence_count = 52"
+    }
+  ],
+  "interpretation": [
+    "V1.34KG completes the first event workstream pass by transforming existing catalyst registries into a minimum source-document-claim-event-evidence chain.",
+    "This is still a bootstrap object model, but it is now a real ingestable event layer rather than scattered board-specific registry files."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hf_commercial_aerospace_shadow_boundary_extension_opening_checklist_v1",
+    "boundary_classification": "lockout_aligned_derivation_boundary",
+    "current_policy": "retain_current_boundary",
+    "future_policy_option": "explicit_boundary_extension_for_shadow_only",
+    "shadow_lane_state": "opened_protocol_only",
+    "bridge_stage_count": 8,
+    "opening_gate_count": 8,
+    "checklist_csv": "data\\training\\commercial_aerospace_shadow_boundary_extension_opening_checklist_v1.csv",
+    "authoritative_output": "commercial_aerospace_shadow_boundary_extension_opening_checklist_ready_for_direction_triage"
+  },
+  "checklist_rows": [
+    {
+      "opening_gate": "explicit_shadow_only_policy_shift",
+      "status": "mandatory",
+      "detail": "Boundary extension may open only through an explicit shadow-only policy shift, never by silent refresh from existing raw coverage."
+    },
+    {
+      "opening_gate": "current_boundary_frozen_by_default",
+      "status": "mandatory",
+      "detail": "The existing lockout-aligned derivation boundary remains authoritative until the shift is explicitly approved."
+    },
+    {
+      "opening_gate": "read_only_shadow_lane_preserved",
+      "status": "mandatory",
+      "detail": "The shadow replay lane must remain read-only and protocol-first during any boundary-extension work."
+    },
+    {
+      "opening_gate": "execution_authority_stays_blocked",
+      "status": "mandatory",
+      "detail": "Boundary extension may not be used to smuggle execution authority into reentry, unlock, or add."
+    },
+    {
+      "opening_gate": "dual_surface_extension_required",
+      "status": "mandatory",
+      "detail": "Daily-state and phase-geometry surfaces must be extended together; one-sided extension is not sufficient."
+    },
+    {
+      "opening_gate": "unlock_quality_debate_deferred",
+      "status": "mandatory",
+      "detail": "Do not debate post-lockout unlock quality until the board surfaces themselves have been explicitly extended."
+    },
+    {
+      "opening_gate": "bridge_handoff_stays_blocked_during_prelaunch",
+      "status": "mandatory",
+      "detail": "Reentry-to-add handoff remains blocked during checklist/prelaunch work and does not reopen just because extension is being considered."
+    },
+    {
+      "opening_gate": "program_status_refresh_required",
+      "status": "mandatory",
+      "detail": "Program and frontier status cards must be refreshed when and only when the policy actually shifts."
+    }
+  ],
+  "interpretation": [
+    "V1.34HF does not open boundary extension; it formalizes how such an extension would have to be opened later if the project chooses to do so.",
+    "The checklist keeps the order clean: policy shift first, synchronized board-surface extension second, unlock judgment only after that."
+  ]
+}

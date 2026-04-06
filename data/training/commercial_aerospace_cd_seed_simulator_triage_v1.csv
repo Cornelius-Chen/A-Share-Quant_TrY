@@ -1,0 +1,5 @@
+﻿component,status,detail
+seed_shadow_simulator,retain_as_phase_2_seed_surface,the first canonical-seed simulator exists and respects next-bar-open execution timing
+same_bar_execution_boundary,accepted,all seed fills occur on trigger_minute + 1 with no same-bar execution exception
+first_hour_horizon_limit,explicitly_bounded,pending_out_of_window_count = 0
+phase_3_replay_lane,still_blocked,seed simulation does not authorize binding into a separate intraday replay lane yet

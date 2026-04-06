@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117p_cpo_breakout_damage_time_split_external_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.375,
+    "min_test_balanced_accuracy": 0.25,
+    "stability_posture": "candidate_unstable_under_time_split",
+    "recommended_next_posture": "audit_breakout_damage_false_positives_with_secondary_reverse_and_heuristic_layers"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 9,
+      "test_row_count": 7,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 1096927000.0,
+      "train_best_balanced_accuracy": 0.65,
+      "test_balanced_accuracy": 0.25,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.5
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 12,
+      "test_row_count": 4,
+      "train_positive_count": 2,
+      "test_positive_count": 3,
+      "train_best_threshold": -1346496002.0,
+      "train_best_balanced_accuracy": 0.55,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 11,
+      "test_row_count": 5,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 1096927000.0,
+      "train_best_balanced_accuracy": 0.535714,
+      "test_balanced_accuracy": 0.375,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.17P does not ask whether the score is strong on the full sample. It asks whether a threshold learned on one time slice survives on another.",
+    "The point is not to prove promotion. The point is to stop a neat candidate from surviving only because it was carved inside one tiny window family.",
+    "Time-split instability here should block any replay-facing ambition, even if the full-sample gap still looks attractive."
+  ]
+}

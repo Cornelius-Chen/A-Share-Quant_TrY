@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "baseline_missing_count": 3,
+    "trial_missing_count": 2,
+    "trial_bound_count": 15,
+    "trial_improvement_count": 1,
+    "candidate_effective_trade_date": "2026-03-27",
+    "status_csv": "data\\training\\a_share_shadow_effective_trade_date_trial_status_v1.csv",
+    "authoritative_output": "a_share_shadow_effective_trade_date_trial_surface_materialized"
+  },
+  "rows": [
+    {
+      "slice_id": "slice_20230922_113526",
+      "decision_trade_date": "2023-09-22",
+      "trial_query_trade_date": "2023-09-22",
+      "baseline_tradeable_context_state": "missing_tradeable_date_context",
+      "trial_tradeable_context_state": "missing_tradeable_date_context"
+    },
+    {
+      "slice_id": "slice_20231208_152916",
+      "decision_trade_date": "2023-12-08",
+      "trial_query_trade_date": "2023-12-08",
+      "baseline_tradeable_context_state": "missing_tradeable_date_context",
+      "trial_tradeable_context_state": "missing_tradeable_date_context"
+    },
+    {
+      "slice_id": "slice_20250319_080736",
+      "decision_trade_date": "2025-03-19",
+      "trial_query_trade_date": "2025-03-19",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20250513_180228",
+      "decision_trade_date": "2025-05-13",
+      "trial_query_trade_date": "2025-05-13",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20250724_164500",
+      "decision_trade_date": "2025-07-24",
+      "trial_query_trade_date": "2025-07-24",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20250819_082110",
+      "decision_trade_date": "2025-08-19",
+      "trial_query_trade_date": "2025-08-19",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20250922_124200",
+      "decision_trade_date": "2025-09-22",
+      "trial_query_trade_date": "2025-09-22",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20251224_174200",
+      "decision_trade_date": "2025-12-24",
+      "trial_query_trade_date": "2025-12-24",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20251226_103958",
+      "decision_trade_date": "2025-12-26",
+      "trial_query_trade_date": "2025-12-26",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260108_180005",
+      "decision_trade_date": "2026-01-08",
+      "trial_query_trade_date": "2026-01-08",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260108_181651",
+      "decision_trade_date": "2026-01-08",
+      "trial_query_trade_date": "2026-01-08",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260108_205200",
+      "decision_trade_date": "2026-01-08",
+      "trial_query_trade_date": "2026-01-08",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260112_115033",
+      "decision_trade_date": "2026-01-12",
+      "trial_query_trade_date": "2026-01-12",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260113_193236",
+      "decision_trade_date": "2026-01-13",
+      "trial_query_trade_date": "2026-01-13",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260121_140547",
+      "decision_trade_date": "2026-01-21",
+      "trial_query_trade_date": "2026-01-21",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260306_020027",
+      "decision_trade_date": "2026-03-06",
+      "trial_query_trade_date": "2026-03-06",
+      "baseline_tradeable_context_state": "date_level_tradeable_context_bound",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound"
+    },
+    {
+      "slice_id": "slice_20260328_194152",
+      "decision_trade_date": "2026-03-28",
+      "trial_query_trade_date": "2026-03-27",
+      "baseline_tradeable_context_state": "missing_tradeable_date_context",
+      "trial_tradeable_context_state": "date_level_tradeable_context_bound_via_effective_trade_date"
+    }
+  ],
+  "interpretation": [
+    "A shadow-only effective-trade-date trial is enough to test the off-calendar slice without mutating PTI timestamps.",
+    "The trial shows whether the candidate auxiliary trade date has real market-context recovery value before any production-facing change is considered."
+  ]
+}

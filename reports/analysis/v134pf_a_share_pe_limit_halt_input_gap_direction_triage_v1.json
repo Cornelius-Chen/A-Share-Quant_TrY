@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "missing_direct_field_count": 9,
+    "semantic_dependency_field_count": 4,
+    "authoritative_status": "limit_halt_derivation_requires_semantic_side_inputs_not_more_price_only_raw"
+  },
+  "triage_rows": [
+    {
+      "component": "price_math",
+      "direction": "treat_price_only_raw_as_sufficient_for_hit_math_but_not_for_complete_limit_halt_semantics"
+    },
+    {
+      "component": "semantic_side_inputs",
+      "direction": "add_board_st_and_suspension_side_inputs_before_attempting_limit_halt_materialization"
+    },
+    {
+      "component": "replay_promotion",
+      "direction": "keep_replay_promotion_blocked_until_semantic_side_inputs_close_the_limit_halt_gap"
+    }
+  ],
+  "interpretation": [
+    "The next replay-side move is not another price-data expansion loop.",
+    "It is a semantic-side-input closure problem: board classification, ST status, and suspension linkage must be supplied before limit-halt derivation can be promoted."
+  ]
+}

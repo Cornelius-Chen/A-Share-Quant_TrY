@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128w_commercial_aerospace_phase_state_machine_audit_v1",
+    "probe_count": 201,
+    "full_pre_count": 45,
+    "full_count": 36,
+    "de_risk_count": 573,
+    "full_pre_start": "20251121",
+    "full_pre_end": "20251223",
+    "full_start": "20251224",
+    "full_end": "20260112",
+    "full_pre_to_full_gap_days": 0,
+    "full_pre_forward_minus_full_forward": -0.00741454,
+    "full_pre_adverse_minus_full_adverse": -0.00013768,
+    "authoritative_rule": "commercial aerospace should be represented as probe / full-pre / full / de-risk rather than probe / full only when preheat full-quality support materially overlaps with later impulse full quality"
+  },
+  "state_rows": [
+    {
+      "state_name": "probe",
+      "row_count": 201,
+      "start_trade_date": "20250922",
+      "end_trade_date": "20260320",
+      "symbol_count": 12,
+      "mean_forward_return_10": 0.20423835,
+      "mean_max_adverse_return_10": -0.0100413,
+      "mean_max_favorable_return_10": 0.27461163
+    },
+    {
+      "state_name": "full_pre",
+      "row_count": 45,
+      "start_trade_date": "20251121",
+      "end_trade_date": "20251223",
+      "symbol_count": 9,
+      "mean_forward_return_10": 0.44949109,
+      "mean_max_adverse_return_10": 0.03936918,
+      "mean_max_favorable_return_10": 0.45833856
+    },
+    {
+      "state_name": "full",
+      "row_count": 36,
+      "start_trade_date": "20251224",
+      "end_trade_date": "20260112",
+      "symbol_count": 11,
+      "mean_forward_return_10": 0.45690563,
+      "mean_max_adverse_return_10": 0.03950686,
+      "mean_max_favorable_return_10": 0.54933299
+    },
+    {
+      "state_name": "de_risk",
+      "row_count": 573,
+      "start_trade_date": "20240223",
+      "end_trade_date": "20260318",
+      "symbol_count": 12,
+      "mean_forward_return_10": -0.09572691,
+      "mean_max_adverse_return_10": -0.13498458,
+      "mean_max_favorable_return_10": 0.00973556
+    }
+  ],
+  "interpretation": [
+    "V1.28W audits whether commercial aerospace already supports a lawful three-step participation ladder instead of only probe/full.",
+    "If preheat-window full-quality rows have similar forward and adverse profiles to later impulse full rows and form a chronology bridge, they should be formalized as full-pre rather than collapsed back into probe."
+  ]
+}

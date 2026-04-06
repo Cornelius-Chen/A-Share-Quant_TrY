@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127r_commercial_aerospace_pressure_relocation_control_audit_v1",
+    "reference_variant": "veto_drag_trio_impulse_only",
+    "reference_final_equity": 1276010.378,
+    "reference_max_drawdown": 0.11536441,
+    "best_variant": "veto_drag_trio_impulse_only",
+    "best_variant_final_equity": 1276010.378,
+    "best_variant_max_drawdown": 0.11536441,
+    "best_cleaner_variant": "veto_drag_trio_impulse_only",
+    "best_cleaner_final_equity": 1276010.378,
+    "best_cleaner_max_drawdown": 0.11536441
+  },
+  "variant_rows": [
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "final_equity": 1276010.378,
+      "max_drawdown": 0.11536441,
+      "executed_order_count": 241
+    },
+    {
+      "variant": "veto_drag_trio_impulse_plus_preheat_000738",
+      "final_equity": 1252938.5798,
+      "max_drawdown": 0.12745634,
+      "executed_order_count": 232
+    },
+    {
+      "variant": "veto_drag_trio_impulse_plus_preheat_002085",
+      "final_equity": 1242464.3373,
+      "max_drawdown": 0.14186325,
+      "executed_order_count": 232
+    },
+    {
+      "variant": "veto_drag_trio_impulse_plus_preheat_000738_002085",
+      "final_equity": 1243984.9304,
+      "max_drawdown": 0.13324144,
+      "executed_order_count": 215
+    },
+    {
+      "variant": "veto_drag_trio_impulse_plus_preheat_000738_002085_and_601698_impulse",
+      "final_equity": 1265436.5218,
+      "max_drawdown": 0.12890666,
+      "executed_order_count": 205
+    }
+  ],
+  "interpretation": [
+    "V1.27R tests whether the new-primary pressure relocation can be reduced by restraining 000738/002085 preheat entries and 601698 impulse entries.",
+    "This is a narrow attribution-driven control audit, not a new family search."
+  ]
+}

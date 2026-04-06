@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "active_local_ingest_count": 7,
+    "historical_url_catalog_count": 22,
+    "locally_activatable_job_count": 3,
+    "authoritative_status": "source_activation_complete_enough_to_freeze_as_local_real_ingest_base"
+  },
+  "triage_rows": [
+    {
+      "component": "local_file_feeds",
+      "direction": "freeze_as_current_real_ingest_base"
+    },
+    {
+      "component": "url_catalog_sources",
+      "direction": "retain_as_catalogued_sources_pending_live_fetch_adapters"
+    },
+    {
+      "component": "placeholder_sources",
+      "direction": "retain_for_future_locator_binding_or retirement"
+    },
+    {
+      "component": "next_frontier",
+      "direction": "shift_later_into_selective_live_fetch_adapter_activation_and real_scheduler_binding"
+    }
+  ],
+  "interpretation": [
+    "Source activation is now real where the repo already owns files, and honest where it does not.",
+    "Future progress should add live fetch adapters selectively rather than pretending the historical URL catalog is already a stable real-time intake layer."
+  ]
+}

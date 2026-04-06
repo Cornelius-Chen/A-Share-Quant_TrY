@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123f_cpo_1min_downside_same_plane_stopline_v1",
+    "best_variant_name": "orthogonal_heavy_blend_score",
+    "material_increment_over_downside_failure": false,
+    "same_plane_attachment_allowed": false,
+    "recommended_next_posture": "freeze_both_1min_downside_branches_as_separate_soft_components"
+  },
+  "interpretation": [
+    "V1.23F converts the same-plane integration audit into a simple attachment decision.",
+    "If there is no material non-replay increment over downside_failure, same-plane attachment is blocked even if one blend looks best locally."
+  ]
+}

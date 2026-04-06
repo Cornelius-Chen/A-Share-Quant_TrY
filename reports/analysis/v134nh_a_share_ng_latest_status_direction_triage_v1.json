@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "foundation_complete_count": 13,
+    "workstream_count": 13,
+    "authoritative_status": "information_center_in_blocker_closure_mode_not_framework_build_mode"
+  },
+  "triage_rows": [
+    {
+      "component": "framework_core",
+      "direction": "freeze_current_framework_and_stop_reopening_scaffold_level_work"
+    },
+    {
+      "component": "source_activation",
+      "direction": "treat_allowlist_and_runtime_queues_as_next_real_work_not_more_source_design"
+    },
+    {
+      "component": "replay_daily_market",
+      "direction": "retain_daily_market_candidate_surface_but_keep_promotion_closed"
+    },
+    {
+      "component": "paired_surfaces",
+      "direction": "treat_index_daily_gap_as_primary_blocker_and_keep_limit_halt_only_candidate_ready"
+    },
+    {
+      "component": "index_daily_source_horizon",
+      "direction": "freeze_negative_result_and_wait_for_new_raw_index_source_before_extension_research"
+    },
+    {
+      "component": "live_like_execution",
+      "direction": "keep_live_like_and_execution_closed_until_named_source_and_replay_blockers_are_cleared"
+    }
+  ],
+  "interpretation": [
+    "The project should now be steered as blocker closure, not as open-ended information-center construction.",
+    "Daily-market and limit-halt progress should not be mistaken for replay readiness while index-daily remains a true source-horizon gap."
+  ]
+}

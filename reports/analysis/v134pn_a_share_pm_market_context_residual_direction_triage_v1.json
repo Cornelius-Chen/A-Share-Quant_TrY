@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "missing_residual_count": 3,
+    "pre_coverage_count": 2,
+    "off_calendar_count": 1,
+    "authoritative_status": "replay_market_context_gap_reduced_to_boundary_and_calendar_residuals"
+  },
+  "triage_rows": [
+    {
+      "component": "pre_coverage_residuals",
+      "direction": "treat_pre_2024_shadow_slices_as_boundary_residuals_not_as_current_market-surface failures"
+    },
+    {
+      "component": "off_calendar_residuals",
+      "direction": "treat_off_calendar_shadow_slices_as_shadow-input anomalies_not_as_tradeable-context failures"
+    },
+    {
+      "component": "replay_internal_build",
+      "direction": "recheck_stub_and_live_like preconditions_under_the_narrowed_residual framing"
+    }
+  ],
+  "interpretation": [
+    "The market-context gap has narrowed from a broad replay blocker to a small set of classified residuals.",
+    "That supports moving the next replay narrative from coverage expansion toward boundary handling and precondition recheck."
+  ]
+}

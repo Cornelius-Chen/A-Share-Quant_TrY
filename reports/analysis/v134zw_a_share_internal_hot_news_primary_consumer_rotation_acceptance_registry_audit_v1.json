@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_row_count": 1,
+    "acceptance_state": "accepted",
+    "accepted_top_opportunity_theme": "defense_industry",
+    "accepted_top_watch_symbol": "600760",
+    "authoritative_output": "a_share_internal_hot_news_primary_consumer_rotation_acceptance_registry_materialized"
+  },
+  "rows": [
+    {
+      "component": "rotation_acceptance",
+      "component_state": "materialized",
+      "metric": "acceptance_state",
+      "value": "accepted"
+    },
+    {
+      "component": "rotation_acceptance",
+      "component_state": "materialized",
+      "metric": "accepted_top_opportunity_theme",
+      "value": "defense_industry"
+    },
+    {
+      "component": "rotation_acceptance",
+      "component_state": "materialized",
+      "metric": "accepted_top_watch_symbol",
+      "value": "600760"
+    }
+  ],
+  "interpretation": [
+    "This registry is the explicit manual acceptance record for the primary consumer rotation.",
+    "Downstream primary snapshot and control consumers should only rotate after this registry exists in accepted state."
+  ]
+}

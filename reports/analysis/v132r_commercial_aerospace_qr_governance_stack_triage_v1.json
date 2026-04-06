@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132r_commercial_aerospace_qr_governance_stack_triage_v1",
+    "authoritative_status": "freeze_commercial_aerospace_governance_stack_v2_with_intraday_layers_and_keep_lawful_eod_primary_unchanged",
+    "governance_layer_count": 10,
+    "current_primary_variant": "tail_weakdrift_full",
+    "authoritative_rule": "a stronger intraday supervision branch should widen the governance stack before it is ever allowed to alter the lawful EOD replay"
+  },
+  "triage_rows": [
+    {
+      "component": "commercial_aerospace_governance_stack_v2",
+      "status": "freeze_commercial_aerospace_governance_stack_v2_with_intraday_layers",
+      "rationale": "the local minute branch has now earned explicit governance slots through registry, label, and shadow-benefit evidence"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the intraday branch remains governance-first and must not directly rewrite the frozen lawful replay path yet"
+    }
+  ],
+  "interpretation": [
+    "V1.32R freezes the refreshed governance stack after the local minute branch earned stronger bounded-supervision status.",
+    "The decision is organizational, not promotional: the governance stack expands, while the lawful EOD primary stays intact."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134gr_commercial_aerospace_reentry_unlock_shadow_bridge_spec_v1",
+    "bridge_stage_count": 8,
+    "reentry_seed_count": 3,
+    "same_day_block_seed_count": 3,
+    "lockout_seed_count": 1,
+    "unlock_positive_day_count": 8,
+    "unlock_worthy_count": 8,
+    "bridge_csv": "data\\training\\commercial_aerospace_reentry_unlock_shadow_bridge_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_reentry_unlock_shadow_bridge_spec_ready_for_direction_triage"
+  },
+  "bridge_rows": [
+    {
+      "bridge_stage": "sell_exit_source",
+      "status": "frozen_reduce_reference",
+      "detail": "The bridge begins from frozen reduce outputs and cannot mutate reduce mainline history."
+    },
+    {
+      "bridge_stage": "board_lockout_gate",
+      "status": "required",
+      "detail": "Use board_cooling_lockout as upper veto. Current seed count: 1."
+    },
+    {
+      "bridge_stage": "board_unlock_gate",
+      "status": "required",
+      "detail": "Only unlock-worthy board states may reopen add-side permission. Positive sample count: 8."
+    },
+    {
+      "bridge_stage": "expectancy_gate",
+      "status": "required",
+      "detail": "Board state must not remain false_bounce_only or lockout_worthy. Unlock-worthy count: 8."
+    },
+    {
+      "bridge_stage": "same_day_reentry",
+      "status": "blocked",
+      "detail": "All current reentry seeds block same-day chase. Blocked seeds: 3."
+    },
+    {
+      "bridge_stage": "rebuild_watch_entry",
+      "status": "seed_supervision_ready",
+      "detail": "Deep-washout family opens rebuild watch at T+5+; delayed-rebound family opens rebuild watch at T+3+."
+    },
+    {
+      "bridge_stage": "confirmation_shape",
+      "status": "seed_supervision_ready",
+      "detail": "Persistent recovery seeds: 2; late-only recovery seeds: 1."
+    },
+    {
+      "bridge_stage": "handoff_to_add",
+      "status": "read_only_permission_bridge",
+      "detail": "Only after board unlock plus reentry confirmation may the shadow lane consult frozen add supervision states."
+    }
+  ],
+  "interpretation": [
+    "V1.34GR specifies the first module of the new shadow replay lane: how frozen reduce hands off into board lockout, board unlock, seed-level reentry timing, later confirmation, and only then into frozen add supervision.",
+    "The bridge is intentionally read-only. Its job is to define lawful sequencing, not to smuggle execution authority into either side."
+  ]
+}

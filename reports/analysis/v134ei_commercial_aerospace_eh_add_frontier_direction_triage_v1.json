@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v134ei_commercial_aerospace_eh_add_frontier_direction_triage_v1",
+    "authoritative_status": "open_intraday_add_as_supervision_frontier_and_start_registry_bootstrap",
+    "frontier_state": "opened_supervision_only",
+    "first_build_step": "intraday_add_supervision_registry_v1",
+    "authoritative_rule": "the correct first move after explicit frontier shift is to build seed supervision, not execution authority"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_add_frontier",
+      "status": "opened_as_supervision_only",
+      "rationale": "the branch is now active, but only at the supervision layer"
+    },
+    {
+      "component": "first_artifact",
+      "status": "intraday_add_supervision_registry_v1",
+      "rationale": "registry bootstrap is the narrowest artifact that creates canonical add cases without leaking execution authority"
+    },
+    {
+      "component": "reduce_branch",
+      "status": "keep_frozen",
+      "rationale": "reduce remains complete enough and must not reopen during add startup"
+    }
+  ],
+  "interpretation": [
+    "V1.34EI converts the explicit frontier shift into a practical direction judgment.",
+    "The add branch is now active, but its first job is to build a supervision registry rather than pretend it already owns execution."
+  ]
+}

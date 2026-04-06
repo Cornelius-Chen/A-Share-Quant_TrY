@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bo_commercial_aerospace_reduce_closure_governance_spec_v1",
+    "closure_stage_count": 5,
+    "phase2_shadow_reference": "broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral",
+    "expectancy_seed_count": 19,
+    "hierarchy_level_count": 4,
+    "reentry_seed_count": 3,
+    "closure_csv": "data\\training\\commercial_aerospace_reduce_closure_governance_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_closure_governance_spec_ready_for_direction_triage"
+  },
+  "closure_rows": [
+    {
+      "stage_order": 1,
+      "stage_name": "intraday_sell_ladder",
+      "state_driver": "mild / reversal / severe shadow supervision",
+      "current_status": "phase2_shadow_reference_ready",
+      "current_reference": "broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral",
+      "governance_role": "detect and execute defensive sell-side shadow actions on same-day path",
+      "blocking_reason": "not replay-facing"
+    },
+    {
+      "stage_order": 2,
+      "stage_name": "board_expectancy_gate",
+      "state_driver": "lockout_worthy / false_bounce_only / unlock_worthy",
+      "current_status": "supervision_ready",
+      "current_reference": "v134bm_board_expectancy_supervision",
+      "governance_role": "decide whether the board is worth touching at all on forward expectancy and reward-risk",
+      "blocking_reason": "governance-only, no execution binding"
+    },
+    {
+      "stage_order": 3,
+      "stage_name": "board_lockout_unlock_hierarchy",
+      "state_driver": "board_cooling_lockout > local_only_rebound_guard > board_revival_unlock",
+      "current_status": "hierarchy_ready",
+      "current_reference": "v134bi_hierarchy_governance_spec",
+      "governance_role": "keep board-first precedence so local strength cannot override board weakness",
+      "blocking_reason": "board unlock still governance-only"
+    },
+    {
+      "stage_order": 4,
+      "stage_name": "seed_reentry_ladder",
+      "state_driver": "block -> observe -> rebuild watch -> later confirmation",
+      "current_status": "seed_supervision_ready",
+      "current_reference": "3 seed cases",
+      "governance_role": "govern post-exit rebuild timing only after board-level vetoes no longer dominate",
+      "blocking_reason": "no reentry simulator or replay lane"
+    },
+    {
+      "stage_order": 5,
+      "stage_name": "execution_binding",
+      "state_driver": "unified reduce closure binding",
+      "current_status": "still_blocked",
+      "current_reference": "not available",
+      "governance_role": "would bind sell-side, board gate, and reentry into one replay-facing lane",
+      "blocking_reason": "intraday replay lane and reentry execution lane do not exist"
+    }
+  ],
+  "interpretation": [
+    "V1.34BO compresses the current branch into a single reduce closure stack: sell ladder first, board expectancy second, board hierarchy third, reentry ladder fourth, execution binding last.",
+    "The point is not to pretend the branch is closed. The point is to show exactly where closure exists as governance and exactly where it still fails as execution."
+  ]
+}

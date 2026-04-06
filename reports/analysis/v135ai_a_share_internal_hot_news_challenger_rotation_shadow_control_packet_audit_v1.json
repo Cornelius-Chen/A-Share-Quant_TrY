@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "current_top_opportunity_theme": "oil_gas",
+    "shadow_top_opportunity_theme": "defense_industry",
+    "current_top_watch_symbol": "601857",
+    "shadow_top_watch_symbol": "600760",
+    "shadow_rotation_state": "challenger_would_rotate_primary_focus",
+    "authoritative_output": "a_share_internal_hot_news_challenger_rotation_shadow_control_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "challenger_rotation_shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "current_top_opportunity_theme",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_rotation_shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "shadow_top_opportunity_theme",
+      "value": "defense_industry"
+    },
+    {
+      "component": "challenger_rotation_shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "current_top_watch_symbol",
+      "value": "601857"
+    },
+    {
+      "component": "challenger_rotation_shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "shadow_top_watch_symbol",
+      "value": "600760"
+    }
+  ],
+  "interpretation": [
+    "This control packet shows how the top-level consumer control view would look if the challenger focus were accepted.",
+    "It remains a shadow-only preview and does not promote the challenger into the primary chain."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133d_commercial_aerospace_intraday_execution_status_card_v1",
+    "intraday_execution_status": "blocked",
+    "blocked_component_count": 3,
+    "status_card_csv": "data\\training\\commercial_aerospace_intraday_execution_status_card_v1.csv",
+    "authoritative_rule": "commercial aerospace should not reopen local intraday execution work until the explicit unblock protocol changes state"
+  },
+  "status_rows": [
+    {
+      "component": "point_in_time_intraday_visibility",
+      "status": "blocked",
+      "why": "governance_only_minute_labels_and_day-level event framing exist, but no point-in-time intraday visibility chain exists",
+      "next": "a lawful intraday feature surface exists where minute-state and event-state are both timestamp-visible before action time"
+    },
+    {
+      "component": "intraday_execution_simulation_surface",
+      "status": "blocked",
+      "why": "no intraday fill model or minute-level action simulator is attached to the governance package",
+      "next": "a reproducible minute-level execution simulator exists with explicit fill timing, slippage, and cost assumptions"
+    },
+    {
+      "component": "replay_binding_surface",
+      "status": "blocked",
+      "why": "the lawful EOD replay remains authoritative and isolated from the minute governance branch",
+      "next": "a separate lawful intraday replay lane exists so the minute branch can be tested without contaminating the frozen EOD primary"
+    },
+    {
+      "component": "commercial_aerospace_minute_package",
+      "status": "ready",
+      "why": "commercial_aerospace_intraday_governance_package_frozen_for_transfer_or_future_lawful_intraday_design",
+      "next": "already satisfied as the supervision/governance input for future intraday work"
+    }
+  ],
+  "interpretation": [
+    "V1.33D packages the intraday-execution blockers into a compact status card.",
+    "The goal is to prevent ambiguous continuation work once the minute governance package has already been completed."
+  ]
+}

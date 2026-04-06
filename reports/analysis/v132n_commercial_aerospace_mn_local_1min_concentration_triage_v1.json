@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132n_commercial_aerospace_mn_local_1min_concentration_triage_v1",
+    "authoritative_status": "retain_local_1min_rules_as_window_aligned_bounded_governed_supervision",
+    "expanded_hit_count": 24,
+    "main_window_hit_share": 0.58333333,
+    "top_regime_semantic": "risk_off_deterioration",
+    "authoritative_rule": "the local 1min branch gains credibility when its broader hit surface is temporally aligned with the board's main risk windows and downside-oriented structure regimes"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_rule_candidates",
+      "status": "retain_local_1min_rules_as_window_aligned_bounded_governed_supervision",
+      "rationale": "temporal concentration in the board's main drawdown window and risk-oriented regimes strengthens the case that the minute rules express real downside semantics rather than generic weakness"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "even aligned minute governance remains outside direct replay execution"
+    }
+  ],
+  "interpretation": [
+    "V1.32N converts the temporal concentration audit into a governance verdict.",
+    "The minute branch is stronger when the broader hit surface clusters around known risk windows and risk-oriented regimes rather than spreading uniformly over time."
+  ]
+}

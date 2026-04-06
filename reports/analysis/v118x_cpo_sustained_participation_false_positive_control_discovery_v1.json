@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118x_cpo_sustained_participation_false_positive_control_discovery_v1",
+    "candidate_name": "sustained_participation_non_chase_prior_heat_late_fade_control_candidate",
+    "row_count": 16,
+    "positive_row_count": 5,
+    "negative_row_count": 11,
+    "base_gap_positive_minus_negative": 657817018.181818,
+    "controlled_gap_positive_minus_negative": 656913581.818182,
+    "penalty_gap_negative_minus_positive": -903436.363636,
+    "control_helpful": false,
+    "recommended_next_posture": "externally_audit_controlled_score_once_then_drop_if_no_material_gain"
+  },
+  "control_rows": [
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "base_score": 1567386000.0,
+      "control_penalty": 38264000.0,
+      "controlled_score": 1529122000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "base_score": 1308551000.0,
+      "control_penalty": 26846000.0,
+      "controlled_score": 1281705000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "base_score": 1003343000.0,
+      "control_penalty": 19509000.0,
+      "controlled_score": 983834000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "base_score": 787409000.0,
+      "control_penalty": 27745000.0,
+      "controlled_score": 759664000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "base_score": 592782000.0,
+      "control_penalty": 0.0,
+      "controlled_score": 592782000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "base_score": 1760701000.0,
+      "control_penalty": 31268000.0,
+      "controlled_score": 1729433000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "base_score": 1632908000.0,
+      "control_penalty": 92239000.0,
+      "controlled_score": 1540669000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "base_score": 1289825000.0,
+      "control_penalty": 28494000.0,
+      "controlled_score": 1261331000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "base_score": 1232661000.0,
+      "control_penalty": 31232000.0,
+      "controlled_score": 1201429000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "base_score": 828084000.0,
+      "control_penalty": 0.0,
+      "controlled_score": 828084000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "base_score": 641231000.0,
+      "control_penalty": 0.0,
+      "controlled_score": 641231000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "base_score": -415570000.0,
+      "control_penalty": 7914000.0,
+      "controlled_score": -423484000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "base_score": -478360000.0,
+      "control_penalty": 20252000.0,
+      "controlled_score": -498612000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "base_score": -481020000.0,
+      "control_penalty": 25864000.0,
+      "controlled_score": -506884000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "base_score": -659010000.0,
+      "control_penalty": 0.0,
+      "controlled_score": -659010000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "base_score": -1016601000.0,
+      "control_penalty": 0.0,
+      "controlled_score": -1016601000.0
+    }
+  ],
+  "interpretation": [
+    "V1.18X tries one narrow hardening idea for the sustained-participation branch: penalize rows that still carry obvious prior heat, late fade, and tail-volume overheat.",
+    "The intent is not to invent a new branch, only to check whether a simple visible-only control can shave the head off the top false positives.",
+    "If the controlled score does not improve broader add-pool separation, this same-family control idea should be dropped immediately."
+  ]
+}

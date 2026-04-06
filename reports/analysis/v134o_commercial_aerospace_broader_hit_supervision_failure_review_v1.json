@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134o_commercial_aerospace_broader_hit_supervision_failure_review_v1",
+    "negative_session_count": 5,
+    "worst_negative_same_day_loss_avoided": -3652.7364,
+    "mild_tier_same_day_loss_avoided_total": -5409.5064,
+    "recommended_boundary_change": "block_execution_for_predicted_mild_sessions_inside_broader_hit_lane",
+    "failure_csv": "data\\training\\commercial_aerospace_broader_hit_supervision_failure_review_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_hit_supervision_failure_review_ready_for_direction_triage"
+  },
+  "failure_rows": [
+    {
+      "trade_date": "20260401",
+      "symbol": "300342",
+      "predicted_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "first_reversal_minute": "61",
+      "first_severe_minute": "",
+      "baseline_hold_pnl": 2109.0,
+      "simulated_pnl": -1543.7364,
+      "same_day_loss_avoided": -3652.7364
+    },
+    {
+      "trade_date": "20251118",
+      "symbol": "688523",
+      "predicted_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "first_reversal_minute": "43",
+      "first_severe_minute": "",
+      "baseline_hold_pnl": -2450.0,
+      "simulated_pnl": -3720.784,
+      "same_day_loss_avoided": -1270.784
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "688523",
+      "predicted_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "first_reversal_minute": "26",
+      "first_severe_minute": "",
+      "baseline_hold_pnl": -3930.0,
+      "simulated_pnl": -4519.75,
+      "same_day_loss_avoided": -589.75
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "filled_step_count": 2,
+      "first_reversal_minute": "32",
+      "first_severe_minute": "185",
+      "baseline_hold_pnl": -6090.0,
+      "simulated_pnl": -6583.944,
+      "same_day_loss_avoided": -493.944
+    },
+    {
+      "trade_date": "20251217",
+      "symbol": "688066",
+      "predicted_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "first_reversal_minute": "36",
+      "first_severe_minute": "",
+      "baseline_hold_pnl": -4320.0,
+      "simulated_pnl": -4783.2444,
+      "same_day_loss_avoided": -463.2444
+    }
+  ],
+  "recommendation_rows": [
+    {
+      "optimization_area": "mild_predicted_session_execution",
+      "status": "tighten",
+      "detail": "Predicted mild sessions account for the broadening drag; keep them governance-only even if a later reversal minute appears."
+    },
+    {
+      "optimization_area": "reversal_first_broader_lane",
+      "status": "retain",
+      "detail": "Predicted reversal sessions remain the most credible broader-hit widening slice and should stay as the first executable wider lane."
+    },
+    {
+      "optimization_area": "severe_predicted_session_lane",
+      "status": "retain",
+      "detail": "Predicted severe sessions remain net-positive and should stay as a terminal emergency component in the broader-hit lane."
+    }
+  ],
+  "interpretation": [
+    "V1.34O reviews the first broader-hit widening as a supervision object rather than as a trading result.",
+    "The main failure pattern is that predicted mild sessions can still drag the wider lane when later reversal triggers are allowed to execute on them."
+  ]
+}

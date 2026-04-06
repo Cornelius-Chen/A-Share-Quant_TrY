@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gc_commercial_aerospace_gb_dual_slot_allocation_direction_triage_v1",
+    "authoritative_status": "retain_dual_slot_allocation_as_local_supervision_and_keep_add_execution_blocked",
+    "dual_slot_day_count": 1,
+    "reset_to_continuation_weight_ratio": 2.04828842,
+    "authoritative_rule": "the add frontier can now keep a local primary-reset plus secondary-continuation allocation archetype, while execution allocation remains blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "reset_slot_primary_allocation",
+      "status": "retain_as_local_archetype",
+      "rationale": "the current dual-slot day allocates more weight to the clean-reset slot than to the continuation slot"
+    },
+    {
+      "component": "continuation_slot_secondary_allocation",
+      "status": "retain_as_local_archetype",
+      "rationale": "the continuation slot behaves like an incremental participation layer rather than the primary slot"
+    },
+    {
+      "component": "execution_allocation_rule",
+      "status": "still_blocked",
+      "rationale": "one local day is enough to encode a supervision archetype, not enough to promote an execution allocation rule"
+    }
+  ],
+  "interpretation": [
+    "V1.34GC turns the first dual-slot allocation audit into a bounded governance verdict.",
+    "The add frontier now has a local allocation archetype for risk-sharing, but that archetype remains supervision-only until it survives a wider and more diverse surface."
+  ]
+}

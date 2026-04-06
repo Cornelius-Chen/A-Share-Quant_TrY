@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132q_commercial_aerospace_governance_stack_refresh_v2",
+    "governance_layer_count": 10,
+    "current_primary_variant": "tail_weakdrift_full",
+    "authoritative_output": "commercial_aerospace_governance_stack_v2_frozen_with_local_minute_branch"
+  },
+  "governance_rows": [
+    {
+      "layer": "timechain_transparency",
+      "status": "retained_governance",
+      "rule": "all commercial-aerospace replay audits should show signal_date, execution_date, and pre_open_event_status together",
+      "source_status": "retain_time_chain_triplet_and_preopen_veto_as_governance_layers_without_claiming_economic_improvement_yet"
+    },
+    {
+      "layer": "pre_open_decisive_event_veto",
+      "status": "retained_governance",
+      "rule": "decisive adverse events are checked in the pre-open window, but they do not alter replay economics until a lawful trigger population exists",
+      "source_status": "retain_time_chain_triplet_and_preopen_veto_as_governance_layers_without_claiming_economic_improvement_yet"
+    },
+    {
+      "layer": "failure_library",
+      "status": "retained_supervision",
+      "rule": "lawful-but-suspicious trades should be preserved as failure cases even when they cannot yet translate into replay-facing actions",
+      "source_status": "use retained cases as supervision objects for future intraday collapse override grammar without contaminating current EOD lawful replay"
+    },
+    {
+      "layer": "intraday_collapse_override",
+      "status": "supervision_only",
+      "rule": "intraday collapse override remains a retained supervision object and must not be mixed into current EOD lawful replay",
+      "source_status": "retain_supervision_only_not_replay_facing"
+    },
+    {
+      "layer": "phase_state_machine",
+      "status": "authoritative_supervision_surface",
+      "rule": "commercial aerospace must be represented as probe / full_pre / full / de_risk rather than a binary probe/full ladder",
+      "source_status": "retain_probe_full_pre_full_de_risk_state_machine_for_translation"
+    },
+    {
+      "layer": "phase_specific_walk_forward",
+      "status": "partial_support_only",
+      "rule": "full_pre may continue as phase-specific walk-forward supervision; full remains phase-contextual until thicker lawful support exists",
+      "source_status": "move_to_phase_specific_walk_forward_for_full_pre_only_and_keep_full_phase_contextual"
+    },
+    {
+      "layer": "late_preheat_mismatch_governance",
+      "status": "retained_governance_rule",
+      "rule": "late-preheat full entries that do not align with the full_pre supervision state must be tracked as governance failures before any replay-side expansion",
+      "source_status": "retain_governance_rule_and_failure_cases"
+    },
+    {
+      "layer": "intraday_supervision_registry",
+      "status": "freeze_commercial_aerospace_intraday_supervision_registry_and_shift_next_to_minute_tiered_label_specification",
+      "rule": "retain severe / reversal / mild minute seeds as the canonical intraday supervision source",
+      "source_status": "freeze_commercial_aerospace_intraday_supervision_registry_and_shift_next_to_minute_tiered_label_specification"
+    },
+    {
+      "layer": "minute_tiered_label_specification",
+      "status": "freeze_minute_tiered_label_specification_and_shift_next_to_local_1min_seed_window_extraction",
+      "rule": "commercial-aerospace minute supervision must preserve the severe / reversal / mild tier order before any broader expansion is attempted",
+      "source_status": "freeze_minute_tiered_label_specification_and_shift_next_to_local_1min_seed_window_extraction"
+    },
+    {
+      "layer": "local_1min_shadow_benefit_governance",
+      "status": "retain_local_1min_rules_as_shadow_benefit_aligned_window_governance",
+      "rule": "local 1-minute rules gain stronger governance status when a narrow flagged slice of buy executions captures disproportionate later downside notional without touching clean controls",
+      "source_status": "retain_local_1min_rules_as_shadow_benefit_aligned_window_governance"
+    }
+  ],
+  "interpretation": [
+    "V1.32Q refreshes the commercial-aerospace governance stack after the local minute branch survived bounded expansion and shadow-benefit auditing.",
+    "The output is still governance-first: the lawful EOD primary remains unchanged, but the intraday supervision layers now have explicit authoritative slots in the stack."
+  ]
+}

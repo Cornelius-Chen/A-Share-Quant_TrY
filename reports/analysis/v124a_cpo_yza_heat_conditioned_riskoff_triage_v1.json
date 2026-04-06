@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124a_cpo_yza_heat_conditioned_riskoff_triage_v1",
+    "related_runs": [
+      "V123Y",
+      "V123Z",
+      "V124A"
+    ],
+    "authoritative_status": "shadow_only_not_promotable",
+    "majority_vote": {
+      "shadow_only_not_promotable": 3
+    },
+    "heat_replay_facing_allowed": true,
+    "heat_conditioned_riskoff_replay_facing_allowed": false,
+    "recommended_next_posture": "keep_balanced_heat_reference_as_only_replay_facing_control_and_archive_narrow_riskoff_as_shadow_defensive_variant"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "verdict": "shadow_only_not_promotable",
+      "reason": "narrow_line_is_no_longer_catastrophically_over_defensive_but_still_loses_main_objective_to_balanced_heat_reference",
+      "recommended_next_step": "retain_only_as_shadow_comparison_and_stop_execution_promotion_attempts"
+    },
+    {
+      "reviewer": "Tesla",
+      "verdict": "shadow_only_not_promotable",
+      "reason": "drawdown_improves_materially_but_return_drop_is_still_too_large_for_candidate_execution_path",
+      "recommended_next_step": "keep_as_defensive_shadow_variant_without_attaching_to_live_execution_stack"
+    },
+    {
+      "reviewer": "James",
+      "verdict": "shadow_only_not_promotable",
+      "reason": "narrow_execution_line_is_observable_and_useful_but_still_not_good_enough_to_replace_or_join_heat_primary_execution",
+      "recommended_next_step": "freeze_as_shadow_only_and_move_on_from_this_family"
+    }
+  ],
+  "interpretation": [
+    "V1.24A freezes the narrow heat-conditioned risk-off verdict after one execution retry cycle.",
+    "The retry succeeded in proving that broad risk-off was not the only possible shape, because conditional risk-off no longer collapses the curve to baseline-like returns.",
+    "But it still cannot beat the balanced heat reference on the main tradeoff, so it must stop at shadow-only and not consume more execution-promotion budget."
+  ]
+}

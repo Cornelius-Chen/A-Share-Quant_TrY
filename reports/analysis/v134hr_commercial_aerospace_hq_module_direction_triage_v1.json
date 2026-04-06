@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hr_commercial_aerospace_hq_module_direction_triage_v1",
+    "module_member_count": 3,
+    "module_member_symbols": [
+      "002361",
+      "300342",
+      "603601"
+    ],
+    "authoritative_status": "retain_board_weak_symbol_strong_concentration_as_higher_level_negative_label_module"
+  },
+  "triage_rows": [
+    {
+      "module_name": "board_weak_symbol_strong_concentration",
+      "direction": "retain_as_higher_level_negative_label_module_and_do_not_treat_symbol_concentration_as_board_unlock"
+    },
+    {
+      "module_name": "outside_module_negative_labels",
+      "direction": "keep_as_separate_subfamilies_not_every_negative_label_needs_symbol_strong_concentration"
+    }
+  ],
+  "interpretation": [
+    "V1.34HR converts the higher-level module into direction.",
+    "The system should learn strong local concentration inside a weak board as its own negative-label module rather than as restart evidence."
+  ]
+}

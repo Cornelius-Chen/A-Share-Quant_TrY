@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122b_cpo_1min_family_short_horizon_expectancy_audit_v1",
+    "horizon_bars": 5,
+    "family_count": 2,
+    "recommended_next_posture": "continue_only_with_family_that_keeps_directional_expectancy_edge"
+  },
+  "family_rows": [
+    {
+      "family": "supportive_continuation",
+      "sample_count": 2176,
+      "mean_forward_return_5": 0.00087044,
+      "mean_max_favorable_return_5": 0.0055945,
+      "mean_max_adverse_return_5": -0.00705873,
+      "positive_forward_rate_5": 0.53814338
+    },
+    {
+      "family": "burst_fade_trap",
+      "sample_count": 2607,
+      "mean_forward_return_5": 0.00071229,
+      "mean_max_favorable_return_5": 0.00837748,
+      "mean_max_adverse_return_5": -0.00466616,
+      "negative_forward_rate_5": 0.55619486
+    }
+  ],
+  "interpretation": [
+    "V1.22B is the first label-aligned audit on the recent 1-minute plane, using short-horizon forward outcomes instead of replay.",
+    "This is still local and recent, but it is better than trusting raw geometry without any outcome alignment.",
+    "The next step is to keep only the family that preserves directional expectancy edge under this audit."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fv_commercial_aerospace_recent_reduce_residue_exclusion_audit_v1",
+    "candidate_count": 3,
+    "excluded_count": 1,
+    "excluded_displaced_count": 1,
+    "excluded_selected_count": 0,
+    "kept_selected_count": 2,
+    "kept_displaced_count": 0,
+    "displaced_precision": 1.0,
+    "displaced_coverage": 1.0,
+    "authoritative_rule": "recent symbol-level reduce residue is now the first clean local exclusion clue inside active-wave add selection, but it remains too narrow for execution authority"
+  },
+  "exclusion_rows": [
+    {
+      "rule_name": "recent_reduce_residue_exclusion",
+      "candidate_count": 3,
+      "excluded_count": 1,
+      "excluded_displaced_count": 1,
+      "excluded_selected_count": 0,
+      "kept_selected_count": 2,
+      "kept_displaced_count": 0,
+      "displaced_precision": 1.0,
+      "displaced_coverage": 1.0,
+      "reading": "the first active-wave exclusion rule checks whether recent symbol-level reduce residue cleanly captures the displaced candidate without excluding selected ones"
+    }
+  ],
+  "interpretation": [
+    "V1.34FV tests whether the first active-wave negative clue is strong enough to be treated as a real exclusion object rather than a descriptive label.",
+    "The result is clean but tiny: it fully captures the currently displaced candidate and excludes none of the selected candidates, which makes it useful as local supervision but still too narrow for execution or broad promotion."
+  ]
+}

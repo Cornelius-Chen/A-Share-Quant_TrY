@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "current_primary_theme_slug": "defense_industry",
+    "current_primary_rank": 1,
+    "incumbent_is_leader": "true",
+    "leader_theme_slug": "defense_industry",
+    "review_state": "hold_incumbent_focus",
+    "support_delta_vs_incumbent": -1,
+    "tension_state": "incumbent_leads_and_gate_consistent",
+    "tension_priority": "p3",
+    "tension_instruction": "background_monitor_only",
+    "authoritative_output": "a_share_internal_hot_news_focus_governance_tension_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "current_primary_rank",
+      "value": "1"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "incumbent_is_leader",
+      "value": "true"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "review_state",
+      "value": "hold_incumbent_focus"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "tension_state",
+      "value": "incumbent_leads_and_gate_consistent"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "tension_priority",
+      "value": "p3"
+    }
+  ],
+  "interpretation": [
+    "This packet makes leaderboard-vs-review tension explicit instead of leaving it implicit in separate ranking and review tables.",
+    "It helps the top control layer explain why the incumbent may still be held even when it is no longer rank one."
+  ]
+}

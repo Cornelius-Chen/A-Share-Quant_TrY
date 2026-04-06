@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "license_review_row_count": 22,
+    "scheduler_runtime_row_count": 3,
+    "authoritative_status": "network_activation_operations_ready_for_queue_processing_but_not_activation"
+  },
+  "triage_rows": [
+    {
+      "component": "license_review_registry",
+      "direction": "process_allowlist_decisions_before_any_selective_host_activation"
+    },
+    {
+      "component": "scheduler_runtime_registry",
+      "direction": "deploy_runtime_binding_only_after_allowlist_policy_and governance approval remain aligned"
+    }
+  ],
+  "interpretation": [
+    "The source-side activation path is now operationally staged: review queue first, runtime deployment second.",
+    "This still does not authorize activation; it only makes the path executable when gates are later opened."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134km_a_share_kl_attention_direction_triage_v1",
+    "attention_registry_count": 5,
+    "hard_attention_role_count": 1,
+    "authoritative_status": "attention_workstream_complete_enough_to_freeze_as_bootstrap_and_shift_into_label_registry_population"
+  },
+  "triage_rows": [
+    {
+      "attention_component": "attention_registry",
+      "direction": "retain_as_bootstrap_attention_center_surface_and_expand_beyond_commercial_aerospace_only_after_more_hard_cases_exist"
+    },
+    {
+      "attention_component": "hard_attention_roles",
+      "direction": "keep_singleton_hard_case_without_forcing_a_second_anchor_or_decoy"
+    },
+    {
+      "attention_component": "soft_attention_candidates",
+      "direction": "consume_as_backlog_for_future_review_and_quality_linking_not_as_hard_trade_permission"
+    },
+    {
+      "attention_component": "next_frontier",
+      "direction": "move_into_labels_layer_using_attention_registry_as_semantic_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KM converts the attention audit into direction.",
+    "The correct next move is to let labels consume the attention surface, not to overpromote soft candidates into hard attention truths prematurely."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "blocked_by_limit_halt_derivation_count": 0,
+    "promotable_now_count": 14,
+    "authoritative_status": "limit_halt_semantic_materialization_has_reopened_replay_promotion_recheck"
+  },
+  "triage_rows": [
+    {
+      "component": "limit_halt_candidate_surface",
+      "direction": "retain_raw_daily_candidate_surface_as_background_support_not_as_the_primary_replay_story"
+    },
+    {
+      "component": "limit_halt_derivation",
+      "direction": "retire_limit_halt_as_primary_blocker_and_use_the_semantic_surface_for_replay_recheck"
+    },
+    {
+      "component": "daily_market_promotion",
+      "direction": "treat_promotable_subset_as_the_new_replay-facing_entry_surface_while_keeping_named_residuals_explicit"
+    }
+  ],
+  "interpretation": [
+    "The replay frontier has moved past the old index-daily source gap and past the old limit-halt derivation blocker.",
+    "The next valid move is replay-side precondition recheck from the promotable subset, not more semantic source hunting on the limit-halt side."
+  ]
+}

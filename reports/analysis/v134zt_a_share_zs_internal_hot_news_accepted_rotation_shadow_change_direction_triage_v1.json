@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "top_opportunity_theme_change": "would_change",
+    "top_watch_symbol_change": "would_change",
+    "signal_priority": "p1",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_shadow_change_signal_materialized",
+    "authoritative_status": "accepted_rotation_shadow_delta_explicitly_measured_against_the_current_primary_control_packet"
+  },
+  "triage_rows": [
+    {
+      "component": "opportunity_shadow_delta",
+      "direction": "treat top opportunity theme change as an explicit shadow rotation delta rather than a silent merge consequence"
+    },
+    {
+      "component": "symbol_shadow_delta",
+      "direction": "treat top watch symbol change as an explicit shadow rotation delta requiring deliberate review"
+    },
+    {
+      "component": "promotion_discipline",
+      "direction": "use the shadow delta signal as the final check before deciding whether to promote the accepted rotation"
+    }
+  ],
+  "interpretation": [
+    "The accepted rotation now has a dedicated delta signal against the current primary control state.",
+    "This makes the promotion consequence explicit in one row."
+  ]
+}

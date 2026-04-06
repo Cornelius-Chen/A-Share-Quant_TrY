@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hu_commercial_aerospace_negative_environment_semantics_registry_v1",
+    "semantic_count": 3,
+    "primary_semantics_ready_count": 3,
+    "local_only_rebound_seed_count": 10,
+    "false_bounce_only_count": 10,
+    "lockout_worthy_count": 1,
+    "concentration_module_member_count": 3,
+    "registry_csv": "data\\training\\commercial_aerospace_negative_environment_semantics_registry_v1.csv",
+    "authoritative_rule": "the first environment-level supervision layer is now explicit: attention distortion, capital misalignment with the board, and board fragile divergence are retained as the next primary negative semantics, but they remain board-local and intentionally incomplete until the later event-attention layer is built"
+  },
+  "semantic_rows": [
+    {
+      "semantic_name": "attention_distorted",
+      "phase_status": "promote_as_next_main_supervision_target",
+      "seed_family": "crowding_like_shelter_rebound_plus_board_weak_symbol_strong_concentration",
+      "seed_count": 3,
+      "supporting_count": 2,
+      "core_evidence": "few symbols can run near or through prior highs on heavy turnover while board unlock remains absent",
+      "current_scope": "board_local_negative_semantics",
+      "known_gap": "true attention proxies and heat-board divergence labels are not yet explicit",
+      "promotion_boundary": "supervision_only"
+    },
+    {
+      "semantic_name": "capital_misaligned_with_board",
+      "phase_status": "promote_as_next_main_supervision_target",
+      "seed_family": "local_only_rebound_watch",
+      "seed_count": 10,
+      "supporting_count": 10,
+      "core_evidence": "top symbol forward strength can be high while probe/full breadth remains weak and board drawdown remains deep",
+      "current_scope": "board_local_negative_semantics",
+      "known_gap": "symbol-level concentration is visible, but event/catalyst source of the concentration is not yet bound",
+      "promotion_boundary": "supervision_only"
+    },
+    {
+      "semantic_name": "board_fragile_divergence",
+      "phase_status": "promote_as_next_main_supervision_target",
+      "seed_family": "false_bounce_only_plus_lockout_worthy",
+      "seed_count": 10,
+      "supporting_count": 1,
+      "core_evidence": "board can show local rebound or continuation heat while forward expectancy remains poor and lockout stays justified",
+      "current_scope": "board_local_negative_semantics",
+      "known_gap": "external environment and policy/news pressure are not yet part of the semantic state",
+      "promotion_boundary": "supervision_only"
+    }
+  ],
+  "interpretation": [
+    "V1.34HU lifts the local negative-label families into three environment-level negative semantics rather than inventing more action rules.",
+    "The registry is deliberately incomplete in one sense: it keeps the semantics board-local and records what is still missing, so incomplete information does not silently become false certainty."
+  ]
+}

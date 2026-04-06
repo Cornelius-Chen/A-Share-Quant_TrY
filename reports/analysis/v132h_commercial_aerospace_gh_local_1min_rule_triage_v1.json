@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132h_commercial_aerospace_gh_local_1min_rule_triage_v1",
+    "authoritative_status": "retain_local_1min_tier_rule_candidates_as_governed_seed_rules_and_shift_next_to_broader_false_positive_audit",
+    "matched_count": 6,
+    "registry_row_count": 6,
+    "authoritative_rule": "the minute branch may keep 1min tier rules as governed seed rules once they preserve the frozen seed ordering, but broader false-positive auditing must come before any stronger claims"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_tier_rule_candidates",
+      "status": "retain_local_1min_tier_rule_candidates_as_governed_seed_rules_and_shift_next_to_broader_false_positive_audit",
+      "rationale": "seed rules are worth keeping only if they preserve the frozen severe/reversal/mild ordering on the registry before any broader expansion"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "seed-rule coherence still does not authorize replay modification"
+    }
+  ],
+  "interpretation": [
+    "V1.32H turns the first 1-minute seed-rule audit into a governance verdict.",
+    "The next correct move is a broader false-positive audit over local minute sessions, not replay modification."
+  ]
+}

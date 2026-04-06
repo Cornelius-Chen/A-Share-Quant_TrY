@@ -1,0 +1,6 @@
+sector_id,monitor_role,current_v6_symbol_count,same_plane_symbol_gap,board_composite_gap,bridge_block,reopen_ready,decisive_watch_symbol,watch_symbol_timeline_days,watch_symbol_leader_core_days,watch_symbol_current_v6_snapshot_days,watch_symbol_near_surface_days,watch_symbol_inactive_days,governance_state,next_action_rule
+BK0808,nearest_reopen_candidate_under_freeze,1,1,0.0,True,False,600118,10,9,0,8,2,retain_bk0808_watch_state_machine_as_governance_only_and_keep_worker_frozen,reopen_only_after_real_v6_same_plane_emergence_of_600118
+BK0994,secondary_frozen_candidate,1,1,0.023575000000000013,True,False,,,,,,,frozen_watchlist_only,wait_for_multi_symbol_v6_same_plane_support
+BK0715,secondary_frozen_candidate,1,1,0.07686799999999999,True,False,,,,,,,frozen_watchlist_only,wait_for_multi_symbol_v6_same_plane_support
+BK0814,secondary_frozen_candidate,1,1,0.09785100000000002,True,False,,,,,,,frozen_watchlist_only,wait_for_multi_symbol_v6_same_plane_support
+BK0490,secondary_frozen_candidate,0,2,,True,False,,,,,,,frozen_watchlist_only,wait_for_multi_symbol_v6_same_plane_support

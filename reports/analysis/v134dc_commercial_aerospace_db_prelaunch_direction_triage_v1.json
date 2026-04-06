@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134dc_commercial_aerospace_db_prelaunch_direction_triage_v1",
+    "authoritative_status": "freeze_intraday_add_prelaunch_status_and_keep_frontier_deferred",
+    "opening_gate_count": 9,
+    "authoritative_rule": "when the next frontier is deferred and its opening checklist exists, the correct action is to retain prelaunch readiness without opening the frontier"
+  },
+  "triage_rows": [
+    {
+      "component": "prelaunch_status_card",
+      "status": "retain",
+      "rationale": "the board now has a clean single-card summary for later explicit frontier opening"
+    },
+    {
+      "component": "reduce_branch",
+      "status": "keep_frozen",
+      "rationale": "reduce remains complete enough and should not be reopened through deferred-frontier preparation"
+    },
+    {
+      "component": "intraday_add_opening_now",
+      "status": "blocked",
+      "rationale": "prelaunch readiness is not equivalent to permission to start the next frontier"
+    }
+  ],
+  "interpretation": [
+    "V1.34DC turns the prelaunch card into a final governance judgment: the next frontier is ready to be named, not ready to be silently opened.",
+    "This preserves a clean handoff boundary between reduce completion and the later explicit start of intraday add."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134io_commercial_aerospace_true_selection_evidence_source_audit_v1",
+    "remaining_hard_gap_count": 2,
+    "searched_symbol_count": 5,
+    "current_hard_counterpanel_count": 1,
+    "current_local_route_exhausted": true,
+    "evidence_source_csv": "data\\training\\commercial_aerospace_true_selection_evidence_sources_v1.csv",
+    "authoritative_rule": "the next true-selection progress no longer comes from retuning the current local named set; it requires evidence-source expansion, especially broader symbol coverage and thicker attention-heat evidence"
+  },
+  "source_rows": [
+    {
+      "missing_gap": "second_event_backed_carrier_case",
+      "current_local_status": "not_found_inside_current_named_universe",
+      "next_evidence_source": "expanded_symbol_universe",
+      "source_reason": "the current named set already searched five focal symbols and still produced only one primary carrier-grade case"
+    },
+    {
+      "missing_gap": "anchor_decoy_counterpanel",
+      "current_local_status": "hard_panel_still_singleton",
+      "next_evidence_source": "attention_heat_evidence_expansion",
+      "source_reason": "soft decoy-like names exist, but the current local panel still has only one hard anchor-decoy reference and lacks thicker attention evidence"
+    },
+    {
+      "missing_gap": "capital_true_selection",
+      "current_local_status": "blocked_after_partial_gap_closure",
+      "next_evidence_source": "joint_universe_plus_attention_expansion",
+      "source_reason": "followthrough and board-event alignment are now explicit, so the remaining progress can no longer come from local shape refinement alone"
+    }
+  ],
+  "interpretation": [
+    "V1.34IO turns the remaining blocker stack into an evidence-source problem instead of pretending more local refinement will solve it.",
+    "The implication is procedural: stay honest about local exhaustion and route the next search toward broader symbol and attention evidence rather than toward synthetic promotion."
+  ]
+}

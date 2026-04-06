@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hx_commercial_aerospace_hw_event_attention_direction_triage_v1",
+    "registry_row_count": 8,
+    "authoritative_status": "retain_first_event_attention_registry_as_conservative_supervision_only_seed_layer_and_do_not_pretend_capital_selection_is_ready"
+  },
+  "triage_rows": [
+    {
+      "supervision_label": "event_trigger_validity",
+      "direction": "retain_as_first_event_layer_and_keep_validity_categories_conservative"
+    },
+    {
+      "supervision_label": "attention_anchor",
+      "direction": "retain_as_role_label_not_as_board_restart_evidence"
+    },
+    {
+      "supervision_label": "attention_decoy",
+      "direction": "retain_as_role_label_and_expand_only_after_more_hard_cases_exist"
+    },
+    {
+      "supervision_label": "capital_true_selection",
+      "direction": "keep_deferred_until_anchor_and_decoy_labels_exist_beyond_single_hard_case"
+    }
+  ],
+  "interpretation": [
+    "V1.34HX converts the first event-attention registry into direction.",
+    "The event layer is open, but it remains intentionally conservative: anchor and decoy roles can be learned before true selection is promoted."
+  ]
+}

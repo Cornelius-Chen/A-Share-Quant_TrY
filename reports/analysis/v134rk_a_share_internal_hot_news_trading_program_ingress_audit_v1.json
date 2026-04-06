@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "ingress_row_count": 21,
+    "important_ingress_count": 3,
+    "board_specific_ingress_count": 2,
+    "active_hot_window_count": 21,
+    "important_copy_retained_count": 3,
+    "impact_window_attached_count": 3,
+    "accelerating_ingress_count": 0,
+    "late_impact_window_count": 0,
+    "focus_scored_ingress_count": 2,
+    "top_focus_theme_slug": "defense_industry",
+    "top_focus_adjusted_priority_score": "110.8520",
+    "authoritative_output": "a_share_internal_hot_news_trading_program_ingress_materialized"
+  },
+  "rows": [
+    {
+      "component": "trading_program_ingress",
+      "component_state": "read_ready_internal_only",
+      "metric": "ingress_row_count",
+      "value": "21"
+    },
+    {
+      "component": "important_ingress",
+      "component_state": "materialized",
+      "metric": "important_ingress_count",
+      "value": "3"
+    },
+    {
+      "component": "board_specific_ingress",
+      "component_state": "materialized",
+      "metric": "board_specific_ingress_count",
+      "value": "2"
+    },
+    {
+      "component": "hot_window_status",
+      "component_state": "materialized",
+      "metric": "active_hot_window_count",
+      "value": "21"
+    },
+    {
+      "component": "impact_window_attachment",
+      "component_state": "materialized",
+      "metric": "impact_window_attached_count",
+      "value": "3"
+    },
+    {
+      "component": "context_velocity",
+      "component_state": "materialized",
+      "metric": "accelerating_ingress_count",
+      "value": "0"
+    },
+    {
+      "component": "impact_decay",
+      "component_state": "materialized",
+      "metric": "late_impact_window_count",
+      "value": "0"
+    },
+    {
+      "component": "focus_scoring",
+      "component_state": "materialized",
+      "metric": "focus_scored_ingress_count",
+      "value": "2"
+    },
+    {
+      "component": "focus_scoring",
+      "component_state": "materialized",
+      "metric": "top_focus_theme_slug",
+      "value": "defense_industry"
+    }
+  ],
+  "interpretation": [
+    "The hot-news line now emits a single ingress surface for downstream trading programs.",
+    "Priority, importance, routing, direction, strength, mapping status, hot-window retention status, rolling context memory, and dynamic velocity/impact-decay states are already folded into one internal-only consumer view.",
+    "Focus-cycle scoring is now already folded into ingress, so lower consumers can see persistence, second-wave bias, and tradability before opportunity routing."
+  ]
+}

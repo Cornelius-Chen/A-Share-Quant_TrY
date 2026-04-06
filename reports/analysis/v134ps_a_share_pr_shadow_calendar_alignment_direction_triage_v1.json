@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "candidate_row_count": 1,
+    "candidate_effective_trade_date": "2026-03-27",
+    "authoritative_status": "shadow_calendar_alignment_should_be_treated_as_auxiliary_shadow_only_candidate_not_timestamp_override"
+  },
+  "triage_rows": [
+    {
+      "component": "pti_timestamp_policy",
+      "direction": "retain_original_visible_event_timestamp_without_rewriting_pti_history"
+    },
+    {
+      "component": "shadow_alignment_candidate",
+      "direction": "allow_an_auxiliary_effective_trade_date_candidate_for_shadow_market_context_only"
+    },
+    {
+      "component": "governance_boundary",
+      "direction": "keep_calendar_alignment_in_shadow_only_scope_and_do_not_use_it_as_execution_authority"
+    }
+  ],
+  "interpretation": [
+    "The off-calendar slice can be inspected without corrupting PTI legality.",
+    "The cleanest next move is a shadow-only effective-trade-date candidate, not a rewrite of event time history."
+  ]
+}

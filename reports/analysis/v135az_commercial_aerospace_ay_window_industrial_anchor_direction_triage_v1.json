@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "negative_support_ready_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_004",
+      "final_training_admission": "negative_support_sample_ready",
+      "recommendation": "allow_negative_support_training_for_real_anchor_but_misaligned_cases"
+    }
+  ]
+}

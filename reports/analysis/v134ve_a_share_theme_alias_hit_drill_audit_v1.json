@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "case_count": 33,
+    "single_case_count": 30,
+    "dual_case_count": 3,
+    "exact_expected_hit_count": 24,
+    "expected_covered_count": 33,
+    "overlap_hit_count": 9,
+    "partial_or_miss_count": 0,
+    "authoritative_output": "a_share_theme_alias_hit_drill_materialized"
+  },
+  "rows": [
+    {
+      "component": "theme_alias_hit_drill",
+      "component_state": "materialized",
+      "metric": "case_count",
+      "value": "33"
+    },
+    {
+      "component": "theme_alias_hit_drill",
+      "component_state": "measured",
+      "metric": "exact_expected_hit_count",
+      "value": "24"
+    },
+    {
+      "component": "theme_alias_hit_drill",
+      "component_state": "measured",
+      "metric": "expected_covered_count",
+      "value": "33"
+    },
+    {
+      "component": "theme_alias_hit_drill",
+      "component_state": "measured",
+      "metric": "overlap_hit_count",
+      "value": "9"
+    },
+    {
+      "component": "theme_alias_hit_drill",
+      "component_state": "measured",
+      "metric": "partial_or_miss_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "This drill validates that the current alias map can actually hit the curated theme families in simulated news headlines.",
+    "Overlap is acceptable when the expected theme is still covered; the drill is testing reachability, not enforcing single-label purity."
+  ]
+}

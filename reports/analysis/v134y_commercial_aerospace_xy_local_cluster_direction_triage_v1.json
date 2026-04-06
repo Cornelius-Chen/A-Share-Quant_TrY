@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134y_commercial_aerospace_xy_local_cluster_direction_triage_v1",
+    "authoritative_status": "promote_reversal_late_severe_block_inside_current_wider_reference",
+    "triage_csv": "data\\training\\commercial_aerospace_xy_local_cluster_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reversal_late_severe_block",
+      "status": "promote_inside_current_wider_reference",
+      "detail": "impacted_session_count = 1, same_day_loss_avoided_delta = 980.649"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "This is a local cluster refinement only and does not change the surface boundary."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The local cluster refinement remains a phase-2 shadow improvement only."
+    }
+  ],
+  "interpretation": [
+    "V1.34Y turns the local failure-cluster audit into the next direction judgment.",
+    "If the only remaining negative cluster is improved by blocking very-late severe on reversal-predicted sessions, that change should be promoted locally without reopening the wider surface."
+  ]
+}

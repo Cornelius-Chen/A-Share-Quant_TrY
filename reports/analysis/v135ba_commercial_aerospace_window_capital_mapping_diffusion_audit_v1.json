@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 3,
+    "covered_window_count": 1,
+    "negative_sample_ready_count": 1,
+    "not_tradable_count": 2,
+    "negative_net_flow_count": 3
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_006",
+      "representative_symbol_count": "3",
+      "capital_mapping_failure_count": "2",
+      "local_outlier_count": "1",
+      "board_alignment_state": "raw_only_post_lockout_alignment_absent",
+      "final_training_admission": "negative_sample_ready",
+      "strict_supervisor_conclusion": "Window 006 is now a released negative sample: the capital-mapping narrative clearly expanded attention, but lawful board alignment was absent, the main mapping names failed to establish a repricing leg, and the few stronger industrial responses remained local outliers. It should train concept-spread-without-structure."
+    }
+  ],
+  "interpretation": [
+    "Window 006 now has a concrete symbol-level diffusion slice rather than a vague concept-caution label.",
+    "The narrative spread was real, but lawful board alignment was absent and the main mapping names never built a clean repricing leg.",
+    "This is the correct anti-pattern for concept spread without structure."
+  ]
+}

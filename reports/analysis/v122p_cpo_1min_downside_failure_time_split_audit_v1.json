@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122p_cpo_1min_downside_failure_time_split_audit_v1",
+    "split_count": 8,
+    "mean_test_balanced_accuracy": 0.52515907,
+    "min_test_balanced_accuracy": 0.51509259,
+    "recommended_next_posture": "symbol_holdout_audit_downside_failure_score"
+  },
+  "split_rows": [
+    {
+      "train_end_date": "2026-03-24",
+      "test_start_date": "2026-03-25",
+      "test_row_count": 7456,
+      "threshold": 0.15671455,
+      "balanced_accuracy": 0.51949947
+    },
+    {
+      "train_end_date": "2026-03-25",
+      "test_start_date": "2026-03-26",
+      "test_row_count": 6524,
+      "threshold": 0.32767096,
+      "balanced_accuracy": 0.51509259
+    },
+    {
+      "train_end_date": "2026-03-26",
+      "test_start_date": "2026-03-27",
+      "test_row_count": 5592,
+      "threshold": 0.33641492,
+      "balanced_accuracy": 0.52050747
+    },
+    {
+      "train_end_date": "2026-03-27",
+      "test_start_date": "2026-03-30",
+      "test_row_count": 4660,
+      "threshold": 0.3616103,
+      "balanced_accuracy": 0.52367177
+    },
+    {
+      "train_end_date": "2026-03-30",
+      "test_start_date": "2026-03-31",
+      "test_row_count": 3728,
+      "threshold": 0.35652917,
+      "balanced_accuracy": 0.51918358
+    },
+    {
+      "train_end_date": "2026-03-31",
+      "test_start_date": "2026-04-01",
+      "test_row_count": 2796,
+      "threshold": 0.35707009,
+      "balanced_accuracy": 0.53335854
+    },
+    {
+      "train_end_date": "2026-04-01",
+      "test_start_date": "2026-04-02",
+      "test_row_count": 1864,
+      "threshold": 0.3436356,
+      "balanced_accuracy": 0.53514295
+    },
+    {
+      "train_end_date": "2026-04-02",
+      "test_start_date": "2026-04-03",
+      "test_row_count": 932,
+      "threshold": 0.33567214,
+      "balanced_accuracy": 0.53481622
+    }
+  ],
+  "interpretation": [
+    "V1.22P tests the 1-minute downside failure score under date split.",
+    "This is the first chronology audit on the new downside branch and is the minimum hurdle before deciding whether it is alive.",
+    "The next step is symbol holdout audit."
+  ]
+}

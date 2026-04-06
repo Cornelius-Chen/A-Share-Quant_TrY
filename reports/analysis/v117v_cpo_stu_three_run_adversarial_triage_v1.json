@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117v_cpo_stu_three_run_adversarial_triage_v1",
+    "triage_scope": "V117S_V117T_V117U",
+    "cooling_reacceleration_branch_status": "retain_candidate_only_continue_one_more_non_replay_audit_cycle",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "mainline_investment_allowed": false,
+    "candidate_only_allowed": true,
+    "authoritative_current_problem": "false_positive_control_and_time_split_stability_for_cooling_reacceleration",
+    "recommended_next_posture": "keep_candidate_only_and_run_one_more_non_replay_quality_audit_cycle_before_any_further_mainline_commitment"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "better_than_breakout_damage_but_not_mainline_ready",
+      "key_reason": "The branch survives broader external audit better than breakout-damage, but time-split instability still blocks mainline promotion."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "real_new_semantic_axis_with_false_positive_overhang",
+      "key_reason": "This is a genuinely new cooling-then-reaccelerate semantics, yet it still admits too many negative rows on the broader add pool."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "candidate_only_not_replay_facing",
+      "key_reason": "There is enough learnability to keep the branch alive, but not enough robustness to justify replay-facing work."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "continue_one_more_candidate_cycle_only",
+      "key_reason": "V117T external_clear=True, V117T best_bal_acc=0.727273, V117U min_test_bal_acc=0.375."
+    }
+  ],
+  "interpretation": [
+    "V1.17V is the scheduled three-run adversarial review over the new cooling-reacceleration branch.",
+    "All three reviewers converged that this branch is stronger than the recently degraded breakout-damage line, because it keeps a positive broader external-pool gap.",
+    "They also converged that time-split instability and false-positive overhang still block replay-facing use. The branch stays alive, but only as candidate-only and only for one more non-replay audit cycle."
+  ]
+}

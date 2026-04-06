@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "intake_step_count": 4,
+    "closed_step_count": 4,
+    "authoritative_status": "index_daily_future_progress_should_be_handled_as_source_intake_then_reopen_not_as_internal_replay_iteration"
+  },
+  "triage_rows": [
+    {
+      "component": "source_arrival",
+      "direction": "wait_for_new_raw_index_source_before_any_reopen"
+    },
+    {
+      "component": "horizon_match",
+      "direction": "verify_new_source_reaches_shadow_horizon_before_materialization"
+    },
+    {
+      "component": "materialization_review",
+      "direction": "reopen_index_daily_materialization_only_after_source_intake_success"
+    },
+    {
+      "component": "paired_surface_review",
+      "direction": "recheck_daily_market_promotion_only_after_index_daily_boundary_moves"
+    }
+  ],
+  "interpretation": [
+    "Replay-side movement is now fully governed by a future source-intake checklist.",
+    "Further internal replay modeling without new source arrival would be drift."
+  ]
+}

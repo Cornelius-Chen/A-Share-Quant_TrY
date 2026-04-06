@@ -1,0 +1,6 @@
+﻿event_component,component_state,artifact_path,coverage_note
+source_master,materialized_bootstrap,data\reference\info_center\source_master\a_share_source_master_v1.csv,materialized_source_count = 36
+document_registry,materialized_bootstrap,data\reference\info_center\document_registry\a_share_document_registry_v1.csv,materialized_document_count = 52
+claim_registry,materialized_bootstrap,data\reference\info_center\claim_registry\a_share_claim_registry_v1.csv,materialized_claim_count = 52
+event_registry,materialized_bootstrap,data\reference\info_center\event_registry\a_share_event_registry_v1.csv,materialized_event_count = 52
+evidence_span_registry,materialized_bootstrap,data\reference\info_center\evidence_span_registry\a_share_evidence_span_registry_v1.csv,materialized_evidence_count = 52

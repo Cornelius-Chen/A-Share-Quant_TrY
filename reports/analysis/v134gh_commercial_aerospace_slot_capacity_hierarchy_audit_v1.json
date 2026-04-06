@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gh_commercial_aerospace_slot_capacity_hierarchy_audit_v1",
+    "active_wave_day_count": 2,
+    "zero_slot_veto_day_count": 1,
+    "tiered_dual_slot_day_count": 1,
+    "single_slot_unobserved_day_count": 0,
+    "exclusion_precision": 1.0,
+    "dual_slot_weight_ratio": 2.04828842,
+    "authoritative_rule": "the current active-wave add branch is best read as an exclusion-first slot-capacity hierarchy: either recent-reduce residue vetoes the day into zero-slot, or a local tiered dual-slot pattern survives; single-slot fallback remains unobserved"
+  },
+  "hierarchy_rows": [
+    {
+      "trade_date": "20251218",
+      "capacity_state": "zero_slot_day",
+      "hierarchy_state": "zero_slot_veto_day",
+      "primary_driver": "recent_reduce_residue_exclusion",
+      "symbol": "002465",
+      "selection_state": "recent_reduce_residue_candidate",
+      "supporting_reading": "reduce@20251217"
+    },
+    {
+      "trade_date": "20251219",
+      "capacity_state": "dual_slot_day",
+      "hierarchy_state": "tiered_dual_slot_day",
+      "primary_driver": "primary_reset_plus_secondary_continuation",
+      "symbol": "002085|000738",
+      "selection_state": "clean_reset_candidate|same_symbol_continuation_selected",
+      "supporting_reading": "reset_weight=0.068632|continuation_weight=0.033507"
+    }
+  ],
+  "interpretation": [
+    "V1.34GH reframes slot capacity as a hierarchy question rather than a raw count question.",
+    "The current strict active-wave surface first applies same-wave exclusion, then resolves into either zero-slot veto or a local tiered dual-slot configuration. A portable single-slot fallback is still unobserved."
+  ]
+}

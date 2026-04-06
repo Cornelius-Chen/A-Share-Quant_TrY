@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132l_commercial_aerospace_kl_local_1min_session_triage_v1",
+    "authoritative_status": "retain_local_1min_rules_as_sparse_bounded_governed_supervision",
+    "expanded_session_count": 612,
+    "expanded_hit_count": 24,
+    "max_symbol_hit_rate": 0.05882353,
+    "authoritative_rule": "the commercial-aerospace minute branch may keep expanding only while the local 1min rules remain sparse and bounded on the broader retained-symbol session surface"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_rule_candidates",
+      "status": "retain_local_1min_rules_as_sparse_bounded_governed_supervision",
+      "rationale": "the broader session surface should remain sparse enough to keep the minute rules interpretable and governed"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "session expansion auditing still belongs to supervision and does not authorize replay modification"
+    }
+  ],
+  "interpretation": [
+    "V1.32L turns the broader local-session expansion audit into a governance verdict.",
+    "The relevant question is no longer seed coherence, but whether the minute rules stay sparse enough on the retained-symbol session surface to remain interpretable."
+  ]
+}

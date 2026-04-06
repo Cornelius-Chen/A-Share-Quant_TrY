@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131e_commercial_aerospace_intraday_override_case_control_audit_v1",
+    "override_positive_count": 2,
+    "clean_control_count": 30,
+    "reversal_watch_count": 2,
+    "override_signal_is_derisk_share": 1.0,
+    "clean_signal_is_derisk_share": 0.0,
+    "override_no_preopen_adverse_share": 1.0,
+    "open_to_close_separation": -0.11965941,
+    "close_location_separation": -0.59915096,
+    "forward_return_10_separation": -0.37291824,
+    "authoritative_rule": "retain override positives as future intraday supervision seeds, but keep the whole construct outside lawful replay until minute-level point-in-time support exists"
+  },
+  "metric_rows": [
+    {
+      "metric": "open_to_close_return",
+      "override_positive_mean": -0.09493503,
+      "clean_control_mean": 0.02472438,
+      "reversal_watch_mean": -0.07574917,
+      "override_minus_clean": -0.11965941,
+      "override_minus_reversal": -0.01918586
+    },
+    {
+      "metric": "close_location",
+      "override_positive_mean": 0.03070176,
+      "clean_control_mean": 0.62985272,
+      "reversal_watch_mean": 0.07406542,
+      "override_minus_clean": -0.59915096,
+      "override_minus_reversal": -0.04336366
+    },
+    {
+      "metric": "close_from_high",
+      "override_positive_mean": -0.10254073,
+      "clean_control_mean": -0.01558001,
+      "reversal_watch_mean": -0.07871872,
+      "override_minus_clean": -0.08696072,
+      "override_minus_reversal": -0.02382201
+    },
+    {
+      "metric": "forward_return_10",
+      "override_positive_mean": -0.23140609,
+      "clean_control_mean": 0.14151216,
+      "reversal_watch_mean": -0.08401327,
+      "override_minus_clean": -0.37291824,
+      "override_minus_reversal": -0.14739282
+    },
+    {
+      "metric": "max_adverse_return_10",
+      "override_positive_mean": -0.26059193,
+      "clean_control_mean": -0.00332871,
+      "reversal_watch_mean": -0.13540296,
+      "override_minus_clean": -0.25726321,
+      "override_minus_reversal": -0.12518896
+    }
+  ],
+  "interpretation": [
+    "V1.31E checks whether the retained override positives are materially distinct from ordinary clean buy executions in the current primary replay.",
+    "The goal is governance, not promotion: if the severe failures are clearly separable, they deserve to remain as dedicated future intraday-label seeds."
+  ]
+}

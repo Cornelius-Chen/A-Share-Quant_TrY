@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "rotation_review_state": "keep_incumbent_but_raise_review_attention",
+    "shadow_change_signal_priority": "p1",
+    "challenger_top_opportunity_theme": "defense_industry",
+    "challenger_top_watch_symbol": "600760",
+    "plan_state": "manual_acceptance_required_before_challenger_primary_consumer_promotion",
+    "plan_step_count": 4,
+    "authoritative_output": "a_share_internal_hot_news_challenger_primary_consumer_promotion_plan_materialized"
+  },
+  "rows": [
+    {
+      "component": "challenger_promotion_plan",
+      "component_state": "materialized",
+      "metric": "rotation_review_state",
+      "value": "keep_incumbent_but_raise_review_attention"
+    },
+    {
+      "component": "challenger_promotion_plan",
+      "component_state": "materialized",
+      "metric": "shadow_change_signal_priority",
+      "value": "p1"
+    },
+    {
+      "component": "challenger_promotion_plan",
+      "component_state": "materialized",
+      "metric": "challenger_top_opportunity_theme",
+      "value": "defense_industry"
+    },
+    {
+      "component": "challenger_promotion_plan",
+      "component_state": "materialized",
+      "metric": "challenger_top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "component": "challenger_promotion_plan",
+      "component_state": "materialized",
+      "metric": "plan_step_count",
+      "value": "4"
+    }
+  ],
+  "interpretation": [
+    "This plan converts the challenger shadow delta into an explicit primary-consumer promotion sequence.",
+    "It preserves discipline by making manual acceptance the first required step even after the challenger review opens."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134ke_a_share_taxonomy_foundation_audit_v1",
+    "identity_symbol_count": 82,
+    "concept_membership_row_count": 23181,
+    "sector_membership_row_count": 35984,
+    "concept_covered_symbol_count": 48,
+    "sector_covered_symbol_count": 82,
+    "taxonomy_status_csv": "data\\training\\a_share_taxonomy_foundation_status_v1.csv",
+    "authoritative_output": "a_share_taxonomy_foundation_ready_for_direction_triage"
+  },
+  "taxonomy_rows": [
+    {
+      "taxonomy_component": "concept_membership",
+      "component_state": "materialized_partial_foundation",
+      "artifact_path": "data\\reference\\info_center\\taxonomy\\a_share_concept_membership_v1.csv",
+      "coverage_note": "concept_covered_symbol_count = 48"
+    },
+    {
+      "taxonomy_component": "sector_membership",
+      "component_state": "materialized_partial_foundation",
+      "artifact_path": "data\\reference\\info_center\\taxonomy\\a_share_sector_membership_v1.csv",
+      "coverage_note": "sector_covered_symbol_count = 82"
+    },
+    {
+      "taxonomy_component": "business_reference",
+      "component_state": "backlog_materialized_not_filled",
+      "artifact_path": "data\\reference\\info_center\\business_reference\\a_share_business_reference_backlog_v1.csv",
+      "coverage_note": "business_reference_backlog_count = 82"
+    },
+    {
+      "taxonomy_component": "concept_purity",
+      "component_state": "backlog_materialized_not_filled",
+      "artifact_path": "data\\reference\\info_center\\concept_purity\\a_share_concept_purity_backlog_v1.csv",
+      "coverage_note": "concept_purity_backlog_count = 82"
+    }
+  ],
+  "interpretation": [
+    "V1.34KE completes the first taxonomy workstream pass by materializing concept and sector memberships on top of the canonical identity layer.",
+    "Business reference and concept purity are not faked; they are explicitly turned into backlog registries so the taxonomy class can remain honest and still stay operationally complete."
+  ]
+}

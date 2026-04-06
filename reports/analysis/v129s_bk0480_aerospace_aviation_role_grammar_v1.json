@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129s_bk0480_aerospace_aviation_role_grammar_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "role_row_count": 2,
+    "internal_owner_count": 2,
+    "confirmation_count": 0,
+    "mirror_count": 0,
+    "next_phase": "control_seed_extraction",
+    "recommended_next_posture": "derive_a_minimal_control_seed_from_the_dual_core_only_then_reassess_local_expansion"
+  },
+  "role_rows": [
+    {
+      "symbol": "000738",
+      "role_label": "stable_core_primary",
+      "structural_authority": "board_internal_owner",
+      "snapshot_row_count": 85,
+      "snapshot_sector_names": [
+        "航天航空"
+      ],
+      "transfer_reset_posture": "local_snapshot_supported",
+      "rationale": "BK0480 starts from a narrow dual-core local role surface; no confirmation or mirror layers are authorized yet until a local universe expansion is justified by BK0480-native evidence."
+    },
+    {
+      "symbol": "600118",
+      "role_label": "high_quality_dual_core_support",
+      "structural_authority": "board_internal_owner",
+      "snapshot_row_count": 23,
+      "snapshot_sector_names": [
+        "航天航空"
+      ],
+      "transfer_reset_posture": "local_snapshot_supported",
+      "rationale": "BK0480 starts from a narrow dual-core local role surface; no confirmation or mirror layers are authorized yet until a local universe expansion is justified by BK0480-native evidence."
+    }
+  ],
+  "relative_structure_labels": [
+    {
+      "label_name": "internal_owner_stack",
+      "members": [
+        "000738",
+        "600118"
+      ],
+      "meaning": "these two symbols are the only BK0480-local owners currently authorized to define role semantics"
+    },
+    {
+      "label_name": "confirmation_stack",
+      "members": [],
+      "meaning": "intentionally empty at kickoff; no commercial-aerospace confirmation layer is allowed to leak into BK0480"
+    },
+    {
+      "label_name": "mirror_stack",
+      "members": [],
+      "meaning": "intentionally empty at kickoff; sympathy names require BK0480-local evidence before admission"
+    }
+  ],
+  "interpretation": [
+    "V1.29S keeps BK0480 deliberately narrow at kickoff: two internal owners and no borrowed confirmation or mirror layers.",
+    "This enforces the transfer boundary by making BK0480 prove its own local structure before any broader universe expansion."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134im_commercial_aerospace_capital_true_selection_readiness_audit_v1",
+    "named_gap_total": 4,
+    "explicitly_closed_gap_count": 2,
+    "remaining_hard_gap_count": 2,
+    "capital_true_selection_ready": false,
+    "readiness_csv": "data\\training\\commercial_aerospace_capital_true_selection_readiness_v1.csv",
+    "authoritative_rule": "capital_true_selection remains blocked: the stack now has explicit followthrough and board-event alignment layers, but promotion is still denied until carrier evidence and anchor-decoy counterpanel thickness improve beyond single-case dependence"
+  },
+  "gap_rows": [
+    {
+      "gap_name": "second_event_backed_carrier_case",
+      "current_status": "still_missing",
+      "blocker_strength": "hard",
+      "evidence": "primary_carrier_case_count=1; second_carrier_case_found=False",
+      "promotion_effect": "blocks capital_true_selection because carrier evidence still sits on a single primary case"
+    },
+    {
+      "gap_name": "anchor_decoy_counterpanel",
+      "current_status": "still_thin",
+      "blocker_strength": "hard",
+      "evidence": "current_hard_counterpanel_count=1; second_hard_counterpanel_found=False",
+      "promotion_effect": "blocks capital_true_selection because hard attention contrast still depends on one retained anchor-decoy reference"
+    },
+    {
+      "gap_name": "symbol_followthrough_surface",
+      "current_status": "explicit_layer_now_present",
+      "blocker_strength": "supporting_only",
+      "evidence": "persistent_followthrough_count=1; moderate_followthrough_count=2",
+      "promotion_effect": "helps discriminate persistence but does not by itself reopen board participation or true selection authority"
+    },
+    {
+      "gap_name": "board_event_alignment",
+      "current_status": "explicit_layer_now_present",
+      "blocker_strength": "supporting_only",
+      "evidence": "aligned_board_supportive_count=1; lockout_misaligned_count=2; raw_only_alignment_absent_count=1",
+      "promotion_effect": "closes the intuition gap around event-board fit but still leaves true selection blocked when carrier and counterpanel evidence remain thin"
+    }
+  ],
+  "interpretation": [
+    "V1.34IM converts the named-gap stack into an explicit readiness audit instead of leaving the promotion block informal.",
+    "The audit records partial progress honestly: two gaps are now explicit layers, but two hard evidence gaps still prevent any lawful true-selection upgrade."
+  ]
+}

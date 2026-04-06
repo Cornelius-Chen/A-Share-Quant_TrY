@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fn_commercial_aerospace_full_quality_module_counterfactual_audit_v1",
+    "scenario_name": "unlock_high_role_full_archetype_with_burst",
+    "matched_session_count": 5,
+    "seed_match_count": 2,
+    "counterfactual_count": 3,
+    "counterfactual_symbol_count": 2,
+    "post_seed_echo_count": 3,
+    "selection_displacement_counterfactual_count": 1,
+    "no_order_day_post_seed_echo_count": 2,
+    "mean_trading_days_since_prior_allowed_seed": 7.66666667,
+    "counterfactual_rows_csv": "data\\training\\commercial_aerospace_full_quality_module_counterfactual_sessions_v1.csv",
+    "authoritative_rule": "the residual non-seed hits are not random shape noise; they are displaced or late-echo counterfactuals that still require day-level selection authority"
+  },
+  "counterfactual_rows": [
+    {
+      "trade_date": "20251218",
+      "symbol": "002465",
+      "counterfactual_family": "selection_displacement_counterfactual",
+      "prior_allowed_trade_date": "20251210",
+      "prior_allowed_family": "preheat_full_add",
+      "trading_days_since_prior_allowed_seed": 4,
+      "same_day_actual_open_add_symbols": "000738",
+      "open_to_15m": 0.01260835,
+      "open_to_60m": 0.04334121,
+      "close_loc_15m": 0.6875,
+      "burst_amount_share_15": 0.27242633,
+      "rationale": "a real open/add day already existed, so this candidate behaves like a displaced alternative rather than a portable add permission"
+    },
+    {
+      "trade_date": "20251224",
+      "symbol": "600879",
+      "counterfactual_family": "no_order_day_post_seed_echo",
+      "prior_allowed_trade_date": "20251210",
+      "prior_allowed_family": "preheat_full_add",
+      "trading_days_since_prior_allowed_seed": 9,
+      "same_day_actual_open_add_symbols": "",
+      "open_to_15m": 0.02451613,
+      "open_to_60m": 0.06451613,
+      "close_loc_15m": 0.63333333,
+      "burst_amount_share_15": 0.31372572,
+      "rationale": "the local add shape appears on a no-order day after the symbol's earlier allowed-add phase, so it behaves like a late echo rather than fresh permission"
+    },
+    {
+      "trade_date": "20251225",
+      "symbol": "600879",
+      "counterfactual_family": "no_order_day_post_seed_echo",
+      "prior_allowed_trade_date": "20251210",
+      "prior_allowed_family": "preheat_full_add",
+      "trading_days_since_prior_allowed_seed": 10,
+      "same_day_actual_open_add_symbols": "",
+      "open_to_15m": 0.02932376,
+      "open_to_60m": 0.07899461,
+      "close_loc_15m": 0.77777778,
+      "burst_amount_share_15": 0.31697292,
+      "rationale": "the local add shape appears on a no-order day after the symbol's earlier allowed-add phase, so it behaves like a late echo rather than fresh permission"
+    }
+  ],
+  "family_rows": [
+    {
+      "counterfactual_family": "no_order_day_post_seed_echo",
+      "session_count": 2
+    },
+    {
+      "counterfactual_family": "selection_displacement_counterfactual",
+      "session_count": 1
+    }
+  ],
+  "interpretation": [
+    "V1.34FN explains why the strongest portable-looking add scenario still cannot be promoted even after its local archetype became very clean.",
+    "The remaining non-seed hits cluster into displaced same-day alternatives and late same-symbol echoes after earlier allowed-add phases, which means the blocker has shifted from local shape to day-level selection authority."
+  ]
+}

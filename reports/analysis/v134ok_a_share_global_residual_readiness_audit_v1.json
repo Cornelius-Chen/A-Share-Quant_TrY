@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "backlog_group_count": 5,
+    "internally_actionable_group_count": 2,
+    "externally_dependent_group_count": 1,
+    "intentionally_closed_group_count": 1,
+    "status_csv": "data\\training\\a_share_global_residual_readiness_status_v1.csv",
+    "authoritative_output": "a_share_global_residual_readiness_groups_materialized"
+  },
+  "rows": [
+    {
+      "backlog_group": "source_internal_manual",
+      "readiness_state": "workpack_ready_manual_fill_pending",
+      "decisive_metric": "workpack_row_count = 4",
+      "closure_readiness": "internally_actionable"
+    },
+    {
+      "backlog_group": "source_promotion_preconditions",
+      "readiness_state": "preconditions_explicit_but_unsatisfied",
+      "decisive_metric": "unsatisfied_count = 4",
+      "closure_readiness": "internally_actionable_after_manual_fill"
+    },
+    {
+      "backlog_group": "replay_internal_build",
+      "readiness_state": "preconditions_explicit_but_blocked",
+      "decisive_metric": "unsatisfied_count = 3",
+      "closure_readiness": "not_actionable_until_market_context_moves"
+    },
+    {
+      "backlog_group": "replay_external_source",
+      "readiness_state": "deferred_prelaunch_closed",
+      "decisive_metric": "closed_gate_count = 4",
+      "closure_readiness": "externally_dependent"
+    },
+    {
+      "backlog_group": "governance_hold",
+      "readiness_state": "intentionally_closed",
+      "decisive_metric": "governance_hold_count = 2",
+      "closure_readiness": "do_not_open_early"
+    }
+  ],
+  "interpretation": [
+    "Residual work is no longer just a backlog list; it is now grouped by closure readiness.",
+    "Only the source-side manual lane remains internally actionable now; replay internal build is structurally specified but still blocked by market context, and replay external source remains deferred-prelaunch."
+  ]
+}

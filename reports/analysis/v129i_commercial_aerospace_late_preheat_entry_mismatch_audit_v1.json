@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129i_commercial_aerospace_late_preheat_entry_mismatch_audit_v1",
+    "late_preheat_full_order_count": 3,
+    "late_preheat_full_mismatch_count": 3,
+    "late_preheat_full_mismatch_rate": 1.0,
+    "authoritative_rule": "late-preheat full entries that do not align with the phase-specific full_pre state should be treated as governance failures before any replay-side expansion is attempted"
+  },
+  "mismatch_rows": [
+    {
+      "signal_trade_date": "20251215",
+      "execution_trade_date": "20251216",
+      "symbol": "688568",
+      "order_reason": "phase_geometry_preheat_full",
+      "state_machine_label": "neutral_hold",
+      "forward_return_10": 0.13947644,
+      "max_adverse_return_10": -0.05863874,
+      "event_state": "event_neutral",
+      "regime_proxy_semantic": "sentiment_overdrive_transition_proxy"
+    },
+    {
+      "signal_trade_date": "20251217",
+      "execution_trade_date": "20251218",
+      "symbol": "000738",
+      "order_reason": "phase_geometry_preheat_full",
+      "state_machine_label": "neutral_hold",
+      "forward_return_10": 0.09788769,
+      "max_adverse_return_10": 0.02524472,
+      "event_state": "event_neutral",
+      "regime_proxy_semantic": "risk_off_deterioration_proxy"
+    },
+    {
+      "signal_trade_date": "20251218",
+      "execution_trade_date": "20251219",
+      "symbol": "002085",
+      "order_reason": "phase_geometry_preheat_full",
+      "state_machine_label": "neutral_hold",
+      "forward_return_10": 0.09188464,
+      "max_adverse_return_10": 0.02347418,
+      "event_state": "event_neutral",
+      "regime_proxy_semantic": "sentiment_overdrive_transition_proxy"
+    }
+  ],
+  "interpretation": [
+    "V1.29I audits whether the current primary replay's late-preheat full adds actually align with the newly lawful full_pre supervision layer.",
+    "This is governance-only: it identifies over-escalated preheat entries without reopening replay tuning."
+  ]
+}

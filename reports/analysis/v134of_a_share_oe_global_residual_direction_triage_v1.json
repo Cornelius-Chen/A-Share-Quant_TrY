@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "backlog_count": 8,
+    "internal_manual_count": 3,
+    "external_source_count": 2,
+    "authoritative_status": "global_residual_backlog_should_be_worked_by_group_not_as_flat_list"
+  },
+  "triage_rows": [
+    {
+      "component": "source_internal_manual",
+      "direction": "treat_source_manual_closure_as_first_internal_backlog_lane"
+    },
+    {
+      "component": "replay_internal_build",
+      "direction": "keep_replay_internal_build_backlog_frozen_until_market_context_boundary_moves"
+    },
+    {
+      "component": "replay_external_source",
+      "direction": "treat_external_index_source_acquisition_as_separate_future_frontier"
+    },
+    {
+      "component": "governance_hold",
+      "direction": "retain_governance_holds_closed_while_other_backlog_groups_remain_open"
+    }
+  ],
+  "interpretation": [
+    "The remaining work should now be steered by backlog groups instead of by a flat undifferentiated to-do list.",
+    "This separates what can be closed internally now from what is truly waiting on future raw source acquisition."
+  ]
+}

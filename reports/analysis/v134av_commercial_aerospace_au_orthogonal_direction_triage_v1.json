@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134av_commercial_aerospace_au_orthogonal_direction_triage_v1",
+    "authoritative_status": "retain_early_severe_reclaim_as_weak_candidate_only",
+    "triage_csv": "data\\training\\commercial_aerospace_au_orthogonal_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "next_orthogonal_family_candidate",
+      "status": "weak_candidate_only",
+      "detail": "early_severe_reclaim, primary_gap = 2.933333"
+    },
+    {
+      "component": "same_family_false_first_reversal",
+      "status": "already_at_stopline",
+      "detail": "Do not reopen the false-first-reversal family after singularity was confirmed."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Orthogonal-family scanning does not change replay readiness."
+    }
+  ],
+  "interpretation": [
+    "V1.34AV converts the orthogonal-family quick scan into the next supervision direction judgment.",
+    "A weak candidate means the branch should name the next likely family but avoid opening another deep local line yet."
+  ]
+}

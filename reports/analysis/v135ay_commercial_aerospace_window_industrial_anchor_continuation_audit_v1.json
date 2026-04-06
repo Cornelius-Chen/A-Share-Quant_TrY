@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 1,
+    "covered_window_count": 1,
+    "negative_support_sample_ready_count": 1,
+    "watch_pullback_only_count": 1,
+    "negative_net_flow_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_004",
+      "representative_symbol_count": "1",
+      "industrial_anchor_confirmation_state": "real_industrial_anchor_confirmed",
+      "board_alignment_state": "lockout_misaligned_board_response",
+      "structure_state": "target_rebounded_but_failed_to_upgrade",
+      "final_training_admission": "negative_support_sample_ready",
+      "strict_supervisor_conclusion": "Window 004 is now a released negative-support sample: the industrial anchor was real and the target name did produce a local rebound, but the board stayed misaligned, structure remained below prior highs, volume did not expand enough, and net flow stayed negative. It should train true-logic-but-not-tradable misalignment."
+    }
+  ],
+  "interpretation": [
+    "Window 004 is no longer just a vague under-review case: it now has a symbol-level structure slice.",
+    "The industrial anchor is real, but the board remained misaligned and the target stayed below a valid continuation breakout standard.",
+    "This is the correct negative-support bucket for true-logic-but-not-tradable behavior."
+  ]
+}

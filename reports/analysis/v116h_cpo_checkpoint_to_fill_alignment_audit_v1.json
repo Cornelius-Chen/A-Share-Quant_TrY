@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116h_cpo_checkpoint_to_fill_alignment_audit_v1",
+    "row_count": 9,
+    "strictly_after_checkpoint_count": 9,
+    "strict_alignment_confirmed": true,
+    "recommended_next_posture": "treat_checkpoint_to_fill_as_reported_and_not_as_a_remaining_semantic_gap"
+  },
+  "alignment_rows": [
+    {
+      "signal_trade_date": "2023-12-20",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 35.2315,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 78.5064,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 87.02,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 124.9,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 196.1,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 89.1513,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 43.8707,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 77.5011,
+      "strictly_after_checkpoint": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "timing_bucket": "intraday_same_session",
+      "checkpoint_time": "10:30",
+      "execution_bar_time": "11:00",
+      "execution_price": 37.9739,
+      "strictly_after_checkpoint": true
+    }
+  ],
+  "interpretation": [
+    "V1.16H audits the actual checkpoint-to-fill mapping for intraday same-session strict signals using Baostock 30min bars.",
+    "This is meant to close the ambiguity raised in adversarial review about whether the replay was truly using the next tradable bar after the visible checkpoint.",
+    "If all rows fill strictly after checkpoint, the remaining issue is reporting clarity, not execution semantics."
+  ]
+}

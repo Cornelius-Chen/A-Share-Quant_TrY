@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jc_commercial_aerospace_symbol_named_heat_source_search_audit_v1",
+    "searched_source_count": 4,
+    "retained_symbol_named_heat_source_count": 1,
+    "second_symbol_named_heat_source_found": false,
+    "discarded_theme_heat_source_count": 2,
+    "forward_unresolved_heat_anchor_count": 1,
+    "search_csv": "data\\training\\commercial_aerospace_symbol_named_heat_source_search_v1.csv",
+    "authoritative_rule": "the current local commercial-aerospace event source universe still contains only one retained symbol-named hard heat source: ca_source_007; discarded theme-heat lists and unresolved manual anchors do not create a second hard counterpanel"
+  },
+  "source_rows": [
+    {
+      "registry_id": "ca_source_004",
+      "record_type": "historical_source",
+      "layer": "theme_heat",
+      "source_name": "同花顺-商业航天板块爆发",
+      "event_scope": "theme_heat",
+      "decisive_semantic": "discarded_theme_heat",
+      "decisive_reason": "non_decisive_theme_heat_excluded",
+      "decisive_retained": "False",
+      "source_class": "discarded_symbol_list_theme_heat_source",
+      "search_reading": "theme-heat source contains strong names but is explicitly discarded as non-decisive and therefore cannot thicken the hard counterpanel"
+    },
+    {
+      "registry_id": "ca_source_007",
+      "record_type": "historical_source",
+      "layer": "theme_heat",
+      "source_name": "同花顺-商业航天板块集体跳水",
+      "event_scope": "theme_heat",
+      "decisive_semantic": "turning_point_watch",
+      "decisive_reason": "decisive_turning_point_risk",
+      "decisive_retained": "True",
+      "source_class": "retained_symbol_named_turning_point_heat_source",
+      "search_reading": "hard symbol-named theme-heat source retained as decisive turning-point evidence"
+    },
+    {
+      "registry_id": "ca_source_012",
+      "record_type": "historical_source",
+      "layer": "theme_heat",
+      "source_name": "概念资金流/盘面报道-中超控股居前",
+      "event_scope": "theme_heat",
+      "decisive_semantic": "discarded_theme_heat",
+      "decisive_reason": "non_decisive_theme_heat_excluded",
+      "decisive_retained": "False",
+      "source_class": "discarded_symbol_list_theme_heat_source",
+      "search_reading": "theme-heat source contains strong names but is explicitly discarded as non-decisive and therefore cannot thicken the hard counterpanel"
+    },
+    {
+      "registry_id": "ca_anchor_004",
+      "record_type": "forward_anchor",
+      "layer": "theme_heat",
+      "source_name": "板块情绪扩散/镜像龙头切换",
+      "event_scope": "sentiment_transition",
+      "decisive_semantic": "turning_point_watch",
+      "decisive_reason": "sentiment_transition_anchor",
+      "decisive_retained": "True",
+      "source_class": "forward_unresolved_manual_heat_anchor",
+      "search_reading": "manual forward anchor records a future sentiment-transition class but is unresolved and cannot count as a historical symbol-named hard source"
+    }
+  ],
+  "interpretation": [
+    "V1.34JC shifts the search from strong symbols to hard event-source inventory.",
+    "The current negative result is meaningful: the hard counterpanel remains single-case because the local event universe itself only contains one retained symbol-named decisive heat source."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134is_commercial_aerospace_outside_named_second_carrier_supervision_audit_v1",
+    "current_primary_case_count": 1,
+    "outside_named_watch_count": 1,
+    "outside_named_watch_has_event_backing": false,
+    "outside_named_watch_local_top_day_count": 3,
+    "supervision_csv": "data\\training\\commercial_aerospace_outside_named_second_carrier_supervision_v1.csv",
+    "authoritative_rule": "000738 is now a lawful outside-named second-carrier watch because it shows repeated board-local rebound leadership and breakout strength, but it remains blocked from promotion until retained event backing and downstream role/followthrough labeling exist"
+  },
+  "supervision_rows": [
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "supervision_role": "current_primary_event_backed_carrier_case",
+      "local_top_day_count": 0,
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "post_lockout_max_return_from_start": 0.45173383,
+      "event_backing_present": true,
+      "board_local_rebound_leadership_present": false,
+      "remaining_blockers": "needs_peer_case_not_more_self_confirmation",
+      "learning_reading": "needs_peer_case_not_more_self_confirmation"
+    },
+    {
+      "symbol": "000738",
+      "display_name": "航发控制",
+      "supervision_role": "outside_named_local_leadership_second_carrier_watch",
+      "local_top_day_count": 3,
+      "post_lockout_max_vs_pre_lockout_peak": 0.16911473,
+      "post_lockout_max_return_from_start": 0.34720952,
+      "event_backing_present": false,
+      "board_local_rebound_leadership_present": true,
+      "remaining_blockers": "no_retained_event_seed|no_event_attention_role_label|followthrough_not_extended_to_outside_named_watch",
+      "learning_reading": "outside-named formal/core symbol has repeated locked-board leadership and breakout strength, but it still lacks retained event backing and downstream role labeling required for second-carrier promotion"
+    }
+  ],
+  "interpretation": [
+    "V1.34IS promotes 000738 into the supervision stack without pretending it already satisfies the same evidence standard as the current primary carrier case.",
+    "The point is to separate 'worth searching next' from 'already ready for second-carrier promotion'."
+  ]
+}

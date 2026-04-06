@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kt_a_share_market_foundation_audit_v1",
+    "daily_symbol_count": 8,
+    "daily_identity_overlap_count": 8,
+    "index_symbol_count": 3,
+    "intraday_trade_date_count": 102,
+    "intraday_first_trade_date": "20251103",
+    "intraday_last_trade_date": "20260403",
+    "market_status_csv": "data\\training\\a_share_market_foundation_status_v1.csv",
+    "authoritative_output": "a_share_market_foundation_ready_for_direction_triage"
+  },
+  "market_rows": [
+    {
+      "market_component": "daily_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_daily_market_registry_v1.csv",
+      "coverage_note": "daily_symbol_count = 8"
+    },
+    {
+      "market_component": "index_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_index_market_registry_v1.csv",
+      "coverage_note": "index_symbol_count = 3"
+    },
+    {
+      "market_component": "intraday_coverage_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_intraday_coverage_registry_v1.csv",
+      "coverage_note": "intraday_trade_date_count = 102"
+    },
+    {
+      "market_component": "board_state_backlog",
+      "component_state": "backlog_materialized_not_yet_derived",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_board_state_backlog_v1.csv",
+      "coverage_note": "board_state_backlog_count = 4"
+    }
+  ],
+  "interpretation": [
+    "V1.34KT completes the first market workstream pass by materializing daily symbol coverage, index coverage, and intraday raw-zip coverage without exploding storage into full minute-level symbol tables.",
+    "Board-state, breadth, and limit-halt surfaces remain explicit backlog items, which is consistent with the storage-first information-center design."
+  ]
+}

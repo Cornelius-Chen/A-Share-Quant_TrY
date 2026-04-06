@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "corrected_bound_count": 15,
+    "corrected_missing_count": 2,
+    "corrected_via_effective_trade_date_count": 1,
+    "authoritative_status": "shadow_corrected_binding_view_is_useful_for_replay_only_and_should_not_replace_base_binding"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_corrected_binding",
+      "direction": "retain_as_shadow_only_overlay_for_replay_rechecks"
+    },
+    {
+      "component": "base_binding_registry",
+      "direction": "keep_unchanged_and_do_not_promote_effective_trade_date_logic_into_the_base_tradeable_context_view"
+    },
+    {
+      "component": "next_move",
+      "direction": "use_the_shadow_corrected_view_only_for_replay_internal_build_rechecks_before_any_broader_promotion_decision"
+    }
+  ],
+  "interpretation": [
+    "The corrected binding view is useful because it removes the only internally fixable replay residual without altering PTI timestamps.",
+    "That utility is still replay-local. It should remain an overlay until a later explicit promotion decision exists."
+  ]
+}

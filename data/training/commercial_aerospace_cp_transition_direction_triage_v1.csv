@@ -1,0 +1,4 @@
+﻿component,status,detail
+reduce_branch,keep_frozen,Reduce remains frozen as handoff package and may only accept local residue maintenance.
+intraday_add_frontier,approved_but_not_opened_now,"The later frontier should be intraday add, but this step preserves the user’s instruction not to start it immediately."
+scope_guardrail,mandatory,"When add later opens, it must inherit board-level vetoes but must not inherit reduce execution authority."

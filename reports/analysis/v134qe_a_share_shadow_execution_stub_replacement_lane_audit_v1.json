@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "stub_row_count": 17,
+    "lane_overlay_row_count": 15,
+    "excluded_boundary_count": 2,
+    "status_csv": "data\\training\\a_share_shadow_execution_stub_replacement_lane_status_v1.csv",
+    "authoritative_output": "a_share_shadow_execution_stub_replacement_lane_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "base_shadow_execution_stub",
+      "component_state": "retained_base_stub_registry",
+      "stub_row_count": 17,
+      "lane_overlay_row_count": 15,
+      "excluded_boundary_count": 2
+    },
+    {
+      "component": "shadow_stub_replacement_lane",
+      "component_state": "shadow_only_overlay_lane_materialized",
+      "stub_row_count": 17,
+      "lane_overlay_row_count": 15,
+      "excluded_boundary_count": 2
+    },
+    {
+      "component": "replacement_boundary",
+      "component_state": "do_not_replace_base_stub_globally_while_boundary_rows_stay_excluded",
+      "stub_row_count": 17,
+      "lane_overlay_row_count": 15,
+      "excluded_boundary_count": 2
+    }
+  ],
+  "interpretation": [
+    "The shadow execution stub now has an explicit replacement lane instead of a single undifferentiated replacement decision.",
+    "That lane covers the 15-row shadow-only candidate journal overlay while the 2 external boundary rows remain outside the replacement scope."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129n_commercial_aerospace_transfer_target_selection_v1",
+    "current_frozen_board": "commercial_aerospace",
+    "current_frozen_status": "freeze_commercial_aerospace_primary_plus_governance_and_shift_to_transfer_preparation",
+    "portable_methodology_status": "commercial_aerospace_primary_is_packaged_for_cross_board_transfer_without_mixing_archetypes",
+    "recommended_primary_transfer_target": "BK0480",
+    "recommended_primary_transfer_board_name": "航天航空",
+    "shadow_later_target": "BK0808",
+    "selection_rule": "choose_the_closest_adjacent_board_that_maximizes_portable_grammar_fit_without_mixing_archetypes"
+  },
+  "candidate_rows": [
+    {
+      "sector_id": "BK0480",
+      "board_name": "航天航空",
+      "queue_role": "alternate_shadow",
+      "composite": 0.505195,
+      "active_days": 72,
+      "recommended_core_symbols": [
+        "000738",
+        "600118"
+      ],
+      "commercial_aerospace_primary_overlap_count": 1,
+      "commercial_aerospace_primary_overlap_ratio": 0.333333,
+      "archetype_fit_score": 0.82,
+      "thematic_noise_risk": 0.28,
+      "transfer_readiness_score": 0.462818,
+      "verdict": "recommended_primary_transfer_target",
+      "reason": "Closest adjacent aerospace board, retains direct overlap with the commercial-aerospace authority surface, and is narrow enough to test portable grammar without collapsing into a mixed concept basket."
+    },
+    {
+      "sector_id": "BK0808",
+      "board_name": "军民融合",
+      "queue_role": "alternate_shadow",
+      "composite": 0.473136,
+      "active_days": 149,
+      "recommended_core_symbols": [
+        "300474"
+      ],
+      "commercial_aerospace_primary_overlap_count": 0,
+      "commercial_aerospace_primary_overlap_ratio": 0.0,
+      "archetype_fit_score": 0.41,
+      "thematic_noise_risk": 0.72,
+      "transfer_readiness_score": 0.175598,
+      "verdict": "shadow_only_later_transfer_target",
+      "reason": "Broader mixed-theme board with weaker semantic alignment; keep queued as a later shadow transfer target after a cleaner adjacent-board validation."
+    }
+  ],
+  "blocked_rows": [
+    {
+      "blocked_direction": "direct_rule_clone",
+      "blocked_item": "tail_weakdrift_full",
+      "reason": "Rule names and exact replay geometry are commercial-aerospace local semantics, not portable execution grammar."
+    },
+    {
+      "blocked_direction": "chronology_clone",
+      "blocked_item": "main_window_20260112_to_20260212_and_post_window_after_20260212",
+      "reason": "Local chronology windows must be relearned on the destination board."
+    },
+    {
+      "blocked_direction": "symbol_fact_clone",
+      "blocked_item": "688568/600118/600879_help_and_300342/000738/601698_pressure",
+      "reason": "Symbol pressure maps are board-local facts and cannot be transplanted."
+    },
+    {
+      "blocked_direction": "archetype_mixing",
+      "blocked_item": "commercial_aerospace_thematic_impulse_to_military_civil_fusion",
+      "reason": "Transfer must not mix a catalyst-concentrated thematic-impulse archetype into a broader mixed-concept board."
+    }
+  ],
+  "interpretation": [
+    "V1.29N converts transfer preparation from a vague next-step into an explicit board-selection decision.",
+    "BK0480 is preferred because it is adjacent enough to validate portable grammar but narrower and cleaner than BK0808."
+  ]
+}

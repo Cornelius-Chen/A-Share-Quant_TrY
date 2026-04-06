@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123l_cpo_heat_guardrail_drawdown_interval_compare_v1",
+    "interval_count": 3,
+    "variants_compared": [
+      "uncapped_reference",
+      "balanced_heat_guardrail",
+      "strict_heat_guardrail"
+    ],
+    "recommended_next_posture": "decide_if_heat_guardrail_should_be_prioritized_before_new_risk_side_factor_work"
+  },
+  "interval_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "uncapped_drawdown": 0.493548,
+      "uncapped_peak_equity": 1985805.896,
+      "uncapped_trough_equity": 1005714.396,
+      "uncapped_peak_cash_ratio": 0.077815,
+      "uncapped_trough_cash_ratio": 0.153647,
+      "uncapped_peak_symbols": "300308,300502,300757",
+      "uncapped_trough_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_drawdown": 0.376524,
+      "balanced_heat_guardrail_drawdown_improvement": 0.117024,
+      "balanced_heat_guardrail_peak_cash_ratio": 0.258046,
+      "balanced_heat_guardrail_trough_cash_ratio": 0.413883,
+      "balanced_heat_guardrail_peak_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_trough_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 2500,
+          "trough_qty_reduction_vs_uncapped": 2500
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 300,
+          "trough_qty_reduction_vs_uncapped": 300
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ],
+      "strict_heat_guardrail_drawdown": 0.327114,
+      "strict_heat_guardrail_drawdown_improvement": 0.166434,
+      "strict_heat_guardrail_peak_cash_ratio": 0.338397,
+      "strict_heat_guardrail_trough_cash_ratio": 0.502904,
+      "strict_heat_guardrail_peak_symbols": "300308,300502,300757",
+      "strict_heat_guardrail_trough_symbols": "300308,300502,300757",
+      "strict_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 2900,
+          "trough_qty_reduction_vs_uncapped": 2900
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 1300,
+          "trough_qty_reduction_vs_uncapped": 1300
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "uncapped_drawdown": 0.273025,
+      "uncapped_peak_equity": 1600077.896,
+      "uncapped_trough_equity": 1163217.396,
+      "uncapped_peak_cash_ratio": 0.096573,
+      "uncapped_trough_cash_ratio": 0.132843,
+      "uncapped_peak_symbols": "300308,300502,300757",
+      "uncapped_trough_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_drawdown": 0.191427,
+      "balanced_heat_guardrail_drawdown_improvement": 0.081598,
+      "balanced_heat_guardrail_peak_cash_ratio": 0.311233,
+      "balanced_heat_guardrail_trough_cash_ratio": 0.384916,
+      "balanced_heat_guardrail_peak_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_trough_symbols": "300308,300502,300757",
+      "balanced_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 2500,
+          "trough_qty_reduction_vs_uncapped": 2500
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 300,
+          "trough_qty_reduction_vs_uncapped": 300
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ],
+      "strict_heat_guardrail_drawdown": 0.164158,
+      "strict_heat_guardrail_drawdown_improvement": 0.108867,
+      "strict_heat_guardrail_peak_cash_ratio": 0.400715,
+      "strict_heat_guardrail_trough_cash_ratio": 0.479415,
+      "strict_heat_guardrail_peak_symbols": "300308,300502,300757",
+      "strict_heat_guardrail_trough_symbols": "300308,300502,300757",
+      "strict_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 2900,
+          "trough_qty_reduction_vs_uncapped": 2900
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 1300,
+          "trough_qty_reduction_vs_uncapped": 1300
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "uncapped_drawdown": 0.193702,
+      "uncapped_peak_equity": 1091357.0504,
+      "uncapped_trough_equity": 879959.112,
+      "uncapped_peak_cash_ratio": 0.680215,
+      "uncapped_trough_cash_ratio": 0.742777,
+      "uncapped_peak_symbols": "300308,300502",
+      "uncapped_trough_symbols": "300308,300502",
+      "balanced_heat_guardrail_drawdown": 0.193702,
+      "balanced_heat_guardrail_drawdown_improvement": 0.0,
+      "balanced_heat_guardrail_peak_cash_ratio": 0.680215,
+      "balanced_heat_guardrail_trough_cash_ratio": 0.742777,
+      "balanced_heat_guardrail_peak_symbols": "300308,300502",
+      "balanced_heat_guardrail_trough_symbols": "300308,300502",
+      "balanced_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ],
+      "strict_heat_guardrail_drawdown": 0.193702,
+      "strict_heat_guardrail_drawdown_improvement": 0.0,
+      "strict_heat_guardrail_peak_cash_ratio": 0.680215,
+      "strict_heat_guardrail_trough_cash_ratio": 0.742777,
+      "strict_heat_guardrail_peak_symbols": "300308,300502",
+      "strict_heat_guardrail_trough_symbols": "300308,300502",
+      "strict_heat_guardrail_qty_diffs_vs_uncapped": [
+        {
+          "symbol": "300308",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_reduction_vs_uncapped": 0,
+          "trough_qty_reduction_vs_uncapped": 0
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.23L compares the three main research-baseline heat variants on the same three drawdown windows already identified on the uncapped line.",
+    "The goal is to answer a concrete question: how much of the pain is removed simply by carrying less, before any new reduce or close factor is added?"
+  ]
+}

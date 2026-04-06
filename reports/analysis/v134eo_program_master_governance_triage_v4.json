@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v134eo_program_master_governance_triage_v4",
+    "authoritative_status": "open_program_frontier_with_intraday_add_supervision_only_and_reduce_frozen",
+    "line_count": 6,
+    "frozen_line_count": 5,
+    "opened_supervision_line_count": 1,
+    "authoritative_rule": "the program may now progress inside intraday add, but only at supervision scope while reduce stays frozen"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_branch",
+      "status": "keep_frozen",
+      "rationale": "reduce remains complete enough and should not reopen while add is starting"
+    },
+    {
+      "component": "intraday_add_frontier",
+      "status": "opened_supervision_only",
+      "rationale": "the next frontier is now active, but only in registry / visibility / labeling layers"
+    },
+    {
+      "component": "execution_authority",
+      "status": "blocked",
+      "rationale": "opening supervision does not grant execution or replay-facing authority"
+    }
+  ],
+  "interpretation": [
+    "V1.34EO refreshes the program-level governance judgment after the add frontier shift.",
+    "The new global sentence is simple: reduce stays frozen, add is open, but only as supervision."
+  ]
+}

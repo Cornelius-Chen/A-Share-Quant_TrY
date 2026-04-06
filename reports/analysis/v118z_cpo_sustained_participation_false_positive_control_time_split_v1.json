@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118z_cpo_sustained_participation_false_positive_control_time_split_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.597222,
+    "min_test_balanced_accuracy": 0.375,
+    "stability_posture": "control_layer_unstable_under_time_split",
+    "recommended_next_posture": "send_XYZ_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_best_threshold": 592782000.0,
+      "train_best_balanced_accuracy": 0.9,
+      "test_balanced_accuracy": 0.583333,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.166667
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_best_threshold": 759664000.0,
+      "train_best_balanced_accuracy": 0.75,
+      "test_balanced_accuracy": 0.833333,
+      "test_positive_recall": 0.666667,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_best_threshold": 983834000.0,
+      "train_best_balanced_accuracy": 0.660714,
+      "test_balanced_accuracy": 0.375,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.18Z checks whether the false-positive control survives crude year splits.",
+    "A control idea that only improves one full-sample number is still not usable if chronology falls apart.",
+    "This closes the one hardening cycle allocated to the sustained-participation branch before the next triage."
+  ]
+}

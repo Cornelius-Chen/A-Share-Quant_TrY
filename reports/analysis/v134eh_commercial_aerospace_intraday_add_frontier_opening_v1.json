@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v134eh_commercial_aerospace_intraday_add_frontier_opening_v1",
+    "opening_gate_count": 9,
+    "playbook_step_count": 5,
+    "frontier_name": "intraday_add",
+    "frontier_state": "opened_supervision_only",
+    "first_build_step": "intraday_add_supervision_registry_v1",
+    "opening_csv": "data\\training\\commercial_aerospace_intraday_add_frontier_opening_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_frontier_opening_ready_for_direction_triage"
+  },
+  "opening_rows": [
+    {
+      "opening_stage": "explicit_frontier_shift",
+      "status": "executed_now",
+      "detail": "The current user continuation is treated as the explicit shift that opens intraday add research."
+    },
+    {
+      "opening_stage": "frontier_scope",
+      "status": "supervision_only",
+      "detail": "Intraday add opens as a supervision frontier, not as an execution-facing or replay-facing branch."
+    },
+    {
+      "opening_stage": "upstream_veto_stack",
+      "status": "retained",
+      "detail": "Board cooling lockout, local-only rebound guard, and board revival unlock remain upstream constraints."
+    },
+    {
+      "opening_stage": "reduce_authority",
+      "status": "not_inherited",
+      "detail": "Intraday add does not inherit reduce execution authority or reopen reduce frozen mainline."
+    },
+    {
+      "opening_stage": "first_build_step",
+      "status": "approved",
+      "detail": "The first add artifact should be an intraday add supervision registry rather than an execution rule or replay lane."
+    }
+  ],
+  "interpretation": [
+    "V1.34EH is the explicit frontier shift: intraday add is no longer deferred, but it only opens as a supervision frontier.",
+    "The opening is intentionally narrow so the branch can begin without inheriting reduce execution claims or bypassing board-level vetoes."
+  ]
+}

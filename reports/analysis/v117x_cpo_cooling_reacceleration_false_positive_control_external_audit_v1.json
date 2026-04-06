@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117x_cpo_cooling_reacceleration_false_positive_control_external_audit_v1",
+    "candidate_name": "cooling_reacceleration_overheat_control_candidate",
+    "positive_mean_score": 879441400.0,
+    "negative_mean_score": 152286090.909091,
+    "controlled_gap_positive_minus_negative": 727155309.090909,
+    "best_threshold": 489402000.0,
+    "best_balanced_accuracy": 0.772727,
+    "recommended_next_posture": "time_split_validate_controlled_score_if_false_positive_control_is_material"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1445618000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 0,
+      "tn": 11,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 1.0,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": 1374609000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.554545
+    },
+    {
+      "threshold": 1189794000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.654545
+    },
+    {
+      "threshold": 1146257000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": 1137611000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": 931228000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 663769000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.618182
+    },
+    {
+      "threshold": 608624000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.718182
+    },
+    {
+      "threshold": 535264000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.672727
+    },
+    {
+      "threshold": 489402000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.772727
+    },
+    {
+      "threshold": 296585000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.727273
+    },
+    {
+      "threshold": -515305000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.681818
+    },
+    {
+      "threshold": -590096000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.636364
+    },
+    {
+      "threshold": -623718000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.590909
+    },
+    {
+      "threshold": -866335000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -1150953000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.17X asks a very narrow question: does the overheat-control layer materially improve broader add-pool discrimination?",
+    "If not, the control idea should be dropped immediately rather than becoming another same-family side tunnel.",
+    "If yes, it still remains candidate-only until the next time-split check."
+  ]
+}

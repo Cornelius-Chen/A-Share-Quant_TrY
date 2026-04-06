@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "summary_row_count": 1,
+    "watchlist_row_count": 2,
+    "top_watch_symbol": "600760",
+    "top_watch_primary_theme_slug": "defense_industry",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "600760,601899",
+    "authoritative_output": "a_share_internal_hot_news_program_symbol_watch_summary_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_symbol_watch_summary",
+      "component_state": "read_ready_internal_only",
+      "metric": "summary_row_count",
+      "value": "1"
+    },
+    {
+      "component": "watchlist_coverage",
+      "component_state": "materialized",
+      "metric": "watchlist_row_count",
+      "value": "2"
+    },
+    {
+      "component": "top_watch_symbol",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "component": "top_watch_theme",
+      "component_state": "materialized",
+      "metric": "top_watch_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_watch_bundle",
+      "component_state": "materialized",
+      "metric": "top_watch_symbols_top5",
+      "value": "600760,601899"
+    },
+    {
+      "component": "top_watch_linkage",
+      "component_state": "materialized",
+      "metric": "top_watch_linkage_class",
+      "value": "direct_beneficiary"
+    }
+  ],
+  "interpretation": [
+    "This summary compresses the symbol watchlist packet into a single-row payload for fast polling consumers.",
+    "It preserves the top watch symbol plus a top-five bundle, so the consumer can stay on one row for the first routing pass.",
+    "It also exposes linkage class, so direct beneficiaries can be separated from weaker proxies at summary level.",
+    "Primary-theme governance remains visible at the summary layer, keeping overlap handling below the consumer boundary."
+  ]
+}

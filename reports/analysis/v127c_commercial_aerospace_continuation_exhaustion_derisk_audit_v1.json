@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127c_commercial_aerospace_continuation_exhaustion_derisk_audit_v1",
+    "reference_v126o_final_equity": 1227143.0725,
+    "reference_v126o_max_drawdown": 0.14258108,
+    "reference_v126q_final_equity": 1189482.711,
+    "reference_v126q_max_drawdown": 0.13356069,
+    "reference_v127a_best_variant": "broad_half_reference",
+    "reference_v127a_best_final_equity": 1249251.8292,
+    "reference_v127a_best_max_drawdown": 0.19378829,
+    "best_variant": "continuation_exhaustion_half",
+    "best_variant_final_equity": 1218948.6171,
+    "best_variant_max_drawdown": 0.21327301,
+    "best_variant_executed_order_count": 48
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "executed_order_count": 150,
+      "final_equity": 1246105.7532,
+      "max_drawdown": 0.22518706
+    },
+    {
+      "variant": "continuation_exhaustion_half",
+      "executed_order_count": 48,
+      "final_equity": 1218948.6171,
+      "max_drawdown": 0.21327301
+    },
+    {
+      "variant": "continuation_exhaustion_full",
+      "executed_order_count": 25,
+      "final_equity": 1198891.13,
+      "max_drawdown": 0.22231584
+    }
+  ],
+  "interpretation": [
+    "V1.27C narrows downside further: only names in risk/overdrive windows with still-active continuation narrative are de-risked, i.e. continuation-exhaustion instead of general weakness.",
+    "This tests whether commercial-aerospace downside is really about story continuation failing under overheated structure rather than broad risk-off alone."
+  ]
+}

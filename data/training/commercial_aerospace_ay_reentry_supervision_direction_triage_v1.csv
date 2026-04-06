@@ -1,0 +1,4 @@
+﻿component,status,detail
+post_exit_reentry_supervision_spec,frozen,"seed_count = 3, dominant_family = delayed_rebound_reentry_gap"
+next_supervision_build,approved_for_seed_level_reentry_supervision,Continue with seed-level rebuild timing supervision before any simulation or replay work.
+reentry_simulator_lane,still_blocked,No reentry simulator or replay lane is authorized from seed labels alone.

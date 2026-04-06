@@ -1,0 +1,557 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123r_cpo_daily_residual_core_stress_audit_v1",
+    "candidate_name": "held_pair_deterioration_score",
+    "positive_interval_row_count": 89,
+    "core_stress_row_count": 45,
+    "fringe_row_count": 44,
+    "core_drawdown_median_threshold": 0.109215,
+    "core_mean_score": 0.33515,
+    "fringe_mean_score": 0.545276,
+    "core_minus_fringe_mean_score_gap": -0.210126,
+    "core_above_fringe_rate": 0.488889,
+    "core_focus_posture": "diffuse_inside_interval",
+    "recommended_next_posture": "granular_boundary_audit_against_core_and_fringe"
+  },
+  "core_rows": [
+    {
+      "trade_date": "2023-06-20",
+      "drawdown_depth": 0.0,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -0.741751
+    },
+    {
+      "trade_date": "2023-06-21",
+      "drawdown_depth": 0.026046,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 5.881167
+    },
+    {
+      "trade_date": "2023-06-26",
+      "drawdown_depth": 0.049252,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 4.870397
+    },
+    {
+      "trade_date": "2023-06-27",
+      "drawdown_depth": 0.054193,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.400046
+    },
+    {
+      "trade_date": "2023-06-28",
+      "drawdown_depth": 0.067096,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 3.643397
+    },
+    {
+      "trade_date": "2023-06-29",
+      "drawdown_depth": 0.054636,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -3.162462
+    },
+    {
+      "trade_date": "2023-06-30",
+      "drawdown_depth": 0.044498,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -3.087583
+    },
+    {
+      "trade_date": "2023-07-03",
+      "drawdown_depth": 0.046533,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.513591
+    },
+    {
+      "trade_date": "2023-07-04",
+      "drawdown_depth": 0.040592,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -0.734495
+    },
+    {
+      "trade_date": "2023-07-05",
+      "drawdown_depth": 0.056898,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 3.659255
+    },
+    {
+      "trade_date": "2023-07-06",
+      "drawdown_depth": 0.053566,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -1.619874
+    },
+    {
+      "trade_date": "2023-07-07",
+      "drawdown_depth": 0.045764,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 0.622602
+    },
+    {
+      "trade_date": "2023-07-10",
+      "drawdown_depth": 0.053658,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.194556
+    },
+    {
+      "trade_date": "2023-07-11",
+      "drawdown_depth": 0.047161,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.031165
+    },
+    {
+      "trade_date": "2023-07-12",
+      "drawdown_depth": 0.067466,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 5.781601
+    },
+    {
+      "trade_date": "2023-07-13",
+      "drawdown_depth": 0.043157,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -5.927882
+    },
+    {
+      "trade_date": "2023-07-14",
+      "drawdown_depth": 0.038822,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.499182
+    },
+    {
+      "trade_date": "2023-07-17",
+      "drawdown_depth": 0.031968,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.373678
+    },
+    {
+      "trade_date": "2023-07-18",
+      "drawdown_depth": 0.044234,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 3.968892
+    },
+    {
+      "trade_date": "2023-07-19",
+      "drawdown_depth": 0.048223,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.011954
+    },
+    {
+      "trade_date": "2023-07-20",
+      "drawdown_depth": 0.080164,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 7.208246
+    },
+    {
+      "trade_date": "2023-07-21",
+      "drawdown_depth": 0.083104,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 3.034224
+    },
+    {
+      "trade_date": "2023-07-24",
+      "drawdown_depth": 0.080835,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -1.728465
+    },
+    {
+      "trade_date": "2023-07-25",
+      "drawdown_depth": 0.075131,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.591847
+    },
+    {
+      "trade_date": "2023-07-26",
+      "drawdown_depth": 0.085442,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.914059
+    },
+    {
+      "trade_date": "2023-07-27",
+      "drawdown_depth": 0.089014,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.706833
+    },
+    {
+      "trade_date": "2023-07-28",
+      "drawdown_depth": 0.09151,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 0.65718
+    },
+    {
+      "trade_date": "2023-07-31",
+      "drawdown_depth": 0.091226,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 0.217981
+    },
+    {
+      "trade_date": "2023-08-01",
+      "drawdown_depth": 0.080384,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -3.567282
+    },
+    {
+      "trade_date": "2023-08-02",
+      "drawdown_depth": 0.080373,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -0.942057
+    },
+    {
+      "trade_date": "2023-08-03",
+      "drawdown_depth": 0.085876,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.003028
+    },
+    {
+      "trade_date": "2023-08-04",
+      "drawdown_depth": 0.06991,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -5.671863
+    },
+    {
+      "trade_date": "2023-08-07",
+      "drawdown_depth": 0.066388,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -1.220735
+    },
+    {
+      "trade_date": "2023-08-08",
+      "drawdown_depth": 0.077915,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.852729
+    },
+    {
+      "trade_date": "2023-08-09",
+      "drawdown_depth": 0.091332,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 5.787808
+    },
+    {
+      "trade_date": "2023-08-10",
+      "drawdown_depth": 0.096184,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.033609
+    },
+    {
+      "trade_date": "2023-08-11",
+      "drawdown_depth": 0.100229,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.267457
+    },
+    {
+      "trade_date": "2023-08-14",
+      "drawdown_depth": 0.097882,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.303562
+    },
+    {
+      "trade_date": "2023-08-15",
+      "drawdown_depth": 0.100779,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 1.089847
+    },
+    {
+      "trade_date": "2023-08-16",
+      "drawdown_depth": 0.103613,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 2.49615
+    },
+    {
+      "trade_date": "2023-08-17",
+      "drawdown_depth": 0.100597,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -2.611193
+    },
+    {
+      "trade_date": "2023-08-18",
+      "drawdown_depth": 0.113287,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 4.18469
+    },
+    {
+      "trade_date": "2023-08-21",
+      "drawdown_depth": 0.109215,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.176417
+    },
+    {
+      "trade_date": "2023-08-22",
+      "drawdown_depth": 0.096452,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -4.164615
+    },
+    {
+      "trade_date": "2023-08-23",
+      "drawdown_depth": 0.108837,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": 4.195324
+    },
+    {
+      "trade_date": "2023-08-24",
+      "drawdown_depth": 0.106894,
+      "core_stress_label": false,
+      "held_pair_deterioration_score": -1.040107
+    },
+    {
+      "trade_date": "2023-08-25",
+      "drawdown_depth": 0.128175,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 6.740761
+    },
+    {
+      "trade_date": "2023-08-28",
+      "drawdown_depth": 0.121759,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.816985
+    },
+    {
+      "trade_date": "2023-08-29",
+      "drawdown_depth": 0.116381,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -3.407411
+    },
+    {
+      "trade_date": "2023-08-30",
+      "drawdown_depth": 0.11502,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.110572
+    },
+    {
+      "trade_date": "2023-08-31",
+      "drawdown_depth": 0.116429,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -0.209647
+    },
+    {
+      "trade_date": "2023-09-01",
+      "drawdown_depth": 0.121321,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.471228
+    },
+    {
+      "trade_date": "2023-09-04",
+      "drawdown_depth": 0.120218,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.478241
+    },
+    {
+      "trade_date": "2023-09-05",
+      "drawdown_depth": 0.125721,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.294932
+    },
+    {
+      "trade_date": "2023-09-06",
+      "drawdown_depth": 0.124856,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.428214
+    },
+    {
+      "trade_date": "2023-09-07",
+      "drawdown_depth": 0.131298,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.693894
+    },
+    {
+      "trade_date": "2023-09-08",
+      "drawdown_depth": 0.133734,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 0.038853
+    },
+    {
+      "trade_date": "2023-09-11",
+      "drawdown_depth": 0.125173,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -4.886176
+    },
+    {
+      "trade_date": "2023-09-12",
+      "drawdown_depth": 0.123934,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.5532
+    },
+    {
+      "trade_date": "2023-09-13",
+      "drawdown_depth": 0.130429,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.865515
+    },
+    {
+      "trade_date": "2023-09-14",
+      "drawdown_depth": 0.1362,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.264204
+    },
+    {
+      "trade_date": "2023-09-15",
+      "drawdown_depth": 0.143231,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 4.463384
+    },
+    {
+      "trade_date": "2023-09-18",
+      "drawdown_depth": 0.148778,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.088636
+    },
+    {
+      "trade_date": "2023-09-19",
+      "drawdown_depth": 0.147777,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 0.759863
+    },
+    {
+      "trade_date": "2023-09-20",
+      "drawdown_depth": 0.145948,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.663493
+    },
+    {
+      "trade_date": "2023-09-21",
+      "drawdown_depth": 0.145451,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -0.930664
+    },
+    {
+      "trade_date": "2023-09-22",
+      "drawdown_depth": 0.122024,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -8.051252
+    },
+    {
+      "trade_date": "2023-09-25",
+      "drawdown_depth": 0.131784,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.418024
+    },
+    {
+      "trade_date": "2023-09-26",
+      "drawdown_depth": 0.122066,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.191304
+    },
+    {
+      "trade_date": "2023-09-27",
+      "drawdown_depth": 0.115728,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.590847
+    },
+    {
+      "trade_date": "2023-09-28",
+      "drawdown_depth": 0.110985,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.729316
+    },
+    {
+      "trade_date": "2023-10-09",
+      "drawdown_depth": 0.121219,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.617413
+    },
+    {
+      "trade_date": "2023-10-10",
+      "drawdown_depth": 0.124483,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -0.53959
+    },
+    {
+      "trade_date": "2023-10-11",
+      "drawdown_depth": 0.123419,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.460052
+    },
+    {
+      "trade_date": "2023-10-12",
+      "drawdown_depth": 0.131248,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.554271
+    },
+    {
+      "trade_date": "2023-10-13",
+      "drawdown_depth": 0.140388,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.787094
+    },
+    {
+      "trade_date": "2023-10-16",
+      "drawdown_depth": 0.147711,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.601184
+    },
+    {
+      "trade_date": "2023-10-17",
+      "drawdown_depth": 0.147003,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -0.151485
+    },
+    {
+      "trade_date": "2023-10-18",
+      "drawdown_depth": 0.156054,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.831933
+    },
+    {
+      "trade_date": "2023-10-19",
+      "drawdown_depth": 0.162986,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.908585
+    },
+    {
+      "trade_date": "2023-10-20",
+      "drawdown_depth": 0.16698,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.158056
+    },
+    {
+      "trade_date": "2023-10-23",
+      "drawdown_depth": 0.169507,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 2.544473
+    },
+    {
+      "trade_date": "2023-10-24",
+      "drawdown_depth": 0.168971,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.5735
+    },
+    {
+      "trade_date": "2023-10-25",
+      "drawdown_depth": 0.185804,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.645539
+    },
+    {
+      "trade_date": "2023-10-26",
+      "drawdown_depth": 0.181667,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -2.750907
+    },
+    {
+      "trade_date": "2023-10-27",
+      "drawdown_depth": 0.183078,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -0.078487
+    },
+    {
+      "trade_date": "2023-10-30",
+      "drawdown_depth": 0.182307,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": -1.51798
+    },
+    {
+      "trade_date": "2023-10-31",
+      "drawdown_depth": 0.18795,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 3.291413
+    },
+    {
+      "trade_date": "2023-11-01",
+      "drawdown_depth": 0.193702,
+      "core_stress_label": true,
+      "held_pair_deterioration_score": 1.153535
+    }
+  ],
+  "interpretation": [
+    "V1.23R asks whether the residual downside branch concentrates on the painful core of the third drawdown or just lights up the whole interval indiscriminately.",
+    "The core label is defined by drawdown depth inside the positive interval, not by a new replay rule.",
+    "A useful residual downside branch should score the deeper drawdown core higher than the fringe positive days."
+  ]
+}

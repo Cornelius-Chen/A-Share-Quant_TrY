@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123z_cpo_heat_conditioned_riskoff_drawdown_compare_v1",
+    "best_heat_conditioned_variant_name": "balanced_heat_reference",
+    "best_heat_conditioned_final_equity": 4148870.3072,
+    "best_heat_conditioned_max_drawdown": 0.376524,
+    "balanced_heat_reference_final_equity": 4148870.3072,
+    "balanced_heat_reference_max_drawdown": 0.376524,
+    "recommended_next_posture": "triage_heat_conditioned_riskoff_after_tradeoff_and_interval_compare"
+  },
+  "drawdown_compare_rows": [
+    {
+      "interval_rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "uncapped_drawdown": 0.493548,
+      "balanced_drawdown": 0.376524,
+      "strict_drawdown": 0.327114,
+      "best_heat_conditioned_variant_name": "balanced_heat_reference",
+      "best_heat_conditioned_full_curve_mdd": 0.376524,
+      "heat_conditioned_reduce_count": 0,
+      "heat_conditioned_suppressed_reduce_count": 0
+    },
+    {
+      "interval_rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "uncapped_drawdown": 0.273025,
+      "balanced_drawdown": 0.191427,
+      "strict_drawdown": 0.164158,
+      "best_heat_conditioned_variant_name": "balanced_heat_reference",
+      "best_heat_conditioned_full_curve_mdd": 0.376524,
+      "heat_conditioned_reduce_count": 0,
+      "heat_conditioned_suppressed_reduce_count": 0
+    },
+    {
+      "interval_rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "uncapped_drawdown": 0.193702,
+      "balanced_drawdown": 0.193702,
+      "strict_drawdown": 0.193702,
+      "best_heat_conditioned_variant_name": "balanced_heat_reference",
+      "best_heat_conditioned_full_curve_mdd": 0.376524,
+      "heat_conditioned_reduce_count": 0,
+      "heat_conditioned_suppressed_reduce_count": 0
+    }
+  ],
+  "interpretation": [
+    "V1.23Z does not claim interval-level causality for the conditioned variants because only full-curve execution results are available here.",
+    "Its purpose is to put the best conditioned risk-off execution variant next to the already-frozen top-three heat interval compare.",
+    "The key question is practical: does a heat-conditioned risk-off layer preserve enough equity to be worth another governance cycle?"
+  ]
+}

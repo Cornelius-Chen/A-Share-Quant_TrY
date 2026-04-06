@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129t_bk0480_aerospace_aviation_stu_role_triage_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "authoritative_status": "freeze_bk0480_dual_core_role_grammar_and_move_to_control_seed_extraction",
+    "worker_status": "bk0480_transfer_worker_started_from_dual_core_world_model_with_local_reset",
+    "authoritative_rule": "bk0480_must_start_with_its_two_local_owners_only_and_expand_later_only_if_local_evidence_justifies_it"
+  },
+  "direction_rows": [
+    {
+      "direction": "dual_core_local_role_surface",
+      "status": "freeze_as_authoritative_kickoff",
+      "reason": "BK0480 currently has only two locally supported names, and both belong to the internal-owner surface."
+    },
+    {
+      "direction": "borrowed_confirmation_or_mirror_layers",
+      "status": "blocked",
+      "reason": "Commercial-aerospace confirmation and mirror layers are not allowed to leak into BK0480 at kickoff."
+    },
+    {
+      "direction": "next_phase",
+      "status": "control_seed_extraction",
+      "reason": "derive_a_minimal_control_seed_from_the_dual_core_only_then_reassess_local_expansion"
+    }
+  ],
+  "interpretation": [
+    "V1.29T freezes the BK0480 role grammar as a deliberately narrow dual-core starting point.",
+    "The next lawful move is minimal control-seed extraction, not universe expansion or replay."
+  ]
+}

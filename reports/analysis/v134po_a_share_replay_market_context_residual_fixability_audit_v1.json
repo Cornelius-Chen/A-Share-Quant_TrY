@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "residual_count": 3,
+    "external_boundary_count": 2,
+    "internal_calendar_alignment_count": 1,
+    "status_csv": "data\\training\\a_share_replay_market_context_residual_fixability_status_v1.csv",
+    "authoritative_output": "a_share_replay_market_context_residual_fixability_surface_materialized"
+  },
+  "rows": [
+    {
+      "slice_id": "slice_20230922_113526",
+      "decision_trade_date": "2023-09-22",
+      "residual_class": "pre_coverage_shadow_slice",
+      "fixability_class": "external_boundary_residual",
+      "suggested_mode": "retain_as_boundary_history_outside_current_market_context_window"
+    },
+    {
+      "slice_id": "slice_20231208_152916",
+      "decision_trade_date": "2023-12-08",
+      "residual_class": "pre_coverage_shadow_slice",
+      "fixability_class": "external_boundary_residual",
+      "suggested_mode": "retain_as_boundary_history_outside_current_market_context_window"
+    },
+    {
+      "slice_id": "slice_20260328_194152",
+      "decision_trade_date": "2026-03-28",
+      "residual_class": "off_calendar_shadow_slice",
+      "fixability_class": "internal_calendar_alignment_candidate",
+      "suggested_mode": "inspect_shadow_calendar_alignment_before_treating_as_hard_market_context_gap"
+    }
+  ],
+  "interpretation": [
+    "Replay market-context residuals are no longer just classified by shape; they are now split by likely fixability.",
+    "Pre-coverage slices look like external boundary residuals, while the off-calendar slice is a plausible internal calendar-alignment candidate.",
+    "That gives the replay lane one small internal improvement target without pretending the whole residual set is internally solvable."
+  ]
+}

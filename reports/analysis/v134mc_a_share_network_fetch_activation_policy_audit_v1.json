@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134mc_a_share_network_fetch_activation_policy_audit_v1",
+    "adapter_policy_count": 3,
+    "retry_policy_count": 3,
+    "host_binding_count": 22,
+    "selective_candidate_host_count": 20,
+    "ready_now_host_count": 0,
+    "deferred_host_count": 2,
+    "status_csv": "data\\training\\a_share_network_fetch_activation_policy_status_v1.csv",
+    "authoritative_output": "a_share_network_fetch_activation_policy_bound_for_selective_future_activation"
+  },
+  "rows": [
+    {
+      "component": "adapter_policy_registry",
+      "component_state": "materialized_policy_bindings",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_fetch_activation_policy_v1.csv",
+      "coverage_note": "adapter_policy_count = 3"
+    },
+    {
+      "component": "retry_policy_registry",
+      "component_state": "materialized_retry_bindings",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_fetch_retry_policy_v1.csv",
+      "coverage_note": "retry_policy_count = 3"
+    },
+    {
+      "component": "orchestration_binding_registry",
+      "component_state": "materialized_host_bindings",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_fetch_orchestration_binding_v1.csv",
+      "coverage_note": "host_binding_count = 22"
+    },
+    {
+      "component": "activation_policy_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_network_fetch_activation_policy_residual_v1.csv",
+      "coverage_note": "deferred_host_count = 2"
+    }
+  ],
+  "interpretation": [
+    "The network-fetch problem is now narrower: adapters are not missing, and policy/retry/orchestration bindings are explicit.",
+    "What remains is activation approval and license review, not structural ambiguity."
+  ]
+}

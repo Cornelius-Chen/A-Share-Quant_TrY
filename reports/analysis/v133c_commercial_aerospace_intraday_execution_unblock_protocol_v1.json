@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133c_commercial_aerospace_intraday_execution_unblock_protocol_v1",
+    "current_primary_variant": "tail_weakdrift_full",
+    "blocked_requirement_count": 3,
+    "ready_requirement_count": 1,
+    "protocol_csv": "data\\training\\commercial_aerospace_intraday_execution_unblock_protocol_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_execution_unblock_protocol_frozen"
+  },
+  "requirement_rows": [
+    {
+      "requirement": "point_in_time_intraday_visibility",
+      "status": "blocked",
+      "current_state": "governance_only_minute_labels_and_day-level event framing exist, but no point-in-time intraday visibility chain exists",
+      "unlock_condition": "a lawful intraday feature surface exists where minute-state and event-state are both timestamp-visible before action time"
+    },
+    {
+      "requirement": "intraday_execution_simulation_surface",
+      "status": "blocked",
+      "current_state": "no intraday fill model or minute-level action simulator is attached to the governance package",
+      "unlock_condition": "a reproducible minute-level execution simulator exists with explicit fill timing, slippage, and cost assumptions"
+    },
+    {
+      "requirement": "replay_binding_surface",
+      "status": "blocked",
+      "current_state": "the lawful EOD replay remains authoritative and isolated from the minute governance branch",
+      "unlock_condition": "a separate lawful intraday replay lane exists so the minute branch can be tested without contaminating the frozen EOD primary"
+    },
+    {
+      "requirement": "commercial_aerospace_minute_package",
+      "status": "ready",
+      "current_state": "commercial_aerospace_intraday_governance_package_frozen_for_transfer_or_future_lawful_intraday_design",
+      "unlock_condition": "already satisfied as the supervision/governance input for future intraday work"
+    }
+  ],
+  "interpretation": [
+    "V1.33C turns the commercial-aerospace minute package blockers into an explicit intraday-execution unblock protocol.",
+    "The intent is operational clarity: future work should wait for these gates rather than drifting into more local tuning."
+  ]
+}

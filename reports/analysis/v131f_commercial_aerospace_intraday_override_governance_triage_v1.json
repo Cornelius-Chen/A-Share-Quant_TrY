@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131f_commercial_aerospace_intraday_override_governance_triage_v1",
+    "authoritative_status": "retain_intraday_override_supervision_bundle_and_keep_it_outside_current_lawful_replay",
+    "override_positive_count": 2,
+    "clean_control_count": 30,
+    "open_to_close_separation": -0.11965941,
+    "close_location_separation": -0.59915096,
+    "forward_return_10_separation": -0.37291824,
+    "authoritative_rule": "preserve the intraday override supervision bundle for future minute-level work, but do not retrofit it into the current EOD lawful replay"
+  },
+  "triage_rows": [
+    {
+      "component": "override_positive_seed_set",
+      "status": "retain_supervision_seed",
+      "rationale": "severe failures remain materially distinct from clean controls and should be preserved for future minute-level point-in-time labeling"
+    },
+    {
+      "component": "current_eod_primary_replay",
+      "status": "do_not_modify",
+      "rationale": "execution-day path information keeps the override construct outside lawful EOD replay for now"
+    },
+    {
+      "component": "future_intraday_work",
+      "status": "next_priority",
+      "rationale": "use retained override positives, reversal watches, and clean controls as the starting supervision geometry once minute-level point-in-time support is available"
+    }
+  ],
+  "interpretation": [
+    "V1.31F freezes the new intraday override bundle as governance-only infrastructure.",
+    "It answers a narrow question: is the bundle worth preserving for future point-in-time intraday work even though it must stay outside the current lawful replay stack?"
+  ]
+}

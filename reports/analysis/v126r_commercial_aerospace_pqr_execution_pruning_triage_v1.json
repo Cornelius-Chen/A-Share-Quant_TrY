@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126r_commercial_aerospace_pqr_execution_pruning_triage_v1",
+    "reference_final_equity": 1227143.0725,
+    "reference_max_drawdown": 0.14258108,
+    "reference_executed_order_count": 285,
+    "best_pruning_variant": "cap5_cap8_cd3_topup15k",
+    "best_pruning_variant_final_equity": 1188266.166,
+    "best_pruning_variant_max_drawdown": 0.13425831,
+    "best_pruning_variant_executed_order_count": 140,
+    "selected_replay_final_equity": 1189482.711,
+    "selected_replay_max_drawdown": 0.13356069,
+    "selected_replay_executed_order_count": 141,
+    "authoritative_status": "keep_v126o_reference_and_block_pruning_promotion"
+  },
+  "interpretation": [
+    "V1.26R only promotes execution-surface pruning if it preserves or improves economics while materially reducing churn.",
+    "If pruning mainly beautifies the replay but gives back too much economics, V1.26O remains the reference shadow."
+  ]
+}

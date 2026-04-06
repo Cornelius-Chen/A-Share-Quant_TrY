@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fk_commercial_aerospace_fj_full_quality_archetype_direction_triage_v1",
+    "authoritative_status": "retain_full_quality_add_archetype_as_local_supervision_anchor_only",
+    "best_close_loc_15m_threshold": 0.63,
+    "best_precision": 1.0,
+    "best_coverage": 1.0,
+    "authoritative_rule": "the add branch should retain the new full-quality archetype as a local supervision anchor while keeping broader promotion and execution blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "full_quality_add_archetype",
+      "status": "retain_as_local_archetype_anchor",
+      "rationale": "the strongest local add tier can now be summarized by a simple close-location anchor without losing fidelity inside the current quality ladder"
+    },
+    {
+      "component": "broader_positive_add_promotion",
+      "status": "still_blocked",
+      "rationale": "a clean archetype inside the strongest local tier does not solve the broader permission-density problem"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the archetype is useful for supervision readability, not for execution binding"
+    }
+  ],
+  "interpretation": [
+    "V1.34FK turns the first full-quality add archetype audit into a governance verdict.",
+    "The add frontier now has a readable local anchor for its strongest permission tier, but that anchor remains strictly supervision-only."
+  ]
+}

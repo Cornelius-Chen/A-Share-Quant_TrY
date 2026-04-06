@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131w_commercial_aerospace_local_5min_ambiguous_case_audit_v1",
+    "flagged_non_override_case_count": 2,
+    "mild_override_watch_count": 2,
+    "documented_false_positive_count": 0,
+    "authoritative_rule": "flagged ambiguous cases should be promoted only when they look like mild intraday override watches, otherwise they remain documented false-positive boundary cases"
+  },
+  "retained_rows": [
+    {
+      "signal_trade_date": "20251117",
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "action": "add",
+      "signal_label_pg": "neutral_hold",
+      "phase_window_semantic": "preheat_window",
+      "supervision_label": "ambiguous_non_override",
+      "ret15": -0.03992806,
+      "ret60": -0.05071942,
+      "draw60": -0.0528777,
+      "close_loc60": 0.03947368,
+      "mild_override_like": true,
+      "retention_decision": "retain_as_mild_override_watch"
+    },
+    {
+      "signal_trade_date": "20251216",
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "action": "add",
+      "signal_label_pg": "neutral_hold",
+      "phase_window_semantic": "preheat_window",
+      "supervision_label": "ambiguous_non_override",
+      "ret15": -0.00829726,
+      "ret60": -0.0494228,
+      "draw60": -0.0515873,
+      "close_loc60": 0.02884615,
+      "mild_override_like": true,
+      "retention_decision": "retain_as_mild_override_watch"
+    }
+  ],
+  "interpretation": [
+    "V1.31W inspects the two residual non-override hits from the local 5-minute prototype.",
+    "The goal is to decide whether they are merely bounded false positives or whether they deserve to be retained as mild override-watch seeds for later minute-level work."
+  ]
+}

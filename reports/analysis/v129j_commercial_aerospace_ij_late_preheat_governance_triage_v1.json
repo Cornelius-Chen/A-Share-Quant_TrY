@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129j_commercial_aerospace_ij_late_preheat_governance_triage_v1",
+    "late_preheat_full_mismatch_rate": 1.0,
+    "authoritative_status": "retain_governance_rule_and_failure_cases",
+    "authoritative_rule": "late-preheat supervision currently belongs in governance and failure-library review unless it proves replay-frontier improvement"
+  },
+  "interpretation": [
+    "V1.29J freezes how the full_pre supervision should be used after the late-preheat replay filter failed to improve the primary reference.",
+    "The correct near-term role is governance: flag over-escalated late-preheat full entries and retain them as failure cases."
+  ]
+}

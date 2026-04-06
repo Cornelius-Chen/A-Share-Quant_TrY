@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134ki_a_share_quality_foundation_audit_v1",
+    "materialized_source_quality_count": 36,
+    "materialized_event_quality_count": 52,
+    "high_authority_source_count": 6,
+    "bootstrap_evidence_gate_true_count": 7,
+    "quality_status_csv": "data\\training\\a_share_quality_foundation_status_v1.csv",
+    "authoritative_output": "a_share_quality_foundation_ready_for_direction_triage"
+  },
+  "quality_rows": [
+    {
+      "quality_component": "source_quality_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_source_quality_registry_v1.csv",
+      "coverage_note": "materialized_source_quality_count = 36"
+    },
+    {
+      "quality_component": "event_quality_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_event_quality_registry_v1.csv",
+      "coverage_note": "materialized_event_quality_count = 52"
+    },
+    {
+      "quality_component": "repost_control_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_repost_control_registry_v1.csv",
+      "coverage_note": "materialized_repost_control_count = 23"
+    },
+    {
+      "quality_component": "contradiction_backlog",
+      "component_state": "backlog_materialized_not_reviewed",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_contradiction_backlog_v1.csv",
+      "coverage_note": "contradiction_backlog_count = 52"
+    }
+  ],
+  "interpretation": [
+    "V1.34KI completes the first quality workstream pass by transforming the bootstrapped event chain into explicit source quality, event quality, repost control, and contradiction backlog registries.",
+    "Quality is still heuristic and bootstrap-grade, but it is now explicit and centrally consumable rather than hidden in ad hoc row-by-row interpretation."
+  ]
+}

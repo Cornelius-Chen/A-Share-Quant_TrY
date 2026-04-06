@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jd_commercial_aerospace_jc_heat_source_direction_triage_v1",
+    "retained_symbol_named_heat_source_count": 1,
+    "second_symbol_named_heat_source_found": false,
+    "authoritative_status": "retain_single_symbol_named_heat_source_stopline_and_keep_true_selection_blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "ca_source_007",
+      "direction": "retain_as_only_retained_symbol_named_hard_heat_source"
+    },
+    {
+      "component": "ca_source_004_and_ca_source_012",
+      "direction": "retain_as_discarded_theme_heat_lists_not_eligible_for_hard_counterpanel_expansion"
+    },
+    {
+      "component": "ca_anchor_004",
+      "direction": "retain_as_forward_manual_anchor_only_not_historical_hard_source"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_because_the_local_event_inventory_itself_does_not_supply_a_second_symbol_named_hard_heat_source"
+    }
+  ],
+  "interpretation": [
+    "V1.34JD turns event-source inventory into direction.",
+    "The stack now knows the shortage is not just a candidate shortage; it is a retained hard heat-source shortage in the local event universe itself."
+  ]
+}

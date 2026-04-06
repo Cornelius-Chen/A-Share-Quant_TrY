@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ez_commercial_aerospace_add_permission_context_audit_v1",
+    "positive_hit_session_count": 542,
+    "seed_allowed_hit_count": 47,
+    "non_seed_positive_hit_count": 495,
+    "best_slow_context_ratio": 5.4,
+    "best_point_in_time_broad_scenario": "contained_close15_plus_burst15_plus_posmin15",
+    "best_point_in_time_broad_ratio": 4.93333333,
+    "best_point_in_time_broad_seed_kept_count": 15,
+    "best_point_in_time_broad_non_seed_kept_count": 74,
+    "best_high_confidence_scenario": "slow_unlock_high_role_plus_contained_burst15",
+    "best_high_confidence_ratio": 3.8,
+    "best_high_confidence_seed_kept_count": 5,
+    "best_high_confidence_non_seed_kept_count": 19,
+    "session_csv": "data\\training\\commercial_aerospace_add_permission_context_sessions_v1.csv",
+    "authoritative_rule": "point-in-time quantity-price moderation improves positive add density more than slow context alone, but it still does not justify broader positive add promotion; the best current use is a narrow high-confidence supervision clue"
+  },
+  "feature_rows": [
+    {
+      "feature_name": "open_to_5m",
+      "seed_allowed_mean": 0.00234326,
+      "non_seed_positive_mean": 0.00571913,
+      "mean_gap_seed_minus_non_seed": -0.00337587
+    },
+    {
+      "feature_name": "open_to_15m",
+      "seed_allowed_mean": 0.0049556,
+      "non_seed_positive_mean": 0.01074668,
+      "mean_gap_seed_minus_non_seed": -0.00579109
+    },
+    {
+      "feature_name": "close_loc_15m",
+      "seed_allowed_mean": 0.51696917,
+      "non_seed_positive_mean": 0.57201714,
+      "mean_gap_seed_minus_non_seed": -0.05504797
+    },
+    {
+      "feature_name": "burst_amount_share_15",
+      "seed_allowed_mean": 0.38116248,
+      "non_seed_positive_mean": 0.4186614,
+      "mean_gap_seed_minus_non_seed": -0.03749892
+    },
+    {
+      "feature_name": "up_amount_share_15",
+      "seed_allowed_mean": 0.43160948,
+      "non_seed_positive_mean": 0.47016324,
+      "mean_gap_seed_minus_non_seed": -0.03855376
+    },
+    {
+      "feature_name": "down_amount_share_15",
+      "seed_allowed_mean": 0.44808387,
+      "non_seed_positive_mean": 0.43605932,
+      "mean_gap_seed_minus_non_seed": 0.01202455
+    },
+    {
+      "feature_name": "pos_minute_count_15",
+      "seed_allowed_mean": 6.0,
+      "non_seed_positive_mean": 6.74747475,
+      "mean_gap_seed_minus_non_seed": -0.74747475
+    },
+    {
+      "feature_name": "neg_minute_count_15",
+      "seed_allowed_mean": 6.57446809,
+      "non_seed_positive_mean": 6.33131313,
+      "mean_gap_seed_minus_non_seed": 0.24315495
+    },
+    {
+      "feature_name": "max_return_15m",
+      "seed_allowed_mean": 0.01428039,
+      "non_seed_positive_mean": 0.021945,
+      "mean_gap_seed_minus_non_seed": -0.00766461
+    }
+  ],
+  "scenario_rows": [
+    {
+      "scenario_name": "baseline_positive_shape",
+      "kept_positive_hit_count": 542,
+      "seed_kept_count": 47,
+      "non_seed_kept_count": 495,
+      "non_seed_to_seed_ratio": 10.53191489,
+      "reading": "ungated positive shape-only add hits on the broader local first-hour surface"
+    },
+    {
+      "scenario_name": "slow_unlock_high_role",
+      "kept_positive_hit_count": 32,
+      "seed_kept_count": 5,
+      "non_seed_kept_count": 27,
+      "non_seed_to_seed_ratio": 5.4,
+      "reading": "the best available slow-context gate from V1.34EX"
+    },
+    {
+      "scenario_name": "contained_burst15_only",
+      "kept_positive_hit_count": 232,
+      "seed_kept_count": 28,
+      "non_seed_kept_count": 204,
+      "non_seed_to_seed_ratio": 7.28571429,
+      "reading": "filter out opening sessions that consume too much of the hour's amount too early"
+    },
+    {
+      "scenario_name": "contained_close15_plus_burst15",
+      "kept_positive_hit_count": 116,
+      "seed_kept_count": 18,
+      "non_seed_kept_count": 98,
+      "non_seed_to_seed_ratio": 5.44444444,
+      "reading": "keep positive add only when the early path is constructive but not overly pinned to the first-15m high"
+    },
+    {
+      "scenario_name": "contained_close15_plus_burst15_plus_posmin15",
+      "kept_positive_hit_count": 89,
+      "seed_kept_count": 15,
+      "non_seed_kept_count": 74,
+      "non_seed_to_seed_ratio": 4.93333333,
+      "reading": "point-in-time moderation: early path can be positive, but it cannot already look like a crowded opening chase"
+    },
+    {
+      "scenario_name": "slow_unlock_high_role_plus_contained_burst15",
+      "kept_positive_hit_count": 24,
+      "seed_kept_count": 5,
+      "non_seed_kept_count": 19,
+      "non_seed_to_seed_ratio": 3.8,
+      "reading": "narrow high-confidence permission clue that combines the best slow-context gate with early amount containment"
+    }
+  ],
+  "interpretation": [
+    "V1.34EZ adds a true point-in-time quantity-price permission audit on the broader positive add surface.",
+    "The key result is that early moderation helps more than slow context alone: authentic add seeds look less chasey than the broader shape-only positive population.",
+    "Even so, the branch still does not support broad positive add expansion; the strongest new result is a narrow high-confidence permission clue, not a replay-facing permission rule."
+  ]
+}

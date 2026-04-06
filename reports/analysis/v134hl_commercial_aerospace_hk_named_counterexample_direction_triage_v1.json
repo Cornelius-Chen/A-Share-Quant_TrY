@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hl_commercial_aerospace_hk_named_counterexample_direction_triage_v1",
+    "analysis_symbol_count": 6,
+    "crossed_pre_lockout_peak_count": 2,
+    "authoritative_status": "retain_named_local_rebound_counterexamples_as_negative_label_candidates_and_do_not_treat_named_strength_as_board_restart_evidence"
+  },
+  "triage_rows": [
+    {
+      "symbol": "600343",
+      "display_name": "航天动力",
+      "counterexample_family": "coverage_gap_or_inactive",
+      "direction": "learn_as_coverage_or_activity_gap_not_restart_evidence"
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "counterexample_family": "locked_board_weak_repair_only",
+      "direction": "learn_as_weak_repair_inside_locked_board"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "counterexample_family": "locked_board_weak_repair_only",
+      "direction": "learn_as_weak_repair_inside_locked_board"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "counterexample_family": "lockout_outlier_breakout_then_fade",
+      "direction": "learn_as_board_locked_outlier_breakout_not_board_restart"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "counterexample_family": "raw_only_near_high_rebound_without_breakout",
+      "direction": "learn_as_post_lockout_raw_near_high_without_board_permission"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "direction": "learn_as_post_lockout_raw_breakout_without_unlock_authority"
+    }
+  ],
+  "interpretation": [
+    "V1.34HL turns the named-symbol scan into direction: even strong local rebounds are kept as negative-label candidates unless they also rebuild legal board context.",
+    "The point is to learn why strong single-name rebounds can coexist with a board that still should not be re-entered."
+  ]
+}

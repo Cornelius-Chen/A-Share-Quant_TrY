@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "blocker_count": 6,
+    "governance_blocker_count": 2,
+    "source_blocker_count": 1,
+    "replay_blocker_count": 2,
+    "serving_blocker_count": 1,
+    "status_csv": "data\\training\\a_share_execution_binding_blocker_stack_source_side_reaudit_v1.csv",
+    "authoritative_output": "a_share_execution_binding_blocker_stack_source_side_reaudited"
+  },
+  "blocker_rows": [
+    {
+      "blocker_id": "execution_authority_gate_closed",
+      "blocker_layer": "governance",
+      "blocker_state": "active",
+      "blocking_reason": "information center remains research-shadow only"
+    },
+    {
+      "blocker_id": "live_like_opening_gate_closed",
+      "blocker_layer": "governance",
+      "blocker_state": "active",
+      "blocking_reason": "governance and automation bindings must exist before live_like serving opens"
+    },
+    {
+      "blocker_id": "source_promotion_preconditions_unsatisfied",
+      "blocker_layer": "source_activation",
+      "blocker_state": "active",
+      "blocking_reason": "unsatisfied_precondition_count = 1"
+    },
+    {
+      "blocker_id": "replay_execution_journal_stub_only",
+      "blocker_layer": "replay",
+      "blocker_state": "active",
+      "blocking_reason": "execution_journal_stub_count = 17"
+    },
+    {
+      "blocker_id": "replay_daily_market_coverage_gap",
+      "blocker_layer": "replay",
+      "blocker_state": "active",
+      "blocking_reason": "daily_gap_count = 3"
+    },
+    {
+      "blocker_id": "live_like_materialized_but_blocked",
+      "blocker_layer": "serving",
+      "blocker_state": "active",
+      "blocking_reason": "materialized_live_like_view_count = 2"
+    }
+  ],
+  "interpretation": [
+    "Execution blocker stack now reflects that batch-one manual closure is complete, so source-side reduces to the remaining promotion precondition blocker only.",
+    "Replay and serving blockers remain unchanged while the source-side blocker count drops after manual approval."
+  ]
+}

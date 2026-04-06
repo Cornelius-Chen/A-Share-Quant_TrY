@@ -1,0 +1,5 @@
+﻿component,status,detail
+sell_side_visibility,good_enough_shadow_input,Do not reopen visibility research; phase-1 all-session visibility is already sufficient as the sell-side input surface.
+sell_side_simulator_logic,good_enough_shadow_reference,Do not reopen same-family sell logic search; current broader-hit sell shadow is sufficient as a binding reference.
+next_real_work,build_missing_binding_surfaces_only,The only justified next work is holdings-aware sell binding and an isolated sell-side shadow lane.
+scope_guardrail,mandatory,Do not pull board reentry execution or full replay lane into this next step; keep it sell-side only.

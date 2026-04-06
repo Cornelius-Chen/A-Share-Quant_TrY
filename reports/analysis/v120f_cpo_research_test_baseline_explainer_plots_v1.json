@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120f_cpo_research_test_baseline_explainer_plots_v1",
+    "explainer_csv": "data\\training\\cpo_research_test_baseline_trade_explainer_v1.csv",
+    "equity_curve_png": "reports\\analysis\\v120f_cpo_research_test_baseline_equity_curve_v1.png",
+    "daily_marker_png": "reports\\analysis\\v120f_cpo_research_test_baseline_daily_markers_v1.png",
+    "baseline_final_equity": 1766466.6096,
+    "research_test_final_equity": 5844604.996,
+    "research_test_max_drawdown": 0.493548,
+    "explainer_row_count": 20
+  },
+  "interpretation": [
+    "This bundle is the readable explanation layer for the research test baseline replay.",
+    "The explainer table keeps baseline actions and research-test adds together so the user can inspect what actually happened by date, symbol, reason, and weight.",
+    "The plots are deliberately separate from the broader candidate-comparison plot so they match the single test-baseline question rather than the earlier surviving-candidate comparison."
+  ]
+}

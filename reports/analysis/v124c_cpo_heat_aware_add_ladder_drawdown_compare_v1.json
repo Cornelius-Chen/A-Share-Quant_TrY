@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124c_cpo_heat_aware_add_ladder_drawdown_compare_v1",
+    "best_ladder_variant_name": "balanced_heat_reference",
+    "best_ladder_final_equity": 4148870.3072,
+    "best_ladder_max_drawdown": 0.376524,
+    "recommended_next_posture": "triage_best_ladder_against_balanced_heat_reference"
+  },
+  "interval_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "balanced_heat_guardrail_drawdown": 0.376524,
+      "best_ladder_variant_name": "balanced_heat_reference",
+      "best_ladder_variant_drawdown": 0.376524,
+      "drawdown_improvement_vs_balanced_heat": 0.0,
+      "best_ladder_peak_cash_ratio": 0.258046,
+      "best_ladder_trough_cash_ratio": 0.413883
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "balanced_heat_guardrail_drawdown": 0.191427,
+      "best_ladder_variant_name": "balanced_heat_reference",
+      "best_ladder_variant_drawdown": 0.191427,
+      "drawdown_improvement_vs_balanced_heat": -0.0,
+      "best_ladder_peak_cash_ratio": 0.311233,
+      "best_ladder_trough_cash_ratio": 0.384916
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "balanced_heat_guardrail_drawdown": 0.193702,
+      "best_ladder_variant_name": "balanced_heat_reference",
+      "best_ladder_variant_drawdown": 0.193702,
+      "drawdown_improvement_vs_balanced_heat": 0.0,
+      "best_ladder_peak_cash_ratio": 0.680215,
+      "best_ladder_trough_cash_ratio": 0.742777
+    }
+  ],
+  "interpretation": [
+    "V1.24C compares the best heat-aware add ladder against the already-frozen balanced heat reference on the same three major drawdown intervals.",
+    "The question is narrow: does smaller add size under the same heat budget improve the real pain points enough to justify replacing the current heat reference?"
+  ]
+}

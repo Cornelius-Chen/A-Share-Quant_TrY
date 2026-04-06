@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129a_commercial_aerospace_high_intensity_state_separation_audit_v1",
+    "row_count": 6180,
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "blocked_target_count": 3,
+    "blocked_targets": [
+      "high_intensity",
+      "full_pre_vs_rest",
+      "full_vs_rest"
+    ],
+    "authoritative_status": "blocked_due_to_zero_train_high_intensity_support",
+    "authoritative_rule": "before replay reopens the commercial-aerospace state machine should prove that high-intensity states are at least jointly separable from the rest of the state surface"
+  },
+  "audit_rows": [
+    {
+      "target": "high_intensity",
+      "train_positive_count": 0,
+      "test_positive_count": 81,
+      "evaluable": false,
+      "blocking_reason": "zero_train_positive_support_under_current_chronology_split",
+      "best_train_threshold": null,
+      "train_balanced_accuracy": null,
+      "test_balanced_accuracy": null,
+      "test_positive_recall": null
+    },
+    {
+      "target": "full_pre_vs_rest",
+      "train_positive_count": 0,
+      "test_positive_count": 45,
+      "evaluable": false,
+      "blocking_reason": "zero_train_positive_support_under_current_chronology_split",
+      "best_train_threshold": null,
+      "train_balanced_accuracy": null,
+      "test_balanced_accuracy": null,
+      "test_positive_recall": null
+    },
+    {
+      "target": "full_vs_rest",
+      "train_positive_count": 0,
+      "test_positive_count": 36,
+      "evaluable": false,
+      "blocking_reason": "zero_train_positive_support_under_current_chronology_split",
+      "best_train_threshold": null,
+      "train_balanced_accuracy": null,
+      "test_balanced_accuracy": null,
+      "test_positive_recall": null
+    }
+  ],
+  "interpretation": [
+    "V1.29A audits whether full-pre and full can first be recognized as a combined high-intensity surface before trying to predict them separately.",
+    "If high-intensity targets have zero train support under the current chronology split, separation is blocked and split geometry must be reworked before classifier tuning continues."
+  ]
+}

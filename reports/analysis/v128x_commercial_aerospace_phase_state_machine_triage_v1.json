@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128x_commercial_aerospace_phase_state_machine_triage_v1",
+    "authoritative_status": "retain_probe_full_pre_full_de_risk_state_machine_for_translation",
+    "full_pre_count": 45,
+    "full_count": 36,
+    "next_direction": "translate the state machine into a lawful supervised table refresh before any new commercial-aerospace replay tuning"
+  },
+  "retained_rows": [
+    {
+      "state": "probe",
+      "status": "retain",
+      "why": "still the lawful low-intensity starter state"
+    },
+    {
+      "state": "full_pre",
+      "status": "retain_for_translation",
+      "why": "preheat-window full-quality rows are numerous and nearly identical in quality to later impulse full rows while occurring earlier in chronology"
+    },
+    {
+      "state": "full",
+      "status": "retain",
+      "why": "impulse-window fully confirmed participation remains the top-intensity state"
+    },
+    {
+      "state": "de_risk",
+      "status": "retain",
+      "why": "downside grammar still needs de-risk as an explicit state rather than an implicit veto only"
+    }
+  ],
+  "blocked_rows": [
+    {
+      "state": "replay_promotion_now",
+      "status": "blocked",
+      "why": "state-machine formalization should come before any new replay promotion so that shadow economics are not reinterpreted ad hoc"
+    }
+  ],
+  "interpretation": [
+    "V1.28X freezes the commercial-aerospace participation state machine after macro-supervision review.",
+    "The middle state is no longer optional: full-pre should be treated as a lawful translation target, not as a replay-facing shortcut."
+  ]
+}

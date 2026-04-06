@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134j_commercial_aerospace_phase2_broader_hit_widening_protocol_v1",
+    "canonical_seed_count": 6,
+    "broader_hit_session_count": 24,
+    "all_session_count": 612,
+    "allowed_widening_surface": "broader_hit_sessions_only",
+    "allowed_execution_tiers": [
+      "reversal_watch",
+      "severe_override_positive"
+    ],
+    "blocked_execution_tiers": [
+      "mild_override_watch"
+    ],
+    "phase2_widening_status": "approved_with_guardrails",
+    "protocol_csv": "data\\training\\commercial_aerospace_phase2_broader_hit_widening_protocol_v1.csv",
+    "authoritative_output": "commercial_aerospace_phase2_broader_hit_widening_protocol_ready_for_direction_triage"
+  },
+  "protocol_rows": [
+    {
+      "protocol_component": "widening_scope",
+      "status": "approved_with_guardrails",
+      "detail": "Expand from canonical seeds to broader-hit sessions only: 24 hit sessions, not 612 all sessions."
+    },
+    {
+      "protocol_component": "allowed_execution_tiers",
+      "status": "approved_with_guardrails",
+      "detail": "Only reversal_watch and severe_override_positive may enter broader phase-2 simulation."
+    },
+    {
+      "protocol_component": "mild_tier_handling",
+      "status": "blocked_from_execution",
+      "detail": "mild_override_watch stays governance-only and may only feed do-not-readd logic."
+    },
+    {
+      "protocol_component": "clock_and_cost_model",
+      "status": "mandatory",
+      "detail": "Keep minute-close trigger, next-bar-open fill, and the same frozen EOD cost model with no local modifications."
+    },
+    {
+      "protocol_component": "determinism_gate",
+      "status": "mandatory",
+      "detail": "double_run_exact_match = True must remain true before and after widening."
+    },
+    {
+      "protocol_component": "replay_boundary",
+      "status": "still_blocked",
+      "detail": "Broader-hit widening remains inside phase 2 and does not authorize phase-3 replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34J turns the seed supervision review into an explicit widening protocol.",
+    "The protocol does not open replay. It only says that, if phase 2 continues, the next lawful expansion is to broader-hit sessions under the same clock, cost, and governance constraints."
+  ]
+}

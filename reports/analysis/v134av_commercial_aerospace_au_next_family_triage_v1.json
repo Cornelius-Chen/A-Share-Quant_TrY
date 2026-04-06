@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134av_commercial_aerospace_au_next_family_triage_v1",
+    "authoritative_status": "pursue_oscillatory_breakdown_churn_as_next_targeted_supervision_family",
+    "triage_csv": "data\\training\\commercial_aerospace_au_next_family_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "next_orthogonal_family",
+      "status": "approved_for_targeted_supervision",
+      "detail": "oscillatory_breakdown_churn | residue_hits = 3, other_hits = 4"
+    },
+    {
+      "component": "orthogonality_claim",
+      "status": "pass",
+      "detail": "This family is about repeated reversal/severe churn, not a false first reversal that cleanly reclaims and then fails again."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The new family, if pursued, still begins as supervision-only."
+    }
+  ],
+  "interpretation": [
+    "V1.34AV converts the orthogonal family scan into a next-step judgment.",
+    "Approval here still means targeted supervision only, not replay or surface expansion."
+  ]
+}

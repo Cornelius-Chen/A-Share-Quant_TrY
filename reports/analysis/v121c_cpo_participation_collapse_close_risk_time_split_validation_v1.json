@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121c_cpo_participation_collapse_close_risk_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.540778,
+    "min_test_balanced_accuracy": 0.52027,
+    "stability_posture": "candidate_stable_enough_for_next_adversarial_review",
+    "recommended_next_posture": "send_ABC_to_adversarial_review_only_if_external_gap_is_not_trivial"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 331,
+      "test_row_count": 119,
+      "train_positive_count": 50,
+      "test_positive_count": 25,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.533808,
+      "test_balanced_accuracy": 0.553191,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.106383
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 281,
+      "test_row_count": 169,
+      "train_positive_count": 54,
+      "test_positive_count": 21,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.550661,
+      "test_balanced_accuracy": 0.52027,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.040541
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 288,
+      "test_row_count": 162,
+      "train_positive_count": 46,
+      "test_positive_count": 29,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.533058,
+      "test_balanced_accuracy": 0.548872,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.097744
+    }
+  ],
+  "interpretation": [
+    "V1.21C applies chronology discipline to the first explicit close-risk branch.",
+    "A downside line that cannot survive crude year splits is not suitable for promotion even if it looks right on the chart.",
+    "This keeps the project from replacing one kind of overfit with another on the risk side."
+  ]
+}

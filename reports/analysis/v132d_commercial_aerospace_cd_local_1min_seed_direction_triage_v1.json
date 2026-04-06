@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132d_commercial_aerospace_cd_local_1min_seed_direction_triage_v1",
+    "authoritative_status": "freeze_local_1min_seed_window_table_and_shift_next_to_minute_pattern_envelope_audit",
+    "registry_session_count": 6,
+    "seed_window_row_count": 360,
+    "authoritative_rule": "the next minute-branch task is to characterize 1-minute pattern envelopes over the frozen seed windows, not to modify replay"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_seed_windows",
+      "status": "freeze_local_1min_seed_window_table_and_shift_next_to_minute_pattern_envelope_audit",
+      "rationale": "the branch now has a canonical first-hour 1-minute table for all retained supervision seeds and can move to minute-pattern envelope work"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the new 1-minute seed windows remain supervision-only and do not authorize replay contamination"
+    }
+  ],
+  "interpretation": [
+    "V1.32D turns the extracted local 1-minute seed windows into the next minute-branch direction.",
+    "The immediate next step is envelope/pattern work over the frozen seed windows, not direct replay modification."
+  ]
+}

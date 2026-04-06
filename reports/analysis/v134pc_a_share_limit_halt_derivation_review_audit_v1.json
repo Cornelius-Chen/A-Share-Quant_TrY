@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "promotion_review_row_count": 17,
+    "promotable_now_count": 14,
+    "raw_daily_candidate_cover_count": 14,
+    "limit_halt_materialized_count": 14,
+    "blocked_by_limit_halt_derivation_count": 0,
+    "blocked_no_candidate_count": 3,
+    "status_csv": "data\\training\\a_share_limit_halt_derivation_review_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_derivation_review_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "limit_halt_candidate_surface",
+      "component_state": "raw_candidate_cover_available",
+      "coverage_note": "raw_daily_candidate_cover_count = 14"
+    },
+    {
+      "component": "limit_halt_derivation_state",
+      "component_state": "semantic_surface_materialized_for_recheck",
+      "coverage_note": "limit_halt_materialized_count = 14"
+    },
+    {
+      "component": "daily_market_promotion_dependency",
+      "component_state": "replay_recheck_reopened_with_promotable_subset",
+      "coverage_note": "promotable_now_count = 14"
+    }
+  ],
+  "interpretation": [
+    "Replay promotion is no longer blocked by index-daily source absence, and the limit-halt semantic layer is no longer missing.",
+    "Controlled semantic materialization has reopened replay promotion review with a promotable subset, while residual no-candidate rows remain explicit."
+  ]
+}

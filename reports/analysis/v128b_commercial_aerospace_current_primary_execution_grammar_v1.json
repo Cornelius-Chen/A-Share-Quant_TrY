@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128b_commercial_aerospace_current_primary_execution_grammar_v1",
+    "current_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "prior_primary_variant": "veto_drag_trio_impulse_only",
+    "split_frontier_wins": 4,
+    "suffix_frontier_wins": 4,
+    "equity_delta_new_minus_old": 22429.2251,
+    "drawdown_delta_new_minus_old": -0.01646738,
+    "execution_grammar_compaction": "entry_surface_stable_plus_window_specific_derisk_intensification",
+    "authoritative_next_question": "which part of this grammar is portable versus commercial-aerospace specific"
+  },
+  "grammar_rows": [
+    {
+      "layer": "entry_surface",
+      "current_primary_rule": "retain selective impulse-only drag veto entry surface from prior primary",
+      "evidence": "preheat probe/full counts stay unchanged; only a marginal +1 impulse full order appears in the new primary"
+    },
+    {
+      "layer": "window_specific_derisk",
+      "current_primary_rule": "inside 20260112->20260212, sell 100% on risk_off_deterioration, sell 75% on weak_drift_chop, and sell 50% on impulse de-risk target",
+      "evidence": "new primary variant name encodes full riskoff, weakdrift_075, and impulse_half"
+    },
+    {
+      "layer": "reason_shift",
+      "current_primary_rule": "add a narrow impulse-target de-risk reason without broadening entry heat",
+      "evidence": "impulse-target reduce count rises from 0 to 4 while preheat probe/full counts stay at 33 / 16"
+    },
+    {
+      "layer": "drawdown_control",
+      "current_primary_rule": "concentrate extra de-risk in the largest drawdown window rather than sell more everywhere",
+      "evidence": "largest window 20260112->20260212: reduce notional rises from 438175.0 to 738655.0"
+    },
+    {
+      "layer": "symbol_beneficiaries",
+      "current_primary_rule": "the improved grammar mainly helps 688568, 600118, and 600879 while leaving mild pressure on 300342 and 000738",
+      "evidence": "top symbol improver = 688568 (11343.5962)"
+    }
+  ],
+  "interpretation": [
+    "V1.28B compresses the current commercial-aerospace primary into an execution grammar rather than another replay comparison table.",
+    "The key finding is that the current primary does not win by broadening entry aggression; it wins by keeping the same entry skeleton and intensifying de-risk only in the main drawdown window."
+  ]
+}

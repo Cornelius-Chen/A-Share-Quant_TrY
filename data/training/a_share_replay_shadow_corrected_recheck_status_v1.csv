@@ -1,0 +1,4 @@
+﻿component,component_state,base_missing_count,corrected_missing_count,improvement_count,boundary_only_residual_count,calendar_alignment_residual_count,corrected_via_effective_trade_date_count,remaining_blocker_class,remaining_missing_count
+shadow_corrected_overlay,materialized_and_replay_recheck_ready,3,2,1,,,,,
+corrected_market_context_residual,boundary_only_after_shadow_overlay,,,,2,0,1,,
+replay_internal_build_recheck,narrowed_to_external_boundary_residuals_under_shadow_overlay,,,,,,,external_boundary_residual_only,2

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125q_commercial_aerospace_supervised_leakage_audit_v1",
+    "training_row_count": 6180,
+    "feature_field_count": 18,
+    "label_field_count": 4,
+    "potential_leakage_feature_count": 0,
+    "authoritative_status": "field_level_leakage_blocked_pending_adversarial_review"
+  },
+  "audit_rows": [
+    {
+      "audit_item": "feature_label_overlap",
+      "status": "pass",
+      "detail": "no feature/label overlap"
+    },
+    {
+      "audit_item": "future_named_feature_fields",
+      "status": "pass",
+      "detail": "no future-only fields inside feature set"
+    },
+    {
+      "audit_item": "regime_event_point_in_time_binding",
+      "status": "pass",
+      "detail": "regime and event fields are derived from same-day board state and registry rows with public_release_time <= trade_date by construction"
+    },
+    {
+      "audit_item": "label_fields_are_future_only",
+      "status": "pass",
+      "detail": "forward_return_10 / max_favorable_return_10 / max_adverse_return_10 are kept outside the feature set and only supervise offline labels"
+    },
+    {
+      "audit_item": "training_row_trade_date_integrity",
+      "status": "pass",
+      "detail": "all rows have point-in-time trade_date keys"
+    }
+  ],
+  "interpretation": [
+    "V1.25Q performs a hard field-level leakage audit before any supervised learning claim is trusted.",
+    "The key rule is simple: structure/event features must stay contemporaneous, and all future path quantities must remain label-only."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134e_commercial_aerospace_intraday_seed_simulator_attribution_v1",
+    "order_count": 8,
+    "session_count": 6,
+    "same_day_loss_avoided_total": 3732.6954,
+    "top_symbol_by_same_day_loss_avoided": "300342",
+    "top_tier_by_same_day_loss_avoided": "reversal_watch",
+    "attribution_csv": "data\\training\\commercial_aerospace_intraday_seed_simulator_attribution_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_seed_simulator_attribution_ready_for_phase_2_direction_triage"
+  },
+  "tier_rows": [
+    {
+      "trigger_tier": "reversal_watch",
+      "order_count": 5,
+      "sell_notional": 161190.5,
+      "pnl_after_cost": -9221.8709,
+      "same_day_loss_avoided": 3053.9194,
+      "same_day_loss_avoided_share": 0.818154
+    },
+    {
+      "trigger_tier": "severe_override_positive",
+      "order_count": 3,
+      "sell_notional": 161924.0,
+      "pnl_after_cost": -15859.4632,
+      "same_day_loss_avoided": 678.776,
+      "same_day_loss_avoided_share": 0.181846
+    }
+  ],
+  "symbol_rows": [
+    {
+      "symbol": "000738",
+      "order_count": 2,
+      "pnl_after_cost": -6945.276,
+      "same_day_loss_avoided": 938.308,
+      "same_day_loss_avoided_share": 0.251375
+    },
+    {
+      "symbol": "300045",
+      "order_count": 1,
+      "pnl_after_cost": -1923.6336,
+      "same_day_loss_avoided": 862.4448,
+      "same_day_loss_avoided_share": 0.231051
+    },
+    {
+      "symbol": "300342",
+      "order_count": 2,
+      "pnl_after_cost": -5727.1452,
+      "same_day_loss_avoided": 1970.4468,
+      "same_day_loss_avoided_share": 0.527888
+    },
+    {
+      "symbol": "601698",
+      "order_count": 1,
+      "pnl_after_cost": -8300.4576,
+      "same_day_loss_avoided": 447.1936,
+      "same_day_loss_avoided_share": 0.119804
+    },
+    {
+      "symbol": "688066",
+      "order_count": 1,
+      "pnl_after_cost": -1675.9617,
+      "same_day_loss_avoided": -241.0653,
+      "same_day_loss_avoided_share": -0.064582
+    },
+    {
+      "symbol": "688523",
+      "order_count": 1,
+      "pnl_after_cost": -508.86,
+      "same_day_loss_avoided": -244.6325,
+      "same_day_loss_avoided_share": -0.065538
+    }
+  ],
+  "session_rows": [
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "phase_window_semantic": "preheat_window",
+      "severity_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "remaining_quantity_after_sim": 350,
+      "pnl_after_cost": -508.86,
+      "same_day_loss_avoided": -244.6325
+    },
+    {
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "phase_window_semantic": "preheat_window",
+      "severity_tier": "mild_override_watch",
+      "filled_step_count": 1,
+      "remaining_quantity_after_sim": 1150,
+      "pnl_after_cost": -1675.9617,
+      "same_day_loss_avoided": -241.0653
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "phase_window_semantic": "impulse_window",
+      "severity_tier": "reversal_watch",
+      "filled_step_count": 2,
+      "remaining_quantity_after_sim": 0,
+      "pnl_after_cost": -6945.276,
+      "same_day_loss_avoided": 938.308
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "phase_window_semantic": "impulse_window",
+      "severity_tier": "severe_override_positive",
+      "filled_step_count": 1,
+      "remaining_quantity_after_sim": 0,
+      "pnl_after_cost": -8300.4576,
+      "same_day_loss_avoided": 447.1936
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "phase_window_semantic": "impulse_window",
+      "severity_tier": "reversal_watch",
+      "filled_step_count": 1,
+      "remaining_quantity_after_sim": 1200,
+      "pnl_after_cost": -1923.6336,
+      "same_day_loss_avoided": 862.4448
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "phase_window_semantic": "impulse_window",
+      "severity_tier": "severe_override_positive",
+      "filled_step_count": 2,
+      "remaining_quantity_after_sim": 0,
+      "pnl_after_cost": -5727.1452,
+      "same_day_loss_avoided": 1970.4468
+    }
+  ],
+  "interpretation": [
+    "V1.34E explains which seed sessions, tiers, and symbols drive the first intraday seed simulator's shadow-risk benefit.",
+    "The report is still phase-2-only: it attributes same-day damage avoidance inside the canonical seed set without opening replay binding."
+  ]
+}

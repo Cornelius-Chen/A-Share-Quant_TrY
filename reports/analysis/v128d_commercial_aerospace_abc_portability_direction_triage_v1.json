@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128d_commercial_aerospace_abc_portability_direction_triage_v1",
+    "current_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "main_window_delta_new_minus_old": 23693.6184,
+    "post_window_delta_new_minus_old": -2917.1643,
+    "portability_status": "moderately_concentrated_but_not_single_symbol_only",
+    "authoritative_next_step": "main_window_deeper_downside_grammar",
+    "secondary_followup": "post_window_tail_repair_if_main_window_branch_hits_stopline",
+    "stop_doing": [
+      "do_not_start_cross_board_migration_yet",
+      "do_not_reopen_entry_side_aggression",
+      "do_not_treat_post_window_tail_as_primary_problem_before_main_window_is_exhausted"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "B_post_window_tail_repair",
+      "reason": "The main improvement is already concentrated in the main window, while the visible remaining weakness is the post-window giveback."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "A_main_window_deeper_downside_grammar",
+      "reason": "The main window still contains almost all of the economic edge, so the biggest remaining value is to improve downside execution there."
+    },
+    {
+      "subagent": "James",
+      "vote": "C_cross_board_migration",
+      "reason": "The board-level grammar may already be good enough to migrate, but this is a minority view against the current local optimization evidence."
+    }
+  ],
+  "interpretation": [
+    "V1.28D resolves the first post-portability direction split after the current commercial-aerospace primary was frozen and its edge decomposition was made explicit.",
+    "The minority migration vote is acknowledged but not accepted because the current portability audit still shows the main economic edge living inside the main downside window.",
+    "The authoritative next step stays inside commercial aerospace and targets deeper downside grammar in the main window, with tail repair reserved as the second line if that branch reaches stopline quickly."
+  ]
+}

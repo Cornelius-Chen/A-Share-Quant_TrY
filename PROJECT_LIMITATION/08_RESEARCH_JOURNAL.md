@@ -4557,3 +4557,2335 @@ Artifacts:
 - Side Effects / Risks: The line now avoids future-label leakage, but all variants still sit on the same narrow `CPO` timing-aware sample. The strongest broad variant is still likely too permissive, while the cleaner variants may be too thin to generalize.
 - Conclusion: The strict intraday overlay line survives the first no-future-label repair. The real information now appears to live in a narrow band of visible checkpoint-score thresholds, not in either the raw all-pass variant or the no-trade extreme filters.
 - Next Step: Carry the visible-only executing variants forward, add two more runs on this line, and then subject the repaired family to the next mandatory three-run adversarial review.
+
+
+### JOURNAL-0228 The first visible-only three-run review demoted the apparent clean winner and forced a time-split rebuild
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Triage the first visible-only three-run block and rebuild threshold logic across time splits
+- Related Decision: DEC-0228
+- Related Runs: V116F, V116G
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the visible-only family still contains real signal after leakage repair, then a three-run adversarial review plus a simple time split should separate coherent candidates from same-sample lucky bands.
+- What Changed: Formalized the first adversarial triage for `V116C/V116D/V116E`, then rebuilt threshold logic across an early/late time split instead of calibrating and judging on the same `9` windows.
+- Expected Impact: Reduce the risk that visible-only candidates are merely a carved threshold family on the same tiny sample.
+- Observed Result: The triage demoted `pc1_only_q_0p2` because replay cleanliness and audit coherence diverged after the `V116E` repair. The retained visible-only candidates became:
+  - `pc2_only_q_0p25` as the cleaner coherent candidate
+  - `pc1_or_pc2_q_0p25` as the expressive shadow candidate
+  while `all_intraday_strict_visible` was retained only as an audit ceiling. The time-split rebuild then showed that the family still has signal, but the “winner” depends materially on which side of the split is used for calibration.
+- Side Effects / Risks: The time-split audit improves methodology, but the sample remains only `9` rows (`5` early, `4` late). This is still too thin for promotion, and checkpoint-to-fill timing semantics remain the next execution-level repair.
+- Conclusion: The visible-only line survives its first adversarial review, but only as a candidate family. The biggest gain from this block was not a new winner; it was forcing the line off same-sample threshold carving and onto time-split scrutiny.
+- Next Step: Keep the visible-only family candidate-only, use time-split rows as the main anti-overfit guardrail, and next repair checkpoint-to-fill alignment before any broader replay expansion.
+
+
+### JOURNAL-0229 The cleaner narrow visible-only candidate failed wider repaired-window revalidation, while the expressive shadow candidate retained partial explanatory power
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Revalidate retained visible-only candidates on a wider repaired under-exposure window
+- Related Decision: DEC-0229
+- Related Runs: V116I
+- Protocol Version: protocol_v1.16
+- Hypothesis: If a retained visible-only candidate is genuinely useful for under-exposure correction, then it should touch a broader set of repaired strong-day misses rather than only the original strict sample.
+- What Changed: Built `V116I` to apply the retained visible-only candidates from the first triage against the wider repaired under-exposed window extracted from `V114H`, using only `add_vs_hold` rows on those repaired miss days.
+- Expected Impact: Distinguish whether the cleaner narrow candidate or the more expressive shadow candidate is the more relevant next replay-facing object.
+- Observed Result: `pc2_only_q_0p25` hit none of the wider repaired under-exposed rows. By contrast, `pc1_or_pc2_q_0p25` hit `7` rows across `4` repaired miss days, with `0.714286` positive-expectancy hit rate and `0.128348` average expectancy proxy, though it still included the known weak `2023-12-08` pair.
+- Side Effects / Risks: The wider-window result improves prioritization, but it also confirms that the expressive candidate remains mixed rather than clean. This still does not justify promotion.
+- Conclusion: The wider-window audit shifted the visible-only ranking. The narrow clean candidate is no longer the right next expansion target; the broader expressive candidate is the one that actually reaches repaired under-exposure, even if it remains candidate-only.
+- Next Step: Carry `pc1_or_pc2_q_0p25` forward as the next broader replay-facing shadow candidate and keep `pc2_only_q_0p25` only as a narrow clean reference, not as the main expansion line.
+
+
+### JOURNAL-0230 The wider visible-only shadow replay only became meaningful after reconnecting it to the repaired miss surface
+
+- Date: 2026-04-01
+- Author: Codex
+- Title: Rebuild the broader visible-only shadow replay on repaired under-exposure days and repaired sizing floors
+- Related Decision: DEC-0230
+- Related Runs: V116J
+- Protocol Version: protocol_v1.16
+- Hypothesis: If `pc1_or_pc2_q_0p25` is the only visible-only candidate that still explains wider repaired under-exposure, then a checkpoint-aware shadow replay on the repaired miss surface should show whether that explanatory power survives once it is translated back into execution.
+- What Changed: Replaced the stale `V114H` miss surface with repaired `V114W` miss days and repaired `V114X` sizing floors, rebuilt candidate timing from visible checkpoint scores, and replayed only the broader visible-only candidate with held-position-only same-session next-bar adds.
+- Expected Impact: Convert the broader visible-only line from an audit-only explanation layer into a replay-facing shadow candidate that still respects repaired execution semantics.
+- Observed Result: The rebuilt shadow replay produced a large delta over baseline, but the resulting line is too hot to promote. This means the replay is useful as a shadow stress line, not as a new default rule.
+- Side Effects / Risks: The main risk shifted from “does the candidate do anything at all?” to “does this candidate now over-express too aggressively on repaired miss days?” That is a better place to be methodologically, but still far from promotable.
+- Conclusion: The broader shadow replay only started to matter once it was rebuilt on the repaired miss surface. That validates the direction, but it also confirms that the expressive visible-only candidate should remain shadow-only.
+- Next Step: Keep `pc1_or_pc2_q_0p25` as the wider shadow replay line, accumulate two more runs, and force the next mandatory three-run adversarial review before any further replay-facing expansion.
+
+
+### JOURNAL-0231 The second visible-only three-run review caught the project trying to retain the hottest replay line as the cooled winner
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Triage `V116J/V116K/V116L` and overrule the mistaken cooled-shadow retention
+- Related Decision: DEC-0231
+- Related Runs: V116J, V116K, V116L, V116M
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the second visible-only three-run block is reviewed adversarially, then it should be possible to distinguish the genuinely cooled candidate from the hottest replay reference rather than silently retaining the latter.
+- What Changed: Ran the second mandatory three-run adversarial review over `V116J/V116K/V116L` and formalized the result in `V116M`.
+- Expected Impact: Prevent the visible-only line from drifting into a naming trap where the hottest replay is relabeled as the cooled retained object.
+- Observed Result: The review concluded that `V116L` was methodologically wrong: it retained `earliest_visible_reference`, even though `V116K` already showed that the cleanest cooled variant was `double_confirm_late_quarter`. The triage therefore overruled `V116L`, demoted `earliest_visible_reference` to a hot upper-bound audit line, and selected `double_confirm_late_quarter` as the only corrected cooled-shadow retained candidate.
+- Side Effects / Risks: The corrected retained object is cleaner, but still sits on the same visible-only candidate family and cannot be promoted. The main gain here is methodological integrity, not immediate tradability.
+- Conclusion: The three-run cadence did exactly what it was supposed to do: it caught a drift back toward hot replay worship and forced the retained object back into alignment with the stated cooling objective.
+- Next Step: Freeze the corrected retained object explicitly and continue future visible-only work from that corrected reference rather than from `V116L`.
+
+
+### JOURNAL-0232 The corrected cooled-shadow retained object restores consistency between the heat-trim family and the carried-forward candidate
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Replace the mistaken V116L retained object with a corrected cooled visible-only shadow reference
+- Related Decision: DEC-0232
+- Related Runs: V116N
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the adversarial triage is accepted, then the project should immediately carry forward the corrected cooled retained object rather than leaving the mistaken `V116L` result in place.
+- What Changed: Built `V116N` to freeze `double_confirm_late_quarter` as the corrected cooled-shadow retained candidate and explicitly separate it from the hot upper-bound `earliest_visible_reference`.
+- Expected Impact: Give the visible-only family a coherent retained object that can be reused in later candidate-only validations without confusing it with the hottest replay line.
+- Observed Result: The corrected retained object is materially less hot than the previous retained line, while still preserving a substantial replay delta over the repaired baseline.
+- Side Effects / Risks: This does not solve the deeper sample-fragility problem; it only fixes the immediate retention inconsistency.
+- Conclusion: `V116N` should be treated as the authoritative carried-forward cooled visible-only shadow reference, while `V116L` becomes part of the audit trail rather than the current retained truth.
+- Next Step: Use `V116N` instead of `V116L` whenever the project refers to the retained cooled visible-only shadow candidate.
+
+
+### JOURNAL-0233 The corrected retained object survived wider repaired-window revalidation, but only as a thinner candidate-only survivor
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Revalidate the corrected cooled visible-only shadow candidate on the wider repaired under-exposure window
+- Related Decision: DEC-0233
+- Related Runs: V116O, V116P
+- Protocol Version: protocol_v1.16
+- Hypothesis: If `double_confirm_late_quarter` is truly the right retained cooled-shadow object, then it should retain some repaired-window explanatory power even after the V116M/V116N correction.
+- What Changed: Built `V116O` to compare the corrected cooled retained object against the hot upper-bound reference on the wider repaired under-exposure window, then formalized the next triage in `V116P`.
+- Expected Impact: Determine whether the corrected retained object deserves replay-facing expansion or merely continued candidate-only survival.
+- Observed Result: The corrected retained object remained cleaner than the hot upper bound, but only hit `3/6` repaired days and `6` rows total. This was enough to keep it alive, but not enough to justify new replay-facing expansion.
+- Side Effects / Risks: The main risk shifted from retention incoherence to thin repaired-window evidence. The line is now methodologically cleaner but still too narrow.
+- Conclusion: `double_confirm_late_quarter` survives as the only retained visible-only candidate, but it survives as a thinner candidate-only object, not as a replay-ready winner.
+- Next Step: Expand the repaired-window sample before doing anything else replay-facing on this visible-only family.
+
+
+### JOURNAL-0234 The project widened the repaired-window audit surface so visible-only work stops circling the same 6-day family
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Freeze an expanded repaired-window manifest for the next visible-only candidate audits
+- Related Decision: DEC-0234
+- Related Runs: V116Q
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the current blocker is repaired-window thinness rather than retention coherence, then the next step should widen the audit surface before replay expansion.
+- What Changed: Built `V116Q` to freeze an expanded repaired-window manifest that contains all `10` remaining under-exposed strong days from `V114H`, while marking which `6` rows came from the original repaired top-miss family.
+- Expected Impact: Break the visible-only line out of the same small repaired-window orbit without pretending that replay expansion has already been justified.
+- Observed Result: The audit surface widened from `6` to `10` days, adding `4` new repaired under-exposed strong days for future candidate-only validation.
+- Side Effects / Risks: This widens the CPO audit surface, but it is still inside the same family and therefore still not cross-family evidence.
+- Conclusion: The visible-only line now has a wider repaired-window surface available for the next validation step, which is the correct move before any further replay-facing expansion.
+- Next Step: Use the expanded 10-day manifest as the next visible-only candidate revalidation surface.
+
+
+### JOURNAL-0235 The Q/R/S three-run review flipped the visible-only problem statement from signal death to candidate-base blindness
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Freeze the Q/R/S triage and stop blaming zero new-day hits on the corrected cooled candidate alone
+- Related Decision: DEC-0235
+- Related Runs: V116Q, V116R, V116S, V116T
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the widened repaired-window validation is failing because the intraday candidate base never generated rows for the new days, then further visible-only replay or threshold tuning would be methodologically misplaced.
+- What Changed: Formalized the Q/R/S triage into `V116T` and elevated the candidate-base coverage gap to the authoritative current blocker.
+- Expected Impact: Redirect effort away from replay-facing visible-only experiments and back onto the intraday table-construction layer.
+- Observed Result: The triage showed that the corrected cooled candidate still deserves candidate-only survival, but the zero new-day hit result in `V116R` cannot be read cleanly until the three true gap days have add-vs-hold rows.
+- Side Effects / Risks: Progress temporarily looks slower because the project is backfilling infrastructure rather than chasing a new replay delta.
+- Conclusion: The visible-only line was not ready for another replay-facing argument; it first needed a candidate-base repair.
+- Next Step: Rebuild the expanded-window add-vs-hold action-timepoint rows for the three true gap days.
+
+
+### JOURNAL-0236 The project repaired the expanded-window intraday candidate base by appending six new add-vs-hold rows
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Rebuild add-vs-hold intraday action-timepoint rows for the three true expanded-window gap days
+- Related Decision: DEC-0236
+- Related Runs: V116U
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the blind spot is table-construction rather than signal failure, then rebuilding the three true gap days should append new candidate rows without changing the original PCA geometry.
+- What Changed: Queried fresh Baostock 5/15/30/60-minute bars for `300308` and `300502` on `2023-11-07`, `2024-01-18`, and `2024-01-23`, rebuilt the feature rows, projected them into the existing PCA space, and merged the resulting six add-vs-hold rows back into an expanded-window PCA band table.
+- Expected Impact: Close the candidate-base blind spot while preserving comparability with all earlier visible-only PCA work.
+- Observed Result: The rebuild appended `6` new rows across `3` days and grew the merged expanded-window PCA table to `456` rows.
+- Side Effects / Risks: The new rows include both clearly positive and mixed/soft outcomes, so the rebuild removes the coverage excuse but may expose the visible-only line to harsher validation.
+- Conclusion: The data-layer blind spot is no longer hypothetical; it has been concretely repaired.
+- Next Step: Re-run the expanded-window coverage audit on the merged PCA band table.
+
+
+### JOURNAL-0237 The post-rebuild re-audit confirmed that all true held-mature coverage gaps are closed
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Verify that the expanded-window action-timepoint rebuild actually removed the three true candidate-base blind spots
+- Related Decision: DEC-0237
+- Related Runs: V116V
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the V116U rebuild succeeded, then the widened repaired-window surface should no longer contain any held-mature days without add-vs-hold candidate rows.
+- What Changed: Re-ran the `V116S`-style coverage audit on the merged PCA band table produced by `V116U`.
+- Expected Impact: Establish a clean precondition for the next corrected cooled visible-only validation pass.
+- Observed Result: The re-audit showed `days_with_add_candidate_rows = 9`, `days_with_held_mature_symbols = 9`, and `true_coverage_gap_day_count_after_rebuild = 0`. The only remaining day without add candidates is `2023-04-28`, which has no held mature symbols and therefore is not an add-space miss.
+- Side Effects / Risks: The project no longer gets to explain weak expanded-window validation by blaming candidate-base coverage; the next validation must stand or fail on actual signal quality.
+- Conclusion: The widened repaired-window candidate base is now structurally complete enough for another visible-only candidate validation pass.
+- Next Step: Re-run corrected cooled-shadow expanded-window validation on the rebuilt candidate base and read the line again from there.
+
+
+### JOURNAL-0238 The rebuilt-base expanded-window validation finally produced a real new-day hit for the corrected cooled candidate
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Re-run corrected cooled visible-only validation on the rebuilt expanded-window candidate base
+- Related Decision: DEC-0238
+- Related Runs: V116W
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the visible-only line looked dead on new expanded-window days mainly because the candidate base was missing rows, then the corrected cooled candidate should begin to hit at least some new days once the coverage repair is in place.
+- What Changed: Re-ran the `V116R`-style expanded-window validation using the merged rebuilt PCA band table from `V116U` instead of the original thin base.
+- Expected Impact: Distinguish between true signal death and candidate-base blindness on the newly added repaired-window days.
+- Observed Result: The corrected cooled candidate moved from `new_hit_day_count = 0` to `new_hit_day_count = 1`, while the hot upper bound expanded to `new_hit_day_count = 3`. The corrected cooled line now hits `8` rows across `4` days with `positive_expectancy_hit_rate = 0.75` and `avg_expectancy_proxy_3d = 0.098337`, which is cleaner than the hot upper bound but still materially thinner.
+- Side Effects / Risks: The new-day hit only appears on `2024-01-18`, not across all rebuilt days, so the visible-only line is not broadly revived; it is only partially rescued by the coverage repair.
+- Conclusion: The coverage repair mattered. The corrected cooled candidate was not simply dead on the expanded window, but its external extension remains narrow and candidate-only.
+- Next Step: Keep the line candidate-only, preserve future labels as audit-only, and use the next three-run adversarial review to decide whether this partial rescue justifies any further visible-only work.
+
+
+### JOURNAL-0239 The rebuilt-day contrast closed the coverage chapter and exposed the remaining quality gate
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Compare the three rebuilt expanded-window days side by side after the coverage repair
+- Related Decision: DEC-0239
+- Related Runs: V116X
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the corrected cooled visible-only line only converts one rebuilt new day after coverage repair, then the remaining difference should be explained by signal quality rather than by missing rows or broken timing.
+- What Changed: Built `V116X` to compare `2023-11-07`, `2024-01-18`, and `2024-01-23` directly on rebuilt rows plus rebuilt-base validation hits, using only the repaired data surface.
+- Expected Impact: Force the project to stop re-litigating coverage and timing when the remaining issue is actually the cooled gate's quality discriminator.
+- Observed Result: `2024-01-18` became the only rebuilt new day that converts into a corrected cooled hit. `2023-11-07` stayed positive but late-only, while `2024-01-23` stayed late-only and weak. Coverage is no longer the live blocker.
+- Side Effects / Risks: The contrast is still same-family and narrow. It clarifies the current problem, but it does not create promotable evidence by itself.
+- Conclusion: The visible-only family's current problem is now quality discrimination after coverage repair, not timing repair and not missing rows.
+- Next Step: Keep the line candidate-only and make the next visible-only step quality-facing rather than timing-facing.
+
+
+### JOURNAL-0240 The U/V/W adversarial review froze the visible-only line at the quality-discrimination stage
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use the next three-run review to stop replay-facing expansion after the rebuilt-base validation
+- Related Decision: DEC-0240
+- Related Runs: V116U, V116V, V116W, V116Y
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the three-run cadence is doing its job, then the review after `V116U/V116V/V116W` should distinguish a partially rescued candidate line from a replay-ready law.
+- What Changed: Built `V116Y` to freeze the U/V/W triage using the repaired-base validation plus the rebuilt-day contrast, and incorporated the convergent views of the three adversarial reviewers.
+- Expected Impact: Keep the visible-only line from drifting back into replay-first expansion immediately after the coverage repair succeeded.
+- Observed Result: The review accepted that coverage is fixed and that the corrected cooled candidate was partially rescued, but still blocked promotion and replay-facing expansion. The line remains candidate-only, with quality discrimination now defined as the current main problem.
+- Side Effects / Risks: The line now looks slower-moving because the next step is quality-side work rather than another replay delta. That is a methodological constraint, not a sign that the line is dead.
+- Conclusion: The three-run cadence worked again: it kept a fragile same-family candidate alive without letting it harden into a replay-facing law.
+- Next Step: Keep rebuilt-row future labels audit-only and only continue visible-only work if the next step directly targets quality-side discrimination.
+
+
+### JOURNAL-0241 The first quality-side cooled refinement showed that the visible-only family is effectively PC1-driven
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Sweep visible-score quality thresholds while keeping the cooled timing structure fixed
+- Related Decision: DEC-0241
+- Related Runs: V116Z
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the current blocker is quality discrimination rather than timing or coverage, then holding the cooled timing structure fixed and sweeping only visible-score quantiles should reveal whether a cleaner quality-side variant exists.
+- What Changed: Built `V116Z` to re-run the corrected cooled visible-only line on the rebuilt expanded-window base while changing only the visible-score quality gate (`q=0.20`, `0.25`, `0.33`, `0.40`) and explicitly auditing whether PC2 is ever a real active axis.
+- Expected Impact: Distinguish whether the next visible-only step should still be framed as a two-dimensional `pc1/pc2` family or whether it has effectively collapsed into one PC1-driven line.
+- Observed Result: `q=0.25` and `q=0.33` were effectively identical, `q=0.20` became narrower and weaker, `q=0.40` became hotter and noisier, and the retained family never meaningfully activated PC2. The cooled line is therefore effectively PC1-driven at this stage.
+- Side Effects / Risks: This is still same-board same-family evidence. The main value is methodological narrowing, not a new promotion candidate.
+- Conclusion: The quality-side cooled refinement did not create a new winner; it proved that the current visible-only family has already collapsed to a narrow PC1-driven plateau.
+- Next Step: Freeze the current quality-side reference and stop regrinding the same quantile family.
+
+
+### JOURNAL-0242 The quality-side cooled retention closed the current quantile loop instead of chasing another local optimum
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Freeze `cooled_q_0p25` as the quality-side cooled reference and demote the rest to shadow or rejection status
+- Related Decision: DEC-0242
+- Related Runs: V117A
+- Protocol Version: protocol_v1.16
+- Hypothesis: If the first quality-side refinement pass only produces a plateau, then the correct move is to freeze a reference variant and stop same-family quantile carving.
+- What Changed: Built `V117A` to freeze the retention result from `V116Z`, keeping `cooled_q_0p25` as the retained quality-side cooled reference, `cooled_q_0p33` as an equivalent shadow, and rejecting the hotter or narrower neighbors.
+- Expected Impact: Prevent the visible-only line from slipping back into endless threshold tuning without actually adding new information.
+- Observed Result: The retained variant stayed `cooled_q_0p25`, `cooled_q_0p33` was formally recognized as equivalent rather than better, and the family was frozen as effectively PC1-driven.
+- Side Effects / Risks: Progress now looks flatter because the project deliberately ended a local same-family search rather than squeezing one more replay delta out of it.
+- Conclusion: The current quantile loop is closed. Any further visible-only work now needs a genuinely new discriminator, not another pass over the same thresholds.
+- Next Step: If this line continues, the next step should be either a new quality-side discriminator or the next three-run adversarial review, not more quantile grinding.
+
+
+### JOURNAL-0243 The cooled_q_0p25 contrast made the current visible-only boundary explicit
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Turn the rebuilt-new-day separation into a retained-variant-specific quality contrast
+- Related Decision: DEC-0243
+- Related Runs: V117B
+- Protocol Version: protocol_v1.16
+- Hypothesis: Once `cooled_q_0p25` is frozen as the retained quality-side reference, the project should explicitly state what this retained line accepts and rejects instead of leaving that boundary implicit.
+- What Changed: Built `V117B` to compare the three rebuilt new days against the retained `cooled_q_0p25` quality standard using a small set of explicit quality axes plus the rebuilt-day contrast already frozen in `V116X`.
+- Expected Impact: Make the visible-only boundary easier to reason about and easier to preserve without sliding back into replay-first improvisation.
+- Observed Result: `2024-01-18` remained the only rebuilt new day that satisfies the retained standard. `2023-11-07` now reads as the clearest example of a late-only but otherwise decent day, while `2024-01-23` reads as late and materially weak.
+- Side Effects / Risks: This clarifies the current same-family boundary, but it does not solve the deeper generalization problem.
+- Conclusion: The current visible-only line is no longer just “a narrow candidate”; it now has an explicit retained boundary that can be referred to without re-deriving it every time.
+- Next Step: If this line continues, the next move should be a genuinely new quality-side discriminator rather than another pass over timing, coverage, or quantile tuning.
+
+
+### JOURNAL-0244 The continuation-integrity score added quality information but failed the standalone-law test
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Audit the new visible-only quality score and demote it to a component instead of a law
+- Related Decision: DEC-0244
+- Related Runs: V117C, V117D
+- Protocol Version: protocol_v1.17
+- Hypothesis: A new score can be worth keeping even if it is not strong enough to replace the retained cooled boundary, as long as it carries visible-only quality information that later audits can reuse.
+- What Changed: Built `V117D` to test whether the `continuation_integrity_score_candidate` from `V117C` could stand alone against the current `cooled_q_0p25` retained line and the hot-only set.
+- Expected Impact: Distinguish between a score that is merely descriptive and a score that is already strong enough to become a replay-facing discriminator.
+- Observed Result: The score clearly separated retained hits from hot-only rows on average, but its best standalone threshold was too strict to preserve the retained rebuilt day `2024-01-18`. Lowering the threshold enough to keep that day would introduce materially more hot-only leakage.
+- Side Effects / Risks: This slows down visible-only promotion because the new score is useful but not decisive.
+- Conclusion: The continuation-integrity score is real, but only as a quality component. It should help later audits, not replace the retained cooled boundary or timing gate.
+- Next Step: Keep the score candidate-only and only combine it with already-retained visible-only structure if later work still justifies continuing this line.
+
+
+### JOURNAL-0245 The three-run adversarial review formally ended the continuation-integrity branch as a mainline candidate
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use the three-run review cadence to demote a promising descriptive score before it silently turns into policy
+- Related Decision: DEC-0245
+- Related Runs: V117C, V117D, V117E, V117F
+- Protocol Version: protocol_v1.17
+- Hypothesis: A three-run adversarial review should be able to stop a branch that looks attractive descriptively but fails the stronger tests of standalone usability and retained-set refinement.
+- What Changed: After `V117C` discovered the score and `V117D/V117E` tested it, `V117F` froze the three-agent review outcome: the score has explanatory value but not enough robust decision value to remain a mainline candidate.
+- Expected Impact: Prevent the project from sliding back into same-family refinement on a branch that no longer deserves replay-facing resources.
+- Observed Result: All three reviewers converged on the same answer: the continuation-integrity score does not justify further mainline investment. It survives only as an explanatory audit field.
+- Side Effects / Risks: This deliberately narrows the visible-only line and forces the next step to be a genuinely new discriminator rather than another extension of the same branch.
+- Conclusion: The three-run cadence worked. It stopped a branch that could easily have looked “promising enough” if we had kept staring only at descriptive gaps.
+- Next Step: Move on to a genuinely new quality-side discriminator and keep the continuation-integrity score only as a supporting explanatory field.
+
+
+### JOURNAL-0246 The breakout-damage branch survived the three-run review and replaced continuation-integrity as the active candidate line
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Open a new quality-side branch around breakout efficiency and damage containment, then keep it alive only after retained-set refinement and adversarial review
+- Related Decision: DEC-0246
+- Related Runs: V117G, V117H, V117I, V117J
+- Protocol Version: protocol_v1.17
+- Hypothesis: A genuinely new quality-side branch should look different from the old continuation line and should still separate positive vs weak rows inside the retained family before it deserves further attention.
+- What Changed: Built `V117G` to discover a new breakout-damage score, `V117H` to audit it against `q25_hit` vs `hot_only`, `V117I` to test retained-set refinement, and `V117J` to run the scheduled three-agent adversarial review.
+- Expected Impact: Replace the demoted continuation-integrity branch with a stronger candidate line if and only if the new branch survives both external and retained-set scrutiny.
+- Observed Result: The new branch survived. It separated `q25_hit` from `hot_only`, still separated positive vs weak retained rows, and all three reviewers agreed it is stronger than the old branch. They also agreed the sample is too small for promotion.
+- Side Effects / Risks: The branch now becomes the new focus, which risks over-investment unless the project remembers it is still based on a small retained sample.
+- Conclusion: The breakout-damage branch is the new active candidate quality-side line. It is alive, but still candidate-only.
+- Next Step: Continue only through wider external audit or larger-sample validation, not replay-facing promotion.
+
+
+### JOURNAL-0247 The three-run review killed the reverse/heuristic side branch before it could distract the CPO mainline
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use the K/L/M review cadence to demote a broad reverse-signal branch and keep heuristic pattern ideas in protocol space only
+- Related Decision: DEC-0247
+- Related Runs: V117K, V117L, V117M, V117N
+- Protocol Version: protocol_v1.17
+- Hypothesis: A reverse branch that looks acceptable in a broad pool but fails once conditioned into the actual main-uptrend held-position problem should be demoted before it starts competing with the stronger quality-side mainline.
+- What Changed: Built `V117K` to discover a broad reverse-signal score, `V117L` to formalize human heuristic quantization as objective proxy families, `V117M` to condition the reverse branch into the true problem setting, and `V117N` to freeze the three-agent review outcome.
+- Expected Impact: Prevent the project from drifting into weak downside-story branches just because they sound intuitive or psychologically appealing.
+- Observed Result: The reverse branch weakened materially once conditioned into the actual use case, and the heuristic quantization layer remained protocol-level only. All three reviewers converged that both should be demoted out of the mainline.
+- Side Effects / Risks: The current project will stay more asymmetric, with much more energy invested in the positive-side quality branch than in explicit reverse-signal modeling.
+- Conclusion: The three-run cadence worked again. It stopped an intuitive but weak side branch before it could absorb disproportionate research effort.
+- Next Step: Keep reverse/heurstic ideas only as low-priority auxiliary material and continue the mainline on the stronger breakout-damage candidate branch.
+
+
+### JOURNAL-0248 The broader external-pool and time-split audits broke the breakout-damage mainline, so the project deliberately stopped before replay-facing drift
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the O/P/Q review cycle kill the strongest visible-only candidate once it stops surviving wider external scrutiny
+- Related Decision: DEC-0248
+- Related Runs: V117O, V117P, V117Q, V117R
+- Protocol Version: protocol_v1.17
+- Hypothesis: A branch that survives retained-set refinement may still deserve demotion if it fails on a broader `add_vs_hold` pool and becomes unstable under time-split validation.
+- What Changed: Built `V117O` to move breakout-damage onto a wider add-pool, `V117P` to test chronological stability, `V117Q` to inspect whether reverse/human layers explain its false positives, and `V117R` to freeze the three-agent adversarial outcome.
+- Expected Impact: Stop the project from confusing a neat visible-only candidate with a robust replay-facing add discriminator once broader validation contradicts the earlier retained-set story.
+- Observed Result: The branch failed the broader test surface. External-pool mean separation turned negative, time-split stability fell to weak levels, and the reverse/human layers helped explain false positives without rescuing the branch's mainline status.
+- Side Effects / Risks: This removes the current best positive-side candidate and forces the project to reopen discovery, which may feel like losing progress.
+- Conclusion: The cadence worked again. It prevented the project from promoting a candidate that looked strongest only on a narrow retained surface.
+- Next Step: Keep breakout-damage only as an explanatory component and reopen a fresh quality-side search rather than continuing same-family replay-facing refinement.
+
+
+### JOURNAL-0249 Reopening from the broader add pool produced a better branch than breakout-damage, but not one that deserves replay-facing status yet
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the S/T/U cycle keep a new candidate alive only because it survives the broader pool better, not because it is already stable
+- Related Decision: DEC-0249
+- Related Runs: V117S, V117T, V117U, V117V
+- Protocol Version: protocol_v1.17
+- Hypothesis: A new branch discovered directly from the broader `add_vs_hold` pool should be treated as more trustworthy than one grown inside a tiny retained family, but it still must survive crude time-split validation before it deserves stronger investment.
+- What Changed: Built `V117S` for discovery, `V117T` for broader external audit, `V117U` for time-split validation, and `V117V` for the scheduled three-agent review.
+- Expected Impact: Replace the post-breakout vacuum with a candidate line that is at least externally cleaner than the degraded branch, without pretending that this makes the new line replay-ready.
+- Observed Result: The cooling-reacceleration branch kept a positive broader external-pool gap and materially stronger balanced accuracy than breakout-damage, but still failed the stricter stability test with `min_test_balanced_accuracy = 0.375`.
+- Side Effects / Risks: The project now has a new live candidate, but also a strong temptation to over-interpret its external-pool success and ignore the time-split weakness.
+- Conclusion: The branch deserves one more non-replay audit cycle, but nothing more. The cadence again blocked replay-facing drift before the evidence justified it.
+- Next Step: Use the next cycle only to test false-positive control and temporal robustness; if it still fails, cut it quickly.
+
+
+### JOURNAL-0250 The false-positive-control refinement materially improved the cooling-reacceleration branch, but not enough to loosen the replay ban
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the W/X/Y cycle harden the candidate without pretending it is already replay-ready
+- Related Decision: DEC-0250
+- Related Runs: V117W, V117X, V117Y, V117Z
+- Protocol Version: protocol_v1.17
+- Hypothesis: A narrow visible-only overheat-control layer can improve a fragile quality-side candidate by reducing false positives, and if the improvement survives crude time splits the branch may deserve continued candidate investment without yet becoming replay-facing.
+- What Changed: Built `V117W` to add an overheat-control layer, `V117X` to test whether the controlled score improved broader external-pool discrimination, `V117Y` to test whether that improvement held across year splits, and `V117Z` to freeze the scheduled three-agent review outcome.
+- Expected Impact: Convert the cooling-reacceleration line from a shaky one-more-cycle candidate into a more disciplined candidate that is worth continued auditing, while still blocking premature replay expansion.
+- Observed Result: The branch improved materially on both external-pool and time-split metrics. The three reviewers converged that this was a real refinement, not noise, but also converged that the branch still lacks enough negative rejection strength and sample breadth to justify shadow replay.
+- Side Effects / Risks: Because the sample remains small, the branch may still fail later under a wider or dirtier surface despite the apparent improvement.
+- Conclusion: The cadence worked again. It allowed the project to keep a genuinely improved candidate alive while still refusing replay-facing drift.
+- Next Step: Continue only with candidate-only out-of-set false-positive-control work; do not loosen the replay ban yet.
+
+
+### JOURNAL-0251 The add-vs-entry branch attacks the right contamination mode, but chronology still flips its threshold behavior
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the B/C/D cycle confirm the right problem and still block replay because chronology remains unstable
+- Related Decision: DEC-0251
+- Related Runs: V118A, V118B, V118C, V118D, V118E
+- Protocol Version: protocol_v1.18
+- Hypothesis: Once the retained cooling-reacceleration branch is shown to leak mainly into strong entry, a dedicated add-vs-entry discriminator should be more useful than another generic false-positive filter.
+- What Changed: Built `V118A` to prove the current contamination mode is add-vs-entry, `V118B` to discover a dedicated separation score, `V118C` to audit that score on the full positive-add versus all-entry surface, `V118D` to test chronology stability, and `V118E` to freeze the three-agent review outcome.
+- Expected Impact: Move the project away from generic heat control toward a more problem-specific discriminator that can eventually tell when a move should be treated as add rather than just a strong new entry.
+- Observed Result: The branch is directionally right and externally meaningful, but chronology still flips how the threshold fails: some splits pass all add and reject no entry, while another rejects entry better but loses add recall.
+- Side Effects / Risks: This creates a tempting new branch that looks more semantically correct than the old one, yet may still collapse under broader chronology or out-of-set pressure.
+- Conclusion: The cadence worked again. It kept the branch alive because the problem framing improved, but still blocked replay-facing drift because time-split behavior is not trustworthy yet.
+- Next Step: Continue one more non-replay adversarial cycle focused on chronology-hardening or out-of-set challenge; do not relax the replay ban.
+
+
+### JOURNAL-0252 The strengthened add-vs-entry branch still failed once role holdouts exposed that chronology weakness was really role-year entanglement
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the F/G/H cycle kill a semantically correct branch once its object-shift failure becomes undeniable
+- Related Decision: DEC-0252
+- Related Runs: V118F, V118G, V118H, V118I
+- Protocol Version: protocol_v1.18
+- Hypothesis: If the add-vs-entry branch truly captures an action distinction rather than a sample pocket, it should remain viable even after narrowing the entry surface to strong entries and then challenging the branch under role-family holdouts.
+- What Changed: Built `V118F` to audit only against strong entry lookalikes, `V118G` to hold out role families, `V118H` to explain chronology failure through role-year entanglement, and `V118I` to freeze the three-agent review outcome.
+- Expected Impact: Distinguish between a branch that merely needed a stronger adversarial surface and one that still collapses once the surface is widened in the correct dimension.
+- Observed Result: The branch remained strong on the narrowed strong-entry surface, but role-family holdouts broke it badly and showed that chronology failure was partly object-shift: entry rows are concentrated in a late role-year pocket, while positive adds live elsewhere.
+- Side Effects / Risks: This removes another branch that felt more semantically correct than earlier lines, increasing pressure on the next discovery attempt.
+- Conclusion: The cadence worked again. It stopped the project from mistaking a conceptually correct branch for a stable branch.
+- Next Step: Keep this branch only as an explanatory role-year entanglement layer and reopen discovery on a fresh line instead of continuing same-family training.
+
+
+### JOURNAL-0253 Reclassifying degraded branches under expectancy logic rescued exactly one branch above pure explanation: breakout-damage
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the expectancy lens distinguish between truly dead branches and branches that still deserve to survive as soft components
+- Related Decision: DEC-0253
+- Related Runs: V117F, V117N, V117R, V118I, V118J
+- Protocol Version: protocol_v1.18
+- Hypothesis: The older candidate-vs-explanatory framing may throw away branches that no longer deserve hard-law status but still contain useful expectancy information for soft penalty or correction layers.
+- What Changed: Asked all three reviewers to revisit the degraded legacy branches under a richer taxonomy and then froze the reclassification in `V118J`.
+- Expected Impact: Reduce waste from previous demotions without reopening weak branches as active candidates, and make the branch graveyard more useful for future expectancy-aware stacking.
+- Observed Result: All three reviewers converged that only `breakout_damage` deserves rescue above pure explanation. The other degraded lines remain explanatory only because they either never created real training gain or are dominated by object-shift artifacts.
+- Side Effects / Risks: Because breakout-damage is now kept in a middle state, there is renewed risk of accidentally letting it drift back into candidate or replay-facing status.
+- Conclusion: The expectancy lens changed the taxonomy, but not permissively. It rescued exactly one branch and kept the rest demoted.
+- Next Step: Reuse breakout-damage only as a soft expectancy component and keep the rest in the explanatory archive.
+
+
+### JOURNAL-0254 The breakout-damage rescue stayed valid, but active integration still failed, so the branch is now archived rather than active
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the K/L/M cycle prove that a rescued soft component can survive conceptually yet still fail to earn active integration
+- Related Decision: DEC-0254
+- Related Runs: V118K, V118L, V118M, V118N
+- Protocol Version: protocol_v1.18
+- Hypothesis: A branch can deserve rescue as a soft expectancy component without necessarily improving the live candidate when actively integrated.
+- What Changed: Built `V118K` to test integration weights, `V118L` to re-audit the best integrated variant, `V118M` to compare chronology behavior, and `V118N` to freeze the reviewer consensus.
+- Expected Impact: Separate “preserve this idea in the archive” from “spend active model budget integrating it now.”
+- Observed Result: The best active integration weight stayed at `alpha = 0.0`, meaning no integration at all. The branch therefore kept conceptual value but earned no active role in the current line.
+- Side Effects / Risks: Archiving may reduce near-term reuse of a still-interesting quality-side idea.
+- Conclusion: The expectancy taxonomy held up under pressure. It did not reopen breakout-damage as an active line just because it survived demotion.
+- Next Step: Leave breakout-damage archived and continue the mainline without active integration from it.
+- ### JOURNAL-0255 The reclaim-absorption idea felt trader-intuitive, but the first three-run block showed it was directionally wrong
+-
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use the three-run cadence to kill a plausible-sounding quality branch before it absorbs another week of attention
+- Related Decision: DEC-0255
+- Related Runs: V118O, V118P, V118Q, V118R
+- Protocol Version: protocol_v1.18
+- Hypothesis: Positive add windows in a diffusion-main-uptrend board might show better intraday absorption and reclaim quality than negative add windows.
+- What Changed: Built `V118O` for discovery, `V118P` for broader external-pool audit, `V118Q` for immediate time-split validation, and `V118R` to freeze the three-agent triage.
+- Expected Impact: Either discover a new quality-side branch that is genuinely different from cooling and breakout-damage, or kill the idea fast if it fails the basic external and chronology tests.
+- Observed Result: The branch failed both core tests. The full-pool gap was negative, and chronology remained unstable, so all three reviewers converged on `dead`.
+- Side Effects / Risks: This shrinks the active branch set again and reinforces how hard it is to find a stable quality-side discriminator on the current CPO mid-frequency surface.
+- Conclusion: The cadence worked as intended. A plausible idea was not allowed to survive on intuition alone.
+- Next Step: Reopen quality-side discovery on a different axis and do not revisit reclaim-absorption unless the feature basis itself changes materially.
+
+### JOURNAL-0256 Sustained participation without chase is the first new post-reclaim branch that survived the initial three-run block
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let a live branch stay alive without letting it jump too early into replay
+- Related Decision: DEC-0256
+- Related Runs: V118T, V118U, V118V, V118W
+- Protocol Version: protocol_v1.18
+- Hypothesis: Positive add windows may be better characterized by persistent intraday occupancy and afternoon participation than by cooling or absorption language, as long as the close does not look like a late-session chase.
+- What Changed: Built `V118T` for discovery, `V118U` for broader external-pool audit, `V118V` for immediate time-split validation, and `V118W` to freeze the three-agent triage.
+- Expected Impact: Replace dead quality-side branches with a cleaner line that has broad-pool directionality while still obeying chronology discipline.
+- Observed Result: The branch stayed positive on the broader add pool and achieved `best_balanced_accuracy = 0.727273`, but one holdout year still collapsed to `0.375`, so all reviewers converged on `candidate-only`.
+- Side Effects / Risks: This line may still die in the next hardening cycle if the weak chronology bucket cannot be repaired without same-family overfitting.
+- Conclusion: The branch is alive and worth one more cycle, but only because the protocol blocked premature replay-facing expansion.
+- Next Step: Use the next cycle to harden false-positive control and temporal robustness, not to widen action or replay usage.
+
+### JOURNAL-0257 The XYZ hardening cycle did not strengthen the sustained-participation branch, so the control line itself had to die
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let a live family survive while killing the hardening subline that failed to move the needle
+- Related Decision: DEC-0257
+- Related Runs: V118X, V118Y, V118Z, V119A
+- Protocol Version: protocol_v1.19
+- Hypothesis: A visible-only penalty on prior heat, late fade, and tail-volume overheat could reduce false positives enough to strengthen the sustained-participation non-chase branch without reopening replay.
+- What Changed: Built `V118X` for the control discovery, `V118Y` for broader external-pool audit, `V118Z` for time-split validation, and `V119A` to freeze the three-way conclusion.
+- Expected Impact: Either create a stronger non-replay hardening layer for the branch, or prove that same-family penalty tuning was not the right next move.
+- Observed Result: The control changed almost nothing. External balanced accuracy stayed at `0.727273`, chronology stayed at `0.597222 / 0.375`, and `V118X` explicitly reported `control_helpful = false`.
+- Side Effects / Risks: This removes the most obvious same-family hardening idea, leaving the parent branch alive but with less immediate room for simple refinement.
+- Conclusion: The cadence worked again. It killed the hardening subline without overreacting and killing the parent family with it.
+- Next Step: If the sustained-participation family continues, it must do so through a genuinely orthogonal hardening idea rather than more prior-heat or late-fade penalty tuning.
+
+### JOURNAL-0258 Tushare data completion finally replaced proxy float-turnover context for the CPO cohort
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use the live token immediately and close a known data debt instead of postponing it behind more model work
+- Related Decision: DEC-0258
+- Related Runs: V119B, V119C
+- Protocol Version: protocol_v1.19
+- Hypothesis: A direct Tushare data pack for `daily_basic`, `moneyflow`, and `stk_limit` should materially improve the project's data basis because several later branches were still leaning on proxy float-share and turnover context.
+- What Changed: Added a private-token Tushare client, bootstrapped the full bounded `CPO` cohort, wrote the three datasets into canonical repo data paths, and audited critical-field coverage.
+- Expected Impact: Make later CPO training and replay work less dependent on proxy float/turnover assumptions and give the project a cleaner daily data surface before further branch discovery.
+- Observed Result: The bootstrap completed with:
+  - `daily_basic_rows = 15665`
+  - `moneyflow_rows = 15665`
+  - `stk_limit_rows = 15700`
+  and the coverage audit confirmed the critical `daily_basic` and `stk_limit` fields are ready.
+- Side Effects / Risks: This still does not provide minute-level Tushare data, so intraday add/reduce confirmation remains a separate problem.
+- Conclusion: This was the right interruption. The project now has a harder daily data base for CPO instead of continuing to argue on proxy fields.
+- Next Step: Treat the Tushare daily pack as the default float/turnover/limit reference in the next CPO data-facing steps.
+
+### JOURNAL-0259 The first Tushare-backed orthogonal hardening line is the strongest new candidate since the replay repair, but one year bucket still blocks promotion
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let new daily data produce a materially better branch without immediately repeating the promotion mistake
+- Related Decision: DEC-0259
+- Related Runs: V119D, V119E, V119F, V119G
+- Protocol Version: protocol_v1.19
+- Hypothesis: Direct daily turnover, free-float, and moneyflow context from Tushare may supply the orthogonal hardening signal that the intraday-only quality branches could not stably produce.
+- What Changed: Built `V119D` for discovery on add rows, `V119E` for broader external-pool audit, `V119F` for immediate year-split validation, and `V119G` to freeze the three-way adversarial conclusion.
+- Expected Impact: Either create the first genuinely stronger post-replay hardening line, or prove that even better data still does not solve the branch instability problem.
+- Observed Result: The branch materially outperformed the recent quality-side lines:
+  - `V119E best_balanced_accuracy = 0.863636`
+  - `V119F mean_test_balanced_accuracy = 0.75`
+  - `V119F min_test_balanced_accuracy = 0.5`
+  but `holdout_2024` still had `test_positive_recall = 0.0`, which blocked early promotion.
+- Side Effects / Risks: Because this is the first branch in a while that looks genuinely strong, there is renewed risk of promoting too early out of relief rather than discipline.
+- Conclusion: This is the strongest new orthogonal hardening line so far, but the protocol stayed disciplined and kept it at candidate-only.
+- Next Step: Use the next cycle to understand the 2024 holdout failure surface before permitting any replay-facing use.
+
+### JOURNAL-0260 The first combo branch finally improved both external ordering and chronology, but the protocol still refused replay until the weakest year bucket looks less fragile
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Recognize the first actually stronger combo line without repeating the promotion error
+- Related Decision: DEC-0260
+- Related Runs: V119H, V119I, V119J, V119K
+- Protocol Version: protocol_v1.19
+- Hypothesis: Combining one live intraday participation signal with one new Tushare-backed turnover discipline signal may repair chronology weakness that neither branch can fully solve alone.
+- What Changed: Built the minimal `participation_turnover_combo_score_candidate`, audited it on the broad add pool, validated it under year holdouts, and then froze the three-run adversarial conclusion.
+- Expected Impact: Either produce the first clearly superior live combo branch, or prove that even careful orthogonal stacking still fails chronology and should be abandoned.
+- Observed Result: The combo did improve both broad-pool ordering and chronology:
+  - `V119I best_balanced_accuracy = 0.863636`
+  - `V119J mean_test_balanced_accuracy = 0.791667`
+  - `V119J min_test_balanced_accuracy = 0.666667`
+  but the `holdout_2024` bucket still only reached `test_positive_recall = 0.333333`, so promotion stayed blocked.
+- Side Effects / Risks: This branch now creates the strongest temptation yet to relax the replay gate too early, especially because it genuinely beats the single-family lines.
+- Conclusion: The combo branch is alive and materially stronger, but the protocol correctly kept it at `candidate-only`.
+- Next Step: Spend one more non-replay cycle on the remaining 2024 weakness before deciding whether the combo deserves a harder label.
+
+### JOURNAL-0261 The first branch finally earned hard-candidate language, but only after a new daily capital-flow support term materially improved the weakest chronology bucket
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Use one more orthogonal ELG-flow term to turn the strongest combo candidate into the first non-replay hard candidate
+- Related Decision: DEC-0261
+- Related Runs: V119L, V119M, V119N, V119O
+- Protocol Version: protocol_v1.19
+- Hypothesis: A narrow extra-large-order buy-sell support term may add exactly the missing daily capital-flow information that the participation-turnover combo still lacked in the 2024 holdout bucket.
+- What Changed: Added `0.25 * z(elg_buy_sell_ratio)` to the existing participation-turnover combo, audited the new line on the external add pool, validated it under year holdouts, and then froze the three-run adversarial conclusion with explicit disagreement recorded.
+- Expected Impact: Either prove that one more orthogonal capital-flow term can harden the best live branch into a real hard candidate, or show that the project is still overfitting the same small add pool geometry.
+- Observed Result: The ELG-supported combo materially improved the live surface:
+  - `V119M best_balanced_accuracy = 0.909091`
+  - `V119N mean_test_balanced_accuracy = 0.875`
+  - `V119N min_test_balanced_accuracy = 0.833333`
+  - `holdout_2024 test_positive_recall = 0.666667`
+  This was strong enough for two of three adversarial reviewers to upgrade it to hard-candidate language.
+- Side Effects / Risks: Because the branch is now the first non-replay hard candidate, there is renewed risk of letting success itself weaken replay discipline.
+- Conclusion: The project finally has a hard candidate, but only in non-replay form.
+- Next Step: Spend exactly one more non-replay audit cycle on this line before allowing any discussion of replay-facing use.
+
+### JOURNAL-0262 The first hard candidate did not survive the next adversarial cycle, which is exactly why the protocol needed that extra non-replay checkpoint
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Let the object-shift and leakage surfaces overrule the excitement from the first hard-candidate promotion
+- Related Decision: DEC-0262
+- Related Runs: V119P, V119Q, V119R, V119S
+- Protocol Version: protocol_v1.19
+- Hypothesis: If the ELG-supported combo really deserved hard-candidate language, it should survive one more cycle of symbol holdout, role-family holdout, and out-of-set leakage review.
+- What Changed: Ran the next non-replay adversarial block on the newly promoted branch and forced the protocol to reconsider its strongest current line under harder object-shift and leakage conditions.
+- Expected Impact: Either confirm the branch as a true hard candidate, or prove that the promotion happened one cycle too early.
+- Observed Result: The harder surfaces broke the branch:
+  - symbol holdout `mean/min = 0.4375 / 0.375`
+  - role holdout `mean/min = 0.440476 / 0.333333`
+  - `entry leakage = 0.375`
+  - `close leakage = 0.666667`
+  This was enough to revoke the hard-candidate label.
+- Side Effects / Risks: The project now has to admit that even its strongest recent branch still carries meaningful object and context entanglement.
+- Conclusion: The hard-candidate promotion was useful precisely because the next cycle could falsify it; the branch is still alive, but only as candidate-only.
+- Next Step: If the family continues, it must do so through de-entangling symbol/role geometry or cleaning leakage, not through replay expansion.
+
+### JOURNAL-0263 The limit-band discipline idea improved the story more than it improved the model
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Preserve the non-chase explanation, but stop pretending it is a live candidate branch
+- Related Decision: DEC-0263
+- Related Runs: V119V, V119W, V119X, V119Y
+- Protocol Version: protocol_v1.19
+- Hypothesis: A narrow daily limit-band discipline term might orthogonally repair the ELG-supported combo by rewarding add contexts that stay away from pure up-limit chase behavior.
+- What Changed: Built a compact branch using `up_gap`, `close_to_up_band`, and `high_to_up_band`, then pushed it through discovery, broad external audit, chronology validation, and a scheduled three-reviewer triage.
+- Expected Impact: Either uncover a real non-chase hardening term or prove that the idea is more explanatory than operational.
+- Observed Result: The branch slightly improved the discovery gap, tied the parent externally, and then weakened chronology:
+  - discovery gap `1.863218` vs parent `1.810537`
+  - external `0.909091` vs parent `0.909091`
+  - time-split mean/min `0.819445 / 0.666667` vs parent `0.875 / 0.833333`
+  Two reviewers called it `explanatory_only`; one allowed only a very weak candidate interpretation.
+- Side Effects / Risks: The project now has one more attractive-looking but budget-unworthy branch, which is useful as a reminder that intuitive market stories do not automatically deserve candidate status.
+- Conclusion: The limit-band discipline line explains part of the non-chase intuition but does not improve the parent where it matters, so it should live only as explanation.
+- Next Step: Stop touching this branch and move on to a genuinely new orthogonal discovery idea.
+
+### JOURNAL-0264 The daily Tushare plane now looks locally exhausted, which is useful because it closes a whole class of tempting but weak next steps
+
+- Date: 2026-04-02
+- Author: Codex
+- Title: Scan the remaining obvious daily-field variations once, then declare a stopline instead of opening endless micro-branches
+- Related Decision: DEC-0264
+- Related Runs: V119Z
+- Protocol Version: protocol_v1.19
+- Hypothesis: Even after the ELG-supported combo weakened, there might still be one last narrow orthogonal repair hidden inside the current Tushare daily field family.
+- What Changed: Ran a consolidated stopline scan across the remaining obvious daily-data directions:
+  - float/free-float and cap structure
+  - medium-flow support
+  - net-flow scaling
+  - retail crowding
+  - limit-band discipline
+- Expected Impact: Either reveal one more viable narrow branch or prove that the current Tushare daily plane should be treated as locally exhausted.
+- Observed Result: No scanned direction cleared the parent on both broad external and chronology surfaces:
+  - `scan_candidate_count = 9`
+  - `viable_increment_candidate_count = 0`
+  - several tied the parent externally, but none improved chronology
+- Side Effects / Risks: This closes off a psychologically comfortable area of work; future progress will require a harder shift to a new data plane rather than nicer variations on the same inputs.
+- Conclusion: The daily Tushare field family is no longer the right place to keep searching for another narrow fix.
+- Next Step: Move the next discovery cycle onto a different data plane instead of reopening daily-field micro-tuning.
+
+### JOURNAL-0265 Reduce-side finally has a formal branch, which matters even if it is not yet promotable
+
+- Date: 2026-04-03
+- Author: Codex
+- Title: Replace the stalled close-only refinement loop with a broader `reduce_vs_hold` board risk-off branch
+- Related Decision: DEC-0265
+- Related Runs: V121I, V121J, V121K
+- Protocol Version: protocol_v1.21
+- Hypothesis: The right next risk-side step is not another narrow close gate but a broader board risk-off signal that can tell us when to reduce before the system is forced into full close behavior.
+- What Changed: Opened a new `reduce_vs_hold` branch using the enriched action table joined to Tushare daily context:
+  - lower `board_avg_return`
+  - lower `board_breadth`
+  - higher `turnover_rate_f`
+  - higher `volume_ratio`
+  were treated as early de-risk structure rather than close-only collapse.
+- Expected Impact: If valid, this would become the first genuinely broader downside candidate and would move the project from "soft close priors" toward a usable reduce-side grammar.
+- Observed Result:
+  - discovery mean gap `1.31783`
+  - external best balanced accuracy `0.687336`
+  - time-split mean/min `0.615348 / 0.525`
+  - stability posture: `candidate_stable_enough_for_next_adversarial_review`
+- Side Effects / Risks: The branch may still be too broad and may be capturing generic stress episodes rather than precise reduce semantics, so it must survive adversarial review before any stronger claim is made.
+- Conclusion: This is the first risk-side line in a while that looks alive beyond soft-component status, which is a meaningful shift even though it is still far from replay-facing.
+- Next Step: Run the next three-run adversarial review on `V121I/J/K` and decide whether the branch stays `candidate-only`, downgrades to soft-component, or dies.
+
+### JOURNAL-0266 The first reduce-side branch survived adversarial review, which matters more than whether it feels glamorous
+
+- Date: 2026-04-03
+- Author: Codex
+- Title: Keep the board risk-off reduce branch alive, but refuse to confuse survival with readiness
+- Related Decision: DEC-0266
+- Related Runs: V121I, V121J, V121K, V121L
+- Protocol Version: protocol_v1.21
+- Hypothesis: If the first formal reduce-side branch survived both broad external ranking and crude chronology, adversarial review would likely keep it alive rather than kill it.
+- What Changed: Sent `V121I/J/K` through the three-reviewer adversarial cadence.
+- Expected Impact: Either prove the branch is still too soft to matter, or validate that the project finally has a live downside candidate worth further narrowing.
+- Observed Result:
+  - `candidate_only` votes: `2`
+  - `soft_component` votes: `1`
+  - replay-facing remained unanimously blocked
+  - the key numbers survived the review:
+    - discovery gap `1.31783`
+    - external best BA `0.687336`
+    - time-split mean/min `0.615348 / 0.525`
+- Side Effects / Risks: Keeping the branch alive may tempt premature execution use, especially because the project has been starved for downside progress; this is exactly why replay-facing remains blocked.
+- Conclusion: The line is alive and deserves more narrowing budget, but not more trust than the evidence supports.
+- Next Step: Continue only with non-replay reduce-side narrowing and reject any attempt to smuggle this branch into execution too early.
+
+### JOURNAL-0267 The first reduce-side branch passed symbol holdout but failed the harsher question: does it really mean reduce?
+
+- Date: 2026-04-03
+- Author: Codex
+- Title: Symbol generalization was not the bottleneck; cross-action specificity was
+- Related Decision: DEC-0267
+- Related Runs: V121L, V121M, V121N, V121O
+- Protocol Version: protocol_v1.21
+- Hypothesis: If the new reduce-side branch survived symbol holdout, the next likely bottleneck would be whether it stayed specific to reduce context rather than turning into a generic risk prior.
+- What Changed:
+  - `V121M` added a symbol-holdout audit.
+  - `V121N` added an out-of-set false-positive audit across `add`, `entry`, and `close` contexts.
+  - `V121O` froze the second adversarial verdict for the branch.
+- Expected Impact: Either prove the branch is becoming a real reduce-side candidate or reveal that it is still too broad to distinguish reduce from general stress.
+- Observed Result:
+  - symbol holdout mean/min BA `0.631365 / 0.580508`
+  - symbol generalization survives
+  - but leakage is total at the current threshold:
+    - `reduce_pass_rate = 1.0`
+    - `add_leakage_rate = 1.0`
+    - `entry_leakage_rate = 1.0`
+    - `close_leakage_rate = 1.0`
+- Side Effects / Risks: The branch is now psychologically dangerous because "survives symbol holdout" sounds stronger than it is; in reality, it still behaves like a broad risk prior rather than a discrete action selector.
+- Conclusion: The reduce-side branch is alive, but the real next job is not more generalization checks; it is action-context separation.
+- Next Step: Continue only with non-replay reduce-side narrowing aimed at separating reduce from add/entry/close contexts.
+
+### JOURNAL-0268 The recent `1min` downside line survived, but the bridge did not
+
+- Date: 2026-04-03
+- Author: Codex
+- Title: Keep the `1min` downside soft component isolated until the data can support a real bridge
+- Related Decision: DEC-0268
+- Related Runs: V122R, V122S, V122T, V122U, V122V
+- Protocol Version: protocol_v1.22
+- Hypothesis: If the recent `1min` downside soft component contained genuinely transferable risk information, either the historical bridge would have some legal overlap or the recent same-plane stack would beat the standalone score across both discovery and transfer.
+- What Changed:
+  - `V122S` audited the date overlap between the old historical reduce surface and the recent `1min` plane.
+  - `V122T` tested a minimal same-plane stack that combined the standalone downside failure score with broad board-micro risk context.
+  - `V122U` froze the attachment stopline.
+  - `V122V` sent the bridge question through the three-reviewer adversarial cadence.
+- Expected Impact: Either justify attaching the `1min` downside component into the broader downside stack or force the project to keep it isolated.
+- Observed Result:
+  - historical overlap day count: `0`
+  - same-plane stack improved discovery gap `0.08154386 -> 0.10833396`
+  - but did **not** improve the transfer metrics enough to matter:
+    - q75 balanced accuracy `0.5206375 -> 0.51908727`
+    - time-split mean `0.52515907 -> 0.52230714`
+    - symbol-holdout mean `0.51487065 -> 0.51482082`
+  - all three reviewers converged on the same posture: keep the standalone soft component, block attachment
+- Side Effects / Risks: This freezes one tempting integration path and may feel slow, but it also prevents a recent-only component from quietly contaminating the broader downside stack.
+- Conclusion: The `1min` downside line is alive, but only in isolation; the bridge is not.
+- Next Step: Keep `V122R` as a standalone `soft_component` and wait for either historical `1min` coverage or a genuinely stronger same-plane increment before reopening attachment.
+## JOURNAL-0269 V123A-D Orthogonal 1min Downside
+- We explicitly stopped tuning the old recent `1min downside_failure` family and scanned for low-correlation alternatives instead.
+- Three orthogonal candidates were tested on the same recent `1min` proxy label plane:
+  - `churn_rejection_score`
+  - `vwap_rejection_imbalance_score`
+  - `gap_exhaustion_stall_score`
+- The winner was `gap_exhaustion_stall_score`:
+  - discovery gap `0.10445157`
+  - q75 BA `0.54544126`
+  - corr vs old `downside_failure` only `0.46646728`
+- It survives both chronology and symbol holdout a bit above random:
+  - time-split mean/min `0.54016402 / 0.5242303`
+  - symbol-holdout mean/min `0.53970323 / 0.52670002`
+- Pauli and Tesla both classified it as `soft_component`; James classified it as `candidate_only`.
+- We froze the branch as `soft_component` by majority.
+- The branch is worth preserving because it adds a different recent `1min` downside angle, but it is still too weak to drive execution directly.
+## JOURNAL-0270 V123E-G Same-Plane Blend Stopline
+- We tested whether the new orthogonal recent `1min` downside branch (`gap_exhaustion_stall_score`) should be attached to the older `downside_failure_score` in the same recent label plane.
+- Simple blends did create larger pooled gap values, but that was not enough.
+- The best blend was `orthogonal_heavy_blend_score`, yet it did not improve q75 BA at all relative to the best standalone branch and it made symbol minimum robustness worse.
+- All three reviewers agreed that same-plane attachment should stay blocked.
+- Outcome:
+  - `downside_failure_score` stays as detached recent `1min downside soft_component`
+  - `gap_exhaustion_stall_score` stays as detached orthogonal recent `1min downside soft_component`
+  - no replay-facing move
+  - no more same-plane blend tuning
+## JOURNAL-0271 V123H-K Regime Overlay Result
+- We tested whether top-level regime variables could explain the large research-baseline drawdown windows:
+  - broad index returns
+  - index turnover contraction
+  - CPO board turnover contraction
+- `liquidity_drought_regime_score` won the pooled scan.
+- It looked useful in discovery, but the moment we forced chronology, the branch became unstable.
+- We also discovered a hard data boundary:
+  - the current index bootstrap only covers one year
+  - so genuine cross-year regime transfer cannot be tested yet
+- Final posture:
+  - keep as `explanatory_only`
+  - useful for understanding why drawdowns cluster
+  - not usable as candidate execution logic yet
+## JOURNAL-0272 Heat Guardrail Interval Truth
+- We finally compared the uncapped research line and the main heat-capped variants on the exact same three drawdown windows.
+- This clarified something important:
+  - heat guardrails are not cosmetic
+  - they really do shrink the two largest later drawdowns by carrying much less `300308` and `300502`
+- But they do not explain everything:
+  - the earlier `2023-06-20 -> 2023-11-01` drawdown does not improve at all
+  - in that interval the guardrails never actually reduced carry, so the path stays identical
+- This means:
+  - heat is a real first-order problem
+  - but it is not the only one
+  - the remaining unresolved pain still points back toward true downside / reduce-side action logic
+## JOURNAL-0273 Residual Downside After Heat Caps
+- We isolated the one large drawdown family that heat guardrails did not improve:
+  - the third drawdown `2023-06-20 -> 2023-11-01`
+  - within the research line while still holding both `300308` and `300502`
+  - and still carrying more than `60%` cash, so this is not just an overheated leverage story
+- Inside that narrow subset, `held_pair_deterioration_score` emerged as the strongest residual downside branch.
+- It does not collapse under chronology, and it does not light up equally across the pre/post boundary negatives.
+- That makes it more than explanation-only.
+- But it is still tightly tied to a specific carry structure:
+  - `300308 + 300502`
+  - high-cash residual downside
+- Final posture:
+  - keep as `candidate_only`
+  - do not attach to replay
+  - do not pretend it is a general downside rule
+## JOURNAL-0274 Residual Branch Is Not a Single Threshold Artifact
+- We sanity-checked the new residual downside branch against adjacent high-cash floors.
+- The important result is that the branch is effectively unchanged at:
+  - `cash_ratio > 0.55`
+  - `cash_ratio > 0.60`
+  - `cash_ratio > 0.65`
+- That matters because it means the signal is tied to the held-pair residual downside geometry itself, not just a lucky cutoff at `60%`.
+- The branch only starts to degrade once the subset becomes materially narrower at `cash_ratio > 0.70`.
+- So the right reading is:
+  - narrow, yes
+  - context-specific, yes
+  - but not a trivial threshold artifact
+## JOURNAL-0275 Residual Branch Fails the Core-Focus Test
+- We pushed one step harder on the residual branch:
+  - not just “does it separate the interval”
+  - but “does it actually light up the deepest stress core inside the interval”
+- The answer was no.
+- Inside the positive residual interval, the branch scores the fringe slightly **higher** than the core:
+  - core mean `0.33515`
+  - fringe mean `0.545276`
+- The granular boundary view tells the same story:
+  - core pass rate `0.466667`
+  - fringe pass rate `0.5`
+  - both still above pre/post negatives, but not ordered the way a real core trigger should be
+- This is why the branch was demoted:
+  - not dead
+  - not fake
+  - but too diffuse to stay `candidate_only`
+## JOURNAL-0276 Drawdown Control Layers Are Now Ordered
+- We finally collapsed the recent risk work into a single attribution matrix instead of a pile of separate branches.
+- That matrix says:
+  - drawdowns 1 and 2 are mainly heat problems
+  - drawdown 3 is mainly a non-overheated held-pair deterioration problem
+- The consequence is practical:
+  - the next control work should not start from macro regime or new family discovery
+  - it should start from the ordered stack:
+    1. heat
+    2. broad reduce prior
+    3. narrow residual soft penalty
+    4. regime explanation
+- This is the first time the risk-side work has a clean priority order tied directly to the actual big drawdowns.
+## JOURNAL-0277 Broad Risk-Off Is Too Blunt for Execution
+- We finally attached the ordered risk stack to the research line and the answer was cleaner than expected:
+  - heat works
+  - broad risk-off, in execution form, is too blunt
+- The `balanced/strict heat` references still look like actual research-trading controls:
+  - they give back less than the uncapped line
+  - but they do not annihilate the curve
+- The moment we let `board_risk_off_reduce_prior` fire as real de-risking at next open, the line becomes over-defensive:
+  - drawdown compresses sharply
+  - final equity collapses with it
+- So the right reading is not that risk-off is useless.
+- It is that current `board_risk_off_reduce_prior` is still too wide to be an execution layer.
+- That is a valuable stopline:
+  - keep heat as the only live execution control
+  - push broad risk-off back to non-replay narrowing and explanation
+## JOURNAL-0278 Narrow Risk-Off Is Real, But Still Not Worth Promoting
+- We gave risk-off one fair retry instead of killing the idea outright.
+- The retry was simple:
+  - only let risk-off fire when the book is already hot enough
+  - and only trim partially
+- That worked in one important sense:
+  - the line no longer collapsed to near-baseline equity
+  - so the old broad failure really was about width, not pure direction
+- But it still failed the main question:
+  - can it beat the plain balanced heat reference on the return/drawdown tradeoff?
+- The answer stayed no.
+- So the honest reading is:
+  - broad risk-off was too blunt
+  - narrow risk-off is not fake
+  - but narrow risk-off is still only a shadow defensive variant
+- That is a useful endpoint because it stops us from endlessly trying to promote a family that is now well understood.
+## JOURNAL-0279 Heat Is Right, But Smaller Ladders Still Lose
+- Once heat was confirmed as the only live execution control, the obvious next question was:
+  - maybe the real problem is not heat itself
+  - maybe we just size each add too aggressively
+- We tested that directly by shrinking the add ladder under the same balanced heat budget.
+- The answer came back clean:
+  - yes, smaller ladders soften drawdown
+  - no, they do not beat the current balanced reference
+- That matters because it means the problem is no longer “we forgot to try gentler add sizing.”
+- We did try it.
+- The results say the current balanced heat reference is already the best point on that dimension.
+- So this closes another tempting loop:
+  - no more same-family ladder tuning
+  - no more pretending smaller adds are a hidden missing fix
+## JOURNAL-0280 Add Suppression Was Not Just Weak, It Was Absent
+- We tested the mildest downside execution idea available:
+  - do not sell
+  - just stop adding when risk-off appears inside already-hot books
+- The replay result came back perfectly flat against the heat reference, which looked suspicious.
+- The overlap audit explained it immediately:
+  - there were only `13` overlay add execution rows at all
+  - only `1` of them even had a matching risk-off score
+  - none crossed the risk-off threshold
+  - none overlapped with the gross-heat gate
+- That means this family is not a hidden gem we failed to tune.
+- It simply has no live surface in the current CPO sample.
+- This is an important closure point because it leaves much less ambiguity:
+  - heat is still real
+  - narrow risk-off shadow is real but not promotable
+  - add suppression is not even entering the game
+## JOURNAL-0281 CPO Is Frozen Enough That Queue Discipline Matters Again
+- After `V124G`, the main practical state became unusually clear:
+  - `CPO` still teaches us a lot
+  - but its live execution stack is no longer expanding
+  - it is basically `baseline + balanced_heat_reference`
+- That changes the most valuable next action.
+- The problem is no longer discovering one more clever CPO branch.
+- The problem becomes:
+  - what board should inherit the research worker next
+  - and how do we keep that handoff explicit and auditable
+- Re-opening the multi-board protocol showed we had never actually expanded the queue beyond `CPO`.
+- So `V124H` does something simple but important:
+  - it turns the next-board choice back into a real artifact
+  - instead of leaving it as a conversational intention
+- The current snapshot makes `商业航天` the cleanest next primary board, with `航天航空` and `军民融合` queued behind it as shadow alternates.
+- That matters because once one board is frozen, progress should come from portability and comparison, not from staying emotionally attached to the first board forever.
+## JOURNAL-0282 The Queue Only Matters If The Next Board Actually Starts
+- Queue expansion by itself is bookkeeping unless the head of the queue immediately becomes a real worker.
+- So after `V124H`, the right move was not to admire the ranking.
+- The right move was to begin `商业航天` at phase 1 and force the same discipline we used on `CPO`:
+  - first a world model
+  - then role grammar
+  - then lawful controls
+- The current snapshot is enough to do that honestly.
+- `002085` looks like the liquid leadership anchor.
+- `000738` gives a more stable core-support shape.
+- `600118` is still sparse, so it should stay an alternate rather than be over-trusted early.
+- That is a healthy starting posture:
+  - enough structure to begin
+  - not enough certainty to pretend the board is solved in advance
+## JOURNAL-0283 Broad Theme Boards Need Tier Discipline From Day One
+- The user's warning about `商业航天` was right.
+- This board is not just a clean direct-industry cluster.
+- It has a real risk of concept sprawl:
+  - direct names
+  - adjacent same-engine names
+  - propagation names
+  - distant sympathy names
+- If those layers are mixed too early, the worker will learn narration breadth instead of mechanism.
+- So `V124J` does something deliberately conservative:
+  - it keeps the current direct worker on a narrow tier-1 core
+  - it keeps adjacent sectors as tier-2 shadow support
+  - and it pushes user-noted broad concept names into a tier-3 watchlist
+- This is not denying that those names move with the theme.
+- It is acknowledging that they move for different reasons and therefore should not be granted the same causal status too early.
+## JOURNAL-0284 Broad Theme Strength Can Come From Outside The Official Board Label
+- The user corrected an important hidden assumption:
+  - not every decisive mover has to sit inside the direct board label
+  - some non-board names can still be real drivers of the move
+- That is especially true for a board like `商业航天`, where capital can express the theme through adjacent chains, platform names, or narrative bridges.
+- So the correction in `V124K` is not a softening.
+- It is a better map:
+  - direct board owners
+  - cross-board propulsion allies
+  - adjacent support sectors
+  - distant sympathy noise
+- This is healthier than the earlier narrow tiering because it keeps mechanism ownership and market force separated.
+- The direct board still owns the internal role grammar.
+- But the cross-board propulsion layer is now recognized as a real force in breadth and diffusion, not as disposable concept clutter.
+## JOURNAL-0285 A-Share Theme Boards Need A Web Reality Check
+- The local snapshot was not enough by itself for `商业航天`.
+- The user's examples pointed to a classic A股 truth:
+  - a board move is often driven by more than the official board members
+  - concept linkages, equity stakes, shovel sellers, and emotion mirrors all become part of the tradeable reality
+- Web sources made that visible very quickly.
+- `华菱线缆` is the cleanest example:
+  - easy to dismiss as concept hype if you only stare at board labels
+  - much harder to dismiss once you see the actual aerospace cable and acquisition context
+- `顺灏股份 / 金风科技 / 鲁信创投` show a second A股 truth:
+  - capital linkage and narrative bridge names can become real market force even when they are not formal industry-core owners
+- So `V124L` turns the universe into a more honest A股 map:
+  - formal owners
+  - concept propulsion
+  - shovel sellers
+  - similar-path mirrors
+- That is the right base if the goal is not just industry truth, but industry truth as filtered through A股 pricing behavior.
+## JOURNAL-0287 Missing Names Usually Mean The Universe Is Still Too Narrow
+- The user's correction was useful because the omissions were not random.
+- They exposed two recurring blind spots:
+  - chip shovel-sellers that matter even without direct board-label ownership
+  - materials names that have real aerospace linkage but still trade mainly as concept propulsion
+- `*ST铖昌` and `臻镭科技` strengthen the shovel layer.
+- `再升科技` strengthens the concept-propulsion layer.
+- This is exactly the kind of A股-specific universe repair that matters more than having a theoretically neat but practically incomplete board list.
+## JOURNAL-0288 Universe Repair Is Iterative On A股 Theme Boards
+- The additional correction with `西测测试` and `中超控股` reinforces the same point:
+  - a useful A股 theme universe is not discovered in one pass
+  - it is repaired iteratively as real trading names surface
+- `西测测试` strengthens the shovel layer because testing/verification is often a hidden but crucial industrial position.
+- `中超控股` strengthens the concept-propulsion layer because sometimes the market chooses a high-elasticity name as a force amplifier even when the industrial purity is weaker.
+## JOURNAL-0289 The Right Question Is No Longer “Is The Universe Complete?”
+- Once a board reaches this breadth, the better question is:
+  - not whether the list is complete
+  - but whether additions are ranked honestly
+- `V124N` is the first step that treats universe expansion like a graded process:
+  - high-confidence additions
+  - medium-confidence additions
+  - pending names that still need another pass
+- That is closer to real A股 board work.
+- The board is allowed to stay broad.
+- What is not allowed is pretending every broad name deserves identical causal weight.
+## JOURNAL-0290 Breadth Success Creates A Boundary Problem
+- The first three-step expansion worked in one real sense:
+  - the commercial-aerospace universe now feels much closer to how A股 actually trades the theme
+- But success created the next problem immediately:
+  - the board is broad enough to describe
+  - yet still too broad to legislate
+- The adversarial review was useful because it forced a clean pause:
+  - do not keep expanding
+  - do not start control extraction
+  - first run universe triage
+- That is the right kind of slowdown.
+- It does not deny the board's breadth.
+- It just refuses to confuse breadth with executable authority.
+## JOURNAL-0286 Breadth Only Helps If Authority Stays Layered
+- Once the universe is widened, the real danger becomes obvious:
+  - everything starts to matter
+  - and then nothing is ranked properly
+- `V124M` fixes that by making authority explicit.
+- The direct board owners still own the mechanism.
+- Cross-board propulsion names now have legitimate status, but only as breadth and diffusion force.
+- Shovel sellers get their own confirmation layer.
+- Mirror names become emotional context instead of accidental pseudo-core names.
+- This is the point where the commercial-aerospace worker starts to look usable instead of just broad.
+## JOURNAL-0291 The Universe Problem Has Finally Turned Into A Data Problem
+- The commercial-aerospace work changed character the moment `V124R` landed.
+- Before that point, every omitted-name argument still had some force because the board was trapped in a `web-only` state.
+- Once local Tushare feeds existed for the merged universe, the real question changed:
+  - no longer `did we forget another concept name?`
+  - but `can the machine legally learn the widened universe?`
+- That is a healthier problem.
+## JOURNAL-0292 Full Local Support Is Necessary But Not Sufficient
+- `V124S` removes a comforting excuse.
+- When `51/51` names are locally supported, weak machine understanding can no longer be blamed on feed gaps.
+- From this point on, bad machine triage is an authority problem, not a collection problem.
+## JOURNAL-0293 A Wider Machine Surface Immediately Exposes Authority Pollution
+- `V124T` proves that widening the board mechanically is dangerous.
+- The machine now sees far more than the earlier three-name bottleneck.
+- But once it sees more, it starts treating:
+  - concept-propulsion names
+  - mirror names
+  - genuine internal owners
+as if they belong to one causal layer.
+- That is exactly the mistake the user has been guarding against.
+## JOURNAL-0294 Adversarial Review Helped More Than Another Discovery Pass
+- The three-subagent review did not create alpha.
+- It did something more important here:
+  - it blocked a premature slide into `control extraction`
+  - it forced the board to admit that the refreshed machine surface was still too dirty to legislate
+- This is the right kind of slowdown.
+## JOURNAL-0295 A-Shares Need Breadth, But Controls Need A Much Thinner Core
+- `V124V` is the first truly lawful commercial-aerospace handoff.
+- The board is still broad:
+  - direct formal names
+  - cross-board propulsion
+  - shovel sellers
+  - mirror names
+all remain in the research surface.
+- But control authority is no longer broad.
+- That asymmetry is not a weakness.
+- It is how an A-share concept board stops being a theme dump and starts becoming tradable research structure.
+## JOURNAL-0296 Boundary-Risk Names Still Matter Even When They Lose Authority
+- `航天发展` forced a useful correction.
+- It was wrong to treat it as either:
+  - clean control core
+  - or meaningless mirror noise
+- `sentiment_watch_quarantine` is the better answer:
+  - keep the name visible
+  - keep its heat readable
+  - but block it from polluting lawful controls
+## JOURNAL-0297 Pure Structure Was Not Enough For Commercial Aerospace
+- `V125G` was an important negative result.
+- Even after the board was cleaned:
+  - thin formal core
+  - confirmation separated
+  - sentiment-watch quarantined
+the control surface still stayed negative on chronology.
+- That means the next missing layer was not more role grammar polish.
+- It was catalyst semantics.
+## JOURNAL-0298 The Event Layer Finally Produced A Real Improvement
+- `V125I` is the first commercial-aerospace result that clearly moved the control surface in the right direction.
+- `quality_event_gate` did not just beautify the story.
+- It turned the control surface from negative mean year spreads into positive mean year spreads.
+- That is a real shift.
+## JOURNAL-0299 The Event Layer Did Not Fix Coverage
+- The improvement is real but not complete.
+- `V125L` makes the remaining weakness obvious:
+  - `2024` has no event coverage
+  - `2026` still has a weak tail even with event conditioning
+- So the next blocker is no longer whether events matter.
+- The blocker is whether event-conditioned control covers enough of the board's chronology to be lawful.
+## JOURNAL-0300 Decisive Events Are More Useful Than Theme Heat
+- The user was right to push back against broad event collection.
+- Commercial aerospace is not helped by another pile of `板块爆发` articles.
+- It is helped by:
+  - continuation enablers
+  - turning-point warnings
+  - regulation/financing-risk events
+- That narrower event language is much closer to how A-share theme行情 actually turns.
+## JOURNAL-0301 Calendar Years Were A Bad Language For This Board
+- The year split was a useful legality check, but a bad description of the board itself.
+- `V125N` is the first time commercial aerospace starts to look like a real行情 object:
+  - impulse expansion
+  - sentiment overdrive transition
+  - weak drift / chop
+  - risk-off deterioration
+- That is a more truthful lens than `2024 vs 2025 vs 2026`.
+## JOURNAL-0302 The Good Surprise Is That Not All Structural Heat Is Bullish
+- `V125O` clarifies something important:
+  - pure sentiment overdrive is bad for eligibility
+  - weak drift / chop is also bad
+  - the only clearly positive structural phase is impulse expansion
+- This is exactly the kind of asymmetry that a theme board should reveal if the modeling is honest.
+## JOURNAL-0303 BK0480 Taught A Limit, Not A System
+- `BK0480` looked promising as the first transfer target because it at least had a narrow dual-core shape.
+- But once the role surface, local expansion, and historical bridge were formalized, the truth became clear:
+  - `000738` and `600118` are the only clean same-plane core
+  - `600760` is only a historical confirmation bridge
+  - everything else is timeline-only or too thin
+- That is useful. It means the portability method is honest enough to say “not enough board here yet,” instead of hallucinating a replay system.
+## JOURNAL-0304 Freezing Transfer Is A Positive Result
+- `V130G/V130H/V130I/V130J/V130K` are not a stall; they are a governance upgrade.
+- The transfer program is now explicitly frozen, with a watchlist and reopen triggers.
+- That is better than pretending `BK0808` or another adjacent board is ready just because we want forward motion.
+- The closest thing to readiness is `BK0808`, but “closest” is still not “ready.”
+## JOURNAL-0305 BK0808 Is Nearer Than The Rest, But Still Not There
+- `V130L/V130M` made the freeze more honest.
+- The watchlist is no longer just ranked by closeness; it now has concrete gap-closure paths.
+- `BK0808` is the only board with a plausible single-step-looking path, but even that “single step” still requires two real things to happen:
+  - another `v6` same-plane symbol
+  - bridge-only status to disappear
+- That is exactly the kind of almost-there situation where research teams usually jump too early. This time the governance layer is doing its job.
+## JOURNAL-0306 600118 Is The Interesting BK0808 Watch, Not 600760
+- `V130N/V130O` gave a better answer than “just keep watching BK0808.”
+- `600760` is still useful, but only as historical bridge memory.
+- The genuinely interesting name is `600118`, because it already shows BK0808 timeline-native support without yet having same-plane snapshot support.
+- That is the right kind of near-readiness signal:
+  - useful for supervision
+  - not enough for unlock
+## JOURNAL-0307 A Good Watch Is A Trigger, Not A Story
+- `V130P/V130Q` made the BK0808 watch sharper.
+- `600118` is not just “interesting.” It is now the explicit emergence trigger:
+  - if it appears in real `v6` BK0808 same-plane support,
+  - and board strength remains acceptable,
+  - BK0808 stops being a frozen curiosity and becomes a real reopen candidate.
+- That is the right way to supervise a frozen transfer program: convert narrative closeness into concrete trigger logic.
+## JOURNAL-0308 A Good Trigger Also Needs A State Machine
+- `V130R/V130S/V130T/V130U` pushed the BK0808 watch one step further.
+- `600118` now has real dated `near_surface_watch` windows, not just a static watch label.
+- That matters because it shows the freeze is not passive:
+  - the system can tell when the watch is active,
+  - when it falls back to inactive,
+  - and still refuse to promote BK0808 until real same-plane support exists.
+- This is the kind of governance layer that keeps research honest when the temptation to reopen too early is high.
+## JOURNAL-0309 Sometimes The Honest Next Step Is To Stop Recomputing
+- `V130V/V130W` are a useful reminder that “continue” does not always mean “open a new worker.”
+- Once the transfer freeze, triggers, watch windows, and state machine are all explicit, re-running more static analytics on the same evidence is mostly self-soothing.
+- The honest posture now is:
+  - keep the bundle
+  - watch `600118`
+  - wait for real new `v6` same-plane evidence
+## JOURNAL-0310 A Freeze Is Better When It Has A Mechanical Gate
+- `V130X/V130Y` close the loop.
+- The transfer program is no longer frozen only by judgment; it is frozen by a concrete monitored-artifact gate.
+- That matters because it turns the next restart from a debate into a check:
+  - did any of the monitored source artifacts actually change?
+  - if not, do not reopen
+## JOURNAL-0311 A Good Freeze Also Needs A Dashboard
+- `V131A` is not glamorous, but it is useful.
+- Once a program is honestly frozen, people still ask the same operational questions:
+  - are we still frozen?
+  - who is closest?
+  - what exactly would trigger a rerun?
+- The status card answers those immediately:
+  - frozen
+  - BK0808
+  - 600118
+  - wait for real `v6` same-plane emergence
+## JOURNAL-0312 A Frozen Program Is Stronger When Restart Is Already Scripted
+- `V131C` adds the last useful layer.
+- Once the transfer program is honestly frozen, there are only two clean states:
+  - the gate is still closed, so do nothing
+  - the gate opens, so rerun a pre-declared chain
+- The rerun command sheet matters because it removes the temptation to improvise a restart under pressure.
+- That is the right final posture for this branch:
+  - frozen under unchanged artifacts
+  - restart-ready under changed artifacts
+## JOURNAL-0313 The Next Honest Frontier Is Intraday Governance, Not More EOD Tuning
+- `V131D/V131E/V131F` close an important loop.
+- The commercial-aerospace primary replay no longer needs more local threshold polishing.
+- What it needed was a clean way to preserve the strongest lawful-but-wrong intraday failures without pretending they already belong inside the lawful EOD stack.
+- The new supervision bundle does exactly that:
+  - `2` retained override positives
+  - `2` reversal watches
+  - `30` clean controls
+- That is enough to stop arguing abstractly about intraday collapse and start preserving concrete seed geometry for future minute-level work.
+## JOURNAL-0314 A Good Intraday Idea Still Needs A Data Floor
+- `V131G/V131H/V131I` add the missing operational reality check.
+- The commercial-aerospace intraday override idea is now well-formed enough to supervise, but not well-supported enough to model.
+- The important part is that this is no longer vague:
+  - the exact missing symbols are known
+  - the exact required sessions are listed
+  - the exact priority order is explicit
+- That is the right posture here:
+  - keep the idea
+  - keep the seeds
+  - block the modeling
+  - wait for the minute-data floor
+## JOURNAL-0315 The Right Freeze For Intraday Work Looks Like A Small Change Gate
+- `V131J/V131K/V131L` finish the operational packaging.
+- The minute-level branch no longer lives in a fuzzy state of 鈥渨e should probably collect data later.鈥?
+- It now has:
+  - exact required files
+  - exact missing count
+  - exact high-priority symbols
+  - a single status card
+- That is the right final posture for this branch under current data:
+  - preserve the supervision bundle
+  - preserve the manifest
+  - freeze the modeling
+  - reopen only after the file gate is actually satisfied
+## JOURNAL-0316 The Local Monthly 1min Drop Changed The Intraday Branch From Blocked To Real
+- `V131O/V131P/V131Q/V131R` are the first intraday steps here that are not about governance-only waiting.
+- The new local monthly archive means the branch is no longer asking:
+  - do we have minute files at all
+- It is now asking:
+  - what is the right narrow prototype to run on the exact retained override sessions
+- The important shift is not abstract data abundance.
+- The important shift is that the branch no longer depends on:
+  - Baostock
+  - share-page downloads
+  - partial provider luck
+- That is a real state change:
+  - the exact four retained sessions are covered
+  - the exact four sessions can be resampled from `1min` to `5min`
+  - the intraday branch is now materially unblocked for local prototype work
+## JOURNAL-0317 The Local 5-Minute Prototype Finally Turned The Intraday Idea Into A Governed Object
+
+Date: 2026-04-04
+
+The local monthly one-minute archives changed the minute branch from theoretical to operational. The most important consequence was not that a full intraday model suddenly became lawful, but that the narrow commercial-aerospace override idea could finally be tested on real retained sessions instead of synthetic placeholders.
+
+The result was clean enough to matter. The first local five-minute prototype covered both retained override positives and both reversal-watch cases while staying completely off thirty clean controls. That is the first time the commercial-aerospace intraday branch produced something with enough separation to keep.
+
+The correct posture is still narrow. This is not a replay-facing minute model. It is a governed supervision layer that now sits alongside the lawful EOD primary, the failure library, and the time-chain governance work. The right reading is not "intraday solved"; the right reading is "the first narrow minute object is now real and worth preserving without contaminating the main replay stack."
+## JOURNAL-0318 The 5-Minute Prototype Stayed Narrow When Expanded
+
+Date: 2026-04-04
+
+The useful part of the new local five-minute branch is not that it suddenly created an intraday execution model. The useful part is that it survived contact with the full commercial-aerospace buy surface without leaking into ordinary clean trades.
+
+When expanded from the retained severe cases to all fifty-five buy executions, the prototype still behaved like a severe-case detector. It hit all four seed cases, touched none of the thirty clean controls, and only crossed into two ambiguous executions. That is exactly the kind of behavior a governance object should have: narrow, bounded, and explicit about what it may overreach on.
+
+This means the minute branch now has a real supervision artifact with documented limits. The right reading is still conservative. It should not rewrite the lawful EOD replay. But it is no longer just a promising idea; it is a bounded intraday governance object with measured false-positive behavior.
+## JOURNAL-0319 The Prototype’s Two “False Positives” Were Not Really False
+
+Date: 2026-04-04
+
+The broader five-minute audit left two residual non-override hits. At first glance they looked like the kind of leakage that should cap the prototype. But once they were isolated and judged on their own path shape, both turned out to belong in a weaker supervision tier rather than in a hard false-positive bucket.
+
+What mattered was not their original table label but their intraday path. Both had hour-level deterioration strong enough to satisfy the mild-watch rule: sixty-minute return below roughly minus four and a half percent, sixty-minute drawdown beyond the same threshold, and a close location near the day’s low. That is not ordinary noise. It is not severe enough to rewrite the replay, but it is severe enough to deserve retention.
+
+So the commercial-aerospace minute branch is no longer just a severe-case detector. It now has a small graded supervision stack: severe override positives, reversal watches, and mild override watches. That is still governance, not execution. But it is a better supervision object than the cruder “hit or false positive” view we had before.
+## JOURNAL-0320 The Minute Branch Finally Has A Proper Registry
+
+Date: 2026-04-04
+
+The commercial-aerospace minute work stopped being a scattered set of examples once the supervision registry was frozen. That changed the branch from a case-study workflow into a label-governance workflow.
+
+The important part is the tiering. Severe override positives, reversal watches, and mild override watches now live in one canonical object, which means future minute-level work can start from a clear severity hierarchy instead of trying to rediscover structure from raw cases every time. That is a real methodological improvement.
+
+The boundary remains strict. The registry still belongs to governance, not to the lawful EOD replay. But the branch now has something it did not have before: a proper seed source for later one-minute label formalization.
+## JOURNAL-0321 The Minute Branch Now Has Actual Seed Rules
+
+Date: 2026-04-04
+
+The commercial-aerospace intraday branch crossed another threshold once the first explicit one-minute rules were able to reproduce the frozen severity ordering on all six retained seeds. That is a stronger state than simply having a registry or having envelopes. It means the branch now has the beginnings of a real rule grammar, even if it is still narrow and still governance-bound.
+
+The important boundary remains intact. These are seed rules, not replay rules. Their job is to preserve the hierarchy between severe override positives, reversal watches, and mild override watches on the retained seed set. They did that cleanly, which is why they deserve to remain frozen and documented.
+
+The next question is now the right one: not whether the rules fit the seeds, but how badly they spread outside the seeds. In other words, the minute branch has finally reached the point where broader false-positive auditing matters more than additional anecdotal case discussion.
+## JOURNAL-0322 The First 1-Minute Rules Stayed Clean On The Full Buy Surface
+
+Date: 2026-04-04
+
+The first meaningful stress test for the new one-minute rules was whether they would start firing once they were applied outside the frozen six-seed set. They did not. On the full fifty-five-row buy-execution surface, the rules preserved all six seeds and did not touch a single non-seed execution.
+
+That matters because it upgrades the rules from "internally coherent on the seed set" to "bounded on the current replay-side surface." The branch is still governance-first; none of this makes the rules replay-ready. But the minute work is no longer just a seed grammar. It is a bounded supervision object with its first real false-positive audit behind it.
+
+The natural next question is broader than replay. The next place these rules need pressure is on the wider local session surface for the retained symbols, not merely on the subset of sessions that happened to become buy executions in the current EOD primary.
+## JOURNAL-0323 The Minute Rules Did Not Blow Up When We Left The Replay Surface
+
+Date: 2026-04-04
+
+The broader session expansion audit was the first real sign that the one-minute branch may be more than a fragile seed artifact. Once the rules were applied to all locally available first-hour sessions for the six retained seed symbols, they produced twenty-four hits across six hundred and twelve sessions. That is not trivial, but it is still sparse enough to stay interpretable.
+
+The most important number was not the raw hit count. It was the shape of the expansion surface. The maximum symbol-level hit rate stayed below six percent, which means the rules did not explode into a generic weakness detector. They expanded, but they stayed narrow.
+
+That is exactly the behavior we needed to see before taking the minute branch any further. It is still governance, not replay. But it is no longer only a hand-built seed grammar. It now has a bounded broader session surface that can be studied directly.
+## JOURNAL-0324 The Minute Branch Started To Explain Bad Notional, Not Just Bad Cases
+
+Date: 2026-04-04
+
+The local one-minute branch crossed another threshold once the shadow-benefit audit was run on the full fifty-five-row buy-execution surface. Before this step, the branch was already bounded and temporally aligned with the board's real risk structure. What it still lacked was a direct economic justification for why it deserved a stronger place in governance.
+
+That changed once the flagged slice was measured against later downside notional. Six flagged executions, just over ten percent of the buy surface, accounted for nearly seventy-nine percent of later negative forward notional and more than fifty-six percent of later adverse notional. That is not the profile of a generic weakness filter. It is the profile of a narrow governance layer that is pointing toward the trades that later hurt.
+
+The boundary still matters. None of this promotes the minute branch into the lawful EOD replay. But it does change how the branch should be treated organizationally. It is no longer just bounded supervision. It has become shadow-benefit-aligned governance, which means it belongs inside the formal commercial-aerospace governance stack rather than hanging off to the side as an isolated experiment.
+## JOURNAL-0325 The Minute Branch Finally Became A State Machine Extension
+
+Date: 2026-04-04
+
+There is a real difference between having a registry of bad cases and having an action ladder. The registry tells you that certain intraday paths matter. The action ladder tells you what those paths mean inside the system.
+
+That is the threshold the commercial-aerospace minute work crossed once the severe, reversal, and mild tiers were translated into explicit governance actions. Severe is now the future emergency-exit shadow object. Reversal is now a panic de-risk watch. Mild is now a do-not-readd watch. None of that is replay execution, but all of it is actual system semantics.
+
+This matters because it changes the role of minute research. It is no longer an isolated branch waiting for someday to be useful. It has become a formal extension of the governance state machine that already surrounds the frozen EOD primary. Once a lawful point-in-time intraday path exists, the system will not need to improvise from scratch. It will already know how to interpret what it sees.
+## JOURNAL-0326 The Minute Branch Started To Behave Like A Real Escalation Ladder
+
+Date: 2026-04-04
+
+The strongest new evidence for the commercial-aerospace minute branch did not come from another false-positive count. It came from the path structure of the broader hit sessions. Once those twenty-four sessions were replayed through full-day one-minute data, the dominant pattern was not random. It was ordered escalation: neutral to mild, mild to reversal, reversal to severe.
+
+That matters because a ladder only deserves to be called a ladder when the underlying sessions actually climb it. Here they mostly did. Four out of five severe hits had already passed through reversal first, and the most common session pattern across the broader hit surface was the full neutral-to-mild-to-reversal-to-severe progression.
+
+That turns the minute branch into something stronger than a bounded supervision gadget. It becomes a real governance state-machine extension. The system still cannot legally trade from it yet, but it can now interpret intraday deterioration in a way that is both structured and empirically grounded. That is the right endpoint for this stage of commercial-aerospace minute work.
+## JOURNAL-0327 The Minute Branch Became Something A Human Can Actually Inspect
+
+Date: 2026-04-04
+
+The final missing piece of the commercial-aerospace minute branch was not another threshold or another audit. It was readability. Once a branch grows into registry, rules, ladders, and escalation support, it still needs one more thing if it is going to remain trustworthy: a way for a human to inspect the canonical sessions directly.
+
+That is what changed once the six seed sessions were packaged into a single case panel. The branch is no longer only documented in abstract reports. It can now be looked at. You can see where a mild session first weakened, where a reversal session broke, and where a severe session collapsed. That matters because supervision quality is easier to maintain when the canonical examples remain visible.
+
+This does not change execution. It changes governance quality. The commercial-aerospace minute branch now ends this stage not as a pile of findings, but as a coherent, inspectable supervision framework that a future lawful intraday system could actually inherit.
+## JOURNAL-0328 The Minute Branch Reached A Real Stopping Point
+
+Date: 2026-04-04
+
+The most important outcome of the final packaging step was not a new number. It was clarity about where this branch should stop. By the end, the commercial-aerospace minute work had become a full governance package: a tiered supervision registry, explicit one-minute rules, bounded false-positive behavior, shadow-benefit evidence, an action ladder, ordered escalation support, and a canonical visual case panel.
+
+That is enough. In fact, it is the point at which continuing local minute tuning would become more dangerous than useful. Once a branch reaches that level of internal coherence, the real question is no longer how to squeeze one more board-specific refinement out of it. The real question is whether there exists a lawful execution surface that can inherit it, or a new board context that can test its portability.
+
+So the right ending here is a governance freeze, not another local experiment. The package is ready. The execution path is not. That distinction is exactly what a disciplined research program should be able to say.
+## JOURNAL-0329 The Commercial-Aerospace Minute Branch Now Knows Why It Is Still Frozen
+
+Date: 2026-04-04
+
+The final improvement to the commercial-aerospace minute work was not analytical. It was operational. Once the governance package had been frozen, the remaining risk was ambiguity: the branch could still attract more local experiments simply because there was no explicit statement of what was missing.
+
+That ambiguity is gone now. The branch has an explicit intraday execution unblock protocol and a status card. The package itself is ready. What is not ready is the execution environment around it: point-in-time intraday visibility, an execution simulation surface, and a lawful replay binding lane.
+
+That is an important stopping condition. A mature research line should not keep searching for tiny local improvements once the real blockers are infrastructural. At that point, clarity about why the line is frozen is more valuable than another round of board-specific optimization.
+## JOURNAL-0330 The Intraday Branch Now Has The Same Kind Of Freeze Discipline As Transfer
+
+Date: 2026-04-04
+
+The last useful step for the commercial-aerospace intraday line was to stop treating its frozen state as a passive fact and turn it into an active governance object. That is what the change gate and heartbeat status finally did.
+
+At this point the branch no longer depends on memory or taste. It has a package, a blocker list, a status card, and a change gate. That means the next continuation is no longer subjective. Either the missing infrastructure appears, or it does not. If it does not, the branch stays frozen. If it does, the branch has a lawful reason to reopen.
+
+That is the right ending for this stage. A disciplined research program should not only know when a line is promising. It should also know when to stop touching it, and under what exact conditions it may be touched again.
+## JOURNAL-0331 The Program Finally Knows That Continuing For Its Own Sake Is Wrong
+
+Date: 2026-04-04
+
+The most important program-level change was not analytical at all. It was the moment the different frozen lines were finally compressed into one master control surface. Before that, each branch knew its own stopping conditions, but the overall program still carried the risk of drifting into whichever line happened to feel easiest to touch next.
+
+That risk is smaller now. The master status card makes something plain: every active line is frozen, and every legitimate continuation now depends on an explicit gate. CPO needs a specific replay-side review posture. Transfer needs same-plane emergence. Commercial-aerospace intraday needs infrastructure. None of those are hidden or subjective anymore.
+
+That is what maturity looks like in a research program. Not constant motion, but explicit reasons for motion. Once those reasons are absent, the right action is not to invent another local refinement. It is to wait.
+## JOURNAL-0332 The Program Finally Has The Tools To Wait Properly
+
+Date: 2026-04-04
+
+There is a difference between being frozen and being operationally ready to stay frozen. A program that is merely frozen can still drift, because nobody knows exactly what would justify a restart or what the current state is without rereading many reports.
+
+That is what the reopen playbook and heartbeat snapshot fixed. The program now has two simple operational objects: one that says how a restart would happen, and one that says whether any restart is needed right now. That turns waiting into a governed activity instead of a vague pause.
+
+This is a subtle but important end state. A disciplined research system should not only know how to run. It should also know how to remain still without losing clarity. That is where the program is now.
+
+## JOURNAL-0333 The Program Can Move Again Only By Building Infrastructure, Not By Guessing
+
+Date: 2026-04-04
+
+A useful freeze is not the same thing as an empty stop. Once the commercial-aerospace minute branch had been packaged, the open question became whether the team actually knew how to move from governance into lawful intraday execution. That question is different from asking for more strategy ideas. It is an engineering and legality question.
+
+The build protocol and three-subagent review answered that question cleanly. The direction itself is sound: first build a point-in-time minute state feed, then build a simulator, then bind a separate intraday replay lane. But the review also made clear that even a correct direction can still be too loose if the visibility semantics are not hardened. The two crucial constraints are now explicit: every intraday state must carry a real first-visible timestamp, and the shadow intraday lane must remain physically read-only relative to the frozen EOD primary.
+
+That is a useful change in posture. The branch is no longer frozen because nobody knows what to do. It is frozen because the only remaining legitimate work is infrastructure buildout under hard guardrails. That is a much better kind of block.
+
+## JOURNAL-0334 A Real Intraday Build Starts Only When Visibility Is Specified Precisely
+
+Date: 2026-04-04
+
+The important shift was not starting to code a simulator. It was recognizing that simulator work would still be premature until the minute-level state itself had a precise lawful shape. That is why the first implementation step became a visibility specification rather than a strategy feature search.
+
+This matters because intraday leakage is subtle. A line can look disciplined while still cheating if day-level events are silently backfilled into minutes or if same-minute aggregates are treated as visible before the bar has actually closed. The visibility spec fixes that by forcing a concrete language: every event/state field needs a `first_visible_ts`, every lineage needs a `source_cutoff_ts`, and same-minute OHLCV belongs to the bar close, not the instant before it.
+
+That is the right beginning for phase 1. The branch is now moving again, but only in the narrowest lawful way: define what can be seen at minute `t`, prove that the seed sessions can be reconstructed with that visibility surface, and block everything else until that proof exists.
+
+## JOURNAL-0335 The First Real Intraday Object Is Not A Simulator But A Seed Visibility Feed
+
+Date: 2026-04-04
+
+The most important thing about the first implementation step is that it stayed narrow. Instead of widening immediately into all minute sessions or jumping toward replay, the build stayed on the six canonical commercial-aerospace seed sessions. That kept the scope lawful and inspectable.
+
+This mattered because the real question was simple: can the branch produce a minute-level table where the bars are visible only at their close, the path features are computed only from prior closed bars, and every state field has explicit lineage? The answer is now yes, at least on the seed surface. Six sessions, three hundred and sixty rows, and zero missing lineage fields is a much more meaningful milestone than another generic blocker memo.
+
+That still is not an intraday system. But it is the first object that deserves to exist before an intraday system can be attempted. The right next step is still phase 1 only, but now phase 1 has something concrete to audit rather than just a design document.
+
+## JOURNAL-0336 Phase 1 Is Done Once The Visibility Surface Is Wider Than The Original Seeds
+
+Date: 2026-04-04
+
+The useful thing about phase 1 is that it stayed disciplined while still moving. It did not jump from six canonical seed sessions to an execution simulator. Instead it widened its own legal surface in steps: first the seeds, then the broader hit sessions, then the complete first-hour session surface for the six seed symbols. At each step the question stayed the same: can the branch still explain what is visible at minute `t` without backfilling the future?
+
+By the time the all-session surface exists, phase 1 has essentially finished its job. There is no longer any ambiguity about whether a lawful point-in-time minute state surface can be built on the existing local archives. It can. The remaining work is no longer visibility. It is simulation and later replay binding, both of which are separate workstreams for a reason.
+
+That is the right place to stop this phase. Research maturity is not just about building a thing. It is also about knowing when that thing has become complete enough that continuing in the same direction would only blur the phase boundary.
+
+## JOURNAL-0337 A Simulator Becomes Lawful Only After Its Clock And Boundary Are Boring
+
+Date: 2026-04-04
+
+Once phase 1 finished, the temptation would have been to jump straight into coding a minute replay and see whether the override ladder improved outcomes. That would have been fast, but it would also have been sloppy. The useful next step is not another experiment. It is a simulator specification that makes the execution clock and the boundary conditions painfully explicit.
+
+That is why the phase-2 work was first reduced to mundane details: when a trigger is evaluated, when a trade can fill, what price reference is allowed, what costs apply, and whether the branch is allowed to buy back later in the same session. Those details are not glamorous, but they are exactly where intraday leakage and accidental optimism tend to hide. A simulator that says “bar close only, next-bar open only, shadow-only, read-only relative to the EOD primary” is much more valuable than a more ambitious lane with fuzzy timing.
+
+The consequence is healthy. The commercial-aerospace intraday branch is moving again, but it is moving inside a narrow seed-session lane with a boring clock and a hard wall around the frozen EOD primary. That is the correct kind of progress at this stage.
+
+## JOURNAL-0338 The First Intraday Simulator Is Useful Precisely Because It Is Incomplete
+
+Date: 2026-04-04
+
+The first seed-session simulator is not important because it is broad. It is important because it finally turns the minute governance ladder into explicit sells with explicit fill timing. That means the branch has crossed a real threshold: it is no longer only naming emergency exits and panic de-risk states, it is simulating them under a lawful timing clock.
+
+The boundedness still matters just as much as the existence. In the current canonical seed set, every retained trigger could be executed under the phase-2 timing rules using the local minute archive, so no pending outside-window fills were needed. That is still a useful result because the simulator is not relying on vague discretionary exits; it is producing next-bar fills from explicit trigger minutes under a fixed cost model.
+
+That is why the result should be retained but not over-celebrated. The branch now has a lawful seed simulator, but it still does not have an intraday replay lane. The correct next move is still governed expansion inside phase 2, not premature promotion.
+
+## JOURNAL-0339 A Narrow Intraday Simulator Is Only Useful If Its Time Order Is Honest
+
+Date: 2026-04-04
+
+The most important thing that happened after the first seed simulator existed was not a performance number. It was the discovery and correction of a chronology defect. A minute simulator that evaluates actions in tier order rather than in real minute order is not just inelegant; it is wrong in exactly the place where an intraday lane is supposed to earn trust.
+
+Fixing that defect changed the meaning of the branch. The `601698` seed now behaves the way the minute narrative says it should: the early severe signal exits the position before the much later reversal state ever gets a chance to act. That is a small correction in code, but a large correction in research posture. It means the branch is now respecting the same temporal discipline it claims to be building.
+
+Only after that correction does attribution become worth reading. And once it is corrected, the interesting result is that same-day damage avoidance is not concentrated only in the severe tier. A large share comes from reversal handling, and the heaviest seed contribution comes from `300342`. That is exactly the kind of directional understanding phase 2 should produce before any broader simulation or replay lane is even considered.
+
+## JOURNAL-0340 The First Real Optimization Is Not More Heat, It Is Better Judgment About Which Tier Deserves Expansion
+
+Date: 2026-04-04
+
+Once a narrow intraday simulator becomes deterministic, the next temptation is obvious: widen it quickly and see whether it saves more money. That instinct is understandable, but still premature. The more useful question is not 鈥渃an phase 2 widen?鈥? It is 鈥渨hat exactly has earned the right to widen?鈥?
+
+The answer is not symmetrical across tiers. The current seed attribution makes that clear. `reversal_watch` is carrying most of the same-day damage avoidance, while `severe_override_positive` remains important as the terminal emergency layer. `mild_override_watch`, however, still has positive forward expectancy in the shadow-benefit audit and should therefore not be treated as an early sell trigger just because it looks like part of the same ladder. That difference matters. A research branch becomes more trustworthy when it can say not only what worked, but also what should remain governed rather than promoted.
+
+That is why the next widening step has to be narrow in two dimensions at once: narrow in surface and narrow in tier. The surface should widen only from the canonical seeds to the already-flagged broader-hit sessions, not to the full local minute universe. The tier set should widen only through `reversal_watch` and `severe_override_positive`, not through `mild_override_watch`. That is a more useful kind of progress than another uncontrolled expansion because it turns phase 2 from a loose exploration into a supervised execution research lane.
+
+## JOURNAL-0341 A Good Widening Step Enters More Sessions Without Relaxing Its Ethics
+
+Date: 2026-04-04
+
+The first broader-hit widening step is useful because it expands the surface while refusing to expand the excuses. It does not claim that every minute session now deserves simulation. It does not quietly let `mild_override_watch` become a sell trigger. It does not slip into replay language. Instead it takes the already-flagged broader-hit sessions and runs them through the same disciplined intraday clock as the seed lane, using a normalized reference notional so the sessions can be compared on equal footing.
+
+That matters because it preserves the meaning of phase 2. A phase-2 widening should answer whether the current ladder generalizes to its own nearby surface, not whether the branch can already masquerade as a finished trading engine. Keeping all-session expansion blocked and replay binding blocked is therefore not conservative theater; it is what makes the widening informative rather than self-deceptive.
+
+## JOURNAL-0342 The First Wider Lane Is Most Useful When It Reveals What Still Should Not Be Executed
+
+Date: 2026-04-04
+
+The first broader-hit widening did what a good supervised expansion should do: it showed that the intraday branch is not trapped inside six hand-picked seeds. On a normalized notional basis, the wider 24-session lane still avoids a meaningful amount of same-day damage. That matters because it shows the branch has some local generalization, not just seed memorization.
+
+But the more valuable lesson is where the drag came from. The attribution and failure review make the answer uncomfortably clear: predicted `mild_override_watch` sessions are still the weakest part of the widened lane. They are exactly the type of context that looks like part of the same escalation ladder, but still carries too much upside or ambiguity to deserve mechanical execution in the wider simulator. That is a healthy result. It means the next refinement is not 鈥渢ry more surface鈥? It is 鈥渂e stricter about who is allowed to execute inside the surface already opened.鈥?
+
+That is the right kind of supervision outcome. A branch becomes more trustworthy when widening teaches it where not to act.
+
+## JOURNAL-0343 The First Useful Tightening Is To Remove The Wrong Kind Of Obedience
+
+Date: 2026-04-04
+
+Once the wider phase-2 lane revealed that predicted mild sessions were dragging results, the right response was not to invent a new trigger. It was to stop being obedient in the wrong place. A branch that treats every later reversal print inside a predicted mild session as executable is behaving too literally. It is letting a governance signal leak into an execution privilege.
+
+Blocking predicted mild sessions from execution is therefore a healthy refinement. It does not make the branch smarter by adding complexity. It makes the branch cleaner by restoring the intended boundary: mild is a watch state, not a sell mandate. That kind of refinement is exactly what supervision should do before any wider expansion is considered.
+
+## JOURNAL-0344 A Research Branch Needs A Current Reference, Not A Pile Of Half-Retired Variants
+
+Date: 2026-04-04
+
+Once the mild-boundary refinement proved itself, the important next step was not another experiment. It was to freeze the shadow stack. Without that freeze, the branch would keep oscillating between the original wider lane and the refined wider lane, and every later discussion about performance or supervision would blur together old and new assumptions.
+
+That is why phase 2 now needs a current narrow reference and a current wider reference. The narrow one remains the canonical seed simulator. The wider one is no longer the first broader-hit lane; it is the mild-blocked broader-hit lane. Freezing that stack does not stop progress. It creates a clean surface for the next supervision pass so the branch can judge one reference at a time instead of endlessly comparing against stale variants.
+
+## JOURNAL-0345 Once The Reference Is Frozen, The Right Next Move Is To Study Its Shape, Not To Replace It
+
+Date: 2026-04-04
+
+After the shadow stack is frozen, the branch has finally earned the right to ask a more interesting question: what shape does the current wider reference actually have? That is a much better question than whether another small variant might score slightly better. A real execution research lane should know whether its benefit is coming from a few symbols, a particular month-window, or a specific failure cluster before it decides that any further change is justified.
+
+That is why the next supervision pass stays entirely inside the current wider reference. It attributes the retained lane, identifies the strongest contributors, and clusters the remaining failures. If those failures are concentrated, the branch should supervise those local clusters rather than reopen the surface. That is how phase 2 stays disciplined: not by stopping, but by asking narrower questions after each successful freeze.
+
+## JOURNAL-0346 The Best Sign Of Maturity Is When A Bigger Lane Fails Only In One Small Way
+
+Date: 2026-04-04
+
+The current wider reference passed an important test: after the mild-boundary refinement, it no longer failed in a diffuse or mysterious way. It failed in one small, intelligible way. A single reversal-predicted session in January still lost ground because the branch obeyed a severe trigger that arrived very late in the day. That is exactly the kind of failure a healthy supervised branch should want: not broad confusion, but a narrow over-execution pattern.
+
+Once the failure looks like that, the right response is local. A late-severe block is not a new theory of the market. It is a statement that a reversal-predicted session should not automatically escalate into a terminal severe execution when that escalation only appears near the close. That kind of refinement keeps phase 2 honest. It improves the retained wider reference without pretending that the branch is ready for a bigger surface or for replay binding.
+
+## JOURNAL-0347 A Mature Shadow Lane Eventually Stops Expanding And Starts Polishing Only Its Last Sharp Edge
+
+Date: 2026-04-04
+
+The most reassuring part of the latest phase-2 supervision pass is not that the numbers improved again. It is that the branch improved without changing its boundary. The wider lane did not ask for more sessions, more symbols, or another new tier. It only removed the last sharp edge inside the already-approved broader-hit surface. That is a healthier sign than another round of widening because it means the branch is beginning to converge on a stable internal logic.
+
+Once the local late-severe refinement is promoted, the wider reference becomes simpler to reason about. Predicted mild sessions no longer leak drag into execution, and reversal-predicted sessions are no longer allowed to escalate into a terminal severe leg only because the day decays near the close. The branch still is not replay-ready, and it still should not touch all-session expansion. But it has now reached a better kind of stability: not a frozen experiment, but a refined shadow lane whose remaining decisions are increasingly local and intelligible.
+
+## JOURNAL-0348 A Strong Sell-Ladder Result Is Useful Only If The Objective Is Named Honestly
+
+Date: 2026-04-04
+
+The reversal sell-fraction audit produced a result that is too strong to ignore: within the current broader-hit shadow lane, the best same-day outcome comes from treating reversal as a full first-stage exit. That makes intuitive sense for a same-day loss-avoidance objective because once a session has already entered the approved reversal state, holding half the position is often just an invitation to donate more downside to the afternoon tape.
+
+But the important discipline is not to confuse that result with replay readiness. The branch is still optimizing a same-day shadow criterion, not a full multi-day trading objective. A full reversal exit can be the right answer for a same-day defensive lane and still be the wrong answer for a replay-bound execution system. That is why the promotion is valid inside phase 2 and still must remain blocked from replay binding. The result is valuable precisely because it sharpens the supervision ladder without pretending to solve the larger execution problem.
+
+## JOURNAL-0349 The Right Defensive Ladder Can Still Need A Warning Label
+
+Date: 2026-04-04
+
+The horizon sanity pass clarified something important about the new full-reversal reference. It is not secretly a bad rule that only looks good intraday. Across the reversal sessions with available forward data, holding the sold shares would still have lost more money on aggregate over one, three, and five trading days. That means the branch is not just harvesting a cosmetic intraday mark. It is defending against real follow-through weakness in most cases.
+
+At the same time, the branch also proved that some rebound opportunity is sacrificed. That is exactly why the result needs a warning label rather than a rollback. The right interpretation is not that full reversal should be abandoned. It is that the lane should be retained as a horizon-limited shadow reference: strong enough to keep, but still not broad enough or replay-clean enough to become an unquestioned execution truth. In a healthy research process, that kind of caveat is a feature, not a weakness.
+
+## JOURNAL-0350 Volume-Price Is Useful Here Not Because It Solves The Ladder, But Because It Names The Misses
+
+Date: 2026-04-04
+
+The first volume-price supervision pass did not magically overturn the current sell ladder, and that is a good sign. If one small audit immediately rewrote the ladder, the branch would probably be overreacting to noise. What it did show is more valuable: the reversal sessions that later rebound have a higher post-reversal up-amount share than the sessions that keep deteriorating. That means the branch is finally starting to describe the miss in the right language. Some sells are not wrong because price looked better; they are wrong because the post-reversal tape starts to carry more upward participation than a true follow-through weak session should.
+
+That is why the right posture remains supervision-only. The branch now has a concrete volume-price clue, but not a full rule. It can say, with some discipline, that rebound-cost cases look more like partial re-accumulation after reversal. It still cannot say exactly how much upward participation is enough to cancel the sell. That difference matters. Good governance names the clue first and only promotes it later if it survives more targeted supervision.
+
+## JOURNAL-0351 A Clean Selector Can Still Be The Wrong Execution Edit
+
+Date: 2026-04-04
+
+The local rebound-cost veto scan did exactly what a good supervision pass should do: it found a very small, very clean selector. Two reversal sessions matched the volume-price conjunction, and both were genuine rebound-cost cases. No follow-through case slipped into that narrow bucket. That is already useful because it proves the branch is no longer guessing blindly about rebound risk.
+
+But a clean selector is not automatically a good execution edit. Once the branch actually downgraded those two sessions from full reversal to half reversal, it recovered some five-day rebound cost but gave back too much same-day protection. That is an important maturity test. Research gets better when it can say: this clue is real, this execution change is not yet worth it. The veto now has a proper place. It is not discarded, and it is not promoted. It stays where it belongs for now: as a local supervision-side clue waiting for a better execution expression.
+
+## JOURNAL-0352 A Better Local Expression Can Be Smaller, Not Looser
+
+Date: 2026-04-04
+
+The useful follow-up to the failed half-reversal experiment was not to loosen the same selector again. It was to make the execution edit smaller and more conditional. That produced a better answer. Instead of cutting the reversal sell size on both rebound-cost cases, the branch asked a more point-in-time question: was the first reversal followed by a clean neutral reclaim before any new reversal leg, and did the next reversal come back late enough to matter? That expression only touched one case, `2025-12-19 688523`, and it improved both same-day protection and five-day rebound cost.
+
+That is exactly the kind of progress worth keeping. The branch did not need a wider surface, a new tier, or a softer ladder. It only needed a more faithful description of the tape pattern it was trying to spare. This is why local supervision matters. Sometimes the right optimization is not to do less selling in general. It is to recognize one tiny class of false-first-reversal and delay only that class. The result is still shadow-only, but it is a cleaner step toward a future sell-side grammar that respects both protection and rebound risk.
+
+## JOURNAL-0353 The Right Time To Stop Is When A Pattern Turns From Cluster Into Residue
+
+Date: 2026-04-04
+
+The local deferral promotion raised an immediate follow-up question: was that one successful refinement the first example of a larger family, or was it just the last loose screw in the current ladder? The singularity audit answered that cleanly. Out of twelve reversal sessions with usable forward outcomes, only one matched the promoted local deferral expression. That means the branch has not discovered a broad new subclass of reversal mistakes. It has corrected one narrow residue.
+
+That distinction matters because it changes the correct research posture. When a clue still covers a visible cluster, it is worth continuing the same family search. When it collapses to a single residue, more mining usually becomes expensive decoration. In this case the right move is to keep the refinement, keep the current wider reference, and stop spending more attention on the same false-first-reversal family. Good supervision is not just about finding one more improvement. It is also about knowing when a family has converged enough to leave alone.
+
+## JOURNAL-0354 The Remaining Misses No Longer Look Like Bad Sells
+
+Date: 2026-04-04
+
+Once the false-first-reversal residue was isolated, the shape of the remaining misses changed. What stayed behind was not a set of sessions where the sell clearly happened too early on the same day. The remaining cases were mostly negative on day one and positive only later. That is a different problem. It says the branch may still be selling correctly in the short horizon while failing to define a governed rebuild or reentry path for the later recovery.
+
+That is why the next orthogonal family had to shift. Continuing to mine sell-side timing would have been a category error. The right supervised move is to convert those remaining rebound-cost cases into a seed-level reentry registry. That keeps the discipline clean. The current sell-side wider reference stays frozen, and the next supervision branch starts from a separate question: not “should we have sold less,” but “what kind of later rebuild were we structurally unable to take.”
+
+## JOURNAL-0354 The Next Useful Family Often Appears In The Cases The Last Fix Could Not Touch
+
+Date: 2026-04-04
+
+Once the false-first-reversal family was frozen, the remaining rebound-cost residues became much easier to read. They did not look like diluted versions of the same pattern. They looked noisier and harsher: repeated reversals, repeated severe re-entries, and many more state flips across the session. That is a different failure shape. The right conclusion is not that the old family still needs more variants. It is that the branch has reached a genuinely new orthogonal supervision family.
+
+That matters because it preserves discipline. Research quality improves when a branch knows how to stop a converged family and open a new one with a clean reason. The new candidate, `oscillatory_breakdown_churn`, is not yet a rule and not yet a replay story. It is only a better description of the next unsolved residue. But that is enough. The work now has a new target, and it has one for the right reason: the remaining cases no longer behave like false first reversals, so the next audit should stop pretending they do.
+
+## JOURNAL-0354 Naming The Next Family Is Not The Same As Opening It
+
+Date: 2026-04-04
+
+Once the false-first-reversal family reached stopline, the tempting mistake would have been to open another deep supervision line immediately just to preserve momentum. The orthogonal-family quick scan is useful precisely because it slows that impulse down. It does name a next likely direction: `early_severe_reclaim`. But it also shows that this direction is only a weak candidate, not a ready-made new branch. That is an important distinction. Research quality improves when the system can say not only what might come next, but also whether the evidence is strong enough to deserve a new local budget.
+
+The result is healthy. The branch has not gone blank after freezing the prior family. It has a provisional map of the next territory. At the same time, it has not confused a provisional map with a permission slip. That is the right posture when the current wider reference is already stable and blocked from replay for larger reasons. A named weak candidate is enough. It preserves direction without manufacturing false urgency.
+
+## JOURNAL-0354 The Remaining Misses Look More Like Missing Rebuilds Than Bad Exits
+
+Date: 2026-04-04
+
+Once the false-first-reversal family was frozen, the natural next question was whether another sell-side family was hiding in the remaining rebound-cost cases. The horizon pattern audit argues against that. After removing the one local-deferral residue, the remaining rebound-cost cases are not mostly positive immediately after the sell. Two of the three are negative on day one and only turn positive by day three. That means the sell itself still did useful work. The branch protected capital first and missed the later rebuild.
+
+That is a different problem class. It suggests the next orthogonal supervision family should not be another intraday sell-timing refinement. It should be a post-exit reentry gap family: cases where the branch exits correctly, then fails to recognize that weakness has finished and rebuild conditions are forming. This is a healthier direction change than continuing to mine the exhausted sell-side family. It keeps the current defensive ladder intact and moves the research frontier to the next missing capability instead of over-polishing the last one.
+
+## JOURNAL-0355 A New Family Begins Best As A Seed Registry, Not As A New Simulator
+
+Date: 2026-04-04
+
+Once the branch accepted that the remaining misses were reentry problems rather than sell-timing problems, the next temptation would have been to open another simulator immediately. That would have been premature. The healthier move is what the branch did instead: freeze the first post-exit reentry seed registry. Three residual cases are enough to name the new territory, but they are not enough to justify another execution lane yet.
+
+This is an important governance pattern. A new family should start as a seed registry when the evidence is directional but still thin. That keeps the branch honest. It acknowledges that the current sell-side ladder has reached maturity, while also admitting that rebuild timing is still mostly undefined. The registry is therefore not a weak half-step. It is the correct first step. It turns the new family into something concrete enough to supervise without pretending it is already ready to trade.
+
+## JOURNAL-0356 Delayed Rebuild Is A Timing Problem, Not A Same-Day Chase Problem
+
+Date: 2026-04-04
+
+Once the branch named post-exit reentry as the next missing family, the next temptation would have been to ask whether some of those cases really wanted same-day rebuilds. The timing audit argues no. None of the three seed cases are positive on day one after the exit. Two only turn positive by day three, and the remaining deep-washout case does not turn positive until day five. That means the missing capability is not "buy back faster on the same day." It is "know when delayed rebuild watch is allowed to begin."
+
+That distinction matters. Same-day chase would collapse the separation between defensive selling and later rebuild supervision. The timing windows preserve that separation. They let the branch keep its defensive intraday ladder while still naming when a different type of supervision should wake up. In other words, this is not yet a reentry engine. It is the first clean timing grammar for when rebuild observation may legitimately start.
+
+## JOURNAL-0357 A Reentry Ladder Is Better Than A Flat Watch Label
+
+Date: 2026-04-04
+
+Once the branch had timing windows for the new reentry seeds, the remaining ambiguity was whether those windows should just remain static labels. The ladder audit shows why that would be too weak. These seeds do not only differ by when rebuild watch may start. They also differ by what kind of later confirmation they need. The delayed rebound cases are not merely "watch from T+3." They are "watch from T+3, then look for persistent reclaim." The deep washout case is not merely "watch from T+5." It is "stay in base observation until the late base confirms."
+
+That is why the ladder matters. It keeps reentry supervision aligned with the same philosophy the branch used on the sell side: states should progress, not collapse into one label. The branch still does not have enough evidence to trade this ladder, but it now has a cleaner semantic object to supervise. This is a good stopping point before any reentry simulator exists, because it preserves caution without flattening away the real structural differences between rebuild cases.
+
+## JOURNAL-0358 Sometimes The Correct Reentry Answer Is A Board-Level No
+
+Date: 2026-04-04
+
+The reentry ladder was a necessary refinement, but it still lived at the seed level. That made it vulnerable to a familiar mistake: assuming every post-exit miss is fundamentally a rebuild problem. The board cooling audit pushes back on that. Once the board overlay is deeply off peak, the regime has flipped into weak drift or risk deterioration, and the next 20 to 40 trading days remain negative, the right abstraction is no longer "when do we rebuild?" It becomes "why are we still trying to rebuild inside a board that is structurally cooling?"
+
+This is why the new lockout seed matters. It does not invalidate the reentry ladder. It places it in the correct hierarchy. A board-level cooling lockout should sit above seed-level rebuild supervision, because it changes the question entirely. The branch is no longer trying to optimize a reentry. It is trying to decide whether reentry should even be discussed. That is exactly the kind of higher-order veto a governance stack is supposed to provide.
+
+## JOURNAL-0359 Unlocking A Cooling Board Is Mostly The Same Problem As Detecting A New Rise
+
+Date: 2026-04-04
+
+Once the cooling lockout existed, the next instinct might have been to invent a brand-new theory of "revival." The audit suggests that is unnecessary. Unlocking the board is mostly the same problem as identifying a board rise in the first place. What changes is not the conceptual family. What changes is the burden of proof. After a lockout, the branch must demand more breadth, more genuine full-quality participation, and less residual de-risk pressure before it even considers saying the board is alive again.
+
+That is why the new unlock supervision is valuable. It does not ask for something exotic. It asks whether the old rise semantics have truly returned in a broad enough way to overpower the lockout. If not, the move remains a false bounce. This is a very healthy simplification. It means the branch does not need one ontology for rising and another ontology for reviving. It needs one ontology for board emergence, with stronger guards when the board is climbing out of a cooling regime.
+
+## JOURNAL-0360 A Few Strong Names Inside A Weak Board Are Not A Contradiction
+
+Date: 2026-04-04
+
+One of the most dangerous moments in a cooling thematic board is not total weakness. It is partial strength. A handful of names start to rebound hard and the mind rushes to narrate revival. The local-only rebound audit is useful because it refuses that shortcut. It shows that isolated strength is not evidence against lockout. It is often evidence that the lockout needs a more explicit anti-false-bounce guard.
+
+This matters because the board can remain structurally weak while one or two names bounce violently. That is not a paradox. It is a normal late-stage thematic behavior. Some names become temporary pressure-release valves, liquidity magnets, or short-cover targets while the broader board still lacks genuine quality participation. The right response is not to deny the local strength. It is to put it in the right semantic box: local-only rebound, not board revival.
+
+## JOURNAL-0361 Governance Becomes Cleaner Once Board State Comes First
+
+Date: 2026-04-04
+
+After lockout, unlock, and seed-level reentry supervision all existed, the remaining risk was not missing another label. The remaining risk was precedence confusion. Without an explicit hierarchy, a branch can accidentally let a lower-level object override a higher-level one. That is how symbol strength starts bullying board weakness, or how a rebuild ladder starts discussing opportunities inside a board that never stopped cooling.
+
+The new hierarchy spec fixes that. It says the order out loud. First the board may be locked. Then local-only rebound may strengthen the case that the lockout still holds. Only after a board-level unlock seed appears is the branch allowed to resume symbol-level rebuild discussion. This is a better mental model than memorizing isolated rules. It turns the branch into a layered governance system instead of a pile of disconnected audits.
+
+## JOURNAL-0362 A Cooling Board Is Better Described By Expectancy Than By Shape
+
+Date: 2026-04-04
+
+There is a limit to how far shape language can carry a branch. Words such as lockout, rebound, and revival are useful, but they still leave too much room for human projection. A board can "look interesting" while still having terrible expectancy. Once that becomes true, the right next step is not to add more adjectives to the shape. It is to ask the harder and simpler question: is this board worth touching on a forward reward-risk basis?
+
+That is why the expectancy layer matters. It reframes the board stack in harder terms. Unlock-worthy dates do not merely have a nice shape; they also carry strong forward board returns and large positive reward-risk asymmetry. False-bounce-only dates do not merely fail breadth tests; they also have poor forward expectancy. Lockout-worthy dates are worse still. This is a healthier top-level language for reduce because it pushes the branch away from aesthetic interpretation and toward consequences. A weak board is not weak because it looks ugly. It is weak because the payoff for touching it is poor.
+
+## JOURNAL-0363 The Remaining Reduce Gap Is Not Conceptual Anymore
+
+Date: 2026-04-04
+
+Once the branch wrote the full closure stack down, the ambiguity finally shrank. The problem is no longer that reduce lacks structure. The branch now has a sell ladder, a board expectancy layer, a board-first lockout/unlock hierarchy, and a seed-level rebuild ladder. In other words, most of the thinking has already happened. The branch can now explain what it wants to do and why, at each layer, without reaching for vague language.
+
+That changes the diagnosis of what remains open. The remaining gap is no longer conceptual. It is infrastructural and executional. There is still no replay-facing lane that binds these layers together into one lawful intraday system. That is a much healthier place to be stuck. Being blocked by execution infrastructure is frustrating, but it is a better problem than being blocked by semantic confusion. It means the branch has mostly finished learning what reduce should mean. It has not yet earned the right to trade it end to end.
+
+## JOURNAL-0364 Once Execution Gaps Are Named, The Project Feels Less Vague
+
+Date: 2026-04-04
+
+One reason a branch can feel "unfinished" even after a lot of work is that the remaining blocker is still described too vaguely. Saying that execution binding is missing is true, but it is not useful enough. It keeps the branch emotionally open-ended. The blocker audit improves that because it names the missing surfaces one by one. Two belong to sell-side binding. Two belong to full closure. That is a much healthier diagnostic state.
+
+This matters psychologically as well as technically. Once the branch can say "sell-side binding is waiting on point-in-time visibility and a deterministic simulator" and "full closure is waiting on a replay lane and a reentry surface," the work stops feeling like a foggy unfinished mess. It becomes an ordered backlog. That is exactly what a mature governance branch should do: reduce existential uncertainty into explicit dependencies.
+
+## JOURNAL-0365 The Sell Side Is Less Incomplete Than It Feels
+
+Date: 2026-04-04
+
+After the branch spent so long building minute supervision, it was easy to keep emotionally treating sell-side execution as if it were still mostly missing. The readiness audit corrects that feeling. The branch already has a lawful all-session visibility surface. It already has a deterministic seed simulator. It already has a current wider sell shadow that acts as a frozen behavioral reference. In other words, the branch is not staring at an empty sell-side execution problem. It is staring at an integration problem.
+
+That distinction matters. An empty problem invites more research. An integration problem invites narrower engineering. This is one of those moments where a branch becomes healthier by admitting that the semantic work is sufficiently mature for its current scope. The right next step is not to keep searching for a better sell family. The right next step is to bind the existing pieces through holdings-aware state and an isolated shadow lane. That is a smaller and more honest frontier.
+
+## JOURNAL-0366 A Good Sell Shadow Is Not Yet A Real Inventory Surface
+
+Date: 2026-04-04
+
+There is a subtle but important difference between a strong shadow reference and a bindable execution surface. The wider sell shadow now behaves well enough that it is tempting to mentally promote it into "the thing we would really do." The holdings-aware audit pushes back on that temptation. Most of the current wider sessions are still sized in normalized reference quantity, not in actual frozen-primary inventory. That means the branch can describe good sell behavior without yet being able to claim that the behavior belongs to the real portfolio state.
+
+This is a useful disappointment. It narrows the next task. The branch does not need another sell family. It needs a holdings ledger. It needs start-of-day reality. It needs a policy for what happens when a same-day EOD open, add, or reduce collides with an intraday sell trigger. Those are mundane problems, but they are the right problems. Once a branch reaches this stage, more semantic cleverness is usually a distraction. The bottleneck has become inventory truth.
+
+## JOURNAL-0367 Inventory Truth Produces Smaller, Better Questions
+
+Date: 2026-04-04
+
+Once the branch stops pretending that reference quantity equals real inventory, the execution problem becomes smaller and healthier. The question is no longer "what is the best sell signal?" The question becomes "what quantity was actually carried into the day, and what should happen if an intraday sell collides with a same-day open, add, reduce, or close?" Those questions are less glamorous than signal research, but they are exactly the questions that make a shadow lane honest.
+
+This is one of the cleaner transitions in the branch so far. The sell-side is no longer blocked by missing semantics. It is blocked by accounting. That is progress. Accounting is narrow. Accounting can be audited. Accounting does not seduce the branch into new stories. The start-of-day ledger and the same-day precedence policy are valuable precisely because they force the branch to respect inventory truth before it earns the right to claim execution realism.
+
+## JOURNAL-0368 The First Real Binding Surface Feels Smaller Than The Old Shadow, But Truer
+
+Date: 2026-04-04
+
+There is a psychological shift once the branch moves from a normalized shadow to a carried-inventory lane. The new lane is smaller. It fires on fewer sessions. It refuses to sell same-day new lots. It clips later EOD reduce and close requests when the carried bucket is already gone. At first that can feel like a loss of power. In reality it is the first moment the sell-side becomes honest enough to deserve the word binding.
+
+That honesty matters more than raw activity. A lane that only sells what actually existed at the start of the day is less dramatic, but far more trustworthy. The branch now has something it did not previously have: a real, holdings-aware sell reference. That does not solve execution closure, but it changes the tone of the remaining work. The bottleneck is no longer whether the branch can imagine good sell behavior. The bottleneck is whether that behavior remains worthwhile once measured beyond the same-day close.
+
+## JOURNAL-0369 A Strong Same-Day Defense Can Still Hide A 3-Day Rebound Cost
+
+Date: 2026-04-04
+
+One of the most important discoveries in this round is that a lane can be simultaneously right and incomplete. The isolated sell-side lane clearly protects same-day outcomes. It also protects the next day on net. But the 3-day horizon flips slightly positive, which means the branch is paying a real rebound cost pocket even while the same-day defense looks excellent. That is exactly the kind of nuance that gets lost when a branch celebrates too early.
+
+This is a healthy disappointment. It proves the branch is now asking better questions. A weaker branch would have stopped at "the sell lane works." A healthier branch now has to say something more precise: "the sell lane works as a same-day and short-horizon protection surface, but it still carries a nontrivial medium-short rebound caveat." That sentence is better than confidence. It keeps the branch disciplined and points the next work toward local attribution instead of expansion fantasy.
+
+## JOURNAL-0370 Once The Sell Binding Surface Becomes Real, Its Problems Get Smaller And More Honest
+
+Date: 2026-04-04
+
+The local attribution round sharpens the emotional picture again. The first real sell binding surface is not failing everywhere. It is not collapsing under a thousand contradictory cases. Its medium-short caveat is concentrated. The dominant same-day protector and the dominant 3-day rebound residue are both mostly the same symbol. That is frustrating in one sense, but healthy in another: the branch is no longer confusing a local residue with a global invalidation.
+
+This is usually what maturity looks like. Early in a branch, every imperfection feels like a reason to rebuild the whole thing. Later, the imperfections become smaller and more local. The task changes from "find a better worldview" to "keep the current worldview and supervise the residue honestly." That is where this sell-side binding line now sits. It is not finished in the absolute sense, but it has stopped being fundamentally uncertain. That is a meaningful closure point.
+
+## JOURNAL-0371 Closure Often Feels Disappointing Because What Remains Is Small
+
+Date: 2026-04-04
+
+There is a peculiar feeling when a branch gets close to closure. The work stops producing dramatic new mechanisms. Instead it produces a short list of residues, a split between persistent and transient edge cases, and a growing confidence that broad retuning would now be mostly self-harm. That can feel anticlimactic, especially after a long period of discovery. But it is usually a sign that the branch has finally become disciplined.
+
+That is where reduce now sits. The branch still has four rebound-residue seeds. Two persist a bit longer. Two fade quickly. None of that is nothing, but none of it justifies reopening the whole sell-side family either. This is one of the few moments where stopping broad tuning is actually progress. The branch has earned the right to say: the remaining problem is small enough to supervise locally, and that is different from being unfinished in a dangerous way.
+
+## JOURNAL-0372 Research Completion And Execution Completion Are Not The Same Milestone
+
+Date: 2026-04-04
+
+One source of confusion in long branches is the tendency to think that if execution is not finished, then research must also still be open. That is not always true. Reduce now provides a cleaner example. The branch has a full governance stack, a real sell-side binding reference, a documented horizon caveat, and only four residue seeds left under local supervision. At the same time, the full execution closure still remains blocked by infrastructure. Both statements are true together.
+
+That distinction matters because it protects the branch from endless re-entry into solved semantic questions. Once research is complete enough, the healthiest act is often to freeze it and admit that the remaining work is of a different species. In this case, what remains is no longer broad reduce reasoning. It is infrastructure and future handoff discipline. That is a better place to end a research branch than a vague sense that maybe one more pass would reveal something profound.
+
+## JOURNAL-0373 A Good Handoff Package Is A Kind Of Ending
+
+Date: 2026-04-04
+
+There is a final psychological move after a branch is mostly complete: it has to stop thinking of itself as the center of the program. Packaging reduce as a handoff object forces that move. The branch now says, in effect, "I am no longer the place where the next big discovery should happen. I am the place where future work will inherit stable rules and a small residue list." That is a healthier identity than clinging to the role of active frontier forever.
+
+This matters because it creates permission to move on later without guilt. A branch that never reaches handoff form keeps calling the program back into itself. A branch that does reach handoff form can finally say something cleaner: the mainline is frozen, the local residue list is known, the remaining execution blockers are explicit, and the next frontier can be opened intentionally rather than as a leak from unfinished business. That is about as complete an ending as a research branch usually gets.
+
+## JOURNAL-0374 The Cleanest Next Move After Closure Is Usually A Gate, Not A New Idea
+
+Date: 2026-04-04
+
+Once a branch is truly frozen, the temptation is to keep producing one more clever bridge into the next frontier. That is often how drift begins. The more honest move is usually smaller and colder: write down the exact conditions under which the next frontier may open, and then stop. That is what the intraday-add opening checklist does. It is not new alpha. It is a boundary.
+
+There is something mature about this kind of work. It accepts that good research programs do not move forward by emotional momentum alone. They move by explicit gates. Reduce is now strong enough that the main risk is no longer inside its semantics. The risk is that the next thing starts in a sloppy way and inherits authority it never earned. A checklist is an antidote to that kind of contamination.
+
+## JOURNAL-0375 A Deferred Frontier Still Benefits From Being Easy To Read
+
+Date: 2026-04-04
+
+After a checklist exists, the next temptation is to keep elaborating it. That can become another form of drift. A better move is often to compress the deferred frontier into a status card that says, in one glance, what is frozen, what is next, and what is still prohibited. That is what the prelaunch card does for intraday add. It removes ambiguity without creating momentum.
+
+This kind of artifact matters because deferred states are psychologically unstable. People treat them as half-open. A clean status card fights that impulse. It says something colder: yes, the next frontier is named; no, it is not active; yes, preparation exists; no, silent opening is allowed. That is less exciting than discovery work, but it is the kind of operational hygiene that prevents the next frontier from beginning with contamination.
+
+## JOURNAL-0376 Once A Deferred Frontier Is Real, Program Governance Has To Say So Out Loud
+
+Date: 2026-04-04
+
+There is a subtle failure mode in research programs: the board-level governance becomes cleaner than the program-level governance. When that happens, the local truth is sharp but the global posture is still blurry. That blur invites accidental continuation. Refreshing the program master card to include the deferred frontier's gate count and silent-opening ban is not glamorous, but it closes that gap.
+
+This kind of synchronization is a small sign of maturity. The program no longer relies on memory or on the researcher's mood to remember that the next frontier is deferred. It can now state that fact mechanically at both levels. When a branch has reached that point, more continuation is usually not curiosity anymore. It is just resistance to stopping.
+
+## JOURNAL-0377 The Final Form Of A Deferred Frontier Is Operational, Not Semantic
+
+Date: 2026-04-04
+
+There is a moment when a deferred frontier stops benefiting from more conceptual work. The remaining useful artifacts become almost embarrassingly operational: a heartbeat that says the frontier is still not open, and a short playbook that says what to do when it finally is. Those are not glamorous objects. But they are the right ending for a branch that has already done enough thinking.
+
+This matters because deferred frontiers often absorb anxiety. People keep adding one more specification, one more note, one more clever safeguard, as if the frontier would feel safer when it is more elaborated. Usually the opposite is true. Once the gate, status, and playbook exist, the safest thing is to stop. Anything more is often just an unwillingness to admit that the next real move now belongs to the future.
+
+## JOURNAL-0378 Opening Add The Honest Way Means Starting With Raw Inheritance
+
+Date: 2026-04-04
+
+When a new frontier opens, the strongest temptation is to begin with a polished theory. Add would be especially vulnerable to that because it feels intuitively exciting and directionally positive. But the right beginning turned out to be colder: take the existing open/add surface from the frozen EOD branch, do not grant it execution authority, and turn it into a supervision registry. That is a more honest start because it forces the branch to look at what it already inherited before it starts narrating what add is supposed to mean.
+
+This also protects the new frontier from overconfidence. A registry is not a claim that add is understood. It is a claim that add now has a canonical seed surface that can be interrogated. That distinction matters. It keeps the new branch from skipping its own apprenticeship just because reduce had already matured.
+
+## JOURNAL-0379 The First Add Feed Changes The Program More Than It Changes The Branch
+
+Date: 2026-04-04
+
+The point-in-time add feed is important, but its deepest effect is not local. It changes the truth of the whole program. Once add has a lawful seed feed, the program can no longer pretend the frontier is merely deferred. The shift has happened. That required a master-status refresh, and that refresh is more than bookkeeping. It is the moment when the system admits that the new branch is now active, even if only at supervision scope.
+
+That kind of honesty matters because research programs often linger in transitional language. They keep saying "next frontier" long after the next frontier is already being worked on. Refreshing the master card prevents that self-deception. It says something sharper: reduce is frozen, add is open, and the new work must now earn its own structure without borrowing execution authority from the old branch.
+
+## JOURNAL-0378 The First Honest Step Of Add Is Not Confidence, It Is A Registry
+
+Date: 2026-04-04
+
+When add finally opens, the temptation is to make it symmetrical with reduce and jump straight into action language. That would be too fast. Add has less mature supervision than reduce did. The cleanest first step is therefore not a simulator and not a rule engine. It is a registry: what did the historical open/add surface look like, which cases now still look legitimate, which turned into obvious failures, and which would have been blocked under the current board-level veto stack.
+
+That is a quieter beginning than people usually want from a new frontier. But it is the right one. A registry says the branch is willing to look at its raw inheritance before it starts inventing authority. It also keeps the most important asymmetry clear: add is now open, but it is open only as supervision. That distinction matters. It keeps the new branch from borrowing confidence it has not earned yet.
+
+## JOURNAL-0380 Add Needed A Vocabulary Before It Needed A Theory
+
+Date: 2026-04-04
+
+The point-in-time feed made intraday add lawful enough to inspect, but it still did not say what kind of add each case was. That gap matters more than it first appears. A frontier without a vocabulary tends to hallucinate structure. It starts talking about "good adds" and "bad adds" in broad strokes, and that vagueness quickly leaks into premature execution ideas. Freezing the first tier vocabulary prevents that drift.
+
+What emerged is not a grand theory, just a disciplined split: soft preheat probe adds, stronger preheat full adds, failed impulse-chase adds, and board-blocked adds. That sounds modest, but it is exactly the right level of truth for a young branch. It says the new frontier has differentiated its inheritance enough to start pattern mining, but not enough to pretend it already owns action authority. That is a healthier kind of progress than rushing into simulated entries with labels that still blur together.
+
+## JOURNAL-0381 Add Archetypes Became Real Once The Blocked Cases Stopped Looking Like Near-Misses
+
+Date: 2026-04-04
+
+The most useful thing in the first local add envelope audit was not the distinction between probe and full. That distinction was expected. The more clarifying result was what happened to the blocked board-lockout cases. They do not look like pure collapse in the first fifteen minutes. In fact they can look briefly repaired. That matters because it explains why a naive intraday-add branch would be tempted to misclassify them as tradeable local rebounds.
+
+Once that observation is named correctly, the hierarchy gets cleaner. A blocked add is not a near-miss allowed add. It is a board-vetoed local rebound whose temporary early repair is precisely the reason the veto must remain upstream. That is an important maturation point for the add frontier. It means the branch is no longer just distinguishing good from bad entries. It is learning that some apparently decent entries are structurally invalid because the board regime is wrong.
+
+## JOURNAL-0382 Probe Needed To Stay Weaker Than Full Without Being Punished For Looking Weak
+
+Date: 2026-04-04
+
+The first add rules almost worked immediately. That is usually a warning sign, because it often means the rules are just restating the labels. But the one real mismatch cluster was instructive: several probe seeds were being thrown out simply because their fifteen-minute close location was too poor. That would have been a subtle conceptual mistake. Probe is supposed to tolerate weaker early acceptance than full. If it demanded upper-half range quality, it would stop being probe and start imitating full.
+
+Once that unnecessary gate was removed, the rule set became cleaner, not sloppier. That is the useful kind of refinement. It did not broaden the branch into permissiveness. It restored the intended asymmetry between probe and full. That is exactly what a young frontier should learn from its first rule pass: not every weak-looking entry is invalid, only the ones that violate the semantics of their own tier.
+
+## JOURNAL-0383 Add Hit A Real Expansion Wall The Moment It Left The Seed Surface
+
+Date: 2026-04-04
+
+The first broader false-positive audit for add was clarifying in the bluntest possible way. The positive rules that looked coherent on the 55-row seed surface became far too generous on the wider local session surface. That is not a subtle failure. It is a structural one. It means the branch currently knows how a historically valid add looked, but it does not yet know how to distinguish that from an ordinary early-session rebound when the historical seed context is removed.
+
+That wall is actually useful. It prevents the branch from lying to itself. A young frontier often wants to believe that once a seed rule is internally consistent, expansion is just a matter of tuning thresholds. This audit says otherwise. The missing ingredient is context, not calibration. Until positive add permission is anchored to stronger context, broader expansion would just be a generic rebound detector wearing an add label.
+
+## JOURNAL-0384 Slow Context Was Helpful Enough To Be Honest, But Not Strong Enough To Be Useful
+
+Date: 2026-04-04
+
+It was tempting to believe that one more layer of slow context would save the broader add rules. Phase windows, expectancy unlock dates, repeated full-capable symbols: all of these sound structurally meaningful, and they are. But the audit showed something more sobering. They reduce density, yes, but they do not transform the problem. Even the best combination still leaves too many non-seed positive hits relative to the number of genuine seed cases it preserves.
+
+That is an important kind of failure because it narrows the search space. It means the add frontier does not merely need better board context. It needs a stronger permission surface that is point-in-time and nearer to the add decision itself. In other words, the next useful object is not another slow veto. It is a context layer that can explain why an early-session rebound is genuinely add-permissive on that bar for that symbol, instead of merely looking strong in isolation.
+
+## JOURNAL-0385 The First Useful Add Permission Clue Was About Containment, Not Strength
+
+Date: 2026-04-04
+
+The add branch finally picked up a more realistic piece of early-session behavior: genuine add seeds are often less frantic than the broader population of shape-only positive rebounds. That is not the direction a naive momentum mind expects. It wants the best adds to look strongest immediately. But the broader audit had already hinted that the branch was overfiring on ordinary strong opens. The point-in-time quantity-price pass makes that intuition explicit. What starts separating the better add seeds is not extra explosiveness. It is early containment: less first-fifteen-minute amount consumed too quickly, less crowding into too many positive bars, less evidence of a chase.
+
+That does not solve the frontier, but it does correct the frontier's bias. The branch was too willing to believe that stronger-looking early sessions deserved permission. The new clue says something subtler: some of the truest adds are constructive without already looking exhausted by their own first fifteen minutes. That is a meaningful conceptual step because it makes the branch more like a permission system and less like a rebound detector.
+
+## JOURNAL-0386 Reduce Needed A Written Quantity-Price Appendix Even Though It Did Not Need A Reopen
+
+Date: 2026-04-04
+
+The user's nudge about quantity and price was right in an important way. Reduce had already learned useful quantity-price distinctions earlier, but the frozen handoff package still looked too price-path-centric if someone skimmed it quickly. That is risky because frozen branches tend to calcify around whatever is most visible, not necessarily around everything that actually mattered. Writing the quantity-price supplement down as an explicit governance appendix fixes that asymmetry.
+
+Nothing new was "discovered" in reduce this round. That is precisely the point. The branch did not need reopening. It needed a cleaner memory. The strongest reversal-side separator and the local rebound-cost veto were already there; they just needed to be carried forward as official retained context instead of implicit background. That is the right kind of supplementation for a frozen branch: no new frontier, no fake progress, just a more faithful handoff.
+
+## JOURNAL-0387 The First Good Add Permission Clue Turned Out To Be A Family, Not A Rule
+
+Date: 2026-04-04
+
+The encouraging part of the first quantity-price permission clue was that it did not simply reduce density. It also uncovered a real pocket of sessions that continued through the rest of the first hour. That matters because it means the clue is not just a compression artifact. It is seeing something structurally closer to true permission than the raw shape-only branch could see. But that result immediately came with an equally important limitation: the same narrow clue still captures fragile and outright failed sessions.
+
+That is exactly the kind of mixed result that should change the branch's mental model. A weaker branch would try to turn the clue into a single rule and then spend three more rounds pretending the remaining misses are just parameter noise. A stronger branch admits what the clue really is: a family generator. It surfaces a meaningful local continuation family, but it also surfaces nearby counterfactuals. That means the next object to build is not permission authority. It is family supervision. The branch is learning structure, but not yet enough structure to claim execution rights.
+
+## JOURNAL-0388 Add Finally Produced A Confirmation Layer That Looks Like Confirmation
+
+Date: 2026-04-04
+
+Most of the add frontier so far has been about learning what not to overclaim. That discipline mattered, but it also created a risk: the branch could become so cautious that every improvement still sounds like another way of saying "not ready." This round is different. The persistent-permission family now has a simple local confirmation gate that is genuinely clean. Within that narrow family surface, asking for a decent hour-close and positive continuation from minute fifteen to minute sixty separates nine persistent candidates with no fragile or failed contamination.
+
+That does not mean the frontier is ready for execution. It means something subtler and more useful: the branch has finally produced a confirmation object that behaves like confirmation instead of behaving like a denser or looser proxy. That is a qualitative change. The add frontier still cannot promote broad positive permission, but it no longer lacks a believable local confirmation layer. That is exactly the kind of progress that makes a young branch worth continuing, because it is now learning structure that can survive contact with counterfactuals rather than just surviving inside seed labels.
+
+## JOURNAL-0389 Persistent Permission Needed A Quality Ladder Once It Became Real
+
+Date: 2026-04-04
+
+As soon as the persistent-permission family gained a clean continuation gate, it stopped being useful to speak about it as a single object. That is a good problem to have. Weak branches stay vague forever. Stronger branches eventually discover that the thing they finally trust also contains internal asymmetry. Here that asymmetry is intuitive once named: some persistent cases really do look like full-quality permission, some are still probe-quality, and a small bridge tier sits uncomfortably in the middle.
+
+That bridge tier is especially valuable because it prevents the frontier from overlearning. If the branch only had full-quality and probe-quality pockets, it would be tempting to claim a neat dichotomy. But the mixed middle is a reminder that local permission is not a finished ontology. It is a developing one. The right response is not to force certainty. It is to encode the bridge explicitly and keep it as an upgrade watch. That preserves nuance without surrendering structure.
+
+## JOURNAL-0390 The Strongest Add Tier Turned Out To Be Surprisingly Simple
+
+Date: 2026-04-04
+
+After several rounds of family-building, continuation checks, and quality layering, the strongest local add tier finally collapsed into something simple: if the first fifteen minutes finish high enough in their own range, the full-quality persistent cases separate cleanly. That kind of simplification is valuable precisely because it arrives late. Early simplifications are usually fake. Late simplifications often mean the branch has earned the right to compress what it learned.
+
+What matters here is not that `close_loc_15m` is some magical universal feature. It is that, inside the already narrow and highly supervised local ladder, it became a faithful anchor for the strongest tier without leaking bridge or probe cases back in. That is the kind of archetype a branch can carry forward safely: not as permission authority, but as a readable anchor that keeps the strongest local object legible.
+
+## JOURNAL-0391 The Frontier Learned Something Important By Failing To Port Its Best Object
+
+Date: 2026-04-04
+
+One of the easiest mistakes at this stage would be to confuse a clean local object with a portable one. The strongest add archetype is now very readable inside the persistent-permission ladder, and that kind of success naturally invites ambition. But the portability audit was valuable precisely because it refused to indulge that ambition. Even after combining the archetype with the best slow context and burst moderation, the branch still retained too many non-seed cases relative to the tiny number of seed cases it preserved.
+
+That failure is clarifying. It says the add frontier has already learned one of the hardest research lessons: local truth and portable truth are not the same thing. The branch now owns a genuinely useful local archetype, but it also knows exactly where that ownership stops. That is progress of the right kind, because it makes the frontier more bounded rather than merely more complicated.
+
+## JOURNAL-0392 The Remaining Add Portability Misses Turned Out To Be Counterfactuals, Not Noise
+
+Date: 2026-04-04
+
+The next useful question after a portability failure is whether the residue is random or structured. If the remaining non-seed hits are random, then the branch probably still lacks a real object. If they are structured, then the object may be real but blocked by a different layer. That is what this round clarified. The three residual non-seed hits under the strongest portable-looking add scenario did not look like generic false positives. They clustered into two much more specific families: one displaced same-day alternative and two no-order-day late echoes on symbols that had already produced earlier allowed-add seeds.
+
+That matters because it changes what the branch should work on next. There is little value in pretending more local shape tweaking will solve a problem that is no longer local. The active blocker has moved upward. The frontier now has enough evidence to say that its strongest local add object is not failing because the archetype is fake. It is failing because broader promotion needs a day-level selection authority the branch does not yet own. That is a much better kind of blocker to discover than another vague "needs more data" excuse, because it narrows the next supervision question without overstating present capability.
+
+## JOURNAL-0393 The Add Frontier Finally Found Its Daily Choice Problem
+
+Date: 2026-04-04
+
+Once the residual non-seed hits were shown to be structured, the obvious next question was whether the structure lived at the symbol level or at the daily decision level. This round answered that cleanly. Under the strongest portable-looking add scenario, the frontier does not see a large messy surface. It sees four days, and those four days already separate into three interpretable daily families: one aligned day where the strong candidates and the real open/add decisions match, one displaced day where a strong candidate exists but another symbol gets chosen instead, and two post-wave echo days where the local shape survives after the add wave has already passed.
+
+That is a useful narrowing because it means the branch should stop negotiating with local shape. Local shape has already done its job. The next missing layer is a daily authority for selection: why a day with multiple plausible objects resolves to one actual choice, and why an apparently strong local echo should still stay dormant on a no-order day. In other words, the add frontier is no longer primarily blocked by not understanding the candle. It is blocked by not yet understanding the day.
+
+## JOURNAL-0394 The Daily Add Problem Split Again, And That Is Good News
+
+Date: 2026-04-04
+
+The moment the frontier found a daily authority problem, it still faced a risk of overgeneralizing. "Day-level selection" can become another vague bucket if it is not split quickly. This round did the useful next cut. The four key candidate days under the strongest portable-looking add scenario do not all represent the same unresolved issue. Two of them are already much easier than the others: they are post-wave echo days, where no new add wave is active and the local shape is simply arriving too late. Those can be filtered with a cheap recent-order-flow state. That is not a complete solution, but it is a real simplification.
+
+What remains after that simplification is the harder and more interesting part: active-wave selection. That is where the branch must explain why a live add wave resolves into one actual symbol choice instead of another equally plausible local candidate. This is progress because it makes the frontier smaller and sharper. The branch no longer needs to solve a generic portability mystery. It now needs to solve a specific ranking problem inside live add waves, while keeping a separate veto for post-wave echoes.
+
+## JOURNAL-0395 The First Same-Wave Add Selection Clue Is Small But Real
+
+Date: 2026-04-04
+
+After carving away the easy post-wave echo days, the frontier was left with a much smaller and more honest problem: what happens inside an actually live add wave. That is where overfitting becomes tempting, because the sample is tiny and the urge to declare a full ranker arrives early. The right move was narrower. Instead of inventing a whole ranking model, the branch asked whether the displaced candidate differed in one simple and interpretable way from the selected ones. The answer was yes. The displaced candidate sat inside recent symbol-level reduce residue, while the selected ones fell into either same-symbol continuation or clean-reset states.
+
+This is not execution authority. It is not even a complete daily ranker. But it is the right kind of progress. The frontier now has a first same-wave state split that explains something real about why one local candidate was not chosen. That means the active-wave problem is no longer an abstract "needs more daily context" complaint. It has started to grow concrete internal states. Those states can now be supervised further without pretending the branch has earned broader promotion yet.
+
+## JOURNAL-0396 The First Same-Wave Exclusion Clue Passed The Smallest Honest Test
+
+Date: 2026-04-04
+
+Once the active-wave state split existed, the next honest question was whether the negative state was merely descriptive or already useful. The smallest fair test was simple: if recent reduce residue is treated as a local exclusion clue, does it remove the displaced candidate without mistakenly removing the selected ones? On the current surface, the answer is yes. That matters less because the numbers are large—they are not—and more because the branch resisted the temptation to ask for more than the sample can support. It asked a tiny question and got a clean answer.
+
+That answer should still be handled carefully. A clean local exclusion clue is not a daily ranker, and it is certainly not execution authority. But it is a meaningful step because it shows the active-wave selection problem is no longer just a mystery about "why this one and not that one." It has started to admit explicit exclusion logic. That makes the next supervision layer clearer: not broader promotion, but a more structured local daily-choice language built around exclusion and continuation rather than raw shape alone.
+
+## JOURNAL-0397 The Branch Learned To Exclude Before It Learned To Rank
+
+Date: 2026-04-04
+
+After finding a clean local exclusion clue, the natural temptation would be to search for its mirror image: a positive daily ranker that tells the branch which remaining same-wave candidate should win. This round showed why that temptation must be resisted. The two retained selected states still do not behave like a single positive archetype. One has stronger early push, the other has stronger close-location and hour-end continuation. That is not a failure. It is a useful boundary. The branch now knows it has learned exclusion faster than ranking.
+
+That asymmetry is healthy. Good frontiers rarely learn everything at once. Here the add branch has earned one clean negative clue but not a promotable positive ranker. That means the correct next step is not to blur the distinction and pretend the branch already has a full same-wave selection engine. The correct next step is to preserve the asymmetry explicitly: keep the exclusion logic, block positive-ranker promotion, and continue treating the remaining selected states as supervision structure rather than execution truth.
+
+## JOURNAL-0398 The Frontier Does Not Need A Single Winner If The Local States Are Complementary
+
+Date: 2026-04-04
+
+Once the branch admitted it did not yet own a positive daily ranker, the next useful question was whether ranking was even the right problem. That is where this round helped. The two retained same-wave states do not merely fail to collapse into one winner. They also look complementary in a way that makes a dual-slot interpretation more natural. One slot carries continuation: reuse an already live symbol that is still behaving well. The other carries reset: allow a clean new participant without inheriting fresh residue. That is a different framing from ranking, and in this case it is the more honest one.
+
+This matters because it changes the tone of the frontier. A branch that cannot rank often sounds incomplete. A branch that can already define parallel permission slots sounds more structurally mature. It still does not have execution authority, and it still should not promote itself into a broader module. But it no longer needs to apologize for not producing a single winner when the local evidence still favors differentiated risk-sharing states. That is not a weakness. It is a better reading of the object the branch currently owns.
+
+## JOURNAL-0399 The First Risk-Sharing Add Archetype Turned Out To Be Tiered
+
+Date: 2026-04-04
+
+Once the frontier accepted a dual-slot reading, the natural next question was whether those slots should be treated equally or asymmetrically. The local answer was not neutral. On the only day where both slots were simultaneously live, the clean reset slot carried roughly twice the participation of the continuation slot. That is a useful finding because it makes the risk-sharing story more concrete. The branch is not just saying "both can exist." It is saying the two slots can exist with different responsibilities: the reset slot as the primary fresh exposure and the continuation slot as the smaller reinforcing layer.
+
+This still is not execution authority. One local day is not enough to declare a real allocation policy. But it is enough to keep the frontier honest about what kind of object it currently owns. It owns a tiered local allocation archetype, not a flat two-slot symmetry and not a deployable sizing engine. That is a stronger and more usable statement than either overclaiming execution readiness or pretending the branch has learned nothing about add-side risk sharing.
+
+## JOURNAL-0400 A Dual-Slot View Does Not Mean Dual Slots Are Always Available
+
+Date: 2026-04-04
+
+The next trap after discovering a dual-slot structure is to start treating it as the default topology of the branch. That would be premature. This round showed why. On the current strict active-wave surface, dual-slot coexistence only appears on one local day. The other active-wave day does not degrade into a neat single-slot case on the same surface; it actually collapses below retained-slot capacity altogether after the current local filters and exclusions are applied. That is a useful warning. A dual-slot view can be correct without being universally available.
+
+This is an important distinction for the branch's discipline. The add frontier now owns a conditional capacity object, not a default one. That means the right next step is not to operationalize "always open both slots." It is to preserve the logic that dual-slot coexistence is contingent, local, and currently rare. That keeps the branch grounded in the actual structure of the sample instead of letting a good local archetype inflate into a universal operating assumption.
+
+## JOURNAL-0401 Exclusion First, Capacity Second
+
+Date: 2026-04-04
+
+This round clarified that the add branch should not think about slot capacity as a sizing question first. It is a hierarchy question. The current strict active-wave surface resolves in two stages. First, same-wave exclusion is applied. Second, whatever remains may support either zero-slot or dual-slot capacity. That ordering matters because it explains why one active-wave day does not become a clean single-slot example. The branch is not failing to allocate; it is correctly collapsing into no retained slot after exclusion.
+
+This is a stronger reading than simply saying dual-slot is rare. It means capacity itself is downstream of governance. The observed dual-slot day remains valuable because it gives a local tiered pattern: reset primary, continuation secondary. But the absence of a single-slot day means we still do not have a portable fallback allocation rule. The branch should therefore preserve zero-slot veto and tiered dual-slot as the two currently valid local capacity states, while keeping broader promotion and execution blocked.
+
+## JOURNAL-0402 No Single-Slot Template Yet
+
+Date: 2026-04-04
+
+It is tempting to assume that once an add branch learns zero-slot veto and dual-slot coexistence, the missing middle must be a single-slot fallback. This round showed that the sample does not justify that shortcut. On the current strict active-wave surface, no true single-slot day exists. The branch resolves into either full exclusion or a local tiered dual-slot pattern. That absence matters because it prevents us from inventing an allocation template the data has not earned.
+
+The only honest concession is a weak local surrogate: if a forced one-slot reading is needed on the lone dual-slot day, the reset slot has the stronger provisional claim. But that is not the same thing as observing a real portable single-slot state. The branch therefore now has a sharper topology. It knows how to veto, it knows how to hold a local two-slot structure, and it knows that the one-slot middle is still missing. That missing middle is itself informative because it marks the current stopline for add-capacity promotion.
+
+## JOURNAL-0403 Forced Collapse Is Not Observation
+
+Date: 2026-04-04
+
+This round closed an important loophole. Once the branch admits that no true single-slot fallback has been observed, the next temptation is to treat the stronger slot on the lone dual-slot day as if it had already earned the missing template. That shortcut would overstate the evidence. What we actually learned is narrower. If the local two-slot structure is forcibly collapsed into one slot, reset survives more naturally than continuation. It wins on more quality dimensions and already carries the larger local weight. But that is still a forced-collapse reading, not a naturally observed single-slot state.
+
+This distinction matters because it prevents the branch from smuggling a portable allocation rule through a local asymmetry. The reset slot can now be described more precisely: not as the branch's single-slot fallback, but as the only plausible local surrogate under explicit forced collapse. That keeps the supervision branch honest and preserves the real stopline: a portable one-slot template is still missing.
+
+## JOURNAL-0404 Add Has Reached Its Supervision Stopline
+
+Date: 2026-04-04
+
+The add branch now looks much more like a completed supervision program than an open frontier. It has a stable registry, seed rules that recover the frozen surface, a local permission hierarchy, a local confirmation layer, and a local slot-capacity hierarchy. What it does not have is equally clear: portable positive promotion, an observed single-slot fallback, or execution authority. That distinction matters because it marks a genuine stopline. At this point, asking the branch for more broad local tuning would mostly mean forcing portable answers out of a sample that has only earned local ones.
+
+This is structurally similar to where the reduce branch ended up before handoff. The research layer becomes complete enough before the execution layer becomes legal or portable. For add, the honest state is now the same: the supervision mainline is rich enough to freeze, while the missing pieces remain explicitly blocked. Future work should therefore narrow rather than widen. Unless a real portability unlock appears, the branch should move from open exploration into local residue maintenance.
+
+## JOURNAL-0405 The Missing Middle Becomes The New Frontier
+
+Date: 2026-04-05
+
+Both major branches had reached the same structural stopline. Reduce had become research-complete enough but still lacked full execution authority. Add had also become supervision-complete enough but still lacked portability and execution authority. That symmetry changes the question. The next frontier should not be another local clue inside either branch. It should be the missing middle that connects them.
+
+This round therefore promotes a different kind of frontier: not a new alpha family, but a unifying shadow replay lane. The lane is explicitly protocol-only and read-only. That matters because it prevents the project from pretending that frozen supervision stacks are already lawful execution modules. The first useful build inside that lane is the reentry/unlock bridge. It already has enough frozen material to be specified cleanly: reduce exit as source, board lockout and unlock as upper gates, reentry timing and confirmation as the middle state machine, and only then add supervision as a downstream permission consult. The lane can now move forward without re-opening either frozen branch or claiming execution authority it still has not earned.
+
+## JOURNAL-0406 The Bridge Stops Being Abstract
+
+Date: 2026-04-05
+
+The new frontier needed to pass a simple test before it could become useful: it had to stop being purely procedural language. This round is the first point where that happened. The reentry/unlock bridge now has a concrete state surface. That matters because it turns a sequence of governance ideas into an enumerable object. Each current seed can now be placed inside board-gate state, same-day chase block, observation window, rebuild-watch timing, later confirmation shape, and add-handoff readiness.
+
+The surface also clarified something important: none of the current seeds are actually ready to hand off into add permission. One seed sits before the formal lockout start, two sit inside the lockout window, and all three remain blocked from same-day chase. That is a healthy result because it prevents the bridge from smuggling reentry optimism into add consultation before board unlock has genuinely occurred. The bridge now has a real table, but still no execution authority. That is exactly the right asymmetry at this stage.
+
+## JOURNAL-0407 The Bridge Blocker Is Now Concrete, Not Intuitive
+
+Date: 2026-04-05
+
+The handoff blocker between reentry and add is no longer a vague feeling that the timing is not ready. It is now explicit and two-layered. Every current seed fails the bridge for the same pair of reasons. First, the rebuild-watch date still sits inside the board-level cooling lockout. Second, there is no later unlock seed after that rebuild-watch date. This matters because it changes the mental model of the bridge. The blockage is not caused by missing minute nuance or weak symbol confirmation alone. It is caused by the absence of a lawful board-level reopening context.
+
+That is a useful tightening of the frontier. It means the bridge has already learned something important without simulating a single trade. A seed can look better on its own timetable and still remain non-handoffable because the board never reopens. That keeps the project from confusing local symbol recovery with a valid transition back into add permission. The bridge is now doing the right kind of work: converting intuition about timing and regime mismatch into explicit blocked states.
+
+## JOURNAL-0408 Post-Lockout Vacancy Is Not The Same As Weakness
+
+Date: 2026-04-05
+
+The next blocker turned out to be narrower and more structural than another round of symbol interpretation. After lockout end, local raw intraday dates still exist. The raw calendar continues through late March and early April. But the derived board-state surface stops exactly at the lockout boundary. That matters because it changes how the vacancy should be read. The project is not merely waiting for a better unlock-looking day inside an already-modeled board regime. It is missing the post-lockout regime surface itself.
+
+This distinction is useful because it keeps the shadow replay lane honest. If post-lockout dates existed nowhere, the blocker would be a plain data absence. If post-lockout board states existed and all looked weak, the blocker would be a negative board judgment. What exists here is different: raw local dates continue, but the board-level derivation has not yet been extended across them. That means the bridge still cannot lawfully reopen into add consultation. The missing object is not another local clue. It is the post-lockout board surface on which unlock context could even be tested.
+
+## JOURNAL-0409 The Gap Is Synchronized, Not Accidental
+
+Date: 2026-04-05
+
+This round tightened the blocker again. The earlier vacancy audit already showed that post-lockout raw dates continue. The next useful question was whether one derived surface had merely gone stale while another still extended forward. The answer is no. Both board-level surfaces stop on the same date: the lockout end itself. Daily state stops there, and phase geometry stops there too. Raw intraday data continues for ten more trading days, but the two derived board surfaces do not. That makes the blocker structurally cleaner than a generic missing-update story.
+
+This matters because it changes the kind of future work that is justified. The shadow replay lane is not yet asking for a subtler unlock classifier. It is asking for the board-state derivation boundary to move. Until that happens, any discussion of post-lockout unlock quality remains premature. The bridge is not blocked by a weak candidate living inside an already-modeled reopening regime. It is blocked because the reopening regime surface has not yet been extended at all.
+
+## JOURNAL-0410 The Boundary Matches Lockout, Not Last Trade
+
+Date: 2026-04-05
+
+The next useful distinction was whether the derivation gap should be blamed on missing raw data, on the end of trading activity, or on a deliberate analytical boundary. The answer is now much cleaner. Execution history ends on 2026-02-27. But the derived board surfaces continue well past that date and stop only on 2026-03-20, exactly where board lockout ends. Raw daily bars and raw intraday data both continue through 2026-04-03. That combination rules out the two lazier explanations. The stop is not driven by raw-data absence, and it is not simply inherited from the last execution day.
+
+What remains is the more structural reading: the current bridge is blocked by a lockout-aligned derivation boundary. This matters because it changes the next honest question. The project is no longer deciding whether post-lockout days look good enough. It is deciding whether the board-state derivation boundary itself should remain frozen at lockout end or be explicitly extended beyond it. Until that policy changes, the bridge cannot legally reopen, regardless of how many raw post-lockout dates already exist underneath it.
+
+## JOURNAL-0411 Existing Raw Coverage Does Not Authorize Silent Extension
+
+Date: 2026-04-05
+
+Once the boundary was classified, the next temptation was obvious: if raw daily and raw intraday data already continue beyond lockout end, why not just let the derived board surfaces continue automatically too? This round closes that shortcut. The presence of raw coverage does not by itself authorize a new derived board regime. That would silently convert a frozen lockout-aligned boundary into an open extension policy without ever naming the policy change. For a shadow replay lane that is still read-only and still blocked from execution, that would be the wrong kind of progress.
+
+The cleaner framing is now explicit. There are two different future paths, and only one is currently active. The active path is to retain the boundary and keep the bridge blocked. The inactive but legitimate future path is to open an explicit shadow-only extension program. That distinction matters because it preserves governance order. The project should not start judging post-lockout unlock quality until it has first admitted that the derivation boundary itself is being extended on purpose.
+
+## JOURNAL-0412 Preparation Stops Short Of Opening
+
+Date: 2026-04-05
+
+The boundary question has now reached the same kind of stopline that other frontiers hit earlier. Once it became clear that silent extension was the wrong move, the remaining useful task was procedural rather than analytical: define how a future extension would have to open if the project ever chose to do it. That is what the new checklist does. It names the gates without crossing them. Policy shift must be explicit. Extension must remain shadow-only. Daily-state and phase-geometry surfaces must extend together. Unlock-quality debate still comes later, not now.
+
+That matters because it keeps the lane from drifting into accidental implementation. The project now has enough structure to extend the boundary later without confusion, but it has not actually extended it. This is the right stopping point for the current blocker. The bridge remains blocked, not because the next step is unknown, but because the next step is now clearly a future opening decision rather than a present analytical obligation.
+
+## JOURNAL-0413 The Deferred Option Is Now Fully Formed
+
+Date: 2026-04-05
+
+There is a useful difference between an undefined future option and a fully formed deferred one. After the checklist was added, one more compact object was worth creating: a prelaunch status card. That card does not add new research signal. It simply makes the current posture explicit and stable. Boundary extension now has a name, a state, a gate count, and a prohibition on silent opening. That means the line has reached the same kind of management stopline other frozen branches reached earlier.
+
+This matters because it closes the temptation to continue polishing the deferred branch as if more paperwork were equivalent to forward progress. It is not. Once the option is fully formed and explicitly deferred, the honest next step is to stop. The branch should remain frozen until an explicit frontier shift is made. Anything else would be governance drift dressed up as diligence.
+
+## JOURNAL-0414 Strong Symbols Can Still Be Negative Labels
+
+Date: 2026-04-05
+
+The next useful step was to stop treating all post-lockout strength as one thing. Named symbols like 天银机电, 再升科技, 神剑股份, 航天发展, and 西测测试 do not all tell the same story. Some rebound weakly and never get close to prior highs. Some approach prior highs only after lockout end, inside a raw-only zone where board context does not legally exist. One of them, 天银机电, even manages to break its prior peak inside the lockout window itself. That is exactly why these symbols are useful negative labels. They show that symbol strength and board restart are separable.
+
+What matters is not just whether they bounce, but where and under what context they bounce. A breakout inside lockout is not a board unlock. A breakout after lockout end, when only raw prices exist but no derived board state does, is not a legal reopening signal either. This gives the project a more mature way to learn from discretionary intuition: strong names can be genuinely strong and still be the wrong reason to re-enter a board.
+
+## JOURNAL-0415 Crowded Shelter Rebound Is Not The Same As Weak Repair
+
+Date: 2026-04-05
+
+One of the more valuable distinctions to emerge is between ordinary weak repair and what looks more like symbol-level crowding. 再升科技 and 神剑股份 do not merely rebound a little more than weak peers. They recover much closer to prior highs and do so with substantially heavier turnover. That is not enough to make them healthy board signals. In fact, it is useful precisely because it shows how a locked board can still host concentrated strength in a few liquid, attention-rich names.
+
+This distinction matters because otherwise the model learns the wrong lesson. If all failed restart attempts are lumped together, it misses the specific danger of crowded shelter names: they look cleaner, stronger, and more persistent than ordinary weak repairs, yet they still fail the board-level restart test. The right interpretation is not that crowding is bullish. It is that crowding is a separate negative-label family that deserves to be learned on its own terms.
+
+## JOURNAL-0416 The Right Next Step Is To Learn Role Separation Before Action
+
+Date: 2026-04-05
+
+Once the local negative-label families were clean enough, the temptation was to jump straight into another action layer. That would have been premature. The more honest reading is that the project still confuses three things that discretionary traders often separate intuitively: the stock that catches heat, the stock that absorbs crowded attention, and the stock that money actually keeps choosing. Those are not the same object, especially in A-share thematic bursts. A hot name can be an attention anchor without being the best trading vehicle. A very strong name can still be evidence of concentration inside a weak board rather than evidence of board restart.
+
+That is why the new route freezes action authority and instead promotes environment semantics and event-attention-capital divergence. The next gain is not another local minute pattern. It is a cleaner language for distorted attention, capital misalignment with the board, and fragile divergence. Only after that language exists should the system try to learn true selection or followthrough leadership. This is also why manifold learning stays late and optional: representation is not the current bottleneck. Label discipline is.
+
+## JOURNAL-0417 Incomplete Information Should Produce Explicitly Incomplete Semantics
+
+Date: 2026-04-05
+
+One risk in moving upward from local negative labels to environment interpretation is false completeness. It would be easy to smuggle in policy pressure, macro weakness, or external board competition as if they were already formalized, simply because they feel directionally true. The better move is to make the current layer explicitly incomplete. That is what the new negative environment registry does. It promotes three semantically useful states—attention distortion, capital misalignment with the board, and fragile divergence—but keeps them board-local on purpose.
+
+This matters because it preserves honesty about what the system actually knows. The current layer is strong enough to say that local strength can coexist with weak board conditions, and that concentrated symbol leadership does not equal healthy board restart. It is not yet strong enough to claim a full external-causality model. Policy and news context therefore belong in the next event-attention layer, not hidden inside the current one. That keeps bias visible instead of turning it into unexamined structure.
+
+## JOURNAL-0418 The First Attention Case Should Be A Hard One, Not A Pretty One
+
+Date: 2026-04-05
+
+The first event-attention layer should not begin with a broad and flattering taxonomy. It should begin with a hard case that forces the distinction between heat and restart. 航天发展 is exactly that kind of case. The turning-point source explicitly names it as a high-recognition emotional axis when the board is overheating, and the later local-path evidence shows that the symbol never rebuilds enough to justify renewed board participation. That makes it a useful first anchor and decoy case, not because it is the cleanest stock, but because it is the cleanest role separation.
+
+This matters because the layer is supposed to learn divergence, not celebrate leadership. If the first labels already confuse heat with valid continuation, the whole route goes crooked. A conservative registry with only a few hard rows is therefore better than a larger but softer one. Event trigger validity can now be learned without pretending that every event is board-supportive, and attention role learning can start without pretending that true capital selection is already solved.
+
+## JOURNAL-0419 One Hard Role Seed Is Better Than Five Fake Certainties
+
+Date: 2026-04-05
+
+The next temptation after finding one useful role case was to promote all the other strong names into equal-status anchor or decoy labels. That would have been sloppy. The evidence is not symmetric. 航天发展 has explicit turning-point heat evidence and later weak-path confirmation, which is enough for a hard role seed. 再升科技, 神剑股份, 天银机电, and 西测测试 all matter, but they matter in different ways and with different evidence strengths. Some have event backing plus strong crowded rebound, some only have local concentration, and some look more like following high-beta beneficiaries than attention anchors.
+
+This asymmetry is not a weakness. It is the point of the layer. If every strong symbol is promoted at the same confidence level, the model loses the distinction between attention, concentration, and later true selection. By keeping one hard role seed and several softer role candidates, the system stays honest and preserves room for later separation instead of collapsing everything into an overfit taxonomy too early.
+
+## JOURNAL-0420 Separation Is Progress Even Without A Leader
+
+Date: 2026-04-05
+
+There is a common temptation in market labeling to treat every intermediate step as a failure if it does not immediately reveal the final leader. That is the wrong standard here. The useful progress in the latest pass is that the soft role candidates no longer sit in one mixed bucket. 再升科技 is now the best event-backed attention-carrier candidate. 神剑股份 and 天银机电 look more like concentration without anchor authority. 西测测试 looks more like an event-backed high-beta follow case. None of that is yet the same as true selection, and that distinction is exactly why the layer improved.
+
+This matters because it preserves causal order. If the system jumps from mixed role candidates straight into capital_true_selection, it will confuse event backing, crowding, breakout path, and follow behavior. By forcing separation first, the training route keeps true selection blocked until there is enough carrier-grade evidence to compare. That is a better outcome than a premature winner label built on one attractive case.
+
+## JOURNAL-0421 A Good Blocker Is Better Than A Premature Promotion
+
+Date: 2026-04-05
+
+The carrier-grade question now has a better answer than “not yet.” It has named missing evidence. There is only one event-backed carrier-grade soft case. There is only one hard anchor/decoy panel case. There is no dedicated followthrough surface yet, and no explicit event-to-board alignment score. Those are not vague hesitations. They are explicit absences. That changes the quality of the block. It is no longer a mood. It is a checklist.
+
+This matters because it turns the next step into a disciplined search rather than a drift toward comfort. Instead of over-interpreting one attractive candidate, the route now says exactly what must exist before true selection can be promoted. That is a healthier training posture: when evidence is thin, the right advance is to formalize the gap, not to pretend it has already been crossed.
+
+## JOURNAL-0422 A Negative Search Result Is Still Progress
+
+Date: 2026-04-05
+
+The search for a second carrier-grade case did not produce one. That is useful. It means the route can stop searching for comfort in the current named set and accept a harder truth: the present event-backed universe still has one primary carrier case and several non-carrier roles. 再升科技 remains the only current carrier-grade case. 西测测试 is still better read as a follow candidate. 神剑股份 and 天银机电 still look like concentration without carrier authority. 航天发展 still belongs on the counterpanel rather than in the candidate pool.
+
+This matters because a negative search result protects the label stack from inflation. If the system promoted a second carrier out of impatience, it would weaken the meaning of the label exactly when the role layer is finally becoming disciplined. Keeping the negative result visible is better than manufacturing symmetry where the evidence does not support it.
+
+## JOURNAL-0423 Counterpanels Should Be Harder To Earn Than Heat
+
+Date: 2026-04-05
+
+The counterpanel search produced another useful asymmetry. Hard anchor-decoy status is not just “a strong name that later failed to reopen the board.” It also requires hard heat-anchor evidence. That is why 航天发展 remains unique. 神剑股份 and 天银机电 may both support softer decoy-like readings, but neither currently owns a decisive retained heat-anchor source. 再升科技 and 西测测试 matter for other reasons, yet they do not belong in the hard counterpanel at all.
+
+This matters because it keeps the role language clean. If every failed strong name becomes a hard decoy, the model loses the very distinction it is trying to learn. A counterpanel is supposed to be harder to earn than heat, not easier. The right outcome is therefore not disappointment that the panel is still thin, but relief that the system did not promote noise into structure.
+
+## JOURNAL-0424 Followthrough Helps, But It Does Not Solve Selection
+
+Date: 2026-04-05
+
+The new followthrough layer is useful precisely because it refuses to do too much. It now distinguishes a durable symbol-level path from weaker or more temporary ones, and that is real progress. But the existence of symbol persistence still does not solve the higher problem. A name can carry followthrough in raw prices without reopening board participation, without resolving anchor-versus-decoy ambiguity, and without becoming a lawful true-selection case. The layer therefore adds signal while preserving the block.
+
+This matters because one of the easiest mistakes in thematic work is to confuse persistence with permission. Once a symbol keeps going, it becomes psychologically tempting to upgrade everything about it at once: from attention carrier to leader, from leader to board restart proof, from restart proof to selection license. The new layer explicitly rejects that cascade. Followthrough is now visible, but it remains only one layer in the stack, not the final answer.
+
+## JOURNAL-0425 Alignment Is Useful Only If It Stays Smaller Than Promotion
+
+Date: 2026-04-05
+
+The new board-event alignment layer is useful precisely because it does not try to do too much. It now distinguishes an event that lands in a genuinely supportive board state from an event that lands at a turning point, in a lockout regime, or in a raw-only zone where lawful board alignment cannot even be assigned. That is a real improvement over vague statements that some events simply 鈥渇eel stronger鈥 than others. The system can now say why an event belongs to a positive continuation context, a risk-turn context, a lockout-misaligned context, or an alignment-absent context.
+
+This matters because event logic becomes dangerous when it quietly outruns the board state that is supposed to host it. If the model takes event excitement and directly upgrades it into selection authority, it will overfit narrative before it has secured lawful participation context. The new layer prevents that mistake. It makes alignment explicit, but it keeps alignment smaller than promotion.
+
+## JOURNAL-0426 Partial Closure Is Not The Same As Readiness
+
+Date: 2026-04-05
+
+The readiness pass is useful because it converts the current stack into a more honest shape. Two named gaps are now explicit layers: symbol followthrough exists, and board-event alignment exists. That is progress. But the promotion block still survives for a structural reason. There is still only one primary carrier-grade case, and there is still only one hard anchor-decoy counterpanel case. In other words, the support stack is getting thicker while the decisive comparison stack remains thin.
+
+This matters because it shows where false confidence tends to enter. Once auxiliary layers begin to look sophisticated, there is a strong temptation to call the whole module mature. That temptation is wrong here. Better supervision on persistence and alignment does not magically solve the fact that carrier evidence and counterpanel evidence are still single-case bottlenecks. The correct read is therefore not 鈥渢rue selection is almost ready,鈥 but 鈥渢rue selection is better supported and still correctly blocked.鈥?
+
+## JOURNAL-0427 Local Exhaustion Is Also A Useful Result
+
+Date: 2026-04-05
+
+One of the easiest ways to waste time in a small labeled universe is to keep retuning the same five names after the route has already revealed what they can and cannot provide. The new evidence-source pass matters because it finally names that stopline. The current named set is good enough to establish one primary carrier case, one hard anchor-decoy panel case, several soft role candidates, and a richer followthrough and alignment stack. It is not good enough to manufacture a second carrier or a thicker hard counterpanel. That is not a tuning problem anymore. It is an evidence-source problem.
+
+This matters because it changes the next honest move. If the route keeps grinding the same local set, it will only produce softer narratives around the same structural bottlenecks. The better move is to expand the comparison surface itself: more symbols for carrier search and thicker attention-heat evidence for counterpanel search. That is a cleaner frontier than pretending local refinement can solve a missing comparison stack.
+
+## JOURNAL-0428 Expansion Is Useful Only If It Stays Narrow At First
+
+Date: 2026-04-05
+
+Once the route admits that the current named set is locally exhausted, the next temptation is to swing too far in the other direction and scan the whole concept universe without discipline. That would simply replace one kind of noise with another. The first expanded pass works because it stays narrow: formal/core symbols only. That is enough to prove a real point. There is one outside-named candidate, 000738, that deserves explicit second-carrier search. There is one watch, 600118, that has some strength but not enough local leadership. And there is one formal noncandidate, 002085, that should not be promoted just because it sits in the formal set.
+
+This matters because it preserves the meaning of expansion. The goal is not to make the stack look larger. The goal is to find the next legitimate comparison case without inflating status labels. A narrow expansion that finds one real target is better than a broad scan that manufactures five weak ones.
+
+## JOURNAL-0429 A Watch Is Stronger Than A Guess And Smaller Than A Promotion
+
+Date: 2026-04-05
+
+The new outside-named pass does not suddenly solve second-carrier promotion, and that is exactly why it is useful. 000738 now deserves a real place in the supervision stack because it shows repeated board-local rebound leadership and meaningful post-lockout breakout strength. That is enough to stop ignoring it. But it still lacks the same kind of retained event backing that made 603601 the current primary carrier-grade case, and it still does not have the downstream followthrough and role extensions that would make a direct promotion honest.
+
+This matters because there is a middle category that good supervision needs to preserve: the lawful watch. If the system only knows how to say yes or no, it will either ignore promising new evidence or promote it too early. The right move here is neither. 000738 is now a real watch. That is stronger than a guess and smaller than a promotion, which is exactly the size the label should be.
+
+## JOURNAL-0430 Leadership Without Backing Is Still Incomplete
+
+Date: 2026-04-05
+
+The 000738 extension pass clarifies something important about second-carrier search. A symbol can clearly earn its place as a watch through repeated local leadership and meaningful post-lockout strength, and still remain incomplete in exactly the way that matters most for promotion. That is what happened here. 000738 now has explicit local rebound leadership and a nontrivial followthrough path, but it still has no retained event-attention seed of its own. Its continuation also gives back too much to deserve a persistent label. So the stack improves without crossing the line.
+
+This matters because it prevents a very common mistake: treating repeated leadership days as if they automatically imply causal backing. They do not. In a weak board, local leadership can still emerge without the same kind of event-legitimized role that the primary carrier case owns. The correct next step is therefore not to argue harder that 000738 looks strong enough, but to ask the narrower question the new audit exposes: where is its retained event backing, if it exists at all?
+
+## JOURNAL-0431 Cross-Theme Strength Is Still Contamination If The Board-Specific Causal Line Is Missing
+
+Date: 2026-04-05
+
+The new 000738 pass matters because it shows how easy it is to misread a genuinely strong symbol when the label stack is still board-specific. 000738 did not need to become weak for the audit to downshift it. It stayed strong enough to deserve attention, but the surrounding evidence shifted the interpretation. Its broader metadata reads like a defense-aerospace multi-day reinforcement name, and the natural gas-turbine comparators the user raised are not even present in the current local commercial-aerospace surface. That is enough to break the clean same-theme story without denying the price strength itself.
+
+## JOURNAL-0432 Local Heat Clarity Is Useful Even Before Real Heat Evidence Exists
+
+Date: 2026-04-05
+
+The new local heat-proxy layer is useful because it improves language without pretending to solve evidence scarcity. That matters. A stack that only knows “anchor” and “not anchor” will flatten too many different symbol behaviors into one bucket. Here the local evidence can already say something finer: 航天发展 is still the only explicit heat anchor seed because that status comes from named turning-point heat, not just from price strength; 再升科技 is the strongest soft heat-carrier proxy because it combines retained event backing, the strongest turnover concentration, and persistent symbol-level followthrough; 神剑股份、天银机电、西测测试 each still carry visible heat, but in different non-anchor ways.
+
+This matters because role clarity is not the same thing as promotion authority. The stack should absolutely become more articulate about local heat roles if the evidence supports it. But the absence of a second hard counterpanel has not changed. So the correct lesson is not “we finally have true selection.” The correct lesson is smaller and more honest: local heat proxies can improve the map of who is drawing attention, carrying attention, or merely traveling with attention, while still leaving hard promotion closed.
+
+This matters because the right lesson is not simply “ignore cross-theme names.” The real lesson is that future labeling needs an extra hygiene layer. If a symbol can plausibly be lifted by another business line or another concept stack, the system needs a concept-purity and basic-business reference check before it promotes that symbol into board-specific carrier evidence. Otherwise the stack will confuse cross-theme strength for board-native strength and teach the wrong causal story.
+
+## JOURNAL-0433 The Missing Piece Is Not Another Strong Symbol But Another Hard Source
+
+Date: 2026-04-05
+
+The new source-hardness pass clarifies why the current stack still cannot thicken the hard counterpanel even after several rounds of local role work. The obstacle is not that the candidates fail to look strong enough. The obstacle is that almost none of them are backed by the kind of source that made ���췢չ lawful as a hard anchor-decoy case. �����Ƽ� and ������� both have retained event support, but those sources are continuation-oriented supply-chain validation, not symbol-named heat-axis evidence. �������� has a theme-heat source, but it was explicitly discarded as non-decisive. �񽣹ɷ� does not even have a retained event source.
+
+This matters because it changes what ��more evidence�� should mean. The stack does not need more price narratives for the same names. It needs a second anchor-grade source, meaning a real decisive, retained, symbol-relevant heat event of the same order as the ���췢չ turning-point case. Until that exists, the right move is to keep role language rich but promotion closed.
+
+## JOURNAL-0434 The Event Inventory Itself Can Be The Bottleneck
+
+Date: 2026-04-05
+
+The new symbol-named heat-source search matters because it removes one more place to hide. It is easy to keep saying that the stack needs more evidence in the abstract. It is harder and more useful to ask whether the current local event inventory even contains the kind of evidence being requested. Here the answer is no. There is only one retained symbol-named hard heat source in the local commercial-aerospace registry, and it is still the ���췢չ turning-point case. The other theme-heat rows are either explicitly discarded or only exist as unresolved forward anchors.
+
+This matters because it means the current stopline is not just about candidate promotion discipline. It is also about event inventory limits. The stack cannot manufacture a second hard counterpanel if the underlying retained event inventory does not provide a second hard source. That is a cleaner stopping rule than endlessly reconsidering the same symbols.
+
+## JOURNAL-0435 A Local Route Can Be Complete Even If Promotion Never Opens
+
+Date: 2026-04-05
+
+The new completion and handoff passes matter because they separate two ideas that are easy to confuse. A branch can become locally complete at the supervision layer without ever opening promotion. That is exactly what happened here. The board-local event-attention-capital route now owns a real negative-environment registry, an event-attention registry, role separation, heat-proxy clarification, followthrough, board-event alignment, and a fully explicit explanation for why capital_true_selection remains blocked. Nothing about that says the branch failed. It says the branch reached an honest boundary.
+
+This matters because good research discipline is not just about finding new things. It is also about knowing when a local inventory has taught everything it can teach. Once that point arrives, continuing to retune the same five names and the same local event rows is no longer depth. It is drift. The right move is to freeze the local stack, preserve its language, and wait for a new evidence source rather than pretending the current one still contains hidden promotion authority.
+
+## JOURNAL-0436 A Frozen Local Route Can Still Be A Strong Input To A Larger Frontier
+
+Date: 2026-04-05
+
+The new broader-attention opening matters because it preserves sequence discipline. Once the board-local route is frozen, the next honest move is not to pretend it can still generate new hard evidence from the same inventory. The next honest move is to treat that local route as a read-only input and open a larger evidence frontier around it. That is what the new protocol does. It does not claim that broader attention evidence already exists in hand. It only makes room for it without corrupting the local route that has already reached its stopline.
+
+This matters because many research stacks drift precisely at this transition. They either keep squeezing the exhausted local inventory, or they silently smuggle a broader universe into the old labels and pretend continuity. The cleaner move is explicit frontier management: freeze the local branch, name the broader-evidence frontier, keep execution blocked, and only let promotion reopen when genuinely new evidence arrives.
+
+## JOURNAL-0437 Inventory Before Expansion Prevents Another Fake Frontier
+
+The broader_attention_evidence frontier is no longer empty protocol. It now has three concrete local source surfaces: market snapshots, theme snapshots, and retained decisive-event registry. This matters because the next step can be source-driven instead of story-driven. The right discipline is still to keep capital_true_selection blocked while the frontier is only being populated. Inventory is not promotion.
+
+## JOURNAL-0438 A New Frontier Can Open Before Most Sources Are Actually Same-Plane Ready
+
+The broader_attention_evidence frontier did gain real inventory, but applicability is asymmetric. The 2024 snapshot surfaces are useful priors, not live evidence for the 2026 commercial-aerospace route. The decisive-event registry is currently the only same-plane source that can be promoted without cheating. That is not a failure of the frontier; it is the first honest map of what the frontier can really use.
+
+## JOURNAL-0439 A Good Registry Is More Useful After It Is Split By Expansion Role
+
+The decisive-event registry became much more usable once it was split into utility classes. A single retained registry can support several different next steps, but those next steps should not be mixed. The first same-plane branch is broader symbol-pool expansion, not heat-axis thickening and not carrier-follow promotion. The utility split prevents another fake leap toward true selection.
+
+## JOURNAL-0440 A Live Branch Can Still Be Blocked One Step Later By Materialization
+
+The first same-plane branch did open, and the registry really does contain broader symbol-pool cues. But those cues remain trapped in source notes and extracted counts because the local security-master coverage is too thin to normalize them. This is an honest blocker, not a modeling failure. It also means the next useful move may be parallel rather than sequential: heat-axis and counterpanel expansion can proceed while symbol-pool materialization waits for better name-to-symbol coverage.
+
+## JOURNAL-0441 A Parallel Branch Can Be Real Without Being Strong Enough To Change The Stopline
+
+The heat-axis branch is now explicit and lawful, but it does not yet move the counterpanel stopline. One realized turning-point heat source plus one forward sentiment anchor is enough to formalize the branch and to reinforce the existing singleton hard case. It is not enough to claim that the counterpanel is materially thicker. This is useful progress, just not promotive progress.
+
+## JOURNAL-0442 A Branch Can Add Signal By Reinforcing Known Cases Before It Ever Produces A New Winner
+
+The carrier-follow branch turned out to be useful even without discovering a new promotable symbol. It strengthened the reading on �����Ƽ� and ������� and cleanly separated an outside-named supply-chain watch from the current local surface. That kind of reinforcement matters because it clarifies what the branch is good for and what it still cannot do. It still cannot open true selection.
+
+## JOURNAL-0443 A Frontier Can Be Alive Long Before It Becomes Promotive
+
+The broader-attention frontier is no longer hypothetical. It has inventory, applicability rules, and three formalized same-plane branches. But none of those branches is promotive yet. This is not stagnation. It is a better map. The right training discipline here is to keep the frontier alive without confusing reinforcement, structural priors, and blocked materialization with real promotive evidence.
+JOURNAL-0444 | information-center-blueprint | Formalized the next foundational program as an A-share unified information center rather than another strategy branch. The current repo has meaningful identity, market, event, supervision, and governance fragments, but they are not yet unified into a point-in-time legal object system.
+JOURNAL-0445 | storage-lifecycle | Added explicit hot/warm/cold/frozen/disposable storage policy. Key principle: keep structured truth layers and journals; compact or evict rebuildable intermediates and low-tier raw text before the workspace turns into a permanent cache swamp.
+JOURNAL-0446 | info-center-identity | Identity moved from scaffold to usable foundation. The repo now has a canonical 82-symbol security master plus alias surface, explicit source-priority rules, and a first reusable name-to-symbol basis for later taxonomy and event layers.
+JOURNAL-0447 | info-center-taxonomy | Taxonomy is now operationally complete enough to support downstream work. Concept and sector surfaces are partial but real; business-reference and concept-purity are honest backlog layers, not fake completed layers.
+JOURNAL-0448 | info-center-events | Events moved from scattered board registries into a unified bootstrap object chain. The chain is still registry-derived, but it is now a reusable intake layer rather than a collection of isolated research CSVs.
+JOURNAL-0449 | info-center-quality | Quality is no longer implicit. The repo now has explicit bootstrap source tiers, event-quality bands, repost-control rows, and contradiction backlog queues that downstream layers can consume instead of reinventing confidence heuristics row by row.
+JOURNAL-0450 | info-center-attention | Attention moved into the center as a bootstrap registry rather than a collection of board-specific anecdotes. That is enough to support later serving and labels, but not enough to claim broad heat-source diversity.
+JOURNAL-0451 | info-center-labels-features | Labels and features now form a true semantic middle layer. This matters because later PTI, replay, and serving steps can consume standard semantic objects instead of strategy-local ad hoc fields.
+JOURNAL-0452 | info-center-pti | PTI proved why time legality needs its own workstream. Some events had no lawful visible timestamp, and the correct move was to keep them in visibility backlog rather than assign fake times. That establishes the culture the center needs later.
+JOURNAL-0453 | info-center-market | Market V1 had to be storage-aware to stay honest. The center now knows what daily and intraday raw coverage exists without pretending it has already expanded every minute file into normalized symbol tables.
+JOURNAL-0454 | info-center-replay | Replay is now real enough to be useful, but only as a read-only shadow surface. Binding PTI to market coverage immediately exposed where context is missing, which is exactly the point of replay at this stage.
+JOURNAL-0455 | info-center-serving | Serving is no longer hypothetical. Research and shadow consumers now have explicit registries and routes, while live-like stays deferred. This keeps consumption disciplined and prevents accidental promotion.
+JOURNAL-0456 | info-center-governance | Governance matters because once the center spans 13 workstreams, implied control is no longer enough. Schema, dataset, heartbeat, and gate registries now make the center inspectable rather than merely buildable.
+JOURNAL-0457 | info-center-automation | Automation was intentionally materialized as job contracts instead of prematurely active jobs. That is the right order: contract first, activation later, once real sources and retention rules are ready to run safely.
+JOURNAL-0458 | info-center-completion | The information center is now complete at the foundation level. The next phase should not be more blind construction. It should be explicit backlog closure, source activation, business-reference filling, concept-purity work, board-state derivation, and later live-like opening.
+JOURNAL-0459 | info-center-business-purity | Business reference and concept purity no longer need to start from zero. The center now has a first structural answer to what a company mainly is and how mixed its concept exposure is, even before external fundamentals are layered in.
+JOURNAL-0460 | info-center-contradiction-resolution | Contradiction handling improved once duplication was separated from true semantic conflict. Most current cases are merge-like duplicates rather than meaning conflicts, which means future review effort can focus on genuinely divergent evidence instead of bootstrap noise.

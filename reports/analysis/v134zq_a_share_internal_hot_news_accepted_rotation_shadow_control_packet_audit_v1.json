@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "current_top_opportunity_theme": "gold",
+    "shadow_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "shadow_top_watch_symbol": "600887",
+    "shadow_rotation_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_shadow_control_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "current_top_opportunity_theme",
+      "value": "gold"
+    },
+    {
+      "component": "shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "shadow_top_opportunity_theme",
+      "value": "consumer_staples"
+    },
+    {
+      "component": "shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "current_top_watch_symbol",
+      "value": "601899"
+    },
+    {
+      "component": "shadow_control_packet",
+      "component_state": "materialized",
+      "metric": "shadow_top_watch_symbol",
+      "value": "600887"
+    }
+  ],
+  "interpretation": [
+    "This packet lifts the accepted post-rotation focus into a control-packet view while keeping the current primary control packet unchanged.",
+    "It shows how top-level control consumers would see the accepted state in shadow form."
+  ]
+}

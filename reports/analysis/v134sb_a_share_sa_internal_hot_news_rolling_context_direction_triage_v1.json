@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "context_row_count": 3,
+    "important_impact_row_count": 2,
+    "active_impact_count": 2,
+    "accelerating_context_count": 0,
+    "cooling_context_count": 2,
+    "authoritative_status": "continue_serving_trading_with_rolling_context_and_important_impact_memory"
+  },
+  "triage_rows": [
+    {
+      "component": "rolling_context_delivery",
+      "direction": "use_the_rolling_context_surface_for_theme_or_market-level_state_inference_with_recent_message_density_recency-weighted_signal_velocity_and_cooling_states"
+    },
+    {
+      "component": "important_memory_delivery",
+      "direction": "use_the_important_impact_window_surface_for_short-horizon_memory_of_high-impact_events"
+    },
+    {
+      "component": "consumer_behavior",
+      "direction": "combine_single-message_ingress_with_context_and_impact_memory_instead_of_overweighting_any_single_row"
+    }
+  ],
+  "interpretation": [
+    "The consumer can now look at both the latest message and the rolling context around it.",
+    "The next refinement should tune aggregation windows, velocity thresholds, and grouping quality rather than create more parallel consumer tables."
+  ]
+}

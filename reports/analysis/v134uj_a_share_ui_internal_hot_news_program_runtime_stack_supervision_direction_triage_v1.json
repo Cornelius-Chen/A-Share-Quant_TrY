@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "contract_row_count": 1,
+    "supervision_loop_mode": "steady_supervision_loop",
+    "contract_action": "keep_steady_supervision",
+    "sleep_strategy_seconds": "300",
+    "backoff_mode": "steady_supervision_interval",
+    "authoritative_status": "continue_serving_runtime-stack_supervision_contract_as_the_topmost_supervising_instruction_row"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_supervision_branch",
+      "direction": "keep_the_topmost supervising process on a steady supervision cadence when contract_action remains keep_steady_supervision"
+    },
+    {
+      "component": "tight_supervision_branch",
+      "direction": "tighten_the_topmost supervising cadence when contract_action rotates into tighten_supervision_loop or elevate_supervision_only"
+    },
+    {
+      "component": "interrupt_supervision_branch",
+      "direction": "interrupt_and reopen the requested target immediately when contract_action rotates into interrupt_supervision_loop_and_reopen_target"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost instruction row for the internal hot-news runtime stack.",
+    "A supervising process can stop here and run the next cycle directly from the contract unless it needs deeper diagnostics."
+  ]
+}

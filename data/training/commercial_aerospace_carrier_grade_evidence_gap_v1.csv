@@ -1,0 +1,5 @@
+﻿gap_name,status,evidence,required_minimum,reading
+second_event_backed_carrier_case_missing,active_gap,1,2,"only one event-backed carrier-grade soft case exists, so there is no second case to compare against before promoting true selection"
+anchor_decoy_counterpanel_too_thin,active_gap,1,2,"the role layer currently has only one hard anchor/decoy case, so divergence patterns are still under-specified"
+carrier_followthrough_not_yet_labeled,active_gap,unlabeled,first_followthrough_registry,"the current role layer separates carrier/follow/concentration, but it has not yet built a dedicated followthrough label surface"
+board_event_alignment_not_yet_explicit,active_gap,partial,event_to_board_alignment_panel,"event trigger validity exists, but the degree of board-level alignment after event visibility is not yet scored as its own supervision object"

@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "surface_row_count": 1936,
+    "residual_count": 3,
+    "authoritative_status": "limit_halt_surface_complete_enough_to_freeze_as_bootstrap"
+  },
+  "triage_rows": [
+    {
+      "component": "limit_halt_surface",
+      "direction": "freeze_as_current_market_constraint_surface"
+    },
+    {
+      "component": "residual_backlog",
+      "direction": "retain_for_future_exchange_precision_and_intraday_limit_state_enrichment"
+    }
+  ],
+  "interpretation": [
+    "Limit and halt information is now explicit in the information center instead of being a missing market side table.",
+    "Future enrichment should improve precision and intraday state, not rebuild the surface from zero."
+  ]
+}

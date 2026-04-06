@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "row_count": 5,
+    "covered_window_count": 1,
+    "not_tradable_count": 1,
+    "watch_only_count": 4,
+    "bridge_sample_ready_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_009",
+      "representative_symbol_count": "5",
+      "target_mapping_failure_count": "1",
+      "formal_partial_bridge_count": "1",
+      "outlier_count": "3",
+      "bridge_sample_state": "cross_narrative_bridge_present_but_mapping_misaligned",
+      "final_training_admission": "bridge_sample_ready_but_not_final_training",
+      "strict_supervisor_conclusion": "Window 009 is a usable bridge sample: the cross-narrative trigger was real and produced selective A-share responses, but the original mapping target failed and the strongest movers were mostly outliers. It should teach bridge imagination versus true mapping confirmation, not durable main-leg persistence."
+    }
+  ],
+  "interpretation": [
+    "Window 009 is now pinned as a cross-narrative bridge sample rather than a broad board ignition sample.",
+    "The key negative evidence is that the original mapping target weakened while outliers and concept names ran ahead.",
+    "This should teach the model not to confuse bridge imagination with clean mapping confirmation."
+  ]
+}

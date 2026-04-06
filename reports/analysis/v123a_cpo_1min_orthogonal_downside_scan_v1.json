@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123a_cpo_1min_orthogonal_downside_scan_v1",
+    "sample_count": 7700,
+    "scan_count": 3,
+    "chosen_score_name": "gap_exhaustion_stall_score",
+    "chosen_gap": 0.10445157,
+    "chosen_q75_balanced_accuracy": 0.54544126,
+    "chosen_corr_vs_downside_failure": 0.46646728,
+    "recommended_next_posture": "time_split_audit_chosen_orthogonal_1min_downside_score"
+  },
+  "candidate_rows": [
+    {
+      "score_name": "churn_rejection_score",
+      "mean_gap_positive_minus_negative": 0.05063866,
+      "q75_threshold": 0.23813343,
+      "q75_balanced_accuracy": 0.51482412,
+      "corr_vs_downside_failure": 0.61307975,
+      "orthogonal_enough": true
+    },
+    {
+      "score_name": "vwap_rejection_imbalance_score",
+      "mean_gap_positive_minus_negative": -0.02213163,
+      "q75_threshold": 0.25915512,
+      "q75_balanced_accuracy": 0.4896328,
+      "corr_vs_downside_failure": 0.48467047,
+      "orthogonal_enough": true
+    },
+    {
+      "score_name": "gap_exhaustion_stall_score",
+      "mean_gap_positive_minus_negative": 0.10445157,
+      "q75_threshold": 0.11696328,
+      "q75_balanced_accuracy": 0.54544126,
+      "corr_vs_downside_failure": 0.46646728,
+      "orthogonal_enough": true
+    }
+  ],
+  "interpretation": [
+    "V1.23A scans only low-correlation 1-minute downside candidates rather than tuning the existing downside_failure family.",
+    "The chosen score must be reasonably orthogonal to downside_failure first, then competitive on discovery gap and q75 balanced accuracy.",
+    "The next step is chronology audit on the chosen orthogonal branch."
+  ]
+}

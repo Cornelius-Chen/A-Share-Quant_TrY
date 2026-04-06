@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fi_commercial_aerospace_fh_persistent_quality_direction_triage_v1",
+    "authoritative_status": "retain_persistent_permission_quality_tiers_as_local_supervision_only",
+    "full_quality_count": 5,
+    "bridge_quality_count": 2,
+    "probe_quality_count": 3,
+    "authoritative_rule": "persistent add permission now has an internal quality ladder, but it remains a local supervision structure rather than broader permission authority"
+  },
+  "triage_rows": [
+    {
+      "component": "full_quality_persistent_permission",
+      "status": "retain_as_strongest_local_add_permission_tier",
+      "rationale": "the highest close-location persistent candidates align most closely with full-quality add behavior inside the persistent family surface"
+    },
+    {
+      "component": "bridge_quality_persistent_permission",
+      "status": "retain_as_upgrade_watch",
+      "rationale": "the bridge tier is where full-like and probe-like persistent candidates still mix, so it should remain a watch layer rather than a clean authorization"
+    },
+    {
+      "component": "probe_quality_persistent_permission",
+      "status": "retain_as_lower_acceptance_permission_tier",
+      "rationale": "the lower close-location persistent cases still continue, but they should not be overstated as full-quality add permission"
+    }
+  ],
+  "interpretation": [
+    "V1.34FI turns the first persistent-permission quality audit into a governance verdict.",
+    "The add branch now has internal quality structure inside its cleanest local family, but that structure remains supervision-only."
+  ]
+}

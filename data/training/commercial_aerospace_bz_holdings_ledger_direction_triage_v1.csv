@@ -1,0 +1,5 @@
+﻿component,status,detail
+start_of_day_holdings_ledger,ready_as_binding_input,The frozen EOD primary now has a concrete carried-inventory ledger with explicit same-day new-lot separation.
+same_day_precedence_policy,ready_as_binding_guardrail,Use the existing precedence families to prevent intraday sells from consuming same-day open/add lots or double-consuming against EOD reduce/close.
+next_real_work,build_isolated_sell_side_shadow_lane,The justified next step is now an isolated sell-side shadow lane wired to the holdings ledger and precedence policy.
+scope_guardrail,mandatory,Keep the lane sell-side only; do not pull reentry execution or full replay binding into this buildout.

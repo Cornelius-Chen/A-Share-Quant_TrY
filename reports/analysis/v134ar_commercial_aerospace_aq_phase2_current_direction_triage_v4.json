@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ar_commercial_aerospace_aq_phase2_current_direction_triage_v4",
+    "authoritative_status": "freeze_phase2_shadow_stack_v4_and_keep_all_session_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_aq_phase2_current_direction_triage_v4.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "current_phase2_wider_reference",
+      "status": "frozen",
+      "detail": "broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral"
+    },
+    {
+      "component": "local_reversal_deferral_refinement",
+      "status": "promote_local_reversal_deferral_inside_phase2_wider_reference",
+      "detail": "local_deferral_same_day_delta = 153.7228"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "The local deferral refinement does not authorize expansion beyond broader-hit sessions."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The local deferral refinement remains phase-2 shadow-only."
+    }
+  ],
+  "interpretation": [
+    "V1.34AR converts the local reversal-deferral experiment into the next phase-2 direction judgment.",
+    "The branch keeps the same blocked boundaries while allowing a tiny local point-in-time refinement inside the current wider reference."
+  ]
+}

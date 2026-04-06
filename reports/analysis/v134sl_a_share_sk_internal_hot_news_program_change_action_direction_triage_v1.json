@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "action_row_count": 1,
+    "top_risk_action": "maintain_risk_guardrail",
+    "top_opportunity_action": "maintain_top_opportunity_watch",
+    "global_program_action_mode": "dual_focus_risk_and_opportunity",
+    "authoritative_status": "continue_serving_program_change_actions_above_snapshot_change_signal"
+  },
+  "triage_rows": [
+    {
+      "component": "risk_branch",
+      "direction": "treat_top_risk_action_as_the_default_guardrail_instruction_when_risk_and_opportunity_branches_conflict"
+    },
+    {
+      "component": "opportunity_branch",
+      "direction": "treat_top_opportunity_action_as_a_watchlist_or_rerank_instruction_not_as_a_direct_trade_opening"
+    },
+    {
+      "component": "global_mode",
+      "direction": "use_global_program_action_mode_as_the_first_switch_for_risk_first_opportunity_first_or_balanced_behavior"
+    }
+  ],
+  "interpretation": [
+    "This is the first layer that explicitly tells the downstream consumer what kind of reaction is appropriate.",
+    "It remains advisory and research-shadow only; it does not open execution authority."
+  ]
+}

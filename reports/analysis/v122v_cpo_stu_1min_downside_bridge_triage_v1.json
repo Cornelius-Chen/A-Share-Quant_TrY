@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122v_cpo_stu_1min_downside_bridge_triage_v1",
+    "related_runs": [
+      "V122S",
+      "V122T",
+      "V122U"
+    ],
+    "historical_overlap_day_count": 0,
+    "base_discovery_gap": 0.08154386,
+    "stack_discovery_gap": 0.10833396,
+    "base_time_split_mean": 0.52515907,
+    "stack_time_split_mean": 0.52230714,
+    "authoritative_status": "keep_standalone_soft_component_only",
+    "replay_facing_allowed": false
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "classification": "keep_standalone_soft_component_only",
+      "hard_reasons": [
+        "historical_bridge_invalid_because_overlap_zero",
+        "same_plane_stack_not_materially_better_than_base",
+        "attachment_would_be_decoration_not_increment"
+      ]
+    },
+    {
+      "reviewer": "Tesla",
+      "classification": "keep_standalone_soft_component_only",
+      "hard_reasons": [
+        "direct_bridge_closed_by_date_gap",
+        "same_plane_stack_degrades_q75_and_time_split",
+        "retain_only_the_standalone_1min_downside_component"
+      ]
+    },
+    {
+      "reviewer": "James",
+      "classification": "keep_standalone_soft_component_only",
+      "hard_reasons": [
+        "standalone_soft_component_survives_but_attachment_does_not",
+        "stack_has_no_clear_transfer_improvement",
+        "defer_until_historical_1min_exists"
+      ]
+    }
+  ],
+  "authoritative_conclusion": {
+    "branch_name": "recent_1min_downside_soft_component_bridge",
+    "authoritative_status": "keep_standalone_soft_component_only",
+    "direct_historical_bridge_allowed": false,
+    "same_plane_attachment_allowed": false,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "majority_vote": {
+      "keep_standalone_soft_component_only": 3
+    },
+    "why_attachment_is_blocked": [
+      "historical overlap count is zero",
+      "same-plane stack improves discovery gap but worsens q75 BA and time-split mean",
+      "stack does not provide clear transfer increment over base downside failure score"
+    ],
+    "next_posture": "retain_v122r_as_standalone_1min_downside_soft_component_and_wait_for_historical_1min_or_new_recent_increment"
+  },
+  "interpretation": [
+    "V1.22V freezes the bridge decision for the recent 1-minute downside branch after overlap and same-plane stack audits.",
+    "The branch itself stays alive only as the standalone soft component already accepted in V122R.",
+    "What is blocked is not the component, but the temptation to attach it to the broader downside stack before the data actually supports that move."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125j_commercial_aerospace_event_conditioned_time_split_audit_v1",
+    "best_variant": "quality_event_gate",
+    "year_count": 3,
+    "eligibility_spread_mean": 0.17870564,
+    "eligibility_spread_min": -0.03551163,
+    "de_risk_avoidance_spread_mean": 0.00760836,
+    "de_risk_avoidance_spread_min": -0.00253385
+  },
+  "split_rows": [
+    {
+      "year": "2024",
+      "eligibility_forward_spread_10": 0.0,
+      "de_risk_watch_avoidance_spread_10": -0.00253385,
+      "eligibility_flag_count": 0,
+      "de_risk_flag_count": 892,
+      "row_count": 2676
+    },
+    {
+      "year": "2025",
+      "eligibility_forward_spread_10": 0.39292292,
+      "de_risk_watch_avoidance_spread_10": 0.00953592,
+      "eligibility_flag_count": 18,
+      "de_risk_flag_count": 792,
+      "row_count": 2916
+    },
+    {
+      "year": "2026",
+      "eligibility_forward_spread_10": -0.03551163,
+      "de_risk_watch_avoidance_spread_10": 0.015823,
+      "eligibility_flag_count": 18,
+      "de_risk_flag_count": 32,
+      "row_count": 588
+    }
+  ],
+  "interpretation": [
+    "V1.25J re-audits chronology after the event-conditioned control rebuild and keeps the winner on a year-by-year basis.",
+    "Commercial aerospace remains replay-blocked unless both eligibility and de-risk semantics stop going negative in the worst split."
+  ]
+}

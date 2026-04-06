@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "blocker_count": 7,
+    "governance_blocker_count": 2,
+    "replay_blocker_count": 2,
+    "source_blocker_count": 2,
+    "serving_blocker_count": 1,
+    "status_csv": "data\\training\\a_share_execution_binding_blocker_stack_refined_v1.csv",
+    "authoritative_output": "a_share_execution_binding_blocker_stack_refined_and_explicit"
+  },
+  "blocker_rows": [
+    {
+      "blocker_id": "execution_authority_gate_closed",
+      "blocker_layer": "governance",
+      "blocker_state": "active",
+      "blocking_reason": "information center remains research-shadow only"
+    },
+    {
+      "blocker_id": "live_like_opening_gate_closed",
+      "blocker_layer": "governance",
+      "blocker_state": "active",
+      "blocking_reason": "governance and automation bindings must exist before live_like serving opens"
+    },
+    {
+      "blocker_id": "replay_execution_binding_backlog",
+      "blocker_layer": "replay",
+      "blocker_state": "active",
+      "blocking_reason": "shadow replay is read-only and not yet linked to lawful execution journals"
+    },
+    {
+      "blocker_id": "replay_cost_model_backlog",
+      "blocker_layer": "replay",
+      "blocker_state": "active",
+      "blocking_reason": "cost model registry remains deferred until live_like serving is in place"
+    },
+    {
+      "blocker_id": "network_license_review_gate_closed",
+      "blocker_layer": "source_activation",
+      "blocker_state": "active",
+      "blocking_reason": "selective candidate hosts exist but all require manual license review before activation"
+    },
+    {
+      "blocker_id": "network_runtime_scheduler_gate_closed",
+      "blocker_layer": "source_activation",
+      "blocker_state": "active",
+      "blocking_reason": "network adapters are policy-bound but not attached to a live scheduler runtime"
+    },
+    {
+      "blocker_id": "live_like_materialized_but_blocked",
+      "blocker_layer": "serving",
+      "blocker_state": "active",
+      "blocking_reason": "materialized_live_like_view_count = 2"
+    }
+  ],
+  "interpretation": [
+    "Execution binding is now blocked by a refined cross-layer stack with the source side split into license-review and scheduler gates.",
+    "That makes the remaining infrastructure closure narrower and more actionable than the old generic network-fetch gap."
+  ]
+}

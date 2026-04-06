@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ch_commercial_aerospace_isolated_sell_side_local_binding_attribution_v1",
+    "executed_order_count": 12,
+    "best_same_day_symbol": "300342",
+    "worst_3d_rebound_symbol": "300342",
+    "positive_3d_rebound_case_count": 4,
+    "top_3d_rebound_case": "20260120 300342",
+    "attribution_csv": "data\\training\\commercial_aerospace_isolated_sell_side_local_binding_attribution_v1.csv",
+    "authoritative_output": "commercial_aerospace_isolated_sell_side_local_binding_attribution_ready_for_direction_triage"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300045",
+      "session_count": 2,
+      "same_day_protected_mark_to_close_total": 1474.5406,
+      "net_horizon_pnl_if_held_1d": -3049.0,
+      "net_horizon_pnl_if_held_3d": -5801.0,
+      "net_horizon_pnl_if_held_5d": -7493.0,
+      "positive_3d_rebound_case_count": 0
+    },
+    {
+      "symbol": "300342",
+      "session_count": 3,
+      "same_day_protected_mark_to_close_total": 9774.9552,
+      "net_horizon_pnl_if_held_1d": -18752.0,
+      "net_horizon_pnl_if_held_3d": 16162.0,
+      "net_horizon_pnl_if_held_5d": 1670.0,
+      "positive_3d_rebound_case_count": 2
+    },
+    {
+      "symbol": "601698",
+      "session_count": 2,
+      "same_day_protected_mark_to_close_total": 1220.7366,
+      "net_horizon_pnl_if_held_1d": -756.0,
+      "net_horizon_pnl_if_held_3d": -7140.0,
+      "net_horizon_pnl_if_held_5d": -4622.0,
+      "positive_3d_rebound_case_count": 0
+    },
+    {
+      "symbol": "688066",
+      "session_count": 3,
+      "same_day_protected_mark_to_close_total": 999.252,
+      "net_horizon_pnl_if_held_1d": -132.0,
+      "net_horizon_pnl_if_held_3d": -948.0,
+      "net_horizon_pnl_if_held_5d": -2366.0,
+      "positive_3d_rebound_case_count": 1
+    },
+    {
+      "symbol": "688523",
+      "session_count": 2,
+      "same_day_protected_mark_to_close_total": 1996.575,
+      "net_horizon_pnl_if_held_1d": -3915.0,
+      "net_horizon_pnl_if_held_3d": -30.0,
+      "net_horizon_pnl_if_held_5d": 930.0,
+      "positive_3d_rebound_case_count": 1
+    }
+  ],
+  "rebound_rows": [
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 6845.16,
+      "horizon_pnl_if_held_3d": 20010.0
+    },
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 1077.0,
+      "horizon_pnl_if_held_3d": 3030.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688066",
+      "predicted_tier": "severe_override_positive",
+      "same_day_protected_mark_to_close": 577.042,
+      "horizon_pnl_if_held_3d": 166.0
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 1203.6736,
+      "horizon_pnl_if_held_3d": 32.0
+    }
+  ],
+  "interpretation": [
+    "V1.34CH decomposes the first isolated sell-side binding surface into same-day protection contributors and 3-day rebound-cost residues.",
+    "The point is to identify whether the remaining medium-short caveat is broad or concentrated enough for strictly local supervision only."
+  ]
+}

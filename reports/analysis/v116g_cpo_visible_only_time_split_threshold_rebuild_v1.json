@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116g_cpo_visible_only_time_split_threshold_rebuild_v1",
+    "row_count": 9,
+    "early_count": 5,
+    "late_count": 4,
+    "recommended_next_posture": "use_time_split_rows_as_the_primary_guardrail_against_same_sample_lucky_bands"
+  },
+  "split_rows": [
+    {
+      "split_name": "early_to_late",
+      "variant_name": "all_intraday_strict_visible",
+      "calibration_count": 5,
+      "validation_count": 4,
+      "validation_hit_count": 4,
+      "validation_hit_rate": 1.0,
+      "validation_positive_expectancy_rate": 0.5,
+      "validation_avg_expectancy_proxy_3d": 0.094395,
+      "validation_avg_max_adverse_return_3d": -0.025691,
+      "pc1_q20_from_calibration": -2046054499.394389,
+      "pc2_q25_from_calibration": -812314781.751103
+    },
+    {
+      "split_name": "early_to_late",
+      "variant_name": "pc1_only_q_0p2",
+      "calibration_count": 5,
+      "validation_count": 4,
+      "validation_hit_count": 0,
+      "validation_hit_rate": 0.0,
+      "validation_positive_expectancy_rate": 0.0,
+      "validation_avg_expectancy_proxy_3d": 0.0,
+      "validation_avg_max_adverse_return_3d": 0.0,
+      "pc1_q20_from_calibration": -2046054499.394389,
+      "pc2_q25_from_calibration": -812314781.751103
+    },
+    {
+      "split_name": "early_to_late",
+      "variant_name": "pc2_only_q_0p25",
+      "calibration_count": 5,
+      "validation_count": 4,
+      "validation_hit_count": 3,
+      "validation_hit_rate": 0.75,
+      "validation_positive_expectancy_rate": 0.333333,
+      "validation_avg_expectancy_proxy_3d": 0.03956,
+      "validation_avg_max_adverse_return_3d": -0.031664,
+      "pc1_q20_from_calibration": -2046054499.394389,
+      "pc2_q25_from_calibration": -812314781.751103
+    },
+    {
+      "split_name": "early_to_late",
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "calibration_count": 5,
+      "validation_count": 4,
+      "validation_hit_count": 3,
+      "validation_hit_rate": 0.75,
+      "validation_positive_expectancy_rate": 0.333333,
+      "validation_avg_expectancy_proxy_3d": 0.03956,
+      "validation_avg_max_adverse_return_3d": -0.031664,
+      "pc1_q20_from_calibration": -2046054499.394389,
+      "pc2_q25_from_calibration": -812314781.751103
+    },
+    {
+      "split_name": "late_to_early",
+      "variant_name": "all_intraday_strict_visible",
+      "calibration_count": 4,
+      "validation_count": 5,
+      "validation_hit_count": 5,
+      "validation_hit_rate": 1.0,
+      "validation_positive_expectancy_rate": 0.6,
+      "validation_avg_expectancy_proxy_3d": 0.08557,
+      "validation_avg_max_adverse_return_3d": -0.039298,
+      "pc1_q20_from_calibration": -1464091258.833735,
+      "pc2_q25_from_calibration": -1103413538.005635
+    },
+    {
+      "split_name": "late_to_early",
+      "variant_name": "pc1_only_q_0p2",
+      "calibration_count": 4,
+      "validation_count": 5,
+      "validation_hit_count": 3,
+      "validation_hit_rate": 0.6,
+      "validation_positive_expectancy_rate": 0.333333,
+      "validation_avg_expectancy_proxy_3d": 0.069442,
+      "validation_avg_max_adverse_return_3d": -0.033087,
+      "pc1_q20_from_calibration": -1464091258.833735,
+      "pc2_q25_from_calibration": -1103413538.005635
+    },
+    {
+      "split_name": "late_to_early",
+      "variant_name": "pc2_only_q_0p25",
+      "calibration_count": 4,
+      "validation_count": 5,
+      "validation_hit_count": 1,
+      "validation_hit_rate": 0.2,
+      "validation_positive_expectancy_rate": 1.0,
+      "validation_avg_expectancy_proxy_3d": 0.023265,
+      "validation_avg_max_adverse_return_3d": -0.022449,
+      "pc1_q20_from_calibration": -1464091258.833735,
+      "pc2_q25_from_calibration": -1103413538.005635
+    },
+    {
+      "split_name": "late_to_early",
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "calibration_count": 4,
+      "validation_count": 5,
+      "validation_hit_count": 4,
+      "validation_hit_rate": 0.8,
+      "validation_positive_expectancy_rate": 0.5,
+      "validation_avg_expectancy_proxy_3d": 0.057898,
+      "validation_avg_max_adverse_return_3d": -0.030428,
+      "pc1_q20_from_calibration": -1464091258.833735,
+      "pc2_q25_from_calibration": -1103413538.005635
+    }
+  ],
+  "interpretation": [
+    "V1.16G rebuilds visible-only thresholds on one time slice and audits them on the other slice, rather than cutting quantiles and judging them on the same nine windows.",
+    "This is a direct response to the main methodological objection raised in the first visible-only adversarial review.",
+    "The report is audit-only and should be used to demote same-sample lucky bands before any further replay expansion."
+  ]
+}

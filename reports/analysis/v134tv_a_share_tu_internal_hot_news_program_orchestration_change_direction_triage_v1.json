@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "orchestration_mode_change": "stable",
+    "scheduler_loop_signal_mode_change": "stable",
+    "runtime_consumer_mode_change": "stable",
+    "sleep_strategy_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_orchestration-packet_change_signal_above_the_orchestration-packet"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_orchestration_branch",
+      "direction": "keep_the_outer orchestrator on the existing supervision plan when the orchestration-packet change signal remains stable"
+    },
+    {
+      "component": "mode_rotation_branch",
+      "direction": "reconfigure_outer orchestration immediately when orchestration_mode_change or scheduler_loop_signal_mode_change flips state"
+    },
+    {
+      "component": "cadence_rotation_branch",
+      "direction": "update_outer supervision cadence when runtime_consumer_mode_change or sleep_strategy_change flips state"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost change detector for the orchestration-facing packet.",
+    "An orchestrator can watch it to know whether orchestration behavior really changed without rereading the packet every cycle."
+  ]
+}

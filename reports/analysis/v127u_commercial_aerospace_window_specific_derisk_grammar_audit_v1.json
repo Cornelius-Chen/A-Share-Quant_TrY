@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127u_commercial_aerospace_window_specific_derisk_grammar_audit_v1",
+    "reference_variant": "veto_drag_trio_impulse_only",
+    "reference_final_equity": 1276010.378,
+    "reference_max_drawdown": 0.11536441,
+    "best_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "best_variant_final_equity": 1298439.6031,
+    "best_variant_max_drawdown": 0.09889703,
+    "best_cleaner_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "best_cleaner_final_equity": 1298439.6031,
+    "best_cleaner_max_drawdown": 0.09889703
+  },
+  "variant_rows": [
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "final_equity": 1276010.378,
+      "max_drawdown": 0.11536441,
+      "executed_order_count": 241
+    },
+    {
+      "variant": "window_riskoff_full",
+      "final_equity": 1273796.1865,
+      "max_drawdown": 0.11691373,
+      "executed_order_count": 237
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075",
+      "final_equity": 1279952.6558,
+      "max_drawdown": 0.11196447,
+      "executed_order_count": 235
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "final_equity": 1298439.6031,
+      "max_drawdown": 0.09889703,
+      "executed_order_count": 236
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_full_impulse_half",
+      "final_equity": 1288137.5349,
+      "max_drawdown": 0.10535264,
+      "executed_order_count": 224
+    }
+  ],
+  "interpretation": [
+    "V1.27U tests window-specific de-risk grammar only inside the largest drawdown window 20260112->20260212.",
+    "The branch does not open a new family; it only changes how aggressively risk-off, weak-drift, and impulse de-risk targets are sold in that window."
+  ]
+}

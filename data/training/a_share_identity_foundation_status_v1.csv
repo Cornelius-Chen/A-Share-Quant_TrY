@@ -1,0 +1,5 @@
+﻿identity_component,component_state,artifact_path,coverage_note
+security_master,materialized_foundation,data\reference\info_center\identity\a_share_security_master_v1.csv,materialized_symbol_count = 82
+entity_alias_map,materialized_foundation,data\reference\info_center\identity\a_share_entity_alias_map_v1.csv,materialized_alias_count = 164
+name_to_symbol_resolution,seed_ready_from_alias_map,data\reference\info_center\identity\a_share_entity_alias_map_v1.csv,multi_source_symbol_count = 40
+identity_source_priority_manifest,explicit_priority_rules_present,data/reference/info_center/identity/a_share_identity_foundation_manifest_v1.json,input_source_file_count = 12

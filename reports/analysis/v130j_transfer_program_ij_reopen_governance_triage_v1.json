@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130j_transfer_program_ij_reopen_governance_triage_v1",
+    "reopen_ready_count": 0,
+    "authoritative_status": "freeze_transfer_program_but_keep_explicit_reopen_governance",
+    "authoritative_rule": "do_not_restart_board_transfer_without_a_candidate_that_clears_all_reopen_triggers"
+  },
+  "direction_rows": [
+    {
+      "direction": "transfer_program_state",
+      "status": "freeze_with_watchlist",
+      "reason": "The queue should stay frozen, but now under an explicit reopen protocol rather than an open-ended pause."
+    },
+    {
+      "direction": "new_board_worker",
+      "status": "blocked_until_reopen_ready",
+      "reason": "No candidate currently clears all three reopen triggers."
+    },
+    {
+      "direction": "watchlist_monitoring",
+      "status": "retain",
+      "reason": "The watchlist preserves operational readiness and makes the next reopen auditable instead of discretionary."
+    }
+  ],
+  "interpretation": [
+    "V1.30J turns the transfer freeze into governance rather than drift.",
+    "The research program can now stay paused without losing rigor or visibility into what would legitimately reopen it."
+  ]
+}

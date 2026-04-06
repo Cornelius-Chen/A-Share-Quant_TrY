@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126u_commercial_aerospace_stu_preheat_tier_triage_v1",
+    "matured_preheat_full_on_20251224": 18,
+    "reference_v126o_final_equity": 1227143.0725,
+    "reference_v126o_max_drawdown": 0.14258108,
+    "cleaner_v126q_final_equity": 1189482.711,
+    "cleaner_v126q_max_drawdown": 0.13356069,
+    "preheat_tier_v126t_final_equity": 1252613.5553,
+    "preheat_tier_v126t_max_drawdown": 0.2568782,
+    "preheat_tier_v126t_executed_order_count": 291,
+    "beats_v126o_on_both_axes": false,
+    "beats_v126q_on_both_axes": false,
+    "authoritative_status": "keep_existing_shadow_references_and_block_preheat_tier_promotion"
+  },
+  "interpretation": [
+    "V1.26U only promotes preheat-tier replay if lawful preheat full-support translates into replay economics that at least beat the cleaner V1.26Q reference on both return and drawdown.",
+    "This prevents us from calling every earlier-entry variant progress just because it participates sooner."
+  ]
+}

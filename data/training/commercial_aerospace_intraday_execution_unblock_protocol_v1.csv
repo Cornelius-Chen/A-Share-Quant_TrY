@@ -1,0 +1,5 @@
+﻿requirement,status,current_state,unlock_condition
+point_in_time_intraday_visibility,blocked,"governance_only_minute_labels_and_day-level event framing exist, but no point-in-time intraday visibility chain exists",a lawful intraday feature surface exists where minute-state and event-state are both timestamp-visible before action time
+intraday_execution_simulation_surface,blocked,no intraday fill model or minute-level action simulator is attached to the governance package,"a reproducible minute-level execution simulator exists with explicit fill timing, slippage, and cost assumptions"
+replay_binding_surface,blocked,the lawful EOD replay remains authoritative and isolated from the minute governance branch,a separate lawful intraday replay lane exists so the minute branch can be tested without contaminating the frozen EOD primary
+commercial_aerospace_minute_package,ready,commercial_aerospace_intraday_governance_package_frozen_for_transfer_or_future_lawful_intraday_design,already satisfied as the supervision/governance input for future intraday work

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gi_commercial_aerospace_gh_slot_capacity_direction_triage_v1",
+    "authoritative_status": "retain_slot_capacity_as_exclusion_first_local_hierarchy_and_keep_add_execution_blocked",
+    "active_wave_day_count": 2,
+    "zero_slot_veto_day_count": 1,
+    "tiered_dual_slot_day_count": 1,
+    "single_slot_unobserved_day_count": 0,
+    "authoritative_rule": "current add slot capacity is best treated as an exclusion-first local hierarchy, not as a general allocation module"
+  },
+  "triage_rows": [
+    {
+      "component": "zero_slot_veto",
+      "status": "retain",
+      "rationale": "same-wave exclusion already cleanly explains why some active-wave days should still resolve into no add slot at all"
+    },
+    {
+      "component": "tiered_dual_slot",
+      "status": "retain_as_local",
+      "rationale": "the observed dual-slot day remains useful as a local supervision archetype, but it is still too narrow to promote"
+    },
+    {
+      "component": "single_slot_fallback",
+      "status": "still_unobserved",
+      "rationale": "the current strict active-wave sample has not yet produced a promotable single-slot fallback day"
+    },
+    {
+      "component": "execution_allocation_rule",
+      "status": "still_blocked",
+      "rationale": "slot capacity remains a local hierarchy rather than a portable execution sizing module"
+    }
+  ],
+  "interpretation": [
+    "V1.34GI turns the slot-capacity hierarchy audit into the current governance verdict.",
+    "The add branch should keep zero-slot veto and tiered dual-slot as local supervision states, while leaving single-slot fallback and execution allocation blocked."
+  ]
+}

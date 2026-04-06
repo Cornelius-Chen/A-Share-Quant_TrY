@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "raw_file_count": 11,
+    "beyond_2024_source_count": 1,
+    "max_raw_coverage_end": "2026-04-03",
+    "shadow_horizon_start": "2023-09-22",
+    "shadow_horizon_end": "2026-03-28",
+    "status_csv": "data\\training\\a_share_index_daily_source_horizon_gap_status_v1.csv",
+    "authoritative_output": "a_share_index_daily_source_horizon_gap_explicit"
+  },
+  "rows": [
+    {
+      "raw_file": "akshare_index_daily_bars_bootstrap.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v0.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v1.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v2_refresh.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v2_seed.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v3_factor_diversity_seed.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v4_carry_row_diversity_refresh.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v5_carry_row_diversity_refresh.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_market_research_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "akshare_index_daily_bars_research_v1.csv",
+      "raw_row_count": 726,
+      "raw_coverage_start": "2024-01-02",
+      "raw_coverage_end": "2024-12-31",
+      "extends_beyond_2024": false
+    },
+    {
+      "raw_file": "tushare_index_daily_bars_extension_v1.csv",
+      "raw_row_count": 1872,
+      "raw_coverage_start": "2023-09-01",
+      "raw_coverage_end": "2026-04-03",
+      "extends_beyond_2024": true
+    }
+  ],
+  "interpretation": [
+    "At least one retained raw index file now extends beyond 2024, so the old true source-horizon gap has been materially reduced.",
+    "The next replay-side question is downstream materialization and paired-surface re-audit rather than raw-source absence."
+  ]
+}

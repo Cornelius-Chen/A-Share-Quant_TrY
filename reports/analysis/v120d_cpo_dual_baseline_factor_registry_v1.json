@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120d_cpo_dual_baseline_factor_registry_v1",
+    "board_name": "CPO",
+    "authoritative_baseline_count": 1,
+    "research_test_baseline_component_count": 5,
+    "candidate_only_count": 3,
+    "soft_expectancy_component_count": 1,
+    "authoritative_replay_stays_single": true,
+    "research_test_baseline_replay_facing_disabled": true,
+    "recommended_next_posture": "retain_non_dead_branches_inside_research_test_baseline_without_pretending_they_are_mainline_rules"
+  },
+  "baseline_rows": [
+    {
+      "baseline_name": "authoritative_baseline",
+      "component_name": "repaired_cpo_execution_baseline",
+      "component_class": "hard_mainline",
+      "status": "active",
+      "usage_mode": "full_board_replay_and_primary_performance_reference",
+      "replay_facing_allowed": true,
+      "shadow_replay_allowed": true,
+      "mainline_allowed": true,
+      "source_report": "v114t_cpo_replay_integrity_repair_v1.json",
+      "key_reading": "唯一 authoritative CPO 全板块真实口径回测主线。"
+    },
+    {
+      "baseline_name": "research_test_baseline",
+      "component_name": "cooling_reacceleration_branch",
+      "component_class": "candidate_only",
+      "status": "retain_candidate_only_continue_without_shadow_replay",
+      "usage_mode": "soft_candidate_gate_or_shadow_add_research_only",
+      "replay_facing_allowed": false,
+      "shadow_replay_allowed": false,
+      "mainline_allowed": false,
+      "source_report": "v117z_cpo_wxy_three_run_adversarial_triage_v1.json",
+      "key_reading": "保留候选，不准直接进主线或 replay-facing 扩张。"
+    },
+    {
+      "baseline_name": "research_test_baseline",
+      "component_name": "sustained_participation_non_chase_score_candidate",
+      "component_class": "candidate_only",
+      "status": "candidate_only",
+      "usage_mode": "soft_candidate_gate_or_shadow_add_research_only",
+      "replay_facing_allowed": false,
+      "shadow_replay_allowed": false,
+      "mainline_allowed": false,
+      "source_report": "v118w_cpo_tuv_three_run_adversarial_triage_v1.json",
+      "key_reading": "仍有信号，但时间切分不稳，只能研究保留。"
+    },
+    {
+      "baseline_name": "research_test_baseline",
+      "component_name": "participation_turnover_elg_support_score_candidate",
+      "component_class": "candidate_only",
+      "status": "candidate_only",
+      "usage_mode": "soft_candidate_gate_or_shadow_add_research_only",
+      "replay_facing_allowed": false,
+      "shadow_replay_allowed": false,
+      "mainline_allowed": false,
+      "source_report": "v119s_cpo_pqr_three_run_adversarial_triage_v1.json",
+      "key_reading": "接近 hard candidate，但卡在 symbol/role entanglement 和 close leakage。"
+    },
+    {
+      "baseline_name": "research_test_baseline",
+      "component_name": "cooled_q_0p25",
+      "component_class": "narrow_candidate_reference",
+      "status": "quality_side_cooled_candidate_only",
+      "usage_mode": "quality_side_reference_only",
+      "replay_facing_allowed": false,
+      "shadow_replay_allowed": false,
+      "mainline_allowed": false,
+      "source_report": "v117a_cpo_quality_side_cooled_retention_v1.json",
+      "key_reading": "窄参考线，当前主要是 PC1 驱动。"
+    },
+    {
+      "baseline_name": "research_test_baseline",
+      "component_name": "breakout_damage_soft_component",
+      "component_class": "soft_expectancy_component",
+      "status": "archived_soft_component",
+      "usage_mode": "soft_penalty_or_correction_reference_only",
+      "replay_facing_allowed": false,
+      "shadow_replay_allowed": false,
+      "mainline_allowed": false,
+      "source_report": "v118n_cpo_klm_soft_component_triage_v1.json",
+      "key_reading": "允许保留为高期望软组件，不再争硬规则地位。"
+    }
+  ],
+  "interpretation": [
+    "Not-hard-enough branches should not be thrown away automatically; they should be retained in a research test baseline when expectancy value still exists.",
+    "The authoritative baseline remains singular so performance reporting stays honest and comparable.",
+    "The research test baseline is a retention layer, not a license to smuggle candidate-only branches into replay-facing production logic."
+  ]
+}

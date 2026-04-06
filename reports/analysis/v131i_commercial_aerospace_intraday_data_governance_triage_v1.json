@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131i_commercial_aerospace_intraday_data_governance_triage_v1",
+    "authoritative_status": "keep_intraday_override_governance_bundle_but_block_intraday_modeling_until_minute_data_arrives",
+    "missing_required_symbol_count": 4,
+    "missing_required_symbols": [
+      "000738",
+      "300045",
+      "300342",
+      "601698"
+    ],
+    "manifest_row_count": 4,
+    "authoritative_rule": "preserve the intraday supervision bundle and collection manifest, but do not start intraday modeling before local minute support closes the required-symbol gap"
+  },
+  "triage_rows": [
+    {
+      "component": "commercial_aerospace_intraday_override_modeling",
+      "status": "blocked_for_now",
+      "rationale": "minute-level prototype should not start until required failure-seed symbols have local minute-bar support"
+    },
+    {
+      "component": "collection_priority",
+      "status": "retained_manifest",
+      "rationale": "collect retained override positives first, then reversal watches, using the exact execution-session windows in the manifest"
+    },
+    {
+      "component": "current_eod_primary",
+      "status": "keep_frozen",
+      "rationale": "the intraday governance branch is additive supervision work and must not reopen lawful EOD replay tuning"
+    }
+  ],
+  "interpretation": [
+    "V1.31I closes the loop between the supervision bundle and the data layer.",
+    "It answers the practical next-step question: can intraday modeling start now, or should the work remain frozen behind a minute-data gap?"
+  ]
+}

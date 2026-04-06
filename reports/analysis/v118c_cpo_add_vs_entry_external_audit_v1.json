@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118c_cpo_add_vs_entry_external_audit_v1",
+    "candidate_name": "add_vs_strong_entry_separation_score_candidate",
+    "positive_add_mean_score": 1694561800.0,
+    "entry_mean_score": 352771875.0,
+    "mean_gap_positive_add_minus_entry": 1341789925.0,
+    "best_threshold": 1621220000.0,
+    "best_balanced_accuracy": 0.775,
+    "recommended_next_posture": "time_split_validate_add_vs_entry_discriminator_before_any_further_candidate_commitment"
+  },
+  "threshold_rows": [
+    {
+      "threshold": 2957674000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 0,
+      "tn": 8,
+      "positive_add_recall": 0.2,
+      "entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": 2685442000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 0,
+      "tn": 8,
+      "positive_add_recall": 0.4,
+      "entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.7
+    },
+    {
+      "threshold": 2149964000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 1,
+      "tn": 7,
+      "positive_add_recall": 0.4,
+      "entry_reject_rate": 0.875,
+      "balanced_accuracy": 0.6375
+    },
+    {
+      "threshold": 2026174000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 6,
+      "positive_add_recall": 0.4,
+      "entry_reject_rate": 0.75,
+      "balanced_accuracy": 0.575
+    },
+    {
+      "threshold": 1650434000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 2,
+      "tn": 6,
+      "positive_add_recall": 0.6,
+      "entry_reject_rate": 0.75,
+      "balanced_accuracy": 0.675
+    },
+    {
+      "threshold": 1621220000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 2,
+      "tn": 6,
+      "positive_add_recall": 0.8,
+      "entry_reject_rate": 0.75,
+      "balanced_accuracy": 0.775
+    },
+    {
+      "threshold": 1363641000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 3,
+      "tn": 5,
+      "positive_add_recall": 0.8,
+      "entry_reject_rate": 0.625,
+      "balanced_accuracy": 0.7125
+    },
+    {
+      "threshold": 969992000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 4,
+      "tn": 4,
+      "positive_add_recall": 0.8,
+      "entry_reject_rate": 0.5,
+      "balanced_accuracy": 0.65
+    },
+    {
+      "threshold": -441961000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 4,
+      "tn": 4,
+      "positive_add_recall": 1.0,
+      "entry_reject_rate": 0.5,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": -626213000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 5,
+      "tn": 3,
+      "positive_add_recall": 1.0,
+      "entry_reject_rate": 0.375,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": -767485000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 2,
+      "positive_add_recall": 1.0,
+      "entry_reject_rate": 0.25,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": -1066426000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 1,
+      "positive_add_recall": 1.0,
+      "entry_reject_rate": 0.125,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": -1227472000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 0,
+      "positive_add_recall": 1.0,
+      "entry_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.18C expands the new discriminator to the full positive-add versus all-entry surface, not just the leaked-entry subset.",
+    "This is the first real external audit of whether the branch is solving the correct problem: add-vs-entry discrimination rather than generic false-positive control.",
+    "If this does not separate add from entry cleanly enough, the branch should die quickly instead of becoming another same-family tunnel."
+  ]
+}

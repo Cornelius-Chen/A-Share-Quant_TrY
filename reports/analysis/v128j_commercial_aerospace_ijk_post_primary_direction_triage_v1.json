@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128j_commercial_aerospace_ijk_post_primary_direction_triage_v1",
+    "current_primary_variant": "tail_weakdrift_full",
+    "current_primary_final_equity": 1309426.5555,
+    "current_primary_max_drawdown": 0.09309927,
+    "authoritative_next_step": "stop_local_micro_tuning_and_begin_portability_packaging",
+    "stop_doing": [
+      "do_not_continue_board_local_micro_tuning",
+      "do_not_open_new_local_family_before_packaging",
+      "do_not_reopen_old_primary_branches_without_cross_board_evidence"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "B_portability_packaging",
+      "reason": "The local frontier has improved enough that the highest-value next step is transferability, not another local squeeze."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "B_portability_packaging",
+      "reason": "The board-specific grammar is now mature enough to be turned into a migration-ready template."
+    },
+    {
+      "subagent": "James",
+      "vote": "B_portability_packaging",
+      "reason": "Further commercial-aerospace-only tuning now has lower marginal value than testing whether the grammar ports."
+    }
+  ],
+  "interpretation": [
+    "V1.28J freezes the post-primary direction after commercial aerospace reached a locally mature replay-facing grammar.",
+    "The board should now shift from local optimization to portability packaging so the learned execution skeleton can be tested elsewhere without mixing archetypes."
+  ]
+}

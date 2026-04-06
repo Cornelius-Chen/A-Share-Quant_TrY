@@ -1,0 +1,2 @@
+﻿sample_window_id,december_leader_count,december_follower_count,february_leader_deterioration_count,february_follower_failure_count,excluded_soft_candidate_count,final_training_admission,strict_supervisor_conclusion
+ca_train_window_008,1,3,1,2,1,subwindow_ready_but_full_window_not_ready,"Window 008 now has one December leader, three December followers, and a February failure map; this is enough to study diffusion-versus-failed-followthrough, but still not enough for a full-window final-training pass."

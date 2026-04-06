@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130t_bk0808_emergence_watch_state_machine_v1",
+    "symbol": "600118",
+    "total_observed_days": 10,
+    "near_surface_watch_day_count": 8,
+    "inactive_watch_day_count": 2,
+    "current_same_plane_support_present": false,
+    "current_reopen_candidate_state": false,
+    "authoritative_status": "bk0808_watch_state_machine_operational_but_worker_still_frozen",
+    "authoritative_rule": "600118_may_progress_from_inactive_to_near_surface_watch_but_cannot_promote_bk0808_until_real_v6_same_plane_support_exists"
+  },
+  "state_rows": [
+    {
+      "trade_date": "2024-07-16",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.566719,
+      "board_composite": 0.976585,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-07-18",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "core",
+      "assignment_score": 0.533446,
+      "board_composite": 0.783029,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-07-19",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "core",
+      "assignment_score": 0.523847,
+      "board_composite": 0.931191,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-07-24",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.696973,
+      "board_composite": 0.786505,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-07-25",
+      "symbol": "600118",
+      "watch_state": "inactive_watch",
+      "assignment_layer": "junk",
+      "assignment_score": 0.511242,
+      "board_composite": 0.566406,
+      "near_surface_watch_active": false,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "no_change"
+    },
+    {
+      "trade_date": "2024-08-15",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.459496,
+      "board_composite": 0.502405,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-08-16",
+      "symbol": "600118",
+      "watch_state": "inactive_watch",
+      "assignment_layer": "junk",
+      "assignment_score": 0.516982,
+      "board_composite": 0.466192,
+      "near_surface_watch_active": false,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "no_change"
+    },
+    {
+      "trade_date": "2024-08-19",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.451081,
+      "board_composite": 0.649884,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-09-25",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.636655,
+      "board_composite": 0.68059,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    },
+    {
+      "trade_date": "2024-09-30",
+      "symbol": "600118",
+      "watch_state": "near_surface_watch",
+      "assignment_layer": "leader",
+      "assignment_score": 0.810773,
+      "board_composite": 0.925639,
+      "near_surface_watch_active": true,
+      "same_plane_support_present": false,
+      "next_state_if_emerged": "reopen_candidate"
+    }
+  ],
+  "interpretation": [
+    "V1.30T converts the BK0808 watch evidence into an explicit two-state monitoring machine: inactive watch versus near-surface watch.",
+    "The machine is intentionally conservative: without real v6 same-plane support, BK0808 never enters a live reopen-candidate state."
+  ]
+}

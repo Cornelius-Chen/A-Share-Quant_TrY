@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "precondition_count": 4,
+    "unsatisfied_count": 4,
+    "authoritative_status": "allowlist_promotion_must_wait_for_manual_record_and_runtime_closure"
+  },
+  "triage_rows": [
+    {
+      "component": "manual_review_records",
+      "direction": "fill_standardized_manual_review_records_before_reopening_any_promotion_discussion"
+    },
+    {
+      "component": "manual_outcomes",
+      "direction": "convert_license_and_runtime_outcomes_from_pending_to_explicit_decisions"
+    },
+    {
+      "component": "runtime_candidate",
+      "direction": "recheck_html_article_runtime_only_after_batch_one_manual_closure"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "keep_allowlist_promotion_fully_closed_until_all_preconditions_turn_satisfied"
+    }
+  ],
+  "interpretation": [
+    "The next valid move is closure of explicit preconditions, not additional restructuring.",
+    "This keeps source-side governance strict while still making later promotion reproducible."
+  ]
+}

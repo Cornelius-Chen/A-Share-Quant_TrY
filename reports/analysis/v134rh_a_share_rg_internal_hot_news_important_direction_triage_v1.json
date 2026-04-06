@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "important_promotion_row_count": 2,
+    "important_queue_row_count": 2,
+    "tier_1_count": 2,
+    "tier_2_count": 0,
+    "authoritative_status": "continue_promoting_only_deduped_high-impact_messages_into_important_trading_queue"
+  },
+  "triage_rows": [
+    {
+      "component": "promotion_logic",
+      "direction": "keep_using_deduped_guidance_and_decision_scores_to_upgrade_messages_into_the_important_layer"
+    },
+    {
+      "component": "tiering",
+      "direction": "separate_top_down_guidance_and_risk_shocks_from_secondary_board_specific_signals"
+    },
+    {
+      "component": "trading_delivery",
+      "direction": "feed_the_trading_program_from_the_important_queue_only_after_clustering_and_semantic_scoring"
+    }
+  ],
+  "interpretation": [
+    "The important layer is no longer a raw keyword bucket.",
+    "The next refinement should improve theme beneficiary mapping and cluster quality inside the important queue."
+  ]
+}

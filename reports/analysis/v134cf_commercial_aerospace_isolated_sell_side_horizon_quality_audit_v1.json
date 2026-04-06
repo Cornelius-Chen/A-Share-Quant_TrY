@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cf_commercial_aerospace_isolated_sell_side_horizon_quality_audit_v1",
+    "executed_order_count": 12,
+    "same_day_protected_mark_to_close_total": 15466.0594,
+    "net_horizon_pnl_if_held_1d": -26604.0,
+    "net_horizon_pnl_if_held_3d": 2243.0,
+    "net_horizon_pnl_if_held_5d": -11881.0,
+    "session_csv": "data\\training\\commercial_aerospace_isolated_sell_side_horizon_quality_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_isolated_sell_side_horizon_quality_ready_for_direction_triage"
+  },
+  "horizon_rows": [
+    {
+      "horizon_days": 1,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": -26604.0,
+      "positive_rebound_cost_count": 3,
+      "positive_rebound_cost_total": 880.0,
+      "negative_followthrough_benefit_count": 9,
+      "negative_followthrough_benefit_total": -27484.0
+    },
+    {
+      "horizon_days": 3,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": 2243.0,
+      "positive_rebound_cost_count": 4,
+      "positive_rebound_cost_total": 23238.0,
+      "negative_followthrough_benefit_count": 8,
+      "negative_followthrough_benefit_total": -20995.0
+    },
+    {
+      "horizon_days": 5,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": -11881.0,
+      "positive_rebound_cost_count": 3,
+      "positive_rebound_cost_total": 7619.0,
+      "negative_followthrough_benefit_count": 9,
+      "negative_followthrough_benefit_total": -19500.0
+    }
+  ],
+  "session_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 40.0,
+      "sell_quantity": 1500,
+      "same_day_protected_mark_to_close": 1077.0,
+      "horizon_pnl_if_held_1d": -1680.0,
+      "horizon_pnl_if_held_3d": 3030.0,
+      "horizon_pnl_if_held_5d": -1035.0
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 42.75,
+      "sell_quantity": 1500,
+      "same_day_protected_mark_to_close": 919.575,
+      "horizon_pnl_if_held_1d": -2235.0,
+      "horizon_pnl_if_held_3d": -3060.0,
+      "horizon_pnl_if_held_5d": 1965.0
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "601698",
+      "predicted_tier": "severe_override_positive",
+      "trigger_tier": "severe_override_positive",
+      "fill_price": 48.77,
+      "sell_quantity": 200,
+      "same_day_protected_mark_to_close": 36.369,
+      "horizon_pnl_if_held_1d": -1026.0,
+      "horizon_pnl_if_held_3d": -1722.0,
+      "horizon_pnl_if_held_5d": -2354.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 30.85,
+      "sell_quantity": 2900,
+      "same_day_protected_mark_to_close": 940.963,
+      "horizon_pnl_if_held_1d": -2697.0,
+      "horizon_pnl_if_held_3d": -4785.0,
+      "horizon_pnl_if_held_5d": -5365.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 40.01,
+      "sell_quantity": 1800,
+      "same_day_protected_mark_to_close": 1184.3676,
+      "horizon_pnl_if_held_1d": 270.0,
+      "horizon_pnl_if_held_3d": -5418.0,
+      "horizon_pnl_if_held_5d": -2268.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 39.77,
+      "sell_quantity": 200,
+      "same_day_protected_mark_to_close": 145.069,
+      "horizon_pnl_if_held_1d": 320.0,
+      "horizon_pnl_if_held_3d": -576.0,
+      "horizon_pnl_if_held_5d": -394.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 54.6,
+      "sell_quantity": 3000,
+      "same_day_protected_mark_to_close": 6845.16,
+      "horizon_pnl_if_held_1d": -14760.0,
+      "horizon_pnl_if_held_3d": 20010.0,
+      "horizon_pnl_if_held_5d": 5430.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688066",
+      "predicted_tier": "severe_override_positive",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 39.86,
+      "sell_quantity": 200,
+      "same_day_protected_mark_to_close": 577.042,
+      "horizon_pnl_if_held_1d": -742.0,
+      "horizon_pnl_if_held_3d": 166.0,
+      "horizon_pnl_if_held_5d": 224.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 29.46,
+      "sell_quantity": 800,
+      "same_day_protected_mark_to_close": 533.5776,
+      "horizon_pnl_if_held_1d": -352.0,
+      "horizon_pnl_if_held_3d": -1016.0,
+      "horizon_pnl_if_held_5d": -2128.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300342",
+      "predicted_tier": "severe_override_positive",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 56.86,
+      "sell_quantity": 800,
+      "same_day_protected_mark_to_close": 1726.1216,
+      "horizon_pnl_if_held_1d": -360.0,
+      "horizon_pnl_if_held_3d": -3880.0,
+      "horizon_pnl_if_held_5d": -2048.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 39.53,
+      "sell_quantity": 200,
+      "same_day_protected_mark_to_close": 277.141,
+      "horizon_pnl_if_held_1d": 290.0,
+      "horizon_pnl_if_held_3d": -538.0,
+      "horizon_pnl_if_held_5d": -2196.0
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "trigger_tier": "reversal_watch",
+      "fill_price": 54.28,
+      "sell_quantity": 1600,
+      "same_day_protected_mark_to_close": 1203.6736,
+      "horizon_pnl_if_held_1d": -3632.0,
+      "horizon_pnl_if_held_3d": 32.0,
+      "horizon_pnl_if_held_5d": -1712.0
+    }
+  ],
+  "interpretation": [
+    "V1.34CF checks whether the first isolated sell-side binding surface still makes sense beyond same-day close.",
+    "It does not reopen replay; it only asks whether the holdings-aware sell lane mostly protects followthrough downside or instead mainly pays rebound-cost after the intraday exits."
+  ]
+}

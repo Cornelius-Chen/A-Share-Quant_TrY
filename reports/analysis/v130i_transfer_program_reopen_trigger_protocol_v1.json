@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130i_transfer_program_reopen_trigger_protocol_v1",
+    "candidate_board_count": 5,
+    "reopen_ready_count": 0,
+    "authoritative_status": "transfer_program_frozen_with_explicit_reopen_triggers",
+    "authoritative_rule": "a_new_board_worker_may_reopen_only_when_the_destination_board_has_multi_symbol_same_plane_support_non_bridge_semantics_and_acceptable_board_strength",
+    "recommended_next_posture": "monitor_watchlist_and_reopen_only_when_any_candidate_hits_all_triggers"
+  },
+  "trigger_rows": [
+    {
+      "sector_id": "BK0808",
+      "sector_name": "军民融合",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.473136,
+      "same_plane_symbol_trigger_threshold": 2,
+      "same_plane_symbol_trigger_met": false,
+      "non_bridge_trigger_required": true,
+      "non_bridge_trigger_met": false,
+      "board_composite_trigger_threshold": 0.45,
+      "board_composite_trigger_met": true,
+      "reopen_ready": false,
+      "current_status": "blocked_waiting_for_richer_same_plane_support"
+    },
+    {
+      "sector_id": "BK0715",
+      "sector_name": "航母概念",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.373132,
+      "same_plane_symbol_trigger_threshold": 2,
+      "same_plane_symbol_trigger_met": false,
+      "non_bridge_trigger_required": true,
+      "non_bridge_trigger_met": false,
+      "board_composite_trigger_threshold": 0.45,
+      "board_composite_trigger_met": false,
+      "reopen_ready": false,
+      "current_status": "blocked_waiting_for_richer_same_plane_support"
+    },
+    {
+      "sector_id": "BK0994",
+      "sector_name": "空间站概念",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 0,
+      "current_v6_board_composite": 0.426425,
+      "same_plane_symbol_trigger_threshold": 2,
+      "same_plane_symbol_trigger_met": false,
+      "non_bridge_trigger_required": true,
+      "non_bridge_trigger_met": false,
+      "board_composite_trigger_threshold": 0.45,
+      "board_composite_trigger_met": false,
+      "reopen_ready": false,
+      "current_status": "blocked_waiting_for_richer_same_plane_support"
+    },
+    {
+      "sector_id": "BK0814",
+      "sector_name": "大飞机",
+      "current_v6_symbol_count": 1,
+      "current_v5_symbol_count": 1,
+      "current_v6_board_composite": 0.352149,
+      "same_plane_symbol_trigger_threshold": 2,
+      "same_plane_symbol_trigger_met": false,
+      "non_bridge_trigger_required": true,
+      "non_bridge_trigger_met": false,
+      "board_composite_trigger_threshold": 0.45,
+      "board_composite_trigger_met": false,
+      "reopen_ready": false,
+      "current_status": "blocked_waiting_for_richer_same_plane_support"
+    },
+    {
+      "sector_id": "BK0490",
+      "sector_name": "军工",
+      "current_v6_symbol_count": 0,
+      "current_v5_symbol_count": 2,
+      "current_v6_board_composite": null,
+      "same_plane_symbol_trigger_threshold": 2,
+      "same_plane_symbol_trigger_met": false,
+      "non_bridge_trigger_required": true,
+      "non_bridge_trigger_met": false,
+      "board_composite_trigger_threshold": 0.45,
+      "board_composite_trigger_met": false,
+      "reopen_ready": false,
+      "current_status": "blocked_waiting_for_richer_same_plane_support"
+    }
+  ],
+  "interpretation": [
+    "V1.30I converts the transfer-program freeze into an explicit reopen protocol.",
+    "This keeps the methodology paused without losing operational readiness: the next board worker opens only when a candidate clears the same-plane, non-bridge, and strength triggers together."
+  ]
+}

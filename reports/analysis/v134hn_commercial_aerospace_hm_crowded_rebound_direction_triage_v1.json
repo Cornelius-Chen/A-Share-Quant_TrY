@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hn_commercial_aerospace_hm_crowded_rebound_direction_triage_v1",
+    "analysis_symbol_count": 6,
+    "crowding_like_shelter_rebound_count": 2,
+    "authoritative_status": "retain_crowded_local_rebounds_as_negative_label_candidates_and_do_not_treat_symbol_crowding_as_board_unlock"
+  },
+  "triage_rows": [
+    {
+      "symbol": "600343",
+      "display_name": "航天动力",
+      "crowded_rebound_family": "coverage_gap_or_unclassified",
+      "direction": "learn_as_auxiliary_negative_evidence_only"
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "direction": "learn_as_locked_board_weak_repair"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "direction": "learn_as_crowded_shelter_rebound_not_board_restart"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "direction": "learn_as_lockout_outlier_breakout_not_restart"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "direction": "learn_as_high_beta_raw_only_rebound_without_unlock"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "direction": "learn_as_crowded_shelter_rebound_not_board_restart"
+    }
+  ],
+  "interpretation": [
+    "V1.34HN turns crowded rebound supervision into direction.",
+    "The supervision reading is that crowded strength in a few names should be learned as a board-negative context unless broad board unlock evidence reappears."
+  ]
+}

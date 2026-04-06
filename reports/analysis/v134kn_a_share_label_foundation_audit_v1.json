@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kn_a_share_label_foundation_audit_v1",
+    "label_definition_count": 15,
+    "label_assignment_count": 58,
+    "state_backlog_count": 4,
+    "governance_backlog_count": 2,
+    "label_status_csv": "data\\training\\a_share_label_foundation_status_v1.csv",
+    "authoritative_output": "a_share_label_foundation_ready_for_direction_triage"
+  },
+  "label_rows": [
+    {
+      "label_component": "label_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\label_registry\\a_share_label_registry_v1.csv",
+      "coverage_note": "label_definition_count = 15"
+    },
+    {
+      "label_component": "label_assignment_surface",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\label_registry\\a_share_label_assignment_v1.csv",
+      "coverage_note": "label_assignment_count = 58"
+    },
+    {
+      "label_component": "state_label_backlog",
+      "component_state": "backlog_materialized_not_assigned",
+      "artifact_path": "data\\reference\\info_center\\label_registry\\a_share_state_label_backlog_v1.csv",
+      "coverage_note": "state_backlog_count = 4"
+    },
+    {
+      "label_component": "governance_label_backlog",
+      "component_state": "backlog_materialized_not_assigned",
+      "artifact_path": "data\\reference\\info_center\\label_registry\\a_share_governance_label_backlog_v1.csv",
+      "coverage_note": "governance_backlog_count = 2"
+    }
+  ],
+  "interpretation": [
+    "V1.34KN completes the first label workstream pass by creating a central label registry plus a bootstrap assignment surface for fact and semantic labels.",
+    "State and governance labels remain explicit backlog layers instead of being faked before PTI and serving surfaces exist."
+  ]
+}

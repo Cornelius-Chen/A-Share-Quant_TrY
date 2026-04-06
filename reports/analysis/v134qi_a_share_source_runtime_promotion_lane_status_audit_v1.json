@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "priority_runtime_candidate_count": 1,
+    "lane_row_count": 1,
+    "excluded_runtime_row_count": 2,
+    "unsatisfied_precondition_count": 1,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_source_runtime_promotion_lane_status_v1.csv",
+    "authoritative_output": "a_share_source_runtime_promotion_lane_now_at_single_candidate_scheduler_gate"
+  },
+  "rows": [
+    {
+      "runtime_component": "source_manual_closure",
+      "runtime_state": "completed",
+      "metric": "manual_review_preconditions_satisfied_count",
+      "value": "3"
+    },
+    {
+      "runtime_component": "first_runtime_candidate_lane",
+      "runtime_state": "single_candidate_pending_scheduler_activation",
+      "metric": "priority_runtime_candidate_count",
+      "value": "1"
+    },
+    {
+      "runtime_component": "runtime_stub_replacement_lane",
+      "runtime_state": "materialized_foundation_only",
+      "metric": "lane_row_count",
+      "value": "1"
+    },
+    {
+      "runtime_component": "excluded_runtime_adapters",
+      "runtime_state": "kept_outside_first_runtime_lane",
+      "metric": "excluded_runtime_row_count",
+      "value": "2"
+    },
+    {
+      "runtime_component": "runtime_promotion_gate",
+      "runtime_state": "closed",
+      "metric": "unsatisfied_precondition_count",
+      "value": "1"
+    }
+  ],
+  "interpretation": [
+    "Source-side no longer has a broad activation problem; it has one first runtime candidate lane, one materialized stub-replacement lane, and two excluded adapters.",
+    "The remaining gate is scheduler/runtime promotion, not another round of host-level manual review."
+  ]
+}

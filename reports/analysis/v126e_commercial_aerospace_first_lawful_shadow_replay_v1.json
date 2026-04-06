@@ -1,0 +1,846 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126e_commercial_aerospace_first_lawful_shadow_replay_v1",
+    "initial_capital": 1000000.0,
+    "eligibility_threshold_quantile": 0.8,
+    "eligibility_direction": "low_pass",
+    "de_risk_threshold_quantile": 0.8,
+    "de_risk_direction": "low_pass",
+    "test_date_count": 103,
+    "executed_order_count": 0,
+    "final_equity": 1000000.0,
+    "max_drawdown": 0.0,
+    "authoritative_status": "first_lawful_narrow_eod_shadow_replay"
+  },
+  "daily_rows": [
+    {
+      "trade_date": "20251017",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251020",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251021",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251022",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251023",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251024",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251027",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251028",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251029",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251030",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251031",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251103",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251104",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251105",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251106",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251107",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251110",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251111",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251112",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251113",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251114",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251117",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251118",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251119",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251120",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251121",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251124",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251125",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251126",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251127",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251128",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251201",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251202",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251203",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251204",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251205",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251208",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251209",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251210",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251211",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251212",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251215",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251216",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251217",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251218",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251219",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251222",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251223",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251224",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251225",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251226",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251229",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251230",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20251231",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260105",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260106",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260107",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260108",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260109",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260112",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260113",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260114",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260115",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260116",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260119",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260120",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260121",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260122",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260123",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260126",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260127",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260128",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260129",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260130",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260202",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260203",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260204",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260205",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260206",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260209",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260210",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260211",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260212",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260213",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260224",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260225",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260226",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260227",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260302",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260303",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260304",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260305",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260306",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260309",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260310",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260311",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260312",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260313",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260316",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260317",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260318",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260319",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    },
+    {
+      "trade_date": "20260320",
+      "cash": 1000000.0,
+      "market_value": 0.0,
+      "equity": 1000000.0,
+      "drawdown": 0.0,
+      "held_symbols": ""
+    }
+  ],
+  "order_rows": [],
+  "interpretation": [
+    "V1.26E is the first lawful commercial-aerospace shadow replay under the narrowest approved boundary: EOD only, regime-conditioned, corrected low-pass score direction, and T+1 open execution.",
+    "This is still a shadow protocol and not a promoted production replay stack."
+  ]
+}

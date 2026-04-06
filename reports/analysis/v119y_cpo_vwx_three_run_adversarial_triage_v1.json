@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119y_cpo_vwx_three_run_adversarial_triage_v1",
+    "triage_scope": "V119V_V119W_V119X",
+    "branch_name": "limit_discipline_support_score_candidate",
+    "branch_status": "explanatory_only",
+    "hard_candidate_allowed": false,
+    "candidate_only_allowed": false,
+    "soft_expectancy_component_allowed": false,
+    "explanatory_only_allowed": true,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "authoritative_current_problem": "no_increment_over_parent_and_worse_time_split_turn_this_into_a_story_not_a_branch",
+    "recommended_next_posture": "kill_as_scoring_branch_keep_only_as_explanatory_non_chase_overlay_idea_and_move_on"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "explanatory_only",
+      "key_reason": "It ties the parent externally but worsens chronology, so it should not retain candidate budget."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "explanatory_only",
+      "key_reason": "The line tells a cleaner non-chase story but adds no external increment and degrades time-split stability."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "candidate_only_low_priority",
+      "key_reason": "There is some signal, but not enough to justify more budget beyond a low-priority reference line."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "freeze_explanatory_only_by_majority",
+      "key_reason": "Discovery gap=1.863218 vs parent 1.810537; external=0.909091 vs parent 0.909091; time-split mean/min=0.819445/0.666667 vs parent 0.875/0.833333."
+    }
+  ],
+  "interpretation": [
+    "V1.19Y is the scheduled three-run adversarial review for the narrow limit-band discipline branch.",
+    "The branch tells a plausible non-chase story, but the measured surface is too clear: no external gain over the parent and worse chronology.",
+    "The authoritative freeze follows the reviewer majority and kills this line as a scoring branch while keeping only the explanatory idea."
+  ]
+}

@@ -1,0 +1,6 @@
+﻿stage_order,stage_name,state_driver,current_status,current_reference,governance_role,blocking_reason
+1,intraday_sell_ladder,mild / reversal / severe shadow supervision,phase2_shadow_reference_ready,broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral,detect and execute defensive sell-side shadow actions on same-day path,not replay-facing
+2,board_expectancy_gate,lockout_worthy / false_bounce_only / unlock_worthy,supervision_ready,v134bm_board_expectancy_supervision,decide whether the board is worth touching at all on forward expectancy and reward-risk,"governance-only, no execution binding"
+3,board_lockout_unlock_hierarchy,board_cooling_lockout > local_only_rebound_guard > board_revival_unlock,hierarchy_ready,v134bi_hierarchy_governance_spec,keep board-first precedence so local strength cannot override board weakness,board unlock still governance-only
+4,seed_reentry_ladder,block -> observe -> rebuild watch -> later confirmation,seed_supervision_ready,3 seed cases,govern post-exit rebuild timing only after board-level vetoes no longer dominate,no reentry simulator or replay lane
+5,execution_binding,unified reduce closure binding,still_blocked,not available,"would bind sell-side, board gate, and reentry into one replay-facing lane",intraday replay lane and reentry execution lane do not exist

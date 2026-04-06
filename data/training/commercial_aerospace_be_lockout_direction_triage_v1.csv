@@ -1,0 +1,4 @@
+﻿component,status,detail
+board_cooling_lockout_seed,retained_as_supervision,"lockout_seed_count = 1, earliest_lockout_seed_trade_date = 20260115"
+reentry_ladder_override,approved_as_upper_governance_veto,"When board-level lockout is active, seed-level reentry ladder should remain subordinate. suggested_min_cooldown_trading_days = 60."
+execution_binding,still_blocked,Lockout remains supervision-only and does not reopen replay or authorize live binding.

@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "scheduler_mode_change": "stable",
+    "contract_action_change": "stable",
+    "sleep_strategy_change": "stable",
+    "interrupt_required_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_scheduler-packet_change_signal_above_the_scheduler-packet"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_scheduler_branch",
+      "direction": "keep_the_existing_scheduler cadence when the scheduler-packet change signal remains stable"
+    },
+    {
+      "component": "cadence_rotation_branch",
+      "direction": "reconfigure_the_scheduler cadence immediately when scheduler_mode_change or sleep_strategy_change flips state"
+    },
+    {
+      "component": "interrupt_rotation_branch",
+      "direction": "promote_the_change_to_high_attention_when interrupt_required_change flips state"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost change detector for the scheduler-facing packet.",
+    "A scheduler can watch it to know whether scheduling behavior really changed without reparsing the packet every cycle."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125x_commercial_aerospace_eod_binary_action_pilot_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "task_count": 2,
+    "best_task_name": "de_risk_binary",
+    "best_test_balanced_accuracy": 0.55891825,
+    "authoritative_status": "lawful_eod_binary_action_learning_pilot_non_execution"
+  },
+  "task_rows": [
+    {
+      "task_name": "eligibility_binary",
+      "train_positive_count": 1884,
+      "test_positive_count": 517,
+      "selected_threshold": 0.32268038,
+      "train_balanced_accuracy": 0.56529391,
+      "test_balanced_accuracy": 0.54793623,
+      "test_positive_recall": 0.22243714,
+      "test_negative_recall": 0.87343533
+    },
+    {
+      "task_name": "de_risk_binary",
+      "train_positive_count": 1200,
+      "test_positive_count": 359,
+      "selected_threshold": -0.93598826,
+      "train_balanced_accuracy": 0.59690705,
+      "test_balanced_accuracy": 0.55891825,
+      "test_positive_recall": 0.98328691,
+      "test_negative_recall": 0.1345496
+    }
+  ],
+  "interpretation": [
+    "V1.25X compresses the lawful EOD supervised table into binary execution-adjacent tasks that are closer to replay semantics than the original 4-class pilot.",
+    "This remains an offline training audit and not yet a replay rule."
+  ]
+}

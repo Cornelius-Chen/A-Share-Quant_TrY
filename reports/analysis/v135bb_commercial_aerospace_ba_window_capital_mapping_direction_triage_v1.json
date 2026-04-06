@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "negative_sample_ready_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_006",
+      "final_training_admission": "negative_sample_ready",
+      "recommendation": "allow_negative_training_for_capital_mapping_diffusion_without_structure"
+    }
+  ]
+}

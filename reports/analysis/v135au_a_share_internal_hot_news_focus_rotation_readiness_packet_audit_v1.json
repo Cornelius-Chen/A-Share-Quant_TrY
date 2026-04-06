@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "current_primary_theme_slug": "defense_industry",
+    "current_primary_rank": 1,
+    "incumbent_is_leader": "true",
+    "leader_theme_slug": "defense_industry",
+    "review_state": "hold_incumbent_focus",
+    "tension_state": "incumbent_leads_and_gate_consistent",
+    "rotation_readiness_state": "steady_background_monitoring_only",
+    "rotation_readiness_priority": "p3",
+    "rotation_readiness_instruction": "maintain_current_focus_and_background_monitoring",
+    "authoritative_output": "a_share_internal_hot_news_focus_rotation_readiness_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "current_primary_rank",
+      "value": "1"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "review_state",
+      "value": "hold_incumbent_focus"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "tension_state",
+      "value": "incumbent_leads_and_gate_consistent"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "rotation_readiness_state",
+      "value": "steady_background_monitoring_only"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "rotation_readiness_priority",
+      "value": "p3"
+    }
+  ],
+  "interpretation": [
+    "This packet compresses leaderboard rank, review state, and governance tension into one top-level readiness judgement.",
+    "It is the simplest one-row answer to whether focus rotation should stay cold, warm up, or open immediately."
+  ]
+}

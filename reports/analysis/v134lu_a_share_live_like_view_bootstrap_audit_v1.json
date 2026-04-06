@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lu_a_share_live_like_view_bootstrap_audit_v1",
+    "event_state_row_count": 17,
+    "candidate_intraday_only_watch_count": 9,
+    "candidate_context_blocked_count": 8,
+    "closed_gate_count": 3,
+    "status_csv": "data\\training\\a_share_live_like_view_bootstrap_status_v1.csv",
+    "authoritative_output": "a_share_live_like_views_materialized_but_still_blocked"
+  },
+  "rows": [
+    {
+      "component": "live_like_view_registry",
+      "component_state": "materialized_but_blocked",
+      "artifact_path": "data\\reference\\info_center\\serving_registry\\a_share_live_like_view_materialization_registry_v1.csv",
+      "coverage_note": "closed_gate_count = 3"
+    },
+    {
+      "component": "live_like_event_state_surface",
+      "component_state": "materialized_but_blocked",
+      "artifact_path": "data\\derived\\info_center\\replay\\live_like\\a_share_live_like_event_state_surface_v1.csv",
+      "coverage_note": "event_state_row_count = 17"
+    },
+    {
+      "component": "live_like_gate_view",
+      "component_state": "materialized_but_blocked",
+      "artifact_path": "data\\reference\\info_center\\serving_registry\\a_share_live_like_execution_gate_view_v1.csv",
+      "coverage_note": "candidate_context_blocked_count = 8"
+    }
+  ],
+  "interpretation": [
+    "Live-like no longer lacks views; it now has a concrete event-state surface and gate surface.",
+    "Those views are still blocked by closed gates, but the blocker is now policy and readiness, not missing materialization."
+  ]
+}

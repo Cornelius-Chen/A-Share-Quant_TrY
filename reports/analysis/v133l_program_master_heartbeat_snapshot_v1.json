@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133l_program_master_heartbeat_snapshot_v1",
+    "program_status": "frozen",
+    "frozen_line_count": 5,
+    "transfer_rerun_required": false,
+    "intraday_rerun_required": false,
+    "heartbeat_csv": "data\\training\\program_master_heartbeat_snapshot_v1.csv",
+    "authoritative_output": "program_master_heartbeat_ready_for_do_not_drift_posture"
+  },
+  "heartbeat_rows": [
+    {
+      "key": "program_status",
+      "value": "frozen"
+    },
+    {
+      "key": "frozen_line_count",
+      "value": 5
+    },
+    {
+      "key": "transfer_nearest_candidate",
+      "value": "BK0808"
+    },
+    {
+      "key": "transfer_watch_symbol",
+      "value": "600118"
+    },
+    {
+      "key": "transfer_rerun_required",
+      "value": false
+    },
+    {
+      "key": "intraday_rerun_required",
+      "value": false
+    },
+    {
+      "key": "intraday_missing_artifact_count",
+      "value": 3
+    },
+    {
+      "key": "next_program_action",
+      "value": "wait_for_explicit_gate_changes_not_local_drift"
+    }
+  ],
+  "interpretation": [
+    "V1.33L compresses the frozen program into a minimal heartbeat snapshot.",
+    "The snapshot is meant for fast operational reading: what is frozen, what is closest, and whether any gate has actually opened."
+  ]
+}

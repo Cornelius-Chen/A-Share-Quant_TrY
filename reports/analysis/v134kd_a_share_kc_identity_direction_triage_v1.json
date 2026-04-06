@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kd_a_share_kc_identity_direction_triage_v1",
+    "materialized_symbol_count": 82,
+    "materialized_alias_count": 164,
+    "authoritative_status": "identity_workstream_complete_enough_to_freeze_and_use_as_foundation_for_taxonomy"
+  },
+  "triage_rows": [
+    {
+      "identity_component": "security_master",
+      "direction": "retain_as_current_source_of_truth_for_symbol_identity_and_begin_taxonomy_binding_from_this_artifact"
+    },
+    {
+      "identity_component": "entity_alias_map",
+      "direction": "use_as_initial_name_to_symbol_materialization_surface_and_expand_alias_types_later"
+    },
+    {
+      "identity_component": "identity_source_priority_manifest",
+      "direction": "retain_explicit_source_priority_rules_and_do_not_allow_ad_hoc_manual_symbol_resolution_to_bypass_them"
+    },
+    {
+      "identity_component": "next_frontier",
+      "direction": "move_directly_into_taxonomy_foundation_using_materialized_identity_as_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KD converts the identity audit into operating direction.",
+    "The identity workstream is now strong enough to freeze as a foundation layer: future work should consume it rather than continuing to improvise identity mappings branch by branch."
+  ]
+}

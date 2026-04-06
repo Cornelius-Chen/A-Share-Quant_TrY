@@ -1,0 +1,167 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hk_commercial_aerospace_named_local_rebound_counterexample_audit_v1",
+    "analysis_symbol_count": 6,
+    "lockout_window_end_trade_date": "20260320",
+    "analysis_end_trade_date": "20260403",
+    "crossed_pre_lockout_peak_count": 2,
+    "local_only_top_seed_symbol_count": 1,
+    "family_count": 5,
+    "counterexample_csv": "data\\training\\commercial_aerospace_named_local_rebound_counterexamples_v1.csv",
+    "authoritative_output": "commercial_aerospace_named_local_rebound_counterexample_audit_ready_for_direction_triage"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "600343",
+      "display_name": "航天动力",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 0,
+      "local_only_top_seed_day_count": 0,
+      "pre_lockout_peak_close": "",
+      "pre_lockout_peak_trade_date": "",
+      "post_lockout_start_close": "",
+      "post_lockout_max_close": "",
+      "post_lockout_max_trade_date": "",
+      "post_lockout_end_close": "",
+      "post_lockout_max_return_from_start": "",
+      "post_lockout_max_vs_pre_lockout_peak": "",
+      "post_lockout_drawdown_from_max_to_end": "",
+      "max_date_zone": "no_post_lockout_coverage",
+      "crossed_pre_lockout_peak": false,
+      "counterexample_family": "coverage_gap_or_inactive",
+      "learning_reading": "no_local_path_to_learn_until_post_lockout_symbol_coverage_exists"
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 51,
+      "local_only_top_seed_day_count": 0,
+      "pre_lockout_peak_close": 40.0,
+      "pre_lockout_peak_trade_date": "20260112",
+      "post_lockout_start_close": 30.04,
+      "post_lockout_max_close": 33.66,
+      "post_lockout_max_trade_date": "20260310",
+      "post_lockout_end_close": 25.78,
+      "post_lockout_max_return_from_start": 0.12050599,
+      "post_lockout_max_vs_pre_lockout_peak": -0.1585,
+      "post_lockout_drawdown_from_max_to_end": -0.23410576,
+      "max_date_zone": "lockout_window",
+      "crossed_pre_lockout_peak": false,
+      "counterexample_family": "locked_board_weak_repair_only",
+      "learning_reading": "symbol_rebounds_locally_but_never repairs enough to clear prior peak or reopen board participation"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 51,
+      "local_only_top_seed_day_count": 0,
+      "pre_lockout_peak_close": 18.12,
+      "pre_lockout_peak_trade_date": "20260114",
+      "post_lockout_start_close": 16.31,
+      "post_lockout_max_close": 17.29,
+      "post_lockout_max_trade_date": "20260402",
+      "post_lockout_end_close": 15.74,
+      "post_lockout_max_return_from_start": 0.06008584,
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "post_lockout_drawdown_from_max_to_end": -0.08964719,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "crossed_pre_lockout_peak": false,
+      "counterexample_family": "locked_board_weak_repair_only",
+      "learning_reading": "symbol_rebounds_locally_but_never repairs enough to clear prior peak or reopen board participation"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 51,
+      "local_only_top_seed_day_count": 7,
+      "pre_lockout_peak_close": 55.7,
+      "pre_lockout_peak_trade_date": "20260114",
+      "post_lockout_start_close": 50.97,
+      "post_lockout_max_close": 61.27,
+      "post_lockout_max_trade_date": "20260123",
+      "post_lockout_end_close": 56.47,
+      "post_lockout_max_return_from_start": 0.20207965,
+      "post_lockout_max_vs_pre_lockout_peak": 0.1,
+      "post_lockout_drawdown_from_max_to_end": -0.07834177,
+      "max_date_zone": "lockout_window",
+      "crossed_pre_lockout_peak": true,
+      "counterexample_family": "lockout_outlier_breakout_then_fade",
+      "learning_reading": "symbol_can_break_prior_peak_inside_board_lockout_but_still_not_reopen_board_regime"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 51,
+      "local_only_top_seed_day_count": 0,
+      "pre_lockout_peak_close": 165.0,
+      "pre_lockout_peak_trade_date": "20260113",
+      "post_lockout_start_close": 135.92,
+      "post_lockout_max_close": 162.2,
+      "post_lockout_max_trade_date": "20260401",
+      "post_lockout_end_close": 145.3,
+      "post_lockout_max_return_from_start": 0.19334903,
+      "post_lockout_max_vs_pre_lockout_peak": -0.0169697,
+      "post_lockout_drawdown_from_max_to_end": -0.10419236,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "crossed_pre_lockout_peak": false,
+      "counterexample_family": "raw_only_near_high_rebound_without_breakout",
+      "learning_reading": "symbol_can recover near prior peak after lockout end but still not supply a legal board-level unlock handoff"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "analysis_start_trade_date": "20260115",
+      "analysis_end_trade_date": "20260403",
+      "post_lockout_row_count": 51,
+      "local_only_top_seed_day_count": 0,
+      "pre_lockout_peak_close": 14.64,
+      "pre_lockout_peak_trade_date": "20260112",
+      "post_lockout_start_close": 10.67,
+      "post_lockout_max_close": 15.49,
+      "post_lockout_max_trade_date": "20260331",
+      "post_lockout_end_close": 14.0,
+      "post_lockout_max_return_from_start": 0.45173383,
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "post_lockout_drawdown_from_max_to_end": -0.09619109,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "crossed_pre_lockout_peak": true,
+      "counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "learning_reading": "symbol_can_resume_breakout_after_lockout_end_in_raw_prices_but_still_lacks_derived_board_unlock_context"
+    }
+  ],
+  "family_rows": [
+    {
+      "counterexample_family": "locked_board_weak_repair_only",
+      "symbol_count": 2
+    },
+    {
+      "counterexample_family": "coverage_gap_or_inactive",
+      "symbol_count": 1
+    },
+    {
+      "counterexample_family": "lockout_outlier_breakout_then_fade",
+      "symbol_count": 1
+    },
+    {
+      "counterexample_family": "raw_only_near_high_rebound_without_breakout",
+      "symbol_count": 1
+    },
+    {
+      "counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "symbol_count": 1
+    }
+  ],
+  "interpretation": [
+    "V1.34HK checks whether named strong rebound symbols after the January 15, 2026 lockout should be learned as counterexamples rather than as restart evidence.",
+    "The key question is not whether they bounced, but whether they bounced inside lockout, after lockout only in raw prices, or without ever rebuilding enough to clear their own prior peak."
+  ]
+}

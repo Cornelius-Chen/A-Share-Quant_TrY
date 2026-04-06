@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130c_bk0480_aerospace_aviation_feed_harmonization_support_audit_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "review_symbol_count": 4,
+    "same_plane_support_count": 0,
+    "historical_bridge_only_count": 1,
+    "timeline_only_count": 3,
+    "authoritative_rule": "bk0480_cannot_refresh_a_wider_control_surface_until_non_core_names_have_same_plane_support_or_an_explicitly_harmonized_bridge",
+    "recommended_next_posture": "freeze_role_surface_v2_and_block_replay_or_control_refresh_until_more_v6_native_support_exists"
+  },
+  "candidate_rows": [
+    {
+      "symbol": "600760",
+      "role_label": "local_confirmation_candidate",
+      "v5_snapshot_days": 42,
+      "v6_snapshot_days": 0,
+      "timeline_approval_days": 5,
+      "harmonization_status": "historical_bridge_only",
+      "harmonization_risk": "no_same_plane_v6_support_for_control_math"
+    },
+    {
+      "symbol": "002273",
+      "role_label": "quarantine_pending_local_confirmation",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "timeline_approval_days": 5,
+      "harmonization_status": "timeline_only",
+      "harmonization_risk": "no_same_plane_v6_support_for_control_math"
+    },
+    {
+      "symbol": "601989",
+      "role_label": "quarantine_pending_local_confirmation",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "timeline_approval_days": 5,
+      "harmonization_status": "timeline_only",
+      "harmonization_risk": "no_same_plane_v6_support_for_control_math"
+    },
+    {
+      "symbol": "000099",
+      "role_label": "reject_or_mirror_pending",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "timeline_approval_days": 5,
+      "harmonization_status": "timeline_only",
+      "harmonization_risk": "no_same_plane_v6_support_for_control_math"
+    }
+  ],
+  "interpretation": [
+    "V1.30C audits whether BK0480 non-core names can be legally folded into the current control-surface math.",
+    "600760 is strong enough to enter confirmation language, but it is still only a historical bridge candidate rather than a same-plane v6 control participant.",
+    "No non-core name currently has same-plane support, so control-surface widening remains blocked."
+  ]
+}

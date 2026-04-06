@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134eq_commercial_aerospace_ep_add_label_direction_triage_v1",
+    "authoritative_status": "freeze_intraday_add_tiered_label_specification_and_shift_next_to_local_add_pattern_envelope_audit",
+    "registry_row_count": 55,
+    "label_tier_count": 4,
+    "authoritative_rule": "the commercial-aerospace intraday-add frontier should next inspect local minute pattern envelopes under the frozen add-tier vocabulary while keeping execution authority blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_add_tiered_label_specification",
+      "status": "freeze_intraday_add_tiered_label_specification_and_shift_next_to_local_add_pattern_envelope_audit",
+      "rationale": "the intraday-add frontier now has a canonical supervision vocabulary and should next inspect local minute-shape envelopes rather than jump directly to execution logic"
+    },
+    {
+      "component": "reduce_mainline",
+      "status": "retain_frozen",
+      "rationale": "opening add as supervision does not reopen reduce or inherit reduce execution authority"
+    },
+    {
+      "component": "intraday_add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "tier vocabulary belongs to supervision and does not authorize add execution or replay binding"
+    }
+  ],
+  "interpretation": [
+    "V1.34EQ freezes the first add-tier vocabulary as the canonical next step for the commercial-aerospace intraday-add frontier.",
+    "The next task is local add pattern-envelope auditing under the new label tiers, not execution binding."
+  ]
+}

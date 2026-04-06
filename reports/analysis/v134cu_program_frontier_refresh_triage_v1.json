@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cu_program_frontier_refresh_triage_v1",
+    "authoritative_status": "program_view_refreshed_reduce_frozen_intraday_add_deferred",
+    "next_frontier": "intraday_add",
+    "next_frontier_state": "deferred",
+    "triage_csv": "data\\training\\program_frontier_refresh_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "commercial_aerospace_reduce",
+      "status": "frozen_in_program_view",
+      "detail": "Program-level reading must now treat reduce as frozen and no longer as an open semantic branch."
+    },
+    {
+      "component": "commercial_aerospace_intraday_add",
+      "status": "next_but_deferred",
+      "detail": "Program-level reading should mark intraday add as the next frontier, but still deferred until an explicit shift is authorized."
+    },
+    {
+      "component": "current_instruction",
+      "status": "respect_deferred_shift",
+      "detail": "Do not silently start intraday add simply because reduce is frozen; wait for the later deliberate opening."
+    }
+  ],
+  "interpretation": [
+    "V1.34CU refreshes the program-level frontier reading after reduce handoff completion.",
+    "The result is intentionally conservative: the next frontier is named, but not opened by implication."
+  ]
+}

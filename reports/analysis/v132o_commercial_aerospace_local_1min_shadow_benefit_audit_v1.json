@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132o_commercial_aerospace_local_1min_shadow_benefit_audit_v1",
+    "buy_execution_row_count": 55,
+    "flagged_execution_count": 6,
+    "flagged_execution_share": 0.10909091,
+    "flagged_notional_share": 0.18478987,
+    "flagged_weight_share": 0.18478987,
+    "flagged_forward_return_10_mean": -0.00418675,
+    "unflagged_forward_return_10_mean": 0.10697428,
+    "flagged_max_adverse_return_10_mean": -0.16372975,
+    "unflagged_max_adverse_return_10_mean": -0.01859484,
+    "flagged_negative_forward_notional_share": 0.7910412,
+    "flagged_adverse_notional_share": 0.56597491,
+    "authoritative_rule": "the local 1min branch earns governance credibility when a small flagged slice of buy executions accounts for a disproportionate share of later downside notional without intruding into clean controls"
+  },
+  "tier_rows": [
+    {
+      "predicted_tier": "severe_override_positive",
+      "row_count": 2,
+      "notional_share": 0.07375093,
+      "mean_forward_return_10": -0.23140609,
+      "mean_max_adverse_return_10": -0.26059193,
+      "negative_forward_notional_share": 0.59060962,
+      "adverse_notional_share": 0.33544256
+    },
+    {
+      "predicted_tier": "reversal_watch",
+      "row_count": 2,
+      "notional_share": 0.07497815,
+      "mean_forward_return_10": -0.08401327,
+      "mean_max_adverse_return_10": -0.13540296,
+      "negative_forward_notional_share": 0.20043158,
+      "adverse_notional_share": 0.17730046
+    },
+    {
+      "predicted_tier": "mild_override_watch",
+      "row_count": 2,
+      "notional_share": 0.03606079,
+      "mean_forward_return_10": 0.30285912,
+      "mean_max_adverse_return_10": -0.09519437,
+      "negative_forward_notional_share": 0.0,
+      "adverse_notional_share": 0.05323189
+    }
+  ],
+  "interpretation": [
+    "V1.32O is a shadow-only benefit audit for the local 1-minute override rules on the frozen buy-execution surface.",
+    "The goal is not replay promotion; it is to quantify whether the narrow minute governance layer concentrates on later bad notional rather than merely flagging many trades."
+  ]
+}

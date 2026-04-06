@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126c_commercial_aerospace_regime_conditioned_economic_audit_v1",
+    "test_row_count": 1236,
+    "best_task_name": "de_risk_binary_rc",
+    "best_economic_spread": -0.04222178,
+    "authoritative_status": "regime_conditioned_economic_audit_non_execution"
+  },
+  "task_rows": [
+    {
+      "task_name": "eligibility_binary_rc",
+      "selected_threshold": -6.04905506,
+      "train_balanced_accuracy": 0.97573604,
+      "test_balanced_accuracy": 0.76291294,
+      "pass_count": 565,
+      "pass_rate": 0.45711974,
+      "pass_forward_mean": 0.01343111,
+      "fail_forward_mean": 0.07486225,
+      "economic_spread": -0.06143114
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "selected_threshold": -0.04178998,
+      "train_balanced_accuracy": 0.60491672,
+      "test_balanced_accuracy": 0.59158996,
+      "pass_count": 801,
+      "pass_rate": 0.64805825,
+      "pass_forward_mean": 0.06164047,
+      "fail_forward_mean": 0.01941869,
+      "economic_spread": -0.04222178
+    }
+  ],
+  "interpretation": [
+    "V1.26C asks the replay-adjacent question directly: after regime-conditioned relabeling, do predicted positive actions now carry actual test-side economic spread?",
+    "This is the last checkpoint before any lawful shadow replay discussion."
+  ]
+}

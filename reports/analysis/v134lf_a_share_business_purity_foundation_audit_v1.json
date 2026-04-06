@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lf_a_share_business_purity_foundation_audit_v1",
+    "business_reference_count": 82,
+    "concept_purity_count": 82,
+    "sector_backed_with_concepts_count": 48,
+    "mixed_multi_theme_count": 24,
+    "residual_count": 34,
+    "status_csv": "data\\training\\a_share_business_purity_foundation_status_v1.csv",
+    "authoritative_output": "a_share_business_purity_foundation_ready_for_direction_triage"
+  },
+  "rows": [
+    {
+      "component": "business_reference",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\business_reference\\a_share_business_reference_v1.csv",
+      "coverage_note": "business_reference_count = 82"
+    },
+    {
+      "component": "concept_purity",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\concept_purity\\a_share_concept_purity_v1.csv",
+      "coverage_note": "concept_purity_count = 82"
+    },
+    {
+      "component": "residual_backlog",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\concept_purity\\a_share_business_purity_residual_backlog_v1.csv",
+      "coverage_note": "residual_count = 34"
+    }
+  ],
+  "interpretation": [
+    "This closes the first honest business-reference and concept-purity gap using only in-repo sector and concept surfaces, without inventing external fundamentals.",
+    "The output is strong enough for reusable tagging, while residuals remain explicit wherever sector or concept support is structurally thin."
+  ]
+}

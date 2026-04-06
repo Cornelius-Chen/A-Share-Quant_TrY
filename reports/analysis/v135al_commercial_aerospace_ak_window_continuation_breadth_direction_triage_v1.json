@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "full_window_hold_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_008",
+      "final_window_judgement": "december_confirmation_real_but_january_not_upgraded_and_february_failed",
+      "recommendation": "keep_subwindow_learning_only_and_train_december_confirmation_followed_by_continuation_failure"
+    }
+  ]
+}

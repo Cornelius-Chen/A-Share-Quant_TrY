@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123q_cpo_daily_residual_cash_floor_sensitivity_audit_v1",
+    "candidate_name": "held_pair_deterioration_score",
+    "cash_floor_count": 4,
+    "stable_cash_floor_count": 3,
+    "cash_floor_sensitivity_posture": "stable_across_adjacent_cash_floors",
+    "recommended_next_posture": "continue_only_if_residual_branch_is_not_overly_cash_floor_specific"
+  },
+  "threshold_rows": [
+    {
+      "cash_ratio_floor": 0.55,
+      "sample_row_count": 124,
+      "positive_row_count": 89,
+      "negative_row_count": 35,
+      "discovery_gap": 1.555429,
+      "q75_balanced_accuracy": 0.580257,
+      "time_split_mean_balanced_accuracy": 0.568327,
+      "time_split_min_balanced_accuracy": 0.556833
+    },
+    {
+      "cash_ratio_floor": 0.6,
+      "sample_row_count": 124,
+      "positive_row_count": 89,
+      "negative_row_count": 35,
+      "discovery_gap": 1.555429,
+      "q75_balanced_accuracy": 0.580257,
+      "time_split_mean_balanced_accuracy": 0.568327,
+      "time_split_min_balanced_accuracy": 0.556833
+    },
+    {
+      "cash_ratio_floor": 0.65,
+      "sample_row_count": 124,
+      "positive_row_count": 89,
+      "negative_row_count": 35,
+      "discovery_gap": 1.555429,
+      "q75_balanced_accuracy": 0.580257,
+      "time_split_mean_balanced_accuracy": 0.568327,
+      "time_split_min_balanced_accuracy": 0.556833
+    },
+    {
+      "cash_ratio_floor": 0.7,
+      "sample_row_count": 97,
+      "positive_row_count": 78,
+      "negative_row_count": 19,
+      "discovery_gap": 1.185942,
+      "q75_balanced_accuracy": 0.529352,
+      "time_split_mean_balanced_accuracy": 0.533508,
+      "time_split_min_balanced_accuracy": 0.458333
+    }
+  ],
+  "interpretation": [
+    "V1.23Q checks whether the residual downside branch only works because the high-cash subset was carved at exactly 60%.",
+    "A branch that survives adjacent cash floors is more credible as a real residual downside signal rather than a threshold artifact.",
+    "This remains non-replay and narrow by design."
+  ]
+}

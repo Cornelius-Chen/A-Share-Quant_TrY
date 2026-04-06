@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134f_commercial_aerospace_ef_seed_simulator_direction_triage_v1",
+    "authoritative_status": "retain_seed_simulator_and_attribution_inside_phase_2_but_keep_broader_expansion_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_ef_seed_simulator_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "canonical_seed_simulator",
+      "status": "retain_and_continue_inside_phase_2",
+      "detail": "simulated_order_count = 8"
+    },
+    {
+      "component": "chronology_boundary",
+      "status": "accepted_after_correction",
+      "detail": "seed actions now execute in trigger-minute order rather than tier-name order"
+    },
+    {
+      "component": "seed_attribution_signal",
+      "status": "retain_for_direction",
+      "detail": "top_tier = reversal_watch, top_symbol = 300342"
+    },
+    {
+      "component": "broader_session_expansion",
+      "status": "still_blocked",
+      "detail": "the branch should first finish deterministic/attribution understanding on canonical seeds before widening phase 2"
+    },
+    {
+      "component": "phase_3_replay_lane",
+      "status": "still_blocked",
+      "detail": "seed simulator plus attribution does not authorize opening an intraday replay lane"
+    }
+  ],
+  "interpretation": [
+    "V1.34F turns the corrected seed simulator plus attribution into the next phase-2 direction triage.",
+    "The result is constructive but still narrow: canonical seed understanding improves, while broader expansion and replay binding remain blocked."
+  ]
+}

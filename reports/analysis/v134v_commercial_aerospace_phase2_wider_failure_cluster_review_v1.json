@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134v_commercial_aerospace_phase2_wider_failure_cluster_review_v1",
+    "negative_session_count": 1,
+    "failure_cluster_count": 1,
+    "top_failure_cluster": "reversal_watch|2026-01",
+    "top_failure_cluster_drag": -493.944,
+    "failure_csv": "data\\training\\commercial_aerospace_phase2_wider_failure_cluster_review_v1.csv",
+    "authoritative_output": "commercial_aerospace_phase2_wider_failure_cluster_review_ready_for_direction_triage"
+  },
+  "cluster_rows": [
+    {
+      "cluster_key": "reversal_watch|2026-01",
+      "predicted_tier": "reversal_watch",
+      "month_bucket": "2026-01",
+      "failure_count": 1,
+      "total_same_day_loss_avoided_drag": -493.944,
+      "worst_symbol": "300045"
+    }
+  ],
+  "failure_rows": [
+    {
+      "trade_date": "20260115",
+      "month_bucket": "2026-01",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "entry_price": "32.5",
+      "reference_quantity": "3000",
+      "reference_notional": "97500.0",
+      "first_reversal_minute": "32",
+      "first_severe_minute": "185",
+      "filled_step_count": "2",
+      "remaining_quantity_after_sim": "0",
+      "close_price": "30.47",
+      "baseline_hold_pnl": "-6090.0",
+      "simulated_pnl": "-6583.944",
+      "same_day_loss_avoided": "-493.944",
+      "simulated_close_value": "0.0"
+    }
+  ],
+  "interpretation": [
+    "V1.34V reviews whether the current wider phase-2 reference still fails in a diffuse way or in a few concentrated clusters.",
+    "A concentrated failure map is healthier because it suggests the branch should keep supervising localized edge cases rather than retreat from the wider lane entirely."
+  ]
+}

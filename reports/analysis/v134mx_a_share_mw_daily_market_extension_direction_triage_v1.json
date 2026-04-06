@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "candidate_cover_count": 14,
+    "raw_daily_symbol_count": 51,
+    "authoritative_status": "daily_market_extension_candidate_ready_for_controlled_promotion_review"
+  },
+  "triage_rows": [
+    {
+      "component": "daily_market_extension_candidate_surface",
+      "direction": "review_and_promote_candidate_daily_rows_before_further_replay_symbol_binding_work"
+    },
+    {
+      "component": "paired_surfaces",
+      "direction": "extend_index_daily_and_limit_halt_surfaces_in_lockstep_with_any_daily_market_promotion"
+    }
+  ],
+  "interpretation": [
+    "Replay coverage work has reached a candidate-promotion stopline rather than a source-discovery stopline.",
+    "Further replay binding work should wait until the daily candidate surface is either promoted or explicitly rejected."
+  ]
+}

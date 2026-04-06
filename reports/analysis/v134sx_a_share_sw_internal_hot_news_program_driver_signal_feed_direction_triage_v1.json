@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "signal_feed_mode": "passive_polling",
+    "interrupt_required": "false",
+    "alert_state": "no_driver_escalation",
+    "authoritative_status": "continue_serving_driver-escalation_signal-feed_above_the_driver-alert_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_polling_branch",
+      "direction": "stay_on_passive_polling_when_signal_feed_mode_remains_passive_polling"
+    },
+    {
+      "component": "elevate_attention_branch",
+      "direction": "raise_operator_or_program_attention_when_signal_feed_mode_rotates_to_elevate_attention"
+    },
+    {
+      "component": "interrupt_branch",
+      "direction": "interrupt_the_current_consumer_loop_immediately_when_signal_feed_mode_rotates_to_interrupt"
+    }
+  ],
+  "interpretation": [
+    "This feed compresses driver escalation semantics into the smallest program-facing branch surface.",
+    "A consumer can use it as a direct switch between passive polling, elevated attention, and interruption."
+  ]
+}

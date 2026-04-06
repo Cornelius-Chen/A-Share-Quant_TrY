@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131r_commercial_aerospace_qr_local_5min_direction_triage_v1",
+    "authoritative_status": "commercial_aerospace_local_5min_override_branch_unblocked",
+    "ready_count": 4,
+    "manifest_row_count": 4,
+    "authoritative_rule": "once the retained override sessions are locally resampleable to 5min, the narrow commercial-aerospace 5min prototype is unblocked for governance-bound analysis"
+  },
+  "triage_rows": [
+    {
+      "component": "local_5min_override_branch",
+      "status": "commercial_aerospace_local_5min_override_branch_unblocked",
+      "rationale": "the exact retained override sessions can now be expressed as local 5min bars without external provider dependence"
+    },
+    {
+      "component": "eod_primary_replay",
+      "status": "unchanged",
+      "rationale": "the local 5min branch opens a narrow prototype path only; it does not replace the current lawful EOD primary"
+    }
+  ],
+  "interpretation": [
+    "V1.31R turns local 5-minute resample readiness into a branch-level direction.",
+    "It is still governed and narrow: only the retained override sessions are unblocked."
+  ]
+}

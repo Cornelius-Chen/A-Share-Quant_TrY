@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gd_commercial_aerospace_dual_slot_capacity_audit_v1",
+    "active_wave_day_count": 2,
+    "dual_slot_day_count": 1,
+    "single_slot_day_count": 0,
+    "zero_slot_day_count": 1,
+    "authoritative_rule": "the current strict active-wave add surface does not support unconditional dual-slot capacity; dual-slot coexistence is local and rare, so capacity should remain supervision-only"
+  },
+  "day_rows": [
+    {
+      "trade_date": "20251218",
+      "capacity_state": "zero_slot_day",
+      "retained_slot_count": 0,
+      "retained_slots": "",
+      "retained_symbol_count": 0,
+      "retained_symbols": "",
+      "candidate_symbol_count": 1,
+      "candidate_symbols": "002465"
+    },
+    {
+      "trade_date": "20251219",
+      "capacity_state": "dual_slot_day",
+      "retained_slot_count": 2,
+      "retained_slots": "continuation_slot|reset_slot",
+      "retained_symbol_count": 2,
+      "retained_symbols": "000738|002085",
+      "candidate_symbol_count": 2,
+      "candidate_symbols": "000738|002085"
+    }
+  ],
+  "interpretation": [
+    "V1.34GD asks a narrower operational question after dual-slot permission becomes believable: how often does the current strict active-wave surface actually support two retained slots at once?",
+    "The answer is rare. Dual-slot coexistence currently appears on one local day, which means the branch should treat slot capacity as conditional supervision rather than as a default allocation mode."
+  ]
+}

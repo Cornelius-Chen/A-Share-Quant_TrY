@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ko_a_share_kn_label_direction_triage_v1",
+    "label_definition_count": 15,
+    "label_assignment_count": 58,
+    "authoritative_status": "label_workstream_complete_enough_to_freeze_as_bootstrap_and_shift_into_feature_registry_population"
+  },
+  "triage_rows": [
+    {
+      "label_component": "label_registry",
+      "direction": "retain_as_central_definition_surface_and_keep_new_labels_from_being_defined_inside_branch_specific_reports"
+    },
+    {
+      "label_component": "label_assignment_surface",
+      "direction": "use_for_fact_and_semantic_bootstrap_only_and_delay_state_and_governance_assignments_until_pti_exists"
+    },
+    {
+      "label_component": "state_label_backlog",
+      "direction": "feed_into_pti_workstream_for_future_stateful_assignment"
+    },
+    {
+      "label_component": "governance_label_backlog",
+      "direction": "feed_into_serving_and_replay_workstreams_for future action-surface binding"
+    },
+    {
+      "label_component": "next_frontier",
+      "direction": "move_into_feature_registry_population_using_central_label_registry_as_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KO converts the label audit into direction.",
+    "Labels are now centralized enough that future work should reuse the registry instead of continuing to mint ad hoc branch-local semantics."
+  ]
+}

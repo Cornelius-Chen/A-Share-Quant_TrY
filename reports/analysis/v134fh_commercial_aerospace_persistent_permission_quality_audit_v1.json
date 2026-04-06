@@ -1,0 +1,176 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fh_commercial_aerospace_persistent_permission_quality_audit_v1",
+    "persistent_session_count": 10,
+    "full_quality_count": 5,
+    "bridge_quality_count": 2,
+    "probe_quality_count": 3,
+    "session_csv": "data\\training\\commercial_aerospace_persistent_permission_quality_sessions_v1.csv",
+    "authoritative_rule": "persistent permission candidates are not flat; they split into full-quality, bridge-quality, and probe-quality tiers that should remain local supervision strata"
+  },
+  "quality_rows": [
+    {
+      "quality_tier": "full_quality_persistent_permission",
+      "session_count": 5,
+      "seed_allowed_count": 1,
+      "predicted_full_count": 5,
+      "predicted_probe_count": 0,
+      "mean_open_to_60m": 0.0448998,
+      "mean_close_loc_15m": 0.78126068
+    },
+    {
+      "quality_tier": "bridge_quality_persistent_permission",
+      "session_count": 2,
+      "seed_allowed_count": 0,
+      "predicted_full_count": 1,
+      "predicted_probe_count": 1,
+      "mean_open_to_60m": 0.0149588,
+      "mean_close_loc_15m": 0.61204013
+    },
+    {
+      "quality_tier": "probe_quality_persistent_permission",
+      "session_count": 3,
+      "seed_allowed_count": 1,
+      "predicted_full_count": 0,
+      "predicted_probe_count": 3,
+      "mean_open_to_60m": 0.02893129,
+      "mean_close_loc_15m": 0.50567662
+    }
+  ],
+  "session_rows": [
+    {
+      "trade_date": "20251218",
+      "month_bucket": "2025-12",
+      "symbol": "000738",
+      "predicted_label": "allowed_preheat_probe_add",
+      "is_seed_allowed": true,
+      "quality_tier": "probe_quality_persistent_permission",
+      "open_to_15m": 0.00727273,
+      "open_to_60m": 0.0161039,
+      "continuation_15_to_60m": 0.00883117,
+      "close_loc_15m": 0.56666667,
+      "burst_amount_share_15": 0.31276485
+    },
+    {
+      "trade_date": "20251218",
+      "month_bucket": "2025-12",
+      "symbol": "002465",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": false,
+      "quality_tier": "full_quality_persistent_permission",
+      "open_to_15m": 0.01260835,
+      "open_to_60m": 0.04334121,
+      "continuation_15_to_60m": 0.03073286,
+      "close_loc_15m": 0.6875,
+      "burst_amount_share_15": 0.27242633
+    },
+    {
+      "trade_date": "20251219",
+      "month_bucket": "2025-12",
+      "symbol": "002085",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": true,
+      "quality_tier": "full_quality_persistent_permission",
+      "open_to_15m": 0.01675603,
+      "open_to_60m": 0.0227882,
+      "continuation_15_to_60m": 0.00603217,
+      "close_loc_15m": 0.96153846,
+      "burst_amount_share_15": 0.3114404
+    },
+    {
+      "trade_date": "20251224",
+      "month_bucket": "2025-12",
+      "symbol": "000738",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": false,
+      "quality_tier": "bridge_quality_persistent_permission",
+      "open_to_15m": 0.00603015,
+      "open_to_60m": 0.01758794,
+      "continuation_15_to_60m": 0.01155779,
+      "close_loc_15m": 0.60869565,
+      "burst_amount_share_15": 0.37340117
+    },
+    {
+      "trade_date": "20251224",
+      "month_bucket": "2025-12",
+      "symbol": "002465",
+      "predicted_label": "allowed_preheat_probe_add",
+      "is_seed_allowed": false,
+      "quality_tier": "probe_quality_persistent_permission",
+      "open_to_15m": 0.00232019,
+      "open_to_60m": 0.02861562,
+      "continuation_15_to_60m": 0.02629543,
+      "close_loc_15m": 0.35714286,
+      "burst_amount_share_15": 0.22518798
+    },
+    {
+      "trade_date": "20251224",
+      "month_bucket": "2025-12",
+      "symbol": "600879",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": false,
+      "quality_tier": "full_quality_persistent_permission",
+      "open_to_15m": 0.02451613,
+      "open_to_60m": 0.06451613,
+      "continuation_15_to_60m": 0.04,
+      "close_loc_15m": 0.63333333,
+      "burst_amount_share_15": 0.31372572
+    },
+    {
+      "trade_date": "20251225",
+      "month_bucket": "2025-12",
+      "symbol": "000738",
+      "predicted_label": "allowed_preheat_probe_add",
+      "is_seed_allowed": false,
+      "quality_tier": "probe_quality_persistent_permission",
+      "open_to_15m": 0.01516634,
+      "open_to_60m": 0.04207436,
+      "continuation_15_to_60m": 0.02690802,
+      "close_loc_15m": 0.59322034,
+      "burst_amount_share_15": 0.24229671
+    },
+    {
+      "trade_date": "20251225",
+      "month_bucket": "2025-12",
+      "symbol": "002085",
+      "predicted_label": "allowed_preheat_probe_add",
+      "is_seed_allowed": false,
+      "quality_tier": "bridge_quality_persistent_permission",
+      "open_to_15m": 0.00389358,
+      "open_to_60m": 0.01232966,
+      "continuation_15_to_60m": 0.00843608,
+      "close_loc_15m": 0.61538462,
+      "burst_amount_share_15": 0.2230713
+    },
+    {
+      "trade_date": "20251225",
+      "month_bucket": "2025-12",
+      "symbol": "002465",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": false,
+      "quality_tier": "full_quality_persistent_permission",
+      "open_to_15m": 0.01114413,
+      "open_to_60m": 0.01485884,
+      "continuation_15_to_60m": 0.00371471,
+      "close_loc_15m": 0.84615385,
+      "burst_amount_share_15": 0.37708016
+    },
+    {
+      "trade_date": "20251225",
+      "month_bucket": "2025-12",
+      "symbol": "600879",
+      "predicted_label": "allowed_preheat_full_add",
+      "is_seed_allowed": false,
+      "quality_tier": "full_quality_persistent_permission",
+      "open_to_15m": 0.02932376,
+      "open_to_60m": 0.07899461,
+      "continuation_15_to_60m": 0.04967085,
+      "close_loc_15m": 0.77777778,
+      "burst_amount_share_15": 0.31697292
+    }
+  ],
+  "interpretation": [
+    "V1.34FH refines the persistent permission family into internal quality tiers.",
+    "The goal is not to authorize execution, only to stop treating all persistent permission candidates as equally strong add objects."
+  ]
+}

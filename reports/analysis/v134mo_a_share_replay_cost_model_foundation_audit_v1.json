@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "cost_model_count": 3,
+    "execution_journal_stub_count": 17,
+    "limit_hit_count": 22,
+    "halt_or_suspend_count": 0,
+    "status_csv": "data\\training\\a_share_replay_cost_model_foundation_status_v1.csv",
+    "authoritative_output": "a_share_replay_cost_model_foundation_materialized"
+  },
+  "rows": [
+    {
+      "component": "cost_model_registry",
+      "component_state": "materialized_foundation_stub",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_replay_cost_model_registry_v1.csv",
+      "coverage_note": "cost_model_count = 3"
+    },
+    {
+      "component": "shadow_execution_journal",
+      "component_state": "materialized_stub_surface",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_execution_journal_stub_v1.csv",
+      "coverage_note": "execution_journal_stub_count = 17"
+    },
+    {
+      "component": "cost_model_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\replay_registry\\a_share_replay_cost_model_residual_v1.csv",
+      "coverage_note": "limit_hit_count = 22"
+    }
+  ],
+  "interpretation": [
+    "Replay cost modeling is no longer entirely deferred: the first registry and stub execution journal now exist.",
+    "This reduces replay-side ambiguity even though lawful execution binding remains blocked."
+  ]
+}

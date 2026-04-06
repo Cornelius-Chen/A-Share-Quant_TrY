@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119s_cpo_pqr_three_run_adversarial_triage_v1",
+    "triage_scope": "V119P_V119Q_V119R",
+    "branch_name": "participation_turnover_elg_support_score_candidate",
+    "branch_status": "candidate_only",
+    "hard_candidate_allowed": false,
+    "candidate_only_allowed": true,
+    "soft_expectancy_component_allowed": false,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "authoritative_current_problem": "object_and_context_shift_failure_blocks_hard_candidate_status",
+    "recommended_next_posture": "downgrade_to_candidate_only_and_do_not_expand_family_until_a_new_orthogonal_fix_idea_exists"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "Symbol and role holdouts broke too hard for hard-candidate language, but the line is not fully dead because prior chronology evidence was genuinely strong."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "no_response_timeout",
+      "key_reason": "No response before freeze; authoritative decision falls back to the returned reviewer majority plus the measured failure surface."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "The branch must be downgraded from hard candidate because object-shift and context-leakage surfaces are too weak, but it still retains enough prior evidence to survive as candidate-only."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "downgrade_to_candidate_only",
+      "key_reason": "V119P mean/min symbol_holdout=0.4375/0.375, V119Q mean/min role_holdout=0.440476/0.333333, V119R entry/close leakage=0.375/0.666667."
+    }
+  ],
+  "interpretation": [
+    "V1.19S is the scheduled three-run adversarial review for the first non-replay hard candidate after symbol holdout, role holdout, and out-of-set leakage audits.",
+    "The point of this triage is simple: if object-shift and context-leakage surfaces break, hard-candidate language must be revoked quickly rather than defended.",
+    "The authoritative freeze downgrades the branch back to candidate-only because the failure surface is too clear, even though the branch still remains alive as a narrowed candidate family."
+  ]
+}

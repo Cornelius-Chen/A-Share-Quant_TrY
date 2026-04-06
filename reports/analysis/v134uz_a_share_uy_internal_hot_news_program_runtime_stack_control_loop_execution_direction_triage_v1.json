@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "contract_row_count": 1,
+    "runtime_consumer_mode": "passive_polling_only",
+    "contract_action": "keep_runtime_stack_passive_polling",
+    "sleep_strategy_seconds": "300",
+    "backoff_mode": "steady_runtime_stack_interval",
+    "authoritative_status": "continue_serving_runtime-stack_control-loop_execution_contract_above_the_runtime-envelope"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_execution_branch",
+      "direction": "keep_the_outer controller on steady passive polling when contract_action remains keep_runtime_stack_passive_polling"
+    },
+    {
+      "component": "elevated_execution_branch",
+      "direction": "tighten_runtime-stack polling and reopen the requested target when contract_action rotates into elevate_runtime_stack_loop_and_reopen_target or elevate_runtime_stack_polling_only"
+    },
+    {
+      "component": "interrupt_execution_branch",
+      "direction": "interrupt_the_outer controller immediately when contract_action rotates into interrupt_runtime_stack_loop_and_reopen_target"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost execution-facing contract for the runtime-stack control loop.",
+    "An outer controller can stop here and run the next cycle directly from the contract unless it needs deeper diagnostics."
+  ]
+}

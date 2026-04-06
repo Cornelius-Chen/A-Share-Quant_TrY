@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "driver_escalation_priority": "p2",
+    "signal_feed_mode": "passive_polling",
+    "interrupt_required": "false",
+    "alert_state": "no_driver_escalation",
+    "authoritative_output": "a_share_internal_hot_news_program_driver_escalation_signal_feed_materialized"
+  },
+  "rows": [
+    {
+      "component": "driver_escalation_signal_feed",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "signal_feed_mode",
+      "component_state": "materialized",
+      "metric": "signal_feed_mode",
+      "value": "passive_polling"
+    },
+    {
+      "component": "interrupt_required",
+      "component_state": "materialized",
+      "metric": "interrupt_required",
+      "value": "false"
+    },
+    {
+      "component": "alert_state",
+      "component_state": "materialized",
+      "metric": "alert_state",
+      "value": "no_driver_escalation"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest program-facing alert feed in the internal hot-news stack.",
+    "A consumer that only cares about whether it should stay passive, elevate attention, or interrupt can stop at this layer."
+  ]
+}

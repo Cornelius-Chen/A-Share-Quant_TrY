@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129u_bk0480_aerospace_aviation_control_seed_extraction_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "control_core_count": 2,
+    "eligibility_authority_count": 1,
+    "add_permission_support_count": 1,
+    "de_risk_watch_count": 1,
+    "authoritative_rule": "bk0480_must_start_with_a_minimal_dual_core_control_seed_before_any_local_universe_expansion_or_replay",
+    "recommended_next_posture": "audit_this_minimal_control_seed_before_any_bk0480_replay_unlock"
+  },
+  "eligibility_rows": [
+    {
+      "symbol": "000738",
+      "row_count": 85,
+      "avg_expected_upside": 0.566877,
+      "avg_non_junk": 0.58752,
+      "avg_drive_strength": 0.554291,
+      "avg_stability": 0.697026,
+      "avg_liquidity": 0.242995,
+      "avg_resonance": 0.566659,
+      "symbol_composite": 0.535895,
+      "role_label": "stable_core_primary",
+      "control_action": "eligibility_authority",
+      "control_reason": "higher composite, stronger stability, and deeper local snapshot support make 000738 the initial BK0480 authority gate"
+    }
+  ],
+  "add_permission_rows": [
+    {
+      "symbol": "600118",
+      "row_count": 23,
+      "avg_expected_upside": 0.471307,
+      "avg_non_junk": 0.573534,
+      "avg_drive_strength": 0.570155,
+      "avg_stability": 0.671597,
+      "avg_liquidity": 0.217343,
+      "avg_resonance": 0.577715,
+      "symbol_composite": 0.513609,
+      "role_label": "high_quality_dual_core_support",
+      "control_action": "add_permission_support",
+      "control_reason": "600118 remains part of the dual-core but starts as add-permission support rather than immediate authority"
+    }
+  ],
+  "de_risk_watch_rows": [
+    {
+      "symbol": "600118",
+      "row_count": 23,
+      "avg_expected_upside": 0.471307,
+      "avg_non_junk": 0.573534,
+      "avg_drive_strength": 0.570155,
+      "avg_stability": 0.671597,
+      "avg_liquidity": 0.217343,
+      "avg_resonance": 0.577715,
+      "symbol_composite": 0.513609,
+      "role_label": "high_quality_dual_core_support",
+      "control_action": "de_risk_watch",
+      "control_reason": "600118 has lower composite and lower liquidity inside the dual core, so it is the first local de-risk watch point"
+    }
+  ],
+  "interpretation": [
+    "V1.29U derives the first BK0480 control seed directly from the dual-core local role surface.",
+    "The board starts with one authority gate and one support/watch name, which keeps transfer discipline tighter than the broader commercial-aerospace control surface."
+  ]
+}

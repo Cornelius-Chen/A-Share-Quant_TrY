@@ -1,0 +1,484 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128a_commercial_aerospace_current_primary_attribution_v1",
+    "old_primary_variant": "veto_drag_trio_impulse_only",
+    "old_primary_final_equity": 1276010.378,
+    "old_primary_max_drawdown": 0.11536441,
+    "new_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "new_primary_final_equity": 1298439.6031,
+    "new_primary_max_drawdown": 0.09889703,
+    "equity_delta_new_minus_old": 22429.2251,
+    "drawdown_delta_new_minus_old": -0.01646738,
+    "top_symbol_improver": "688568",
+    "top_symbol_improver_delta": 11343.5962,
+    "largest_new_drawdown_window": "20260112->20260212"
+  },
+  "variant_rows": [
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "final_equity": 1276010.378,
+      "max_drawdown": 0.11536441,
+      "executed_order_count": 241
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "final_equity": 1298439.6031,
+      "max_drawdown": 0.09889703,
+      "executed_order_count": 236
+    }
+  ],
+  "symbol_attribution_rows": [
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "000738",
+      "buy_order_count": 7,
+      "sell_order_count": 31,
+      "gross_buy_notional": 386434.0,
+      "gross_sell_notional": 392754.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 5228.013,
+      "unrealized_pnl": 0,
+      "total_pnl": 5228.013,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "002085",
+      "buy_order_count": 4,
+      "sell_order_count": 15,
+      "gross_buy_notional": 161919.0,
+      "gross_sell_notional": 164356.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 1973.4917,
+      "unrealized_pnl": 0,
+      "total_pnl": 1973.4917,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "002465",
+      "buy_order_count": 4,
+      "sell_order_count": 16,
+      "gross_buy_notional": 163798.0,
+      "gross_sell_notional": 166878.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 2605.3031,
+      "unrealized_pnl": 0,
+      "total_pnl": 2605.3031,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "003009",
+      "buy_order_count": 3,
+      "sell_order_count": 10,
+      "gross_buy_notional": 120349.0,
+      "gross_sell_notional": 126247.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 5555.2443,
+      "unrealized_pnl": 0,
+      "total_pnl": 5555.2443,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "300045",
+      "buy_order_count": 3,
+      "sell_order_count": 13,
+      "gross_buy_notional": 160281.0,
+      "gross_sell_notional": 167484.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 6740.8176,
+      "unrealized_pnl": 0,
+      "total_pnl": 6740.8176,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "300342",
+      "buy_order_count": 5,
+      "sell_order_count": 13,
+      "gross_buy_notional": 139258.0,
+      "gross_sell_notional": 229910.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 90102.7014,
+      "unrealized_pnl": 0,
+      "total_pnl": 90102.7014,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "600118",
+      "buy_order_count": 3,
+      "sell_order_count": 11,
+      "gross_buy_notional": 121414.0,
+      "gross_sell_notional": 189740.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 67868.8166,
+      "unrealized_pnl": 0,
+      "total_pnl": 67868.8166,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "600879",
+      "buy_order_count": 5,
+      "sell_order_count": 16,
+      "gross_buy_notional": 160181.0,
+      "gross_sell_notional": 231852.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 71087.0896,
+      "unrealized_pnl": 0,
+      "total_pnl": 71087.0896,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "601698",
+      "buy_order_count": 6,
+      "sell_order_count": 19,
+      "gross_buy_notional": 296103.0,
+      "gross_sell_notional": 269351.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": -27510.4973,
+      "unrealized_pnl": 0,
+      "total_pnl": -27510.4973,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "688066",
+      "buy_order_count": 5,
+      "sell_order_count": 16,
+      "gross_buy_notional": 180222.0,
+      "gross_sell_notional": 187427.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 6689.4882,
+      "unrealized_pnl": 0,
+      "total_pnl": 6689.4882,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "688523",
+      "buy_order_count": 4,
+      "sell_order_count": 10,
+      "gross_buy_notional": 107048.0,
+      "gross_sell_notional": 127438.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 20055.6689,
+      "unrealized_pnl": 0,
+      "total_pnl": 20055.6689,
+      "held_day_count": 0
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "symbol": "688568",
+      "buy_order_count": 5,
+      "sell_order_count": 17,
+      "gross_buy_notional": 176505.0,
+      "gross_sell_notional": 202660.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 25614.2409,
+      "unrealized_pnl": 0,
+      "total_pnl": 25614.2409,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "000738",
+      "buy_order_count": 7,
+      "sell_order_count": 30,
+      "gross_buy_notional": 398874.0,
+      "gross_sell_notional": 402654.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 2661.641,
+      "unrealized_pnl": 0,
+      "total_pnl": 2661.641,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "002085",
+      "buy_order_count": 4,
+      "sell_order_count": 15,
+      "gross_buy_notional": 161919.0,
+      "gross_sell_notional": 164356.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 1973.4917,
+      "unrealized_pnl": 0,
+      "total_pnl": 1973.4917,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "002465",
+      "buy_order_count": 4,
+      "sell_order_count": 16,
+      "gross_buy_notional": 163798.0,
+      "gross_sell_notional": 166878.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 2605.3031,
+      "unrealized_pnl": 0,
+      "total_pnl": 2605.3031,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "003009",
+      "buy_order_count": 3,
+      "sell_order_count": 7,
+      "gross_buy_notional": 120349.0,
+      "gross_sell_notional": 128240.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 7554.4548,
+      "unrealized_pnl": 0,
+      "total_pnl": 7554.4548,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "300045",
+      "buy_order_count": 3,
+      "sell_order_count": 13,
+      "gross_buy_notional": 181988.0,
+      "gross_sell_notional": 188974.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 6467.77,
+      "unrealized_pnl": 0,
+      "total_pnl": 6467.77,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "300342",
+      "buy_order_count": 6,
+      "sell_order_count": 14,
+      "gross_buy_notional": 211258.0,
+      "gross_sell_notional": 298824.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 86835.0562,
+      "unrealized_pnl": 0,
+      "total_pnl": 86835.0562,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "600118",
+      "buy_order_count": 3,
+      "sell_order_count": 10,
+      "gross_buy_notional": 121414.0,
+      "gross_sell_notional": 198739.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 76851.3571,
+      "unrealized_pnl": 0,
+      "total_pnl": 76851.3571,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "600879",
+      "buy_order_count": 5,
+      "sell_order_count": 15,
+      "gross_buy_notional": 160181.0,
+      "gross_sell_notional": 238200.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 77423.4811,
+      "unrealized_pnl": 0,
+      "total_pnl": 77423.4811,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "601698",
+      "buy_order_count": 6,
+      "sell_order_count": 19,
+      "gross_buy_notional": 312103.0,
+      "gross_sell_notional": 285267.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": -27635.9461,
+      "unrealized_pnl": 0,
+      "total_pnl": -27635.9461,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "688066",
+      "buy_order_count": 5,
+      "sell_order_count": 16,
+      "gross_buy_notional": 180222.0,
+      "gross_sell_notional": 187427.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 6689.4882,
+      "unrealized_pnl": 0,
+      "total_pnl": 6689.4882,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "688523",
+      "buy_order_count": 4,
+      "sell_order_count": 10,
+      "gross_buy_notional": 107048.0,
+      "gross_sell_notional": 127438.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 20055.6689,
+      "unrealized_pnl": 0,
+      "total_pnl": 20055.6689,
+      "held_day_count": 0
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "symbol": "688568",
+      "buy_order_count": 5,
+      "sell_order_count": 16,
+      "gross_buy_notional": 176505.0,
+      "gross_sell_notional": 214023.0,
+      "ending_quantity": 0,
+      "ending_market_value": 0.0,
+      "realized_pnl": 36957.8371,
+      "unrealized_pnl": 0,
+      "total_pnl": 36957.8371,
+      "held_day_count": 0
+    }
+  ],
+  "drawdown_rows": [
+    {
+      "peak_trade_date": "20260112",
+      "trough_trade_date": "20260212",
+      "old_drawdown": 0.11536441,
+      "new_drawdown": 0.09889703,
+      "old_reduce_count": 10,
+      "old_reduce_notional": 438175.0,
+      "new_reduce_count": 13,
+      "new_reduce_notional": 738655.0
+    },
+    {
+      "peak_trade_date": "20251222",
+      "trough_trade_date": "20251223",
+      "old_drawdown": 0.03464422,
+      "new_drawdown": 0.03464422,
+      "old_reduce_count": 6,
+      "old_reduce_notional": 130004.0,
+      "new_reduce_count": 6,
+      "new_reduce_notional": 130004.0
+    },
+    {
+      "peak_trade_date": "20260106",
+      "trough_trade_date": "20260107",
+      "old_drawdown": 0.0225047,
+      "new_drawdown": 0.0225047,
+      "old_reduce_count": 4,
+      "old_reduce_notional": 15988.0,
+      "new_reduce_count": 4,
+      "new_reduce_notional": 15988.0
+    }
+  ],
+  "reason_rows": [
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "reduce",
+      "reason": "window_derisk_weak_drift_chop_proxy",
+      "count": 126
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "reduce",
+      "reason": "window_derisk_sentiment_overdrive_transition_proxy",
+      "count": 34
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "open",
+      "reason": "phase_geometry_preheat_probe",
+      "count": 33
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "reduce",
+      "reason": "window_derisk_risk_off_deterioration_proxy",
+      "count": 27
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "open",
+      "reason": "phase_geometry_preheat_full",
+      "count": 16
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "action": "open",
+      "reason": "phase_geometry_impulse_full",
+      "count": 5
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "reduce",
+      "reason": "window_derisk_weak_drift_chop_proxy",
+      "count": 116
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "reduce",
+      "reason": "window_derisk_sentiment_overdrive_transition_proxy",
+      "count": 34
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "open",
+      "reason": "phase_geometry_preheat_probe",
+      "count": 33
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "reduce",
+      "reason": "window_derisk_risk_off_deterioration_proxy",
+      "count": 27
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "open",
+      "reason": "phase_geometry_preheat_full",
+      "count": 16
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "open",
+      "reason": "phase_geometry_impulse_full",
+      "count": 6
+    },
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "action": "reduce",
+      "reason": "window_derisk_impulse_target",
+      "count": 4
+    }
+  ],
+  "interpretation": [
+    "V1.28A explains why the current commercial-aerospace primary reference beats the prior primary after the robustness freeze.",
+    "The attribution compares symbol PnL, top drawdown windows, and execution reasons under the same lawful EOD replay geometry."
+  ]
+}

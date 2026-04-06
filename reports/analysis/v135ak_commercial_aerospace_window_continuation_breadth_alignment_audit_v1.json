@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "row_count": 3,
+    "covered_window_count": 1,
+    "broad_confirmation_real_count": 1,
+    "continuation_not_upgraded_count": 1,
+    "breadth_failed_count": 1,
+    "full_window_hold_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_008",
+      "december_alignment_state": "broad_confirmation_real",
+      "january_alignment_state": "continuation_not_upgraded",
+      "february_alignment_state": "breadth_failed",
+      "final_window_judgement": "december_confirmation_real_but_january_not_upgraded_and_february_failed",
+      "final_training_admission": "subwindow_ready_but_full_window_not_ready",
+      "strict_supervisor_conclusion": "Window 008 is now evidence-locked as a real December confirmation followed by a weak January continuation and a failed February followthrough; it should train diffusion decay, not a durable primary leg."
+    }
+  ],
+  "interpretation": [
+    "Window 008 now has explicit board-breadth evidence across December, January, and February.",
+    "The strict result is not that the conference chain was fake, but that a real December confirmation did not upgrade into a durable continuation.",
+    "This artifact should prevent the model from confusing one strong catalyst month with a persistent multi-month primary leg."
+  ]
+}

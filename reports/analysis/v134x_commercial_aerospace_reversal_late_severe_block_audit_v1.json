@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134x_commercial_aerospace_reversal_late_severe_block_audit_v1",
+    "late_severe_cutoff_minute": 180,
+    "impacted_session_count": 1,
+    "base_same_day_loss_avoided_total": 25934.8882,
+    "adjusted_same_day_loss_avoided_total": 26915.5372,
+    "same_day_loss_avoided_delta": 980.649,
+    "impact_csv": "data\\training\\commercial_aerospace_reversal_late_severe_block_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_reversal_late_severe_block_audit_ready_for_local_cluster_direction_triage"
+  },
+  "impacted_rows": [
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "first_severe_minute": 185,
+      "base_same_day_loss_avoided": -493.944,
+      "adjusted_same_day_loss_avoided": 486.705,
+      "delta": 980.649
+    }
+  ],
+  "compare_rows": [
+    {
+      "variant": "current_wider_reference",
+      "same_day_loss_avoided_total": 25934.8882
+    },
+    {
+      "variant": "reversal_late_severe_blocked",
+      "same_day_loss_avoided_total": 26915.5372
+    }
+  ],
+  "interpretation": [
+    "V1.34X audits a single local refinement on the current wider reference: block the terminal severe leg when a reversal-predicted session only reaches severe very late in the day.",
+    "The goal is not another surface change; it is to test whether the only remaining negative cluster is an over-late terminal execution artifact."
+  ]
+}

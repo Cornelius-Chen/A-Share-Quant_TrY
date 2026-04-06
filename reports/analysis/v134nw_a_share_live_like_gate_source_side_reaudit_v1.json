@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "pending_manual_count": 0,
+    "unsatisfied_precondition_count": 1,
+    "active_review_queue_count": 3,
+    "closed_gate_count": 3,
+    "materialized_live_like_view_count": 2,
+    "replay_execution_backlog_present": true,
+    "live_like_ready_now": false,
+    "status_csv": "data\\training\\a_share_live_like_gate_source_side_reaudit_status_v1.csv",
+    "authoritative_output": "a_share_live_like_gate_source_side_reaudited_but_not_satisfied"
+  },
+  "rows": [
+    {
+      "gate_component": "source_activation",
+      "component_state": "manual_closure_completed",
+      "supporting_count": 0,
+      "blocker": ""
+    },
+    {
+      "gate_component": "source_preconditions",
+      "component_state": "runtime_only_unsatisfied",
+      "supporting_count": 1,
+      "blocker": "runtime_candidate_promotable_still_unsatisfied"
+    },
+    {
+      "gate_component": "review_layer",
+      "component_state": "ready_bootstrap",
+      "supporting_count": 3,
+      "blocker": ""
+    },
+    {
+      "gate_component": "governance_gates",
+      "component_state": "closed",
+      "supporting_count": 3,
+      "blocker": "execution_authority_gate_and_live_like_opening_gate_still_closed"
+    },
+    {
+      "gate_component": "serving_live_like",
+      "component_state": "materialized_but_blocked",
+      "supporting_count": 2,
+      "blocker": "live_like_views_materialized_but_governance_and_execution_gates_remain_closed"
+    },
+    {
+      "gate_component": "replay_binding",
+      "component_state": "blocked",
+      "supporting_count": 1,
+      "blocker": "execution_binding_backlog_present"
+    }
+  ],
+  "interpretation": [
+    "Source-side no longer has pending manual closure; manual batch-one review is complete.",
+    "Live-like remains blocked for source, governance, and replay reasons even after source-side structure is tightened."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122s_cpo_1min_historical_bridge_overlap_audit_v1",
+    "historical_reduce_surface_min_date": "2023-05-05",
+    "historical_reduce_surface_max_date": "2026-01-06",
+    "recent_1min_surface_min_date": "2026-03-24",
+    "recent_1min_surface_max_date": "2026-04-03",
+    "overlap_day_count": 0,
+    "direct_historical_bridge_allowed": false,
+    "recommended_next_posture": "recent_same_plane_stack_audit_only"
+  },
+  "overlap_rows": [
+    {
+      "surface_name": "historical_reduce_vs_hold_surface",
+      "min_date": "2023-05-05",
+      "max_date": "2026-01-06",
+      "date_count": 192
+    },
+    {
+      "surface_name": "recent_1min_proxy_label_surface",
+      "min_date": "2026-03-24",
+      "max_date": "2026-04-03",
+      "date_count": 9
+    },
+    {
+      "surface_name": "direct_overlap",
+      "min_date": null,
+      "max_date": null,
+      "date_count": 0
+    }
+  ],
+  "interpretation": [
+    "V1.22S checks whether the recent 1-minute plane can be directly attached to the older historical reduce-side surface.",
+    "The answer matters because a soft 1-minute downside component should not be smuggled into historical risk rules without date overlap.",
+    "If overlap is zero, the only honest next step is a recent same-plane stack audit, not a fake historical attachment."
+  ]
+}

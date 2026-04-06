@@ -1,0 +1,4 @@
+﻿replay_component,component_state,artifact_path,coverage_note
+shadow_surface,materialized_bootstrap,data\derived\info_center\replay\shadow\a_share_shadow_replay_surface_v1.csv,shadow_surface_row_count = 17
+shadow_lane_registry,materialized_read_only_lane,data\reference\info_center\replay_registry\a_share_shadow_lane_registry_v1.csv,shadow_context_ready_count = 0
+shadow_replay_backlog,backlog_materialized_not_bound_to_execution,data\reference\info_center\replay_registry\a_share_shadow_replay_backlog_v1.csv,blocked_count = 8

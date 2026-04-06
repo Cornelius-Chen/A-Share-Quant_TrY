@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "review_row_count": 1,
+    "scheduler_pending_count": 1,
+    "governance_closed_count": 1,
+    "ready_to_open_now_count": 0,
+    "silent_opening_allowed_count": 0,
+    "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_runtime_scheduler_governance_opening_review_surface_v1.csv",
+    "authoritative_output": "a_share_runtime_scheduler_governance_opening_review_surface_materialized"
+  },
+  "review_rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "deployment_candidate_state": "single_candidate_pending_governance_and_scheduler_opening",
+      "scheduler_step_state": "pending",
+      "live_like_gate_state": "closed",
+      "execution_gate_state": "closed",
+      "opening_review_state": "single_candidate_pending_scheduler_and_governance_manual_opening",
+      "ready_to_open_now": "False",
+      "silent_opening_allowed": "False",
+      "next_controlled_movement": "activate_scheduler_runtime_binding_then_reaudit_live_like_governance_opening",
+      "blocking_reason": "runtime binding still remains scheduler_stub_not_activated; governance and automation bindings must exist before live_like serving opens; information center remains research-shadow only"
+    }
+  ],
+  "interpretation": [
+    "Source-side opening work is now reduced to a single combined scheduler-plus-governance review surface for the html-article deployment candidate.",
+    "The candidate is not silently promotable: scheduler binding remains pending and both live_like and execution governance gates stay closed."
+  ]
+}

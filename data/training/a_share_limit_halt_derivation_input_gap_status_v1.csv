@@ -1,0 +1,4 @@
+﻿input_class,field_count,fields
+directly_present_in_raw_daily,2,trade_date|symbol
+missing_directly_in_raw_daily,9,board|is_st|is_suspended|limit_ratio|upper_limit_price|lower_limit_price|limit_up_hit|limit_down_hit|halt_or_suspend_flag
+semantic_dependency_cluster,4,board|is_st|is_suspended|halt_or_suspend_flag

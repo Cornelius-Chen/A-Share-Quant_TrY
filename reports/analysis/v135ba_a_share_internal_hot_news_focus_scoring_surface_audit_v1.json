@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "scored_row_count": 6,
+    "top_theme_slug": "defense_industry",
+    "top_watch_symbol": "600760",
+    "top_focus_total_score": 2.7476,
+    "top_cycle_state": "policy_persistent_second_wave_candidate",
+    "authoritative_output": "a_share_internal_hot_news_focus_scoring_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "focus_scoring_surface",
+      "component_state": "materialized",
+      "metric": "scored_row_count",
+      "value": "6"
+    },
+    {
+      "component": "focus_scoring_surface",
+      "component_state": "materialized",
+      "metric": "top_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "focus_scoring_surface",
+      "component_state": "materialized",
+      "metric": "top_focus_total_score",
+      "value": "2.7476"
+    },
+    {
+      "component": "focus_scoring_surface",
+      "component_state": "materialized",
+      "metric": "top_cycle_state",
+      "value": "policy_persistent_second_wave_candidate"
+    }
+  ],
+  "interpretation": [
+    "This scoring surface converts raw support counts into trading-aware focus scores.",
+    "The score blends source authority, policy-like wording, cycle persistence, second-wave retrigger potential, crowding exhaustion, and tradability.",
+    "It is the new scoring backbone for leaderboard and challenger review, so high-policy persistent themes can outrank exhausted one-spike themes even at similar support counts."
+  ]
+}

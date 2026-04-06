@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134if_commercial_aerospace_ie_second_carrier_direction_triage_v1",
+    "searched_symbol_count": 5,
+    "second_carrier_case_found": false,
+    "authoritative_status": "retain_negative_search_result_and_continue_blocking_true_selection_until_a_real_peer_carrier_case_exists"
+  },
+  "triage_rows": [
+    {
+      "search_target": "second_carrier_case",
+      "direction": "still_missing_continue_search_without_promoting_true_selection"
+    },
+    {
+      "search_target": "000547",
+      "direction": "retain_as_anchor_decoy_counterpanel_not_carrier"
+    },
+    {
+      "search_target": "301306",
+      "direction": "retain_as_follow_candidate_not_carrier"
+    },
+    {
+      "search_target": "002361_and_300342",
+      "direction": "retain_as_non_anchor_concentration_not_carrier"
+    }
+  ],
+  "interpretation": [
+    "V1.34IF converts the second-carrier search result into direction.",
+    "The correct next move is not to force a peer carrier but to keep the negative search result and preserve the block on true selection."
+  ]
+}

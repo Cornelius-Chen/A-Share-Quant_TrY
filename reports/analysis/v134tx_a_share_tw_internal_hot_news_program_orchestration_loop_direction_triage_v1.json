@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "orchestration_loop_signal_mode": "steady_orchestration_loop",
+    "signal_priority": "p2",
+    "reopen_target": "none",
+    "authoritative_status": "continue_serving_orchestration-loop_signal-feed_above_the_orchestration-packet_and_change-signal"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_loop_branch",
+      "direction": "keep_the_outer_orchestration_loop_on_steady polling when orchestration_loop_signal_mode remains steady_orchestration_loop"
+    },
+    {
+      "component": "tight_loop_branch",
+      "direction": "tighten_the_outer_orchestration_loop and reopen the requested target when orchestration_loop_signal_mode rotates into tight_orchestration_loop"
+    },
+    {
+      "component": "interrupt_loop_branch",
+      "direction": "interrupt_the_outer_orchestration_loop immediately when orchestration_loop_signal_mode rotates into interrupt_orchestration_loop"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest orchestration-loop routing surface in the internal hot-news stack.",
+    "An outer orchestrator can stop here without reading lower orchestration packet layers unless it needs deeper detail."
+  ]
+}

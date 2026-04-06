@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130f_bk0480_aerospace_aviation_ef_historical_bridge_direction_triage_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "bridge_strength": 0.946667,
+    "harmonization_status": "historical_bridge_only",
+    "authoritative_status": "freeze_bk0480_after_role_surface_v2_plus_historical_bridge_formalization_and_do_not_pretend_replay_readiness",
+    "authoritative_rule": "bk0480_should_now_be_treated_as_a_transfer_preparation_case_that_stopped_at_harmonization_block"
+  },
+  "direction_rows": [
+    {
+      "direction": "600760_historical_bridge",
+      "status": "retain_as_confirmation_memory_only",
+      "reason": "The bridge is real enough to keep, but not clean enough to widen current control authority."
+    },
+    {
+      "direction": "bk0480_control_refresh",
+      "status": "blocked",
+      "reason": "Historical bridge formalization did not solve same-plane harmonization, so control refresh remains blocked."
+    },
+    {
+      "direction": "bk0480_replay_unlock",
+      "status": "blocked",
+      "reason": "Replay still cannot be unlocked from confirmation language plus a historical bridge alone."
+    },
+    {
+      "direction": "next_primary_direction",
+      "status": "freeze_bk0480_and_shift_attention_to_shadow_next_board_preparation",
+      "reason": "BK0480 has now exhausted the lawful local expansion and bridge-formalization path without reaching replay readiness."
+    }
+  ],
+  "interpretation": [
+    "V1.30F closes the BK0480 local loop after historical bridge formalization.",
+    "The board taught a useful portability lesson, but it did not mature into a replay-capable local system."
+  ]
+}

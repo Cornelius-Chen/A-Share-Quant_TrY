@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "total_stub_row_count": 17,
+    "eligible_subset_count": 15,
+    "excluded_boundary_count": 2,
+    "eligible_subset_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_execution_eligible_subset_v1.csv",
+    "excluded_boundary_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_execution_eligible_subset_excluded_boundary_v1.csv",
+    "status_csv": "data\\training\\a_share_shadow_execution_eligible_subset_status_v1.csv",
+    "authoritative_output": "a_share_shadow_execution_eligible_subset_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_execution_eligible_subset",
+      "component_state": "materialized_shadow_only_eligible_subset",
+      "eligible_subset_count": 15,
+      "excluded_boundary_count": 2
+    },
+    {
+      "component": "boundary_exclusion_policy",
+      "component_state": "exclude_external_boundary_residuals_from_shadow_execution_candidate_subset",
+      "eligible_subset_count": 15,
+      "excluded_boundary_count": 2
+    }
+  ],
+  "interpretation": [
+    "The shadow-only corrected binding view is now strong enough to support an eligible execution subset without touching the base execution stub.",
+    "That leaves the two external boundary residuals explicitly excluded rather than letting them keep the full 17-row stub frozen as one undifferentiated unit."
+  ]
+}

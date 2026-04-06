@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134at_commercial_aerospace_as_local_deferral_cluster_triage_v1",
+    "authoritative_status": "freeze_current_local_deferral_and_stop_same_family_search",
+    "triage_csv": "data\\training\\commercial_aerospace_as_local_deferral_cluster_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "local_deferral_cluster_size",
+      "status": "singular_residue",
+      "detail": "matched_count = 1, match_share = 0.08333333"
+    },
+    {
+      "component": "same_family_local_refinement_search",
+      "status": "stopline_reached",
+      "detail": "Do not keep mining the same false-first-reversal family once only a singular residue remains."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The singularity result does not change replay readiness."
+    }
+  ],
+  "interpretation": [
+    "V1.34AT decides whether the promoted local deferral is the last worthwhile point-in-time refinement in this family.",
+    "A singular residue means the branch should freeze the current refinement and stop spending more budget on the same family."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "scheduler_mode_change": "stable",
+    "contract_action_change": "stable",
+    "sleep_strategy_change": "stable",
+    "interrupt_required_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_scheduler_packet_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "scheduler_packet_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "scheduler_mode_change",
+      "component_state": "materialized",
+      "metric": "scheduler_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "contract_action_change",
+      "component_state": "materialized",
+      "metric": "contract_action_change",
+      "value": "stable"
+    },
+    {
+      "component": "sleep_strategy_change",
+      "component_state": "materialized",
+      "metric": "sleep_strategy_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This layer sits above the scheduler packet and isolates whether scheduling behavior itself materially changed.",
+    "A scheduler can watch it to avoid reopening the packet unless cadence or interrupt behavior changed."
+  ]
+}

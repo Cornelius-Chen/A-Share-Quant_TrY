@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128g_commercial_aerospace_fgh_post_promotion_direction_triage_v1",
+    "current_primary_variant": "mainwin_overdrive_075_impulse_075",
+    "current_primary_final_equity": 1306704.6132,
+    "current_primary_max_drawdown": 0.09309927,
+    "main_window_delta_new_minus_old": 23693.6184,
+    "post_window_delta_new_minus_old": -2917.1643,
+    "authoritative_next_step": "post_window_tail_repair",
+    "secondary_followup": "return_to_main_window_only_if_tail_branch_hits_stopline_fast"
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "B_post_window_tail_repair",
+      "reason": "Main-window edge has already been harvested repeatedly; the remaining visible leak is in the post-window tail."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "A_main_window_downside_grammar",
+      "reason": "Main-window economics are still larger in absolute terms, but this is now the minority view."
+    },
+    {
+      "subagent": "James",
+      "vote": "B_post_window_tail_repair",
+      "reason": "The post-window giveback is now the cleanest remaining repair target after the main-window promotion succeeded."
+    }
+  ],
+  "interpretation": [
+    "V1.28G resolves the first direction split after the main-window deeper downside variant was promoted to current primary.",
+    "The majority view is to move to post-window tail repair because the main-window branch has already delivered multiple consecutive frontier improvements."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129b_commercial_aerospace_hierarchical_state_machine_pilot_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "label_count": 5,
+    "high_intensity_train_count": 0,
+    "high_intensity_test_count": 81,
+    "full_pre_train_count": 0,
+    "full_train_count": 0,
+    "best_high_intensity_threshold": null,
+    "balanced_accuracy": null,
+    "authoritative_status": "blocked_due_to_zero_train_high_intensity_support",
+    "blocking_reason": "current chronology split places full_pre and full entirely in the test segment, so the hierarchical pilot cannot be lawfully trained"
+  },
+  "label_rows": [
+    {
+      "label": "de_risk",
+      "test_count": 114,
+      "recall": null
+    },
+    {
+      "label": "full",
+      "test_count": 36,
+      "recall": null
+    },
+    {
+      "label": "full_pre",
+      "test_count": 45,
+      "recall": null
+    },
+    {
+      "label": "neutral_hold",
+      "test_count": 859,
+      "recall": null
+    },
+    {
+      "label": "probe",
+      "test_count": 182,
+      "recall": null
+    }
+  ],
+  "interpretation": [
+    "V1.29B tests a hierarchical state-machine pilot: detect high-intensity states jointly, then split them by lawful phase context.",
+    "The current chronology geometry blocks the pilot because full-pre/full have zero train support; split design must be repaired before hierarchical replay pilots continue."
+  ]
+}

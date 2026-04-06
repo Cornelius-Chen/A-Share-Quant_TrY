@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131j_commercial_aerospace_intraday_collection_change_gate_v1",
+    "required_artifact_count": 4,
+    "present_artifact_count": 0,
+    "missing_artifact_count": 4,
+    "authoritative_status": "intraday_collection_change_gate_installed",
+    "authoritative_rule": "only reopen commercial-aerospace intraday override modeling after all required minute artifacts are present"
+  },
+  "artifact_rows": [
+    {
+      "symbol": "000738",
+      "required_role": "reversal_watch",
+      "priority": "medium",
+      "expected_artifact_type": "recent_1min_local_csv",
+      "expected_artifact_path": "data\\raw\\minute_bars\\sina_000738_recent_1min_v1.csv",
+      "currently_present": false,
+      "change_event_that_opens_gate": "000738_minute_file_arrives"
+    },
+    {
+      "symbol": "300045",
+      "required_role": "reversal_watch",
+      "priority": "medium",
+      "expected_artifact_type": "recent_1min_local_csv",
+      "expected_artifact_path": "data\\raw\\minute_bars\\sina_300045_recent_1min_v1.csv",
+      "currently_present": false,
+      "change_event_that_opens_gate": "300045_minute_file_arrives"
+    },
+    {
+      "symbol": "300342",
+      "required_role": "override_positive",
+      "priority": "high",
+      "expected_artifact_type": "recent_1min_local_csv",
+      "expected_artifact_path": "data\\raw\\minute_bars\\sina_300342_recent_1min_v1.csv",
+      "currently_present": false,
+      "change_event_that_opens_gate": "300342_minute_file_arrives"
+    },
+    {
+      "symbol": "601698",
+      "required_role": "override_positive",
+      "priority": "high",
+      "expected_artifact_type": "recent_1min_local_csv",
+      "expected_artifact_path": "data\\raw\\minute_bars\\sina_601698_recent_1min_v1.csv",
+      "currently_present": false,
+      "change_event_that_opens_gate": "601698_minute_file_arrives"
+    }
+  ],
+  "interpretation": [
+    "V1.31J converts the intraday collection manifest into an explicit file-based change gate.",
+    "This prevents premature intraday modeling under partial minute coverage and makes the unblock condition mechanical."
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118y_cpo_sustained_participation_false_positive_control_external_audit_v1",
+    "candidate_name": "sustained_participation_non_chase_prior_heat_late_fade_control_candidate",
+    "positive_mean_score": 1029421400.0,
+    "negative_mean_score": 372507818.181818,
+    "controlled_gap_positive_minus_negative": 656913581.818182,
+    "best_threshold": 592782000.0,
+    "best_balanced_accuracy": 0.727273,
+    "recommended_next_posture": "time_split_validate_controlled_score_only_if_materially_better_than_v118u"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1729433000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.0,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.454545
+    },
+    {
+      "threshold": 1540669000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.0,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.409091
+    },
+    {
+      "threshold": 1529122000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.509091
+    },
+    {
+      "threshold": 1281705000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": 1261331000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": 1201429000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 983834000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.618182
+    },
+    {
+      "threshold": 828084000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.572727
+    },
+    {
+      "threshold": 759664000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.672727
+    },
+    {
+      "threshold": 641231000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.627273
+    },
+    {
+      "threshold": 592782000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.727273
+    },
+    {
+      "threshold": -423484000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.681818
+    },
+    {
+      "threshold": -498612000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.636364
+    },
+    {
+      "threshold": -506884000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.590909
+    },
+    {
+      "threshold": -659010000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -1016601000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.18Y asks one narrow question: does the prior-heat/late-fade control materially improve broader add-pool discrimination for the sustained-participation branch?",
+    "If not, this same-family control should be dropped immediately instead of being nursed into another tunnel.",
+    "If yes, it still remains candidate-only until the next chronology check."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "runtime_row_count": 3,
+    "promotable_now_count": 0,
+    "authoritative_status": "runtime_activation_depends_on_batch_one_manual_closure_not_scheduler_only"
+  },
+  "triage_rows": [
+    {
+      "component": "html_article_runtime",
+      "direction": "keep_first_runtime_candidate_blocked_until_batch_one_manual_fields_close"
+    },
+    {
+      "component": "social_column_runtime",
+      "direction": "retain_social_column_runtime_as_review_only_nonpromotive"
+    },
+    {
+      "component": "official_source_runtime",
+      "direction": "retain_official_source_runtime_as_future_reserved_until_primary_hosts_exist"
+    }
+  ],
+  "interpretation": [
+    "Runtime promotion should no longer be read as a pure scheduler problem.",
+    "The first real runtime step is downstream of batch-one manual closure."
+  ]
+}

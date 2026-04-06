@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ii_commercial_aerospace_symbol_followthrough_supervision_audit_v1",
+    "symbol_count": 4,
+    "persistent_followthrough_count": 1,
+    "moderate_followthrough_count": 2,
+    "weak_followthrough_count": 1,
+    "followthrough_csv": "data\\training\\commercial_aerospace_symbol_followthrough_supervision_v1.csv",
+    "authoritative_rule": "a dedicated followthrough surface now exists, but it remains symbol-level: strong followthrough can occur without any legal board unlock, so followthrough alone still cannot promote capital_true_selection"
+  },
+  "followthrough_rows": [
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "separated_role": "non_anchor_crowded_concentration_candidate",
+      "post_lockout_max_return_from_start": 0.06008584,
+      "post_lockout_drawdown_from_max_to_end": -0.08964719,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "followthrough_label": "weak_or_nonpersistent_followthrough",
+      "followthrough_reading": "symbol either fails to build enough followthrough or gives too much back to support stronger role promotion"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "separated_role": "non_anchor_outlier_breakout_candidate",
+      "post_lockout_max_return_from_start": 0.20207965,
+      "post_lockout_drawdown_from_max_to_end": -0.07834177,
+      "max_date_zone": "lockout_window",
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "followthrough_reading": "symbol has visible followthrough strength, but it remains symbol-level and does not reopen board participation"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "separated_role": "event_backed_high_beta_follow_candidate",
+      "post_lockout_max_return_from_start": 0.19334903,
+      "post_lockout_drawdown_from_max_to_end": -0.10419236,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "followthrough_reading": "symbol has visible followthrough strength, but it remains symbol-level and does not reopen board participation"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "separated_role": "event_backed_attention_carrier_candidate",
+      "post_lockout_max_return_from_start": 0.45173383,
+      "post_lockout_drawdown_from_max_to_end": -0.09619109,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "followthrough_label": "persistent_symbol_followthrough_without_board_unlock",
+      "followthrough_reading": "symbol carries a durable local followthrough path, but only in raw-only space without legal board unlock"
+    }
+  ],
+  "interpretation": [
+    "V1.34II opens the first dedicated followthrough supervision surface instead of leaving followthrough implicit.",
+    "The layer is intentionally conservative: it names symbol-level persistence while keeping board unlock and true selection blocked."
+  ]
+}

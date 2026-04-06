@@ -1,0 +1,167 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116v_cpo_expanded_window_candidate_coverage_reaudit_v1",
+    "expanded_window_day_count": 10,
+    "days_with_add_candidate_rows": 9,
+    "days_with_held_mature_symbols": 9,
+    "true_coverage_gap_day_count_after_rebuild": 0,
+    "recommended_next_posture": "rerun_corrected_cooled_shadow_expanded_window_validation_on_rebuilt_candidate_base_if_true_gap_days_are_cleared"
+  },
+  "coverage_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.153414,
+      "held_mature_symbols": [],
+      "held_mature_symbol_count": 0,
+      "add_candidate_row_count": 0,
+      "add_candidate_symbols": [],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-05-18",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.147434,
+      "held_mature_symbols": [
+        "300502"
+      ],
+      "held_mature_symbol_count": 1,
+      "add_candidate_row_count": 1,
+      "add_candidate_symbols": [
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-04-17",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.111344,
+      "held_mature_symbols": [
+        "300502"
+      ],
+      "held_mature_symbol_count": 1,
+      "add_candidate_row_count": 1,
+      "add_candidate_symbols": [
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-11-07",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.067488,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-09-22",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.049504,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-06-14",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.044335,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-01-18",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.036908,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-01-23",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.03017,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-12-08",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.028668,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-02-06",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.027412,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    }
+  ],
+  "interpretation": [
+    "V1.16V reruns the V116S-style coverage audit on the merged PCA band table after the expanded-window action-timepoint rebuild.",
+    "The purpose is not to judge signal quality yet, but to verify whether the true held-mature coverage gaps on 2023-11-07, 2024-01-18, and 2024-01-23 have actually been repaired.",
+    "Only after the coverage layer is repaired does it make sense to re-run visible-only candidate validation on the expanded window."
+  ]
+}

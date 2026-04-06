@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "baseline_missing_count": 3,
+    "trial_missing_count": 2,
+    "trial_improvement_count": 1,
+    "authoritative_status": "shadow_effective_trade_date_trial_is_directionally_useful_but_must_remain_shadow_only"
+  },
+  "triage_rows": [
+    {
+      "component": "trial_result",
+      "direction": "retain_the_trial_as_evidence_that_off_calendar_alignment_can_reduce_one_missing_context_row"
+    },
+    {
+      "component": "scope_boundary",
+      "direction": "keep_effective_trade_date_logic_in_shadow_only_scope_and_do_not_promote_it_into_pti_timestamp_history"
+    },
+    {
+      "component": "next_move",
+      "direction": "if_extended_further_build_a_shadow_only_corrected_binding_view_instead_of_mutating_the_base_binding_registry"
+    }
+  ],
+  "interpretation": [
+    "The trial is useful because it converts the off-calendar slice into a bound date-level context under a shadow-only auxiliary query date.",
+    "That is enough to justify a shadow-only corrected binding experiment, but not enough to rewrite the base PTI or execution-facing layers."
+  ]
+}

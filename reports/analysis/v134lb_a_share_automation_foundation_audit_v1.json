@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lb_a_share_automation_foundation_audit_v1",
+    "ingest_job_count": 3,
+    "pipeline_job_count": 3,
+    "review_job_count": 3,
+    "retention_job_count": 3,
+    "orchestration_flow_count": 2,
+    "automation_status_csv": "data\\training\\a_share_automation_foundation_status_v1.csv",
+    "authoritative_output": "a_share_automation_foundation_ready_for_direction_triage"
+  },
+  "automation_rows": [
+    {
+      "automation_component": "ingest_jobs",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_ingest_job_registry_v1.csv",
+      "coverage_note": "ingest_job_count = 3"
+    },
+    {
+      "automation_component": "pipeline_jobs",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_pipeline_job_registry_v1.csv",
+      "coverage_note": "pipeline_job_count = 3"
+    },
+    {
+      "automation_component": "review_jobs",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_review_job_registry_v1.csv",
+      "coverage_note": "review_job_count = 3"
+    },
+    {
+      "automation_component": "retention_jobs",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_retention_job_registry_v1.csv",
+      "coverage_note": "retention_job_count = 3"
+    },
+    {
+      "automation_component": "orchestration_flows",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_orchestration_registry_v1.csv",
+      "coverage_note": "orchestration_flow_count = 2"
+    }
+  ],
+  "interpretation": [
+    "V1.34LB completes the first automation workstream pass by defining reproducible ingest, pipeline, review, retention, and orchestration registries.",
+    "Automation remains contract-first rather than blindly active, which is appropriate because governance was only just materialized."
+  ]
+}

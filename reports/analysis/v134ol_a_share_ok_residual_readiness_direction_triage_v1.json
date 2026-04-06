@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "backlog_group_count": 5,
+    "internally_actionable_group_count": 2,
+    "externally_dependent_group_count": 1,
+    "authoritative_status": "residual_backlog_should_now_be_steered_by_group_readiness"
+  },
+  "triage_rows": [
+    {
+      "component": "source_internal_manual",
+      "direction": "treat_source_manual_fill_as_the_only_immediate_actionable_closure_lane"
+    },
+    {
+      "component": "source_promotion_preconditions",
+      "direction": "do_not_separate_preconditions_from_manual_fill_they_close_together"
+    },
+    {
+      "component": "replay_internal_build",
+      "direction": "retain_replay_internal_build_as_blocked_even_though_its_preconditions_are_explicit"
+    },
+    {
+      "component": "replay_external_source",
+      "direction": "treat_replay_external_source_as_future_frontier_not_current_build_lane"
+    },
+    {
+      "component": "governance_hold",
+      "direction": "retain_governance_holds_closed_until_other_groups_change_state"
+    }
+  ],
+  "interpretation": [
+    "The next meaningful internal work should stay concentrated on source-side manual closure rather than being diffused across every residual group.",
+    "This keeps the project from drifting into replay and governance lines that are already structurally specified but not currently actionable."
+  ]
+}

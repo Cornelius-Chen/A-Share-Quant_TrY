@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120h_cpo_research_test_baseline_single_panel_dashboard_v1",
+    "dashboard_png": "reports\\analysis\\v120g_cpo_research_test_baseline_dashboard_v1.png",
+    "daily_state_csv": "data\\training\\cpo_research_test_baseline_daily_state_v1.csv",
+    "action_strip_csv": "data\\training\\cpo_research_test_baseline_action_strip_v1.csv",
+    "research_test_final_equity": 5844604.996,
+    "research_test_max_drawdown": 0.493548,
+    "final_cash": 401633.496,
+    "action_row_count": 20,
+    "held_segment_count": 4,
+    "single_panel_dashboard_png": "reports\\analysis\\v120h_cpo_research_test_baseline_single_panel_dashboard_v1.png"
+  },
+  "interpretation": [
+    "Single-panel replacement for the earlier split dashboard.",
+    "Equity, cash, held-symbol segments, and dated action markers are all plotted in one figure."
+  ]
+}

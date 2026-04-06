@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "primary_sample_row_count": 20,
+    "probe_sample_row_count": 50,
+    "primary_theme_hit_count": 1,
+    "probe_theme_hit_count": 13,
+    "primary_symbol_route_count": 1,
+    "probe_symbol_route_count": 13,
+    "primary_unique_theme_count": 1,
+    "probe_unique_theme_count": 5,
+    "probe_value_state": "probe_lift_confirmed",
+    "authoritative_output": "a_share_internal_hot_news_second_source_probe_comparison_materialized",
+    "authoritative_status": "prepare_controlled_merge_review_for_sina_probe_only_if_duplicate_control_is_added_to_primary_fastlane"
+  },
+  "triage_rows": [
+    {
+      "component": "probe_lift",
+      "direction": "treat sina probe as empirically useful because it raises real theme-hit and symbol-route diversity over the cls-only sample"
+    },
+    {
+      "component": "merge_gate",
+      "direction": "do not merge probe directly into the primary fastlane until duplicate-control logic is made explicit"
+    },
+    {
+      "component": "next_step",
+      "direction": "add controlled cls-sina merge and dedup review rather than adding a third source immediately"
+    }
+  ],
+  "interpretation": [
+    "The second source now has measurable lift, so the question is no longer whether it is useful.",
+    "The gating issue is duplicate management, not theme-hit value."
+  ]
+}

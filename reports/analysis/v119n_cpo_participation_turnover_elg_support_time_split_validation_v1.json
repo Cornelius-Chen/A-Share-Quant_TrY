@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119n_cpo_participation_turnover_elg_support_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.875,
+    "min_test_balanced_accuracy": 0.833333,
+    "stability_posture": "candidate_stable_enough_for_next_adversarial_review",
+    "recommended_next_posture": "send_LMN_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 9,
+      "test_row_count": 7,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.388352,
+      "train_best_balanced_accuracy": 0.9,
+      "test_balanced_accuracy": 0.916667,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.833333
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 12,
+      "test_row_count": 4,
+      "train_positive_count": 2,
+      "test_positive_count": 3,
+      "train_best_threshold": 1.181895,
+      "train_best_balanced_accuracy": 0.95,
+      "test_balanced_accuracy": 0.833333,
+      "test_positive_recall": 0.666667,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 11,
+      "test_row_count": 5,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.388352,
+      "train_best_balanced_accuracy": 0.928571,
+      "test_balanced_accuracy": 0.875,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.19N checks whether the extra-large-flow support term actually helps chronology rather than just flattering the full pool.",
+    "The critical test is whether the 2024 holdout improves without destroying the other year buckets.",
+    "This closes the first three-run block for the ELG-supported combo line."
+  ]
+}

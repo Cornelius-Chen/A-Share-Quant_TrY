@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "summary_row_count": 1,
+    "watchlist_row_count": 1,
+    "top_watch_symbol": "601899",
+    "top_watch_primary_theme_slug": "gold",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "601899",
+    "authoritative_status": "continue_serving_single-row_symbol_watch_summary_to_fast_symbol-first_consumers"
+  },
+  "triage_rows": [
+    {
+      "component": "fast_symbol_consumer",
+      "direction": "prefer_this_summary_when_the_consumer_wants_the_top_watch_symbols_without_opening_the_full_watchlist_packet"
+    },
+    {
+      "component": "full_symbol_consumer",
+      "direction": "fall_back_to_the_symbol_watchlist_packet_when_rank-by-rank_symbol_rows_or_richer_fields_are_needed"
+    }
+  ],
+  "interpretation": [
+    "This summary is the fastest symbol-level opportunity entrypoint built so far on the hot-news line.",
+    "It keeps the first-pass watch decision on one row while preserving a path back to the fuller symbol watchlist packet.",
+    "The top-five payload is governed by primary-theme logic, so the consumer does not need to re-resolve overlap at summary time."
+  ]
+}

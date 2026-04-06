@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "challenger_row_count": 5,
+    "current_primary_theme_slug": "consumer_staples",
+    "current_primary_watch_symbol": "600887",
+    "top_challenger_theme_slug": "defense_industry",
+    "top_challenger_symbol": "600760",
+    "top_challenger_support_row_count": 5,
+    "authoritative_status": "challenger_focus_board_materialized_for_next_rotation_review"
+  },
+  "triage_rows": [
+    {
+      "component": "current_primary_focus",
+      "direction": "keep the accepted primary focus as the live anchor while monitoring the challenger board for any larger multi-row challenger cluster."
+    },
+    {
+      "component": "challenger_focus_board",
+      "direction": "use the top challenger row count and source-family spread as the first quick screen before opening a new accepted-rotation preview."
+    },
+    {
+      "component": "next_rotation_governance",
+      "direction": "only promote a challenger after comparing its replay support board against the current primary-focus replay tracker rather than reacting to a single candidate row."
+    }
+  ],
+  "interpretation": [
+    "The current primary focus now has a direct challenger board beside it.",
+    "This makes later consumer rotation decisions easier to defend because the incumbent and challenger can be compared on replay support instead of only headline intuition."
+  ]
+}

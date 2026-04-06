@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122l_cpo_1min_supportive_add_vs_reduce_separation_discovery_v1",
+    "sample_count": 840,
+    "add_probe_count": 368,
+    "reduce_probe_count": 472,
+    "discovery_mean_gap_add_minus_reduce": 0.02363877,
+    "threshold_q75": 0.33274346,
+    "add_rate_above_threshold": 0.3952381,
+    "recommended_next_posture": "time_split_audit_supportive_add_vs_reduce_score"
+  },
+  "score_rows": [
+    {
+      "group": "add_probe",
+      "sample_count": 368,
+      "mean_score": 0.01328274
+    },
+    {
+      "group": "reduce_probe",
+      "sample_count": 472,
+      "mean_score": -0.01035603
+    }
+  ],
+  "interpretation": [
+    "V1.22L is the first direct add-vs-reduce separation discovery inside the surviving supportive 1-minute family.",
+    "The goal is not to create a new family, but to test whether the surviving family can be narrowed into a cleaner add-skew subspace.",
+    "The next required step is time-split audit on this separation score."
+  ]
+}

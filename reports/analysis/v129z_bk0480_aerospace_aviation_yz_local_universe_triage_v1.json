@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129z_bk0480_aerospace_aviation_yz_local_universe_triage_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "confirmation_candidate_count": 1,
+    "quarantine_candidate_count": 2,
+    "reject_candidate_count": 1,
+    "authoritative_status": "admit_600760_as_confirmation_only_keep_002273_601989_quarantined_and_reject_000099_for_now",
+    "authoritative_rule": "bk0480_local_expansion_can_widen_the_role_surface_but_not_yet_the_control_authority_surface"
+  },
+  "direction_rows": [
+    {
+      "direction": "confirmation_admission",
+      "status": "admit_600760_confirmation_only",
+      "reason": "600760 is the only non-core name with strong BK0480-native evidence across both historical snapshot and timeline captures."
+    },
+    {
+      "direction": "quarantine_stack",
+      "status": "retain_002273_and_601989",
+      "reason": "Both names have enough BK0480-native timeline support to keep under watch, but not enough snapshot support to upgrade today."
+    },
+    {
+      "direction": "reject_or_mirror_pending",
+      "status": "retain_000099_as_reject_pending",
+      "reason": "000099 has too many junk/sell signatures under BK0480 approval to justify confirmation admission."
+    },
+    {
+      "direction": "replay_unlock",
+      "status": "still_blocked",
+      "reason": "The board now has a slightly wider local surface, but not enough harmonized evidence to unlock replay or supervised training."
+    },
+    {
+      "direction": "next_primary_direction",
+      "status": "refresh_role_surface_then_harmonize_control_surface",
+      "reason": "The next lawful move is to refresh the BK0480 role surface and then re-audit a harmonized control surface."
+    }
+  ],
+  "interpretation": [
+    "V1.29Z freezes BK0480 local universe expansion into one admission, two quarantines, and one rejection.",
+    "The board may widen locally, but replay remains blocked until the wider surface is harmonized into a clean control surface."
+  ]
+}

@@ -1,0 +1,2 @@
+﻿window_count,primary_fit_count,auxiliary_fit_count,reference_only_count,locked_holdout_count,strict_supervisor_conclusion
+10,2,4,3,1,"This package intentionally keeps window 002 locked out of fitting, keeps 007/008/010 as reference only, uses 001/004/006/009 as auxiliary training context, and promotes only the cleanest released negative windows into primary fitting."

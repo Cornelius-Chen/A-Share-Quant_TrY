@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "overlay_row_count": 15,
+    "excluded_boundary_count": 2,
+    "authoritative_status": "shadow_execution_candidate_journal_overlay_is_useful_for_internal_replay_build_but_must_remain_shadow_only"
+  },
+  "triage_rows": [
+    {
+      "component": "candidate_journal_overlay",
+      "direction": "retain_as_shadow_only_candidate_journal_surface_for_the_15_eligible_rows"
+    },
+    {
+      "component": "boundary_exclusions",
+      "direction": "retain_as_external_boundary_exclusions_outside_the_candidate_journal_overlay"
+    },
+    {
+      "component": "promotion_boundary",
+      "direction": "do_not_treat_the_candidate_journal_overlay_as_execution_opening_or_live_like_authority"
+    }
+  ],
+  "interpretation": [
+    "The overlay is the first journal-shaped replay surface that excludes only the two external boundary rows.",
+    "That improves internal replay build clarity, but it remains a shadow-only construct and not an execution permission layer."
+  ]
+}

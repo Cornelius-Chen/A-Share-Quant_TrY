@@ -1,0 +1,529 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134el_commercial_aerospace_intraday_add_point_in_time_seed_feed_v1",
+    "seed_session_count": 55,
+    "feed_row_count": 3300,
+    "lineage_null_count": 0,
+    "lagged_null_count": 976,
+    "output_csv": "data\\training\\commercial_aerospace_intraday_add_point_in_time_seed_feed_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_point_in_time_seed_feed_ready_for_direction_triage"
+  },
+  "session_rows": [
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "003009",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688523",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688568",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688066",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "300045",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "003009",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688066",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688568",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "000738",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "300342",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "000738",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "600879",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "601698",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "600118",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "300342",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "601698",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "600879",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "002465",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "002085",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "002465",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "002085",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "600118",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251128",
+      "symbol": "688523",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251201",
+      "symbol": "688568",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251202",
+      "symbol": "688568",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "688066",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "300342",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "000738",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "600879",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "688066",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "300342",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "601698",
+      "seed_family": "preheat_probe_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "002465",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "600879",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "003009",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "688523",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "601698",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251209",
+      "symbol": "300045",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251209",
+      "symbol": "600118",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251210",
+      "symbol": "002465",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251210",
+      "symbol": "600879",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251211",
+      "symbol": "300342",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251216",
+      "symbol": "688568",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251218",
+      "symbol": "000738",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251219",
+      "symbol": "000738",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251219",
+      "symbol": "002085",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20251222",
+      "symbol": "002085",
+      "seed_family": "preheat_full_add",
+      "supervision_tier": "allowed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "failed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "failed_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": false,
+      "local_only_rebound_guard": false
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "000738",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "blocked_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": true,
+      "local_only_rebound_guard": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "blocked_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": true,
+      "local_only_rebound_guard": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "blocked_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": true,
+      "local_only_rebound_guard": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "601698",
+      "seed_family": "impulse_full_add",
+      "supervision_tier": "blocked_add_seed",
+      "minute_row_count": 60,
+      "board_lockout_active": true,
+      "local_only_rebound_guard": true
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "seed_session_count",
+      "status": "pass",
+      "detail": "55 sessions versus expected 55"
+    },
+    {
+      "acceptance_item": "lineage_fields_non_null",
+      "status": "pass",
+      "detail": "lineage_null_count = 0"
+    },
+    {
+      "acceptance_item": "path_features_lagged_only",
+      "status": "pass",
+      "detail": "all path features use only prior closed bars; warm-up nulls are expected"
+    }
+  ],
+  "interpretation": [
+    "V1.34EL instantiates point-in-time visibility for the first intraday-add seed surface.",
+    "The feed remains supervision-only, but it now expresses minute-visible bars, lagged path features, and upstream veto states across all add seeds."
+  ]
+}

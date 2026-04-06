@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133q_commercial_aerospace_point_in_time_seed_feed_v1",
+    "seed_session_count": 6,
+    "feed_row_count": 360,
+    "lineage_null_count": 0,
+    "lagged_null_count": 143,
+    "output_csv": "data\\training\\commercial_aerospace_point_in_time_seed_feed_v1.csv",
+    "authoritative_output": "commercial_aerospace_point_in_time_seed_feed_ready_for_visibility_audit"
+  },
+  "session_rows": [
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "severity_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "session_open_ts": "2025/11/18 09:30",
+      "event_state_visible": "event_neutral",
+      "phase_state_visible": "preheat_window"
+    },
+    {
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "severity_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "session_open_ts": "2025/12/17 09:30",
+      "event_state_visible": "event_neutral",
+      "phase_state_visible": "preheat_window"
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "severity_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "session_open_ts": "2026/01/13 09:30",
+      "event_state_visible": "continuation_active",
+      "phase_state_visible": "impulse_window"
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "severity_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "session_open_ts": "2026/01/13 09:30",
+      "event_state_visible": "continuation_active",
+      "phase_state_visible": "impulse_window"
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "severity_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "session_open_ts": "2026/01/26 09:30",
+      "event_state_visible": "continuation_active",
+      "phase_state_visible": "impulse_window"
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "severity_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "session_open_ts": "2026/01/26 09:30",
+      "event_state_visible": "continuation_active",
+      "phase_state_visible": "impulse_window"
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "seed_session_count",
+      "status": "pass",
+      "detail": "6 sessions versus expected 6"
+    },
+    {
+      "acceptance_item": "lineage_fields_non_null",
+      "status": "pass",
+      "detail": "lineage_null_count = 0"
+    },
+    {
+      "acceptance_item": "path_features_lagged_only",
+      "status": "pass",
+      "detail": "all path features use only prior closed bars; nulls are allowed only during warm-up minutes"
+    },
+    {
+      "acceptance_item": "warmup_nulls_expected",
+      "status": "pass",
+      "detail": "lagged_null_count = 143"
+    }
+  ],
+  "interpretation": [
+    "V1.33Q instantiates phase_1_visibility on the canonical seed sessions only.",
+    "The feed is still shadow/governance-only, but it now expresses minute-visible bars, lagged path features, and explicit first-visible lineage fields in one table."
+  ]
+}

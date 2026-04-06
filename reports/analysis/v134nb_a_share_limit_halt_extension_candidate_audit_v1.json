@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "shadow_slice_count": 17,
+    "candidate_cover_count": 14,
+    "raw_daily_coverage_start": "2024-01-02",
+    "raw_daily_coverage_end": "2026-04-03",
+    "status_csv": "data\\training\\a_share_limit_halt_extension_candidate_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_extension_candidate_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "limit_halt_extension_candidate_surface",
+      "component_state": "materialized_candidate_cover_surface",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_extension_candidate_surface_v1.csv",
+      "coverage_note": "candidate_cover_count = 14"
+    },
+    {
+      "component": "limit_halt_extension_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_limit_halt_extension_candidate_residual_v1.csv",
+      "coverage_note": "raw_daily_coverage_end = 2026-04-03"
+    }
+  ],
+  "interpretation": [
+    "Limit-halt extension now has an explicit candidate surface rather than a hand-wavy dependency.",
+    "The remaining issue is controlled derivation of board/ST/suspension semantics, not raw daily absence."
+  ]
+}

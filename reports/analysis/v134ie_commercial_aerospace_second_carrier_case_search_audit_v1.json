@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ie_commercial_aerospace_second_carrier_case_search_audit_v1",
+    "searched_symbol_count": 5,
+    "current_primary_carrier_case_count": 1,
+    "second_carrier_case_found": false,
+    "hard_anchor_symbol": "000547",
+    "authoritative_rule": "the current event-backed role universe still contains only one carrier-grade case, 再升科技; no second carrier case is yet available, and the remaining candidates fail for explicit role or evidence reasons rather than for vague intuition",
+    "search_csv": "data\\training\\commercial_aerospace_second_carrier_case_search_v1.csv"
+  },
+  "search_rows": [
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "current_role": "event_backed_attention_carrier_candidate",
+      "search_status": "current_primary_carrier_case",
+      "carrier_grade": "yes_primary",
+      "blocking_reason": "",
+      "next_requirement": "needs_peer_case_not_more_self_confirmation"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "current_role": "event_backed_high_beta_follow_candidate",
+      "search_status": "event_backed_but_not_carrier",
+      "carrier_grade": "no",
+      "blocking_reason": "follow_candidate_not_attention_carrier",
+      "next_requirement": "would need evidence of attention-carrying role rather than high-beta follow behavior"
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "current_role": "attention_anchor_and_attention_decoy",
+      "search_status": "role_conflict_not_carrier",
+      "carrier_grade": "no",
+      "blocking_reason": "hard_anchor_decoy_case_not_true_selection_candidate",
+      "next_requirement": "not a carrier search target; remains counterpanel evidence"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "current_role": "non_anchor_crowded_concentration_candidate",
+      "search_status": "crowded_without_event_backing",
+      "carrier_grade": "no",
+      "blocking_reason": "no_retained_event_backing",
+      "next_requirement": "would need retained event backing before carrier consideration"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "current_role": "non_anchor_outlier_breakout_candidate",
+      "search_status": "breakout_without_decisive_event_backing",
+      "carrier_grade": "no",
+      "blocking_reason": "supporting_theme_heat_event_not_retained",
+      "next_requirement": "would need stronger retained event backing and non-lockout context"
+    }
+  ],
+  "interpretation": [
+    "V1.34IE turns the next named gap into an explicit search audit.",
+    "The result is negative but useful: there is still no second carrier-grade case, and the reasons are now symbol-specific and explicit."
+  ]
+}

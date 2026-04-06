@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134aq_commercial_aerospace_phase2_current_shadow_stack_v4",
+    "current_phase2_wider_reference": "broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral",
+    "current_phase2_narrow_reference": "canonical_seed_simulator",
+    "phase2_best_same_day_loss_avoided_total": 46082.7278,
+    "phase2_best_simulated_order_count": 18,
+    "local_deferral_same_day_delta": 153.7228,
+    "stack_csv": "data\\training\\commercial_aerospace_phase2_current_shadow_stack_v4.csv",
+    "authoritative_output": "commercial_aerospace_phase2_current_shadow_stack_v4_ready_for_direction_triage"
+  },
+  "stack_rows": [
+    {
+      "variant": "canonical_seed_simulator",
+      "scope": "6 canonical sessions",
+      "same_day_loss_avoided_total": 3732.6954,
+      "simulated_order_count": 8,
+      "status": "retained_narrow_reference"
+    },
+    {
+      "variant": "broader_hit_current_plus_reversal_100pct",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 45929.005,
+      "simulated_order_count": 18,
+      "status": "superseded_by_local_deferral_refinement"
+    },
+    {
+      "variant": "broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 46082.7278,
+      "simulated_order_count": 18,
+      "status": "current_phase2_wider_reference"
+    }
+  ],
+  "interpretation": [
+    "V1.34AQ freezes the next phase-2 stack after promoting the local reversal-deferral refinement.",
+    "The wider reference stays on the same broader-hit surface, but keeps a narrower point-in-time path refinement for a tiny rebound-cost subset."
+  ]
+}

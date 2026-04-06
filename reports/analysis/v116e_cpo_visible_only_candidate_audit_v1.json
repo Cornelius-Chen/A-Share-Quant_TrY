@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116e_cpo_visible_only_candidate_audit_v1",
+    "variant_count": 4,
+    "cleanest_executing_candidate": "pc1_only_q_0p2",
+    "most_expressive_non_ceiling_candidate": "pc1_or_pc2_q_0p25",
+    "recommended_next_posture": "trigger_three_run_adversarial_review_for_v116c_v116d_v116e"
+  },
+  "audit_rows": [
+    {
+      "variant_name": "all_intraday_strict_visible",
+      "candidate_signal_count": 9,
+      "executed_order_count": 9,
+      "final_equity": 3124685.3884,
+      "max_drawdown": 0.196068,
+      "positive_expectancy_hit_rate": 0.555556,
+      "action_favored_hit_rate": 0.333333,
+      "positive_and_favored_hit_rate": 0.333333,
+      "avg_expectancy_proxy_3d": 0.089492,
+      "avg_max_adverse_return_3d": -0.033251,
+      "top_miss_hit_count": 0,
+      "top_miss_hit_rate": 0.0,
+      "audit_only_note": "future labels are used here only for evaluation, never for filter definition"
+    },
+    {
+      "variant_name": "pc1_only_q_0p2",
+      "candidate_signal_count": 2,
+      "executed_order_count": 2,
+      "final_equity": 2083892.6364,
+      "max_drawdown": 0.15707,
+      "positive_expectancy_hit_rate": 0.0,
+      "action_favored_hit_rate": 0.0,
+      "positive_and_favored_hit_rate": 0.0,
+      "avg_expectancy_proxy_3d": -0.043932,
+      "avg_max_adverse_return_3d": -0.042536,
+      "top_miss_hit_count": 0,
+      "top_miss_hit_rate": 0.0,
+      "audit_only_note": "future labels are used here only for evaluation, never for filter definition"
+    },
+    {
+      "variant_name": "pc2_only_q_0p25",
+      "candidate_signal_count": 3,
+      "executed_order_count": 3,
+      "final_equity": 2236925.2433,
+      "max_drawdown": 0.163868,
+      "positive_expectancy_hit_rate": 0.666667,
+      "action_favored_hit_rate": 0.333333,
+      "positive_and_favored_hit_rate": 0.333333,
+      "avg_expectancy_proxy_3d": 0.059139,
+      "avg_max_adverse_return_3d": -0.023399,
+      "top_miss_hit_count": 0,
+      "top_miss_hit_rate": 0.0,
+      "audit_only_note": "future labels are used here only for evaluation, never for filter definition"
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "candidate_signal_count": 6,
+      "executed_order_count": 6,
+      "final_equity": 2607874.6659,
+      "max_drawdown": 0.176515,
+      "positive_expectancy_hit_rate": 0.5,
+      "action_favored_hit_rate": 0.333333,
+      "positive_and_favored_hit_rate": 0.333333,
+      "avg_expectancy_proxy_3d": 0.06429,
+      "avg_max_adverse_return_3d": -0.028243,
+      "top_miss_hit_count": 0,
+      "top_miss_hit_rate": 0.0,
+      "audit_only_note": "future labels are used here only for evaluation, never for filter definition"
+    }
+  ],
+  "interpretation": [
+    "V1.16E audits visible-only executing variants using future labels strictly as after-the-fact evaluation and not as filter inputs.",
+    "The goal is to understand which visible-only candidate is cleanest and which one is the best expressive middle posture before the next adversarial review.",
+    "This completes the three-run block V116C/V116D/V116E and should now trigger mandatory three-subagent review."
+  ]
+}

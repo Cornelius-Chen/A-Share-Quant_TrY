@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125g_commercial_aerospace_clean_boundary_control_surface_refresh_v1",
+    "variant_count": 4,
+    "control_core_count": 12,
+    "confirmation_count": 11,
+    "best_variant": "clean_core_reference",
+    "best_eligibility_year_spread_mean": -0.0024955,
+    "best_de_risk_year_spread_mean": -0.00672069
+  },
+  "variant_rows": [
+    {
+      "variant": "clean_core_reference",
+      "eligibility_forward_spread_10": 0.00677486,
+      "de_risk_avoidance_spread_10": -0.00230172,
+      "eligibility_year_spread_mean": -0.0024955,
+      "eligibility_year_spread_min": -0.02974733,
+      "de_risk_year_spread_mean": -0.00672069,
+      "de_risk_year_spread_min": -0.01888307,
+      "eligibility_flag_count": 1545,
+      "de_risk_flag_count": 2060,
+      "objective_score": -0.00921619
+    },
+    {
+      "variant": "confirmation_gate_zero",
+      "eligibility_forward_spread_10": 0.00152818,
+      "de_risk_avoidance_spread_10": -0.00467009,
+      "eligibility_year_spread_mean": -0.00139396,
+      "eligibility_year_spread_min": -0.02015416,
+      "de_risk_year_spread_mean": -0.01456882,
+      "de_risk_year_spread_min": -0.04398253,
+      "eligibility_flag_count": 780,
+      "de_risk_flag_count": 1020,
+      "objective_score": -0.01596279
+    },
+    {
+      "variant": "confirmation_gate_mild",
+      "eligibility_forward_spread_10": 0.0,
+      "de_risk_avoidance_spread_10": 0.0,
+      "eligibility_year_spread_mean": 0.0,
+      "eligibility_year_spread_min": 0.0,
+      "de_risk_year_spread_mean": 0.0,
+      "de_risk_year_spread_min": 0.0,
+      "eligibility_flag_count": 0,
+      "de_risk_flag_count": 0,
+      "objective_score": -1998.0
+    },
+    {
+      "variant": "confirmation_gate_strict",
+      "eligibility_forward_spread_10": 0.0,
+      "de_risk_avoidance_spread_10": 0.0,
+      "eligibility_year_spread_mean": 0.0,
+      "eligibility_year_spread_min": 0.0,
+      "de_risk_year_spread_mean": 0.0,
+      "de_risk_year_spread_min": 0.0,
+      "eligibility_flag_count": 0,
+      "de_risk_flag_count": 0,
+      "objective_score": -1998.0
+    }
+  ],
+  "interpretation": [
+    "V1.25G rebuilds commercial-aerospace control semantics after boundary cleanup, using only control_core plus clean confirmation breadth.",
+    "The purpose is to see whether confirmation breadth can make the control surface lawful again once sentiment-watch names are fully isolated."
+  ]
+}

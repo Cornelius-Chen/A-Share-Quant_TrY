@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "sample_row_count": 20,
+    "broad_market_only_count": 19,
+    "theme_hit_count": 1,
+    "theme_hit_with_symbol_watch_count": 1,
+    "theme_hit_without_symbol_watch_count": 0,
+    "unique_primary_theme_count": 1,
+    "unique_watch_symbol_count": 1,
+    "top_primary_theme_slug": "gold",
+    "top_watch_symbol": "601899",
+    "authoritative_output": "a_share_internal_hot_news_theme_symbol_hit_replay_materialized"
+  },
+  "rows": [
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "sample_row_count",
+      "value": "20"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "broad_market_only_count",
+      "value": "19"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "theme_hit_count",
+      "value": "1"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "theme_hit_with_symbol_watch_count",
+      "value": "1"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "theme_hit_without_symbol_watch_count",
+      "value": "0"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "unique_primary_theme_count",
+      "value": "1"
+    },
+    {
+      "component": "theme_symbol_hit_replay",
+      "component_state": "materialized",
+      "metric": "unique_watch_symbol_count",
+      "value": "1"
+    }
+  ],
+  "interpretation": [
+    "This replay summarizes what the current hot-news sample actually hit after theme governance and symbol mapping.",
+    "It separates broad-market-only rows from theme-qualified rows and shows how many themed rows reached symbol watch."
+  ]
+}

@@ -1,0 +1,6 @@
+﻿component,status,evidence,what_it_solves,remaining_gap
+all_session_visibility_surface,ready_as_shadow_input,all_session_count = 612,minute-lawful state visibility exists across the current six-symbol first-hour surface,not yet bound to execution-state transitions
+deterministic_seed_simulator,ready_as_shadow_input,"double_run_exact_match = True, monotonic_fill_violation_count = 0",trigger-to-fill timing and chronology are already deterministic on canonical seeds,still session-isolated and not portfolio-state bound
+phase2_wider_sell_shadow,ready_as_shadow_reference,"reference = broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral, same_day_loss_avoided_total = 46082.7278",current best sell-side shadow behavior is already frozen on broader-hit surface,still same-day shadow and not execution-bound
+holdings_aware_sell_binding_surface,missing,no portfolio-stateful intraday sell lane exists,"would connect minute triggers to real held quantity, cooldown state, and do-not-readd state",must still be built
+isolated_sell_side_shadow_lane,missing,sell_side_binding_blocker_count = 2,would bind visibility plus simulator into a read-only sell-side execution lane without touching board reentry yet,must still be built

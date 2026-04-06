@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132x_commercial_aerospace_wx_governance_stack_triage_v1",
+    "authoritative_status": "freeze_commercial_aerospace_governance_stack_v3_with_state_transition_aligned_minute_branch",
+    "governance_layer_count": 11,
+    "current_primary_variant": "tail_weakdrift_full",
+    "authoritative_rule": "ordered minute escalation belongs inside the governance stack as a state-machine extension, not as replay execution"
+  },
+  "triage_rows": [
+    {
+      "component": "commercial_aerospace_governance_stack_v3",
+      "status": "freeze_commercial_aerospace_governance_stack_v3_with_state_transition_aligned_minute_branch",
+      "rationale": "the minute branch now has registry, rule, shadow-benefit, action-ladder, and state-transition support"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the intraday branch continues to strengthen governance and future design, but still does not alter the frozen EOD replay"
+    }
+  ],
+  "interpretation": [
+    "V1.32X freezes governance stack v3 after the local minute branch proved ordered escalation on broader hit sessions.",
+    "This is the stronger governance endpoint of the current commercial-aerospace minute work, not a replay-side promotion."
+  ]
+}

@@ -1,0 +1,5 @@
+queue_order,board_name,sector_id,queue_status,terminal_status,next_phase,run_until,recommended_core_symbols
+1,CPO,,terminal_frozen,frozen_heat_only_execution_stack,,already_terminal,
+2,商业航天,BK0963,queued,,board_world_model,terminal_status_or_hard_stop,002085|000738|600118
+3,航天航空,BK0480,queued_shadow,,board_world_model,terminal_status_or_hard_stop,000738|600118
+4,军民融合,BK0808,queued_shadow,,board_world_model,terminal_status_or_hard_stop,300474

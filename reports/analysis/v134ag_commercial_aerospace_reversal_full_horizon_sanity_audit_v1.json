@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ag_commercial_aerospace_reversal_full_horizon_sanity_audit_v1",
+    "reversal_session_count": 13,
+    "net_horizon_pnl_if_held_1d": -28338.0,
+    "net_horizon_pnl_if_held_3d": -15958.0,
+    "net_horizon_pnl_if_held_5d": -47506.0,
+    "session_csv": "data\\training\\commercial_aerospace_reversal_full_horizon_sanity_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_reversal_full_horizon_sanity_audit_ready_for_direction_triage"
+  },
+  "horizon_rows": [
+    {
+      "horizon_days": 1,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": -28338.0,
+      "positive_rebound_cost_count": 3,
+      "positive_rebound_cost_total": 7360.0,
+      "negative_followthrough_benefit_count": 9,
+      "negative_followthrough_benefit_total": -35698.0
+    },
+    {
+      "horizon_days": 3,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": -15958.0,
+      "positive_rebound_cost_count": 4,
+      "positive_rebound_cost_total": 31604.0,
+      "negative_followthrough_benefit_count": 8,
+      "negative_followthrough_benefit_total": -47562.0
+    },
+    {
+      "horizon_days": 5,
+      "session_count": 12,
+      "net_horizon_pnl_if_held": -47506.0,
+      "positive_rebound_cost_count": 4,
+      "positive_rebound_cost_total": 13033.0,
+      "negative_followthrough_benefit_count": 8,
+      "negative_followthrough_benefit_total": -60539.0
+    }
+  ],
+  "session_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "reversal_minute": 3,
+      "fill_minute": 4,
+      "fill_price": 40.0,
+      "reference_quantity": 2300,
+      "horizon_pnl_1d": -2576.0,
+      "horizon_pnl_3d": 4646.0,
+      "horizon_pnl_5d": -1587.0
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "reversal_minute": 43,
+      "fill_minute": 44,
+      "fill_price": 42.68,
+      "reference_quantity": 2200,
+      "horizon_pnl_1d": -3124.0,
+      "horizon_pnl_3d": -4334.0,
+      "horizon_pnl_5d": 3036.0
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "month_bucket": "2026-01",
+      "reversal_minute": 4,
+      "fill_minute": 5,
+      "fill_price": 23.27,
+      "reference_quantity": 4000,
+      "horizon_pnl_1d": -4600.0,
+      "horizon_pnl_3d": -7480.0,
+      "horizon_pnl_5d": 5000.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "reversal_minute": 32,
+      "fill_minute": 33,
+      "fill_price": 30.85,
+      "reference_quantity": 3000,
+      "horizon_pnl_1d": -2790.0,
+      "horizon_pnl_3d": -4950.0,
+      "horizon_pnl_5d": -5550.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "month_bucket": "2026-01",
+      "reversal_minute": 23,
+      "fill_minute": 24,
+      "fill_price": 40.01,
+      "reference_quantity": 2300,
+      "horizon_pnl_1d": 345.0,
+      "horizon_pnl_3d": -6923.0,
+      "horizon_pnl_5d": -2898.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "reversal_minute": 9,
+      "fill_minute": 10,
+      "fill_price": 39.77,
+      "reference_quantity": 2300,
+      "horizon_pnl_1d": 3680.0,
+      "horizon_pnl_3d": -6624.0,
+      "horizon_pnl_5d": -4531.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "reversal_minute": 41,
+      "fill_minute": 42,
+      "fill_price": 54.6,
+      "reference_quantity": 1700,
+      "horizon_pnl_1d": -8364.0,
+      "horizon_pnl_3d": 11339.0,
+      "horizon_pnl_5d": 3077.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "reversal_minute": 12,
+      "fill_minute": 13,
+      "fill_price": 62.6,
+      "reference_quantity": 1500,
+      "horizon_pnl_1d": -4875.0,
+      "horizon_pnl_3d": 15585.0,
+      "horizon_pnl_5d": 1920.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "reversal_minute": 60,
+      "fill_minute": 61,
+      "fill_price": 29.46,
+      "reference_quantity": 3200,
+      "horizon_pnl_1d": -1408.0,
+      "horizon_pnl_3d": -4064.0,
+      "horizon_pnl_5d": -8512.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "reversal_minute": 21,
+      "fill_minute": 22,
+      "fill_price": 39.53,
+      "reference_quantity": 2300,
+      "horizon_pnl_1d": 3335.0,
+      "horizon_pnl_3d": -6187.0,
+      "horizon_pnl_5d": -25254.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "reversal_minute": 4,
+      "fill_minute": 5,
+      "fill_price": 66.81,
+      "reference_quantity": 1400,
+      "horizon_pnl_1d": -4102.0,
+      "horizon_pnl_3d": -7000.0,
+      "horizon_pnl_5d": -10388.0
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "reversal_minute": 21,
+      "fill_minute": 22,
+      "fill_price": 54.28,
+      "reference_quantity": 1700,
+      "horizon_pnl_1d": -3859.0,
+      "horizon_pnl_3d": 34.0,
+      "horizon_pnl_5d": -1819.0
+    },
+    {
+      "trade_date": "20260403",
+      "symbol": "688066",
+      "month_bucket": "2026-04",
+      "reversal_minute": 18,
+      "fill_minute": 19,
+      "fill_price": 17.28,
+      "reference_quantity": 5400,
+      "horizon_pnl_1d": "",
+      "horizon_pnl_3d": "",
+      "horizon_pnl_5d": ""
+    }
+  ],
+  "interpretation": [
+    "V1.34AG checks the cost of promoting full reversal exit under horizons longer than same-day.",
+    "It does not reopen replay or change the surface; it only asks whether the stronger same-day defensive result is later offset by rebound opportunity cost."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "decision_unit_count": 4,
+    "pending_manual_unit_count": 4,
+    "authoritative_status": "batch_one_closure_depends_on_manual_field_resolution_not_more_design"
+  },
+  "triage_rows": [
+    {
+      "component": "primary_host_family",
+      "direction": "resolve_primary_host_family_manual_fields_before_any_other_batch_one_closure"
+    },
+    {
+      "component": "independent_hosts",
+      "direction": "close_independent_hosts_only_after_primary_host_family_has_a_non_pending_outcome"
+    },
+    {
+      "component": "sibling_host",
+      "direction": "retain_sibling_host_as_last_closure_step_after_primary_host_family_outcome"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "keep_allowlist_promotion_closed_until_manual_license_and_runtime_fields_stop_being_pending"
+    }
+  ],
+  "interpretation": [
+    "The next source-side gain now depends on closing manual fields, not on extending the queue framework.",
+    "This is a closure-order problem, not a discovery problem."
+  ]
+}

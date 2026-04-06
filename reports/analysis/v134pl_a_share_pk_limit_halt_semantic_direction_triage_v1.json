@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "surface_row_count": 27711,
+    "missing_stk_limit_count": 0,
+    "authoritative_status": "limit_halt_semantic_surface_materialized_for_replay_recheck"
+  },
+  "triage_rows": [
+    {
+      "component": "semantic_surface",
+      "direction": "use_limit_halt_semantic_surface_as_the_new_replay-facing_pair_layer"
+    },
+    {
+      "component": "promotion_review",
+      "direction": "rerun_daily_market_promotion_review_against_the_semantic_surface_before_claiming_replay_open"
+    },
+    {
+      "component": "residual_policy",
+      "direction": "keep_st_proxy_and_sparse_suspension_residuals_explicit_while_allowing_recheck"
+    }
+  ],
+  "interpretation": [
+    "Replay can now be re-evaluated against a semantic limit-halt surface instead of the old bootstrap-only daily surface.",
+    "This does not open execution, but it is sufficient to reopen promotion review and see whether the paired-surface blocker materially falls."
+  ]
+}

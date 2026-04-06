@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "rotation_review_state": "keep_incumbent_but_raise_review_attention",
+    "challenger_top_opportunity_theme": "defense_industry",
+    "challenger_top_watch_symbol": "600760",
+    "shadow_change_signal_priority": "p1",
+    "plan_state": "manual_acceptance_required_before_challenger_primary_consumer_promotion",
+    "authoritative_status": "challenger_primary_consumer_promotion_plan_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "challenger_rotation_gate",
+      "direction": "treat the open challenger review as permission to prepare rollout artifacts, not as permission to silently replace the current primary consumer chain."
+    },
+    {
+      "component": "challenger_shadow_promotion",
+      "direction": "use the challenger shadow packet as the exact handoff state if manual acceptance is granted."
+    },
+    {
+      "component": "post_promotion_hygiene",
+      "direction": "rebaseline symbol-watch and top-level control change signals immediately after any challenger promotion to avoid stale p1 deltas lingering in the stack."
+    }
+  ],
+  "interpretation": [
+    "The challenger is now strong enough to justify a full rollout plan.",
+    "The next irreversible step is no longer more analysis; it is explicit human acceptance of the challenger promotion plan."
+  ]
+}

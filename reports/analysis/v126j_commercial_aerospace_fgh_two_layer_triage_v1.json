@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126j_commercial_aerospace_fgh_two_layer_triage_v1",
+    "baseline_final_equity": 945779.3505,
+    "baseline_max_drawdown": 0.29330945,
+    "zero_trigger_root_cause_confirmed": true,
+    "impulse_train_full_count": 0,
+    "two_layer_improving_variant_count": 3,
+    "best_variant_name": "probe40_full100_q70_q40",
+    "best_variant_final_equity": 1000937.0454,
+    "best_variant_max_drawdown": 0.06694498,
+    "authoritative_status": "two_layer_shadow_variant_retained_for_next_review"
+  },
+  "retained_variants": [
+    {
+      "variant_name": "probe50_full100_q80_q60",
+      "probe_threshold_quantile": 0.8,
+      "full_threshold_quantile": 0.6,
+      "probe_notional": 50000.0,
+      "full_notional": 100000.0,
+      "probe_threshold": 13.48004681,
+      "full_threshold": 12.91643533,
+      "executed_order_count": 41,
+      "final_equity": 971955.9553,
+      "max_drawdown": 0.2106763
+    },
+    {
+      "variant_name": "probe50_full100_q80_q40",
+      "probe_threshold_quantile": 0.8,
+      "full_threshold_quantile": 0.4,
+      "probe_notional": 50000.0,
+      "full_notional": 100000.0,
+      "probe_threshold": 13.48004681,
+      "full_threshold": 12.45616611,
+      "executed_order_count": 42,
+      "final_equity": 980491.4964,
+      "max_drawdown": 0.17658613
+    },
+    {
+      "variant_name": "probe40_full100_q70_q40",
+      "probe_threshold_quantile": 0.7,
+      "full_threshold_quantile": 0.4,
+      "probe_notional": 40000.0,
+      "full_notional": 100000.0,
+      "probe_threshold": 13.10469653,
+      "full_threshold": 12.45616611,
+      "executed_order_count": 22,
+      "final_equity": 1000937.0454,
+      "max_drawdown": 0.06694498
+    }
+  ],
+  "interpretation": [
+    "V1.26J freezes whether probe/full score stratification deserves to survive after the first lawful replay became non-zero.",
+    "A two-layer design only survives if it beats the V1.26G regime-local reference without worsening drawdown."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130v_transfer_program_governance_bundle_v1",
+    "candidate_board_count": 5,
+    "reopen_ready_count": 0,
+    "closest_candidate_sector_id": "BK0808",
+    "decisive_watch_symbol": "600118",
+    "authoritative_status": "transfer_program_governance_bundle_frozen_but_operational",
+    "authoritative_rule": "the_program_stays_frozen_but_the_monitoring_stack_is_now_complete_enough_to_tell_exactly_what_new_local_evidence_would_unlock_bk0808"
+  },
+  "bundle_rows": [
+    {
+      "sector_id": "BK0808",
+      "monitor_role": "nearest_reopen_candidate_under_freeze",
+      "current_v6_symbol_count": 1,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.0,
+      "bridge_block": true,
+      "reopen_ready": false,
+      "decisive_watch_symbol": "600118",
+      "watch_symbol_timeline_days": 10,
+      "watch_symbol_leader_core_days": 9,
+      "watch_symbol_current_v6_snapshot_days": 0,
+      "watch_symbol_near_surface_days": 8,
+      "watch_symbol_inactive_days": 2,
+      "governance_state": "retain_bk0808_watch_state_machine_as_governance_only_and_keep_worker_frozen",
+      "next_action_rule": "reopen_only_after_real_v6_same_plane_emergence_of_600118"
+    },
+    {
+      "sector_id": "BK0994",
+      "monitor_role": "secondary_frozen_candidate",
+      "current_v6_symbol_count": 1,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.023575000000000013,
+      "bridge_block": true,
+      "reopen_ready": false,
+      "decisive_watch_symbol": null,
+      "watch_symbol_timeline_days": null,
+      "watch_symbol_leader_core_days": null,
+      "watch_symbol_current_v6_snapshot_days": null,
+      "watch_symbol_near_surface_days": null,
+      "watch_symbol_inactive_days": null,
+      "governance_state": "frozen_watchlist_only",
+      "next_action_rule": "wait_for_multi_symbol_v6_same_plane_support"
+    },
+    {
+      "sector_id": "BK0715",
+      "monitor_role": "secondary_frozen_candidate",
+      "current_v6_symbol_count": 1,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.07686799999999999,
+      "bridge_block": true,
+      "reopen_ready": false,
+      "decisive_watch_symbol": null,
+      "watch_symbol_timeline_days": null,
+      "watch_symbol_leader_core_days": null,
+      "watch_symbol_current_v6_snapshot_days": null,
+      "watch_symbol_near_surface_days": null,
+      "watch_symbol_inactive_days": null,
+      "governance_state": "frozen_watchlist_only",
+      "next_action_rule": "wait_for_multi_symbol_v6_same_plane_support"
+    },
+    {
+      "sector_id": "BK0814",
+      "monitor_role": "secondary_frozen_candidate",
+      "current_v6_symbol_count": 1,
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.09785100000000002,
+      "bridge_block": true,
+      "reopen_ready": false,
+      "decisive_watch_symbol": null,
+      "watch_symbol_timeline_days": null,
+      "watch_symbol_leader_core_days": null,
+      "watch_symbol_current_v6_snapshot_days": null,
+      "watch_symbol_near_surface_days": null,
+      "watch_symbol_inactive_days": null,
+      "governance_state": "frozen_watchlist_only",
+      "next_action_rule": "wait_for_multi_symbol_v6_same_plane_support"
+    },
+    {
+      "sector_id": "BK0490",
+      "monitor_role": "secondary_frozen_candidate",
+      "current_v6_symbol_count": 0,
+      "same_plane_symbol_gap": 2,
+      "board_composite_gap": null,
+      "bridge_block": true,
+      "reopen_ready": false,
+      "decisive_watch_symbol": null,
+      "watch_symbol_timeline_days": null,
+      "watch_symbol_leader_core_days": null,
+      "watch_symbol_current_v6_snapshot_days": null,
+      "watch_symbol_near_surface_days": null,
+      "watch_symbol_inactive_days": null,
+      "governance_state": "frozen_watchlist_only",
+      "next_action_rule": "wait_for_multi_symbol_v6_same_plane_support"
+    }
+  ],
+  "interpretation": [
+    "V1.30V bundles the transfer freeze, the BK0808 trigger logic, and the BK0808 watch state machine into one governance surface.",
+    "This is meant to stop repeated re-analysis under static data: until new local same-plane evidence appears, the correct posture is monitoring, not worker creation."
+  ]
+}

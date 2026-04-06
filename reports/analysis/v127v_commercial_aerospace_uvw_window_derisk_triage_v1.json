@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127v_commercial_aerospace_uvw_window_derisk_triage_v1",
+    "reference_variant": "veto_drag_trio_impulse_only",
+    "best_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "best_variant_final_equity": 1298439.6031,
+    "best_variant_max_drawdown": 0.09889703,
+    "authoritative_status": "promote_window_specific_derisk_fix"
+  },
+  "interpretation": [
+    "V1.27V freezes the first window-specific de-risk grammar branch on the largest new-primary drawdown window."
+  ]
+}

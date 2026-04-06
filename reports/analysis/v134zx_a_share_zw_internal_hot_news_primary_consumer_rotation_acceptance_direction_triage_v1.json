@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_row_count": 1,
+    "acceptance_state": "accepted",
+    "accepted_top_opportunity_theme": "consumer_staples",
+    "accepted_top_watch_symbol": "600887",
+    "authoritative_output": "a_share_internal_hot_news_primary_consumer_rotation_acceptance_registry_materialized",
+    "authoritative_status": "primary_consumer_rotation_has_been_explicitly_accepted_and_primary_top_consumer_overrides_may_now_apply"
+  },
+  "triage_rows": [
+    {
+      "component": "acceptance_registry",
+      "direction": "treat this accepted registry as the single explicit approval artifact for the p1 focus rotation"
+    },
+    {
+      "component": "primary_snapshot_override",
+      "direction": "allow primary snapshot top opportunity and top watch to rotate according to the accepted state"
+    },
+    {
+      "component": "control_consumer_override",
+      "direction": "propagate the accepted top focus into primary control consumers after the snapshot override lands"
+    }
+  ],
+  "interpretation": [
+    "The process has moved from planning to execution because the manual acceptance artifact now exists.",
+    "Subsequent top-consumer changes are now expected behavior rather than shadow-only previews."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ge_commercial_aerospace_gd_dual_slot_capacity_direction_triage_v1",
+    "authoritative_status": "retain_dual_slot_capacity_as_conditional_local_supervision_and_keep_add_execution_blocked",
+    "active_wave_day_count": 2,
+    "dual_slot_day_count": 1,
+    "single_slot_day_count": 0,
+    "zero_slot_day_count": 1,
+    "authoritative_rule": "dual-slot add capacity is currently a conditional local archetype; default dual-slot promotion and execution remain blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "dual_slot_capacity",
+      "status": "retain_as_conditional",
+      "rationale": "the current strict surface supports dual-slot coexistence only on a local minority of active-wave days"
+    },
+    {
+      "component": "single_slot_fallback",
+      "status": "retain",
+      "rationale": "most active-wave days under the current strict surface do not justify simultaneous dual-slot retention"
+    },
+    {
+      "component": "execution_allocation_rule",
+      "status": "still_blocked",
+      "rationale": "capacity remains local and conditional, so it is still too early to promote into execution sizing logic"
+    }
+  ],
+  "interpretation": [
+    "V1.34GE turns the first dual-slot capacity audit into the current governance verdict.",
+    "The branch should keep dual-slot coexistence as a conditional local supervision pattern, not as a default operational assumption."
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119l_cpo_participation_turnover_elg_support_discovery_v1",
+    "candidate_discriminator_name": "participation_turnover_elg_support_score_candidate",
+    "row_count": 16,
+    "positive_add_row_count": 5,
+    "negative_add_row_count": 11,
+    "candidate_score_mean_gap_positive_minus_negative": 1.810537,
+    "combo_formula": "participation_turnover_combo_score + 0.25 * z(elg_buy_sell_ratio)",
+    "recommended_next_posture": "externally_audit_elg_supported_combo_candidate_before_any_new_family_expansion"
+  },
+  "candidate_score_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "sustained_participation_non_chase_score": 1308551000.0,
+      "turnover_discipline_score_candidate": 2.104021,
+      "participation_turnover_combo_score": 1.950244,
+      "elg_buy_sell_ratio": 0.772825,
+      "participation_turnover_elg_support_score": 1.663872
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "sustained_participation_non_chase_score": 1567386000.0,
+      "turnover_discipline_score_candidate": 1.206295,
+      "participation_turnover_combo_score": 1.752134,
+      "elg_buy_sell_ratio": 0.970196,
+      "participation_turnover_elg_support_score": 1.632599
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "sustained_participation_non_chase_score": 1003343000.0,
+      "turnover_discipline_score_candidate": 1.113545,
+      "participation_turnover_combo_score": 1.064364,
+      "elg_buy_sell_ratio": 1.457806,
+      "participation_turnover_elg_support_score": 1.357004
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "sustained_participation_non_chase_score": 787409000.0,
+      "turnover_discipline_score_candidate": 2.534347,
+      "participation_turnover_combo_score": 1.596711,
+      "elg_buy_sell_ratio": 0.620873,
+      "participation_turnover_elg_support_score": 1.181895
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "sustained_participation_non_chase_score": 592782000.0,
+      "turnover_discipline_score_candidate": 0.537167,
+      "participation_turnover_combo_score": 0.285727,
+      "elg_buy_sell_ratio": 1.233015,
+      "participation_turnover_elg_support_score": 0.388352
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "sustained_participation_non_chase_score": 1760701000.0,
+      "turnover_discipline_score_candidate": 0.257571,
+      "participation_turnover_combo_score": 1.452156,
+      "elg_buy_sell_ratio": 0.836606,
+      "participation_turnover_elg_support_score": 1.219698
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "sustained_participation_non_chase_score": 1232661000.0,
+      "turnover_discipline_score_candidate": 0.554347,
+      "participation_turnover_combo_score": 1.017867,
+      "elg_buy_sell_ratio": 0.879568,
+      "participation_turnover_elg_support_score": 0.821725
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "sustained_participation_non_chase_score": 1289825000.0,
+      "turnover_discipline_score_candidate": -0.883355,
+      "participation_turnover_combo_score": 0.296953,
+      "elg_buy_sell_ratio": 1.06302,
+      "participation_turnover_elg_support_score": 0.255882
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "sustained_participation_non_chase_score": -481020000.0,
+      "turnover_discipline_score_candidate": 2.236714,
+      "participation_turnover_combo_score": 0.001388,
+      "elg_buy_sell_ratio": 1.051721,
+      "participation_turnover_elg_support_score": -0.049234
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "sustained_participation_non_chase_score": 1632908000.0,
+      "turnover_discipline_score_candidate": -2.482162,
+      "participation_turnover_combo_score": -0.189029,
+      "elg_buy_sell_ratio": 1.180721,
+      "participation_turnover_elg_support_score": -0.130608
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "sustained_participation_non_chase_score": -478360000.0,
+      "turnover_discipline_score_candidate": 1.983317,
+      "participation_turnover_combo_score": -0.13405,
+      "elg_buy_sell_ratio": 1.093011,
+      "participation_turnover_elg_support_score": -0.14977
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "sustained_participation_non_chase_score": 828084000.0,
+      "turnover_discipline_score_candidate": -2.134546,
+      "participation_turnover_combo_score": -0.908173,
+      "elg_buy_sell_ratio": 1.445697,
+      "participation_turnover_elg_support_score": -0.625769
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "sustained_participation_non_chase_score": 641231000.0,
+      "turnover_discipline_score_candidate": -2.385265,
+      "participation_turnover_combo_score": -1.256206,
+      "elg_buy_sell_ratio": 1.637542,
+      "participation_turnover_elg_support_score": -0.811636
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "sustained_participation_non_chase_score": -415570000.0,
+      "turnover_discipline_score_candidate": 0.467456,
+      "participation_turnover_combo_score": -0.891311,
+      "elg_buy_sell_ratio": 0.704119,
+      "participation_turnover_elg_support_score": -1.235759
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "sustained_participation_non_chase_score": -659010000.0,
+      "turnover_discipline_score_candidate": -2.556271,
+      "participation_turnover_combo_score": -2.818279,
+      "elg_buy_sell_ratio": 1.369801,
+      "participation_turnover_elg_support_score": -2.600029
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "sustained_participation_non_chase_score": -1016601000.0,
+      "turnover_discipline_score_candidate": -2.55318,
+      "participation_turnover_combo_score": -3.220496,
+      "elg_buy_sell_ratio": 1.469204,
+      "participation_turnover_elg_support_score": -2.918221
+    }
+  ],
+  "interpretation": [
+    "V1.19L adds exactly one new orthogonal support term to the live combo branch: extra-large-order buy-sell balance.",
+    "The intent is narrow: test whether elite flow support repairs the 2024 holdout weakness without reopening a full feature-search loop.",
+    "This remains non-replay and candidate-only until broader external and chronology checks agree."
+  ]
+}

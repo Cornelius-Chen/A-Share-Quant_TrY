@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "program_driver_signal_mode": "passive_polling",
+    "interrupt_required": "false",
+    "change_signal_priority": "p2",
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "top_risk_telegraph_id": "2335583",
+    "top_opportunity_telegraph_id": "sina_4797454",
+    "top_opportunity_primary_theme_slug": "defense_industry",
+    "top_opportunity_theme_governance_state": "accepted_rotation_override",
+    "top_opportunity_focus_class": "symbol_focus_available",
+    "top_opportunity_mapping_confidence": "medium",
+    "top_opportunity_linkage_class": "direct_beneficiary",
+    "top_opportunity_beneficiary_symbols_top5": "600760",
+    "top_watch_symbol": "600760",
+    "top_watch_primary_theme_slug": "defense_industry",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "600760,601899",
+    "top_watch_symbol_change": "stable",
+    "top_watch_bundle_change": "stable",
+    "top_watch_theme_change": "stable",
+    "symbol_watch_change_signal_priority": "p2",
+    "primary_focus_match_row_count": "5",
+    "primary_focus_source_present_count": "1",
+    "primary_focus_dual_match_count": "5",
+    "primary_focus_source_family_count": "1",
+    "focus_leader_theme_slug": "defense_industry",
+    "focus_leader_symbol": "600760",
+    "focus_leader_support_row_count": "5",
+    "current_primary_rank": "1",
+    "incumbent_is_focus_leader": "true",
+    "focus_governance_tension_state": "incumbent_leads_and_gate_consistent",
+    "focus_governance_tension_priority": "p3",
+    "focus_governance_tension_instruction": "background_monitor_only",
+    "focus_rotation_readiness_state": "steady_background_monitoring_only",
+    "focus_rotation_readiness_priority": "p3",
+    "focus_rotation_readiness_instruction": "maintain_current_focus_and_background_monitoring",
+    "top_challenger_theme_slug": "oil_gas",
+    "top_challenger_symbol": "601857",
+    "top_challenger_support_row_count": "4",
+    "top_challenger_source_family_count": "1",
+    "challenger_review_state": "hold_incumbent_focus",
+    "challenger_review_attention_state": "background_monitor_only",
+    "challenger_review_attention_priority": "p3",
+    "challenger_review_instruction": "hold_incumbent_background_monitor_only",
+    "authoritative_output": "a_share_internal_hot_news_program_control_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_control_packet",
+      "component_state": "read_ready_internal_only",
+      "metric": "packet_row_count",
+      "value": "1"
+    },
+    {
+      "component": "driver_signal_mode",
+      "component_state": "materialized",
+      "metric": "program_driver_signal_mode",
+      "value": "passive_polling"
+    },
+    {
+      "component": "interrupt_required",
+      "component_state": "materialized",
+      "metric": "interrupt_required",
+      "value": "false"
+    },
+    {
+      "component": "top_risk_reference",
+      "component_state": "materialized",
+      "metric": "top_risk_telegraph_id",
+      "value": "2335583"
+    },
+    {
+      "component": "top_opportunity_reference",
+      "component_state": "materialized",
+      "metric": "top_opportunity_telegraph_id",
+      "value": "sina_4797454"
+    },
+    {
+      "component": "top_opportunity_mapping",
+      "component_state": "materialized",
+      "metric": "top_opportunity_mapping_confidence",
+      "value": "medium"
+    },
+    {
+      "component": "top_opportunity_mapping",
+      "component_state": "materialized",
+      "metric": "top_opportunity_linkage_class",
+      "value": "direct_beneficiary"
+    },
+    {
+      "component": "top_opportunity_beneficiary_symbols",
+      "component_state": "materialized",
+      "metric": "top_opportunity_beneficiary_symbols_top5",
+      "value": "600760"
+    },
+    {
+      "component": "top_watch_symbol",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "component": "top_watch_theme",
+      "component_state": "materialized",
+      "metric": "top_watch_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_watch_bundle",
+      "component_state": "materialized",
+      "metric": "top_watch_symbols_top5",
+      "value": "600760,601899"
+    },
+    {
+      "component": "top_watch_bundle",
+      "component_state": "materialized",
+      "metric": "top_watch_linkage_class",
+      "value": "direct_beneficiary"
+    },
+    {
+      "component": "top_watch_change_signal",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_watch_change_signal",
+      "component_state": "materialized",
+      "metric": "symbol_watch_change_signal_priority",
+      "value": "p2"
+    },
+    {
+      "component": "primary_focus_replay_support",
+      "component_state": "materialized",
+      "metric": "primary_focus_match_row_count",
+      "value": "5"
+    },
+    {
+      "component": "primary_focus_replay_support",
+      "component_state": "materialized",
+      "metric": "primary_focus_source_present_count",
+      "value": "1"
+    },
+    {
+      "component": "primary_focus_replay_support",
+      "component_state": "materialized",
+      "metric": "primary_focus_dual_match_count",
+      "value": "5"
+    },
+    {
+      "component": "focus_competition_leaderboard",
+      "component_state": "materialized",
+      "metric": "current_primary_rank",
+      "value": "1"
+    },
+    {
+      "component": "focus_competition_leaderboard",
+      "component_state": "materialized",
+      "metric": "incumbent_is_focus_leader",
+      "value": "true"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "focus_governance_tension_state",
+      "value": "incumbent_leads_and_gate_consistent"
+    },
+    {
+      "component": "focus_governance_tension",
+      "component_state": "materialized",
+      "metric": "focus_governance_tension_priority",
+      "value": "p3"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "focus_rotation_readiness_state",
+      "value": "steady_background_monitoring_only"
+    },
+    {
+      "component": "focus_rotation_readiness",
+      "component_state": "materialized",
+      "metric": "focus_rotation_readiness_priority",
+      "value": "p3"
+    },
+    {
+      "component": "challenger_focus_board",
+      "component_state": "materialized",
+      "metric": "top_challenger_theme_slug",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_focus_board",
+      "component_state": "materialized",
+      "metric": "top_challenger_symbol",
+      "value": "601857"
+    },
+    {
+      "component": "challenger_focus_board",
+      "component_state": "materialized",
+      "metric": "top_challenger_support_row_count",
+      "value": "4"
+    },
+    {
+      "component": "challenger_review_attention",
+      "component_state": "materialized",
+      "metric": "challenger_review_state",
+      "value": "hold_incumbent_focus"
+    },
+    {
+      "component": "challenger_review_attention",
+      "component_state": "materialized",
+      "metric": "challenger_review_attention_state",
+      "value": "background_monitor_only"
+    },
+    {
+      "component": "challenger_review_attention",
+      "component_state": "materialized",
+      "metric": "challenger_review_attention_priority",
+      "value": "p3"
+    },
+    {
+      "component": "top_opportunity_theme_governance",
+      "component_state": "materialized",
+      "metric": "top_opportunity_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_opportunity_theme_governance",
+      "component_state": "materialized",
+      "metric": "top_opportunity_theme_governance_state",
+      "value": "accepted_rotation_override"
+    }
+  ],
+  "interpretation": [
+    "This control packet is the single-row outermost consumer artifact for the internal hot-news stack.",
+    "A program can poll this one row to learn current health, timing context, driver signal mode, and the top risk/opportunity references.",
+    "The top opportunity mapping payload is now also visible here so the outer control layer can forward beneficiary symbols without reopening lower consumer views.",
+    "The current top watch symbol and top-five watch bundle are now also visible here, so symbol-first routing can stay on the control packet for the first decision.",
+    "Linkage class is now visible here too, so the outer control layer can distinguish direct beneficiaries from proxy-quality watches.",
+    "The packet now also carries symbol-watch change state, so the outer control layer can tell whether the watchset rotated without reopening lower symbol-watch surfaces.",
+    "The top opportunity primary theme is now explicit here too, so overlap governance is already settled before the outer control layer reads the packet.",
+    "The current accepted primary focus now also carries replay-support counts here, so the outer layer can see whether the top focus is still backed by real candidate-lane evidence.",
+    "The packet now also carries leaderboard rank context, so the outer layer can see whether the incumbent is still first in the field or merely being held by review policy.",
+    "The packet now also carries governance-tension state, so the outer layer can explicitly see when rank ordering and review policy disagree.",
+    "The packet now also carries focus-rotation readiness, so the outer layer can read one explicit recommendation on whether to hold, monitor, or prepare the next rotation review.",
+    "The strongest current challenger is now visible here too, so the outer layer can track the next likely rotation candidate without reopening the challenger board surface.",
+    "The packet now also carries challenger review attention state, so the outer control layer can distinguish hold, raised review attention, and true open-rotation review from one row."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127d_commercial_aerospace_abc_phase_aware_downside_triage_v1",
+    "economic_reference_variant": "v126o_economic_reference",
+    "cleaner_reference_variant": "v126q_cleaner_reference",
+    "new_aggressive_shadow_variant": "broad_half_reference",
+    "new_aggressive_shadow_final_equity": 1249251.8292,
+    "new_aggressive_shadow_max_drawdown": 0.19378829,
+    "blocked_variant": "continuation_exhaustion_half",
+    "blocked_variant_final_equity": 1218948.6171,
+    "blocked_variant_max_drawdown": 0.21327301,
+    "same_family_stopline": true,
+    "authoritative_status": "replace_aggressive_shadow_with_v127a_and_block_same_family_narrowing"
+  },
+  "interpretation": [
+    "V1.27D freezes the latest commercial-aerospace downside family verdict: V1.27A upgrades the aggressive shadow slot, while V1.27C continuation-exhaustion narrowing is blocked.",
+    "This sets a near-stopline on further tuning inside the same phase-aware sell family; next downside work must be orthogonal rather than narrower rewrites of the same grammar."
+  ]
+}

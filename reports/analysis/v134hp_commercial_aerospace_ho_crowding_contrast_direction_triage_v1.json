@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hp_commercial_aerospace_ho_crowding_contrast_direction_triage_v1",
+    "crowding_like_shelter_rebound_count": 2,
+    "locked_board_weak_repair_count": 1,
+    "authoritative_status": "retain_crowding_vs_weak_repair_contrast_and_do_not_treat_crowded_symbol_strength_as_board_restart"
+  },
+  "triage_rows": [
+    {
+      "contrast_name": "crowding_vs_weak_repair",
+      "direction": "learn_crowding_as_symbol_level_strength_concentration_not_board_level_restart"
+    },
+    {
+      "contrast_name": "high_beta_raw_only_rebound",
+      "direction": "learn_high_beta_raw_only_rebound_as_separate_negative_label_not_crowding_not_unlock"
+    }
+  ],
+  "interpretation": [
+    "V1.34HP converts the contrast into direction.",
+    "Crowded shelter rebounds should be learned as concentrated symbol strength inside a still-locked board, not as a reason to reopen broad participation."
+  ]
+}

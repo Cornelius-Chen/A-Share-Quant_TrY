@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122a_cpo_xyz_1min_family_three_run_adversarial_triage_v1",
+    "supportive_continuation_status": "candidate_family_only",
+    "burst_fade_trap_status": "candidate_family_only",
+    "reviewer_consensus": "unanimous",
+    "forbidden_next_step": "any_replay_promotion_or_shadow_replay",
+    "recommended_next_posture": "run_short_horizon_label_aligned_expectancy_audit"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "supportive_continuation_status": "candidate_family_only",
+      "burst_fade_trap_status": "candidate_family_only",
+      "main_risk": "short_recent_unlabeled_window",
+      "recommended_next_step": "label_aligned_audit"
+    },
+    {
+      "reviewer": "Tesla",
+      "supportive_continuation_status": "candidate_family_only",
+      "burst_fade_trap_status": "candidate_family_only",
+      "main_risk": "premature_rule_inference",
+      "recommended_next_step": "label_aligned_audit"
+    },
+    {
+      "reviewer": "James",
+      "supportive_continuation_status": "candidate_family_only",
+      "burst_fade_trap_status": "candidate_family_only",
+      "main_risk": "no_action_label_alignment_yet",
+      "recommended_next_step": "label_aligned_audit"
+    }
+  ],
+  "interpretation": [
+    "All three reviewers agree the two 1-minute families are worth keeping but only as non-replay candidate families.",
+    "All three reviewers agree the next required step is label-aligned audit rather than more geometry or replay.",
+    "This preserves the 1-minute line without repeating the earlier mistake of promoting structure before evidence."
+  ]
+}

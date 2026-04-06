@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "shadow_slice_count": 17,
+    "candidate_cover_count": 14,
+    "raw_daily_symbol_count": 51,
+    "raw_daily_coverage_start": "2024-01-02",
+    "raw_daily_coverage_end": "2026-04-03",
+    "status_csv": "data\\training\\a_share_daily_market_extension_candidate_status_v1.csv",
+    "authoritative_output": "a_share_daily_market_extension_candidate_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "daily_market_extension_candidate_surface",
+      "component_state": "materialized_candidate_cover_surface",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_daily_market_extension_candidate_surface_v1.csv",
+      "coverage_note": "candidate_cover_count = 14"
+    },
+    {
+      "component": "extension_candidate_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_daily_market_extension_candidate_residual_v1.csv",
+      "coverage_note": "raw_daily_symbol_count = 51"
+    }
+  ],
+  "interpretation": [
+    "The replay daily coverage gap is not a raw-source absence problem anymore: a candidate daily extension surface now exists.",
+    "The next step is controlled promotion of candidate daily coverage, plus matching index and limit-halt extension."
+  ]
+}

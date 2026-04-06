@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "promotion_gate_state": "promotion_gate_hold",
+    "shadow_change_signal_priority": "p1",
+    "accepted_top_opportunity_theme": "consumer_staples",
+    "accepted_top_watch_symbol": "600887",
+    "plan_state": "manual_acceptance_required_before_primary_consumer_promotion",
+    "plan_step_count": 4,
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_primary_consumer_promotion_plan_materialized"
+  },
+  "rows": [
+    {
+      "component": "promotion_plan",
+      "component_state": "materialized",
+      "metric": "promotion_gate_state",
+      "value": "promotion_gate_hold"
+    },
+    {
+      "component": "promotion_plan",
+      "component_state": "materialized",
+      "metric": "shadow_change_signal_priority",
+      "value": "p1"
+    },
+    {
+      "component": "promotion_plan",
+      "component_state": "materialized",
+      "metric": "accepted_top_opportunity_theme",
+      "value": "consumer_staples"
+    },
+    {
+      "component": "promotion_plan",
+      "component_state": "materialized",
+      "metric": "accepted_top_watch_symbol",
+      "value": "600887"
+    },
+    {
+      "component": "promotion_plan",
+      "component_state": "materialized",
+      "metric": "plan_step_count",
+      "value": "4"
+    }
+  ],
+  "interpretation": [
+    "This plan converts the accepted rotation from a shadow delta into an explicit primary-consumer promotion sequence.",
+    "It preserves discipline by making manual acceptance the first required step."
+  ]
+}

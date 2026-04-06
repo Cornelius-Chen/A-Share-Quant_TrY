@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "decision_unit_count": 4,
+    "pending_manual_decision_count": 0,
+    "manually_approved_count": 4,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_batch_one_allowlist_decision_surface_status_v1.csv",
+    "authoritative_output": "a_share_batch_one_allowlist_decision_surface_preserved_after_manual_approval"
+  },
+  "decision_rows": [
+    {
+      "decision_unit_id": "allowlist_review_finance_sina_com_cn",
+      "host": "finance.sina.com.cn",
+      "review_mode": "primary_batch_one_host_family_review",
+      "review_priority_order": 1,
+      "recommended_review_gate": "review_first",
+      "manual_license_decision": "allow",
+      "manual_runtime_eligibility": "allow",
+      "manual_notes": "manual approval from user on 2026-04-05",
+      "promotion_state": "manually_approved_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stcn_com",
+      "host": "stcn.com",
+      "review_mode": "independent_batch_one_host_review",
+      "review_priority_order": 2,
+      "recommended_review_gate": "review_after_primary_host_family",
+      "manual_license_decision": "allow",
+      "manual_runtime_eligibility": "allow",
+      "manual_notes": "manual approval from user on 2026-04-05",
+      "promotion_state": "manually_approved_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_www_yicai_com",
+      "host": "www.yicai.com",
+      "review_mode": "independent_batch_one_host_review",
+      "review_priority_order": 2,
+      "recommended_review_gate": "review_after_primary_host_family",
+      "manual_license_decision": "allow",
+      "manual_runtime_eligibility": "allow",
+      "manual_notes": "manual approval from user on 2026-04-05",
+      "promotion_state": "manually_approved_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stock_finance_sina_com_cn",
+      "host": "stock.finance.sina.com.cn",
+      "review_mode": "sibling_host_review_after_primary_sina_family",
+      "review_priority_order": 3,
+      "recommended_review_gate": "review_after_primary_host_family_outcome",
+      "manual_license_decision": "allow",
+      "manual_runtime_eligibility": "allow",
+      "manual_notes": "manual approval from user on 2026-04-05",
+      "promotion_state": "manually_approved_pending_runtime_promotion"
+    }
+  ],
+  "interpretation": [
+    "Batch-one allowlist keeps an explicit decision surface instead of an informal review package only.",
+    "Existing manual outcomes are preserved across reruns rather than being reset to pending.",
+    "Manual approval still does not mean runtime promotion is open; it only closes the host-level review stage."
+  ]
+}

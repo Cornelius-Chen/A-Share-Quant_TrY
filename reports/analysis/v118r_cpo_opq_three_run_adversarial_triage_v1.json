@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118r_cpo_opq_three_run_adversarial_triage_v1",
+    "triage_scope": "V118O_V118P_V118Q",
+    "branch_name": "reclaim_absorption_score_candidate",
+    "branch_status": "dead",
+    "hard_candidate_allowed": false,
+    "soft_expectancy_component_allowed": false,
+    "explanatory_only_allowed": false,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "mainline_resource_allocation_allowed": false,
+    "authoritative_current_problem": "external_pool_gap_is_negative_and_time_split_is_unstable",
+    "recommended_next_posture": "kill_reclaim_absorption_line_and_reopen_quality_side_discovery_elsewhere"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "dead",
+      "key_reason": "Discovery starts with a negative gap and both external and chronology checks fail."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "dead",
+      "key_reason": "This is not a weak branch but a reversed branch; the direction is wrong on the external pool."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "dead",
+      "key_reason": "No candidate or soft-component budget is justified once the external pool gap is negative and time splits remain sub-0.5."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "dead",
+      "key_reason": "V118O gap=-227189872.727273, V118P external_clear=False, V118Q mean_test_bal_acc=0.430556."
+    }
+  ],
+  "interpretation": [
+    "V1.18R is the scheduled three-run adversarial triage over the reclaim-absorption branch.",
+    "All three reviewers converged without ambiguity: the branch is dead, not merely weak.",
+    "The project should spend zero additional budget on reclaim-absorption and reopen discovery on a different quality-side axis."
+  ]
+}

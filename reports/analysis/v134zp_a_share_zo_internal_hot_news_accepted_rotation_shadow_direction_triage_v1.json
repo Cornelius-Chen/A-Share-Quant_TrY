@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "shadow_snapshot_row_count": 1,
+    "current_top_opportunity_theme": "gold",
+    "shadow_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "shadow_top_watch_symbol": "600887",
+    "shadow_source_family": "sina",
+    "shadow_rotation_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_shadow_snapshot_materialized",
+    "authoritative_status": "accepted_rotation_shadow_snapshot_ready_without_mutating_the_current_primary_snapshot"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_snapshot_visibility",
+      "direction": "use the shadow snapshot to compare current and accepted top-level focus side by side"
+    },
+    {
+      "component": "promotion_guard",
+      "direction": "keep the primary snapshot unchanged while accepted rotation remains in shadow form only"
+    },
+    {
+      "component": "consumer_review",
+      "direction": "review the accepted shadow snapshot before deciding whether to promote the second-source rotation into primary consumers"
+    }
+  ],
+  "interpretation": [
+    "The accepted state is now visible as a true shadow snapshot instead of only a packet preview.",
+    "This keeps promotion disciplined while giving downstream users a realistic post-rotation view."
+  ]
+}

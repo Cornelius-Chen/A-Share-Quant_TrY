@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126y_commercial_aerospace_shadow_stack_compare_v1",
+    "highest_equity_variant": "v126v_retained_aggressive_shadow",
+    "highest_equity_final_equity": 1246105.7532,
+    "lowest_drawdown_variant": "v126q_cleaner_reference",
+    "lowest_drawdown": 0.13356069,
+    "best_balance_variant": "v126q_cleaner_reference",
+    "best_balance_final_equity": 1189482.711,
+    "best_balance_max_drawdown": 0.13356069
+  },
+  "stack_rows": [
+    {
+      "variant": "v126o_economic_reference",
+      "class": "reference_shadow",
+      "final_equity": 1227143.0725,
+      "max_drawdown": 0.14258108,
+      "executed_order_count": 285
+    },
+    {
+      "variant": "v126q_cleaner_reference",
+      "class": "cleaner_shadow",
+      "final_equity": 1189482.711,
+      "max_drawdown": 0.13356069,
+      "executed_order_count": 141
+    },
+    {
+      "variant": "v126v_retained_aggressive_shadow",
+      "class": "aggressive_shadow",
+      "final_equity": 1246105.7532,
+      "max_drawdown": 0.22518706,
+      "executed_order_count": 150
+    },
+    {
+      "variant": "v126x_weakest_half_full_exit",
+      "class": "conditional_derisk_shadow",
+      "final_equity": 1199188.2952,
+      "max_drawdown": 0.20635114,
+      "executed_order_count": 68
+    }
+  ],
+  "interpretation": [
+    "V1.26Y puts the current commercial-aerospace lawful shadow stack on one plane: economic reference, cleaner reference, aggressive preheat shadow, and the best conditional de-risk variant.",
+    "This is a comparison surface only; it does not promote any replay variant by itself."
+  ]
+}

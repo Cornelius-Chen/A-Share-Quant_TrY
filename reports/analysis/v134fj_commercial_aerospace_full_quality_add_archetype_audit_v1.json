@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fj_commercial_aerospace_full_quality_add_archetype_audit_v1",
+    "threshold_row_count": 6,
+    "best_close_loc_15m_threshold": 0.63,
+    "best_matched_count": 5,
+    "best_full_quality_hit_count": 5,
+    "best_counterfactual_hit_count": 0,
+    "best_precision": 1.0,
+    "best_coverage": 1.0,
+    "threshold_csv": "data\\training\\commercial_aerospace_full_quality_add_archetype_audit_v1.csv",
+    "authoritative_rule": "inside the persistent permission quality ladder, first-15m close location acts as the cleanest minimal archetype anchor for full-quality add behavior"
+  },
+  "threshold_rows": [
+    {
+      "close_loc_15m_threshold": 0.6,
+      "matched_count": 7,
+      "full_quality_hit_count": 5,
+      "counterfactual_hit_count": 2,
+      "precision": 0.71428571,
+      "coverage": 1.0
+    },
+    {
+      "close_loc_15m_threshold": 0.63,
+      "matched_count": 5,
+      "full_quality_hit_count": 5,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 1.0
+    },
+    {
+      "close_loc_15m_threshold": 0.65,
+      "matched_count": 4,
+      "full_quality_hit_count": 4,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.8
+    },
+    {
+      "close_loc_15m_threshold": 0.68,
+      "matched_count": 4,
+      "full_quality_hit_count": 4,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.8
+    },
+    {
+      "close_loc_15m_threshold": 0.7,
+      "matched_count": 3,
+      "full_quality_hit_count": 3,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.6
+    },
+    {
+      "close_loc_15m_threshold": 0.75,
+      "matched_count": 3,
+      "full_quality_hit_count": 3,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.6
+    }
+  ],
+  "interpretation": [
+    "V1.34FJ asks whether the strongest local add-permission tier can be summarized by a minimal archetype anchor.",
+    "The aim is not to authorize execution, only to compress the strongest local tier into a readable supervision archetype."
+  ]
+}

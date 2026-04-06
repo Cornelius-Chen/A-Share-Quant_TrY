@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117h_cpo_breakout_damage_candidate_audit_v1",
+    "candidate_discriminator_name": "breakout_damage_containment_score_candidate",
+    "q25_mean_score": 843072250.0,
+    "hot_only_mean_score": 143359625.0,
+    "mean_score_gap_q25_minus_hot_only": 699712625.0,
+    "best_audit_threshold": 791060000.0,
+    "best_balanced_accuracy": 0.8125,
+    "captures_quality_signal": true,
+    "replaces_timing_gate": false,
+    "retained_day_passes_quality_gate": true,
+    "late_good_day_passes_quality_gate": false,
+    "late_weak_day_passes_quality_gate": false,
+    "recommended_next_posture": "if_breakout_damage_score_survives_candidate_audit_run_retained_set_refinement_next_and_keep_candidate_only"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1302939000.0,
+      "tp": 1,
+      "fn": 7,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.125,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": 1188938000.0,
+      "tp": 1,
+      "fn": 7,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.125,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "threshold": 1188918000.0,
+      "tp": 2,
+      "fn": 6,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.25,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": 1106029000.0,
+      "tp": 3,
+      "fn": 5,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.375,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": 1096927000.0,
+      "tp": 4,
+      "fn": 4,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.5,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 869213000.0,
+      "tp": 5,
+      "fn": 3,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.625,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 791060000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.8125
+    },
+    {
+      "threshold": 740133000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 2,
+      "tn": 6,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.75,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 519614000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 3,
+      "tn": 5,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.625,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 439392000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 4,
+      "tn": 4,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.5,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": 425281000.0,
+      "tp": 7,
+      "fn": 1,
+      "fp": 4,
+      "tn": 4,
+      "q25_recall": 0.875,
+      "hot_reject_rate": 0.5,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": -35789000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 4,
+      "tn": 4,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.5,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": -136912000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 5,
+      "tn": 3,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.375,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": -144300000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 6,
+      "tn": 2,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.25,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": -330256000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 7,
+      "tn": 1,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.125,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": -1129732000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 8,
+      "tn": 0,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "rebuilt_day_rows": [
+    {
+      "signal_trade_date": "2023-11-07",
+      "timing_gate": "late_only",
+      "final_judgement": "late_visibility_blocks_otherwise_good_day",
+      "candidate_damage_score_mean": 94679000.0,
+      "passes_best_threshold": false
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "timing_gate": "early_visible",
+      "final_judgement": "retained_quality_standard_met",
+      "candidate_damage_score_mean": 830136500.0,
+      "passes_best_threshold": true
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "timing_gate": "late_only",
+      "final_judgement": "late_and_quality_weak",
+      "candidate_damage_score_mean": -194799500.0,
+      "passes_best_threshold": false
+    }
+  ],
+  "interpretation": [
+    "V1.17H is the first hard audit for the new breakout-damage branch.",
+    "It asks the same question as V117D did for the old branch: does the new score separate q=0.25 hits from hot-only rows without pretending to replace timing?",
+    "The branch stays candidate-only regardless of outcome. The point is to test whether this is a genuinely different quality-side path worth a second run."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jq_commercial_aerospace_broader_symbol_pool_materialization_gap_audit_v1",
+    "broader_symbol_pool_expander_source_count": 4,
+    "broader_symbol_pool_extracted_candidate_total": 170,
+    "security_master_file_count": 12,
+    "security_master_target_hit_count": 0,
+    "materialized_symbol_count": 0,
+    "authoritative_gap": "name_to_symbol_coverage_gap",
+    "gap_csv": "data\\training\\commercial_aerospace_broader_symbol_pool_materialization_gap_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_symbol_pool_materialization_gap_ready_for_direction_triage"
+  },
+  "gap_rows": [
+    {
+      "gap_component": "broader_symbol_pool_expander_sources",
+      "status": "candidate_names_present_but_not_normalized",
+      "value": "4",
+      "detail": "extracted_candidate_total = 170"
+    },
+    {
+      "gap_component": "local_security_master_coverage",
+      "status": "zero_target_name_hits",
+      "value": "0",
+      "detail": "none of the target symbol names referenced in retained broader-symbol-pool sources appear in the current local security-master inventory"
+    },
+    {
+      "gap_component": "same_plane_symbol_pool_materialization",
+      "status": "blocked_by_name_to_symbol_coverage_gap",
+      "value": "0",
+      "detail": "the branch is source-ready but cannot yet produce a normalized symbol pool from current local coverage"
+    }
+  ],
+  "interpretation": [
+    "V1.34JQ tries to turn the first live same-plane branch into a real broader symbol pool.",
+    "It finds that the branch is source-ready but not yet materializable because the current local security-master coverage is too thin to normalize the candidate names carried by retained event sources."
+  ]
+}

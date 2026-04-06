@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "program_health_state_change": "stable",
+    "program_driver_signal_mode_change": "stable",
+    "interrupt_required_change": "stable",
+    "needs_attention_change": "stable",
+    "trading_day_state_change": "stable",
+    "session_phase_change": "stable",
+    "top_risk_reference_change": "stable",
+    "top_opportunity_reference_change": "stable",
+    "top_watch_symbol_change": "stable",
+    "top_watch_bundle_change": "stable",
+    "primary_focus_match_count_change": "stable",
+    "primary_focus_source_present_change": "stable",
+    "primary_focus_dual_match_change": "stable",
+    "top_challenger_theme_change": "stable",
+    "top_challenger_symbol_change": "stable",
+    "top_challenger_support_count_change": "stable",
+    "challenger_review_state_change": "stable",
+    "challenger_review_attention_state_change": "stable",
+    "challenger_review_attention_priority_change": "stable",
+    "focus_governance_tension_state_change": "stable",
+    "focus_governance_tension_priority_change": "stable",
+    "focus_rotation_readiness_state_change": "stable",
+    "focus_rotation_readiness_priority_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_control_packet_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "control_packet_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "driver_signal_mode_change",
+      "component_state": "materialized",
+      "metric": "program_driver_signal_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "interrupt_required_change",
+      "component_state": "materialized",
+      "metric": "interrupt_required_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_risk_reference_change",
+      "component_state": "materialized",
+      "metric": "top_risk_reference_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_opportunity_reference_change",
+      "component_state": "materialized",
+      "metric": "top_opportunity_reference_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_watch_symbol_change",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_watch_bundle_change",
+      "component_state": "materialized",
+      "metric": "top_watch_bundle_change",
+      "value": "stable"
+    },
+    {
+      "component": "primary_focus_replay_support_change",
+      "component_state": "materialized",
+      "metric": "primary_focus_source_present_change",
+      "value": "stable"
+    },
+    {
+      "component": "challenger_focus_change",
+      "component_state": "materialized",
+      "metric": "top_challenger_theme_change",
+      "value": "stable"
+    },
+    {
+      "component": "challenger_review_attention_change",
+      "component_state": "materialized",
+      "metric": "challenger_review_state_change",
+      "value": "stable"
+    },
+    {
+      "component": "challenger_review_attention_change",
+      "component_state": "materialized",
+      "metric": "challenger_review_attention_state_change",
+      "value": "stable"
+    },
+    {
+      "component": "focus_governance_tension_change",
+      "component_state": "materialized",
+      "metric": "focus_governance_tension_state_change",
+      "value": "stable"
+    },
+    {
+      "component": "focus_governance_tension_change",
+      "component_state": "materialized",
+      "metric": "focus_governance_tension_priority_change",
+      "value": "stable"
+    },
+    {
+      "component": "focus_rotation_readiness_change",
+      "component_state": "materialized",
+      "metric": "focus_rotation_readiness_state_change",
+      "value": "stable"
+    },
+    {
+      "component": "focus_rotation_readiness_change",
+      "component_state": "materialized",
+      "metric": "focus_rotation_readiness_priority_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This change signal sits directly above the single-row control packet.",
+    "A consumer can watch this layer to know whether the topmost packet itself materially changed without reopening lower packet fields every cycle.",
+    "Symbol-watch rotation is now part of that topmost packet-change decision.",
+    "Primary-focus replay-support change is now also visible here, so the outer layer can detect support erosion even when the top focus reference itself has not rotated.",
+    "Top challenger change is now visible here too, so the outer layer can detect the next likely rotation candidate changing before a full promotion review opens.",
+    "Challenger review attention change is now visible here too, so the outer layer can react when review semantics move between background monitoring, raised attention, and open rotation review.",
+    "Governance tension change is now visible here too, so the outer layer can react when ranking-vs-policy mismatch itself appears, escalates, or resolves.",
+    "Focus-rotation readiness change is now visible here too, so the outer layer can react when the overall recommendation moves between hold, monitor, and rotation-review-ready states."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "acceptance_posture": "open_v134en_program_master_status_card_v4",
+    "line_count": 6,
+    "frozen_line_count": 5,
+    "opened_supervision_line_count": 1,
+    "deferred_line_count": 0,
+    "next_frontier": "intraday_add",
+    "next_frontier_state": "opened_supervision_only",
+    "status_card_csv": "data\\training\\program_master_status_card_v4.csv",
+    "authoritative_output": "program_master_status_card_v4_ready_for_add_frontier_governance_triage"
+  },
+  "status_rows": [
+    {
+      "program_line": "cpo_lawful_eod_primary",
+      "status": "frozen_authoritative",
+      "current_variant": "v114t_cpo_replay_integrity_repair_v1",
+      "next_action": "rerun_under_exposure_and_sizing_reviews_on_integrity_repaired_replay_before_any_new_promotion"
+    },
+    {
+      "program_line": "commercial_aerospace_lawful_eod_primary",
+      "status": "frozen_authoritative",
+      "current_variant": "tail_weakdrift_full",
+      "next_action": "retain_frozen_primary_and_do_not_resume_board_local_replay_tuning"
+    },
+    {
+      "program_line": "commercial_aerospace_intraday_governance_package",
+      "status": "frozen_packaged",
+      "current_variant": "commercial_aerospace_intraday_governance_package_frozen_for_transfer_or_future_lawful_intraday_design",
+      "next_action": "retain minute governance package as supervision-only reference"
+    },
+    {
+      "program_line": "commercial_aerospace_reduce_branch",
+      "status": "frozen_mainline",
+      "current_variant": "commercial_aerospace_reduce_final_status_card_ready_for_do_not_drift_triage",
+      "next_action": "allow only local residue supervision and do not drift"
+    },
+    {
+      "program_line": "commercial_aerospace_next_frontier",
+      "status": "opened_supervision_only",
+      "current_variant": "intraday_add",
+      "next_action": "build_intraday_add_point_in_time_seed_feed_and_keep_execution_blocked",
+      "opening_gate_count": 9,
+      "opening_posture": "prelaunch_only",
+      "silent_opening_allowed": false
+    },
+    {
+      "program_line": "transfer_program",
+      "status": "frozen",
+      "current_variant": "BK0808",
+      "next_action": "wait_for_real_v6_same_plane_emergence_of_600118_then_rerun_transfer_chain"
+    }
+  ],
+  "interpretation": [
+    "V1.34EN refreshes the program master card after intraday add is explicitly opened as a supervision frontier.",
+    "The key change is narrow but important: the next frontier is no longer deferred; it is open, but only at supervision scope."
+  ]
+}

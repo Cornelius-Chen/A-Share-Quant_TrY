@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "current_primary_rank_change": "stable",
+    "incumbent_is_leader_change": "stable",
+    "review_state_change": "stable",
+    "tension_state_change": "stable",
+    "tension_priority_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "focus_governance_tension_change_signal_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "tension_monitoring",
+      "direction": "watch this layer when you care about governance friction changing even if the incumbent symbol itself has not rotated."
+    },
+    {
+      "component": "review_triggering",
+      "direction": "treat tension-state changes as a separate escalation path from direct focus rotation signals."
+    },
+    {
+      "component": "top_level_routing",
+      "direction": "promote p1 tension changes upward; keep p2/p3 tension changes in review-aware polling."
+    }
+  ],
+  "interpretation": [
+    "This signal separates governance friction changes from direct focus swaps.",
+    "It helps avoid conflating 'the focus changed' with 'the policy around the focus became unstable'."
+  ]
+}

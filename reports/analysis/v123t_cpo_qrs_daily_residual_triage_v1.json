@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123t_cpo_qrs_daily_residual_triage_v1",
+    "related_runs": [
+      "V123Q",
+      "V123R",
+      "V123S"
+    ],
+    "branch_name": "held_pair_deterioration_score",
+    "authoritative_status": "soft_component",
+    "majority_vote": {
+      "soft_component": 3
+    },
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "recommended_next_posture": "retain_only_as_residual_downside_soft_penalty_inside_held_pair_high_cash_context"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "verdict": "soft_component",
+      "reason": "stable_across_cash_floors_but_diffuse_inside_interval_so_not_clean_enough_for_candidate_budget",
+      "recommended_next_step": "keep_as_residual_downside_penalty_only"
+    },
+    {
+      "reviewer": "Tesla",
+      "verdict": "soft_component",
+      "reason": "chronology_and_boundary_hold_but_core_focus_fails",
+      "recommended_next_step": "do_not_expand_beyond_residual_context"
+    },
+    {
+      "reviewer": "James",
+      "verdict": "soft_component",
+      "reason": "stable_residual_signal_but_too_diffuse_inside_interval_to_keep_candidate_budget",
+      "recommended_next_step": "stop_treating_it_as_candidate_and_keep_only_as_residual_soft_overlay"
+    }
+  ],
+  "interpretation": [
+    "V1.23T freezes the residual downside branch after cash-floor sensitivity, core-stress concentration, and granular boundary review.",
+    "The branch survives chronology and boundary containment, but it fails the stronger test of focusing on the deepest stress core inside the residual interval.",
+    "All three reviewers therefore demote it to soft_component: still useful inside the narrow residual context, but no longer worthy of candidate budget."
+  ]
+}

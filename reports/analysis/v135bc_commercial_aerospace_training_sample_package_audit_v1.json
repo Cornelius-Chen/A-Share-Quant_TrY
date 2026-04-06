@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 10,
+    "primary_fit_count": 2,
+    "auxiliary_fit_count": 4,
+    "reference_only_count": 3,
+    "locked_holdout_count": 1,
+    "primary_positive_fit_count": 0
+  },
+  "rows": [
+    {
+      "window_count": "10",
+      "primary_fit_count": "2",
+      "auxiliary_fit_count": "4",
+      "reference_only_count": "3",
+      "locked_holdout_count": "1",
+      "strict_supervisor_conclusion": "This package intentionally keeps window 002 locked out of fitting, keeps 007/008/010 as reference only, uses 001/004/006/009 as auxiliary training context, and promotes only the cleanest released negative windows into primary fitting."
+    }
+  ],
+  "interpretation": [
+    "The package is intentionally not a raw export of the ledger; it applies stricter fitting tiers.",
+    "Window 002 remains locked, window 008 remains reference-only, and only clean released negative windows enter primary fit.",
+    "Auxiliary fit is reserved for support, bridge, and non-final positive context windows."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "scheduler_loop_signal_mode": "steady_polling",
+    "scheduler_mode": "steady_schedule",
+    "signal_priority": "p2",
+    "reschedule_target": "none",
+    "authoritative_output": "a_share_internal_hot_news_program_scheduler_loop_signal_feed_materialized"
+  },
+  "rows": [
+    {
+      "component": "scheduler_loop_signal_feed",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "scheduler_loop_signal_mode",
+      "component_state": "materialized",
+      "metric": "scheduler_loop_signal_mode",
+      "value": "steady_polling"
+    },
+    {
+      "component": "signal_priority",
+      "component_state": "materialized",
+      "metric": "signal_priority",
+      "value": "p2"
+    },
+    {
+      "component": "reschedule_target",
+      "component_state": "materialized",
+      "metric": "reschedule_target",
+      "value": "none"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest scheduler-loop-facing signal in the internal hot-news stack.",
+    "A scheduler can use it to decide whether to stay steady, tighten polling and requeue, or interrupt and requeue immediately."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "minimal_view_row_count": 20,
+    "risk_guardrail_count": 16,
+    "top_down_guidance_count": 1,
+    "board_watch_trigger_count": 0,
+    "symbol_focus_available_count": 0,
+    "authoritative_status": "continue_serving_downstream_with_compact_trading_program_minimal_view"
+  },
+  "triage_rows": [
+    {
+      "component": "consumer_entry",
+      "direction": "prefer_the_minimal_view_when_the_trading_program_needs_a_short_stable_schema_for_first-pass_routing"
+    },
+    {
+      "component": "risk_handling",
+      "direction": "use_consumer_action_class_risk_guardrail_as_the_first_filter_before_finer_symbol_or_board_logic"
+    },
+    {
+      "component": "focus_selection",
+      "direction": "use_consumer_focus_class_to_separate_market_level_board_level_and_symbol_ready_messages"
+    }
+  ],
+  "interpretation": [
+    "The next consumer does not need to read every enrichment field from the full ingress surface.",
+    "The minimal view is the better first-pass feed; the full ingress remains available for deeper joins and diagnostics."
+  ]
+}

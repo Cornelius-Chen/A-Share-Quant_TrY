@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "queue_row_count": 4,
+    "manual_review_completed_count": 4,
+    "primary_completed_count": 1,
+    "independent_completed_count": 2,
+    "sibling_completed_count": 1,
+    "unsatisfied_precondition_count": 1,
+    "status_csv": "data\\training\\a_share_source_internal_manual_latest_status_card_v1.csv",
+    "authoritative_status": "source_internal_manual_now_at_manual_approval_complete_pending_runtime_promotion_stopline"
+  },
+  "status_rows": [
+    {
+      "component": "source_internal_manual_lane",
+      "component_state": "manual_review_completed_pending_runtime_promotion",
+      "metric": "queue_row_count",
+      "value": "4"
+    },
+    {
+      "component": "manual_review_completed",
+      "component_state": "all_batch_one_hosts_manually_approved",
+      "metric": "manual_review_completed_count",
+      "value": "4"
+    },
+    {
+      "component": "primary_host_family_completed",
+      "component_state": "primary_manual_review_completed",
+      "metric": "primary_completed_count",
+      "value": "1"
+    },
+    {
+      "component": "independent_hosts_completed",
+      "component_state": "independent_manual_reviews_completed",
+      "metric": "independent_completed_count",
+      "value": "2"
+    },
+    {
+      "component": "sibling_host_completed",
+      "component_state": "sibling_manual_review_completed",
+      "metric": "sibling_completed_count",
+      "value": "1"
+    },
+    {
+      "component": "promotion_preconditions",
+      "component_state": "runtime_only_unsatisfied_after_manual_closure",
+      "metric": "unsatisfied_count",
+      "value": "1"
+    }
+  ],
+  "interpretation": [
+    "The only internally actionable source lane is no longer waiting on manual filling; manual closure is complete for batch-one.",
+    "What remains on the source side is runtime promotion gating, not another round of operator review scaffolding."
+  ]
+}

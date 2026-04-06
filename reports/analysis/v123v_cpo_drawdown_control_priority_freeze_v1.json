@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123v_cpo_drawdown_control_priority_freeze_v1",
+    "heat_dominated_interval_count": 2,
+    "residual_dominated_interval_count": 1,
+    "top_control_priority": "position_heat_guardrail",
+    "recommended_next_posture": "focus_next_execution_work_on_heat_plus_reduce_prior_not_on_new_family_discovery"
+  },
+  "priority_rows": [
+    {
+      "priority_rank": 1,
+      "control_layer": "position_heat_guardrail",
+      "why_now": "dominates_two_of_three_major_drawdowns_and_already_has_real_interval_improvement",
+      "authoritative_posture": "keep_balanced_and_strict_as_primary_control_refs"
+    },
+    {
+      "priority_rank": 2,
+      "control_layer": "board_risk_off_reduce_prior",
+      "why_now": "still_the_only_live_reduce_side_candidate_even_if_broad",
+      "authoritative_posture": "candidate_only_non_replay"
+    },
+    {
+      "priority_rank": 3,
+      "control_layer": "held_pair_residual_soft_penalty",
+      "why_now": "explains_the_non_overheated_third_drawdown_but_is_too_narrow_for_candidate_budget",
+      "authoritative_posture": "soft_component_only"
+    },
+    {
+      "priority_rank": 4,
+      "control_layer": "market_regime_overlay",
+      "why_now": "helps_explain_risk_but_is_not_evaluable_enough_for_execution_use",
+      "authoritative_posture": "explanatory_only"
+    }
+  ],
+  "interpretation": [
+    "V1.23V freezes a control-layer priority order after the drawdown attribution matrix.",
+    "This is meant to stop the project from opening more side branches before the main risk-control stack is ordered correctly.",
+    "The order is driven by what actually explains the three largest research-baseline drawdowns, not by pooled factor aesthetics."
+  ]
+}

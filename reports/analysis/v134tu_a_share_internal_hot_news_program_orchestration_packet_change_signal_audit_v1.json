@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "orchestration_mode_change": "stable",
+    "scheduler_loop_signal_mode_change": "stable",
+    "runtime_consumer_mode_change": "stable",
+    "sleep_strategy_change": "stable",
+    "interrupt_required_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_orchestration_packet_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "orchestration_packet_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "orchestration_mode_change",
+      "component_state": "materialized",
+      "metric": "orchestration_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "scheduler_loop_signal_mode_change",
+      "component_state": "materialized",
+      "metric": "scheduler_loop_signal_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "runtime_consumer_mode_change",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This layer sits above the orchestration packet and isolates whether outer orchestration behavior materially changed.",
+    "An orchestrator can watch it to avoid reopening the orchestration packet unless supervision mode or cadence behavior changed."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134es_commercial_aerospace_er_add_pattern_direction_triage_v1",
+    "authoritative_status": "freeze_local_add_pattern_envelopes_and_shift_next_to_add_rule_candidate_audit",
+    "label_tier_count": 4,
+    "separation_pair_count": 3,
+    "authoritative_rule": "the commercial-aerospace intraday-add frontier should next audit explicit early-session add rule candidates under the frozen local pattern envelopes while keeping execution blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "local_add_pattern_envelopes",
+      "status": "freeze_local_add_pattern_envelopes_and_shift_next_to_add_rule_candidate_audit",
+      "rationale": "the add frontier now has enough early-session shape separation to move from pattern description into rule-candidate auditing"
+    },
+    {
+      "component": "intraday_add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "pattern envelopes remain supervision-only and do not authorize entry execution or replay binding"
+    },
+    {
+      "component": "board_veto_stack",
+      "status": "retain_unchanged",
+      "rationale": "blocked board-lockout adds remain subordinate to the board-level lockout and local-only rebound guards"
+    }
+  ],
+  "interpretation": [
+    "V1.34ES freezes the first add pattern envelopes as the canonical next step for the intraday-add frontier.",
+    "The branch should next test explicit early-session add rule candidates, not jump to execution."
+  ]
+}

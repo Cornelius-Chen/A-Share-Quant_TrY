@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134br_commercial_aerospace_bq_execution_binding_direction_triage_v1",
+    "authoritative_status": "freeze_execution_binding_gap_and_keep_reduce_board_first_governance",
+    "blocker_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_bq_execution_binding_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "sell_side_binding",
+      "status": "not_ready",
+      "detail": "Still blocked by point_in_time_intraday_visibility and intraday_execution_simulation_surface."
+    },
+    {
+      "component": "board_gate_binding",
+      "status": "not_ready",
+      "detail": "Board expectancy and lockout/unlock remain governance-only until the intraday simulator exists."
+    },
+    {
+      "component": "reentry_binding",
+      "status": "not_started",
+      "detail": "Seed reentry ladder has supervision only; no reentry execution surface exists yet."
+    },
+    {
+      "component": "full_reduce_closure",
+      "status": "execution_gap_only",
+      "detail": "Conceptual closure largely exists; the remaining gap is execution infrastructure rather than semantic ambiguity."
+    }
+  ],
+  "interpretation": [
+    "V1.34BR turns execution binding blockers into a direction judgment.",
+    "The branch should now stop debating whether reduce is conceptually clear and instead admit that the remaining gap is execution infrastructure."
+  ]
+}

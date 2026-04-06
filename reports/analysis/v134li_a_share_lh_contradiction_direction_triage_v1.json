@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "duplicate_merge_candidate_count": 16,
+    "semantic_divergence_count": 0,
+    "review_queue_count": 15,
+    "authoritative_status": "contradiction_resolution_complete_enough_to_freeze_as_bootstrap"
+  },
+  "triage_rows": [
+    {
+      "component": "duplicate_merge_candidates",
+      "direction": "freeze_as_current_deduplication_resolution_surface"
+    },
+    {
+      "component": "semantic_divergence",
+      "direction": "retain_review_queue_for_future_real_conflict_sources"
+    },
+    {
+      "component": "residual_backlog",
+      "direction": "retain_only_for_events_not_yet_promoted_through_graph_resolution"
+    }
+  ],
+  "interpretation": [
+    "The quality layer now has a first-pass contradiction graph, which removes pure duplication noise from future review work.",
+    "Real semantic contradiction handling remains open, but the backlog is now structured instead of flat."
+  ]
+}

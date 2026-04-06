@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117j_cpo_ghi_three_run_adversarial_triage_v1",
+    "triage_scope": "V117G_V117H_V117I",
+    "breakout_damage_branch_status": "retain_candidate_only_continue_external_audit",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "new_quality_branch_alive": true,
+    "authoritative_current_problem": "out_of_set_and_larger_sample_validation_for_breakout_damage_branch",
+    "recommended_next_posture": "continue_breakout_damage_branch_candidate_only_and_do_not_promote_before_wider_audit"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "new_branch_alive_but_small_sample_hallucination_risk",
+      "key_reason": "Unlike continuation-integrity, the new branch survives retained-set refinement, but 8 retained rows and 1.0 balanced accuracy are too small-sample-perfect to trust as law."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "new_execution_semantic_axis_but_not_yet_scalable",
+      "key_reason": "The branch is centered on breakout efficiency and damage containment rather than the old pc1 continuation package, but its current retained-set neatness is still likely fragile."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "real_training_increment_but_candidate_only",
+      "key_reason": "This is the first quality-side branch that still separates positives from weak rows inside the retained family, but it remains too small for promotion."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "continue_but_only_candidate_only",
+      "key_reason": "V117H external gap=699712625.0, V117I retained gap=864435000.0, but retained rows=8."
+    }
+  ],
+  "interpretation": [
+    "V1.17J is the scheduled three-run adversarial review over the new breakout-damage branch.",
+    "All three reviewers converged that this branch is meaningfully stronger than the old continuation-integrity branch, because it keeps discrimination inside the retained family instead of collapsing there.",
+    "They also converged on the blocker: the current sample is still too small and too neat. The branch stays alive, but only as a candidate-only line for wider external audit."
+  ]
+}

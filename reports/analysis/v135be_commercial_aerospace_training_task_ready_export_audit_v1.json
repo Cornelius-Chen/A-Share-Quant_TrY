@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "row_count": 30,
+    "unique_task_count": 6,
+    "fit_primary_row_count": 8,
+    "fit_auxiliary_row_count": 10,
+    "reference_only_row_count": 6,
+    "locked_holdout_row_count": 6,
+    "window_002_holdout_task_count": 6
+  },
+  "manifest_rows": [
+    {
+      "task_id": "ca_task_001",
+      "task_name": "top_down_direction_task",
+      "task_question": "Does this window define a medium-term board direction or is it only media heat",
+      "fit_primary_count": "0",
+      "fit_auxiliary_count": "0",
+      "reference_only_count": "1",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    },
+    {
+      "task_id": "ca_task_002",
+      "task_name": "new_leg_or_old_echo_task",
+      "task_question": "Is this event a fresh tradable leg or only an old theme echo",
+      "fit_primary_count": "2",
+      "fit_auxiliary_count": "2",
+      "reference_only_count": "0",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    },
+    {
+      "task_id": "ca_task_003",
+      "task_name": "breadth_regime_task",
+      "task_question": "Is the board moving broadly or only structurally through a narrow slice",
+      "fit_primary_count": "2",
+      "fit_auxiliary_count": "1",
+      "reference_only_count": "1",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    },
+    {
+      "task_id": "ca_task_004",
+      "task_name": "capital_confirmation_task",
+      "task_question": "Is the move actually funded or mostly headline-driven",
+      "fit_primary_count": "2",
+      "fit_auxiliary_count": "3",
+      "reference_only_count": "1",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    },
+    {
+      "task_id": "ca_task_005",
+      "task_name": "structure_gate_task",
+      "task_question": "Even if the narrative is right can the stock actually be traded now",
+      "fit_primary_count": "2",
+      "fit_auxiliary_count": "3",
+      "reference_only_count": "1",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    },
+    {
+      "task_id": "ca_task_006",
+      "task_name": "policy_to_subtheme_diffusion_task",
+      "task_question": "Did a later small catalyst act as ignition confirmation diffusion or mere rebound",
+      "fit_primary_count": "0",
+      "fit_auxiliary_count": "1",
+      "reference_only_count": "2",
+      "locked_holdout_count": "1",
+      "strict_task_usage_rule": "This manifest keeps task fitting explainable: only explicit fit tiers are trainable, reference windows stay non-fit, and window 002 remains locked out across every task."
+    }
+  ],
+  "interpretation": [
+    "The task-ready layer is stricter than the sample package because it routes each window only into tasks it can honestly teach.",
+    "Window 002 remains a full holdout across all six tasks and never appears as fit or reference.",
+    "Primary fitting still comes only from the cleanest released negatives, while positive, bridge, and launch cases remain auxiliary or reference-only."
+  ]
+}

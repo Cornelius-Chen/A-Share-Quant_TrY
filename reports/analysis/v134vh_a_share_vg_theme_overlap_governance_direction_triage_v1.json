@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "governance_rule_count": 7,
+    "resolved_overlap_count": 10,
+    "unresolved_overlap_count": 0,
+    "authoritative_status": "continue_resolving_repeated_overlap_pairs_before_expanding_more_theme_layers"
+  },
+  "triage_rows": [
+    {
+      "component": "resolved_overlap_pairs",
+      "direction": "prefer the primary theme for routing while preserving secondary themes for context and audit."
+    },
+    {
+      "component": "unresolved_overlap_pairs",
+      "direction": "leave unresolved overlaps visible and only add new rules when the same pair repeats often enough to justify governance."
+    }
+  ],
+  "interpretation": [
+    "Overlap governance should stay narrow and repeated-pair driven, not become a giant taxonomy bureaucracy.",
+    "The current rules are enough to stop the most common high-frequency overlaps from flattening downstream routing."
+  ]
+}

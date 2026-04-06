@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128u_commercial_aerospace_intraday_collapse_override_proxy_audit_v1",
+    "primary_variant": "tail_weakdrift_full",
+    "total_buy_order_count": 55,
+    "proxy_hit_order_count": 2,
+    "proxy_hit_day_count": 2,
+    "retained_failure_case_count": 2,
+    "retained_failure_coverage_rate": 1.0,
+    "watch_only_trigger_count": 0,
+    "proxy_notional_share": 0.07375093,
+    "execution_day_harm_estimate_total": 16168.0,
+    "proxy_hits_csv": "data\\training\\commercial_aerospace_intraday_collapse_override_proxy_hits_v1.csv",
+    "authoritative_rule": "intraday collapse override proxy is supervision-only because it uses execution-day path information and must not be promoted into lawful replay before minute-level or intraday point-in-time support exists"
+  },
+  "proxy_hit_rows": [
+    {
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "action": "add",
+      "notional": 86192.0,
+      "open_to_close_return": -0.09987006,
+      "close_location": 0.0,
+      "signal_label": "de_risk_target",
+      "pre_open_event_status": "no_decisive_event",
+      "execution_day_harm_estimate": 8608.0,
+      "matched_failure_id": "20260113_601698",
+      "matched_failure_type": "intraday_collapse_override_required"
+    },
+    {
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "action": "add",
+      "notional": 84000.0,
+      "open_to_close_return": -0.09,
+      "close_location": 0.06140351,
+      "signal_label": "de_risk_target",
+      "pre_open_event_status": "no_decisive_event",
+      "execution_day_harm_estimate": 7560.0,
+      "matched_failure_id": "20260126_300342",
+      "matched_failure_type": "intraday_collapse_override_required"
+    }
+  ],
+  "interpretation": [
+    "V1.28U tests whether a very narrow supervision-only proxy can isolate the strongest retained intraday collapse failures.",
+    "The proxy is intentionally strict: no pre-open decisive adverse event, de-risk-target signal semantics, and a severe execution-day open-to-close collapse with a bottom-decile close location."
+  ]
+}

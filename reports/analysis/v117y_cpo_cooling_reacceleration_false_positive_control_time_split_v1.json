@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117y_cpo_cooling_reacceleration_false_positive_control_time_split_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.736111,
+    "min_test_balanced_accuracy": 0.666667,
+    "stability_posture": "control_layer_stable_enough_for_next_triage",
+    "recommended_next_posture": "send_WXY_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_best_threshold": 489402000.0,
+      "train_best_balanced_accuracy": 0.9,
+      "test_balanced_accuracy": 0.666667,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.333333
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_best_threshold": 663769000.0,
+      "train_best_balanced_accuracy": 0.8,
+      "test_balanced_accuracy": 0.666667,
+      "test_positive_recall": 0.333333,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_best_threshold": 489402000.0,
+      "train_best_balanced_accuracy": 0.714286,
+      "test_balanced_accuracy": 0.875,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.17Y does not ask whether the control layer improved one full-sample number. It asks whether the control survives crude time-split transfer.",
+    "A control idea that only works in-sample is still a false-positive story, not a usable candidate refinement.",
+    "This closes the one extra audit cycle allowed by V117V."
+  ]
+}

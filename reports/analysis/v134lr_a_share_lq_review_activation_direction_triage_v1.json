@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "review_registry_count": 3,
+    "low_confidence_queue_count": 45,
+    "contradiction_queue_count": 15,
+    "attention_soft_queue_count": 4,
+    "authoritative_status": "review_activation_complete_enough_to_freeze_and_shift_into_live_like_gate_readiness"
+  },
+  "triage_rows": [
+    {
+      "component": "review_queues",
+      "direction": "freeze_as_current_human_in_the_loop_surface"
+    },
+    {
+      "component": "next_frontier",
+      "direction": "shift_into_live_like_gate_readiness_audit_using_source_activation_review_and_governance_as_inputs"
+    }
+  ],
+  "interpretation": [
+    "The center now has an actual review layer rather than just the promise of one.",
+    "The next honest question is no longer whether review exists, but whether the whole stack is ready to open any live-like gate at all."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134iy_commercial_aerospace_event_attention_heat_proxy_audit_v1",
+    "symbol_count": 5,
+    "explicit_heat_anchor_seed_count": 1,
+    "event_backed_heat_carrier_proxy_count": 1,
+    "non_anchor_heat_proxy_count": 2,
+    "strongest_soft_heat_proxy_symbol": "603601",
+    "counterpanel_thickened": false,
+    "heat_proxy_csv": "data\\training\\commercial_aerospace_event_attention_heat_proxy_v1.csv",
+    "authoritative_rule": "board-local heat proxies can now separate explicit anchor, soft carrier, concentration-only, breakout-only, and follow-only roles, but this still does not create a second hard counterpanel or reopen capital_true_selection"
+  },
+  "heat_proxy_rows": [
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "candidate_status": "hard_retained",
+      "candidate_role": "attention_anchor_and_attention_decoy",
+      "separated_role": "",
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "avg_turnover_rate_f": 20.64860392,
+      "max_turnover_rate_f": 39.7029,
+      "post_lockout_max_vs_pre_lockout_peak": -0.1585,
+      "followthrough_label": "not_labeled",
+      "heat_proxy_class": "explicit_heat_anchor_seed",
+      "heat_proxy_reading": "anchor authority comes from explicit turning-point heat naming rather than from a pure price-strength proxy"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "crowded_attention_carrier_candidate",
+      "separated_role": "event_backed_attention_carrier_candidate",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "avg_turnover_rate_f": 26.1588098,
+      "max_turnover_rate_f": 62.0638,
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "followthrough_label": "persistent_symbol_followthrough_without_board_unlock",
+      "heat_proxy_class": "event_backed_heat_carrier_proxy",
+      "heat_proxy_reading": "retained event backing plus the strongest turnover concentration and persistent symbol-level followthrough make it the strongest soft heat-carrier proxy"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "crowding_only_role_candidate",
+      "separated_role": "non_anchor_crowded_concentration_candidate",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "avg_turnover_rate_f": 22.9258,
+      "max_turnover_rate_f": 56.1441,
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "followthrough_label": "weak_or_nonpersistent_followthrough",
+      "heat_proxy_class": "crowded_heat_proxy_without_anchor",
+      "heat_proxy_reading": "crowding and high turnover exist, but the symbol lacks retained event backing and persistent followthrough, so it stays a non-anchor heat proxy"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "outlier_breakout_concentration_candidate",
+      "separated_role": "non_anchor_outlier_breakout_candidate",
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "avg_turnover_rate_f": 17.83263725,
+      "max_turnover_rate_f": 32.6589,
+      "post_lockout_max_vs_pre_lockout_peak": 0.1,
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "heat_proxy_class": "breakout_heat_proxy_without_anchor",
+      "heat_proxy_reading": "lockout-window breakout and moderate followthrough create visible heat, but retained event support is still too weak for anchor or carrier promotion"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "high_beta_attention_follow_candidate",
+      "separated_role": "event_backed_high_beta_follow_candidate",
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "avg_turnover_rate_f": 19.75018824,
+      "max_turnover_rate_f": 41.3251,
+      "post_lockout_max_vs_pre_lockout_peak": -0.0169697,
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "heat_proxy_class": "event_backed_follow_heat_proxy",
+      "heat_proxy_reading": "event support exists, but the current path still reads like a high-beta follower rather than an attention anchor or carrier"
+    }
+  ],
+  "interpretation": [
+    "V1.34IY adds a board-local heat-proxy layer without pretending the stack has real cross-market heat data.",
+    "The gain is local role clarity: who is explicitly named heat, who is the strongest soft carrier proxy, and who is merely concentrated or following heat."
+  ]
+}

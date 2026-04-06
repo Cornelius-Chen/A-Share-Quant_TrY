@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "supervisor_mode": "steady_supervision",
+    "supervision_loop_mode": "steady_supervision_loop",
+    "contract_action": "keep_steady_supervision",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_single-row_runtime-stack_control_packet_above_the_supervision_contract_layers"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_control_packet_branch",
+      "direction": "keep_the_outer controller on lightweight polling when the packet stays in keep_steady_supervision and steady_supervision_loop"
+    },
+    {
+      "component": "tight_control_packet_branch",
+      "direction": "escalate_attention and tighten the supervising cadence when the packet rotates into tighten_supervision_loop or elevate_supervision_only"
+    },
+    {
+      "component": "interrupt_control_packet_branch",
+      "direction": "interrupt_and reopen the requested target immediately when the packet rotates into interrupt_supervision_loop_and_reopen_target"
+    }
+  ],
+  "interpretation": [
+    "This is the single-row topmost control surface for the internal hot-news runtime stack.",
+    "An external top controller can stop here unless it needs to open lower supervision tables for deeper diagnostics."
+  ]
+}

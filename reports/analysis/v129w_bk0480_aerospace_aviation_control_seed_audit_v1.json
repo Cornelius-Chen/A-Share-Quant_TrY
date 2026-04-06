@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129w_bk0480_aerospace_aviation_control_seed_audit_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "overlap_date_count": 16,
+    "authority_overlap_composite_win_rate": 0.625,
+    "support_role_flip_count": 6,
+    "authority_expected_upside_mean_gap": 0.232811,
+    "authority_non_junk_mean_gap": 0.096027,
+    "support_stability_advantage": 0.043083,
+    "authoritative_rule": "bk0480_dual_core_control_seed_is_coherent_enough_for_kickoff_but_too_unstable_for_replay_unlock",
+    "recommended_next_posture": "expand_locally_around_the_dual_core_and_audit_date_conditioned_authority_handoffs_before_replay"
+  },
+  "overlap_feature_rows": [
+    {
+      "feature": "expected_upside",
+      "authority_minus_support_mean_gap": 0.232811,
+      "authority_win_rate": 0.75
+    },
+    {
+      "feature": "drive_strength",
+      "authority_minus_support_mean_gap": 0.058214,
+      "authority_win_rate": 0.5625
+    },
+    {
+      "feature": "stability",
+      "authority_minus_support_mean_gap": -0.043083,
+      "authority_win_rate": 0.4375
+    },
+    {
+      "feature": "liquidity",
+      "authority_minus_support_mean_gap": 0.098053,
+      "authority_win_rate": 0.625
+    },
+    {
+      "feature": "resonance",
+      "authority_minus_support_mean_gap": 0.061229,
+      "authority_win_rate": 0.6875
+    },
+    {
+      "feature": "non_junk_composite_score",
+      "authority_minus_support_mean_gap": 0.096027,
+      "authority_win_rate": 0.75
+    }
+  ],
+  "overlap_extreme_rows": [
+    {
+      "bucket": "authority_best_dates",
+      "rows": [
+        {
+          "trade_date": "2024-05-09",
+          "authority_composite": 0.770941,
+          "support_composite": 0.448056,
+          "authority_minus_support_composite_gap": 0.322886
+        },
+        {
+          "trade_date": "2024-06-05",
+          "authority_composite": 0.749044,
+          "support_composite": 0.426919,
+          "authority_minus_support_composite_gap": 0.322125
+        },
+        {
+          "trade_date": "2024-12-27",
+          "authority_composite": 0.748634,
+          "support_composite": 0.445102,
+          "authority_minus_support_composite_gap": 0.303532
+        }
+      ]
+    },
+    {
+      "bucket": "support_flip_dates",
+      "rows": [
+        {
+          "trade_date": "2024-11-06",
+          "authority_composite": 0.348494,
+          "support_composite": 0.716574,
+          "authority_minus_support_composite_gap": -0.36808
+        },
+        {
+          "trade_date": "2024-03-05",
+          "authority_composite": 0.413199,
+          "support_composite": 0.683988,
+          "authority_minus_support_composite_gap": -0.270789
+        },
+        {
+          "trade_date": "2024-10-15",
+          "authority_composite": 0.230018,
+          "support_composite": 0.50009,
+          "authority_minus_support_composite_gap": -0.270072
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.29W audits whether the minimal BK0480 dual-core control seed is economically coherent on overlapping dates.",
+    "000738 wins often enough to stay the initial authority, but 600118 flips the ranking on a material minority of overlap dates, so replay should remain blocked."
+  ]
+}

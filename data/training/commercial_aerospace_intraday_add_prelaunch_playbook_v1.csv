@@ -1,0 +1,6 @@
+﻿step,status,detail
+confirm_explicit_shift,required,Do not open intraday add unless the frontier shift is explicit rather than implied by repeated continuation.
+reconfirm_reduce_frozen,required,Reduce must remain frozen_mainline with only local residue supervision allowed.
+reassert_board_veto_stack,required,"Board lockout, local-only rebound guard, and revival unlock remain upstream even when add opens later."
+open_as_supervision_only,required,The first add frontier step must be supervision-only and may not claim execution authority.
+refresh_program_master_status,required,Update the program master card so the frontier changes from deferred to opened in a single deliberate move.

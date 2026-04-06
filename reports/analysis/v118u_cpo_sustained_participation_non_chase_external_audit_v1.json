@@ -1,0 +1,326 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118u_cpo_sustained_participation_non_chase_external_audit_v1",
+    "candidate_discriminator_name": "sustained_participation_non_chase_score_candidate",
+    "positive_mean_score": 1051894200.0,
+    "negative_mean_score": 394077181.818182,
+    "mean_gap_positive_minus_negative": 657817018.181818,
+    "best_threshold": 592782000.0,
+    "best_balanced_accuracy": 0.727273,
+    "external_pool_signal_clear": true,
+    "recommended_next_posture": "time_split_validate_sustained_participation_non_chase_if_external_pool_gap_stays_positive"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1760701000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.0,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.454545
+    },
+    {
+      "threshold": 1632908000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.0,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.409091
+    },
+    {
+      "threshold": 1567386000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.509091
+    },
+    {
+      "threshold": 1308551000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": 1289825000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": 1232661000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 1003343000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.618182
+    },
+    {
+      "threshold": 828084000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.572727
+    },
+    {
+      "threshold": 787409000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.672727
+    },
+    {
+      "threshold": 641231000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.627273
+    },
+    {
+      "threshold": 592782000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.727273
+    },
+    {
+      "threshold": -415570000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.681818
+    },
+    {
+      "threshold": -478360000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.636364
+    },
+    {
+      "threshold": -481020000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.590909
+    },
+    {
+      "threshold": -659010000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -1016601000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "scored_rows": [
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "sustained_participation_non_chase_score": 1567386000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "sustained_participation_non_chase_score": 1308551000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "sustained_participation_non_chase_score": 1003343000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "sustained_participation_non_chase_score": 787409000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "sustained_participation_non_chase_score": 592782000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "sustained_participation_non_chase_score": 1760701000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "sustained_participation_non_chase_score": 1632908000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "sustained_participation_non_chase_score": 1289825000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "sustained_participation_non_chase_score": 1232661000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "sustained_participation_non_chase_score": 828084000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "sustained_participation_non_chase_score": 641231000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "sustained_participation_non_chase_score": -415570000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "sustained_participation_non_chase_score": -478360000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "sustained_participation_non_chase_score": -481020000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "sustained_participation_non_chase_score": -659010000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "sustained_participation_non_chase_score": -1016601000.0
+    }
+  ],
+  "interpretation": [
+    "V1.18U is the first hard audit for the sustained-participation non-chase branch.",
+    "The branch only deserves chronology budget if the broader add pool still ranks positive add rows above the negative ones.",
+    "If this external gap collapses, the line should die quickly instead of becoming another semantic tunnel."
+  ]
+}

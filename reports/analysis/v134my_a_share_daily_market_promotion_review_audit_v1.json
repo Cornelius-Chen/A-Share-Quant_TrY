@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "review_row_count": 17,
+    "promotable_now_count": 14,
+    "blocked_by_paired_surface_count": 0,
+    "blocked_no_candidate_count": 3,
+    "status_csv": "data\\training\\a_share_daily_market_promotion_review_status_v1.csv",
+    "authoritative_output": "a_share_daily_market_promotion_review_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "daily_market_promotion_review",
+      "component_state": "materialized_controlled_review_surface_with_promotable_subset",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_daily_market_promotion_review_v1.csv",
+      "coverage_note": "promotable_now_count = 14"
+    },
+    {
+      "component": "promotion_review_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_daily_market_promotion_review_residual_v1.csv",
+      "coverage_note": "blocked_no_candidate_count = 3"
+    }
+  ],
+  "interpretation": [
+    "Daily market extension is no longer just a candidate layer; it now has a controlled promotion review with a promotable subset.",
+    "Most shadow rows are now promotable under the semantic pair layer, while a smaller named residual remains blocked by missing candidate cover."
+  ]
+}

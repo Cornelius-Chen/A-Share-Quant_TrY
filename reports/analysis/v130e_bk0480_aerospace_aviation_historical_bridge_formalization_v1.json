@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130e_bk0480_aerospace_aviation_historical_bridge_formalization_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "target_symbol": "600760",
+    "bridge_strength": 0.946667,
+    "harmonization_status": "historical_bridge_only",
+    "specialist_opened_window": false,
+    "specialist_preserved_window": false,
+    "second_lane_acceptance_grade": false,
+    "authoritative_status": "retain_600760_as_historical_confirmation_bridge_only",
+    "authoritative_rule": "600760_is_strong_enough_to_remain_the_only_bk0480_historical_bridge_but_not_strong_enough_to_unlock_control_authority_or_replay",
+    "recommended_next_posture": "triage_whether_to_freeze_bk0480_here_or_keep_waiting_for_v6_native_support"
+  },
+  "evidence_rows": [
+    {
+      "evidence_name": "historical_snapshot_support",
+      "actual": {
+        "v5_snapshot_days": 42,
+        "v5_mean_non_junk": 0.616179,
+        "v5_mean_expected_upside": 0.580944
+      },
+      "reading": "600760 had real BK0480-native support on the historical v5 plane, not just stray timeline mentions."
+    },
+    {
+      "evidence_name": "timeline_permission_support",
+      "actual": {
+        "timeline_approval_days": 5,
+        "timeline_leader_core_days": 5,
+        "timeline_buy_days": 4,
+        "approved_dates": [
+          "2024-04-22",
+          "2024-05-07",
+          "2024-05-22",
+          "2024-06-05",
+          "2024-06-11"
+        ]
+      },
+      "reading": "The timeline evidence is strong enough to retain 600760 as a local historical confirmation bridge."
+    },
+    {
+      "evidence_name": "same_plane_harmonization_gap",
+      "actual": {
+        "v6_snapshot_days": 0,
+        "harmonization_status": "historical_bridge_only"
+      },
+      "reading": "The bridge is not same-plane harmonized, so it cannot directly enter current control-surface math."
+    },
+    {
+      "evidence_name": "specialist_window_quality",
+      "actual": {
+        "specialist_opened_window": false,
+        "specialist_preserved_window": false,
+        "second_lane_acceptance_posture": "close_market_v5_q2_second_lane_as_divergent_but_not_acceptance_grade",
+        "target_pnl_delta": -18.429634
+      },
+      "reading": "The bridge is structurally real but not acceptance-grade for replay unlock; prior lane work did not surface a clean opening or persistence edge."
+    }
+  ],
+  "interpretation": [
+    "V1.30E formalizes 600760 as the only credible BK0480 historical bridge candidate.",
+    "The bridge is real enough to keep in confirmation language and portability memory, but not clean enough to count as replay-unlocking evidence."
+  ]
+}

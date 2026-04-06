@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121d_cpo_abc_three_run_adversarial_triage_v1",
+    "branch_name": "participation_collapse_close_risk_score_candidate",
+    "authoritative_status": "soft_component",
+    "majority_vote": {
+      "soft_component": 2,
+      "candidate_only": 1
+    },
+    "core_failure_mode": "broad_close_risk_coverage_not_narrow_close_gate",
+    "best_threshold": -0.0,
+    "positive_recall": 1.0,
+    "negative_reject_rate_band": [
+      0.040541,
+      0.106383
+    ],
+    "recommended_next_posture": "treat_as_downside_penalty_or_prior_only_not_as_standalone_close_gate"
+  },
+  "subagent_conclusions": [
+    {
+      "agent": "Pauli",
+      "status": "soft_component",
+      "takeaway": "?? downside ?????????????"
+    },
+    {
+      "agent": "Tesla",
+      "status": "soft_component",
+      "takeaway": "???? downside prior??? standalone?"
+    },
+    {
+      "agent": "James",
+      "status": "candidate_only",
+      "takeaway": "???? non-replay narrowing ????? promotion?"
+    }
+  ],
+  "interpretation": [
+    "This is the first explicit downside branch after the add-side stopline.",
+    "The line is alive only as a broad downside prior or soft penalty, not as a replay-facing close rule.",
+    "Further work should narrow false positives by context, board phase, and role, rather than opening replay or promotion."
+  ]
+}

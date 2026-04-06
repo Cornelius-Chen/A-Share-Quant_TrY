@@ -1,0 +1,6 @@
+﻿automation_component,component_state,artifact_path,coverage_note
+ingest_jobs,materialized_bootstrap,data\reference\info_center\automation_registry\a_share_ingest_job_registry_v1.csv,ingest_job_count = 3
+pipeline_jobs,materialized_bootstrap,data\reference\info_center\automation_registry\a_share_pipeline_job_registry_v1.csv,pipeline_job_count = 3
+review_jobs,materialized_bootstrap,data\reference\info_center\automation_registry\a_share_review_job_registry_v1.csv,review_job_count = 3
+retention_jobs,materialized_bootstrap,data\reference\info_center\automation_registry\a_share_retention_job_registry_v1.csv,retention_job_count = 3
+orchestration_flows,materialized_bootstrap,data\reference\info_center\automation_registry\a_share_orchestration_registry_v1.csv,orchestration_flow_count = 2

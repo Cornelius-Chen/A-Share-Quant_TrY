@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "binding_row_count": 17,
+    "corrected_bound_count": 15,
+    "corrected_missing_count": 2,
+    "corrected_via_effective_trade_date_count": 1,
+    "corrected_binding_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_corrected_tradeable_context_binding_v1.csv",
+    "corrected_residual_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_corrected_tradeable_context_binding_residual_v1.csv",
+    "status_csv": "data\\training\\a_share_shadow_corrected_binding_view_status_v1.csv",
+    "authoritative_output": "a_share_shadow_corrected_binding_view_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_corrected_binding_view",
+      "component_state": "materialized_shadow_only_corrected_binding",
+      "binding_row_count": 17,
+      "corrected_bound_count": 15,
+      "corrected_missing_count": 2,
+      "corrected_via_effective_trade_date_count": 1
+    }
+  ],
+  "interpretation": [
+    "The corrected binding view keeps the base replay binding untouched and adds only a shadow-side auxiliary query date.",
+    "That is enough to reduce the replay market-context residual from three rows to two without mutating PTI history."
+  ]
+}

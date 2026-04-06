@@ -1,0 +1,5 @@
+﻿serving_component,component_state,artifact_path,coverage_note
+research_views,materialized_bootstrap,data\reference\info_center\serving_registry\a_share_research_view_registry_v1.csv,research_view_count = 6
+shadow_views,materialized_bootstrap_read_only,data\reference\info_center\serving_registry\a_share_shadow_view_registry_v1.csv,shadow_view_count = 4
+live_like_views,deferred_backlog,data\reference\info_center\serving_registry\a_share_live_like_view_registry_v1.csv,live_like_view_count = 2
+serving_routes,materialized_bootstrap,data\reference\info_center\serving_registry\a_share_serving_route_registry_v1.csv,active_serving_route_count = 2

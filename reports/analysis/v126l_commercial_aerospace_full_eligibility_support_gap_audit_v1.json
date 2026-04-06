@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126l_commercial_aerospace_full_eligibility_support_gap_audit_v1",
+    "train_full_count": 0,
+    "test_full_count": 36,
+    "impulse_continuation_train_full_count": 0,
+    "impulse_continuation_test_full_count": 36,
+    "train_full_start": "",
+    "train_full_end": "",
+    "test_full_start": "20251224",
+    "test_full_end": "20260112",
+    "main_gap_type": "full_eligibility_is_absent_in_train_impulse_window_but_present_in_test_impulse_window",
+    "authoritative_rule": "commercial_aerospace_full_eligibility_promotion_is_blocked_until_impulse_train_support_exists_or_split_geometry_is_reworked"
+  },
+  "distribution_rows": [
+    {
+      "scope": "test_full_by_regime",
+      "bucket": "impulse_expansion_proxy",
+      "count": 36
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "000738",
+      "count": 2
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "002465",
+      "count": 3
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "003009",
+      "count": 2
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "300045",
+      "count": 2
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "300342",
+      "count": 6
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "600118",
+      "count": 2
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "600879",
+      "count": 5
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "601698",
+      "count": 3
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "688066",
+      "count": 4
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "688523",
+      "count": 3
+    },
+    {
+      "scope": "test_full_by_symbol",
+      "bucket": "688568",
+      "count": 4
+    }
+  ],
+  "interpretation": [
+    "V1.26L checks whether the full-eligibility blocker is caused by structural absence or by train/test geometry.",
+    "If full labels exist only in the late impulse test window, the current split supports shadow replay but not full-layer promotion."
+  ]
+}

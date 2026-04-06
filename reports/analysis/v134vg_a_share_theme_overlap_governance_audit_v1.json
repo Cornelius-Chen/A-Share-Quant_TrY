@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "governance_rule_count": 7,
+    "resolution_case_count": 33,
+    "resolved_overlap_count": 10,
+    "unresolved_overlap_count": 0,
+    "authoritative_output": "a_share_theme_overlap_governance_materialized"
+  },
+  "rows": [
+    {
+      "component": "overlap_governance_registry",
+      "component_state": "materialized",
+      "metric": "governance_rule_count",
+      "value": "7"
+    },
+    {
+      "component": "overlap_resolution_drill",
+      "component_state": "materialized",
+      "metric": "resolved_overlap_count",
+      "value": "10"
+    },
+    {
+      "component": "overlap_resolution_drill",
+      "component_state": "measured",
+      "metric": "unresolved_overlap_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "This layer converts repeated multi-theme overlaps into explicit primary-vs-secondary governance instead of leaving them flat for downstream consumers.",
+    "The first rules focus on recurring overlaps discovered by the alias hit drill."
+  ]
+}

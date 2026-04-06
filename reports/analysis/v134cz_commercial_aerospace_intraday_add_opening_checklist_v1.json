@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cz_commercial_aerospace_intraday_add_opening_checklist_v1",
+    "reduce_status": "frozen_mainline",
+    "transition_status": "freeze_reduce_handoff_and_defer_intraday_add_frontier_opening_until_later_explicit_shift",
+    "program_frontier_state": "deferred",
+    "checklist_gate_count": 9,
+    "checklist_csv": "data\\training\\commercial_aerospace_intraday_add_opening_checklist_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_opening_checklist_ready_for_direction_triage"
+  },
+  "checklist_rows": [
+    {
+      "opening_gate": "explicit_frontier_shift",
+      "status": "mandatory",
+      "detail": "Intraday add may open only after a deliberate frontier shift, not because reduce is already finished."
+    },
+    {
+      "opening_gate": "reduce_mainline_remains_frozen",
+      "status": "mandatory",
+      "detail": "Reduce must stay frozen_mainline and may not quietly reopen during add startup."
+    },
+    {
+      "opening_gate": "reduce_residue_stays_local_only",
+      "status": "mandatory",
+      "detail": "The four local rebound-residue seeds remain maintenance only and must not expand into fresh reduce tuning."
+    },
+    {
+      "opening_gate": "board_lockout_stays_upstream",
+      "status": "mandatory",
+      "detail": "Board cooling lockout remains an upstream veto before any intraday add exploration can claim permission."
+    },
+    {
+      "opening_gate": "local_only_rebound_guard_stays_upstream",
+      "status": "mandatory",
+      "detail": "Local-only rebound remains negative evidence and cannot be repackaged as add authorization."
+    },
+    {
+      "opening_gate": "board_revival_unlock_required_for_add_authority",
+      "status": "mandatory",
+      "detail": "Even after add research begins, board revival unlock is still required before any stronger authority claims."
+    },
+    {
+      "opening_gate": "add_starts_as_supervision_frontier",
+      "status": "mandatory",
+      "detail": "Intraday add opens as a new supervision frontier rather than an execution-facing lane."
+    },
+    {
+      "opening_gate": "no_reduce_execution_authority_inheritance",
+      "status": "mandatory",
+      "detail": "Intraday add must not inherit reduce execution authority or sell-side binding claims."
+    },
+    {
+      "opening_gate": "program_status_refresh",
+      "status": "mandatory",
+      "detail": "Program master status must be refreshed when the frontier eventually shifts from deferred to opened."
+    }
+  ],
+  "interpretation": [
+    "V1.34CZ does not open intraday add research; it formalizes the gates that must be respected when the later explicit shift happens.",
+    "The checklist protects the program from accidentally treating add as a continuation of reduce or from bypassing the board-level veto stack."
+  ]
+}

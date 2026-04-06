@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "promotable_now_count": 14,
+    "blocked_by_paired_surface_count": 0,
+    "authoritative_status": "daily_market_promotion_reopened_with_promotable_subset_after_semantic_pair_materialization"
+  },
+  "triage_rows": [
+    {
+      "component": "daily_market_candidate_rows",
+      "direction": "treat_promotable_rows_as_controlled_replay-facing_subset_not_as_execution_authority"
+    },
+    {
+      "component": "paired_surfaces",
+      "direction": "retire_old_pair-gap_language_and_use_the_semantic_pair_layer_as_the_new_replay_base"
+    }
+  ],
+  "interpretation": [
+    "Controlled promotion review now confirms a promotable subset rather than a fully blocked paired-surface state.",
+    "The next valid step is replay-side precondition recheck from this subset, not unilateral execution opening."
+  ]
+}

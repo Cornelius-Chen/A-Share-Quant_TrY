@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jv_commercial_aerospace_ju_carrier_follow_direction_triage_v1",
+    "linked_local_case_count": 2,
+    "outside_named_watch_count": 1,
+    "branch_promotive": false,
+    "authoritative_status": "treat_carrier_follow_search_as_formalized_same_plane_reinforcement_and_keep_true_selection_blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "linked_carrier_case",
+      "direction": "retain_as_same_plane_carrier_reinforcement_only"
+    },
+    {
+      "component": "linked_follow_case",
+      "direction": "retain_as_same_plane_follow_reinforcement_only"
+    },
+    {
+      "component": "outside_named_supply_chain_watch",
+      "direction": "retain_as_future_watch_without_symbol_promotion"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_while_branch_remains_reinforcement_only"
+    }
+  ],
+  "interpretation": [
+    "V1.34JV converts the carrier-follow branch into direction.",
+    "The branch is now explicit and useful, but it still reinforces existing carrier/follow readings rather than opening any true-selection authority."
+  ]
+}

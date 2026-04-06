@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122z_cpo_research_test_baseline_heat_guardrail_review_v1",
+    "baseline_final_equity": 1766466.6096,
+    "baseline_max_drawdown": 0.134272,
+    "variant_count": 4,
+    "best_tradeoff_variant_name": "uncapped_reference",
+    "recommended_next_posture": "use_heat_guardrail_review_to_decide_if_position_heat_is_the_first_fix_before_reduce_logic"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "uncapped_reference",
+      "symbol_cap_ratio": 9.99,
+      "gross_cap_ratio": 9.99,
+      "cash_floor_ratio": 0.0,
+      "overlay_order_count": 12,
+      "final_equity": 5844604.996,
+      "max_drawdown": 0.493548,
+      "delta_vs_baseline": 4078138.3864
+    },
+    {
+      "variant_name": "mild_heat_guardrail",
+      "symbol_cap_ratio": 0.35,
+      "gross_cap_ratio": 0.8,
+      "cash_floor_ratio": 0.2,
+      "overlay_order_count": 9,
+      "final_equity": 4504177.2872,
+      "max_drawdown": 0.407569,
+      "delta_vs_baseline": 2737710.6776
+    },
+    {
+      "variant_name": "balanced_heat_guardrail",
+      "symbol_cap_ratio": 0.3,
+      "gross_cap_ratio": 0.7,
+      "cash_floor_ratio": 0.25,
+      "overlay_order_count": 8,
+      "final_equity": 4148870.3072,
+      "max_drawdown": 0.376524,
+      "delta_vs_baseline": 2382403.6976
+    },
+    {
+      "variant_name": "strict_heat_guardrail",
+      "symbol_cap_ratio": 0.25,
+      "gross_cap_ratio": 0.6,
+      "cash_floor_ratio": 0.35,
+      "overlay_order_count": 8,
+      "final_equity": 3587484.856,
+      "max_drawdown": 0.327114,
+      "delta_vs_baseline": 1821018.2464
+    }
+  ],
+  "interpretation": [
+    "V1.22Z compares simple heat guardrails on the research test baseline rather than introducing new factors.",
+    "The purpose is to see whether the main failure mode is excessive carry and low cash, or whether a real reduce-side rule is still the only viable fix."
+  ]
+}

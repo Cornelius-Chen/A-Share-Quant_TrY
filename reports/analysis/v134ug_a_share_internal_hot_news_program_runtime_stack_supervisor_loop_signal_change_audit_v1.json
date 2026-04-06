@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "supervision_loop_mode_change": "stable",
+    "signal_priority_change": "stable",
+    "reopen_target_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_supervisor_loop_signal_change_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_supervisor_loop_signal_change",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "loop_signal_mode_change",
+      "component_state": "materialized",
+      "metric": "supervision_loop_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "signal_priority_change",
+      "component_state": "materialized",
+      "metric": "signal_priority_change",
+      "value": "stable"
+    },
+    {
+      "component": "reopen_target_change",
+      "component_state": "materialized",
+      "metric": "reopen_target_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This layer sits above the narrow runtime-stack supervisor loop signal feed and isolates changes in the loop signal itself.",
+    "A supervising loop can watch it to avoid reopening the loop signal feed unless supervisor-loop routing semantics changed."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118w_cpo_tuv_three_run_adversarial_triage_v1",
+    "triage_scope": "V118T_V118U_V118V",
+    "branch_name": "sustained_participation_non_chase_score_candidate",
+    "branch_status": "candidate_only",
+    "hard_candidate_allowed": false,
+    "candidate_only_allowed": true,
+    "soft_expectancy_component_allowed": false,
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "authoritative_current_problem": "time_split_instability_despite_positive_external_pool_signal",
+    "recommended_next_posture": "continue_one_more_non_replay_audit_cycle_on_false_positive_control_and_temporal_robustness"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "External audit is good enough to keep alive, but chronology is still too weak for hard-candidate status."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "The branch is directionally right on the broad pool, but not stable enough to justify promotion or replay-facing expansion."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "The line deserves another non-replay audit cycle because the external pool is positive, but min time-split performance at 0.375 blocks anything stronger."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "candidate_only",
+      "key_reason": "V118T gap=657817018.181818, V118U best_bal_acc=0.727273, V118V min_test_bal_acc=0.375."
+    }
+  ],
+  "interpretation": [
+    "V1.18W is the scheduled three-run adversarial triage for the sustained-participation non-chase branch.",
+    "All three reviewers converged on the same middle answer: this line is alive, but only as candidate-only.",
+    "The next budget should go to non-replay hardening of false-positive control and temporal robustness, not replay-facing expansion."
+  ]
+}

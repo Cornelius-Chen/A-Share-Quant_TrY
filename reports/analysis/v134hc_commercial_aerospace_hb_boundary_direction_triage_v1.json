@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hc_commercial_aerospace_hb_boundary_direction_triage_v1",
+    "authoritative_status": "retain_derivation_boundary_classification_and_keep_shadow_bridge_blocked_until_boundary_policy_changes",
+    "orders_last_trade_date": "20260227",
+    "daily_state_last_trade_date": "20260320",
+    "phase_table_last_trade_date": "20260320",
+    "raw_daily_last_trade_date": "20260403",
+    "raw_intraday_last_trade_date": "20260403",
+    "lockout_end_trade_date": "20260320",
+    "derived_stop_matches_lockout_end": true,
+    "raw_coverage_beyond_derived": true,
+    "boundary_classification": "lockout_aligned_derivation_boundary",
+    "authoritative_rule": "the shadow bridge remains blocked because the current stop is best classified as a lockout-aligned derivation boundary, not as missing raw data or a last-execution truncation"
+  },
+  "triage_rows": [
+    {
+      "component": "raw_data_coverage",
+      "status": "retain",
+      "rationale": "raw daily and intraday coverage already continue past lockout end"
+    },
+    {
+      "component": "execution_history_cutoff",
+      "status": "not_primary_blocker",
+      "rationale": "execution history ends on 20260227, but derived board surfaces continue to 20260320, so the current stop is not merely an execution cutoff"
+    },
+    {
+      "component": "lockout_aligned_derivation_boundary",
+      "status": "dominant_reading",
+      "rationale": "both daily-state and phase-geometry surfaces stop exactly at lockout end while raw data continues beyond it"
+    },
+    {
+      "component": "shadow_bridge",
+      "status": "keep_blocked",
+      "rationale": "reentry-to-add handoff remains blocked until the lockout-aligned derivation boundary is explicitly extended"
+    },
+    {
+      "component": "execution_authority",
+      "status": "still_blocked",
+      "rationale": "boundary classification clarifies governance but does not authorize execution"
+    }
+  ],
+  "interpretation": [
+    "V1.34HC turns the boundary classification into the current direction verdict.",
+    "The next justified move is not to debate post-lockout unlock quality in the abstract, but to decide whether the lockout-aligned derivation boundary should remain frozen or be explicitly extended."
+  ]
+}

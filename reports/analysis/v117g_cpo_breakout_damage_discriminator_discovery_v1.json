@@ -1,0 +1,324 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117g_cpo_breakout_damage_discriminator_discovery_v1",
+    "q25_hit_count": 8,
+    "hot_only_count": 8,
+    "top_separation_feature": "f30_breakout_efficiency_rz",
+    "candidate_discriminator_name": "breakout_damage_containment_score_candidate",
+    "candidate_score_mean_gap_q25_minus_hot_only": 699712625.0,
+    "recommended_next_posture": "audit_breakout_damage_score_as_new_quality_side_candidate_and_keep_candidate_only"
+  },
+  "feature_separation_rows": [
+    {
+      "feature_name": "f30_breakout_efficiency_rz",
+      "q25_mean": 815053500.0,
+      "hot_only_mean": 588745125.0,
+      "mean_separation": 226308375.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 226308375.0
+    },
+    {
+      "feature_name": "f60_breakout_efficiency_rz",
+      "q25_mean": 815053500.0,
+      "hot_only_mean": 588745125.0,
+      "mean_separation": 226308375.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 226308375.0
+    },
+    {
+      "feature_name": "d5_30_last_bar_upper_shadow_ratio_rz",
+      "q25_mean": -2377625.0,
+      "hot_only_mean": 125673250.0,
+      "mean_separation": -128050875.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 128050875.0
+    },
+    {
+      "feature_name": "pc3_score",
+      "q25_mean": -41825305.7267,
+      "hot_only_mean": 67758510.040613,
+      "mean_separation": -109583815.767313,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 109583815.767313
+    },
+    {
+      "feature_name": "f30_afternoon_volume_share_rz",
+      "q25_mean": 378549125.0,
+      "hot_only_mean": 430167625.0,
+      "mean_separation": -51618500.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 51618500.0
+    },
+    {
+      "feature_name": "f60_afternoon_volume_share_rz",
+      "q25_mean": 378549125.0,
+      "hot_only_mean": 430167625.0,
+      "mean_separation": -51618500.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 51618500.0
+    },
+    {
+      "feature_name": "d15_60_last_bar_upper_shadow_ratio_rz",
+      "q25_mean": 28297750.0,
+      "hot_only_mean": 3103375.0,
+      "mean_separation": 25194375.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 25194375.0
+    },
+    {
+      "feature_name": "f60_last_bar_return_rz",
+      "q25_mean": 24018500.0,
+      "hot_only_mean": 8789875.0,
+      "mean_separation": 15228625.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 15228625.0
+    },
+    {
+      "feature_name": "f30_last_bar_return_rz",
+      "q25_mean": 2360375.0,
+      "hot_only_mean": -9303625.0,
+      "mean_separation": 11664000.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 11664000.0
+    },
+    {
+      "feature_name": "f30_pullback_from_high_rz",
+      "q25_mean": -15197625.0,
+      "hot_only_mean": -22252500.0,
+      "mean_separation": 7054875.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 7054875.0
+    },
+    {
+      "feature_name": "f60_pullback_from_high_rz",
+      "q25_mean": -15197625.0,
+      "hot_only_mean": -22252500.0,
+      "mean_separation": 7054875.0,
+      "preferred_direction": "higher_is_better",
+      "abs_separation": 7054875.0
+    },
+    {
+      "feature_name": "f30_failed_push_proxy",
+      "q25_mean": 0.0,
+      "hot_only_mean": 0.0,
+      "mean_separation": 0.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 0.0
+    },
+    {
+      "feature_name": "f60_failed_push_proxy",
+      "q25_mean": 0.0,
+      "hot_only_mean": 0.0,
+      "mean_separation": 0.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 0.0
+    },
+    {
+      "feature_name": "d15_60_failed_push_proxy",
+      "q25_mean": 0.0,
+      "hot_only_mean": 0.0,
+      "mean_separation": 0.0,
+      "preferred_direction": "lower_is_better",
+      "abs_separation": 0.0
+    }
+  ],
+  "candidate_score_rows": [
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "damage_positive_score": 1824627000.0,
+      "damage_negative_score": 521688000.0,
+      "candidate_damage_score": 1302939000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "damage_positive_score": 1976810000.0,
+      "damage_negative_score": 787892000.0,
+      "candidate_damage_score": 1188918000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "damage_positive_score": 1713049000.0,
+      "damage_negative_score": 607020000.0,
+      "candidate_damage_score": 1106029000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "damage_positive_score": 1878053000.0,
+      "damage_negative_score": 781126000.0,
+      "candidate_damage_score": 1096927000.0
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.064312,
+      "max_adverse_return_3d": -0.021501,
+      "damage_positive_score": 1575047000.0,
+      "damage_negative_score": 705834000.0,
+      "candidate_damage_score": 869213000.0
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.020214,
+      "max_adverse_return_3d": -0.017008,
+      "damage_positive_score": 2029613000.0,
+      "damage_negative_score": 1238553000.0,
+      "candidate_damage_score": 791060000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "damage_positive_score": 1253043000.0,
+      "damage_negative_score": 827762000.0,
+      "candidate_damage_score": 425281000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "damage_positive_score": 758483000.0,
+      "damage_negative_score": 794272000.0,
+      "candidate_damage_score": -35789000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "damage_positive_score": 1234264000.0,
+      "damage_negative_score": 45326000.0,
+      "candidate_damage_score": 1188938000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300502",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.107989,
+      "max_adverse_return_3d": -0.072544,
+      "damage_positive_score": 1482188000.0,
+      "damage_negative_score": 742055000.0,
+      "candidate_damage_score": 740133000.0
+    },
+    {
+      "signal_trade_date": "2023-11-07",
+      "symbol": "300502",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.188158,
+      "max_adverse_return_3d": -0.005263,
+      "damage_positive_score": 1997234000.0,
+      "damage_negative_score": 1477620000.0,
+      "candidate_damage_score": 519614000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "damage_positive_score": 1031704000.0,
+      "damage_negative_score": 592312000.0,
+      "candidate_damage_score": 439392000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "damage_positive_score": 893216000.0,
+      "damage_negative_score": 1030128000.0,
+      "candidate_damage_score": -136912000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "damage_positive_score": 745822000.0,
+      "damage_negative_score": 890122000.0,
+      "candidate_damage_score": -144300000.0
+    },
+    {
+      "signal_trade_date": "2023-11-07",
+      "symbol": "300308",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.07312,
+      "max_adverse_return_3d": -0.014315,
+      "damage_positive_score": 1113737000.0,
+      "damage_negative_score": 1443993000.0,
+      "candidate_damage_score": -330256000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300308",
+      "group_name": "hot_only",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.003652,
+      "max_adverse_return_3d": -0.041091,
+      "damage_positive_score": 561607000.0,
+      "damage_negative_score": 1691339000.0,
+      "candidate_damage_score": -1129732000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17G deliberately avoids the old continuation-integrity package and instead searches for a new quality-side discriminator centered on breakout efficiency and price-damage containment.",
+    "The resulting candidate score rewards efficient continuation and punishes late-session damage, failed push behavior, and volume-heavy deterioration.",
+    "This is still discovery only. The point is to start a genuinely new branch, not to silently rebrand the previous quality line."
+  ]
+}

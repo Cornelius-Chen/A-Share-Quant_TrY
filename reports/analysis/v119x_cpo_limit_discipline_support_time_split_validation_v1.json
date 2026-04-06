@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119x_cpo_limit_discipline_support_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.819445,
+    "min_test_balanced_accuracy": 0.666667,
+    "parent_mean_test_balanced_accuracy": 0.875,
+    "parent_min_test_balanced_accuracy": 0.833333,
+    "time_split_increment_vs_parent": -0.055555,
+    "stability_posture": "candidate_stable_enough_for_triage",
+    "recommended_next_posture": "send_VWX_to_three_run_adversarial_review_then_kill_or_keep_fast"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 9,
+      "test_row_count": 7,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.306946,
+      "train_best_balanced_accuracy": 0.9,
+      "test_balanced_accuracy": 0.916667,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.833333
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 12,
+      "test_row_count": 4,
+      "train_positive_count": 2,
+      "test_positive_count": 3,
+      "train_best_threshold": 1.395681,
+      "train_best_balanced_accuracy": 1.0,
+      "test_balanced_accuracy": 0.666667,
+      "test_positive_recall": 0.333333,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 11,
+      "test_row_count": 5,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.306946,
+      "train_best_balanced_accuracy": 0.928571,
+      "test_balanced_accuracy": 0.875,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.19X asks the only chronology question that matters here: does limit-band discipline actually help across years, especially the difficult 2024 slice?",
+    "This branch should not survive just because the external surface ties; it must also avoid making chronology worse.",
+    "The result here closes the three-run block and should trigger an immediate kill-or-keep decision."
+  ]
+}

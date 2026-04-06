@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127a_commercial_aerospace_phase_aware_derisk_audit_v1",
+    "reference_v126v_final_equity": 1246105.7532,
+    "reference_v126v_max_drawdown": 0.22518706,
+    "reference_v126x_best_variant": "weakest_half_full_exit",
+    "reference_v126x_best_final_equity": 1199188.2952,
+    "reference_v126x_best_max_drawdown": 0.20635114,
+    "best_variant": "broad_half_reference",
+    "best_variant_final_equity": 1249251.8292,
+    "best_variant_max_drawdown": 0.19378829,
+    "best_variant_executed_order_count": 33
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "executed_order_count": 33,
+      "final_equity": 1249251.8292,
+      "max_drawdown": 0.19378829
+    },
+    {
+      "variant": "phase_aware_weak_full_exit",
+      "executed_order_count": 25,
+      "final_equity": 1198891.13,
+      "max_drawdown": 0.22231584
+    },
+    {
+      "variant": "phase_aware_weakest_half_full_exit",
+      "executed_order_count": 33,
+      "final_equity": 1249251.8292,
+      "max_drawdown": 0.19378829
+    }
+  ],
+  "interpretation": [
+    "V1.27A asks a narrower downside question than V1.26X: do we improve de-risk by only cutting names that are both weak and already outside active preheat/impulse windows?",
+    "This tests timing-of-sell semantics rather than simply making sells broader, stronger, or more selective by score alone."
+  ]
+}

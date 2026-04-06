@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "cost_model_count": 3,
+    "execution_journal_stub_count": 17,
+    "authoritative_status": "replay_cost_model_foundation_complete_enough_to_freeze_until_symbol_binding_shift"
+  },
+  "triage_rows": [
+    {
+      "component": "cost_model_registry",
+      "direction": "freeze_foundation_stub_and_shift_next_to_symbol_tradeable_binding"
+    },
+    {
+      "component": "shadow_execution_journal",
+      "direction": "retain_stub_only_until_execution_authority_and lawful journal binding open"
+    }
+  ],
+  "interpretation": [
+    "Replay cost modeling now has a valid foundation layer.",
+    "The next replay-side gap is symbol-bound tradeable-state linkage, not registry absence."
+  ]
+}

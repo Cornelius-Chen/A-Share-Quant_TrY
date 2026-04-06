@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129f_commercial_aerospace_def_walk_forward_direction_triage_v1",
+    "supported_walk_forward_fold_count": 2,
+    "authoritative_status": "move_to_phase_specific_walk_forward_for_full_pre_only_and_keep_full_phase_contextual",
+    "authoritative_rule": "commercial-aerospace supervision should stop treating full_pre/full as one jointly learnable class family under a single split and instead continue with phase-specific walk-forward only where lawful support exists"
+  },
+  "verdict_rows": [
+    {
+      "topic": "full_pre_phase_specific_supervision",
+      "status": "retain_non_replay_research_path",
+      "support_basis": "dedicated lawful fold exists on both sides and full_pre shows non-random but still noisy out-of-sample separation",
+      "key_metric": 0.5625
+    },
+    {
+      "topic": "full_phase_specific_supervision",
+      "status": "keep_phase_contextual_not_directly_supervised",
+      "support_basis": "dedicated fold exists but test positives remain too thin and out-of-sample separation is effectively random",
+      "key_metric": 0.5
+    },
+    {
+      "topic": "single_global_multiclass_reopen",
+      "status": "blocked",
+      "support_basis": "no single lawful split supports both full_pre and full on both train and test",
+      "key_metric": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.29F freezes the next direction after the state-machine chronology blocker was clarified.",
+    "The board should continue with phase-specific lawful research for full-pre, while full remains primarily phase-contextual until more repeated impulse cycles exist."
+  ]
+}

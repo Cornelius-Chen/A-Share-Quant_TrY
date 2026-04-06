@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126h_commercial_aerospace_two_layer_eligibility_audit_v1",
+    "impulse_train_count": 12,
+    "impulse_test_count": 84,
+    "impulse_train_probe_count": 11,
+    "impulse_train_full_count": 0,
+    "best_variant_name": "probe_q80_full_q60",
+    "best_variant_full_minus_probe_only_spread_10": 0.09530172,
+    "authoritative_rule": "commercial_aerospace_two_layer_probe_full_design_must_be_treated_as_regime_local_score_stratification_not_supervised_full_label_learning_when_impulse_train_full_count_is_zero"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "probe_q80_full_q60",
+      "probe_threshold_quantile": 0.8,
+      "full_threshold_quantile": 0.6,
+      "probe_threshold": 13.48004681,
+      "full_threshold": 12.91643533,
+      "full_hit_count": 16,
+      "probe_only_hit_count": 29,
+      "full_forward_mean_10": 0.10722416,
+      "probe_only_forward_mean_10": 0.01192244,
+      "full_minus_probe_only_spread_10": 0.09530172
+    },
+    {
+      "variant_name": "probe_q80_full_q40",
+      "probe_threshold_quantile": 0.8,
+      "full_threshold_quantile": 0.4,
+      "probe_threshold": 13.48004681,
+      "full_threshold": 12.45616611,
+      "full_hit_count": 8,
+      "probe_only_hit_count": 37,
+      "full_forward_mean_10": 0.05924412,
+      "probe_only_forward_mean_10": 0.04290228,
+      "full_minus_probe_only_spread_10": 0.01634185
+    },
+    {
+      "variant_name": "probe_q70_full_q40",
+      "probe_threshold_quantile": 0.7,
+      "full_threshold_quantile": 0.4,
+      "probe_threshold": 13.10469653,
+      "full_threshold": 12.45616611,
+      "full_hit_count": 8,
+      "probe_only_hit_count": 12,
+      "full_forward_mean_10": 0.05924412,
+      "probe_only_forward_mean_10": 0.15878841,
+      "full_minus_probe_only_spread_10": -0.09954429
+    }
+  ],
+  "interpretation": [
+    "V1.26H checks whether a probe/full two-layer system can be justified inside impulse-continuation windows.",
+    "If impulse-train full-label count is zero, the two-layer replay must be treated as a score-stratified shadow design rather than fully supervised full-eligibility learning."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "task_count": 6,
+    "tasks_with_primary_fit": 4,
+    "tasks_with_auxiliary_fit": 5,
+    "tasks_with_reference_only": 5,
+    "tasks_with_locked_holdout": 6
+  },
+  "triage_rows": [
+    {
+      "task_id": "ca_task_001",
+      "task_name": "top_down_direction_task",
+      "recommendation": "use_reference_and_holdout_only_until_primary_positive_archetype_unlocks"
+    },
+    {
+      "task_id": "ca_task_002",
+      "task_name": "new_leg_or_old_echo_task",
+      "recommendation": "fit_direct_negatives_with_auxiliary_context_under_current_strict_boundary"
+    },
+    {
+      "task_id": "ca_task_003",
+      "task_name": "breadth_regime_task",
+      "recommendation": "use_mixed_auxiliary_reference_stack_but_keep_policy_holdout_locked"
+    },
+    {
+      "task_id": "ca_task_004",
+      "task_name": "capital_confirmation_task",
+      "recommendation": "fit_direct_negatives_with_auxiliary_context_under_current_strict_boundary"
+    },
+    {
+      "task_id": "ca_task_005",
+      "task_name": "structure_gate_task",
+      "recommendation": "fit_direct_negatives_with_auxiliary_context_under_current_strict_boundary"
+    },
+    {
+      "task_id": "ca_task_006",
+      "task_name": "policy_to_subtheme_diffusion_task",
+      "recommendation": "fit_bridge_auxiliary_cautiously_and_keep_positive_examples_as_reference_only"
+    }
+  ]
+}

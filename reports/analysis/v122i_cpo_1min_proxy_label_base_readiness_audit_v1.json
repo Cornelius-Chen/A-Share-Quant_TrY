@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122i_cpo_1min_proxy_label_base_readiness_audit_v1",
+    "symbol_count": 4,
+    "row_count": 7700,
+    "label_plane_status": "recent_1min_proxy_action_timepoint_label_base_ready",
+    "recommended_next_posture": "re_audit_surviving_1min_family_against_proxy_labels"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "row_count": 1925,
+      "add_probe_count": 132,
+      "reduce_probe_count": 221,
+      "close_probe_count": 111,
+      "hold_probe_count": 1461
+    },
+    {
+      "symbol": "300502",
+      "row_count": 1925,
+      "add_probe_count": 124,
+      "reduce_probe_count": 246,
+      "close_probe_count": 135,
+      "hold_probe_count": 1420
+    },
+    {
+      "symbol": "300757",
+      "row_count": 1925,
+      "add_probe_count": 117,
+      "reduce_probe_count": 321,
+      "close_probe_count": 133,
+      "hold_probe_count": 1354
+    },
+    {
+      "symbol": "688498",
+      "row_count": 1925,
+      "add_probe_count": 115,
+      "reduce_probe_count": 361,
+      "close_probe_count": 111,
+      "hold_probe_count": 1338
+    }
+  ],
+  "interpretation": [
+    "V1.22I confirms the recent 1-minute plane now has a concrete proxy action-timepoint label base.",
+    "This is still only a recent local label plane, but it is strong enough to replace unlabeled geometric family tuning.",
+    "The next step is to re-audit surviving 1-minute families against these proxy labels."
+  ]
+}

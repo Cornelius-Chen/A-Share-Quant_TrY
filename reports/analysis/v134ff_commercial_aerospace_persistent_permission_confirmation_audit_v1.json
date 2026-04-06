@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ff_commercial_aerospace_persistent_permission_confirmation_audit_v1",
+    "threshold_row_count": 12,
+    "best_open_to_60m_threshold": 0.01,
+    "best_continuation_threshold": 0.005,
+    "best_burst_amount_share_cap": 0.4,
+    "best_matched_count": 9,
+    "best_persistent_hit_count": 9,
+    "best_counterfactual_hit_count": 0,
+    "best_precision": 1.0,
+    "best_coverage": 0.9,
+    "threshold_csv": "data\\training\\commercial_aerospace_persistent_permission_confirmation_audit_v1.csv",
+    "authoritative_rule": "inside the narrow add-permission family surface, first-hour continuation is the cleanest confirmation layer for persistent permission candidates"
+  },
+  "threshold_rows": [
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.32,
+      "matched_count": 8,
+      "persistent_hit_count": 8,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.8
+    },
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.35,
+      "matched_count": 8,
+      "persistent_hit_count": 8,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.8
+    },
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.4,
+      "matched_count": 9,
+      "persistent_hit_count": 9,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.9
+    },
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.32,
+      "matched_count": 5,
+      "persistent_hit_count": 5,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.5
+    },
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.35,
+      "matched_count": 5,
+      "persistent_hit_count": 5,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.5
+    },
+    {
+      "open_to_60m_threshold": 0.01,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.4,
+      "matched_count": 6,
+      "persistent_hit_count": 6,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.6
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.32,
+      "matched_count": 7,
+      "persistent_hit_count": 7,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.7
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.35,
+      "matched_count": 7,
+      "persistent_hit_count": 7,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.7
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.005,
+      "burst_amount_share_cap": 0.4,
+      "matched_count": 8,
+      "persistent_hit_count": 8,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.8
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.32,
+      "matched_count": 5,
+      "persistent_hit_count": 5,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.5
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.35,
+      "matched_count": 5,
+      "persistent_hit_count": 5,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.5
+    },
+    {
+      "open_to_60m_threshold": 0.015,
+      "continuation_threshold": 0.01,
+      "burst_amount_share_cap": 0.4,
+      "matched_count": 6,
+      "persistent_hit_count": 6,
+      "counterfactual_hit_count": 0,
+      "precision": 1.0,
+      "coverage": 0.6
+    }
+  ],
+  "interpretation": [
+    "V1.34FF tests whether the new quantity-price permission families contain a narrower confirmation layer for persistent add permission.",
+    "The goal is not to promote execution, only to see whether persistent candidates can be separated from fragile and failed counterfactuals with a simple continuation gate."
+  ]
+}

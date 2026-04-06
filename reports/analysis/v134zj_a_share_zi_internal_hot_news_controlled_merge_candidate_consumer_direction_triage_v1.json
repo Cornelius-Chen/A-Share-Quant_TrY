@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "preview_row_count": 14,
+    "additive_preview_count": 13,
+    "unique_preview_theme_count": 6,
+    "unique_preview_symbol_count": 6,
+    "current_top_opportunity_theme": "gold",
+    "current_top_watch_symbol": "601899",
+    "candidate_top_theme": "consumer_staples",
+    "candidate_top_symbol": "600887",
+    "top_opportunity_change_if_promoted": "would_change",
+    "top_watch_change_if_promoted": "would_change",
+    "consumer_stability_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_candidate_consumer_preview_materialized",
+    "authoritative_status": "review_candidate_lane_consumer_rotation_before_promoting_second_source_rows_into_primary_program_consumers"
+  },
+  "triage_rows": [
+    {
+      "component": "candidate_preview_lane",
+      "direction": "use the preview lane to inspect candidate top theme and symbol before any consumer promotion"
+    },
+    {
+      "component": "opportunity_rotation_gate",
+      "direction": "treat a would_change opportunity result as an intentional focus rotation event rather than a silent merge side effect"
+    },
+    {
+      "component": "symbol_rotation_gate",
+      "direction": "treat a would_change top-watch result as a symbol watch rotation that requires explicit downstream acceptance"
+    }
+  ],
+  "interpretation": [
+    "The second-source candidate lane is now measurable in downstream consumer terms rather than only source terms.",
+    "This keeps candidate promotion empirical, explicit, and reversible."
+  ]
+}

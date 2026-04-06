@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122d_cpo_1min_burst_fade_reverse_signal_audit_v1",
+    "symbol_count": 4,
+    "stable_reverse_symbol_rate": 0.0,
+    "recommended_next_posture": "kill_trap_family_if_reverse_edge_is_not_symbol_stable"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "sample_count": 562,
+      "mean_forward_return_5": 0.00033623,
+      "negative_forward_rate_5": 0.56227758
+    },
+    {
+      "symbol": "300502",
+      "sample_count": 619,
+      "mean_forward_return_5": 5.212e-05,
+      "negative_forward_rate_5": 0.57512116
+    },
+    {
+      "symbol": "300757",
+      "sample_count": 687,
+      "mean_forward_return_5": 0.00194071,
+      "negative_forward_rate_5": 0.54294032
+    },
+    {
+      "symbol": "688498",
+      "sample_count": 739,
+      "mean_forward_return_5": 0.00040927,
+      "negative_forward_rate_5": 0.54803789
+    }
+  ],
+  "interpretation": [
+    "V1.22D tests whether the burst-fade 1-minute family behaves like a true reverse/risk family across symbols.",
+    "A pooled negative-rate is not enough; the family should show negative forward edge by symbol to justify further work.",
+    "If that edge is not symbol-stable, the family should be stopped instead of being kept as a vague risk metaphor."
+  ]
+}

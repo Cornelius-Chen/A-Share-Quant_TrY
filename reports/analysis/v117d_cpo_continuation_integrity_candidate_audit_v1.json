@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117d_cpo_continuation_integrity_candidate_audit_v1",
+    "candidate_discriminator_name": "continuation_integrity_score_candidate",
+    "q25_mean_score": 3294829625.0,
+    "hot_only_mean_score": 2183760625.0,
+    "mean_score_gap_q25_minus_hot_only": 1111069000.0,
+    "best_audit_threshold": 3453524000.0,
+    "best_balanced_accuracy": 0.8125,
+    "captures_quality_signal": true,
+    "replaces_timing_gate": false,
+    "late_good_day_still_passes_quality_gate": false,
+    "retained_day_passes_quality_gate": false,
+    "late_weak_day_passes_quality_gate": false,
+    "standalone_threshold_usable_now": false,
+    "recommended_next_posture": "keep_continuation_integrity_as_candidate_quality_component_only_and_do_not_replace_timing_gate_or_retained_visible_only_boundary"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 4096546000.0,
+      "tp": 1,
+      "fn": 7,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.125,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": 3761437000.0,
+      "tp": 2,
+      "fn": 6,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.25,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": 3704106000.0,
+      "tp": 3,
+      "fn": 5,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.375,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 3524512000.0,
+      "tp": 4,
+      "fn": 4,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.5,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 3453524000.0,
+      "tp": 5,
+      "fn": 3,
+      "fp": 0,
+      "tn": 8,
+      "q25_recall": 0.625,
+      "hot_reject_rate": 1.0,
+      "balanced_accuracy": 0.8125
+    },
+    {
+      "threshold": 3195244000.0,
+      "tp": 5,
+      "fn": 3,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.625,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 3045885000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 1,
+      "tn": 7,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.875,
+      "balanced_accuracy": 0.8125
+    },
+    {
+      "threshold": 2932473000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 2,
+      "tn": 6,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.75,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 2756474000.0,
+      "tp": 6,
+      "fn": 2,
+      "fp": 3,
+      "tn": 5,
+      "q25_recall": 0.75,
+      "hot_reject_rate": 0.625,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 2493410000.0,
+      "tp": 7,
+      "fn": 1,
+      "fp": 3,
+      "tn": 5,
+      "q25_recall": 0.875,
+      "hot_reject_rate": 0.625,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 2439555000.0,
+      "tp": 7,
+      "fn": 1,
+      "fp": 4,
+      "tn": 4,
+      "q25_recall": 0.875,
+      "hot_reject_rate": 0.5,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 2279217000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 4,
+      "tn": 4,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.5,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 2211670000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 5,
+      "tn": 3,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.375,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "threshold": 1601375000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 6,
+      "tn": 2,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.25,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": 1564037000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 7,
+      "tn": 1,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.125,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": 769257000.0,
+      "tp": 8,
+      "fn": 0,
+      "fp": 8,
+      "tn": 0,
+      "q25_recall": 1.0,
+      "hot_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "rebuilt_day_rows": [
+    {
+      "signal_trade_date": "2023-11-07",
+      "timing_gate": "late_only",
+      "final_judgement": "late_visibility_blocks_otherwise_good_day",
+      "avg_expectancy_proxy_3d": 0.130639,
+      "avg_max_adverse_return_3d": -0.009789,
+      "candidate_quality_score_mean": 2020465000.0,
+      "passes_best_threshold": false
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "timing_gate": "early_visible",
+      "final_judgement": "retained_quality_standard_met",
+      "avg_expectancy_proxy_3d": 0.042263,
+      "avg_max_adverse_return_3d": -0.019255,
+      "candidate_quality_score_mean": 2386313500.0,
+      "passes_best_threshold": false
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "timing_gate": "late_only",
+      "final_judgement": "late_and_quality_weak",
+      "avg_expectancy_proxy_3d": -0.052168,
+      "avg_max_adverse_return_3d": -0.056817,
+      "candidate_quality_score_mean": 1166647000.0,
+      "passes_best_threshold": false
+    }
+  ],
+  "interpretation": [
+    "V1.17D audits whether the continuation-integrity score discovered in V1.17C can stand on its own, instead of assuming any positive mean gap is already a usable discriminator.",
+    "The score does carry quality information: retained q=0.25 hits score higher on average than hot-only rows, and the weak late day stays below the best audit threshold.",
+    "But the best standalone threshold is too strict to preserve the retained rebuilt day 2024-01-18, while lowering it enough to keep that day would materially increase hot-only leakage. It remains a candidate quality component, not a standalone law."
+  ]
+}

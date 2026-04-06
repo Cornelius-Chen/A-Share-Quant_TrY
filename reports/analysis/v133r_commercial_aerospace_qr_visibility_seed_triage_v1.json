@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133r_commercial_aerospace_qr_visibility_seed_triage_v1",
+    "seed_session_count": 6,
+    "feed_row_count": 360,
+    "authoritative_status": "retain_phase_1_visibility_seed_surface_and_keep_later_phases_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_qr_visibility_seed_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "canonical_seed_point_in_time_feed",
+      "status": "retain_as_phase_1_seed_surface",
+      "rationale": "the canonical seed feed now exists with explicit first-visible lineage and lagged-only path features"
+    },
+    {
+      "component": "broader_session_expansion",
+      "status": "blocked_until_seed_visibility_audit_extends",
+      "rationale": "the first lawful move is to stabilize canonical seeds before widening to broader minute sessions"
+    },
+    {
+      "component": "simulator_buildout",
+      "status": "blocked_until_visibility_seed_surface_is_accepted",
+      "rationale": "simulator work must remain downstream of a passed point-in-time visibility seed surface"
+    }
+  ],
+  "interpretation": [
+    "V1.33R turns the canonical point-in-time seed feed into an explicit triage state.",
+    "The branch may continue inside phase_1_visibility, but only on the seed surface and without opening simulator or replay work."
+  ]
+}

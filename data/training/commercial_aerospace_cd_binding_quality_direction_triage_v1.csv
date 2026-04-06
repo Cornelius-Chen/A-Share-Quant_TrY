@@ -1,0 +1,6 @@
+﻿component,status,detail
+isolated_sell_side_binding_surface,retain_as_first_real_binding_reference,"executed_session_count = 12, total_protected_mark_to_close = 15466.0594"
+same_day_new_lots_protection,verified,"same_day_new_lots_protected_total = 12400, no_inventory_same_day_new_lots_only_count = 1"
+reconciliation_clipping,retain_and_explicitly_preserve,"clipped_reconciliation_count = 2, clipped_quantity_total = 2800"
+next_real_work,do_not_expand_surface_build_horizon_quality_next,"The next justified work is horizon and attribution quality on the isolated binding lane, not replay binding or wider surface expansion."
+scope_guardrail,mandatory,"Keep the branch sell-side only, holdings-aware only, and continue excluding reentry execution plus full replay binding."

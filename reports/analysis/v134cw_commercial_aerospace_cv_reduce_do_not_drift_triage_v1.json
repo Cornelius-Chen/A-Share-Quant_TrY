@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cw_commercial_aerospace_cv_reduce_do_not_drift_triage_v1",
+    "authoritative_status": "reduce_branch_frozen_do_not_drift_wait_for_later_intraday_add_shift",
+    "execution_blocker_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_cv_reduce_do_not_drift_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_mainline",
+      "status": "do_not_drift",
+      "detail": "Do not reopen broad reduce tuning; the branch is frozen as complete enough for research."
+    },
+    {
+      "component": "residue_cases",
+      "status": "local_only",
+      "detail": "Only local residue supervision is still allowed inside reduce."
+    },
+    {
+      "component": "execution_closure",
+      "status": "wait_for_infrastructure",
+      "detail": "execution_blocker_count = 4"
+    },
+    {
+      "component": "future_frontier",
+      "status": "deferred_next_step",
+      "detail": "The next frontier is intraday add, but it remains deferred until the later explicit shift."
+    }
+  ],
+  "interpretation": [
+    "V1.34CW converts the final reduce status card into an explicit do-not-drift judgment.",
+    "The branch should now be treated as frozen operationally, not merely conceptually."
+  ]
+}

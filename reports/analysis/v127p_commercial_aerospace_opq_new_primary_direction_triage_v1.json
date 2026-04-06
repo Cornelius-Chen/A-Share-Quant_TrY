@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127p_commercial_aerospace_opq_new_primary_direction_triage_v1",
+    "new_primary_variant": "veto_drag_trio_impulse_only",
+    "new_primary_final_equity": 1276010.378,
+    "new_primary_max_drawdown": 0.11536441,
+    "authoritative_next_step": "new_primary_drawdown_window_attribution",
+    "stop_doing": [
+      "do_not_continue_selective_symbol_veto_yet",
+      "do_not_jump_to_entry_budget_yet"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "new_primary_drawdown_window_attribution",
+      "reason": "The selective veto rearranged the burden map, so the next step is to localize exactly which drawdown windows improved and which symbols became the new pressure points."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "new_primary_drawdown_window_attribution",
+      "reason": "Before opening another branch, the replay should explain whether the new frontier gain is robust across windows or just transfers pain from one symbol set to another."
+    },
+    {
+      "subagent": "James",
+      "vote": "new_primary_drawdown_window_attribution",
+      "reason": "Window-level attribution is now the highest-value cut because symbol-level totals already show a burden transfer from the old drag trio to 601698 and 000738."
+    }
+  ],
+  "interpretation": [
+    "V1.27P freezes the unanimous subagent direction after the new primary promotion.",
+    "Commercial aerospace should now study new-primary drawdown windows before opening another symbol-veto or entry-budget branch."
+  ]
+}

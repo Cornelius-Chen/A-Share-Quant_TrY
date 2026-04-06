@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "cls_row_count": 20,
+    "sina_row_count": 50,
+    "combined_row_count": 70,
+    "merge_cluster_count": 67,
+    "cross_source_duplicate_candidate_count": 0,
+    "additive_sina_candidate_count": 13,
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_review_materialized"
+  },
+  "rows": [
+    {
+      "component": "merge_review",
+      "component_state": "materialized",
+      "metric": "combined_row_count",
+      "value": "70"
+    },
+    {
+      "component": "merge_review",
+      "component_state": "materialized",
+      "metric": "merge_cluster_count",
+      "value": "67"
+    },
+    {
+      "component": "duplicate_candidates",
+      "component_state": "measured",
+      "metric": "cross_source_duplicate_candidate_count",
+      "value": "0"
+    },
+    {
+      "component": "additive_candidates",
+      "component_state": "measured",
+      "metric": "additive_sina_candidate_count",
+      "value": "13"
+    }
+  ],
+  "interpretation": [
+    "This review surface measures whether a second source can be added without uncontrolled duplicate fan-out.",
+    "It separates cross-source duplicate candidates from additive themed rows before any primary fastlane merge."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134w_commercial_aerospace_uvw_phase2_wider_supervision_triage_v1",
+    "authoritative_status": "retain_current_wider_reference_and_shift_next_to_local_failure_cluster_supervision",
+    "triage_csv": "data\\training\\commercial_aerospace_uvw_phase2_wider_supervision_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "current_wider_reference",
+      "status": "retain",
+      "detail": "same_day_loss_avoided_total = 25934.8882, best_symbol = 688066"
+    },
+    {
+      "component": "failure_shape",
+      "status": "concentrated_enough_for_local_supervision",
+      "detail": "negative_session_count = 1, top_failure_cluster = reversal_watch|2026-01"
+    },
+    {
+      "component": "next_optimization_direction",
+      "status": "supervise_local_clusters",
+      "detail": "The next step should stay inside the current wider reference and inspect the top failure cluster before any further widening."
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "The branch still does not have a reason to leave the bounded broader-hit surface."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Nothing in the current wider supervision review authorizes replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34W converts the wider-reference attribution and failure clustering into the next direction judgment.",
+    "The branch should now deepen supervision within the current wider reference instead of opening a new surface."
+  ]
+}

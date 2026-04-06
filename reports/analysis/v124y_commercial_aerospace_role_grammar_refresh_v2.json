@@ -1,0 +1,395 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124y_commercial_aerospace_role_grammar_refresh_v2",
+    "control_core_count": 12,
+    "confirmation_count": 24,
+    "sentiment_leadership_count": 5,
+    "mirror_count": 13,
+    "authoritative_rule": "commercial_aerospace_role_grammar_now_has_a_distinct_sentiment_leadership_layer_separate_from_control_core"
+  },
+  "role_rows": [
+    {
+      "symbol": "600879",
+      "name": "航天电子",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_primary",
+      "supporting_score": 7974643.975483333
+    },
+    {
+      "symbol": "600118",
+      "name": "中国卫星",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_primary",
+      "supporting_score": 7141936.52605
+    },
+    {
+      "symbol": "601698",
+      "name": "中国卫通",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_primary",
+      "supporting_score": 4507428.547099999
+    },
+    {
+      "symbol": "002465",
+      "name": "海格通信",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_primary",
+      "supporting_score": 3666189.0376666663
+    },
+    {
+      "symbol": "300342",
+      "name": "天银机电",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 3064360.3687666664
+    },
+    {
+      "symbol": "688568",
+      "name": "中科星图",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 1876935.3972166667
+    },
+    {
+      "symbol": "300045",
+      "name": "华力创通",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 1417886.07025
+    },
+    {
+      "symbol": "000738",
+      "name": "航发控制",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 1310551.3368166669
+    },
+    {
+      "symbol": "002085",
+      "name": "万丰奥威",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 799310.30075
+    },
+    {
+      "symbol": "688523",
+      "name": "航天环宇",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 792729.8761333334
+    },
+    {
+      "symbol": "688066",
+      "name": "航天宏图",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 732578.0902666667
+    },
+    {
+      "symbol": "003009",
+      "name": "中天火箭",
+      "role_layer": "control_core",
+      "role_semantic": "control_eligible_support",
+      "supporting_score": 596407.5184000001
+    },
+    {
+      "symbol": "002202",
+      "name": "金风科技",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 9345734.64045
+    },
+    {
+      "symbol": "002565",
+      "name": "顺灏股份",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 2916129.6535666664
+    },
+    {
+      "symbol": "002471",
+      "name": "中超控股",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 2477580.2885999996
+    },
+    {
+      "symbol": "603601",
+      "name": "再升科技",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 2444566.3813500004
+    },
+    {
+      "symbol": "600783",
+      "name": "鲁信创投",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 849462.0429666667
+    },
+    {
+      "symbol": "603131",
+      "name": "上海沪工",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_propulsion",
+      "supporting_score": 460563.63714999997
+    },
+    {
+      "symbol": "002413",
+      "name": "雷科防务",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 3440173.9313
+    },
+    {
+      "symbol": "688270",
+      "name": "臻镭科技",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 3082513.3463166663
+    },
+    {
+      "symbol": "002792",
+      "name": "通宇通讯",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 3024859.8501000004
+    },
+    {
+      "symbol": "300065",
+      "name": "海兰信",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 2955268.583366667
+    },
+    {
+      "symbol": "002342",
+      "name": "巨力索具",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 2572361.0513666663
+    },
+    {
+      "symbol": "301005",
+      "name": "超捷股份",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 2297049.9839000003
+    },
+    {
+      "symbol": "688122",
+      "name": "西部超导",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1876369.9556166667
+    },
+    {
+      "symbol": "300900",
+      "name": "广联航空",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1761743.6210833334
+    },
+    {
+      "symbol": "300129",
+      "name": "泰胜风能",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1257022.7959666667
+    },
+    {
+      "symbol": "688102",
+      "name": "斯瑞新材",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1189609.8237333333
+    },
+    {
+      "symbol": "301306",
+      "name": "西测测试",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1130157.59385
+    },
+    {
+      "symbol": "001208",
+      "name": "华菱线缆",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 1084273.3619333333
+    },
+    {
+      "symbol": "600862",
+      "name": "中航高科",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 991899.1259
+    },
+    {
+      "symbol": "001270",
+      "name": "*ST铖昌",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 981494.62295
+    },
+    {
+      "symbol": "688143",
+      "name": "长盈通",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 544346.1329833333
+    },
+    {
+      "symbol": "603267",
+      "name": "鸿远电子",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 532949.0529166667
+    },
+    {
+      "symbol": "688636",
+      "name": "智明达",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 381232.0188166667
+    },
+    {
+      "symbol": "688539",
+      "name": "高华科技",
+      "role_layer": "confirmation",
+      "role_semantic": "confirmation_only_supply_chain",
+      "supporting_score": 228579.85688333336
+    },
+    {
+      "symbol": "002565",
+      "name": "顺灏股份",
+      "role_layer": "sentiment_leadership",
+      "role_semantic": "sentiment_leader_primary",
+      "supporting_score": 0.842144
+    },
+    {
+      "symbol": "603131",
+      "name": "上海沪工",
+      "role_layer": "sentiment_leadership",
+      "role_semantic": "sentiment_leader_support",
+      "supporting_score": 0.655402
+    },
+    {
+      "symbol": "002361",
+      "name": "神剑股份",
+      "role_layer": "sentiment_leadership",
+      "role_semantic": "sentiment_leader_support",
+      "supporting_score": 0.577789
+    },
+    {
+      "symbol": "603601",
+      "name": "再升科技",
+      "role_layer": "sentiment_leadership",
+      "role_semantic": "sentiment_leader_support",
+      "supporting_score": 0.53844
+    },
+    {
+      "symbol": "600869",
+      "name": "远东股份",
+      "role_layer": "sentiment_leadership",
+      "role_semantic": "sentiment_leader_support",
+      "supporting_score": 0.318252
+    },
+    {
+      "symbol": "000547",
+      "name": "航天发展",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 9012302.6973
+    },
+    {
+      "symbol": "000768",
+      "name": "中航西飞",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 1517081.4492166666
+    },
+    {
+      "symbol": "000901",
+      "name": "航天科技",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 1723662.0474833334
+    },
+    {
+      "symbol": "002519",
+      "name": "银河电子",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 1378356.2226000002
+    },
+    {
+      "symbol": "300102",
+      "name": "乾照光电",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 3920421.015183334
+    },
+    {
+      "symbol": "301079",
+      "name": "邵阳液压",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 587787.5110666666
+    },
+    {
+      "symbol": "600135",
+      "name": "乐凯胶片",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 381894.3427
+    },
+    {
+      "symbol": "600316",
+      "name": "洪都航空",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 725874.2217833332
+    },
+    {
+      "symbol": "601399",
+      "name": "国机重装",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 895785.5869833332
+    },
+    {
+      "symbol": "603698",
+      "name": "航天工程",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 1168319.4310166666
+    },
+    {
+      "symbol": "600775",
+      "name": "南京熊猫",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 974296.0680333334
+    },
+    {
+      "symbol": "605123",
+      "name": "派克新材",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 708053.8933833333
+    },
+    {
+      "symbol": "002865",
+      "name": "钧达股份",
+      "role_layer": "mirror",
+      "role_semantic": "mirror_only",
+      "supporting_score": 2166190.5677
+    }
+  ],
+  "interpretation": [
+    "V1.24Y refreshes the commercial-aerospace role grammar so that name-driven emotion leaders no longer hide inside a generic mirror bucket.",
+    "This keeps strong sentiment leaders visible for breadth and heat reading without letting them overwrite owner-level controls.",
+    "The board now has four lawful layers: control core, confirmation, sentiment leadership, and mirror."
+  ]
+}

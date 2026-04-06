@@ -1,0 +1,5 @@
+﻿program_line,current_status,gate_type,reopen_trigger,command_hint
+cpo_lawful_eod_primary,frozen_authoritative,manual_research_review,explicit decision to rerun under-exposure or sizing review on the frozen lawful replay,use the existing CPO replay/sizing review chain; do not invent a new board-local discovery branch first
+commercial_aerospace_lawful_eod_primary,frozen_authoritative,manual_research_review,only if a genuinely new lawful board-local context appears; do not reopen for minor replay tuning,"start from the frozen primary and governance stack, not from a new local replay search"
+commercial_aerospace_intraday_execution_lane,frozen,infrastructure_change_gate,all blocked intraday execution requirements are satisfied,"rebuild from the frozen minute governance package after point-in-time visibility, execution simulator, and separate intraday replay lane exist"
+transfer_program,frozen,file_change_gate,one of the watched sector/symbol support artifacts changes and the same-plane gate opens,do_not_execute_any_rerun_chain_while_v130z_says_rerun_required_false

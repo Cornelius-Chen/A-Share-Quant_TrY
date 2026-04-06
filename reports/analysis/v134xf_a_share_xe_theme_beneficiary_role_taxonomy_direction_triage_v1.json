@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "role_variant_count": 15,
+    "normalized_role_family_count": 3,
+    "linkage_class_count": 3,
+    "authoritative_status": "continue_serving_role-normalized_linkage_taxonomy_under_theme-to-symbol_mapping_quality"
+  },
+  "triage_rows": [
+    {
+      "component": "role_normalization",
+      "direction": "prefer_normalized_role_family_and_linkage_class_in_downstream_consumers_instead_of_raw_adjacent_* role strings"
+    },
+    {
+      "component": "mapping_quality",
+      "direction": "treat_direct_beneficiary_as_the_strongest symbol-routing class and proxy_or_weak classes as lower-trust watch evidence"
+    }
+  ],
+  "interpretation": [
+    "The next mapping-quality work should build on this normalized taxonomy rather than expanding more raw role string variants.",
+    "This gives downstream symbol-watch consumers a stable quality vocabulary while preserving the richer raw registry for curation work."
+  ]
+}

@@ -1,0 +1,5 @@
+﻿consensus_item,status,detail
+overall_direction,approved_with_guardrails,the three-workstream order is correct and remains aligned with the frozen EOD primary posture
+required_guardrail_1,mandatory,add first_visible_ts and close-bar activation semantics before any minute-state feed is considered lawful
+required_guardrail_2,mandatory,enforce a one-way read-only boundary so the intraday shadow lane cannot mutate or back-propagate into the frozen EOD primary
+next_action,phase_1_only,begin only phase_1_visibility buildout after the two guardrails are hard-coded; do not jump ahead to simulator or replay binding

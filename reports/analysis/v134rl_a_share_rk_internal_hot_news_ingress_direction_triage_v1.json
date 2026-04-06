@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "ingress_row_count": 20,
+    "important_ingress_count": 2,
+    "board_specific_ingress_count": 1,
+    "active_hot_window_count": 20,
+    "important_copy_retained_count": 2,
+    "impact_window_attached_count": 2,
+    "accelerating_ingress_count": 0,
+    "late_impact_window_count": 0,
+    "authoritative_status": "continue_feeding_downstream_from_single_internal_hot_news_ingress_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "consumer_entry",
+      "direction": "prefer_the_single_ingress_surface_as_the_default_consumer_entry_for_trading_programs"
+    },
+    {
+      "component": "priority_ordering",
+      "direction": "use_program_priority_score_as_the_default_sort_key_before_specialized_board_or_risk_subviews"
+    },
+    {
+      "component": "mapping_awareness",
+      "direction": "respect_board_hit_state_and_beneficiary_mapping_confidence_when_a_strategy_requires_symbol-level_routing"
+    },
+    {
+      "component": "retention_awareness",
+      "direction": "respect_hot_window_state_and_important_copy_retained_when_the_consumer_needs_time-decay_or_longer-lived_message_memory"
+    },
+    {
+      "component": "context_awareness",
+      "direction": "respect_context_message_count_recent_message_density_context_recency_weighted_signal_context_velocity_context_cooling_and_impact_window_state_when_the_consumer_needs_multi-message_context"
+    },
+    {
+      "component": "impact_decay_awareness",
+      "direction": "respect_impact_decay_state_when_the_consumer_needs_to_distinguish_early_mid_or_late_memory_of_an_important_event"
+    }
+  ],
+  "interpretation": [
+    "The pipeline now exposes one consumer-ready ingress surface instead of forcing the trading program to join multiple intermediate tables.",
+    "Further refinements should improve mapping quality, event clustering, and decay heuristics, not re-fragment the consumer interface."
+  ]
+}

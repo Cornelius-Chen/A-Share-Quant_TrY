@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116n_cpo_corrected_cooled_shadow_retention_v1",
+    "candidate_posture": "cooled_shadow_only_not_promotable",
+    "retained_variant_name": "double_confirm_late_quarter",
+    "retained_final_equity": 2462276.6695,
+    "retained_max_drawdown": 0.184151,
+    "hot_upper_bound_variant_name": "earliest_visible_reference",
+    "hot_upper_bound_final_equity": 3862407.3777,
+    "hot_upper_bound_max_drawdown": 0.267821,
+    "recommended_next_posture": "carry_corrected_cooled_shadow_candidate_forward_and_keep_hot_upper_bound_audit_only"
+  },
+  "retained_variant_row": {
+    "variant_name": "double_confirm_late_quarter",
+    "candidate_signal_count": 6,
+    "executed_order_count": 6,
+    "overlay_fill_fraction": 0.25,
+    "per_symbol_position_add_cap_ratio": 0.35,
+    "final_equity": 2462276.6695,
+    "equity_delta_vs_baseline": 695810.0599,
+    "max_drawdown": 0.184151,
+    "overlay_total_transaction_cost": 118.6144
+  },
+  "hot_upper_bound_row": {
+    "variant_name": "earliest_visible_reference",
+    "candidate_signal_count": 10,
+    "executed_order_count": 10,
+    "overlay_fill_fraction": 0.5,
+    "per_symbol_position_add_cap_ratio": 0.5,
+    "final_equity": 3862407.3777,
+    "equity_delta_vs_baseline": 2095940.7681,
+    "max_drawdown": 0.267821,
+    "overlay_total_transaction_cost": 317.6989
+  },
+  "interpretation": [
+    "V1.16N corrects the retention mistake in V116L after the formal three-run adversarial review over V116J/V116K/V116L.",
+    "The retained object is now the cleanest cooled-shadow candidate rather than the highest-equity hottest replay line.",
+    "This corrected retained object remains candidate-only and must not be promoted into law without broader repaired-window revalidation."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134ek_commercial_aerospace_ej_add_registry_direction_triage_v1",
+    "authoritative_status": "retain_intraday_add_registry_bootstrap_and_shift_next_to_point_in_time_add_seed_feed",
+    "registry_row_count": 55,
+    "seed_family_count": 3,
+    "authoritative_rule": "the first add frontier artifact should remain a registry bootstrap until point-in-time seed feeds exist"
+  },
+  "triage_rows": [
+    {
+      "component": "allowed_add_seed",
+      "status": "retain_as_positive_supervision",
+      "rationale": "historical pre-lockout open/add executions form the first positive add candidate set"
+    },
+    {
+      "component": "failed_add_seed",
+      "status": "retain_as_negative_supervision",
+      "rationale": "same-day intraday failure after add must remain explicit negative evidence for later add labeling"
+    },
+    {
+      "component": "blocked_add_seed",
+      "status": "retain_as_veto_supervision",
+      "rationale": "board lockout remains an upstream add veto and should be visible inside the registry itself"
+    }
+  ],
+  "interpretation": [
+    "V1.34EK turns the bootstrap registry into a direction judgment for the newly opened add frontier.",
+    "The next justified step is point-in-time add seed feeds, not execution logic and not broad all-session expansion."
+  ]
+}

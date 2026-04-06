@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "lane_row_count": 1,
+    "excluded_row_count": 2,
+    "authoritative_status": "source_runtime_should_continue_through_the_single_stub_replacement_lane"
+  },
+  "triage_rows": [
+    {
+      "component": "runtime_stub_lane",
+      "direction": "continue_only_through_the_single_html_article_scheduler_stub_replacement_lane"
+    },
+    {
+      "component": "excluded_adapters",
+      "direction": "retain_social_and_reserved_official_adapters_outside_this_stub_lane"
+    }
+  ],
+  "interpretation": [
+    "The remaining source-side runtime path is now best understood as a single stub-replacement lane.",
+    "This keeps future work narrow and avoids reopening the excluded adapters."
+  ]
+}

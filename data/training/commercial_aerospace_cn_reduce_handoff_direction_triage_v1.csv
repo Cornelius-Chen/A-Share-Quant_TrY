@@ -1,0 +1,5 @@
+﻿component,status,detail
+reduce_branch,freeze_mainline,Treat reduce as frozen mainline research rather than an open semantic frontier.
+residue_policy,local_maintenance_only,Only local residue supervision remains justified inside reduce; do not reopen broad tuning.
+execution_policy,still_blocked_by_infrastructure,execution_blocker_count = 4
+future_handoff,approved_but_not_triggered_now,"The branch is ready for a later handoff to intraday add, but this step does not start that frontier."

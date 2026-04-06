@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "batch_one_source_count": 6,
+    "host_review_unit_count": 4,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_batch_one_allowlist_review_surface_status_v1.csv",
+    "authoritative_output": "a_share_batch_one_allowlist_review_surface_materialized_but_not_promoted"
+  },
+  "review_rows": [
+    {
+      "review_unit_id": "allowlist_review_finance_sina_com_cn",
+      "host": "finance.sina.com.cn",
+      "source_count": 3,
+      "source_ids": "src_0002|src_0005|src_0011",
+      "source_names": "新浪财经-商业航天概念再度上演涨停潮 | 新浪财经-华菱线缆收购星鑫航天事件 | 新浪财经-西测测试商业航天核心赛道",
+      "max_authority_score": 4,
+      "adapter_ids": "network_html_article_fetch",
+      "review_mode": "primary_batch_one_host_family_review",
+      "review_state": "awaiting_manual_license_review",
+      "promotion_state": "not_promoted"
+    },
+    {
+      "review_unit_id": "allowlist_review_stcn_com",
+      "host": "stcn.com",
+      "source_count": 1,
+      "source_ids": "src_0023",
+      "source_names": "证券时报 2024-09-25 CPO概念爆发",
+      "max_authority_score": 4,
+      "adapter_ids": "network_html_article_fetch",
+      "review_mode": "independent_batch_one_host_review",
+      "review_state": "awaiting_manual_license_review",
+      "promotion_state": "not_promoted"
+    },
+    {
+      "review_unit_id": "allowlist_review_stock_finance_sina_com_cn",
+      "host": "stock.finance.sina.com.cn",
+      "source_count": 1,
+      "source_ids": "src_0018",
+      "source_names": "新易盛2024年报/2025Q1点评",
+      "max_authority_score": 4,
+      "adapter_ids": "network_html_article_fetch",
+      "review_mode": "sibling_host_review_after_primary_sina_family",
+      "review_state": "awaiting_manual_license_review",
+      "promotion_state": "not_promoted"
+    },
+    {
+      "review_unit_id": "allowlist_review_www_yicai_com",
+      "host": "www.yicai.com",
+      "source_count": 1,
+      "source_ids": "src_0019",
+      "source_names": "天孚通信互动平台/CPO产品进展",
+      "max_authority_score": 4,
+      "adapter_ids": "network_html_article_fetch",
+      "review_mode": "independent_batch_one_host_review",
+      "review_state": "awaiting_manual_license_review",
+      "promotion_state": "not_promoted"
+    }
+  ],
+  "interpretation": [
+    "Batch-one allowlist work is now shaped as host-level review units rather than six scattered source rows.",
+    "This still does not approve any host; it only creates the first disciplined manual review package.",
+    "Sina finance is treated as the primary host family, with stock.finance.sina.com.cn retained as a sibling host that should be reviewed after the primary family decision."
+  ]
+}

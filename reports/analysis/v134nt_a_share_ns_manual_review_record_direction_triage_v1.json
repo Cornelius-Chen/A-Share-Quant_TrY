@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "record_row_count": 4,
+    "pending_record_count": 4,
+    "authoritative_status": "manual_review_records_should_be_filled_before_any_batch_one_promotion"
+  },
+  "triage_rows": [
+    {
+      "component": "record_fields",
+      "direction": "retain_explicit_terms_robots_risk_scope_and_outcome_fields_for_each_host_unit"
+    },
+    {
+      "component": "record_order",
+      "direction": "fill_primary_host_family_record_first_then_follow_priority_order"
+    },
+    {
+      "component": "promotion_dependency",
+      "direction": "keep_allowlist_promotion_closed_until_manual_record_fields_stop_being_pending"
+    }
+  ],
+  "interpretation": [
+    "The next source-side gain now depends on filling standardized manual review records.",
+    "This reduces future decision drift because all host reviews must pass through the same fields."
+  ]
+}

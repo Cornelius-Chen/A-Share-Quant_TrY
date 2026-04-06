@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "theme_count": 30,
+    "direct_row_count": 75,
+    "proxy_row_count": 15,
+    "weak_row_count": 0,
+    "direct_clean_theme_count": 18,
+    "proxy_heavy_theme_count": 0,
+    "weak_exposed_theme_count": 0,
+    "authoritative_status": "continue_strengthening_proxy-heavy_and_weak-exposed_themes_before_expanding_more_long-tail_mappings"
+  },
+  "triage_rows": [
+    {
+      "component": "direct_clean_themes",
+      "direction": "treat direct-clean themes as the highest-trust symbol-routing layer for the trading consumer"
+    },
+    {
+      "component": "proxy_heavy_themes",
+      "direction": "prefer watch and confirmation handling on proxy-heavy themes unless stronger direct beneficiaries are curated"
+    },
+    {
+      "component": "weak_exposed_themes",
+      "direction": "prioritize weak-exposed themes for curation cleanup before using them as high-trust symbol-level routing evidence"
+    }
+  ],
+  "interpretation": [
+    "The next improvement step is now obvious: clean weak-exposed themes and reduce proxy-heavy dependence where possible.",
+    "This summary is a quicker planning surface than scanning raw beneficiary rows one by one."
+  ]
+}

@@ -1,0 +1,11 @@
+﻿trade_date,month_bucket,symbol,predicted_label,is_seed_allowed,quality_tier,open_to_15m,open_to_60m,continuation_15_to_60m,close_loc_15m,burst_amount_share_15
+20251218,2025-12,000738,allowed_preheat_probe_add,True,probe_quality_persistent_permission,0.00727273,0.0161039,0.00883117,0.56666667,0.31276485
+20251218,2025-12,002465,allowed_preheat_full_add,False,full_quality_persistent_permission,0.01260835,0.04334121,0.03073286,0.6875,0.27242633
+20251219,2025-12,002085,allowed_preheat_full_add,True,full_quality_persistent_permission,0.01675603,0.0227882,0.00603217,0.96153846,0.3114404
+20251224,2025-12,000738,allowed_preheat_full_add,False,bridge_quality_persistent_permission,0.00603015,0.01758794,0.01155779,0.60869565,0.37340117
+20251224,2025-12,002465,allowed_preheat_probe_add,False,probe_quality_persistent_permission,0.00232019,0.02861562,0.02629543,0.35714286,0.22518798
+20251224,2025-12,600879,allowed_preheat_full_add,False,full_quality_persistent_permission,0.02451613,0.06451613,0.04,0.63333333,0.31372572
+20251225,2025-12,000738,allowed_preheat_probe_add,False,probe_quality_persistent_permission,0.01516634,0.04207436,0.02690802,0.59322034,0.24229671
+20251225,2025-12,002085,allowed_preheat_probe_add,False,bridge_quality_persistent_permission,0.00389358,0.01232966,0.00843608,0.61538462,0.2230713
+20251225,2025-12,002465,allowed_preheat_full_add,False,full_quality_persistent_permission,0.01114413,0.01485884,0.00371471,0.84615385,0.37708016
+20251225,2025-12,600879,allowed_preheat_full_add,False,full_quality_persistent_permission,0.02932376,0.07899461,0.04967085,0.77777778,0.31697292

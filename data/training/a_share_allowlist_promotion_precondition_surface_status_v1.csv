@@ -1,0 +1,5 @@
+﻿precondition,precondition_state,supporting_count,blocking_reason
+manual_review_records_filled,satisfied,0,batch-one manual review records are complete
+manual_license_outcomes_non_pending,satisfied,0,all manual license outcomes are non-pending
+manual_runtime_outcomes_non_pending,satisfied,0,all manual runtime outcomes are non-pending
+runtime_candidate_promotable,unsatisfied,3,runtime candidate dependency surface still reports zero promotable adapters

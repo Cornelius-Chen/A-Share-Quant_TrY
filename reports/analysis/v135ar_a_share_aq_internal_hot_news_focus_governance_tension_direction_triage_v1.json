@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "current_primary_theme_slug": "oil_gas",
+    "current_primary_rank": 2,
+    "leader_theme_slug": "defense_industry",
+    "review_state": "hold_incumbent_focus",
+    "tension_state": "incumbent_not_leader_but_gate_holds",
+    "tension_priority": "p2",
+    "authoritative_status": "focus_governance_tension_packet_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "governance_explanation",
+      "direction": "use the tension packet to explain when leaderboard rank and review policy disagree, instead of treating that mismatch as a silent inconsistency."
+    },
+    {
+      "component": "rotation_discipline",
+      "direction": "keep rotation gated by review policy even when the incumbent is no longer leader, unless the tension state itself escalates."
+    },
+    {
+      "component": "attention_routing",
+      "direction": "route p2 or above tension states to higher-level review surfaces; keep p3 tension in background monitoring."
+    }
+  ],
+  "interpretation": [
+    "This packet turns an implicit governance nuance into an explicit top-level state.",
+    "It is especially useful when support counts are tied or near-tied and rank ordering alone would overstate the need to rotate."
+  ]
+}

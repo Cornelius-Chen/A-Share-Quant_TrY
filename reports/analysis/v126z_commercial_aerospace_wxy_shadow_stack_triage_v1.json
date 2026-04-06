@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126z_commercial_aerospace_wxy_shadow_stack_triage_v1",
+    "economic_reference_variant": "v126o_economic_reference",
+    "economic_reference_final_equity": 1227143.0725,
+    "economic_reference_max_drawdown": 0.14258108,
+    "cleaner_reference_variant": "v126q_cleaner_reference",
+    "cleaner_reference_final_equity": 1189482.711,
+    "cleaner_reference_max_drawdown": 0.13356069,
+    "retained_aggressive_shadow_variant": "v126v_retained_aggressive_shadow",
+    "retained_aggressive_shadow_final_equity": 1246105.7532,
+    "retained_aggressive_shadow_max_drawdown": 0.22518706,
+    "detached_derisk_shadow_variant": "v126x_weakest_half_full_exit",
+    "detached_derisk_shadow_final_equity": 1199188.2952,
+    "detached_derisk_shadow_max_drawdown": 0.20635114,
+    "authoritative_status": "freeze_reference_stack_and_shift_to_narrow_downside_execution"
+  },
+  "interpretation": [
+    "V1.26Z freezes the current commercial-aerospace lawful shadow stack after comparing economic reference, cleaner reference, aggressive preheat shadow, and the best conditional de-risk variant.",
+    "The stack is retained for reference only: V1.26O remains the economic anchor, V1.26Q the cleaner comparator, V1.26V the aggressive preheat shadow, and V1.26X only a detached de-risk shadow.",
+    "No current variant is promoted; the next optimization layer is narrow downside execution grammar rather than more preheat expansion or replay-surface tuning."
+  ]
+}

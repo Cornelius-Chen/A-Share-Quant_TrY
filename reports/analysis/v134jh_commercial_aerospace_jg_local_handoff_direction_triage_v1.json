@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jh_commercial_aerospace_jg_local_handoff_direction_triage_v1",
+    "future_handoff_ready": true,
+    "capital_true_selection_blocked": true,
+    "authoritative_status": "freeze_board_local_event_attention_capital_route_and_wait_for_future_evidence_shift"
+  },
+  "triage_rows": [
+    {
+      "component": "board_local_event_attention_capital_route",
+      "direction": "freeze_mainline_and_do_not_reopen_inside_same_local_inventory"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_until_new_hard_heat_source_or_broader_attention_evidence_exists"
+    },
+    {
+      "component": "future_progress_source",
+      "direction": "treat_as_future_evidence_expansion_only"
+    }
+  ],
+  "interpretation": [
+    "V1.34JH turns the local handoff package into direction.",
+    "The branch should now be treated the same way earlier frozen lines were treated: preserve the learned stack and refuse to drift inside the same evidence inventory."
+  ]
+}

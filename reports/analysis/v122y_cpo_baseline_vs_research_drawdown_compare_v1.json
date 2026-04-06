@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122y_cpo_baseline_vs_research_drawdown_compare_v1",
+    "interval_count": 3,
+    "recommended_next_posture": "decide_if_priority_should_shift_to_reduce_close_or_position_heat_based_on_direct_baseline_gap"
+  },
+  "interval_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "research_drawdown": 0.493548,
+      "research_drawdown_amount": 980091.5,
+      "baseline_equity_peak": 1218639.6296,
+      "baseline_equity_trough": 1107377.1296,
+      "research_equity_peak": 1985805.896,
+      "research_equity_trough": 1005714.396,
+      "baseline_cash_ratio_peak": 0.723982,
+      "research_cash_ratio_peak": 0.077815,
+      "baseline_cash_ratio_trough": 0.796724,
+      "research_cash_ratio_trough": 0.153647,
+      "baseline_held_symbols_peak": "300502,300757",
+      "research_held_symbols_peak": "300308,300502,300757",
+      "baseline_held_symbols_trough": "300502,300757",
+      "research_held_symbols_trough": "300308,300502,300757",
+      "symbol_qty_diffs": [
+        {
+          "symbol": "300308",
+          "peak_qty_extra_vs_baseline": 4100,
+          "trough_qty_extra_vs_baseline": 4100
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_extra_vs_baseline": 4700,
+          "trough_qty_extra_vs_baseline": 4700
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        },
+        {
+          "symbol": "688498",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "research_drawdown": 0.273025,
+      "research_drawdown_amount": 436860.5,
+      "baseline_equity_peak": 1120773.6296,
+      "baseline_equity_trough": 1066877.1296,
+      "research_equity_peak": 1600077.896,
+      "research_equity_trough": 1163217.396,
+      "baseline_cash_ratio_peak": 0.787201,
+      "research_cash_ratio_peak": 0.096573,
+      "baseline_cash_ratio_trough": 0.826968,
+      "research_cash_ratio_trough": 0.132843,
+      "baseline_held_symbols_peak": "300502,300757",
+      "research_held_symbols_peak": "300308,300502,300757",
+      "baseline_held_symbols_trough": "300502,300757",
+      "research_held_symbols_trough": "300308,300502,300757",
+      "symbol_qty_diffs": [
+        {
+          "symbol": "300308",
+          "peak_qty_extra_vs_baseline": 4100,
+          "trough_qty_extra_vs_baseline": 4100
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_extra_vs_baseline": 4700,
+          "trough_qty_extra_vs_baseline": 4700
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        },
+        {
+          "symbol": "688498",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "research_drawdown": 0.193702,
+      "research_drawdown_amount": 211397.9384,
+      "baseline_equity_peak": 1070551.7504,
+      "baseline_equity_trough": 939997.7504,
+      "research_equity_peak": 1091357.0504,
+      "research_equity_trough": 879959.112,
+      "baseline_cash_ratio_peak": 0.774882,
+      "research_cash_ratio_peak": 0.680215,
+      "baseline_cash_ratio_trough": 0.882504,
+      "research_cash_ratio_trough": 0.742777,
+      "baseline_held_symbols_peak": "300308,300502",
+      "research_held_symbols_peak": "300308,300502",
+      "baseline_held_symbols_trough": "300308,300502",
+      "research_held_symbols_trough": "300308,300502",
+      "symbol_qty_diffs": [
+        {
+          "symbol": "300308",
+          "peak_qty_extra_vs_baseline": 400,
+          "trough_qty_extra_vs_baseline": 1000
+        },
+        {
+          "symbol": "300502",
+          "peak_qty_extra_vs_baseline": 500,
+          "trough_qty_extra_vs_baseline": 1000
+        },
+        {
+          "symbol": "300757",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        },
+        {
+          "symbol": "688498",
+          "peak_qty_extra_vs_baseline": 0,
+          "trough_qty_extra_vs_baseline": 0
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.22Y compares the same drawdown windows under baseline and research test baseline states.",
+    "The point is to answer a practical question: did the research line mainly suffer because it held more of the same names, because it had less cash, or because baseline actually exited earlier?"
+  ]
+}

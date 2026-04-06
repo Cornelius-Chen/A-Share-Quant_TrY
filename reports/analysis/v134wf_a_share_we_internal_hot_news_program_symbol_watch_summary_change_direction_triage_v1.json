@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "change_row_count": 1,
+    "top_watch_symbol_change": "stable",
+    "top_watch_bundle_change": "stable",
+    "top_watch_theme_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_symbol-level_change_signals_to_symbol-first_consumers"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_symbol_watch_branch",
+      "direction": "keep_lightweight_symbol_watch_polling_when_the_symbol_watch_change_signal_stays_stable"
+    },
+    {
+      "component": "rotating_symbol_watch_branch",
+      "direction": "refresh_symbol-level_watch_routing_when_the_top_watch_symbol_or_top-five_bundle_changes"
+    }
+  ],
+  "interpretation": [
+    "This is the highest-value symbol-level change signal currently available on the hot-news line.",
+    "A symbol-first consumer can use it to avoid reopening the symbol-watch summary unless the watchset actually rotates."
+  ]
+}

@@ -1,0 +1,5 @@
+﻿component,status,detail
+same_day_reentry,blocked,positive_1d_seed_count = 0; no seed authorizes same-day chase.
+seed_level_reentry_timing_supervision,approved_to_continue,Use the timing windows as supervision only before any simulator or replay-facing lane.
+earliest_rebuild_watch,family_split_retained,Delayed-rebound seeds may open rebuild watch from T+3; deep-washout seeds remain base-only until T+5. positive_3d_seed_count = 2.
+reentry_simulator_lane,still_blocked,No reentry simulator is authorized from timing supervision alone.

@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117q_cpo_breakout_damage_false_positive_explanatory_audit_v1",
+    "best_threshold": -1346496002.0,
+    "passing_add_row_count": 15,
+    "true_positive_pass_count": 5,
+    "false_positive_pass_count": 10,
+    "top_explanatory_metric": "retail_chase_trap_score",
+    "secondary_explanatory_layer_useful": true,
+    "recommended_next_posture": "send_breakout_damage_external_audit_family_to_three_run_adversarial_review_and_keep_secondary_layers_explanatory_only"
+  },
+  "explanatory_rows": [
+    {
+      "metric_name": "retail_chase_trap_score",
+      "true_positive_mean": 2321452200.0,
+      "false_positive_mean": 2508728000.0,
+      "false_minus_true_gap": 187275800.0,
+      "helps_explain_false_positives": true
+    },
+    {
+      "metric_name": "shooting_star_trap_score",
+      "true_positive_mean": -2675951600.0,
+      "false_positive_mean": -2906651600.0,
+      "false_minus_true_gap": -230700000.0,
+      "helps_explain_false_positives": false
+    },
+    {
+      "metric_name": "false_breakout_damage_proxy_score",
+      "true_positive_mean": -905387999.6,
+      "false_positive_mean": -1165856200.0,
+      "false_minus_true_gap": -260468200.4,
+      "helps_explain_false_positives": false
+    },
+    {
+      "metric_name": "reverse_candidate_score",
+      "true_positive_mean": -3626768799.6,
+      "false_positive_mean": -4106876200.0,
+      "false_minus_true_gap": -480107400.4,
+      "helps_explain_false_positives": false
+    }
+  ],
+  "flagged_rows": [
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "candidate_damage_score": 425281000.0,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "reverse_candidate_score": -4769780000.0,
+      "false_breakout_damage_proxy_score": -1260576000.0,
+      "retail_chase_trap_score": 2761311000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": -591089000.0,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "reverse_candidate_score": -2254478000.0,
+      "false_breakout_damage_proxy_score": -18182000.0,
+      "retail_chase_trap_score": 2689468000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "candidate_damage_score": 1106029000.0,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "reverse_candidate_score": -5340462000.0,
+      "false_breakout_damage_proxy_score": -1668322000.0,
+      "retail_chase_trap_score": 2665841000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": 1302939000.0,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "reverse_candidate_score": -5529624000.0,
+      "false_breakout_damage_proxy_score": -1792206000.0,
+      "retail_chase_trap_score": 2616240000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": -136912000.0,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "reverse_candidate_score": -4155426000.0,
+      "false_breakout_damage_proxy_score": -924484000.0,
+      "retail_chase_trap_score": 2612923000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": 439392000.0,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "reverse_candidate_score": -3242876000.0,
+      "false_breakout_damage_proxy_score": -1026512000.0,
+      "retail_chase_trap_score": 2591963000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "positive_add_label": false,
+      "candidate_damage_score": 1510912000.0,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "reverse_candidate_score": -4828238000.0,
+      "false_breakout_damage_proxy_score": -1953238000.0,
+      "retail_chase_trap_score": 2449955000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": 319526000.0,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "reverse_candidate_score": -2869140000.0,
+      "false_breakout_damage_proxy_score": -951162000.0,
+      "retail_chase_trap_score": 2363948000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": -35789000.0,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "reverse_candidate_score": -3969474000.0,
+      "false_breakout_damage_proxy_score": -829616000.0,
+      "retail_chase_trap_score": 2276905000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "candidate_damage_score": 1188938000.0,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "reverse_candidate_score": -4109264000.0,
+      "false_breakout_damage_proxy_score": -1234264000.0,
+      "retail_chase_trap_score": 2058726000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "candidate_damage_score": 1188918000.0,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "reverse_candidate_score": -5899890000.0,
+      "false_breakout_damage_proxy_score": -1899890000.0,
+      "retail_chase_trap_score": 3079311000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "candidate_damage_score": 1096927000.0,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "reverse_candidate_score": -5232660000.0,
+      "false_breakout_damage_proxy_score": -1846074000.0,
+      "retail_chase_trap_score": 2898322000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "candidate_damage_score": -144300000.0,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "reverse_candidate_score": -3567972000.0,
+      "false_breakout_damage_proxy_score": -772668000.0,
+      "retail_chase_trap_score": 2358793000.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "candidate_damage_score": -127076000.0,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "reverse_candidate_score": -3199828000.0,
+      "false_breakout_damage_proxy_score": -743332000.0,
+      "retail_chase_trap_score": 1919071000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "candidate_damage_score": -1346496002.0,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "reverse_candidate_score": -233493998.0,
+      "false_breakout_damage_proxy_score": 735024002.0,
+      "retail_chase_trap_score": 1351764000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17Q does not reopen the degraded reverse branch as a mainline. It checks whether reverse-signal and human-heuristic proxies help explain the breakout-damage false positives.",
+    "Any value found here is explanatory only: it can justify later drawdown-control interactions, but it cannot hijack the positive-side mainline.",
+    "This is the disciplined way to let human experience and reverse signals inform the project without letting them silently retake policy status."
+  ]
+}

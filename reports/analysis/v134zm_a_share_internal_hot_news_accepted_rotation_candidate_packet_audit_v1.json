@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "current_top_opportunity_theme": "gold",
+    "accepted_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "accepted_top_watch_symbol": "600887",
+    "accepted_source_family": "sina",
+    "top_opportunity_change_if_accepted": "would_change",
+    "top_watch_change_if_accepted": "would_change",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_candidate_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "accepted_rotation_packet",
+      "component_state": "materialized",
+      "metric": "current_top_opportunity_theme",
+      "value": "gold"
+    },
+    {
+      "component": "accepted_rotation_packet",
+      "component_state": "materialized",
+      "metric": "accepted_top_opportunity_theme",
+      "value": "consumer_staples"
+    },
+    {
+      "component": "accepted_rotation_packet",
+      "component_state": "materialized",
+      "metric": "current_top_watch_symbol",
+      "value": "601899"
+    },
+    {
+      "component": "accepted_rotation_packet",
+      "component_state": "materialized",
+      "metric": "accepted_top_watch_symbol",
+      "value": "600887"
+    }
+  ],
+  "interpretation": [
+    "This packet shows the exact top-opportunity and top-watch state the consumers would see if the rotation were explicitly accepted.",
+    "It keeps accepted-state simulation separate from the current primary consumer chain."
+  ]
+}

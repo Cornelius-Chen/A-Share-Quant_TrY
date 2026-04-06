@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bw_commercial_aerospace_start_of_day_sell_binding_surface_spec_v1",
+    "broader_hit_session_count": 24,
+    "fully_funded_overlap_count": 1,
+    "must_build_component_count": 5,
+    "spec_csv": "data\\training\\commercial_aerospace_start_of_day_sell_binding_surface_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_start_of_day_sell_binding_surface_spec_ready_for_direction_triage"
+  },
+  "spec_rows": [
+    {
+      "surface_component": "start_of_day_holdings_ledger",
+      "status": "must_build",
+      "definition": "per symbol, per trade_date quantity carried into the open from the frozen EOD primary",
+      "why_it_exists": "intraday sell binding must know real inventory before any same-day open/add/reduce happens"
+    },
+    {
+      "surface_component": "eligible_intraday_sell_quantity",
+      "status": "must_build",
+      "definition": "sellable quantity starts equal to start_of_day_holdings_ledger and can only decrease intraday",
+      "why_it_exists": "prevents the sell lane from liquidating same-day opens or same-day adds that were never in opening inventory"
+    },
+    {
+      "surface_component": "same_day_new_lots_bucket",
+      "status": "must_build",
+      "definition": "same-day open/add quantity is tracked separately and is not eligible for intraday sell binding on that day",
+      "why_it_exists": "keeps intraday sell binding aligned with actual held-over inventory rather than newly-created lots"
+    },
+    {
+      "surface_component": "sell_consumption_ledger",
+      "status": "must_build",
+      "definition": "each intraday sell event consumes remaining eligible sell quantity in trigger-time order",
+      "why_it_exists": "turns minute shadow sells into quantity-aware state transitions"
+    },
+    {
+      "surface_component": "end_of_day_residual_bridge",
+      "status": "must_build",
+      "definition": "maps remaining eligible quantity and same-day new lots back into the frozen primary after market close",
+      "why_it_exists": "lets the sell-side lane stay read-only during the day while still reconciling against the primary state boundary"
+    }
+  ],
+  "interpretation": [
+    "V1.34BW turns the holdings-aware gap into a concrete start-of-day sell binding surface specification.",
+    "The key idea is that intraday sell binding may only consume carried inventory, while same-day new lots stay in a separate bucket."
+  ]
+}

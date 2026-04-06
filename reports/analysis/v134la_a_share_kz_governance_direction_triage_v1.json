@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "schema_count": 11,
+    "closed_gate_count": 3,
+    "authoritative_status": "governance_workstream_complete_enough_to_freeze_and_shift_into_automation"
+  },
+  "triage_rows": [
+    {
+      "governance_component": "schema_and_dataset_registry",
+      "direction": "freeze_as_current_control_plane"
+    },
+    {
+      "governance_component": "promotion_gates",
+      "direction": "retain_closed_until_automation_and_retention_loops_exist"
+    },
+    {
+      "governance_component": "next_frontier",
+      "direction": "shift_into_automation_workstream_to_materialize_ingest_pipeline_review_retention_and_orchestration_jobs"
+    }
+  ],
+  "interpretation": [
+    "Governance is now explicit enough to supervise the next stage of automation rather than letting jobs run against an implied contract.",
+    "The correct next move is automation, because mutation and retention logic should now attach to this control plane instead of being invented ad hoc."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121t_cpo_recent_1min_bootstrap_v1",
+    "symbol_count": 4,
+    "total_row_count": 7880,
+    "data_plane_status": "recent_1min_live_for_core_cpo_names",
+    "recommended_next_posture": "derive_1min_microstructure_features_and_action_timepoint_views"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "source_symbol": "sz300308",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00",
+      "output_path": "data\\raw\\minute_bars\\sina_300308_recent_1min_v1.csv"
+    },
+    {
+      "symbol": "300502",
+      "source_symbol": "sz300502",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00",
+      "output_path": "data\\raw\\minute_bars\\sina_300502_recent_1min_v1.csv"
+    },
+    {
+      "symbol": "300757",
+      "source_symbol": "sz300757",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00",
+      "output_path": "data\\raw\\minute_bars\\sina_300757_recent_1min_v1.csv"
+    },
+    {
+      "symbol": "688498",
+      "source_symbol": "sh688498",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00",
+      "output_path": "data\\raw\\minute_bars\\sina_688498_recent_1min_v1.csv"
+    }
+  ],
+  "interpretation": [
+    "V1.21T proves the project can now pull recent rolling 1-minute bars for the core CPO names.",
+    "This is not a full historical minute archive, but it is enough to start the 1-minute data plane instead of talking about it abstractly.",
+    "The next useful step is to derive microstructure features and align them to action-timepoint views."
+  ]
+}

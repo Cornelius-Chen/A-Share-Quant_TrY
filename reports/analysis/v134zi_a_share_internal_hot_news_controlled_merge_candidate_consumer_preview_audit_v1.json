@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "preview_row_count": 14,
+    "additive_preview_count": 13,
+    "unique_preview_theme_count": 6,
+    "unique_preview_symbol_count": 6,
+    "current_top_opportunity_theme": "gold",
+    "current_top_watch_symbol": "601899",
+    "candidate_top_theme": "consumer_staples",
+    "candidate_top_symbol": "600887",
+    "top_opportunity_change_if_promoted": "would_change",
+    "top_watch_change_if_promoted": "would_change",
+    "consumer_stability_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_candidate_consumer_preview_materialized"
+  },
+  "rows": [
+    {
+      "component": "consumer_preview",
+      "component_state": "materialized",
+      "metric": "preview_row_count",
+      "value": "14"
+    },
+    {
+      "component": "consumer_preview",
+      "component_state": "materialized",
+      "metric": "additive_preview_count",
+      "value": "13"
+    },
+    {
+      "component": "consumer_stability",
+      "component_state": "measured",
+      "metric": "top_opportunity_change_if_promoted",
+      "value": "would_change"
+    },
+    {
+      "component": "consumer_stability",
+      "component_state": "measured",
+      "metric": "top_watch_change_if_promoted",
+      "value": "would_change"
+    }
+  ],
+  "interpretation": [
+    "This preview shows what the second-source candidate lane would surface before any main consumer promotion.",
+    "It makes downstream impact explicit by comparing candidate top theme and top symbol against the current program snapshot."
+  ]
+}

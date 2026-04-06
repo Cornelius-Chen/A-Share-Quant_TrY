@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128e_commercial_aerospace_main_window_deeper_downside_audit_v1",
+    "reference_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "reference_final_equity": 1298439.6031,
+    "reference_max_drawdown": 0.09889703,
+    "best_variant": "mainwin_overdrive_075_impulse_075",
+    "best_variant_final_equity": 1306704.6132,
+    "best_variant_max_drawdown": 0.09309927
+  },
+  "variant_rows": [
+    {
+      "variant": "window_riskoff_full_weakdrift_075_impulse_half",
+      "final_equity": 1298439.6031,
+      "max_drawdown": 0.09889703,
+      "executed_order_count": 236
+    },
+    {
+      "variant": "mainwin_overdrive_075",
+      "final_equity": 1298439.6031,
+      "max_drawdown": 0.09889703,
+      "executed_order_count": 236
+    },
+    {
+      "variant": "mainwin_overdrive_full",
+      "final_equity": 1298439.6031,
+      "max_drawdown": 0.09889703,
+      "executed_order_count": 236
+    },
+    {
+      "variant": "mainwin_overdrive_075_impulse_075",
+      "final_equity": 1306704.6132,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 233
+    },
+    {
+      "variant": "mainwin_overdrive_full_impulse_075",
+      "final_equity": 1306704.6132,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 233
+    }
+  ],
+  "interpretation": [
+    "V1.28E deepens downside control only inside the main drawdown window by tightening sentiment-overdrive and impulse-target sell intensity.",
+    "The branch keeps the current primary entry surface unchanged and only tests whether the main window can be improved further without reopening broad symbol tuning."
+  ]
+}

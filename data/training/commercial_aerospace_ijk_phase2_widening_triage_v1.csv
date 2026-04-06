@@ -1,0 +1,6 @@
+﻿component,status,detail
+phase2_seed_training_result,reasonable,reasonable_with_targeted_optimization_space
+broader_hit_widening,approved_with_guardrails,"allowed_surface = broader_hit_sessions_only, allowed_execution_tiers = reversal_watch, severe_override_positive"
+all_session_widening,still_blocked,Do not jump from six seeds to the full all-session surface; widen only to the already-flagged broader-hit sessions first.
+mild_execution_promotion,blocked,mild_override_watch remains governance-only and is not promotable into an execution sell tier.
+phase3_replay_lane,still_blocked,No replay binding is authorized by the current phase-2 supervision review or widening protocol.

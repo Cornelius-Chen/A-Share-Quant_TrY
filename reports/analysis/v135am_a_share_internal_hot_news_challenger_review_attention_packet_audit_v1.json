@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "incumbent_theme_slug": "defense_industry",
+    "incumbent_watch_symbol": "600760",
+    "challenger_theme_slug": "oil_gas",
+    "challenger_watch_symbol": "601857",
+    "support_delta_vs_incumbent": -1,
+    "review_state": "hold_incumbent_focus",
+    "attention_state": "background_monitor_only",
+    "attention_priority": "p3",
+    "attention_instruction": "hold_incumbent_background_monitor_only",
+    "authoritative_output": "a_share_internal_hot_news_challenger_review_attention_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "incumbent_focus",
+      "component_state": "materialized",
+      "metric": "incumbent_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "challenger_focus",
+      "component_state": "materialized",
+      "metric": "challenger_theme_slug",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_review",
+      "component_state": "materialized",
+      "metric": "review_state",
+      "value": "hold_incumbent_focus"
+    },
+    {
+      "component": "challenger_review",
+      "component_state": "materialized",
+      "metric": "attention_state",
+      "value": "background_monitor_only"
+    },
+    {
+      "component": "challenger_review",
+      "component_state": "materialized",
+      "metric": "attention_priority",
+      "value": "p3"
+    }
+  ],
+  "interpretation": [
+    "This packet converts incumbent-vs-challenger review into one explicit attention payload for outer consumers.",
+    "It lets the top control layer distinguish background monitoring from elevated challenger review without reopening lower review surfaces."
+  ]
+}

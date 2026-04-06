@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117s_cpo_cooling_reacceleration_discovery_v1",
+    "candidate_discriminator_name": "cooling_reacceleration_score_candidate",
+    "add_row_count": 16,
+    "positive_add_row_count": 5,
+    "negative_add_row_count": 11,
+    "candidate_score_mean_gap_positive_minus_negative": 666477709.090909,
+    "top_separation_feature": "f30_high_time_ratio_rz",
+    "recommended_next_posture": "audit_cooling_reacceleration_on_broader_add_pool_and_keep_candidate_only"
+  },
+  "feature_separation_rows": [
+    {
+      "feature_name": "f30_high_time_ratio_rz",
+      "positive_mean": 700000000.0,
+      "negative_mean": 534090909.090909,
+      "mean_gap_positive_minus_negative": 165909090.909091,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 165909090.909091
+    },
+    {
+      "feature_name": "f30_close_location_rz",
+      "positive_mean": 637975800.0,
+      "negative_mean": 759413272.727273,
+      "mean_gap_positive_minus_negative": -121437472.727273,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 121437472.727273
+    },
+    {
+      "feature_name": "f60_close_location_rz",
+      "positive_mean": 637975800.0,
+      "negative_mean": 759413272.727273,
+      "mean_gap_positive_minus_negative": -121437472.727273,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 121437472.727273
+    },
+    {
+      "feature_name": "f30_afternoon_volume_share_rz",
+      "positive_mean": 389072800.0,
+      "negative_mean": 319604090.909091,
+      "mean_gap_positive_minus_negative": 69468709.090909,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 69468709.090909
+    },
+    {
+      "feature_name": "f60_afternoon_volume_share_rz",
+      "positive_mean": 389072800.0,
+      "negative_mean": 319604090.909091,
+      "mean_gap_positive_minus_negative": 69468709.090909,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 69468709.090909
+    },
+    {
+      "feature_name": "f60_high_time_ratio_rz",
+      "positive_mean": 700000000.0,
+      "negative_mean": 636363636.363636,
+      "mean_gap_positive_minus_negative": 63636363.636364,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 63636363.636364
+    },
+    {
+      "feature_name": "d5_30_last_bar_return_rz",
+      "positive_mean": -7472600.0,
+      "negative_mean": 7438454.545455,
+      "mean_gap_positive_minus_negative": -14911054.545455,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 14911054.545455
+    },
+    {
+      "feature_name": "f30_last_bar_return_rz",
+      "positive_mean": 6289800.0,
+      "negative_mean": -7426363.636364,
+      "mean_gap_positive_minus_negative": 13716163.636364,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 13716163.636364
+    },
+    {
+      "feature_name": "d15_60_close_vs_vwap_rz",
+      "positive_mean": -21003400.0,
+      "negative_mean": -10318818.181818,
+      "mean_gap_positive_minus_negative": -10684581.818182,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 10684581.818182
+    },
+    {
+      "feature_name": "f60_close_vs_vwap_rz",
+      "positive_mean": 19249400.0,
+      "negative_mean": 11292454.545455,
+      "mean_gap_positive_minus_negative": 7956945.454545,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 7956945.454545
+    },
+    {
+      "feature_name": "d5_30_close_vs_vwap_rz",
+      "positive_mean": -22803600.0,
+      "negative_mean": -14952454.545455,
+      "mean_gap_positive_minus_negative": -7851145.454545,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 7851145.454545
+    }
+  ],
+  "candidate_score_rows": [
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "cooling_reacceleration_score": 1449399000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "cooling_reacceleration_score": 1198972000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "cooling_reacceleration_score": 1008624000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "cooling_reacceleration_score": 665502000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "cooling_reacceleration_score": 572567000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "cooling_reacceleration_score": 1654966000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "cooling_reacceleration_score": 1447011000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "cooling_reacceleration_score": 1189616000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "cooling_reacceleration_score": 1138768000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "cooling_reacceleration_score": 817964000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "cooling_reacceleration_score": 618915000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "cooling_reacceleration_score": -512324000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "cooling_reacceleration_score": -589553000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "cooling_reacceleration_score": -610189000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "cooling_reacceleration_score": -716335000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "cooling_reacceleration_score": -1000953000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17S reopens quality-side discovery from the broader add pool instead of the neat retained family.",
+    "The candidate branch targets a different semantic: cool first, then reaccelerate, with sustained afternoon participation and without an overextended chase close.",
+    "This is discovery only. The branch is new only if it survives the broader external audit next."
+  ]
+}

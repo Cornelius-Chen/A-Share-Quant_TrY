@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "runtime_consumer_mode_change": "stable",
+    "runtime_attention_level_change": "stable",
+    "suggested_poll_interval_change": "stable",
+    "reopen_target_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_runtime-envelope_change_signal_above_the_runtime-envelope"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_runtime_envelope_branch",
+      "direction": "keep_the_program_on_the_existing_polling cadence when the runtime-envelope change signal remains stable"
+    },
+    {
+      "component": "poll_interval_rotation_branch",
+      "direction": "update_the_scheduler cadence immediately when suggested_poll_interval_change flips state"
+    },
+    {
+      "component": "reopen_target_rotation_branch",
+      "direction": "refresh_the_requested upper layer when reopen_target_change flips state"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost change detector for the runtime envelope.",
+    "A consumer can watch it to know when polling cadence or reopening targets changed without reparsing the runtime envelope itself."
+  ]
+}

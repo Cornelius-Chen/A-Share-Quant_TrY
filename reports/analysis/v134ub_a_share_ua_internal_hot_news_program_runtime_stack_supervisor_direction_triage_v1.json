@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "surface_row_count": 1,
+    "supervisor_mode": "steady_supervision",
+    "runtime_consumer_mode": "passive_polling_only",
+    "scheduler_loop_signal_mode": "steady_polling",
+    "orchestration_loop_signal_mode": "steady_orchestration_loop",
+    "authoritative_status": "continue_serving_runtime-stack_supervisor_surface_above_runtime_scheduler_and_orchestration_signal_layers"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_supervision_branch",
+      "direction": "keep_the_supervising process on lightweight oversight when supervisor_mode remains steady_supervision"
+    },
+    {
+      "component": "elevated_supervision_branch",
+      "direction": "raise_supervision intensity when supervisor_mode rotates into elevated_supervision or tight_supervision"
+    },
+    {
+      "component": "interrupt_supervision_branch",
+      "direction": "treat_interrupt_supervision_as_the_highest supervisory state and escalate immediately"
+    }
+  ],
+  "interpretation": [
+    "This is the top-level compact supervisor card for the hot-news execution stack.",
+    "It is meant to stop the infinite outward expansion of loop-specific layers by giving one compact supervisory view."
+  ]
+}

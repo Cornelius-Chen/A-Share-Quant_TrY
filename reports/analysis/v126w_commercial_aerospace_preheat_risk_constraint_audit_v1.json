@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126w_commercial_aerospace_preheat_risk_constraint_audit_v1",
+    "reference_v126o_final_equity": 1227143.0725,
+    "reference_v126o_max_drawdown": 0.14258108,
+    "reference_v126v_final_equity": 1246105.7532,
+    "reference_v126v_max_drawdown": 0.22518706,
+    "best_variant": "pf50k_sr100",
+    "best_variant_final_equity": 1111959.2348,
+    "best_variant_max_drawdown": 0.19833522,
+    "best_variant_executed_order_count": 109
+  },
+  "variant_rows": [
+    {
+      "variant": "pf50k_sr50",
+      "preheat_full_target_notional": 50000.0,
+      "sell_ratio": 0.5,
+      "executed_order_count": 153,
+      "final_equity": 1124479.3182,
+      "max_drawdown": 0.21579192
+    },
+    {
+      "variant": "pf50k_sr75",
+      "preheat_full_target_notional": 50000.0,
+      "sell_ratio": 0.75,
+      "executed_order_count": 139,
+      "final_equity": 1093746.3834,
+      "max_drawdown": 0.21462708
+    },
+    {
+      "variant": "pf50k_sr100",
+      "preheat_full_target_notional": 50000.0,
+      "sell_ratio": 1.0,
+      "executed_order_count": 109,
+      "final_equity": 1111959.2348,
+      "max_drawdown": 0.19833522
+    },
+    {
+      "variant": "pf60k_sr50",
+      "preheat_full_target_notional": 60000.0,
+      "sell_ratio": 0.5,
+      "executed_order_count": 152,
+      "final_equity": 1193639.739,
+      "max_drawdown": 0.21653125
+    },
+    {
+      "variant": "pf60k_sr75",
+      "preheat_full_target_notional": 60000.0,
+      "sell_ratio": 0.75,
+      "executed_order_count": 138,
+      "final_equity": 1169489.7713,
+      "max_drawdown": 0.21561422
+    },
+    {
+      "variant": "pf60k_sr100",
+      "preheat_full_target_notional": 60000.0,
+      "sell_ratio": 1.0,
+      "executed_order_count": 109,
+      "final_equity": 1178475.7722,
+      "max_drawdown": 0.20797939
+    },
+    {
+      "variant": "pf70k_sr50",
+      "preheat_full_target_notional": 70000.0,
+      "sell_ratio": 0.5,
+      "executed_order_count": 150,
+      "final_equity": 1246105.7532,
+      "max_drawdown": 0.22518706
+    },
+    {
+      "variant": "pf70k_sr75",
+      "preheat_full_target_notional": 70000.0,
+      "sell_ratio": 0.75,
+      "executed_order_count": 138,
+      "final_equity": 1220638.2722,
+      "max_drawdown": 0.22606942
+    },
+    {
+      "variant": "pf70k_sr100",
+      "preheat_full_target_notional": 70000.0,
+      "sell_ratio": 1.0,
+      "executed_order_count": 108,
+      "final_equity": 1230801.8864,
+      "max_drawdown": 0.21753784
+    }
+  ],
+  "interpretation": [
+    "V1.26W audits whether the downside problem in V1.26V is primarily caused by over-large preheat full sizing or too-weak de-risk sells.",
+    "No new factors or labels are introduced; this is pure risk execution tuning on top of the proven preheat-full contribution."
+  ]
+}

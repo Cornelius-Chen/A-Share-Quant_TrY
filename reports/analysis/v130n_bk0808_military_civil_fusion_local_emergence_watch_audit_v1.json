@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130n_bk0808_military_civil_fusion_local_emergence_watch_audit_v1",
+    "sector_id": "BK0808",
+    "current_internal_owner_count": 1,
+    "nearest_same_plane_watch_count": 1,
+    "historical_bridge_watch_count": 1,
+    "nearest_same_plane_watch": [
+      "600118"
+    ],
+    "historical_bridge_watch": [
+      "600760"
+    ],
+    "authoritative_status": "watch_bk0808_for_second_same_plane_symbol_but_do_not_unlock_worker",
+    "authoritative_rule": "the watchlist may identify likely emergence candidates but cannot be treated as same-plane support until v6 native snapshot evidence appears"
+  },
+  "candidate_rows": [
+    {
+      "symbol": "300474",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 242,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": 0.549233,
+      "timeline_approval_days": 0,
+      "timeline_leader_core_days": 0,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": null,
+      "timeline_first_date": null,
+      "timeline_last_date": null,
+      "recommended_watch_status": "existing_internal_owner",
+      "rationale": "already_the_only_v6_same_plane_owner"
+    },
+    {
+      "symbol": "600118",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": null,
+      "timeline_approval_days": 10,
+      "timeline_leader_core_days": 9,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": 0.561979,
+      "timeline_first_date": "2024-07-16",
+      "timeline_last_date": "2024-09-30",
+      "recommended_watch_status": "nearest_same_plane_watch",
+      "rationale": "timeline-native bk0808 support is already strong enough that this should be watched as the most plausible second same-plane symbol if native snapshot support appears"
+    },
+    {
+      "symbol": "600760",
+      "v5_snapshot_days": 12,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": 0.593094,
+      "v6_mean_non_junk": null,
+      "timeline_approval_days": 0,
+      "timeline_leader_core_days": 0,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": null,
+      "timeline_first_date": null,
+      "timeline_last_date": null,
+      "recommended_watch_status": "historical_bridge_watch",
+      "rationale": "historical bk0808 snapshot support exists, but this remains bridge-only until v6 same-plane support appears"
+    }
+  ],
+  "interpretation": [
+    "V1.30N keeps the transfer program frozen while making BK0808 monitoring less blind.",
+    "600118 is the most important near-surface watch because it already has strong BK0808 timeline-native support, even though it still lacks v6 same-plane snapshot support.",
+    "600760 remains useful only as a bridge watch, not as proof that BK0808 can reopen today."
+  ]
+}

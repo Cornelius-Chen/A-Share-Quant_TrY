@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "blocker_count": 7,
+    "replay_blocker_count": 2,
+    "authoritative_status": "execution_binding_kept_blocked_until_source_gates_and_replay_boundary_residuals_close"
+  },
+  "triage_rows": [
+    {
+      "component": "source_activation",
+      "direction": "process_allowlist_and_runtime_queues_before_any_network-assisted_live_like_shift"
+    },
+    {
+      "component": "replay",
+      "direction": "close_boundary_and_calendar_residuals_and_replace_execution_stub_before_any_binding_promotion"
+    }
+  ],
+  "interpretation": [
+    "The blocker stack is now concrete enough to separate source-side queue processing from replay-side coverage closure.",
+    "That is the correct stopline before any future live_like or execution promotion review."
+  ]
+}

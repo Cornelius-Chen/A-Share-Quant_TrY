@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "theme_count": 29,
+    "registry_row_count": 87,
+    "symbol_count": 64,
+    "alias_theme_count": 30,
+    "registry_alias_intersection_count": 29,
+    "authoritative_status": "theme_beneficiary_registry_expanded_and_alias_bound"
+  },
+  "rows": [
+    {
+      "component": "theme_beneficiary_registry",
+      "component_state": "materialized",
+      "metric": "theme_count",
+      "value": "29"
+    },
+    {
+      "component": "theme_beneficiary_registry",
+      "component_state": "materialized",
+      "metric": "registry_row_count",
+      "value": "87"
+    },
+    {
+      "component": "theme_beneficiary_registry",
+      "component_state": "materialized",
+      "metric": "symbol_count",
+      "value": "64"
+    },
+    {
+      "component": "theme_alias_map",
+      "component_state": "bound",
+      "metric": "registry_alias_intersection_count",
+      "value": "29"
+    }
+  ],
+  "interpretation": [
+    "The theme-beneficiary registry is now materially broader than the initial hand-built seed and is aligned with the alias map used by hot-news signal enrichment.",
+    "Coverage is still curated rather than exhaustive, but the registry now spans multiple recurring A-share theme families instead of only a few seed themes."
+  ]
+}

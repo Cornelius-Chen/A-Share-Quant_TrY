@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "focus_match_row_count": 5,
+    "focus_source_present_count": 1,
+    "theme_match_count": 5,
+    "symbol_match_count": 5,
+    "dual_match_count": 5,
+    "unique_source_family_count": 1,
+    "current_primary_theme_slug": "defense_industry",
+    "current_primary_watch_symbol": "600760",
+    "current_primary_source_row_id": "sina_4797454",
+    "authoritative_output": "a_share_internal_hot_news_primary_focus_replay_tracker_materialized"
+  },
+  "rows": [
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "focus_match_row_count",
+      "value": "5"
+    },
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "focus_source_present_count",
+      "value": "1"
+    },
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "theme_match_count",
+      "value": "5"
+    },
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "symbol_match_count",
+      "value": "5"
+    },
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "dual_match_count",
+      "value": "5"
+    },
+    {
+      "component": "primary_focus_replay_tracker",
+      "component_state": "materialized",
+      "metric": "unique_source_family_count",
+      "value": "1"
+    }
+  ],
+  "interpretation": [
+    "This tracker isolates which real candidate rows currently support the accepted primary focus in the consumer chain.",
+    "It shows whether the accepted focus is backed by just the accepted second-source row or by a broader set of matching theme/symbol candidates."
+  ]
+}

@@ -1,0 +1,2 @@
+﻿sample_window_id,representative_symbol_count,target_core_confirmation_state,local_outlier_count,broad_alignment_state,final_training_admission,strict_supervisor_conclusion
+ca_train_window_005,4,failed_core_confirmation,2,logic_valid_but_board_not_upgraded,negative_sample_ready,"Window 005 is a clean anti-false-positive sample: the subtheme logic was real, but the target core name did not confirm, board breadth was too weak, and the few strong names were local outliers rather than a genuine new leg."

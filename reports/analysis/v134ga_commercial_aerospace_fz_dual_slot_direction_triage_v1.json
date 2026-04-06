@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ga_commercial_aerospace_fz_dual_slot_direction_triage_v1",
+    "authoritative_status": "retain_dual_slot_permission_view_as_local_supervision_and_keep_single_ranker_blocked",
+    "selected_candidate_count": 2,
+    "slot_count": 2,
+    "authoritative_rule": "active-wave add selection now supports a local dual-slot permission view, while single-ranker promotion and execution remain blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "recent_reduce_residue_exclusion",
+      "status": "retain",
+      "rationale": "the first same-wave exclusion clue remains the clean outer filter"
+    },
+    {
+      "component": "dual_slot_permission_view",
+      "status": "retain_as_local_positive_structure",
+      "rationale": "the retained selected states look complementary enough to justify parallel risk-sharing slots instead of a forced single winner"
+    },
+    {
+      "component": "single_positive_ranker",
+      "status": "still_blocked",
+      "rationale": "the current local sample does not justify collapsing the two retained states into a single dominant rank order"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "dual-slot supervision is still a governance object, not execution authority"
+    }
+  ],
+  "interpretation": [
+    "V1.34GA turns the dual-slot audit into the next governance verdict for active-wave add selection.",
+    "The frontier should now preserve a dual-slot permission view locally instead of overforcing a single positive ranker where the data still prefers complementary participation states."
+  ]
+}

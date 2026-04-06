@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "lane_row_count": 1,
+    "excluded_row_count": 2,
+    "authoritative_output": "a_share_runtime_scheduler_stub_replacement_lane_materialized"
+  },
+  "lane_rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "queue_priority": "first_runtime_candidate_after_batch_one_allowlist",
+      "candidate_state": "manual_review_cleared_pending_scheduler_activation",
+      "lane_state": "scheduler_stub_replacement_lane_materialized",
+      "activation_mode": "shadow-like_internal_source_runtime_lane_only",
+      "blocking_reason": "batch-one manual approvals complete; runtime scheduler gate still closed"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime followthrough now has a single scheduler-stub replacement lane instead of only a checklist.",
+    "Excluded adapters remain outside this lane, so progress stays narrow and controlled."
+  ]
+}

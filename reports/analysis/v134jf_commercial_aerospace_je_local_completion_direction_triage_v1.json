@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jf_commercial_aerospace_je_local_completion_direction_triage_v1",
+    "current_local_route_exhausted": true,
+    "capital_true_selection_still_blocked": true,
+    "authoritative_status": "freeze_event_attention_capital_local_route_and_do_not_drift_inside_same_local_inventory"
+  },
+  "triage_rows": [
+    {
+      "component": "negative_environment_semantics_to_heat_proxy_stack",
+      "direction": "retain_as_frozen_board_local_supervision_stack"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_inside_local_route"
+    },
+    {
+      "component": "current_local_evidence_source",
+      "direction": "treat_as_exhausted_do_not_reopen_without_new_attention_or_event_inventory"
+    },
+    {
+      "component": "next_progress_source",
+      "direction": "future_only_from_broader_attention_evidence_or_new_retained_symbol_named_heat_source"
+    }
+  ],
+  "interpretation": [
+    "V1.34JF converts the local completion audit into direction.",
+    "The key move is to stop treating the same local inventory as an open frontier once it has already proven its own stopline."
+  ]
+}

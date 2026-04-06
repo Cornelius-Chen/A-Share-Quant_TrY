@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119d_cpo_tushare_turnover_discipline_discovery_v1",
+    "candidate_discriminator_name": "tushare_turnover_discipline_score_candidate",
+    "add_row_count": 16,
+    "positive_add_row_count": 5,
+    "negative_add_row_count": 11,
+    "candidate_score_mean_gap_positive_minus_negative": 2.180473,
+    "top_separation_feature": "circ_mv",
+    "recommended_next_posture": "externally_audit_tushare_turnover_discipline_and_keep_non_replay_only"
+  },
+  "feature_separation_rows": [
+    {
+      "feature_name": "circ_mv",
+      "positive_mean": 7661659.18274,
+      "negative_mean": 9430443.4308,
+      "mean_gap_positive_minus_negative": -1768784.24806,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 1768784.24806
+    },
+    {
+      "feature_name": "net_mf_amount",
+      "positive_mean": 29772.332,
+      "negative_mean": 39971.027273,
+      "mean_gap_positive_minus_negative": -10198.695273,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 10198.695273
+    },
+    {
+      "feature_name": "turnover_rate_f",
+      "positive_mean": 6.5099,
+      "negative_mean": 10.803009,
+      "mean_gap_positive_minus_negative": -4.293109,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 4.293109
+    },
+    {
+      "feature_name": "volume_ratio",
+      "positive_mean": 1.066,
+      "negative_mean": 1.583636,
+      "mean_gap_positive_minus_negative": -0.517636,
+      "preferred_direction": "lower_is_better",
+      "abs_gap": 0.517636
+    },
+    {
+      "feature_name": "large_buy_sell_ratio",
+      "positive_mean": 1.02051,
+      "negative_mean": 0.989753,
+      "mean_gap_positive_minus_negative": 0.030757,
+      "preferred_direction": "higher_is_better",
+      "abs_gap": 0.030757
+    }
+  ],
+  "candidate_score_rows": [
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "turnover_rate_f": 3.6042,
+      "volume_ratio": 0.71,
+      "large_buy_sell_ratio": 0.958203,
+      "turnover_discipline_score_candidate": 2.534347
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "turnover_rate_f": 7.0646,
+      "volume_ratio": 1.08,
+      "large_buy_sell_ratio": 1.159673,
+      "turnover_discipline_score_candidate": 2.104021
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "turnover_rate_f": 6.0374,
+      "volume_ratio": 1.18,
+      "large_buy_sell_ratio": 0.99025,
+      "turnover_discipline_score_candidate": 1.206295
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "turnover_rate_f": 5.8627,
+      "volume_ratio": 1.19,
+      "large_buy_sell_ratio": 0.969819,
+      "turnover_discipline_score_candidate": 1.113545
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "turnover_rate_f": 9.9806,
+      "volume_ratio": 1.17,
+      "large_buy_sell_ratio": 1.024605,
+      "turnover_discipline_score_candidate": 0.537167
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "turnover_rate_f": 4.0821,
+      "volume_ratio": 0.68,
+      "large_buy_sell_ratio": 0.911725,
+      "turnover_discipline_score_candidate": 2.236714
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "turnover_rate_f": 5.1402,
+      "volume_ratio": 0.96,
+      "large_buy_sell_ratio": 1.013698,
+      "turnover_discipline_score_candidate": 1.983317
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "turnover_rate_f": 8.7167,
+      "volume_ratio": 1.33,
+      "large_buy_sell_ratio": 1.036297,
+      "turnover_discipline_score_candidate": 0.554347
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "turnover_rate_f": 4.6964,
+      "volume_ratio": 1.45,
+      "large_buy_sell_ratio": 0.901163,
+      "turnover_discipline_score_candidate": 0.467456
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "turnover_rate_f": 11.8053,
+      "volume_ratio": 1.46,
+      "large_buy_sell_ratio": 1.156851,
+      "turnover_discipline_score_candidate": 0.257571
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "turnover_rate_f": 10.3794,
+      "volume_ratio": 2.05,
+      "large_buy_sell_ratio": 1.110733,
+      "turnover_discipline_score_candidate": -0.883355
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "turnover_rate_f": 10.7613,
+      "volume_ratio": 2.25,
+      "large_buy_sell_ratio": 0.971521,
+      "turnover_discipline_score_candidate": -2.134546
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "turnover_rate_f": 12.9995,
+      "volume_ratio": 2.45,
+      "large_buy_sell_ratio": 1.092121,
+      "turnover_discipline_score_candidate": -2.385265
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "turnover_rate_f": 19.0686,
+      "volume_ratio": 1.52,
+      "large_buy_sell_ratio": 0.972506,
+      "turnover_discipline_score_candidate": -2.482162
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "turnover_rate_f": 15.5378,
+      "volume_ratio": 1.71,
+      "large_buy_sell_ratio": 0.886626,
+      "turnover_discipline_score_candidate": -2.55318
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "turnover_rate_f": 15.6458,
+      "volume_ratio": 1.56,
+      "large_buy_sell_ratio": 0.834048,
+      "turnover_discipline_score_candidate": -2.556271
+    }
+  ],
+  "interpretation": [
+    "V1.19D opens an orthogonal hardening line using Tushare daily context instead of more same-family intraday tuning.",
+    "The candidate rewards non-frothy participation: lower free-float turnover, lower volume-ratio overheat, and healthier large-order buy-sell balance.",
+    "This line is intentionally discovery-only and must survive broader add-pool and time-split checks before any further attention."
+  ]
+}

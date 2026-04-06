@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "runtime_row_count": 3,
+    "promotable_now_count": 0,
+    "pending_batch_one_count": 0,
+    "status_csv": "data\\training\\a_share_runtime_candidate_dependency_status_v1.csv",
+    "authoritative_output": "a_share_runtime_candidate_dependency_surface_reaudited_after_manual_batch_one_approval"
+  },
+  "rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "queue_priority": "first_runtime_candidate_after_batch_one_allowlist",
+      "dependency_state": "manual_batch_one_cleared_pending_runtime_scheduler",
+      "promotable_now": "False",
+      "blocking_reason": "batch-one manual approvals complete; runtime scheduler gate still closed"
+    },
+    {
+      "adapter_id": "network_social_column_fetch",
+      "queue_priority": "keep_review_only_deferred",
+      "dependency_state": "review_only_nonpromotive",
+      "promotable_now": "False",
+      "blocking_reason": "social column adapter remains review-only by design"
+    },
+    {
+      "adapter_id": "network_official_source_fetch",
+      "queue_priority": "reserve_until_primary_official_hosts_exist",
+      "dependency_state": "reserved_for_future_primary_sources",
+      "promotable_now": "False",
+      "blocking_reason": "official primary host inventory not yet activated"
+    }
+  ],
+  "interpretation": [
+    "Runtime promotion remains tied explicitly to batch-one decisions rather than to a vague scheduler gate.",
+    "The first runtime candidate now clears manual review but remains blocked by runtime scheduler gating."
+  ]
+}

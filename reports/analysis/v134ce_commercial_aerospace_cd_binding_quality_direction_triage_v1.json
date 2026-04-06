@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ce_commercial_aerospace_cd_binding_quality_direction_triage_v1",
+    "authoritative_status": "retain_isolated_sell_side_binding_surface_and_audit_horizon_quality_next",
+    "executed_session_count": 12,
+    "total_protected_mark_to_close": 15466.0594,
+    "triage_csv": "data\\training\\commercial_aerospace_cd_binding_quality_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "isolated_sell_side_binding_surface",
+      "status": "retain_as_first_real_binding_reference",
+      "detail": "executed_session_count = 12, total_protected_mark_to_close = 15466.0594"
+    },
+    {
+      "component": "same_day_new_lots_protection",
+      "status": "verified",
+      "detail": "same_day_new_lots_protected_total = 12400, no_inventory_same_day_new_lots_only_count = 1"
+    },
+    {
+      "component": "reconciliation_clipping",
+      "status": "retain_and_explicitly_preserve",
+      "detail": "clipped_reconciliation_count = 2, clipped_quantity_total = 2800"
+    },
+    {
+      "component": "next_real_work",
+      "status": "do_not_expand_surface_build_horizon_quality_next",
+      "detail": "The next justified work is horizon and attribution quality on the isolated binding lane, not replay binding or wider surface expansion."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "Keep the branch sell-side only, holdings-aware only, and continue excluding reentry execution plus full replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34CE turns the first binding-quality audit into the next direction judgment.",
+    "The isolated sell-side lane should now be treated as the first real holdings-aware binding reference, but the next step is horizon-quality audit rather than replay expansion."
+  ]
+}

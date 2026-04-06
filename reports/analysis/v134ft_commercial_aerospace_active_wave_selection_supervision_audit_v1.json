@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ft_commercial_aerospace_active_wave_selection_supervision_audit_v1",
+    "active_wave_day_count": 2,
+    "candidate_count": 3,
+    "selected_candidate_count": 2,
+    "displaced_candidate_count": 1,
+    "recent_reduce_residue_displaced_count": 1,
+    "same_symbol_continuation_selected_count": 1,
+    "clean_reset_selected_count": 1,
+    "candidate_rows_csv": "data\\training\\commercial_aerospace_active_wave_selection_candidates_v1.csv",
+    "authoritative_rule": "inside active add waves, recent symbol-level reduce residue looks like a displacement clue, while same-symbol continuation and clean-reset candidates remain the currently selected states"
+  },
+  "candidate_rows": [
+    {
+      "trade_date": "20251218",
+      "symbol": "002465",
+      "selection_state": "recent_reduce_residue_candidate",
+      "selection_outcome": "displaced",
+      "last_action_name": "reduce",
+      "last_action_trade_date": "20251217",
+      "trading_days_since_last_action": 1,
+      "open_to_15m": 0.01260835,
+      "open_to_60m": 0.04334121,
+      "close_loc_15m": 0.6875,
+      "burst_amount_share_15": 0.27242633
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "000738",
+      "selection_state": "same_symbol_continuation_selected",
+      "selection_outcome": "selected",
+      "last_action_name": "open",
+      "last_action_trade_date": "20251218",
+      "trading_days_since_last_action": 1,
+      "open_to_15m": 0.02739726,
+      "open_to_60m": 0.02232369,
+      "close_loc_15m": 0.93103448,
+      "burst_amount_share_15": 0.37937348
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "002085",
+      "selection_state": "clean_reset_candidate",
+      "selection_outcome": "selected",
+      "last_action_name": "close",
+      "last_action_trade_date": "20251201",
+      "trading_days_since_last_action": 14,
+      "open_to_15m": 0.01675603,
+      "open_to_60m": 0.0227882,
+      "close_loc_15m": 0.96153846,
+      "burst_amount_share_15": 0.3114404
+    }
+  ],
+  "state_rows": [
+    {
+      "selection_state": "clean_reset_candidate",
+      "selected_count": 1,
+      "displaced_count": 0
+    },
+    {
+      "selection_state": "recent_reduce_residue_candidate",
+      "selected_count": 0,
+      "displaced_count": 1
+    },
+    {
+      "selection_state": "same_symbol_continuation_selected",
+      "selected_count": 1,
+      "displaced_count": 0
+    }
+  ],
+  "interpretation": [
+    "V1.34FT narrows the add frontier again by studying only the active-wave days and asking what selection-state each same-day candidate was in.",
+    "The goal is not to overclaim a complete daily ranker, but to see whether one simple supervision split already separates the displaced case from the selected ones."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132j_commercial_aerospace_ij_local_1min_false_positive_triage_v1",
+    "authoritative_status": "retain_local_1min_tier_rule_candidates_as_bounded_governed_supervision_and_shift_next_to_minute_session_expansion_audit",
+    "seed_match_count": 6,
+    "seed_row_count": 6,
+    "non_seed_flagged_count": 0,
+    "clean_control_flagged_count": 0,
+    "authoritative_rule": "the first local 1min rules can advance beyond seed-only status only when the broader false-positive surface remains bounded away from clean controls"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_tier_rule_candidates",
+      "status": "retain_local_1min_tier_rule_candidates_as_bounded_governed_supervision_and_shift_next_to_minute_session_expansion_audit",
+      "rationale": "broader expansion is acceptable only if the first false-positive audit stays off clean controls"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "even a bounded false-positive profile does not authorize replay contamination"
+    }
+  ],
+  "interpretation": [
+    "V1.32J turns the first broader 1-minute false-positive audit into a governance verdict.",
+    "If clean controls stay untouched, the rule candidates can graduate from seed-only to bounded governed supervision; otherwise they stay seed-only."
+  ]
+}

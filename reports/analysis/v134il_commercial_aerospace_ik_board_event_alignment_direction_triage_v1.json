@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134il_commercial_aerospace_ik_board_event_alignment_direction_triage_v1",
+    "event_seed_count": 6,
+    "authoritative_status": "retain_board_event_alignment_as_a_new_supervision_layer_without_pretending_it_solves_true_selection"
+  },
+  "triage_rows": [
+    {
+      "alignment_label": "aligned_board_supportive_response",
+      "direction": "retain_as_the_cleanest_positive_alignment_case"
+    },
+    {
+      "alignment_label": "turning_point_overheat_alignment",
+      "direction": "retain_as_negative_turning_point_alignment_not_supportive_response"
+    },
+    {
+      "alignment_label": "pre_turn_alignment_watch",
+      "direction": "retain_as_watch_not_confirmation"
+    },
+    {
+      "alignment_label": "lockout_misaligned_board_response",
+      "direction": "retain_as_negative_alignment_case"
+    },
+    {
+      "alignment_label": "raw_only_post_lockout_alignment_absent",
+      "direction": "retain_as_explicit_absence_not_as_unknown_to_be_guessed"
+    },
+    {
+      "alignment_label": "capital_true_selection",
+      "direction": "continue_blocked_even_after_alignment_layer_exists"
+    }
+  ],
+  "interpretation": [
+    "V1.34IL converts board-event alignment into direction.",
+    "The alignment layer closes one named gap, but it still does not collapse the remaining gaps into a true-selection license."
+  ]
+}

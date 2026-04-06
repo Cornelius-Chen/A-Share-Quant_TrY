@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123u_cpo_drawdown_risk_layer_attribution_matrix_v1",
+    "interval_count": 3,
+    "heat_dominated_interval_count": 2,
+    "residual_dominated_interval_count": 1,
+    "recommended_next_posture": "freeze_risk_layer_priority_order_before_opening_any_new_family"
+  },
+  "interval_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "drawdown": 0.493548,
+      "baseline_cash_gap_at_peak": 0.646167,
+      "interval_trade_count": 0,
+      "primary_driver": "position_heat",
+      "heat_balanced_improvement": 0.117024,
+      "heat_strict_improvement": 0.166434,
+      "broad_risk_off_status": "candidate_only",
+      "broad_risk_off_role": "general_reduce_prior",
+      "market_regime_status": "explanatory_only",
+      "market_regime_role": "macro_explanatory_only",
+      "residual_pair_status": "not_primary_for_interval",
+      "residual_pair_role": "not_primary_for_interval",
+      "narrative": "heat-dominated high-carry drawdown"
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "drawdown": 0.273025,
+      "baseline_cash_gap_at_peak": 0.690628,
+      "interval_trade_count": 0,
+      "primary_driver": "position_heat",
+      "heat_balanced_improvement": 0.081598,
+      "heat_strict_improvement": 0.108867,
+      "broad_risk_off_status": "candidate_only",
+      "broad_risk_off_role": "general_reduce_prior",
+      "market_regime_status": "explanatory_only",
+      "market_regime_role": "macro_explanatory_only",
+      "residual_pair_status": "not_primary_for_interval",
+      "residual_pair_role": "not_primary_for_interval",
+      "narrative": "heat-dominated high-carry drawdown"
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "drawdown": 0.193702,
+      "baseline_cash_gap_at_peak": 0.094667,
+      "interval_trade_count": 2,
+      "primary_driver": "held_pair_residual_deterioration",
+      "heat_balanced_improvement": 0.0,
+      "heat_strict_improvement": 0.0,
+      "broad_risk_off_status": "candidate_only",
+      "broad_risk_off_role": "general_reduce_prior",
+      "market_regime_status": "explanatory_only",
+      "market_regime_role": "macro_explanatory_only",
+      "residual_pair_status": "soft_component",
+      "residual_pair_role": "narrow_residual_soft_penalty",
+      "narrative": "non-overheated held-pair deterioration dominates after heat caps fail"
+    }
+  ],
+  "interpretation": [
+    "V1.23U turns the recent risk work into a drawdown attribution matrix instead of leaving it as separate branch reports.",
+    "The goal is to answer which risk layer actually explains each major research-baseline drawdown: heat, broad board risk-off, macro regime, or narrow residual pair deterioration.",
+    "This is a prioritization artifact, not a replay rule."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "window_count": 3,
+    "ready_negative_sample_count": 1,
+    "policy_hold_count": 1,
+    "partial_subwindow_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_002",
+      "admission_state": "hold_until_policy_wording_locked",
+      "recommendation": "keep_window_off_final_training_until_january_policy_text_is_locked"
+    },
+    {
+      "sample_window_id": "ca_train_window_008",
+      "admission_state": "subwindow_ready_but_full_window_not_ready",
+      "recommendation": "allow_subwindow_learning_only_and_continue_february_followthrough_backfill"
+    },
+    {
+      "sample_window_id": "ca_train_window_010",
+      "admission_state": "negative_sample_ready",
+      "recommendation": "allow_negative_sample_training_and_keep_launch_chain_expansion_under_review"
+    }
+  ]
+}

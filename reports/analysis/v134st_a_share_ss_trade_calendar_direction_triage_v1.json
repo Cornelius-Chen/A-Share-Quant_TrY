@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "calendar_row_count": 1096,
+    "open_day_count": 727,
+    "coverage_start": "2024-01-01",
+    "coverage_end": "2026-12-31",
+    "today_calendar_state": "non_trading_day",
+    "authoritative_status": "prefer_trade_calendar_backed_trading_day_state_over_weekday_approximation"
+  },
+  "triage_rows": [
+    {
+      "component": "status_surface",
+      "direction": "promote_real_trade_calendar_into_the_outermost_program_status_surface_before_using_weekday_only_approximation"
+    },
+    {
+      "component": "session_phase_confidence",
+      "direction": "mark_session_phase_as_exact_with_trade_calendar_when_the_current_date_is_covered_by_the_registry"
+    },
+    {
+      "component": "fallback_branch",
+      "direction": "retain_weekday_only_approximation_only_when_the_trade_calendar_is_missing_or_outside_the_covered_window"
+    }
+  ],
+  "interpretation": [
+    "The current outermost timing layer can now rely on an actual trade calendar.",
+    "Approximate timing is now a fallback branch, not the default branch."
+  ]
+}

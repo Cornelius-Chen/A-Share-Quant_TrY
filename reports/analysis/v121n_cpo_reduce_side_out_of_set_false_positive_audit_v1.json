@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121n_cpo_reduce_side_out_of_set_false_positive_audit_v1",
+    "best_threshold": 0.237382,
+    "reduce_pass_rate": 1.0,
+    "reduce_positive_pass_rate": 1.0,
+    "add_leakage_rate": 1.0,
+    "entry_leakage_rate": 1.0,
+    "close_leakage_rate": 1.0,
+    "recommended_next_posture": "send_reduce_side_symbol_holdout_and_leakage_audits_to_adversarial_review"
+  },
+  "context_rows": [
+    {
+      "action_context": "reduce_vs_hold",
+      "row_count": 340,
+      "pass_count": 340,
+      "pass_rate": 1.0,
+      "positive_row_count": 14,
+      "positive_pass_rate": 1.0
+    },
+    {
+      "action_context": "close_vs_hold",
+      "row_count": 85,
+      "pass_count": 85,
+      "pass_rate": 1.0
+    },
+    {
+      "action_context": "add_vs_hold",
+      "row_count": 17,
+      "pass_count": 17,
+      "pass_rate": 1.0
+    },
+    {
+      "action_context": "entry_vs_skip",
+      "row_count": 8,
+      "pass_count": 8,
+      "pass_rate": 1.0
+    }
+  ],
+  "interpretation": [
+    "V1.21N checks whether the new reduce-side branch leaks into other action contexts.",
+    "A live reduce candidate should not silently become a generic risk flag that fires just as often on close, add, or entry surfaces.",
+    "This is the direct analogue of the add-vs-entry leakage checks that killed earlier add-side lines."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cq_commercial_aerospace_cp_transition_direction_triage_v1",
+    "authoritative_status": "freeze_reduce_handoff_and_defer_intraday_add_frontier_opening_until_later_explicit_shift",
+    "triage_csv": "data\\training\\commercial_aerospace_cp_transition_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_branch",
+      "status": "keep_frozen",
+      "detail": "Reduce remains frozen as handoff package and may only accept local residue maintenance."
+    },
+    {
+      "component": "intraday_add_frontier",
+      "status": "approved_but_not_opened_now",
+      "detail": "The later frontier should be intraday add, but this step preserves the user’s instruction not to start it immediately."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "When add later opens, it must inherit board-level vetoes but must not inherit reduce execution authority."
+    }
+  ],
+  "interpretation": [
+    "V1.34CQ converts the transition protocol into a direction judgment that respects the current deferred-handoff instruction.",
+    "The branch should now stop inside reduce, keep the handoff package frozen, and wait for the later intentional opening of intraday add."
+  ]
+}

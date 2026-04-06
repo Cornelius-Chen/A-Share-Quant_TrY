@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "row_count": 10,
+    "positive_support_sample_ready_count": 1,
+    "negative_support_sample_ready_count": 1,
+    "positive_sample_ready_count": 1,
+    "negative_sample_ready_count": 4,
+    "bridge_sample_ready_count": 1,
+    "subwindow_learning_only_count": 1,
+    "hold_count": 1,
+    "under_review_count": 0
+  },
+  "rows": [
+    {
+      "window_count": "10",
+      "positive_support_sample_ready_count": "1",
+      "negative_support_sample_ready_count": "1",
+      "final_training_ready_count": "0",
+      "positive_sample_ready_count": "1",
+      "negative_sample_ready_count": "4",
+      "bridge_sample_ready_count": "1",
+      "subwindow_learning_only_count": "1",
+      "hold_count": "1",
+      "under_review_count": "0",
+      "strict_supervisor_conclusion": "The commercial-aerospace training band now has released positive-support, negative-support, positive, negative, bridge, and subwindow-only samples, while the core January ignition archetype remains under a strict policy gate hold."
+    }
+  ],
+  "interpretation": [
+    "The ledger now separates released samples from windows still under hold or under review.",
+    "Window 001 is now correctly released as a positive support sample rather than being left in an overly conservative under-review bucket.",
+    "Window 004 is now correctly separated into a negative-support bucket instead of being left stuck in under-review.",
+    "The strict core conclusion is that window 002 remains the only high-value primary-positive archetype still blocked by the policy gate.",
+    "This ledger is the correct boundary between engineering completion and future model-training admission."
+  ]
+}

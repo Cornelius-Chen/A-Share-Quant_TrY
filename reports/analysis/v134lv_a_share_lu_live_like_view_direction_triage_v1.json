@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "event_state_row_count": 17,
+    "closed_gate_count": 3,
+    "authoritative_status": "live_like_view_materialization_complete_enough_to_freeze_and_reaudit_gate"
+  },
+  "triage_rows": [
+    {
+      "component": "live_like_views",
+      "direction": "freeze_as_materialized_but_blocked_surfaces"
+    },
+    {
+      "component": "next_gate_review",
+      "direction": "rerun_live_like_gate_readiness_with_view_materialization_gap_closed"
+    }
+  ],
+  "interpretation": [
+    "The stack has crossed one named blocker: live-like views are now real artifacts.",
+    "The next move is to re-evaluate gate readiness with that blocker removed, not to open live-like prematurely."
+  ]
+}

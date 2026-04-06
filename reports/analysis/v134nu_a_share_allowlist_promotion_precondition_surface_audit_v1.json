@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "precondition_count": 4,
+    "unsatisfied_count": 1,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_allowlist_promotion_precondition_surface_status_v1.csv",
+    "authoritative_output": "a_share_allowlist_promotion_preconditions_reaudited_after_manual_approval"
+  },
+  "rows": [
+    {
+      "precondition": "manual_review_records_filled",
+      "precondition_state": "satisfied",
+      "supporting_count": 0,
+      "blocking_reason": "batch-one manual review records are complete"
+    },
+    {
+      "precondition": "manual_license_outcomes_non_pending",
+      "precondition_state": "satisfied",
+      "supporting_count": 0,
+      "blocking_reason": "all manual license outcomes are non-pending"
+    },
+    {
+      "precondition": "manual_runtime_outcomes_non_pending",
+      "precondition_state": "satisfied",
+      "supporting_count": 0,
+      "blocking_reason": "all manual runtime outcomes are non-pending"
+    },
+    {
+      "precondition": "runtime_candidate_promotable",
+      "precondition_state": "unsatisfied",
+      "supporting_count": 3,
+      "blocking_reason": "runtime candidate dependency surface still reports zero promotable adapters"
+    }
+  ],
+  "interpretation": [
+    "Allowlist promotion preconditions are now explicit instead of being spread across multiple registries.",
+    "Manual review preconditions are now satisfied; the remaining unsatisfied precondition is runtime promotability."
+  ]
+}

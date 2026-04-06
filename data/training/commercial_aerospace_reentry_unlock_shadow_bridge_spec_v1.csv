@@ -1,0 +1,9 @@
+﻿bridge_stage,status,detail
+sell_exit_source,frozen_reduce_reference,The bridge begins from frozen reduce outputs and cannot mutate reduce mainline history.
+board_lockout_gate,required,Use board_cooling_lockout as upper veto. Current seed count: 1.
+board_unlock_gate,required,Only unlock-worthy board states may reopen add-side permission. Positive sample count: 8.
+expectancy_gate,required,Board state must not remain false_bounce_only or lockout_worthy. Unlock-worthy count: 8.
+same_day_reentry,blocked,All current reentry seeds block same-day chase. Blocked seeds: 3.
+rebuild_watch_entry,seed_supervision_ready,Deep-washout family opens rebuild watch at T+5+; delayed-rebound family opens rebuild watch at T+3+.
+confirmation_shape,seed_supervision_ready,Persistent recovery seeds: 2; late-only recovery seeds: 1.
+handoff_to_add,read_only_permission_bridge,Only after board unlock plus reentry confirmation may the shadow lane consult frozen add supervision states.

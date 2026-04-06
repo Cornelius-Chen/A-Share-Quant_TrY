@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fm_commercial_aerospace_fl_module_portability_direction_triage_v1",
+    "authoritative_status": "keep_full_quality_add_archetype_local_only_and_block_module_promotion",
+    "best_scenario_name": "unlock_high_role_full_archetype_with_burst",
+    "best_scenario_non_seed_to_seed_ratio": 1.5,
+    "best_scenario_seed_kept_count": 2,
+    "best_scenario_non_seed_kept_count": 3,
+    "authoritative_rule": "the strongest local add archetype remains local; it should not be promoted into a broader module until portability improves materially"
+  },
+  "triage_rows": [
+    {
+      "component": "local_full_quality_archetype",
+      "status": "retain_as_local_anchor",
+      "rationale": "the archetype is useful and clean inside the local persistent-quality ladder"
+    },
+    {
+      "component": "portable_high_confidence_module",
+      "status": "not_yet_authorized",
+      "rationale": "even the strongest portable-looking scenario still retains too many non-seed sessions relative to the number of seed cases kept"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the archetype remains local supervision only; portability failure keeps module promotion and execution blocked"
+    }
+  ],
+  "interpretation": [
+    "V1.34FM turns the first full-quality module portability audit into a governance verdict.",
+    "The add branch now knows that its strongest archetype is real but still local: it should not be mistaken for a portable module."
+  ]
+}

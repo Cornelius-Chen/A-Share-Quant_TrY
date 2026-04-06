@@ -1,0 +1,6 @@
+﻿opening_stage,status,detail
+explicit_frontier_shift,executed_now,The current user continuation is treated as the explicit shift that opens intraday add research.
+frontier_scope,supervision_only,"Intraday add opens as a supervision frontier, not as an execution-facing or replay-facing branch."
+upstream_veto_stack,retained,"Board cooling lockout, local-only rebound guard, and board revival unlock remain upstream constraints."
+reduce_authority,not_inherited,Intraday add does not inherit reduce execution authority or reopen reduce frozen mainline.
+first_build_step,approved,The first add artifact should be an intraday add supervision registry rather than an execution rule or replay lane.

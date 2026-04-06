@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130m_transfer_program_kl_gap_closure_triage_v1",
+    "nearest_candidate_sector_id": "BK0808",
+    "authoritative_status": "keep_transfer_program_frozen_and_prioritize_gap_closure_monitoring_over_worker_creation"
+  },
+  "triage_rows": [
+    {
+      "sector_id": "BK0808",
+      "scenario_class": "nearest_reopen_candidate",
+      "single_action_reopen_possible": true,
+      "direction": "monitor_closely_but_do_not_reopen"
+    },
+    {
+      "sector_id": "BK0994",
+      "scenario_class": "same_plane_first_then_semantic_recheck",
+      "single_action_reopen_possible": false,
+      "direction": "keep_frozen_until_material_local_support_changes"
+    },
+    {
+      "sector_id": "BK0715",
+      "scenario_class": "multi_step_gap_closure",
+      "single_action_reopen_possible": false,
+      "direction": "keep_frozen_until_material_local_support_changes"
+    },
+    {
+      "sector_id": "BK0814",
+      "scenario_class": "multi_step_gap_closure",
+      "single_action_reopen_possible": false,
+      "direction": "keep_frozen_until_material_local_support_changes"
+    },
+    {
+      "sector_id": "BK0490",
+      "scenario_class": "no_same_plane_surface",
+      "single_action_reopen_possible": false,
+      "direction": "keep_frozen_until_material_local_support_changes"
+    }
+  ],
+  "authoritative_decision": [
+    "Keep the transfer program frozen.",
+    "Treat BK0808 as the closest monitored candidate, not as an unlocked worker.",
+    "Do not open any new board worker until a candidate closes its same-plane and bridge gaps in the local feed."
+  ]
+}

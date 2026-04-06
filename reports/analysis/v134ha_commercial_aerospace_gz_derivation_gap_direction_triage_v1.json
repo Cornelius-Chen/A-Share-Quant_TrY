@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ha_commercial_aerospace_gz_derivation_gap_direction_triage_v1",
+    "authoritative_status": "retain_board_surface_derivation_gap_audit_and_keep_shadow_bridge_blocked_until_post_lockout_board_surfaces_extend",
+    "lockout_end_trade_date": "20260320",
+    "raw_last_trade_date": "20260403",
+    "daily_last_trade_date": "20260320",
+    "phase_last_trade_date": "20260320",
+    "post_lockout_raw_trade_date_count": 10,
+    "daily_post_lockout_gap_count": 10,
+    "phase_post_lockout_gap_count": 10,
+    "synchronized_surface_stop": true,
+    "authoritative_rule": "the shadow bridge remains blocked because both board-level derivation surfaces stop exactly at lockout end while raw post-lockout dates continue, so lawful unlock consultation has no synchronized board surface to read from"
+  },
+  "triage_rows": [
+    {
+      "component": "raw_intraday_calendar",
+      "status": "retain",
+      "rationale": "post-lockout raw coverage continues and should remain the calendar of record for the shadow lane"
+    },
+    {
+      "component": "daily_state_surface",
+      "status": "dominant_gap",
+      "rationale": "board daily-state derivation stops exactly at lockout end and leaves all post-lockout raw dates uncovered"
+    },
+    {
+      "component": "phase_geometry_surface",
+      "status": "dominant_gap",
+      "rationale": "phase geometry derivation stops at the same boundary, so unlock context cannot be evaluated on a synchronized board surface"
+    },
+    {
+      "component": "synchronized_surface_stop",
+      "status": "retain_as_primary_reading",
+      "rationale": "the blocker is not a one-sided stale file but a coordinated derivation stop across both board surfaces"
+    },
+    {
+      "component": "reentry_to_add_handoff",
+      "status": "keep_blocked",
+      "rationale": "handoff stays blocked until post-lockout board surfaces exist, regardless of continuing raw intraday coverage"
+    }
+  ],
+  "interpretation": [
+    "V1.34HA turns the derivation-gap audit into the current governance reading for the shadow replay lane.",
+    "The next blocker is now precise: the lane is not waiting on a better symbol clue but on extending both board-level derived surfaces past lockout end."
+  ]
+}

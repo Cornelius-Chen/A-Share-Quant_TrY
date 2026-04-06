@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128p_commercial_aerospace_preopen_decisive_event_veto_audit_v1",
+    "reference_variant": "tail_weakdrift_full",
+    "reference_final_equity": 1309426.5555,
+    "reference_max_drawdown": 0.09309927,
+    "reference_order_count": 211,
+    "preopen_veto_trigger_day_count": 0,
+    "preopen_veto_trigger_days": [],
+    "veto_replay_final_equity": 1309426.5555,
+    "veto_replay_max_drawdown": 0.09309927,
+    "veto_replay_order_count": 211,
+    "authoritative_rule": "if the overnight audit finds zero buy days with pre-open adverse decisive events then the veto replay is economically identical to the reference by construction"
+  },
+  "interpretation": [
+    "V1.28P is a governance audit, not a new local-alpha branch.",
+    "Under the current decisive-event registry, no execution day contains both a buy and a pre-open adverse decisive event, so a strict pre-open veto would currently leave the replay unchanged."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "workpack_row_count": 4,
+    "pending_manual_field_row_count": 4,
+    "authoritative_status": "batch_one_manual_closure_should_now_use_consolidated_workpack_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "workpack_usage",
+      "direction": "use_single_workpack_surface_as_the_entrypoint_for_batch_one_manual_review"
+    },
+    {
+      "component": "record_fill",
+      "direction": "fill_review_record_fields_from_workpack_without_reopening_source_lookup"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "keep_allowlist_promotion_closed_until_workpack_backed_records_are_completed"
+    }
+  ],
+  "interpretation": [
+    "Batch-one manual review no longer needs new structure; it needs record filling against the consolidated workpack.",
+    "This is the most concrete remaining internal source-side artifact before actual manual decisions."
+  ]
+}

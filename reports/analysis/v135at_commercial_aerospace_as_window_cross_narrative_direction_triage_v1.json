@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "bridge_sample_ready_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_009",
+      "final_training_admission": "bridge_sample_ready_but_not_final_training",
+      "recommendation": "keep_as_bridge_sample_and_train_imagination_bridge_vs_true_mapping_confirmation"
+    }
+  ]
+}

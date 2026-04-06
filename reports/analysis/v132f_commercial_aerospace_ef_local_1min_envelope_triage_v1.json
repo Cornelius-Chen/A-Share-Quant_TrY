@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132f_commercial_aerospace_ef_local_1min_envelope_triage_v1",
+    "authoritative_status": "freeze_local_1min_pattern_envelopes_and_shift_next_to_rule_candidate_extraction",
+    "session_count": 6,
+    "severity_tier_count": 3,
+    "authoritative_rule": "the commercial-aerospace minute branch should now extract 1min rule candidates from frozen tier envelopes rather than continuing ad hoc case discussion"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_pattern_envelopes",
+      "status": "freeze_local_1min_pattern_envelopes_and_shift_next_to_rule_candidate_extraction",
+      "rationale": "the minute branch now has explicit first-hour envelope summaries and can move next toward candidate rule extraction over the seed windows"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "pattern envelopes remain minute-governance artifacts and do not authorize replay modification"
+    }
+  ],
+  "interpretation": [
+    "V1.32F turns the first-hour 1-minute envelopes into the next direction for the commercial-aerospace minute branch.",
+    "The next task is rule-candidate extraction from the frozen seed envelopes, not replay modification."
+  ]
+}

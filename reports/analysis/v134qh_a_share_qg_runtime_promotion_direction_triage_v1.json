@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "priority_runtime_candidate_count": 1,
+    "excluded_runtime_row_count": 2,
+    "authoritative_status": "runtime_promotion_should_follow_a_single_candidate_lane_not_flat_activation"
+  },
+  "triage_rows": [
+    {
+      "component": "network_html_article_fetch",
+      "direction": "treat_as_the_only_first_runtime_promotion_candidate_after_completed_manual_review"
+    },
+    {
+      "component": "network_social_column_fetch",
+      "direction": "retain_as_review_only_excluded_adapter"
+    },
+    {
+      "component": "network_official_source_fetch",
+      "direction": "retain_as_reserved_until_primary_official_hosts_exist"
+    }
+  ],
+  "interpretation": [
+    "Runtime followthrough should now continue through a single candidate lane rather than through all adapters equally.",
+    "This still does not open runtime promotion; it only narrows the remaining source-side work to one adapter family."
+  ]
+}

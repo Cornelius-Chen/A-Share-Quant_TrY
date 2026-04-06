@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134p_commercial_aerospace_nop_broader_hit_direction_triage_v1",
+    "authoritative_status": "retain_broader_hit_phase2_lane_but_tighten_predicted_mild_execution_boundary_next",
+    "triage_csv": "data\\training\\commercial_aerospace_nop_broader_hit_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "broader_hit_widening_value",
+      "status": "retain_with_refinement",
+      "detail": "same_day_loss_avoided_total = 20525.3818, best_tier = severe_override_positive"
+    },
+    {
+      "component": "predicted_mild_session_execution",
+      "status": "tighten_next",
+      "detail": "block_execution_for_predicted_mild_sessions_inside_broader_hit_lane"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "Broader-hit supervision remains useful, but it is not clean enough to justify all-session widening."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "The broader-hit branch remains a phase-2 shadow object and still cannot bind into replay."
+    }
+  ],
+  "interpretation": [
+    "V1.34P converts the wider phase-2 supervision review into the next direction judgment.",
+    "The wider lane is still worth keeping, but its next optimization is boundary tightening rather than another expansion step."
+  ]
+}

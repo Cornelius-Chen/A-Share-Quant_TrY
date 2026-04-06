@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fu_commercial_aerospace_ft_active_wave_direction_triage_v1",
+    "authoritative_status": "retain_active_wave_selection_states_as_local_supervision_and_keep_add_execution_blocked",
+    "active_wave_day_count": 2,
+    "candidate_count": 3,
+    "selected_candidate_count": 2,
+    "displaced_candidate_count": 1,
+    "authoritative_rule": "the add frontier should retain recent-reduce residue as a local negative selection clue inside active waves, while continuing to block broader promotion and execution"
+  },
+  "triage_rows": [
+    {
+      "component": "recent_reduce_residue_candidate",
+      "status": "retain_as_negative_selection_clue",
+      "rationale": "the only displaced active-wave candidate currently sits in this state"
+    },
+    {
+      "component": "same_symbol_continuation_and_clean_reset",
+      "status": "retain_as_current_selected_states",
+      "rationale": "the currently selected active-wave candidates all fall into these two states"
+    },
+    {
+      "component": "daily_ranker_or_execution",
+      "status": "still_blocked",
+      "rationale": "the sample is still local and supervision-only; this is enough to structure the problem, not to authorize execution"
+    }
+  ],
+  "interpretation": [
+    "V1.34FU converts the first active-wave selection audit into a bounded supervision verdict.",
+    "The add frontier now has a small but interpretable state split for active-wave selection, while broader promotion and execution remain blocked."
+  ]
+}

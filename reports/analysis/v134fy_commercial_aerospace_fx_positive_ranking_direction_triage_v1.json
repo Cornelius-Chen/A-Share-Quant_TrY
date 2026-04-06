@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fy_commercial_aerospace_fx_positive_ranking_direction_triage_v1",
+    "authoritative_status": "retain_active_wave_exclusion_but_block_positive_daily_ranker_promotion",
+    "selected_candidate_count": 2,
+    "same_symbol_higher_metric_count": 1,
+    "clean_reset_higher_metric_count": 2,
+    "authoritative_rule": "active-wave add selection now has a local exclusion clue but still lacks a promotable positive daily ranker"
+  },
+  "triage_rows": [
+    {
+      "component": "recent_reduce_residue_exclusion",
+      "status": "retain",
+      "rationale": "the negative same-wave exclusion clue is clean on the current local surface"
+    },
+    {
+      "component": "positive_daily_ranker",
+      "status": "not_yet_authorized",
+      "rationale": "the retained selected states still split the positive metrics rather than collapsing into one dominant ranking clue"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the frontier now owns a local exclusion clue, but it still lacks a justified positive daily ranker"
+    }
+  ],
+  "interpretation": [
+    "V1.34FY turns the first positive-ranking audit into the current governance verdict for active-wave add selection.",
+    "The branch should keep the new exclusion clue, but it should explicitly block positive ranker promotion until selected-state structure becomes more coherent than the current two-state split."
+  ]
+}

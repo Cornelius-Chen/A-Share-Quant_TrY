@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gx_commercial_aerospace_post_lockout_unlock_vacancy_audit_v1",
+    "lockout_end_trade_date": "20260320",
+    "post_lockout_trade_date_count": 10,
+    "post_lockout_raw_intraday_count": 10,
+    "derived_board_surface_present_count": 0,
+    "raw_only_vacancy_count": 10,
+    "post_lockout_unlock_positive_count": 0,
+    "post_lockout_unlock_worthy_count": 0,
+    "vacancy_csv": "data\\training\\commercial_aerospace_post_lockout_unlock_vacancy_v1.csv",
+    "authoritative_rule": "current post-lockout vacancy is not only absence of unlock seeds; local raw dates already exist, but no post-lockout derived board surface exists on which unlock context could be evaluated"
+  },
+  "vacancy_rows": [
+    {
+      "trade_date": "20260323",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260324",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260325",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260326",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260327",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260330",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260331",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260401",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260402",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    },
+    {
+      "trade_date": "20260403",
+      "raw_intraday_present": true,
+      "daily_surface_present": false,
+      "phase_surface_present": false,
+      "derived_board_surface_present": false,
+      "unlock_positive": false,
+      "unlock_worthy": false,
+      "vacancy_family": "raw_only_post_lockout_vacancy",
+      "vacancy_reading": "intraday raw exists but board-level derived state surface is absent"
+    }
+  ],
+  "interpretation": [
+    "V1.34GX asks a narrower question than handoff readiness: what exactly exists after lockout end?",
+    "The answer is asymmetrical. Local intraday raw data continues after lockout, but the board-level derived state surface stops at lockout end, so unlock vacancy is currently a derived-context absence, not merely a weak-board reading."
+  ]
+}

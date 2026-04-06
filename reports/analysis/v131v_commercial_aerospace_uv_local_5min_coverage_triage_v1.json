@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131v_commercial_aerospace_uv_local_5min_coverage_triage_v1",
+    "authoritative_status": "retain_local_5min_override_prototype_as_narrow_governed_supervision_with_false_positive_bounds_documented",
+    "non_override_flagged_count": 2,
+    "ambiguous_hit_rate": 0.10526316,
+    "clean_control_hit_count": 0,
+    "authoritative_rule": "expand the governed 5min prototype only as a documented supervision layer with explicit false-positive bounds, never as a silent replay modifier"
+  },
+  "triage_rows": [
+    {
+      "component": "local_5min_override_prototype",
+      "status": "retain_local_5min_override_prototype_as_narrow_governed_supervision_with_false_positive_bounds_documented",
+      "rationale": "the prototype should remain governance-only and acceptable only if it avoids clean controls and keeps residual false positives confined to ambiguous executions"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "coverage auditing still does not authorize replay contamination; the EOD primary stays unchanged"
+    }
+  ],
+  "interpretation": [
+    "V1.31V turns the broader 5-minute coverage audit into a governance verdict.",
+    "The retained posture remains narrow: this is a bounded supervision object, not a replay-facing intraday execution rule."
+  ]
+}

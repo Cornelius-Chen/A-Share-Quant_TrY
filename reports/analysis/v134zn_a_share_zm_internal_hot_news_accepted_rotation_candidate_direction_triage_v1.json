@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "current_top_opportunity_theme": "gold",
+    "accepted_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "accepted_top_watch_symbol": "600887",
+    "accepted_source_family": "sina",
+    "top_opportunity_change_if_accepted": "would_change",
+    "top_watch_change_if_accepted": "would_change",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_candidate_packet_materialized",
+    "authoritative_status": "accepted_rotation_preview_ready_without_changing_the_current_primary_consumer_chain"
+  },
+  "triage_rows": [
+    {
+      "component": "accepted_rotation_preview",
+      "direction": "use this packet to inspect the accepted-state outcome before any actual promotion into primary consumers"
+    },
+    {
+      "component": "focus_rotation_visibility",
+      "direction": "treat the accepted packet as an explicit visibility layer for opportunity and symbol focus rotation"
+    },
+    {
+      "component": "promotion_discipline",
+      "direction": "keep the current chain unchanged until the accepted rotation state is deliberately chosen"
+    }
+  ],
+  "interpretation": [
+    "This packet makes the accepted post-rotation state visible without silently applying it.",
+    "It lets downstream users compare current and accepted focus side by side."
+  ]
+}

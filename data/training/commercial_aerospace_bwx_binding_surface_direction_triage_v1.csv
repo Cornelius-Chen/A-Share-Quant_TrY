@@ -1,0 +1,5 @@
+﻿component,status,detail
+start_of_day_holdings_ledger,approved_for_build,Build a carried-inventory ledger first; the current wider sell shadow cannot bind without it.
+same_day_precedence_policy,approved_for_build,Build explicit precedence for open/add protection and EOD reduce/close reconciliation before opening an isolated sell-side lane.
+isolated_sell_side_shadow_lane,blocked_until_surface_exists,Do not open the isolated lane before the ledger and precedence policy exist as concrete surfaces.
+scope_guardrail,mandatory,Keep the next step sell-side only and continue excluding reentry execution and full replay binding.

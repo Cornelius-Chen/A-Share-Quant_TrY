@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ho_commercial_aerospace_crowding_vs_weak_repair_contrast_audit_v1",
+    "crowding_like_shelter_rebound_count": 2,
+    "locked_board_weak_repair_count": 1,
+    "high_beta_raw_only_rebound_count": 1,
+    "peak_proximity_gap": 0.16462719,
+    "avg_turnover_rate_f_gap": 3.89370098,
+    "max_turnover_rate_f_gap": 19.40105,
+    "authoritative_output": "commercial_aerospace_crowding_vs_weak_repair_contrast_ready_for_direction_triage"
+  },
+  "contrast_rows": [
+    {
+      "contrast_name": "peak_proximity_gap",
+      "crowding_like_shelter_rebound_mean": 0.00612719,
+      "locked_board_weak_repair_mean": -0.1585,
+      "mean_gap": 0.16462719,
+      "reading": "crowding names recover materially closer to prior peak than weak-repair names"
+    },
+    {
+      "contrast_name": "avg_turnover_rate_f_gap",
+      "crowding_like_shelter_rebound_mean": 24.5423049,
+      "locked_board_weak_repair_mean": 20.64860392,
+      "mean_gap": 3.89370098,
+      "reading": "crowding names sustain higher average turnover than weak-repair names"
+    },
+    {
+      "contrast_name": "max_turnover_rate_f_gap",
+      "crowding_like_shelter_rebound_mean": 59.10395,
+      "locked_board_weak_repair_mean": 39.7029,
+      "mean_gap": 19.40105,
+      "reading": "crowding names spike harder in peak turnover than weak-repair names"
+    },
+    {
+      "contrast_name": "avg_volume_ratio_gap",
+      "crowding_like_shelter_rebound_mean": 1.07843138,
+      "locked_board_weak_repair_mean": 0.97352941,
+      "mean_gap": 0.10490197,
+      "reading": "crowding names only mildly exceed weak-repair names on volume-ratio; the bigger distinction is turnover and near-high persistence"
+    },
+    {
+      "contrast_name": "net_mf_amount_total_gap",
+      "crowding_like_shelter_rebound_mean": -379255.34,
+      "locked_board_weak_repair_mean": -74763.1,
+      "mean_gap": -304492.24,
+      "reading": "crowding names can still carry negative aggregate moneyflow; crowding here is a shelter-style concentration clue, not a pure net-inflow clue"
+    }
+  ],
+  "supporting_rows": [
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "avg_turnover_rate_f": 22.9258,
+      "max_turnover_rate_f": 56.1441,
+      "avg_volume_ratio": 1.08411765,
+      "net_mf_amount_total": -127147.68
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "avg_turnover_rate_f": 26.1588098,
+      "max_turnover_rate_f": 62.0638,
+      "avg_volume_ratio": 1.0727451,
+      "net_mf_amount_total": -631363.0
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "post_lockout_max_vs_pre_lockout_peak": -0.1585,
+      "avg_turnover_rate_f": 20.64860392,
+      "max_turnover_rate_f": 39.7029,
+      "avg_volume_ratio": 0.97352941,
+      "net_mf_amount_total": -74763.1
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": -0.0169697,
+      "avg_turnover_rate_f": 19.75018824,
+      "max_turnover_rate_f": 41.3251,
+      "avg_volume_ratio": 1.0354902,
+      "net_mf_amount_total": -38276.6
+    }
+  ],
+  "interpretation": [
+    "V1.34HO contrasts crowded shelter rebounds with ordinary weak repairs inside the locked board.",
+    "The point is not that crowded names are healthier; it is that they can run closer to prior highs and on heavier turnover while still failing the board-level restart test."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "shadow_surface_row_count": 17,
+    "shadow_context_ready_count": 0,
+    "blocked_count": 8,
+    "authoritative_status": "replay_workstream_complete_enough_to_freeze_as_read_only_shadow_and_shift_into_serving"
+  },
+  "triage_rows": [
+    {
+      "replay_component": "shadow_surface",
+      "direction": "freeze_as_bootstrap_read_only_replay_surface"
+    },
+    {
+      "replay_component": "shadow_lane_registry",
+      "direction": "retain_as_non_promotive_lane_until_serving_and_governance_bindings_exist"
+    },
+    {
+      "replay_component": "next_frontier",
+      "direction": "shift_into_serving_workstream_using_identity_events_market_features_pti_and_replay_as_inputs"
+    }
+  ],
+  "interpretation": [
+    "Replay is now alive enough to serve as a read-only shadow lane, but it is still intentionally non-promotive.",
+    "The correct next move is serving, not execution, because replay still carries explicit market-context and execution-binding backlogs."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "incumbent_theme_slug": "defense_industry",
+    "incumbent_watch_symbol": "600760",
+    "incumbent_support_row_count": 5,
+    "incumbent_dual_match_count": 5,
+    "incumbent_focus_total_score": 2.7476,
+    "challenger_theme_slug": "oil_gas",
+    "challenger_watch_symbol": "601857",
+    "challenger_support_row_count": 4,
+    "challenger_source_family_count": 1,
+    "challenger_focus_total_score": 1.0633,
+    "support_delta_vs_incumbent": -1,
+    "focus_score_delta_vs_incumbent": -1.6843,
+    "focus_score_ratio_vs_incumbent": 0.387,
+    "review_state": "hold_incumbent_focus",
+    "review_recommendation": "incumbent_focus_score_not_weaker_than_challenger_threshold",
+    "authoritative_output": "a_share_internal_hot_news_incumbent_vs_challenger_rotation_review_materialized"
+  },
+  "rows": [
+    {
+      "component": "incumbent_focus",
+      "component_state": "materialized",
+      "metric": "incumbent_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "incumbent_focus",
+      "component_state": "materialized",
+      "metric": "incumbent_support_row_count",
+      "value": "5"
+    },
+    {
+      "component": "challenger_focus",
+      "component_state": "materialized",
+      "metric": "challenger_theme_slug",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_focus",
+      "component_state": "materialized",
+      "metric": "challenger_support_row_count",
+      "value": "4"
+    },
+    {
+      "component": "rotation_review",
+      "component_state": "materialized",
+      "metric": "review_state",
+      "value": "hold_incumbent_focus"
+    }
+  ],
+  "interpretation": [
+    "This review places the current accepted focus beside the strongest challenger and applies a simple thresholded decision rule.",
+    "It is intentionally conservative: challenger superiority must be materially larger before opening the next rotation review."
+  ]
+}

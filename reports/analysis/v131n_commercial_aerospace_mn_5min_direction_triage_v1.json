@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131n_commercial_aerospace_mn_5min_direction_triage_v1",
+    "authoritative_status": "commercial_aerospace_5min_override_branch_partially_ready_but_still_governed",
+    "success_nonempty_count": 3,
+    "attempt_count": 4,
+    "authoritative_rule": "a 5min branch is only worth opening if the exact retained override sessions have concrete nonempty support, not just abstract provider availability"
+  },
+  "triage_rows": [
+    {
+      "component": "five_min_override_branch",
+      "status": "commercial_aerospace_5min_override_branch_partially_ready_but_still_governed",
+      "rationale": "the retained override sessions should only open a 5min line if the exact manifest is backfillable"
+    },
+    {
+      "component": "intraday_governance",
+      "status": "retain",
+      "rationale": "the existing minute-data gate remains the primary governance layer regardless of 5min audit outcome"
+    }
+  ],
+  "interpretation": [
+    "V1.31N turns the raw 5-minute feasibility check into a go/no-go direction.",
+    "It is intentionally narrow: the question is not whether 5-minute data exists in general, but whether it exists for the exact governance-retained override sessions."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "base_missing_count": 3,
+    "corrected_missing_count": 2,
+    "boundary_only_residual_count": 2,
+    "authoritative_status": "shadow_corrected_recheck_shows_only_external_boundary_residuals_remain_for_replay_internal_build"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_corrected_recheck",
+      "direction": "retain_as_replay_internal_evidence_that_the_calendar_alignment_residual_has_been_removed_in_shadow_overlay_space"
+    },
+    {
+      "component": "remaining_residuals",
+      "direction": "treat_remaining_rows_as_external_boundary_residuals_and_do_not_reopen_broad_market_context_rebuild_for_them"
+    },
+    {
+      "component": "promotion_boundary",
+      "direction": "keep_the_corrected_recheck_shadow_only_and_do_not_let_it_replace_base_binding_or_execution_state"
+    }
+  ],
+  "interpretation": [
+    "The recheck confirms that the shadow overlay solves the only internally fixable replay residual on this branch.",
+    "The remaining two rows sit outside the current market-context coverage window, so they should stay boundary-scoped rather than trigger broad internal rebuild work."
+  ]
+}

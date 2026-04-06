@@ -1,0 +1,444 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117m_cpo_reverse_signal_context_conditioning_audit_v1",
+    "conditioned_row_count": 26,
+    "conditioned_negative_count": 2,
+    "conditioned_non_negative_count": 24,
+    "negative_mean_score": -3989788000.0,
+    "non_negative_mean_score": -3577156208.083333,
+    "mean_score_gap_negative_minus_non_negative": -412631791.916667,
+    "best_conditioned_threshold": -4921320000.0,
+    "best_conditioned_balanced_accuracy": 0.625,
+    "conditioning_improves_signal": false,
+    "recommended_next_posture": "if_conditioned_reverse_gap_improves_send_reverse_branch_to_three_run_adversarial_review"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 964468002.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 1,
+      "tn": 23,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.958333,
+      "balanced_accuracy": 0.479167
+    },
+    {
+      "threshold": 695186002.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 2,
+      "tn": 22,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.916667,
+      "balanced_accuracy": 0.458333
+    },
+    {
+      "threshold": -233493998.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 3,
+      "tn": 21,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.875,
+      "balanced_accuracy": 0.4375
+    },
+    {
+      "threshold": -2254478000.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 4,
+      "tn": 20,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.833333,
+      "balanced_accuracy": 0.416667
+    },
+    {
+      "threshold": -2401348000.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 5,
+      "tn": 19,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.791667,
+      "balanced_accuracy": 0.395833
+    },
+    {
+      "threshold": -2437572000.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 6,
+      "tn": 18,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.75,
+      "balanced_accuracy": 0.375
+    },
+    {
+      "threshold": -2869140000.0,
+      "tp": 0,
+      "fn": 2,
+      "fp": 7,
+      "tn": 17,
+      "negative_recall": 0.0,
+      "non_negative_reject_rate": 0.708333,
+      "balanced_accuracy": 0.354167
+    },
+    {
+      "threshold": -3058256000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 7,
+      "tn": 17,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.708333,
+      "balanced_accuracy": 0.604167
+    },
+    {
+      "threshold": -3199828000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 8,
+      "tn": 16,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.666667,
+      "balanced_accuracy": 0.583333
+    },
+    {
+      "threshold": -3242876000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 9,
+      "tn": 15,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.625,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": -3567972000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 10,
+      "tn": 14,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.583333,
+      "balanced_accuracy": 0.541667
+    },
+    {
+      "threshold": -3834901000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 11,
+      "tn": 13,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.541667,
+      "balanced_accuracy": 0.520833
+    },
+    {
+      "threshold": -3859913000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 12,
+      "tn": 12,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.5,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "threshold": -3969474000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 13,
+      "tn": 11,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.458333,
+      "balanced_accuracy": 0.479167
+    },
+    {
+      "threshold": -4109264000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 14,
+      "tn": 10,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.416667,
+      "balanced_accuracy": 0.458333
+    },
+    {
+      "threshold": -4155426000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 15,
+      "tn": 9,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.375,
+      "balanced_accuracy": 0.4375
+    },
+    {
+      "threshold": -4769780000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 16,
+      "tn": 8,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.333333,
+      "balanced_accuracy": 0.416667
+    },
+    {
+      "threshold": -4828238000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 17,
+      "tn": 7,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.291667,
+      "balanced_accuracy": 0.395833
+    },
+    {
+      "threshold": -4862321000.0,
+      "tp": 1,
+      "fn": 1,
+      "fp": 18,
+      "tn": 6,
+      "negative_recall": 0.5,
+      "non_negative_reject_rate": 0.25,
+      "balanced_accuracy": 0.375
+    },
+    {
+      "threshold": -4921320000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 18,
+      "tn": 6,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.25,
+      "balanced_accuracy": 0.625
+    },
+    {
+      "threshold": -5232660000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 19,
+      "tn": 5,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.208333,
+      "balanced_accuracy": 0.604167
+    },
+    {
+      "threshold": -5272524000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 20,
+      "tn": 4,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.166667,
+      "balanced_accuracy": 0.583333
+    },
+    {
+      "threshold": -5340462000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 21,
+      "tn": 3,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.125,
+      "balanced_accuracy": 0.5625
+    },
+    {
+      "threshold": -5529624000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 22,
+      "tn": 2,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.083333,
+      "balanced_accuracy": 0.541667
+    },
+    {
+      "threshold": -5640218000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 23,
+      "tn": 1,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.041667,
+      "balanced_accuracy": 0.520833
+    },
+    {
+      "threshold": -5899890000.0,
+      "tp": 2,
+      "fn": 0,
+      "fp": 24,
+      "tn": 0,
+      "negative_recall": 1.0,
+      "non_negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "top_conditioned_rows": [
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": 964468002.0
+    },
+    {
+      "signal_trade_date": "2025-12-19",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "close_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": 695186002.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "increase_expression",
+      "candidate_reverse_score": -233493998.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -2254478000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -2401348000.0
+    },
+    {
+      "signal_trade_date": "2025-09-12",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "close_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -2437572000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -2869140000.0
+    },
+    {
+      "signal_trade_date": "2025-09-29",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "reduce_vs_hold",
+      "coarse_label": "decrease_expression",
+      "candidate_reverse_score": -3058256000.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "increase_expression",
+      "candidate_reverse_score": -3199828000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -3242876000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "increase_expression",
+      "candidate_reverse_score": -3567972000.0
+    },
+    {
+      "signal_trade_date": "2023-11-07",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "increase_expression",
+      "candidate_reverse_score": -3834901000.0
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -3859913000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -3969474000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -4109264000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -4155426000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -4769780000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "hold_or_skip",
+      "candidate_reverse_score": -4828238000.0
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "action_context": "add_vs_hold",
+      "coarse_label": "increase_expression",
+      "candidate_reverse_score": -4862321000.0
+    },
+    {
+      "signal_trade_date": "2024-03-15",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "action_context": "close_vs_hold",
+      "coarse_label": "decrease_expression",
+      "candidate_reverse_score": -4921320000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17M conditions the reverse-signal branch on the actual problem setting: held-position control inside main markup or diffusion, not the entire board history.",
+    "This prevents divergence-and-decay rows with trivial zero structure from dominating the score and gives a more honest read on whether the branch can help control drawdown where it actually matters.",
+    "The result is still candidate-only. The point is to make the reverse branch comparable to the positive-side branch before the next adversarial review."
+  ]
+}

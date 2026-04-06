@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "adapter_policy_count": 3,
+    "host_binding_count": 22,
+    "authoritative_status": "network_fetch_activation_policy_complete_enough_to_freeze_until_selective_activation_shift"
+  },
+  "triage_rows": [
+    {
+      "component": "network_fetch_activation_policy",
+      "direction": "freeze_policy_retry_and_orchestration_bindings_without_auto_activation"
+    },
+    {
+      "component": "next_frontier",
+      "direction": "selectively_activate_licensed_T2_T3_hosts_after_scheduler_runtime_and_manual_allowlist_review"
+    }
+  ],
+  "interpretation": [
+    "The remaining network-fetch blocker is no longer missing policy; it is selective activation approval.",
+    "That means live_like and execution can continue to stay blocked for governance reasons without structural uncertainty in fetch policy."
+  ]
+}

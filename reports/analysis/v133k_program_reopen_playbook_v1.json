@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133k_program_reopen_playbook_v1",
+    "line_count": 4,
+    "transfer_watched_artifact_count": 5,
+    "intraday_missing_artifact_count": 3,
+    "playbook_csv": "data\\training\\program_reopen_playbook_v1.csv",
+    "authoritative_output": "program_reopen_playbook_ready_for_gate_driven_restart"
+  },
+  "playbook_rows": [
+    {
+      "program_line": "cpo_lawful_eod_primary",
+      "current_status": "frozen_authoritative",
+      "gate_type": "manual_research_review",
+      "reopen_trigger": "explicit decision to rerun under-exposure or sizing review on the frozen lawful replay",
+      "command_hint": "use the existing CPO replay/sizing review chain; do not invent a new board-local discovery branch first"
+    },
+    {
+      "program_line": "commercial_aerospace_lawful_eod_primary",
+      "current_status": "frozen_authoritative",
+      "gate_type": "manual_research_review",
+      "reopen_trigger": "only if a genuinely new lawful board-local context appears; do not reopen for minor replay tuning",
+      "command_hint": "start from the frozen primary and governance stack, not from a new local replay search"
+    },
+    {
+      "program_line": "commercial_aerospace_intraday_execution_lane",
+      "current_status": "frozen",
+      "gate_type": "infrastructure_change_gate",
+      "reopen_trigger": "all blocked intraday execution requirements are satisfied",
+      "command_hint": "rebuild from the frozen minute governance package after point-in-time visibility, execution simulator, and separate intraday replay lane exist"
+    },
+    {
+      "program_line": "transfer_program",
+      "current_status": "frozen",
+      "gate_type": "file_change_gate",
+      "reopen_trigger": "one of the watched sector/symbol support artifacts changes and the same-plane gate opens",
+      "command_hint": "do_not_execute_any_rerun_chain_while_v130z_says_rerun_required_false"
+    }
+  ],
+  "interpretation": [
+    "V1.33K converts the frozen program state into a practical reopen playbook.",
+    "The playbook is not a new research line; it is the operational handoff for future gate-driven restarts."
+  ]
+}

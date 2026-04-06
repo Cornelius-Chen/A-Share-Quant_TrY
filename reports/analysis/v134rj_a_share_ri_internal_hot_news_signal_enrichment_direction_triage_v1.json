@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "board_signal_row_count": 1,
+    "important_queue_row_count": 2,
+    "curated_match_count": 2,
+    "matched_board_signal_count": 0,
+    "matched_important_queue_count": 0,
+    "missing_surface_count": 0,
+    "authoritative_status": "continue_serving_trading_with_explicit_mapping_status_instead_of_implicit_blank_candidate_lists"
+  },
+  "triage_rows": [
+    {
+      "component": "mapping_enrichment",
+      "direction": "attach_board_hit_state_and_beneficiary_mapping_confidence_to_theme-bound_signals"
+    },
+    {
+      "component": "missing_surface_handling",
+      "direction": "treat_theme_detected_but_member_surface_missing_as_an_explicit_low-confidence_state_not_as_a_silent_no-op"
+    },
+    {
+      "component": "trading_delivery",
+      "direction": "prefer_enriched_board_and_important_views_when_board-specific_routing_is_required"
+    }
+  ],
+  "interpretation": [
+    "The signal layer now distinguishes missing mapping coverage from genuine broad-market guidance.",
+    "The next refinement should expand curated beneficiary coverage or alias coverage rather than hide mapping uncertainty."
+  ]
+}

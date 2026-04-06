@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134h_commercial_aerospace_gh_seed_deterministic_direction_triage_v1",
+    "authoritative_status": "retain_deterministic_seed_simulation_inside_phase_2_but_keep_expansion_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_gh_seed_deterministic_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "seed_simulator_determinism",
+      "status": "accepted",
+      "detail": "double_run_exact_match = True"
+    },
+    {
+      "component": "seed_clock_monotonicity",
+      "status": "accepted",
+      "detail": "monotonic_fill_violation_count = 0, post_flat_action_violation_count = 0"
+    },
+    {
+      "component": "seed_benefit_concentration",
+      "status": "retain_for_phase_2_understanding",
+      "detail": "same_day_loss_avoided_total = 3732.6954, top_symbol = 300342"
+    },
+    {
+      "component": "broader_session_phase_2_expansion",
+      "status": "still_blocked",
+      "detail": "deterministic seeds improve trust, but broader session simulation still requires an explicit widening protocol"
+    },
+    {
+      "component": "phase_3_replay_lane",
+      "status": "still_blocked",
+      "detail": "deterministic seed simulation is a phase-2 maturity signal only, not a replay-binding authorization"
+    }
+  ],
+  "interpretation": [
+    "V1.34H converts the deterministic seed audit into the next phase-2 direction judgment.",
+    "The seed simulator is now stable enough to be trusted as a narrow infrastructure object, but not yet broad enough to justify wider simulation or replay binding."
+  ]
+}

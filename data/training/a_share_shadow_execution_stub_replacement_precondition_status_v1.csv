@@ -1,0 +1,6 @@
+﻿precondition,precondition_state,supporting_count,blocking_reason
+market_context_coverage_closed,unsatisfied,2,base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2
+daily_market_promotion_nonblocked,satisfied_foundation_only,14,promotable_now_count = 14
+paired_surfaces_promotive,satisfied_foundation_only,16,index_candidate_cover_count = 16; limit_halt_candidate_cover_count = 14
+cost_model_foundation_ready,satisfied_foundation_only,0,cost models exist but cannot promote execution journaling while only external boundary residuals still remain unresolved
+shadow_stub_replacement_lane_materialized,satisfied_foundation_only,15,lane_overlay_row_count = 15; excluded_boundary_count = 2

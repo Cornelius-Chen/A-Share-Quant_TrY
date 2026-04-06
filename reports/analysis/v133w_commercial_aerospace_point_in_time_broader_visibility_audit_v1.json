@@ -1,0 +1,286 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133w_commercial_aerospace_point_in_time_broader_visibility_audit_v1",
+    "broader_hit_session_count": 24,
+    "same_bar_violation_count": 0,
+    "path_cutoff_violation_count": 0,
+    "lineage_monotonic_violation_count": 0,
+    "event_visibility_violation_count": 0,
+    "warmup_nonnull_violation_count": 0,
+    "audit_csv": "data\\training\\commercial_aerospace_point_in_time_broader_visibility_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_point_in_time_broader_visibility_audit_ready_for_direction_triage"
+  },
+  "session_rows": [
+    {
+      "trade_date": "20251118",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20251126",
+      "symbol": "300045",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20251217",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "601698",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260116",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "601698",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "trade_date": "20260403",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "same_bar_activation",
+      "status": "pass",
+      "detail": "same_bar_violation_count = 0"
+    },
+    {
+      "acceptance_item": "path_cutoff_precedes_visibility",
+      "status": "pass",
+      "detail": "path_cutoff_violation_count = 0"
+    },
+    {
+      "acceptance_item": "lineage_monotonicity",
+      "status": "pass",
+      "detail": "lineage_monotonic_violation_count = 0"
+    },
+    {
+      "acceptance_item": "event_visibility_from_session_open_or_later",
+      "status": "pass",
+      "detail": "event_visibility_violation_count = 0"
+    },
+    {
+      "acceptance_item": "warmup_nulls_bounded",
+      "status": "pass",
+      "detail": "warmup_nonnull_violation_count = 0"
+    }
+  ],
+  "interpretation": [
+    "V1.33W audits whether the broader 24-session phase-1 visibility surface still obeys the canonical point-in-time rules.",
+    "The purpose is to widen legality, not to unlock simulation or replay."
+  ]
+}

@@ -1,0 +1,11 @@
+﻿data_class,storage_tier,retention_policy,default_exit_action,rebuildability,why_keep_or_evict
+raw_intraday_market_data,hot_then_warm_then_cold,hot_3m|warm_12m|older_cold_archive,rollup_and_archive,low,"point_in_time trading reconstruction needs recent detail, but long-term online retention is too expensive"
+raw_daily_market_data,warm_then_cold,warm_36m|older_cold_archive,archive,medium,"daily bars remain analytically useful longer, but do not need premium hot storage indefinitely"
+raw_documents_t0_to_t2,warm_then_cold,warm_12m|older_cold_archive_keep_index,archive_keep_metadata,low,"official and high-authority text should stay retrievable, but not necessarily online in full text forever"
+raw_documents_t3_to_t5_reposts,hot_then_disposable,hot_30d_after_extraction_then_evict_or_compact,compact_or_evict,high,low-grade repost content is primarily attention evidence and should not accumulate as full-text sludge
+claim_event_evidence_structures,frozen_reference,long_term_keep_versioned,never_evict_without_supersession,low,structured evidence is the durable reusable truth layer after raw text is compacted
+security_master_alias_business_reference,frozen_reference,long_term_keep_versioned,never_evict_without_version_replacement,low,identity and business-reference history are foundational and should remain queryable forever
+temporary_feature_views_and_join_surfaces,disposable,ttl_7d_or_30d,evict,high,derived intermediate tables are classic storage traps and should default to rebuildable TTL assets
+experiment_candidate_search_outputs,disposable_then_compacted,keep_final_audit_only,compact_then_evict_intermediates,high,only final audit and handoff artifacts should survive; search exhaust should not become permanent baggage
+label_registry_feature_registry_state_journals,frozen_reference,long_term_keep_versioned,append_only_or_version_replace,low,"labels, feature definitions, and state journals are the semantic spine of reproducibility"
+shadow_replay_and_execution_journals,warm_then_cold,warm_24m|older_cold_archive,archive_keep_index,low,shadow journals are expensive but essential for later attribution and dispute resolution

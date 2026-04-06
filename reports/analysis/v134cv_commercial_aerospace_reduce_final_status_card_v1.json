@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cv_commercial_aerospace_reduce_final_status_card_v1",
+    "reduce_handoff_status": "freeze_reduce_handoff_package_and_do_not_reopen_reduce_mainline_before_future_frontier_shift",
+    "reduce_reopen_ready": false,
+    "execution_blocker_count": 4,
+    "next_frontier": "intraday_add",
+    "next_frontier_state": "deferred",
+    "playbook_status": "commercial_aerospace_reduce_reopen_playbook_ready_for_gate_driven_restart",
+    "status_csv": "data\\training\\commercial_aerospace_reduce_final_status_card_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_final_status_card_ready_for_do_not_drift_triage"
+  },
+  "status_rows": [
+    {
+      "key": "reduce_status",
+      "value": "frozen_mainline"
+    },
+    {
+      "key": "reduce_policy",
+      "value": "local_residue_supervision_only"
+    },
+    {
+      "key": "execution_binding",
+      "value": "still_blocked"
+    },
+    {
+      "key": "execution_blocker_count",
+      "value": 4
+    },
+    {
+      "key": "reopen_policy",
+      "value": "gate_driven_only"
+    },
+    {
+      "key": "next_frontier",
+      "value": "intraday_add"
+    },
+    {
+      "key": "next_frontier_state",
+      "value": "deferred"
+    }
+  ],
+  "interpretation": [
+    "V1.34CV compresses the reduce branch into a final operational status card after handoff completion.",
+    "The card is meant to answer the practical question directly: is reduce still an active frontier? The answer is no."
+  ]
+}

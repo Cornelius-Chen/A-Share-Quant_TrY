@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "allowlist_batch_one_count": 6,
+    "allowlist_batch_two_count": 10,
+    "allowlist_deferred_count": 4,
+    "authoritative_status": "network_queue_processing_should_follow_priority_batches_not_flat_activation"
+  },
+  "triage_rows": [
+    {
+      "component": "allowlist_batch_one",
+      "direction": "review_batch_one_t2_hosts_first_before_any_batch_two_or_runtime_promotion"
+    },
+    {
+      "component": "allowlist_batch_two",
+      "direction": "hold_batch_two_secondary_hosts_until_batch_one_license_review_outcomes_exist"
+    },
+    {
+      "component": "allowlist_deferred",
+      "direction": "keep_unclear_hosts_deferred_and_out_of_activation_promotion"
+    },
+    {
+      "component": "runtime_html_article_fetch",
+      "direction": "treat_html_article_fetch_as_only_first_runtime_candidate_after_batch_one_review"
+    },
+    {
+      "component": "runtime_other_adapters",
+      "direction": "keep_social_column_and_official_source_adapters_nonoperative_for_now"
+    }
+  ],
+  "interpretation": [
+    "The next real source-side work is queue processing in priority order, not more gate rewording.",
+    "This still does not open network fetch automatically; it only creates a disciplined first-pass review order."
+  ]
+}

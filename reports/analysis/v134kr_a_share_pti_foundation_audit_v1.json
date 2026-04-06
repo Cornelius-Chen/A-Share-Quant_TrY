@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kr_a_share_pti_foundation_audit_v1",
+    "event_ledger_count": 52,
+    "time_slice_count": 17,
+    "state_transition_count": 57,
+    "pti_status_csv": "data\\training\\a_share_pti_foundation_status_v1.csv",
+    "authoritative_output": "a_share_pti_foundation_ready_for_direction_triage"
+  },
+  "pti_rows": [
+    {
+      "pti_component": "event_ledger",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\event_registry\\a_share_pti_event_ledger_v1.csv",
+      "coverage_note": "event_ledger_count = 52"
+    },
+    {
+      "pti_component": "time_slice_view",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\derived\\info_center\\time_slices\\a_share_time_slice_view_v1.csv",
+      "coverage_note": "time_slice_count = 17"
+    },
+    {
+      "pti_component": "state_transition_journal",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\state_transition_journal\\a_share_state_transition_journal_v1.csv",
+      "coverage_note": "state_transition_count = 57"
+    },
+    {
+      "pti_component": "transition_backlog",
+      "component_state": "backlog_materialized_not_bound_to_replay",
+      "artifact_path": "data\\reference\\info_center\\state_transition_journal\\a_share_state_transition_backlog_v1.csv",
+      "coverage_note": "transition_backlog_count = 3"
+    }
+  ],
+  "interpretation": [
+    "V1.34KR completes the first PTI workstream pass by materializing a visible-time event ledger, a time-slice surface, and a bootstrap state transition journal.",
+    "This is intentionally narrower than a full trading state machine: it captures legal visibility and bootstrap semantic transitions without pretending execution states already exist."
+  ]
+}

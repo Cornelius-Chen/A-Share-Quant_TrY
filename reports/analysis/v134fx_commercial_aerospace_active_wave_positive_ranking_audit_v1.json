@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fx_commercial_aerospace_active_wave_positive_ranking_audit_v1",
+    "selected_candidate_count": 2,
+    "state_count": 2,
+    "metric_count": 4,
+    "same_symbol_higher_metric_count": 1,
+    "clean_reset_higher_metric_count": 2,
+    "authoritative_rule": "the current active-wave sample supports exclusion better than positive ranking: the two retained selected states still split the simple positive metrics rather than collapsing into a single dominant positive ranker"
+  },
+  "candidate_rows": [
+    {
+      "trade_date": "20251219",
+      "symbol": "000738",
+      "selection_state": "same_symbol_continuation_selected",
+      "selection_outcome": "selected",
+      "last_action_name": "open",
+      "last_action_trade_date": "20251218",
+      "trading_days_since_last_action": 1,
+      "open_to_15m": 0.02739726,
+      "open_to_60m": 0.02232369,
+      "close_loc_15m": 0.93103448,
+      "burst_amount_share_15": 0.37937348
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "002085",
+      "selection_state": "clean_reset_candidate",
+      "selection_outcome": "selected",
+      "last_action_name": "close",
+      "last_action_trade_date": "20251201",
+      "trading_days_since_last_action": 14,
+      "open_to_15m": 0.01675603,
+      "open_to_60m": 0.0227882,
+      "close_loc_15m": 0.96153846,
+      "burst_amount_share_15": 0.3114404
+    }
+  ],
+  "contrast_rows": [
+    {
+      "metric": "open_to_15m",
+      "same_symbol_continuation_selected": 0.02739726,
+      "clean_reset_selected": 0.01675603,
+      "higher_state": "same_symbol_continuation_selected"
+    },
+    {
+      "metric": "open_to_60m",
+      "same_symbol_continuation_selected": 0.02232369,
+      "clean_reset_selected": 0.0227882,
+      "higher_state": "clean_reset_selected"
+    },
+    {
+      "metric": "close_loc_15m",
+      "same_symbol_continuation_selected": 0.93103448,
+      "clean_reset_selected": 0.96153846,
+      "higher_state": "clean_reset_selected"
+    },
+    {
+      "metric": "burst_amount_share_15",
+      "same_symbol_continuation_selected": 0.37937348,
+      "clean_reset_selected": 0.3114404,
+      "lower_state": "clean_reset_selected"
+    }
+  ],
+  "interpretation": [
+    "V1.34FX asks the smallest honest positive-ranking question: after carving out the displaced candidate, do the two retained selected states already collapse into a simple internal ranker?",
+    "The answer is no. The same-symbol continuation state is stronger on early strength, while the clean-reset state is stronger on close-location and hour-end continuation, so the branch should not pretend it already owns a positive daily ranker."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fs_commercial_aerospace_fr_wave_state_direction_triage_v1",
+    "authoritative_status": "retain_post_wave_echo_guard_and_shift_next_to_active_wave_selection_supervision",
+    "candidate_day_count": 4,
+    "active_wave_selection_day_count": 2,
+    "post_wave_echo_guard_count": 2,
+    "authoritative_rule": "the add frontier should keep a post-wave echo guard and shift its next supervision layer to active-wave daily selection rather than continuing generic portability tuning"
+  },
+  "triage_rows": [
+    {
+      "component": "post_wave_echo_guard",
+      "status": "retain",
+      "rationale": "late strong local echoes can already be separated from true add-wave days using recent order-flow state"
+    },
+    {
+      "component": "active_wave_selection_problem",
+      "status": "still_open",
+      "rationale": "after removing post-wave echoes, the residual blocker is deciding which symbol gets selected inside a live add wave"
+    },
+    {
+      "component": "broader_positive_add_promotion",
+      "status": "still_blocked",
+      "rationale": "the branch still lacks a justified same-wave daily ranking layer, so execution and broader promotion remain blocked"
+    }
+  ],
+  "interpretation": [
+    "V1.34FS turns the wave-state split into the next governance verdict for the add frontier.",
+    "The frontier no longer needs to confuse late echoes with same-wave competition; its remaining blocker is now narrowly the active-wave selection problem."
+  ]
+}

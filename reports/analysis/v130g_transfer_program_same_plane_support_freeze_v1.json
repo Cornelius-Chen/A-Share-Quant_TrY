@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130g_transfer_program_same_plane_support_freeze_v1",
+    "candidate_board_count": 5,
+    "same_plane_ready_count": 0,
+    "bridge_only_count": 3,
+    "authoritative_status": "freeze_transfer_program_until_a_new_board_has_multi_symbol_same_plane_support",
+    "authoritative_rule": "do_not_open_new_board_workers_when_the_destination_surface_collapses_to_single_symbol_or_cross_version_bridge_only",
+    "recommended_next_posture": "pause_board_transfer_and_wait_for_richer_same_plane_local_support"
+  },
+  "candidate_rows": [
+    {
+      "sector_id": "BK0808",
+      "sector_name": "军民融合",
+      "v6_symbol_count": 1,
+      "v6_symbols": [
+        "300474"
+      ],
+      "v5_symbol_count": 1,
+      "v5_symbols": [
+        "600760"
+      ],
+      "v6_sector_row_count": 242,
+      "v6_board_composite": 0.473136,
+      "same_plane_ready": false,
+      "bridge_only": true,
+      "freeze_reason": "single_symbol_same_plane_support_only"
+    },
+    {
+      "sector_id": "BK0715",
+      "sector_name": "航母概念",
+      "v6_symbol_count": 1,
+      "v6_symbols": [
+        "000738"
+      ],
+      "v5_symbol_count": 1,
+      "v5_symbols": [
+        "000099"
+      ],
+      "v6_sector_row_count": 132,
+      "v6_board_composite": 0.373132,
+      "same_plane_ready": false,
+      "bridge_only": true,
+      "freeze_reason": "single_symbol_same_plane_support_only"
+    },
+    {
+      "sector_id": "BK0994",
+      "sector_name": "空间站概念",
+      "v6_symbol_count": 1,
+      "v6_symbols": [
+        "600118"
+      ],
+      "v5_symbol_count": 0,
+      "v5_symbols": [],
+      "v6_sector_row_count": 199,
+      "v6_board_composite": 0.426425,
+      "same_plane_ready": false,
+      "bridge_only": false,
+      "freeze_reason": "no_same_plane_surface"
+    },
+    {
+      "sector_id": "BK0814",
+      "sector_name": "大飞机",
+      "v6_symbol_count": 1,
+      "v6_symbols": [
+        "600118"
+      ],
+      "v5_symbol_count": 1,
+      "v5_symbols": [
+        "600760"
+      ],
+      "v6_sector_row_count": 17,
+      "v6_board_composite": 0.352149,
+      "same_plane_ready": false,
+      "bridge_only": true,
+      "freeze_reason": "single_symbol_same_plane_support_only"
+    },
+    {
+      "sector_id": "BK0490",
+      "sector_name": "军工",
+      "v6_symbol_count": 0,
+      "v6_symbols": [],
+      "v5_symbol_count": 2,
+      "v5_symbols": [
+        "000099",
+        "600760"
+      ],
+      "v6_sector_row_count": 0,
+      "v6_board_composite": null,
+      "same_plane_ready": false,
+      "bridge_only": false,
+      "freeze_reason": "no_same_plane_surface"
+    }
+  ],
+  "interpretation": [
+    "V1.30G re-checks the post-BK0480 queue instead of blindly advancing into thinner boards.",
+    "No remaining shadow target has multi-symbol same-plane support, so opening another board worker would degrade transfer discipline into single-symbol pseudo-board research."
+  ]
+}

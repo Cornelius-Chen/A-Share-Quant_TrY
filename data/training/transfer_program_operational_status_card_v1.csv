@@ -1,0 +1,15 @@
+status_key,status_value
+program_status,frozen
+rerun_required,False
+changed_artifact_count,0
+nearest_candidate_sector_id,BK0808
+decisive_watch_symbol,600118
+bk0808_current_v6_symbol_count,1
+bk0808_same_plane_symbol_gap,1
+bk0808_board_composite_gap,0.0
+bk0808_bridge_block,True
+watch_symbol_timeline_days,10
+watch_symbol_leader_core_days,9
+watch_symbol_near_surface_days,8
+watch_symbol_inactive_days,2
+next_action,wait_for_real_v6_same_plane_emergence_of_600118_then_rerun_transfer_chain

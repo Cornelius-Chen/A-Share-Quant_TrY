@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119u_cpo_same_family_deentangling_stopline_v1",
+    "authoritative_conclusion": "no_narrow_same_family_variant_improves_holdout_and_leakage_together",
+    "same_family_micro_tuning_allowed": false,
+    "recommended_next_posture": "stop_same_family_deentangling_micro_tuning_and_reopen_only_if_a_new_orthogonal_fix_idea_exists"
+  },
+  "comparison_rows": [
+    {
+      "variant_name": "base_score",
+      "best_add_pool_balanced_accuracy": 0.727273,
+      "time_split_mean": 0.597222,
+      "time_split_min": 0.375,
+      "symbol_holdout_mean": 0.4375,
+      "symbol_holdout_min": 0.375,
+      "role_holdout_mean": 0.440476,
+      "role_holdout_min": 0.333333,
+      "entry_leakage_rate": 0.375,
+      "close_leakage_rate": 0.666667
+    },
+    {
+      "variant_name": "date_resid",
+      "best_add_pool_balanced_accuracy": 0.554545,
+      "time_split_mean": 0.472222,
+      "time_split_min": 0.416667,
+      "symbol_holdout_mean": 0.385417,
+      "symbol_holdout_min": 0.333333,
+      "role_holdout_mean": 0.404762,
+      "role_holdout_min": 0.309524,
+      "entry_leakage_rate": 0.0,
+      "close_leakage_rate": 0.0
+    },
+    {
+      "variant_name": "symbol_resid",
+      "best_add_pool_balanced_accuracy": 0.772727,
+      "time_split_mean": 0.736111,
+      "time_split_min": 0.666667,
+      "symbol_holdout_mean": 0.572917,
+      "symbol_holdout_min": 0.5625,
+      "role_holdout_mean": 0.595238,
+      "role_holdout_min": 0.357143,
+      "entry_leakage_rate": 0.75,
+      "close_leakage_rate": 0.666667
+    },
+    {
+      "variant_name": "symbol_date_blend_033",
+      "best_add_pool_balanced_accuracy": 0.772727,
+      "time_split_mean": 0.736111,
+      "time_split_min": 0.666667,
+      "symbol_holdout_mean": 0.625,
+      "symbol_holdout_min": 0.5,
+      "role_holdout_mean": 0.595238,
+      "role_holdout_min": 0.357143,
+      "entry_leakage_rate": 0.75,
+      "close_leakage_rate": 0.333333
+    }
+  ],
+  "interpretation": [
+    "V1.19U freezes the decision boundary after the narrow same-family de-entangling scan.",
+    "The scan found no single residualization variant that simultaneously improves chronology/holdouts and reduces context leakage.",
+    "That means same-family de-entangling has reached its stopline; further progress requires a new orthogonal fix idea rather than more micro-tuning."
+  ]
+}

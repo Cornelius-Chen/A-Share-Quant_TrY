@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "total_stub_row_count": 17,
+    "eligible_subset_count": 15,
+    "excluded_boundary_count": 2,
+    "authoritative_status": "shadow_execution_eligible_subset_is_useful_for_internal_replay_build_but_must_not_be_treated_as_execution_opening"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_execution_eligible_subset",
+      "direction": "retain_as_internal_replay_build_candidate_surface_for_the_15_date_bound_rows"
+    },
+    {
+      "component": "excluded_boundary_rows",
+      "direction": "retain_as_external_boundary_exclusions_and_do_not_force_internal_market_context_rebuild_for_them"
+    },
+    {
+      "component": "promotion_boundary",
+      "direction": "keep_this_subset_shadow_only_and_do_not_promote_it_into_execution_authority_or_live_like_opening"
+    }
+  ],
+  "interpretation": [
+    "The eligible subset is useful because it finally separates replay-internal candidate rows from boundary-only exclusions.",
+    "That separation improves internal build clarity, but it still does not justify opening live-like or execution."
+  ]
+}

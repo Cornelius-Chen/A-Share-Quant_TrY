@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "loop_signal_mode": "passive_polling",
+    "interrupt_required": "false",
+    "reopen_target": "none",
+    "authoritative_status": "continue_serving_control-loop_signal-feed_above_the_control-packet_change_layer"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_branch",
+      "direction": "stay_on_passive_polling_when_loop_signal_mode_remains_passive_polling"
+    },
+    {
+      "component": "elevate_attention_branch",
+      "direction": "raise_attention_and_reopen_the_target_surface_when_loop_signal_mode_rotates_to_elevate_attention"
+    },
+    {
+      "component": "interrupt_branch",
+      "direction": "interrupt_the_control_loop_immediately_when_loop_signal_mode_rotates_to_interrupt"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest control-loop routing surface for the internal hot-news program.",
+    "A consumer can stop here unless it is explicitly told to reopen the control packet or interrupt itself."
+  ]
+}

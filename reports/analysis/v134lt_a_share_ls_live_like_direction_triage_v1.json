@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "live_like_ready_now": false,
+    "closed_gate_count": 3,
+    "authoritative_status": "live_like_opening_still_blocked_by_named_prerequisites"
+  },
+  "triage_rows": [
+    {
+      "component": "live_like_gate",
+      "direction": "keep_closed"
+    },
+    {
+      "component": "next_named_gaps",
+      "direction": "close_source_manual_closure_boundary_residuals_and_replay_execution_stub_before_reopen"
+    }
+  ],
+  "interpretation": [
+    "The center is now mature enough to explain precisely why live-like is still closed.",
+    "The remaining blockers are named infrastructure gaps, not confusion about research semantics."
+  ]
+}

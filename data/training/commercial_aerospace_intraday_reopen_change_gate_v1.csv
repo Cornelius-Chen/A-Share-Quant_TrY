@@ -1,0 +1,6 @@
+﻿artifact_type,path,state,reopen_relevance
+minute_visibility_surface,data/training/commercial_aerospace_intraday_supervision_registry_v1.csv,present_but_governance_only,"needs lawful point-in-time successor, not just current governance table"
+minute_session_archives,data/raw/intraday_a_share_1min_monthly,present,"supports research, but not sufficient alone to unlock intraday execution"
+intraday_execution_simulator,MISSING: lawful_intraday_execution_simulator,missing,must exist before intraday replay can reopen
+point_in_time_intraday_state_feed,MISSING: point_in_time_intraday_state_feed,missing,must exist before intraday execution can be lawful
+separate_intraday_replay_lane,MISSING: commercial_aerospace_intraday_replay_lane,missing,must exist so minute execution can be tested without contaminating frozen EOD primary

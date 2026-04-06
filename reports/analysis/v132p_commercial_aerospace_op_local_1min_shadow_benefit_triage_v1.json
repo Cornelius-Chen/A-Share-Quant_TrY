@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132p_commercial_aerospace_op_local_1min_shadow_benefit_triage_v1",
+    "authoritative_status": "retain_local_1min_rules_as_shadow_benefit_aligned_window_governance",
+    "flagged_execution_share": 0.10909091,
+    "flagged_negative_forward_notional_share": 0.7910412,
+    "flagged_adverse_notional_share": 0.56597491,
+    "authoritative_rule": "the local 1min branch becomes stronger governance when it stays narrow on executions yet concentrates a disproportionate share of later downside notional"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_shadow_benefit_audit",
+      "status": "retain_local_1min_rules_as_shadow_benefit_aligned_window_governance",
+      "rationale": "the minute branch deserves a stronger governance posture when a narrow flagged slice captures disproportionate later downside notional on the buy surface"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "even aligned shadow-benefit evidence remains outside direct replay execution unless a lawful intraday path is built"
+    }
+  ],
+  "interpretation": [
+    "V1.32P converts the shadow-benefit audit into a governance verdict.",
+    "The intent is still bounded supervision: stronger minute credibility should not be confused with permission to alter the lawful EOD replay directly."
+  ]
+}

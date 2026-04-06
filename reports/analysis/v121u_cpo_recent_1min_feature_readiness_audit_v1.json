@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121u_cpo_recent_1min_feature_readiness_audit_v1",
+    "file_count": 4,
+    "total_row_count": 7880,
+    "feature_family_count": 8,
+    "readiness_posture": "recent_1min_microstructure_plane_ready_for_local_feature_building",
+    "recommended_next_posture": "build_1min_microstructure_feature_table_for_core_names"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "300502",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "300757",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "688498",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    }
+  ],
+  "feature_family_rows": [
+    {
+      "feature_family": "reclaim_after_break",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "vwap_reclaim",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "upper_shadow_trap",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "lower_shadow_repair",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "micro_pullback_depth",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "push_efficiency",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "late_session_integrity",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    },
+    {
+      "feature_family": "volume_burst_then_fade",
+      "readiness": "ready_from_1min_ohlcv",
+      "requires_external_event_time": false
+    }
+  ],
+  "interpretation": [
+    "V1.21U confirms that the project now has a recent 1-minute microstructure plane for the core CPO names.",
+    "The immediate value is pure price-volume microstructure, not news-driven intraday trading.",
+    "This is the correct next plane because the 30/60-minute and daily risk-side branches have reached their local boundary."
+  ]
+}

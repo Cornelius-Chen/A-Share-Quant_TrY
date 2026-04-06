@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134js_commercial_aerospace_heat_axis_counterpanel_expansion_audit_v1",
+    "retained_heat_axis_source_count": 2,
+    "realized_heat_axis_source_count": 1,
+    "forward_heat_axis_anchor_count": 1,
+    "current_hard_counterpanel_count": 1,
+    "hard_anchor_grade_source_count": 1,
+    "counterpanel_thickened_now": false,
+    "same_plane_counterpanel_expansion_ready_count": 1,
+    "expansion_csv": "data\\training\\commercial_aerospace_heat_axis_counterpanel_expansion_v1.csv",
+    "authoritative_output": "commercial_aerospace_heat_axis_counterpanel_expansion_ready_for_direction_triage"
+  },
+  "expansion_rows": [
+    {
+      "registry_id": "ca_source_007",
+      "record_type": "historical_source",
+      "event_scope": "theme_heat",
+      "source_role": "realized_heat_axis_seed",
+      "same_plane_usability": "same_plane_ready",
+      "counterpanel_expansion_utility": "reinforces_existing_singleton",
+      "detail": "同花顺-商业航天板块集体跳水"
+    },
+    {
+      "registry_id": "ca_anchor_004",
+      "record_type": "forward_anchor",
+      "event_scope": "sentiment_transition",
+      "source_role": "forward_heat_axis_anchor",
+      "same_plane_usability": "forward_only_not_same_plane",
+      "counterpanel_expansion_utility": "future_structure_only",
+      "detail": "板块情绪扩散/镜像龙头切换"
+    }
+  ],
+  "interpretation": [
+    "V1.34JS checks whether the heat-axis branch can thicken the anchor/decoy counterpanel right now.",
+    "It finds one realized same-plane heat-axis seed and one forward heat-axis anchor. That is enough to formalize the branch, but not enough to claim that the hard counterpanel is already thicker than a singleton."
+  ]
+}

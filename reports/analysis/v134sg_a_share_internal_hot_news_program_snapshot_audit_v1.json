@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "snapshot_row_count": 1,
+    "risk_feed_row_count": 16,
+    "opportunity_feed_row_count": 2,
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "session_handling_mode": "non_trading_day_watch_only",
+    "risk_consumer_gate": "watch_risk_non_trading_day",
+    "opportunity_consumer_gate": "watch_opportunity_non_trading_day",
+    "snapshot_consumer_gate_mode": "non_trading_day_watch_only",
+    "top_risk_score": 50.6,
+    "top_opportunity_score": 55.9,
+    "top_opportunity_primary_theme_slug": "defense_industry",
+    "top_opportunity_secondary_theme_slug": "",
+    "top_opportunity_theme_governance_state": "accepted_rotation_override",
+    "top_opportunity_focus_class": "symbol_focus_available",
+    "top_opportunity_board_hit_state": "theme_detected_with_symbol_route",
+    "top_opportunity_mapping_confidence": "medium",
+    "top_opportunity_linkage_class": "direct_beneficiary",
+    "top_opportunity_beneficiary_symbols_top5": "600760",
+    "top_watch_symbol": "600760",
+    "top_watch_primary_theme_slug": "defense_industry",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "600760,601899",
+    "authoritative_output": "a_share_internal_hot_news_program_snapshot_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_snapshot",
+      "component_state": "read_ready_internal_only",
+      "metric": "snapshot_row_count",
+      "value": "1"
+    },
+    {
+      "component": "risk_snapshot",
+      "component_state": "materialized",
+      "metric": "risk_feed_row_count",
+      "value": "16"
+    },
+    {
+      "component": "opportunity_snapshot",
+      "component_state": "materialized",
+      "metric": "opportunity_feed_row_count",
+      "value": "2"
+    },
+    {
+      "component": "timing_snapshot",
+      "component_state": "materialized",
+      "metric": "session_handling_mode",
+      "value": "non_trading_day_watch_only"
+    },
+    {
+      "component": "risk_consumer_gate",
+      "component_state": "materialized",
+      "metric": "risk_consumer_gate",
+      "value": "watch_risk_non_trading_day"
+    },
+    {
+      "component": "opportunity_consumer_gate",
+      "component_state": "materialized",
+      "metric": "opportunity_consumer_gate",
+      "value": "watch_opportunity_non_trading_day"
+    },
+    {
+      "component": "top_opportunity_mapping",
+      "component_state": "materialized",
+      "metric": "top_opportunity_mapping_confidence",
+      "value": "medium"
+    },
+    {
+      "component": "top_opportunity_mapping",
+      "component_state": "materialized",
+      "metric": "top_opportunity_linkage_class",
+      "value": "direct_beneficiary"
+    },
+    {
+      "component": "top_opportunity_beneficiary_symbols",
+      "component_state": "materialized",
+      "metric": "top_opportunity_beneficiary_symbols_top5",
+      "value": "600760"
+    },
+    {
+      "component": "top_watch_symbol",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "component": "top_watch_theme",
+      "component_state": "materialized",
+      "metric": "top_watch_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_watch_bundle",
+      "component_state": "materialized",
+      "metric": "top_watch_symbols_top5",
+      "value": "600760,601899"
+    },
+    {
+      "component": "top_watch_bundle",
+      "component_state": "materialized",
+      "metric": "top_watch_linkage_class",
+      "value": "direct_beneficiary"
+    },
+    {
+      "component": "top_opportunity_theme_governance",
+      "component_state": "materialized",
+      "metric": "top_opportunity_primary_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "top_opportunity_theme_governance",
+      "component_state": "materialized",
+      "metric": "top_opportunity_theme_governance_state",
+      "value": "accepted_rotation_override"
+    }
+  ],
+  "interpretation": [
+    "The trading program can now poll one compact snapshot row instead of scanning full feeds every time.",
+    "The snapshot exposes top-risk and top-opportunity state plus current session handling and direct feed consumer gates while preserving the full split feeds for deeper processing.",
+    "Top-opportunity mapping state is now carried into the snapshot so the program can see beneficiary-symbol readiness without reopening the opportunity feed.",
+    "Both the top opportunity and top watch symbol now carry linkage class, so direct beneficiaries can be separated from weaker proxies at snapshot level.",
+    "The snapshot now also carries the top governed watch symbol and the top-five watch bundle, so symbol-first consumers can stay on the snapshot path for the first routing decision.",
+    "When overlap governance applies, the snapshot now carries the governed primary theme rather than leaving multi-theme ambiguity to the outer consumer."
+  ]
+}

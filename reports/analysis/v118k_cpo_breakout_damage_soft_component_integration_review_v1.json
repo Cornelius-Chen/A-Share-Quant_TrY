@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118k_cpo_breakout_damage_soft_component_integration_review_v1",
+    "base_best_threshold": 489402000.0,
+    "base_best_balanced_accuracy": 0.772727,
+    "best_alpha": 0.0,
+    "best_alpha_balanced_accuracy": 0.772727,
+    "best_alpha_gap": 727155309.090909,
+    "material_improvement_over_base": false,
+    "recommended_next_posture": "external_audit_best_alpha_if_any_material_integration_gain_exists"
+  },
+  "alpha_rows": [
+    {
+      "alpha": 0.0,
+      "best_threshold": 489402000.0,
+      "best_balanced_accuracy": 0.772727,
+      "mean_gap_positive_minus_negative": 727155309.090909
+    },
+    {
+      "alpha": 0.25,
+      "best_threshold": 215170250.0,
+      "best_balanced_accuracy": 0.772727,
+      "mean_gap_positive_minus_negative": 762018068.236364
+    },
+    {
+      "alpha": 0.5,
+      "best_threshold": -59061500.0,
+      "best_balanced_accuracy": 0.772727,
+      "mean_gap_positive_minus_negative": 796880827.381818
+    },
+    {
+      "alpha": 1.0,
+      "best_threshold": -607525000.0,
+      "best_balanced_accuracy": 0.727273,
+      "mean_gap_positive_minus_negative": 866606345.672727
+    }
+  ],
+  "interpretation": [
+    "V1.18K tests whether the newly reclassified breakout-damage soft component actually improves the live cooling candidate, rather than just sounding useful in theory.",
+    "The integration is intentionally soft: subtract a scaled breakout-damage score from the retained cooling-controlled score, without creating a new hard gate.",
+    "If no alpha materially improves discrimination, breakout-damage should remain archived as a soft component with no active integration role."
+  ]
+}

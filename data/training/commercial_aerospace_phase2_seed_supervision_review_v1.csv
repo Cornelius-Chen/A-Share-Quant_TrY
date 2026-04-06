@@ -1,0 +1,8 @@
+﻿component,status,detail
+seed_determinism,reasonable,"double_run_exact_match = True, monotonic_fill_violation_count = 0"
+seed_clock_honesty,reasonable,"duplicate_fill_violation_count = 0, post_flat_action_violation_count = 0"
+reversal_tier_value,strongest_phase2_candidate,"same_day_loss_avoided_share = 0.818154, order_count = 5"
+severe_tier_value,retain_as_narrow_emergency_layer,"same_day_loss_avoided_share = 0.181846, broader_hit_count = 5"
+mild_tier_execution,not_promotable_for_sell_execution,"mean_forward_return_10 = 0.30285912, negative_forward_notional_share = 0.0"
+broader_hit_surface,sparse_enough_for_guarded_widening_review,"expanded_hit_count = 24, expanded_session_count = 612, max_symbol_hit_rate = 0.05882353"
+state_transition_alignment,reasonable,"top_transition_pattern = neutral>mild_override_watch>reversal_watch>severe_override_positive, severe_hits_with_prior_reversal_share = 0.8"

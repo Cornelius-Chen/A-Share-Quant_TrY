@@ -1,0 +1,4 @@
+﻿gate_id,gate_state,supporting_count,gate_reason
+license_review_gate,closed,20,selective candidate hosts exist but all require manual license review before activation
+runtime_scheduler_gate,closed,1,network adapters are policy-bound but not attached to a live scheduler runtime
+review_only_social_gate,deferred_review_only,2,social/column hosts remain review-only and are excluded from activation promotion

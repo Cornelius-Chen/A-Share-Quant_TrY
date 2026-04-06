@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "focus_match_row_count": 1,
+    "focus_source_present_count": 1,
+    "theme_match_count": 1,
+    "symbol_match_count": 1,
+    "current_primary_theme_slug": "consumer_staples",
+    "current_primary_watch_symbol": "600887",
+    "authoritative_status": "accepted_primary_focus_backed_by_real_candidate_lane"
+  },
+  "triage_rows": [
+    {
+      "component": "accepted_focus_support",
+      "direction": "keep monitoring whether the accepted second-source row remains present inside the controlled merge candidate lane before any later consumer rotation."
+    },
+    {
+      "component": "theme_symbol_replay",
+      "direction": "prefer focus-specific replay tracking when a promoted theme/symbol pair becomes the primary consumer anchor instead of relying only on top-level snapshot fields."
+    },
+    {
+      "component": "multi-source_rotation_governance",
+      "direction": "treat any later focus rotation as a replay-backed decision and compare it against the current accepted focus support set before promoting again."
+    }
+  ],
+  "interpretation": [
+    "The accepted primary focus is no longer just a shadow proposal; it can now be traced back to concrete rows inside the controlled merge candidate lane.",
+    "This gives later rotation decisions a simpler comparison surface: current accepted focus support versus any challenger support set."
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126n_commercial_aerospace_phase_geometry_walk_forward_support_audit_v1",
+    "focus_start": "20251114",
+    "focus_end": "20260112",
+    "earliest_trade_date_with_matured_full_support": "20251205",
+    "matured_full_count_on_20251224": 18,
+    "matured_preheat_full_count_on_20251224": 18,
+    "matured_full_count_on_20260108": 45,
+    "authoritative_rule": "commercial_aerospace_phase_geometry_relabel_is_useful_only_if_it_creates_matured_full_support_before_or_during_impulse_replay_dates"
+  },
+  "support_rows": [
+    {
+      "trade_date": "20251114",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251117",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251118",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251119",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251120",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251121",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251124",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251125",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251126",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251127",
+      "matured_full_count": 0,
+      "matured_probe_count": 27,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251128",
+      "matured_full_count": 0,
+      "matured_probe_count": 28,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251201",
+      "matured_full_count": 0,
+      "matured_probe_count": 29,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251202",
+      "matured_full_count": 0,
+      "matured_probe_count": 30,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251203",
+      "matured_full_count": 0,
+      "matured_probe_count": 32,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251204",
+      "matured_full_count": 0,
+      "matured_probe_count": 35,
+      "matured_preheat_full_count": 0,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251205",
+      "matured_full_count": 2,
+      "matured_probe_count": 39,
+      "matured_preheat_full_count": 2,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251208",
+      "matured_full_count": 3,
+      "matured_probe_count": 43,
+      "matured_preheat_full_count": 3,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251209",
+      "matured_full_count": 3,
+      "matured_probe_count": 45,
+      "matured_preheat_full_count": 3,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251210",
+      "matured_full_count": 4,
+      "matured_probe_count": 49,
+      "matured_preheat_full_count": 4,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251211",
+      "matured_full_count": 5,
+      "matured_probe_count": 53,
+      "matured_preheat_full_count": 5,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251212",
+      "matured_full_count": 6,
+      "matured_probe_count": 55,
+      "matured_preheat_full_count": 6,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251215",
+      "matured_full_count": 7,
+      "matured_probe_count": 57,
+      "matured_preheat_full_count": 7,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251216",
+      "matured_full_count": 8,
+      "matured_probe_count": 59,
+      "matured_preheat_full_count": 8,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251217",
+      "matured_full_count": 9,
+      "matured_probe_count": 62,
+      "matured_preheat_full_count": 9,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251218",
+      "matured_full_count": 11,
+      "matured_probe_count": 63,
+      "matured_preheat_full_count": 11,
+      "focus_date_regime_mix": {
+        "sentiment_overdrive_transition_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251219",
+      "matured_full_count": 13,
+      "matured_probe_count": 64,
+      "matured_preheat_full_count": 13,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251222",
+      "matured_full_count": 16,
+      "matured_probe_count": 65,
+      "matured_preheat_full_count": 16,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251223",
+      "matured_full_count": 16,
+      "matured_probe_count": 68,
+      "matured_preheat_full_count": 16,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251224",
+      "matured_full_count": 18,
+      "matured_probe_count": 69,
+      "matured_preheat_full_count": 18,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251225",
+      "matured_full_count": 21,
+      "matured_probe_count": 69,
+      "matured_preheat_full_count": 21,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251226",
+      "matured_full_count": 24,
+      "matured_probe_count": 71,
+      "matured_preheat_full_count": 24,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251229",
+      "matured_full_count": 26,
+      "matured_probe_count": 74,
+      "matured_preheat_full_count": 26,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251230",
+      "matured_full_count": 26,
+      "matured_probe_count": 79,
+      "matured_preheat_full_count": 26,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20251231",
+      "matured_full_count": 31,
+      "matured_probe_count": 83,
+      "matured_preheat_full_count": 31,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260105",
+      "matured_full_count": 34,
+      "matured_probe_count": 86,
+      "matured_preheat_full_count": 34,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260106",
+      "matured_full_count": 36,
+      "matured_probe_count": 90,
+      "matured_preheat_full_count": 36,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260107",
+      "matured_full_count": 36,
+      "matured_probe_count": 95,
+      "matured_preheat_full_count": 36,
+      "focus_date_regime_mix": {
+        "risk_off_deterioration_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260108",
+      "matured_full_count": 45,
+      "matured_probe_count": 96,
+      "matured_preheat_full_count": 45,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260109",
+      "matured_full_count": 56,
+      "matured_probe_count": 97,
+      "matured_preheat_full_count": 45,
+      "focus_date_regime_mix": {
+        "weak_drift_chop_proxy": 12
+      }
+    },
+    {
+      "trade_date": "20260112",
+      "matured_full_count": 67,
+      "matured_probe_count": 98,
+      "matured_preheat_full_count": 45,
+      "focus_date_regime_mix": {
+        "impulse_expansion_proxy": 12
+      }
+    }
+  ],
+  "interpretation": [
+    "V1.26N checks the lawful walk-forward consequence of the new phase-geometry labels.",
+    "The key question is whether preheat relabeling creates matured full-support before the impulse replay window rather than only after it."
+  ]
+}

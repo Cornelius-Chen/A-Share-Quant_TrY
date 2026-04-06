@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jg_commercial_aerospace_event_attention_capital_local_handoff_package_v1",
+    "local_route_mainline_frozen": true,
+    "capital_true_selection_blocked": true,
+    "hard_heat_source_inventory_single_case": true,
+    "future_handoff_ready": true,
+    "handoff_csv": "data\\training\\commercial_aerospace_event_attention_capital_local_handoff_package_v1.csv",
+    "authoritative_output": "commercial_aerospace_event_attention_capital_local_handoff_package_ready_for_direction_triage"
+  },
+  "package_rows": [
+    {
+      "component": "local_route_completion",
+      "status": "frozen_for_handoff",
+      "detail": "freeze_event_attention_capital_local_route_and_do_not_drift_inside_same_local_inventory"
+    },
+    {
+      "component": "negative_environment_semantics",
+      "status": "retained",
+      "detail": "semantic_count = 3"
+    },
+    {
+      "component": "event_attention_registry",
+      "status": "retained",
+      "detail": "registry_row_count = 8"
+    },
+    {
+      "component": "role_separation_and_heat_proxy_layers",
+      "status": "retained_as_local_only",
+      "detail": "soft_candidate_count = 4; strongest_soft_heat_proxy_symbol = 603601"
+    },
+    {
+      "component": "capital_true_selection",
+      "status": "still_blocked",
+      "detail": "remaining_hard_gap_count = 2"
+    },
+    {
+      "component": "hard_heat_source_inventory",
+      "status": "single_case_stopline",
+      "detail": "retained_symbol_named_heat_source_count = 1"
+    },
+    {
+      "component": "future_progress_gate",
+      "status": "future_evidence_expansion_only",
+      "detail": "Do not reopen the local route without broader attention evidence or a new retained symbol-named hard heat source."
+    }
+  ],
+  "interpretation": [
+    "V1.34JG packages the board-local event-attention-capital route for handoff without pretending that true-selection authority is solved.",
+    "The point is to freeze the local semantics that are already real, keep promotion blocked, and make the next frontier explicitly evidence-driven rather than repetitive."
+  ]
+}

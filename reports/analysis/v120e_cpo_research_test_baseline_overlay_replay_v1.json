@@ -1,0 +1,389 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120e_cpo_research_test_baseline_overlay_replay_v1",
+    "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open",
+    "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+    "initial_capital": 1000000.0,
+    "baseline_final_equity": 1766466.6096,
+    "baseline_max_drawdown": 0.134272,
+    "research_overlay_order_count": 12,
+    "research_test_final_equity": 5844604.996,
+    "research_test_delta_vs_baseline": 4078138.3864,
+    "research_test_max_drawdown": 0.493548,
+    "component_names_included": [
+      "cooling_reacceleration_branch",
+      "sustained_participation_non_chase",
+      "participation_turnover_elg_support",
+      "cooled_q_0p25"
+    ],
+    "excluded_non_dead_component_names": [
+      "breakout_damage_soft_component"
+    ],
+    "recommended_next_posture": "treat_as_research_test_baseline_only_not_as_authoritative_system"
+  },
+  "aggregated_signal_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support"
+      ],
+      "component_count": 3,
+      "max_score_value": 1308551000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support"
+      ],
+      "component_count": 3,
+      "max_score_value": 1760701000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "cooled_q_0p25"
+      ],
+      "component_count": 3,
+      "max_score_value": 2377449073.137061
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "component_names": [
+        "sustained_participation_non_chase",
+        "cooled_q_0p25"
+      ],
+      "component_count": 2,
+      "max_score_value": 2390968686.829432
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "cooled_q_0p25"
+      ],
+      "component_count": 3,
+      "max_score_value": 1971542765.188754
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "cooled_q_0p25"
+      ],
+      "component_count": 3,
+      "max_score_value": 2344101436.216928
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300308",
+      "component_names": [
+        "cooled_q_0p25"
+      ],
+      "component_count": 1,
+      "max_score_value": 2146708342.172604
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "component_names": [
+        "cooled_q_0p25"
+      ],
+      "component_count": 1,
+      "max_score_value": 1804796632.388829
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support"
+      ],
+      "component_count": 3,
+      "max_score_value": 1567386000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support",
+        "cooled_q_0p25"
+      ],
+      "component_count": 4,
+      "max_score_value": 1762262299.877264
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support",
+        "cooled_q_0p25"
+      ],
+      "component_count": 4,
+      "max_score_value": 2153774191.772055
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support"
+      ],
+      "component_count": 3,
+      "max_score_value": 787409000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "component_names": [
+        "cooling_reacceleration_branch",
+        "sustained_participation_non_chase",
+        "participation_turnover_elg_support"
+      ],
+      "component_count": 3,
+      "max_score_value": 1232661000.0
+    }
+  ],
+  "executed_overlay_rows": [
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-15",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 400,
+      "execution_price": 133.9,
+      "notional": 53560.0,
+      "commission": 16.068,
+      "stamp_tax": 0.0,
+      "slippage": 26.78,
+      "total_cost": 42.848,
+      "weight_vs_initial_capital": 0.05356,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "execution_trade_date": "2023-06-15",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 500,
+      "execution_price": 67.13,
+      "notional": 33565.0,
+      "commission": 10.0695,
+      "stamp_tax": 0.0,
+      "slippage": 16.7825,
+      "total_cost": 26.852,
+      "weight_vs_initial_capital": 0.033565,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "execution_trade_date": "2023-09-25",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|cooling_reacceleration_branch|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 600,
+      "execution_price": 111.08,
+      "notional": 66648.0,
+      "commission": 19.9944,
+      "stamp_tax": 0.0,
+      "slippage": 33.324,
+      "total_cost": 53.3184,
+      "weight_vs_initial_capital": 0.066648,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "execution_trade_date": "2023-09-25",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|sustained_participation_non_chase",
+      "component_count": 2,
+      "quantity": 500,
+      "execution_price": 44.05,
+      "notional": 22025.0,
+      "commission": 6.6075,
+      "stamp_tax": 0.0,
+      "slippage": 11.0125,
+      "total_cost": 17.62,
+      "weight_vs_initial_capital": 0.022025,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-11",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|cooling_reacceleration_branch|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 800,
+      "execution_price": 117.24,
+      "notional": 93792.0,
+      "commission": 28.1376,
+      "stamp_tax": 0.0,
+      "slippage": 46.896,
+      "total_cost": 75.0336,
+      "weight_vs_initial_capital": 0.093792,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "execution_trade_date": "2023-12-11",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|cooling_reacceleration_branch|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 1000,
+      "execution_price": 53.0,
+      "notional": 53000.0,
+      "commission": 15.9,
+      "stamp_tax": 0.0,
+      "slippage": 26.5,
+      "total_cost": 42.4,
+      "weight_vs_initial_capital": 0.053,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "execution_trade_date": "2024-01-19",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooled_q_0p25",
+      "component_count": 1,
+      "quantity": 600,
+      "execution_price": 112.3,
+      "notional": 67380.0,
+      "commission": 20.214,
+      "stamp_tax": 0.0,
+      "slippage": 33.69,
+      "total_cost": 53.904,
+      "weight_vs_initial_capital": 0.06738,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "execution_trade_date": "2024-01-19",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooled_q_0p25",
+      "component_count": 1,
+      "quantity": 800,
+      "execution_price": 52.09,
+      "notional": 41672.0,
+      "commission": 12.5016,
+      "stamp_tax": 0.0,
+      "slippage": 20.836,
+      "total_cost": 33.3376,
+      "weight_vs_initial_capital": 0.041672,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "execution_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 900,
+      "execution_price": 110.66,
+      "notional": 99594.0,
+      "commission": 29.8782,
+      "stamp_tax": 0.0,
+      "slippage": 49.797,
+      "total_cost": 79.6752,
+      "weight_vs_initial_capital": 0.099594,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "execution_trade_date": "2024-02-07",
+      "symbol": "300308",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 4,
+      "quantity": 800,
+      "execution_price": 123.1,
+      "notional": 98480.0,
+      "commission": 29.544,
+      "stamp_tax": 0.0,
+      "slippage": 49.24,
+      "total_cost": 78.784,
+      "weight_vs_initial_capital": 0.09848,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "execution_trade_date": "2024-02-07",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooled_q_0p25|cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 4,
+      "quantity": 1900,
+      "execution_price": 51.29,
+      "notional": 97451.0,
+      "commission": 29.2353,
+      "stamp_tax": 0.0,
+      "slippage": 48.7255,
+      "total_cost": 77.9608,
+      "weight_vs_initial_capital": 0.097451,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "execution_trade_date": "2025-06-04",
+      "symbol": "300502",
+      "action": "buy",
+      "component_names": "cooling_reacceleration_branch|participation_turnover_elg_support|sustained_participation_non_chase",
+      "component_count": 3,
+      "quantity": 1100,
+      "execution_price": 88.5,
+      "notional": 97350.0,
+      "commission": 29.205,
+      "stamp_tax": 0.0,
+      "slippage": 48.675,
+      "total_cost": 77.88,
+      "weight_vs_initial_capital": 0.09735,
+      "overlay_scope": "research_test_baseline_held_position_only_do_not_override_baseline_sell",
+      "execution_mode": "signal_on_t_close_execute_on_t_plus_1_open"
+    }
+  ],
+  "interpretation": [
+    "This replay uses all retained non-dead branches inside one bounded research test baseline overlay.",
+    "It is not authoritative because the retained branches still fail promotion gates and only support held-position overlay semantics.",
+    "Breakout-damage remains excluded from execution because it is archived as a soft expectancy component without an honest row-level execution surface here."
+  ]
+}

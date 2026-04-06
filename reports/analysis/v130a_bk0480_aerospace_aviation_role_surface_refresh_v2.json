@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130a_bk0480_aerospace_aviation_role_surface_refresh_v2",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "internal_owner_count": 2,
+    "confirmation_count": 1,
+    "quarantine_count": 2,
+    "reject_pending_count": 1,
+    "source_boundary": "bk0480_local_expansion_can_widen_the_role_surface_but_not_yet_the_control_authority_surface",
+    "next_phase": "control_surface_refresh_with_feed_harmonization_guard",
+    "recommended_next_posture": "refresh_bk0480_control_surface_without_granting_600760_authority_until_cross_version_semantics_are_harmonized"
+  },
+  "role_rows": [
+    {
+      "symbol": "000738",
+      "role_label": "stable_core_primary",
+      "structural_authority": "board_internal_owner",
+      "transfer_reset_posture": "local_snapshot_supported_v6",
+      "rationale": "Remains the BK0480 internal authority until a wider harmonized control surface proves otherwise."
+    },
+    {
+      "symbol": "600118",
+      "role_label": "high_quality_dual_core_support",
+      "structural_authority": "board_internal_owner",
+      "transfer_reset_posture": "local_snapshot_supported_v6",
+      "rationale": "Remains the second internal owner and primary add/de-risk support surface."
+    },
+    {
+      "symbol": "600760",
+      "role_label": "local_confirmation_candidate",
+      "structural_authority": "confirmation_only",
+      "transfer_reset_posture": "historical_native_support_v5_not_yet_harmonized_into_v6_control_surface",
+      "rationale": "historical_bk0480_snapshot_support_and_repeated_timeline_buys_make_this_the_best_local_expansion_name"
+    },
+    {
+      "symbol": "002273",
+      "role_label": "quarantine_pending_local_confirmation",
+      "structural_authority": "quarantine_only",
+      "transfer_reset_posture": "timeline_native_evidence_only",
+      "rationale": "timeline_support_exists_but_lacks_native_snapshot_reinforcement_so_this_stays_pending"
+    },
+    {
+      "symbol": "601989",
+      "role_label": "quarantine_pending_local_confirmation",
+      "structural_authority": "quarantine_only",
+      "transfer_reset_posture": "timeline_native_evidence_only",
+      "rationale": "timeline_support_exists_but_lacks_native_snapshot_reinforcement_so_this_stays_pending"
+    },
+    {
+      "symbol": "000099",
+      "role_label": "reject_or_mirror_pending",
+      "structural_authority": "not_admitted",
+      "transfer_reset_posture": "timeline_native_but_negative_mix",
+      "rationale": "evidence_is_too_mixed_or_too_weak_to_admit_even_as_pending_confirmation"
+    }
+  ],
+  "relative_structure_labels": [
+    {
+      "label_name": "internal_owner_stack",
+      "members": [
+        "000738",
+        "600118"
+      ],
+      "meaning": "still the only names allowed to define authority/support semantics"
+    },
+    {
+      "label_name": "confirmation_stack",
+      "members": [
+        "600760"
+      ],
+      "meaning": "historically strong BK0480-native confirmation name, but not yet a control-authority participant"
+    },
+    {
+      "label_name": "quarantine_stack",
+      "members": [
+        "002273",
+        "601989"
+      ],
+      "meaning": "watchlist names with BK0480-native evidence that need more harmonized local support before admission"
+    },
+    {
+      "label_name": "reject_or_mirror_pending_stack",
+      "members": [
+        "000099"
+      ],
+      "meaning": "currently too mixed or negative for admission; only retained as a local rejection case"
+    }
+  ],
+  "interpretation": [
+    "V1.30A widens BK0480 from a pure dual-core board to a dual-core-plus-confirmation surface.",
+    "600760 is admitted only as confirmation because its strongest evidence comes from historical BK0480-native support, not the current v6 owner surface.",
+    "002273 and 601989 remain quarantined to preserve transfer discipline and avoid replay leakage from weak local evidence."
+  ]
+}

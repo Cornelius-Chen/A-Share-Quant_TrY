@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ab_commercial_aerospace_ab_phase2_current_direction_triage_v2",
+    "authoritative_status": "freeze_refined_phase2_shadow_stack_and_keep_all_session_and_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_ab_phase2_current_direction_triage_v2.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "current_phase2_wider_reference",
+      "status": "frozen",
+      "detail": "broader_hit_mild_blocked_plus_reversal_late_severe_block"
+    },
+    {
+      "component": "local_failure_cluster_refinement",
+      "status": "promoted",
+      "detail": "The only remaining negative cluster is now addressed inside the current wider reference without reopening the surface boundary."
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "No authorization to move beyond broader-hit sessions."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Phase-2 improvements remain shadow-only and do not authorize replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34AB converts the refined phase-2 stack into the current direction judgment.",
+    "The branch should now stop widening and only continue with attribution or failure-cluster supervision inside the already-approved broader-hit boundary."
+  ]
+}

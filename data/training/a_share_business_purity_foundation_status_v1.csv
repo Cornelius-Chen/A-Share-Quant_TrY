@@ -1,0 +1,4 @@
+﻿component,component_state,artifact_path,coverage_note
+business_reference,materialized_bootstrap,data\reference\info_center\business_reference\a_share_business_reference_v1.csv,business_reference_count = 82
+concept_purity,materialized_bootstrap,data\reference\info_center\concept_purity\a_share_concept_purity_v1.csv,concept_purity_count = 82
+residual_backlog,materialized_named_residuals,data\reference\info_center\concept_purity\a_share_business_purity_residual_backlog_v1.csv,residual_count = 34

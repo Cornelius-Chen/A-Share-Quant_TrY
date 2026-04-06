@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "current_primary_rank_change": "no_previous_baseline",
+    "incumbent_is_leader_change": "no_previous_baseline",
+    "review_state_change": "no_previous_baseline",
+    "tension_state_change": "no_previous_baseline",
+    "tension_priority_change": "no_previous_baseline",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_focus_governance_tension_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "tension_change_signal",
+      "component_state": "materialized",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "tension_change_signal",
+      "component_state": "materialized",
+      "metric": "current_primary_rank_change",
+      "value": "no_previous_baseline"
+    },
+    {
+      "component": "tension_change_signal",
+      "component_state": "materialized",
+      "metric": "tension_state_change",
+      "value": "no_previous_baseline"
+    },
+    {
+      "component": "tension_change_signal",
+      "component_state": "materialized",
+      "metric": "tension_priority_change",
+      "value": "no_previous_baseline"
+    }
+  ],
+  "interpretation": [
+    "This change layer lets the top stack react when governance tension itself changes, not only when raw focus references rotate.",
+    "It is useful for detecting when ranking-vs-policy disagreement begins, escalates, or resolves."
+  ]
+}

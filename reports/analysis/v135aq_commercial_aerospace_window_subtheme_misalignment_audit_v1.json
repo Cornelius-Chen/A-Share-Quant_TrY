@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 4,
+    "covered_window_count": 1,
+    "not_tradable_count": 1,
+    "watch_only_count": 3,
+    "negative_sample_ready_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_005",
+      "representative_symbol_count": "4",
+      "target_core_confirmation_state": "failed_core_confirmation",
+      "local_outlier_count": "2",
+      "broad_alignment_state": "logic_valid_but_board_not_upgraded",
+      "final_training_admission": "negative_sample_ready",
+      "strict_supervisor_conclusion": "Window 005 is a clean anti-false-positive sample: the subtheme logic was real, but the target core name did not confirm, board breadth was too weak, and the few strong names were local outliers rather than a genuine new leg."
+    }
+  ],
+  "interpretation": [
+    "Window 005 is now pinned as a clean logic-valid-but-board-misaligned sample.",
+    "The most important evidence is that the target subtheme core failed to confirm while a few local outliers still looked strong.",
+    "This should train the model not to upgrade a good industrial logic into a tradable new leg without breadth and core-name confirmation."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kb_a_share_ka_storage_lifecycle_direction_triage_v1",
+    "lifecycle_class_count": 10,
+    "disposable_class_count": 3,
+    "authoritative_status": "treat_storage_exit_as_first_class_and_keep_only_truth_layers_long_lived_while_defaulting_intermediates_to_ttl_or_archive"
+  },
+  "triage_rows": [
+    {
+      "priority_band": "p0",
+      "direction": "treat_security_master_alias_business_reference_and_structured_claim_event_layers_as_frozen_reference"
+    },
+    {
+      "priority_band": "p0",
+      "direction": "default_temporary_feature_views_and_candidate_search_outputs_to_ttl_backed_disposable_assets"
+    },
+    {
+      "priority_band": "p1",
+      "direction": "compact_low_tier_raw_documents_into_claim_event_attention_summaries_before_storage_bloat_accumulates"
+    },
+    {
+      "priority_band": "p1",
+      "direction": "keep_recent_intraday_detail_hot_only_for_shadow_and_research_windows_then_roll_up_or_archive"
+    },
+    {
+      "priority_band": "p2",
+      "direction": "keep_shadow_and_execution_journals_longer_than_raw_market_noise_because_replay_and_dispute_resolution_depend_on_them"
+    }
+  ],
+  "interpretation": [
+    "V1.34KB converts the lifecycle policy into operating direction.",
+    "The key discipline is asymmetry: truth layers stay, replay journals stay long enough, but intermediates and low-grade raw text should be aggressively compacted or evicted."
+  ]
+}

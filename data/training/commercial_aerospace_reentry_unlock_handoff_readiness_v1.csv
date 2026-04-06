@@ -1,0 +1,4 @@
+﻿trade_date,symbol,reentry_family,board_gate_state,rebuild_watch_trade_date,lockout_window,lockout_overlap,future_unlock_positive_count,future_unlock_worthy_count,first_future_unlock_positive_trade_date,first_future_unlock_worthy_trade_date,handoff_ready,blocker_family
+20260113,000738,deep_washout_reentry_gap,pre_lockout_seed,20260120,20260115->20260320,True,0,0,,,False,lockout_overlap_block|no_future_unlock_seed
+20260120,300342,delayed_rebound_reentry_gap,in_lockout_seed,20260123,20260115->20260320,True,0,0,,,False,lockout_overlap_block|no_future_unlock_seed
+20260120,688523,delayed_rebound_reentry_gap,in_lockout_seed,20260123,20260115->20260320,True,0,0,,,False,lockout_overlap_block|no_future_unlock_seed

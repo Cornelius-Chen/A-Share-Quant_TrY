@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "index_candidate_cover_count": 16,
+    "limit_halt_candidate_cover_count": 14,
+    "authoritative_status": "paired_surface_candidate_layer_ready_for_promotion_recheck"
+  },
+  "triage_rows": [
+    {
+      "component": "index_daily_extension",
+      "direction": "retire_index_daily_as_primary_candidate_gap_blocker"
+    },
+    {
+      "component": "limit_halt_extension",
+      "direction": "shift_focus_to_limit_halt_materialization_and_promotion_recheck"
+    }
+  ],
+  "interpretation": [
+    "The paired-surface blocker is no longer candidate-layer absence once both surfaces have cover.",
+    "The next closure mode becomes promotion recheck rather than index-daily candidate search."
+  ]
+}

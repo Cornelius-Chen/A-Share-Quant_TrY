@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134b_commercial_aerospace_ab_simulator_direction_triage_v1",
+    "reviewer_count": 3,
+    "consensus_count": 4,
+    "spec_action_mapping_count": 3,
+    "authoritative_status": "approve_phase_2_simulator_implementation_but_keep_phase_3_replay_lane_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_ab_simulator_direction_triage_v1.csv"
+  },
+  "review_rows": [
+    {
+      "reviewer": "Pasteur",
+      "focus": "lawfulness",
+      "verdict": "approved_if_next_bar_only",
+      "hard_point": "the simulator must forbid same-bar execution and keep all tier actions on next-bar open fills only"
+    },
+    {
+      "reviewer": "Sagan",
+      "focus": "engineering_scope",
+      "verdict": "approved_narrow_scope",
+      "hard_point": "phase 2 should begin on canonical seed sessions only; do not widen to broader session simulation before seed reproducibility passes"
+    },
+    {
+      "reviewer": "Dirac",
+      "focus": "governance_boundary",
+      "verdict": "approved_shadow_only",
+      "hard_point": "phase 3 replay binding remains blocked; simulator outputs must stay explicitly shadow-only and read-only against the frozen EOD primary"
+    }
+  ],
+  "consensus_rows": [
+    {
+      "consensus_item": "phase_2_direction",
+      "status": "approved_for_implementation",
+      "detail": "the simulator specification is sufficiently explicit to begin implementation under the existing shadow-only guardrails"
+    },
+    {
+      "consensus_item": "seed_scope_only",
+      "status": "mandatory",
+      "detail": "implementation starts on the six canonical seed sessions only; broader all-session simulation remains blocked"
+    },
+    {
+      "consensus_item": "execution_clock",
+      "status": "mandatory",
+      "detail": "trigger at minute-close, fill at next-bar open, with no same-bar trading exceptions"
+    },
+    {
+      "consensus_item": "phase_3_boundary",
+      "status": "still_blocked",
+      "detail": "separate intraday replay lane may not open until the simulator exists and passes a deterministic seed audit"
+    }
+  ],
+  "interpretation": [
+    "V1.34B converts the phase-2 simulator spec into an implementation triage result.",
+    "The simulator may now be implemented, but only in the narrow seed-session shadow lane and without opening the replay-binding workstream."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124f_cpo_heat_plus_riskoff_add_suppression_overlap_audit_v1",
+    "overlay_exec_row_count": 13,
+    "riskoff_thresholds": {
+      "q75": 1.192462,
+      "q85": 2.390718,
+      "q90": 3.087657
+    },
+    "max_overlap_over_threshold_and_gross55": 0,
+    "recommended_next_posture": "triage_add_suppression_family_if_overlap_is_zero_or_trivial"
+  },
+  "overlap_rows": [
+    {
+      "riskoff_quantile": "q75",
+      "threshold": 1.192462,
+      "overlay_exec_row_count": 13,
+      "rows_with_riskoff_signal": 1,
+      "rows_over_threshold": 0,
+      "rows_over_threshold_and_gross55": 0,
+      "rows_over_threshold_and_gross60": 0
+    },
+    {
+      "riskoff_quantile": "q85",
+      "threshold": 2.390718,
+      "overlay_exec_row_count": 13,
+      "rows_with_riskoff_signal": 1,
+      "rows_over_threshold": 0,
+      "rows_over_threshold_and_gross55": 0,
+      "rows_over_threshold_and_gross60": 0
+    },
+    {
+      "riskoff_quantile": "q90",
+      "threshold": 3.087657,
+      "overlay_exec_row_count": 13,
+      "rows_with_riskoff_signal": 1,
+      "rows_over_threshold": 0,
+      "rows_over_threshold_and_gross55": 0,
+      "rows_over_threshold_and_gross60": 0
+    }
+  ],
+  "interpretation": [
+    "V1.24F explains why the add-suppression execution variants either matter or do nothing.",
+    "If there is almost no overlap between overlay add days and high-threshold risk-off states inside already-hot books, then suppression cannot improve the line and should be stopped cleanly."
+  ]
+}

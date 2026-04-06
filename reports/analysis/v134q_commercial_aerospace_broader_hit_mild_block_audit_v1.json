@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134q_commercial_aerospace_broader_hit_mild_block_audit_v1",
+    "base_same_day_loss_avoided_total": 20525.3818,
+    "mild_block_same_day_loss_avoided_total": 25934.8882,
+    "same_day_loss_avoided_delta": 5409.5064,
+    "base_simulated_order_count": 35,
+    "mild_block_simulated_order_count": 30,
+    "blocked_mild_session_count": 6,
+    "sessions_csv": "data\\training\\commercial_aerospace_intraday_broader_hit_mild_block_sessions_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_hit_mild_block_audit_ready_for_direction_triage"
+  },
+  "compare_rows": [
+    {
+      "variant": "base_broader_hit",
+      "same_day_loss_avoided_total": 20525.3818,
+      "simulated_order_count": 35
+    },
+    {
+      "variant": "mild_blocked_broader_hit",
+      "same_day_loss_avoided_total": 25934.8882,
+      "simulated_order_count": 30
+    }
+  ],
+  "interpretation": [
+    "V1.34Q evaluates the exact boundary change recommended by the broader-hit supervision review: block execution for predicted mild sessions inside the wider phase-2 lane.",
+    "The audit is deliberately narrow so the next direction judgment can focus on whether this one refinement improves the wider lane without changing its clock or cost model."
+  ]
+}

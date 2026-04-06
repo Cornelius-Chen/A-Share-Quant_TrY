@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122w_cpo_research_test_baseline_drawdown_attribution_v1",
+    "drawdown_count": 3,
+    "largest_drawdown_rank": 1,
+    "largest_drawdown_peak_date": "2024-10-08",
+    "largest_drawdown_trough_date": "2025-04-09",
+    "largest_drawdown_peak_cash_ratio": 0.077815,
+    "largest_drawdown_interval_trade_count": 0,
+    "recommended_next_posture": "use_drawdown_attribution_to_decide_whether_next_work_should_focus_on_reduce_or_position_heat"
+  },
+  "drawdown_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "trough_date": "2025-04-09",
+      "drawdown": 0.493548,
+      "drawdown_amount": 980091.5,
+      "peak_equity": 1985805.896,
+      "trough_equity": 1005714.396,
+      "peak_cash": 154524.896,
+      "trough_cash": 154524.896,
+      "peak_cash_ratio": 0.077815,
+      "trough_cash_ratio": 0.153647,
+      "peak_held_symbols": "300308,300502,300757",
+      "trough_held_symbols": "300308,300502,300757",
+      "peak_position_count": 3,
+      "trough_position_count": 3,
+      "interval_trade_count": 0,
+      "interval_trade_rows": [],
+      "symbol_contributions": [
+        {
+          "symbol": "300502",
+          "peak_qty": 6050,
+          "peak_close": 155.96,
+          "trough_close": 70.41,
+          "mark_to_market_change": -517577.5
+        },
+        {
+          "symbol": "300308",
+          "peak_qty": 4100,
+          "peak_close": 185.83,
+          "trough_close": 71.99,
+          "mark_to_market_change": -466744.0
+        },
+        {
+          "symbol": "300757",
+          "peak_qty": 900,
+          "peak_close": 139.8,
+          "trough_close": 144.5,
+          "mark_to_market_change": 4230.0
+        }
+      ],
+      "estimated_mark_to_market_change_from_peak_positions": -980091.5
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "trough_date": "2024-09-06",
+      "drawdown": 0.273025,
+      "drawdown_amount": 436860.5,
+      "peak_equity": 1600077.896,
+      "trough_equity": 1163217.396,
+      "peak_cash": 154524.896,
+      "trough_cash": 154524.896,
+      "peak_cash_ratio": 0.096573,
+      "trough_cash_ratio": 0.132843,
+      "peak_held_symbols": "300308,300502,300757",
+      "trough_held_symbols": "300308,300502,300757",
+      "peak_position_count": 3,
+      "trough_position_count": 3,
+      "interval_trade_count": 0,
+      "interval_trade_rows": [],
+      "symbol_contributions": [
+        {
+          "symbol": "300308",
+          "peak_qty": 4100,
+          "peak_close": 157.53,
+          "trough_close": 99.42,
+          "mark_to_market_change": -238251.0
+        },
+        {
+          "symbol": "300502",
+          "peak_qty": 6050,
+          "peak_close": 119.4,
+          "trough_close": 88.61,
+          "mark_to_market_change": -186279.5
+        },
+        {
+          "symbol": "300757",
+          "peak_qty": 900,
+          "peak_close": 85.9,
+          "trough_close": 72.2,
+          "mark_to_market_change": -12330.0
+        }
+      ],
+      "estimated_mark_to_market_change_from_peak_positions": -436860.5
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "trough_date": "2023-11-01",
+      "drawdown": 0.193702,
+      "drawdown_amount": 211397.9384,
+      "peak_equity": 1091357.0504,
+      "trough_equity": 879959.112,
+      "peak_cash": 742357.0504,
+      "trough_cash": 653613.112,
+      "peak_cash_ratio": 0.680215,
+      "trough_cash_ratio": 0.742777,
+      "peak_held_symbols": "300308,300502",
+      "trough_held_symbols": "300308,300502",
+      "peak_position_count": 2,
+      "trough_position_count": 2,
+      "interval_trade_count": 2,
+      "interval_trade_rows": [
+        {
+          "execution_trade_date": "2023-09-25",
+          "lane": "research_test_baseline",
+          "symbol": "300308",
+          "action": "add",
+          "reason": "cooled_q_0p25|cooling_reacceleration_branch|sustained_participation_non_chase",
+          "weight_vs_initial_capital": 0.066648,
+          "notional": 66648.0
+        },
+        {
+          "execution_trade_date": "2023-09-25",
+          "lane": "research_test_baseline",
+          "symbol": "300502",
+          "action": "add",
+          "reason": "cooled_q_0p25|sustained_participation_non_chase",
+          "weight_vs_initial_capital": 0.022025,
+          "notional": 22025.0
+        }
+      ],
+      "symbol_contributions": [
+        {
+          "symbol": "300308",
+          "peak_qty": 1300,
+          "peak_close": 170.0,
+          "trough_close": 85.22,
+          "mark_to_market_change": -110214.0
+        },
+        {
+          "symbol": "300502",
+          "peak_qty": 1600,
+          "peak_close": 80.0,
+          "trough_close": 30.68,
+          "mark_to_market_change": -78912.0
+        }
+      ],
+      "estimated_mark_to_market_change_from_peak_positions": -189126.0
+    }
+  ],
+  "interpretation": [
+    "V1.22W turns the top drawdown chart into attribution rather than just geometry.",
+    "The purpose is to see whether the research test baseline mainly failed because it was too invested, too concentrated, or still adding at the wrong times.",
+    "This is descriptive attribution only; it does not promote any candidate into execution."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kq_a_share_kp_feature_direction_triage_v1",
+    "feature_registry_count": 9,
+    "feature_surface_row_count": 566,
+    "authoritative_status": "feature_workstream_complete_enough_to_freeze_as_bootstrap_and_shift_into_pti_population"
+  },
+  "triage_rows": [
+    {
+      "feature_component": "feature_registry",
+      "direction": "retain_as_central_definition_surface_and_add_new_features_here_not_inside_branch_local_outputs"
+    },
+    {
+      "feature_component": "feature_surface",
+      "direction": "use_bootstrap_symbolic_and_statistical_features_as_current_pti_input_candidate_surface"
+    },
+    {
+      "feature_component": "representation_backlog",
+      "direction": "delay_representation_materialization_until_pti_and_replay_require_it"
+    },
+    {
+      "feature_component": "next_frontier",
+      "direction": "move_into_pti_workstream_using_central_feature_surface_and_label_registry_as_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KQ converts the feature audit into direction.",
+    "The next move is PTI: features are now centralized enough that time-slice and state-transition layers can begin consuming them."
+  ]
+}

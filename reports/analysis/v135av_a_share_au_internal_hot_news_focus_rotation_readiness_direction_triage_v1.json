@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "current_primary_theme_slug": "oil_gas",
+    "current_primary_rank": 2,
+    "leader_theme_slug": "defense_industry",
+    "review_state": "hold_incumbent_focus",
+    "tension_state": "incumbent_not_leader_but_gate_holds",
+    "rotation_readiness_state": "rank_misaligned_under_gate_hold",
+    "rotation_readiness_priority": "p2",
+    "authoritative_status": "focus_rotation_readiness_packet_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "single_row_readiness",
+      "direction": "use this packet as the one-row answer for whether focus rotation should remain cold, warm up, or fully open."
+    },
+    {
+      "component": "review_discipline",
+      "direction": "keep rotation closed when readiness says rank alone is insufficient, even if the incumbent is no longer leader."
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "only escalate to shadow promotion or acceptance when readiness climbs into the explicit open-review state."
+    }
+  ],
+  "interpretation": [
+    "This packet reduces several interacting governance surfaces to one operational readiness judgement.",
+    "It is useful for top-level consumers that do not want to reason through rank, tension, and review separately every cycle."
+  ]
+}

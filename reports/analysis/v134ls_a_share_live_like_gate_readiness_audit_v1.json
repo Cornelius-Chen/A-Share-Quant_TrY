@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "active_local_ingest_count": 7,
+    "active_review_queue_count": 3,
+    "closed_gate_count": 3,
+    "materialized_live_like_view_count": 2,
+    "replay_execution_backlog_present": true,
+    "live_like_ready_now": false,
+    "status_csv": "data\\training\\a_share_live_like_gate_readiness_status_v1.csv",
+    "authoritative_output": "a_share_live_like_gate_readiness_not_satisfied"
+  },
+  "rows": [
+    {
+      "gate_component": "source_activation",
+      "component_state": "partially_ready_local_only",
+      "supporting_count": 7,
+      "blocker": "source_manual_closure_pending"
+    },
+    {
+      "gate_component": "review_layer",
+      "component_state": "ready_bootstrap",
+      "supporting_count": 3,
+      "blocker": ""
+    },
+    {
+      "gate_component": "governance_gates",
+      "component_state": "closed",
+      "supporting_count": 3,
+      "blocker": "execution_authority_gate_and_live_like_opening_gate_still_closed"
+    },
+    {
+      "gate_component": "serving_live_like",
+      "component_state": "materialized_but_blocked",
+      "supporting_count": 2,
+      "blocker": "live_like_views_materialized_but_governance_and_execution_gates_remain_closed"
+    },
+    {
+      "gate_component": "replay_binding",
+      "component_state": "blocked",
+      "supporting_count": 1,
+      "blocker": "execution_binding_backlog_present_with_corrected_missing_count=2_and_boundary_only_residual_count=2"
+    }
+  ],
+  "interpretation": [
+    "The stack now has enough structure to evaluate live-like readiness explicitly instead of hand-waving it away.",
+    "The result is still negative: local ingest and review exist, but governance gates remain closed and replay still carries execution-binding backlog, now narrowed to external boundary residuals plus stub replacement under the shadow overlay recheck."
+  ]
+}

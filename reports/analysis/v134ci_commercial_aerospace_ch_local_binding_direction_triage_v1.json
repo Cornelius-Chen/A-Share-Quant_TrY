@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ci_commercial_aerospace_ch_local_binding_direction_triage_v1",
+    "authoritative_status": "retain_isolated_sell_side_binding_surface_and_shift_next_to_local_rebound_residue_supervision_only",
+    "positive_3d_rebound_case_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_ch_local_binding_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "same_day_core_contribution",
+      "status": "retain",
+      "detail": "best_same_day_symbol = 300342"
+    },
+    {
+      "component": "medium_short_rebound_residue",
+      "status": "local_enough_for_case_supervision_only",
+      "detail": "worst_3d_rebound_symbol = 300342, top_3d_rebound_case = 20260120 300342"
+    },
+    {
+      "component": "next_real_work",
+      "status": "stay_local_and_do_not_expand",
+      "detail": "Any next work should stay inside the local rebound residue and should not reopen wider surface expansion or replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34CI converts local attribution on the first real binding surface into a narrowed direction judgment.",
+    "The remaining issue is no longer a broad sell-family failure; it is a local rebound residue that should remain under supervision only."
+  ]
+}

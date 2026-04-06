@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ex_commercial_aerospace_add_context_gating_audit_v1",
+    "scenario_count": 7,
+    "baseline_non_seed_to_seed_ratio": 10.53191489,
+    "best_scenario_name": "unlock_worthy_plus_high_role",
+    "best_scenario_non_seed_to_seed_ratio": 5.4,
+    "best_scenario_seed_kept_count": 5,
+    "best_scenario_non_seed_kept_count": 27,
+    "authoritative_rule": "currently available slow-context gates help but are still too weak to make broader positive add expansion safe; the branch needs a stronger point-in-time add-permission context surface"
+  },
+  "scenario_rows": [
+    {
+      "scenario_name": "ungated_positive_shape",
+      "kept_positive_hit_count": 542,
+      "seed_kept_count": 47,
+      "non_seed_kept_count": 495,
+      "non_seed_to_seed_ratio": 10.53191489,
+      "reading": "baseline shape-only positive add rules"
+    },
+    {
+      "scenario_name": "phase_window_only",
+      "kept_positive_hit_count": 373,
+      "seed_kept_count": 28,
+      "non_seed_kept_count": 345,
+      "non_seed_to_seed_ratio": 12.32142857,
+      "reading": "allow only full_pre/full chronology window"
+    },
+    {
+      "scenario_name": "unlock_worthy_only",
+      "kept_positive_hit_count": 89,
+      "seed_kept_count": 7,
+      "non_seed_kept_count": 82,
+      "non_seed_to_seed_ratio": 11.71428571,
+      "reading": "allow only board expectancy unlock-worthy dates"
+    },
+    {
+      "scenario_name": "high_role_symbol_only",
+      "kept_positive_hit_count": 191,
+      "seed_kept_count": 18,
+      "non_seed_kept_count": 173,
+      "non_seed_to_seed_ratio": 9.61111111,
+      "reading": "allow only symbols with repeated preheat-full participation in the seed registry"
+    },
+    {
+      "scenario_name": "phase_window_plus_high_role",
+      "kept_positive_hit_count": 131,
+      "seed_kept_count": 12,
+      "non_seed_kept_count": 119,
+      "non_seed_to_seed_ratio": 9.91666667,
+      "reading": "combine chronology window with high-role symbol gating"
+    },
+    {
+      "scenario_name": "unlock_worthy_plus_high_role",
+      "kept_positive_hit_count": 32,
+      "seed_kept_count": 5,
+      "non_seed_kept_count": 27,
+      "non_seed_to_seed_ratio": 5.4,
+      "reading": "combine board expectancy unlock dates with high-role symbol gating"
+    },
+    {
+      "scenario_name": "phase_window_plus_unlock_plus_high_role",
+      "kept_positive_hit_count": 32,
+      "seed_kept_count": 5,
+      "non_seed_kept_count": 27,
+      "non_seed_to_seed_ratio": 5.4,
+      "reading": "apply all currently available slow-context gates together"
+    }
+  ],
+  "interpretation": [
+    "V1.34EX audits whether currently available slow-context gates can rescue broader positive add expansion.",
+    "The answer is no: phase, board expectancy, and crude high-role symbol filters reduce density somewhat, but not enough to justify promoting positive add rules beyond the seed surface."
+  ]
+}

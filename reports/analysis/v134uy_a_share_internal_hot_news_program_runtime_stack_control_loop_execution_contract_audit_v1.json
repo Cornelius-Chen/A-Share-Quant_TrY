@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "contract_row_count": 1,
+    "runtime_consumer_mode": "passive_polling_only",
+    "contract_action": "keep_runtime_stack_passive_polling",
+    "sleep_strategy_seconds": "300",
+    "backoff_mode": "steady_runtime_stack_interval",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_control_loop_execution_contract_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_execution_contract",
+      "component_state": "read_ready_internal_only",
+      "metric": "contract_row_count",
+      "value": "1"
+    },
+    {
+      "component": "runtime_consumer_mode",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode",
+      "value": "passive_polling_only"
+    },
+    {
+      "component": "contract_action",
+      "component_state": "materialized",
+      "metric": "contract_action",
+      "value": "keep_runtime_stack_passive_polling"
+    },
+    {
+      "component": "sleep_strategy_seconds",
+      "component_state": "materialized",
+      "metric": "sleep_strategy_seconds",
+      "value": "300"
+    }
+  ],
+  "interpretation": [
+    "This is the execution-facing contract above the runtime-stack control-loop runtime envelope.",
+    "An outer controller can use it as the single-row instruction for its next cycle without rereading lower runtime-stack layers."
+  ]
+}

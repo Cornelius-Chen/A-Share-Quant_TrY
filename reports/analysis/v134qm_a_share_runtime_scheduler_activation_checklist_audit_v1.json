@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "checklist_step_count": 4,
+    "completed_step_count": 3,
+    "pending_step_count": 1,
+    "ready_to_open_now": false,
+    "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_runtime_scheduler_activation_checklist_v1.csv",
+    "authoritative_output": "a_share_runtime_scheduler_activation_checklist_materialized"
+  },
+  "checklist_rows": [
+    {
+      "checklist_step": "step_1_confirm_single_runtime_candidate_lane",
+      "step_state": "completed",
+      "blocking_reason": "single html-article runtime candidate has been isolated"
+    },
+    {
+      "checklist_step": "step_2_confirm_policy_and_retry_bindings",
+      "step_state": "completed",
+      "blocking_reason": "html-article adapter already has selective-after-license-review activation policy; html-article adapter already has retry policy binding"
+    },
+    {
+      "checklist_step": "step_3_activate_scheduler_runtime_binding",
+      "step_state": "pending",
+      "blocking_reason": "runtime binding still remains scheduler_stub_not_activated"
+    },
+    {
+      "checklist_step": "step_4_keep_excluded_adapters_outside_first_runtime_lane",
+      "step_state": "completed",
+      "blocking_reason": "social and reserved official adapters remain outside the first runtime lane"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime followthrough now has a compact scheduler activation checklist instead of a vague remaining blocker.",
+    "Only one step is still pending: activating the scheduler runtime binding for the html-article lane."
+  ]
+}

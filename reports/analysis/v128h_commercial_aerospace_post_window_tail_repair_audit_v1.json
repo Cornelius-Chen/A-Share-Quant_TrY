@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128h_commercial_aerospace_post_window_tail_repair_audit_v1",
+    "reference_variant": "mainwin_overdrive_075_impulse_075",
+    "reference_final_equity": 1306704.6132,
+    "reference_max_drawdown": 0.09309927,
+    "best_variant": "tail_weakdrift_full",
+    "best_variant_final_equity": 1309426.5555,
+    "best_variant_max_drawdown": 0.09309927
+  },
+  "variant_rows": [
+    {
+      "variant": "mainwin_overdrive_075_impulse_075",
+      "final_equity": 1306704.6132,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 233
+    },
+    {
+      "variant": "tail_weakdrift_full",
+      "final_equity": 1309426.5555,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 211
+    },
+    {
+      "variant": "tail_sentiment_full",
+      "final_equity": 1308553.3476,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 223
+    },
+    {
+      "variant": "tail_weakdrift_sentiment_full",
+      "final_equity": 1309426.5555,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 211
+    },
+    {
+      "variant": "tail_weakdrift_sentiment_impulse_full",
+      "final_equity": 1309426.5555,
+      "max_drawdown": 0.09309927,
+      "executed_order_count": 211
+    }
+  ],
+  "interpretation": [
+    "V1.28H targets only the post-window tail after the main-window deeper downside branch was promoted.",
+    "The audit leaves the winning main-window grammar intact and asks whether stronger weak-drift/sentiment/impulse selling after 20260212 can reduce the residual tail giveback."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116q_cpo_expanded_repaired_window_manifest_v1",
+    "original_top_miss_day_count": 6,
+    "expanded_repaired_window_day_count": 10,
+    "new_day_count_beyond_top_miss": 4,
+    "recommended_next_posture": "use_expanded_repaired_window_as_next_visible_only_candidate_revalidation_surface"
+  },
+  "expanded_window_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "board_avg_return": 0.056049,
+      "board_breadth": 0.95,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.096586,
+      "under_exposure_gap": 0.153414,
+      "is_original_top_miss": false
+    },
+    {
+      "trade_date": "2023-05-18",
+      "board_avg_return": 0.070092,
+      "board_breadth": 0.8,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.102566,
+      "under_exposure_gap": 0.147434,
+      "is_original_top_miss": true
+    },
+    {
+      "trade_date": "2024-04-17",
+      "board_avg_return": 0.075345,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.138656,
+      "under_exposure_gap": 0.111344,
+      "is_original_top_miss": true
+    },
+    {
+      "trade_date": "2023-11-07",
+      "board_avg_return": 0.056135,
+      "board_breadth": 0.8,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.182512,
+      "under_exposure_gap": 0.067488,
+      "is_original_top_miss": false
+    },
+    {
+      "trade_date": "2023-09-22",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.200496,
+      "under_exposure_gap": 0.049504,
+      "is_original_top_miss": true
+    },
+    {
+      "trade_date": "2023-06-14",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.205665,
+      "under_exposure_gap": 0.044335,
+      "is_original_top_miss": true
+    },
+    {
+      "trade_date": "2024-01-18",
+      "board_avg_return": 0.055752,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.213092,
+      "under_exposure_gap": 0.036908,
+      "is_original_top_miss": false
+    },
+    {
+      "trade_date": "2024-01-23",
+      "board_avg_return": 0.051433,
+      "board_breadth": 1.0,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.21983,
+      "under_exposure_gap": 0.03017,
+      "is_original_top_miss": false
+    },
+    {
+      "trade_date": "2023-12-08",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.221332,
+      "under_exposure_gap": 0.028668,
+      "is_original_top_miss": true
+    },
+    {
+      "trade_date": "2024-02-06",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "baseline_exposure": 0.0,
+      "promoted_exposure": 0.222588,
+      "under_exposure_gap": 0.027412,
+      "is_original_top_miss": true
+    }
+  ],
+  "interpretation": [
+    "V1.16Q freezes an expanded repaired-window manifest so later visible-only candidate reviews stop orbiting only the original top-miss family.",
+    "The expanded window uses all remaining under-exposed strong days from V114H, while preserving a marker for which rows belonged to the original repaired top-miss subset.",
+    "This manifest is not yet a replay result; it is the widened audit surface required before further replay-facing expansion."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cs_commercial_aerospace_reduce_reopen_playbook_v1",
+    "residue_seed_count": 4,
+    "execution_blocker_count": 4,
+    "authoritative_output": "commercial_aerospace_reduce_reopen_playbook_ready_for_gate_driven_restart",
+    "playbook_csv": "data\\training\\commercial_aerospace_reduce_reopen_playbook_v1.csv"
+  },
+  "playbook_rows": [
+    {
+      "reopen_scope": "local_residue_supervision",
+      "trigger": "one_of_the_four_residue_cases_requires_local_refresh",
+      "allowed_action": "rerun_local_case_supervision_only"
+    },
+    {
+      "reopen_scope": "sell_side_execution_binding",
+      "trigger": "one_or_more_execution_blockers_change_state",
+      "allowed_action": "reassess_binding_surfaces_without_reopening_broad_reduce_semantics"
+    },
+    {
+      "reopen_scope": "broad_reduce_semantics",
+      "trigger": "not_allowed_without_new_board_local_context",
+      "allowed_action": "keep_frozen"
+    },
+    {
+      "reopen_scope": "next_frontier_handoff",
+      "trigger": "explicit_program_shift_to_intraday_add",
+      "allowed_action": "start_intraday_add_as_new_frontier_while_preserving_reduce_freeze"
+    }
+  ],
+  "interpretation": [
+    "V1.34CS converts the frozen reduce branch into a practical reopen playbook.",
+    "The branch may reopen locally for residue maintenance or for changed execution infrastructure, but not for broad semantic wandering."
+  ]
+}

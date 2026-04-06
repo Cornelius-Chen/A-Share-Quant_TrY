@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "row_count": 5,
+    "covered_window_count": 1,
+    "positive_support_sample_ready_count": 1,
+    "tradable_now_count": 1,
+    "watch_only_count": 4
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_001",
+      "representative_symbol_count": "5",
+      "industrial_or_formal_confirmation_count": "4",
+      "emotion_confirmation_count": "1",
+      "seed_sample_state": "supportive_seed_with_real_board_width",
+      "final_training_admission": "positive_support_sample_ready",
+      "strict_supervisor_conclusion": "Window 001 is stronger than a preparatory seed only. It already shows a real supportive early-board-width response across industrial, formal, and emotion names. It should be released as a positive support sample, but still remain below the cleaner January ignition archetype."
+    }
+  ],
+  "interpretation": [
+    "Window 001 is now evidence-backed as a supportive early-board-width positive sample.",
+    "It is stronger than a bare seed, but still should not overrule the cleaner January ignition archetype.",
+    "This release reduces under-review noise while keeping the hierarchy between 001 and 002 intact."
+  ]
+}

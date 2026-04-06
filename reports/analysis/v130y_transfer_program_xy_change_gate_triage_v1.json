@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130y_transfer_program_xy_change_gate_triage_v1",
+    "artifact_count": 5,
+    "authoritative_status": "static_data_gate_installed_for_transfer_program"
+  },
+  "authoritative_decision": [
+    "Keep the transfer program frozen under static data.",
+    "Use the monitored artifact list as the authoritative rerun gate.",
+    "Reopen transfer analysis only after one or more monitored artifacts change."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123e_cpo_1min_downside_same_plane_integration_audit_v1",
+    "variant_count": 6,
+    "best_variant_name": "orthogonal_heavy_blend_score",
+    "best_standalone_name": "gap_exhaustion_stall_reference",
+    "best_q75_balanced_accuracy": 0.54544126,
+    "best_standalone_q75_balanced_accuracy": 0.54544126,
+    "material_increment_over_downside_failure": false,
+    "recommended_next_posture": "treat_same_plane_integration_as_non_increment_and_stop"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "downside_failure_reference",
+      "mean_gap_positive_minus_negative": 0.08154386,
+      "q75_threshold": 0.33319652,
+      "q75_balanced_accuracy": 0.5206375,
+      "corr_vs_downside_failure": 1.0,
+      "corr_vs_gap_exhaustion_stall": 0.46646728
+    },
+    {
+      "variant_name": "gap_exhaustion_stall_reference",
+      "mean_gap_positive_minus_negative": 0.10445157,
+      "q75_threshold": 0.11696328,
+      "q75_balanced_accuracy": 0.54544126,
+      "corr_vs_downside_failure": 0.46646728,
+      "corr_vs_gap_exhaustion_stall": 1.0
+    },
+    {
+      "variant_name": "equal_blend_score",
+      "mean_gap_positive_minus_negative": 0.19045145,
+      "q75_threshold": 0.28078069,
+      "q75_balanced_accuracy": 0.53730253,
+      "corr_vs_downside_failure": 0.85629063,
+      "corr_vs_gap_exhaustion_stall": 0.85629063
+    },
+    {
+      "variant_name": "downside_heavy_blend_score",
+      "mean_gap_positive_minus_negative": 0.16637567,
+      "q75_threshold": 0.33370797,
+      "q75_balanced_accuracy": 0.52993891,
+      "corr_vs_downside_failure": 0.94259566,
+      "corr_vs_gap_exhaustion_stall": 0.73506949
+    },
+    {
+      "variant_name": "orthogonal_heavy_blend_score",
+      "mean_gap_positive_minus_negative": 0.21452723,
+      "q75_threshold": 0.26757459,
+      "q75_balanced_accuracy": 0.54544126,
+      "corr_vs_downside_failure": 0.73506949,
+      "corr_vs_gap_exhaustion_stall": 0.94259566
+    },
+    {
+      "variant_name": "dual_confirm_min_score",
+      "mean_gap_positive_minus_negative": 0.13852252,
+      "q75_threshold": -0.05206239,
+      "q75_balanced_accuracy": 0.52800112,
+      "corr_vs_downside_failure": 0.86350479,
+      "corr_vs_gap_exhaustion_stall": 0.68625968
+    }
+  ],
+  "time_split_rows": [
+    {
+      "variant_name": "downside_failure_reference",
+      "mean_test_balanced_accuracy": 0.52515907,
+      "min_test_balanced_accuracy": 0.51509259
+    },
+    {
+      "variant_name": "gap_exhaustion_stall_reference",
+      "mean_test_balanced_accuracy": 0.54016402,
+      "min_test_balanced_accuracy": 0.5242303
+    },
+    {
+      "variant_name": "equal_blend_score",
+      "mean_test_balanced_accuracy": 0.53832934,
+      "min_test_balanced_accuracy": 0.53198058
+    },
+    {
+      "variant_name": "downside_heavy_blend_score",
+      "mean_test_balanced_accuracy": 0.53884518,
+      "min_test_balanced_accuracy": 0.52386429
+    },
+    {
+      "variant_name": "orthogonal_heavy_blend_score",
+      "mean_test_balanced_accuracy": 0.5456252,
+      "min_test_balanced_accuracy": 0.53881731
+    },
+    {
+      "variant_name": "dual_confirm_min_score",
+      "mean_test_balanced_accuracy": 0.53109419,
+      "min_test_balanced_accuracy": 0.52340933
+    }
+  ],
+  "symbol_rows": [
+    {
+      "variant_name": "downside_failure_reference",
+      "mean_test_balanced_accuracy": 0.51487065,
+      "min_test_balanced_accuracy": 0.50074656
+    },
+    {
+      "variant_name": "gap_exhaustion_stall_reference",
+      "mean_test_balanced_accuracy": 0.53970323,
+      "min_test_balanced_accuracy": 0.52670002
+    },
+    {
+      "variant_name": "equal_blend_score",
+      "mean_test_balanced_accuracy": 0.53289463,
+      "min_test_balanced_accuracy": 0.51351237
+    },
+    {
+      "variant_name": "downside_heavy_blend_score",
+      "mean_test_balanced_accuracy": 0.52432815,
+      "min_test_balanced_accuracy": 0.50016623
+    },
+    {
+      "variant_name": "orthogonal_heavy_blend_score",
+      "mean_test_balanced_accuracy": 0.54027241,
+      "min_test_balanced_accuracy": 0.51846487
+    },
+    {
+      "variant_name": "dual_confirm_min_score",
+      "mean_test_balanced_accuracy": 0.52381969,
+      "min_test_balanced_accuracy": 0.50429561
+    }
+  ],
+  "interpretation": [
+    "V1.23E compares simple same-plane blends between downside_failure and the new orthogonal gap_exhaustion_stall branch.",
+    "The question is not whether a blend can look slightly better in-sample, but whether it creates material non-replay increment over the standalone reference.",
+    "The next step is triage on whether the best blend is real increment or just same-plane decoration."
+  ]
+}

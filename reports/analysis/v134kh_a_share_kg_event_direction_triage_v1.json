@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kh_a_share_kg_event_direction_triage_v1",
+    "materialized_event_count": 52,
+    "authoritative_status": "event_workstream_complete_enough_to_freeze_as_bootstrap_and_shift_into_quality_and_pti_enrichment"
+  },
+  "triage_rows": [
+    {
+      "event_component": "source_master",
+      "direction": "retain_as_current_bootstrap_source_surface_and_extend_with_source_tier_quality_fields_next"
+    },
+    {
+      "event_component": "document_claim_event_chain",
+      "direction": "retain_as_bootstrap_object_chain_and_expand_pti_quality_fields_before_heavy_attention_ingestion"
+    },
+    {
+      "event_component": "evidence_span_registry",
+      "direction": "keep_registry_notes_as_bootstrap_evidence_only_and_expand_to_real_span_level_sources_later"
+    },
+    {
+      "event_component": "next_frontier",
+      "direction": "move_into_quality_layer_and_point_in_time_enrichment_using_bootstrapped_event_chain_as_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KH converts the event bootstrap into operating direction.",
+    "The chain is now real enough to use, but the correct next step is enrichment: quality and PTI expansion, not pretending the bootstrap already equals full document understanding."
+  ]
+}

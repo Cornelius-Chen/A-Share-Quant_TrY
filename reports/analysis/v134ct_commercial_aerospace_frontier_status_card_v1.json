@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ct_commercial_aerospace_frontier_status_card_v1",
+    "reduce_handoff_status": "freeze_reduce_handoff_package_and_do_not_reopen_reduce_mainline_before_future_frontier_shift",
+    "transition_status": "freeze_reduce_handoff_and_defer_intraday_add_frontier_opening_until_later_explicit_shift",
+    "next_frontier": "intraday_add",
+    "next_frontier_state": "deferred",
+    "status_csv": "data\\training\\commercial_aerospace_frontier_status_card_v1.csv",
+    "authoritative_output": "commercial_aerospace_frontier_status_card_ready_for_program_refresh"
+  },
+  "status_rows": [
+    {
+      "key": "active_board",
+      "value": "commercial_aerospace"
+    },
+    {
+      "key": "reduce_mainline_status",
+      "value": "frozen"
+    },
+    {
+      "key": "reduce_local_residue_policy",
+      "value": "supervision_only"
+    },
+    {
+      "key": "reduce_execution_blocker_count",
+      "value": 4
+    },
+    {
+      "key": "next_frontier",
+      "value": "intraday_add"
+    },
+    {
+      "key": "next_frontier_state",
+      "value": "deferred"
+    },
+    {
+      "key": "frontier_switch_rule",
+      "value": "explicit_shift_only"
+    }
+  ],
+  "interpretation": [
+    "V1.34CT compresses commercial-aerospace into a current-frontier status card after reduce handoff completion.",
+    "The card says two things at once: reduce is frozen, and intraday add is the next frontier but remains deferred until an explicit shift."
+  ]
+}

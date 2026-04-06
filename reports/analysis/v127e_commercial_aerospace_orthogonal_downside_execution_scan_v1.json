@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127e_commercial_aerospace_orthogonal_downside_execution_scan_v1",
+    "reference_v126o_final_equity": 1227143.0725,
+    "reference_v126o_max_drawdown": 0.14258108,
+    "reference_v126q_final_equity": 1189482.711,
+    "reference_v126q_max_drawdown": 0.13356069,
+    "reference_v127a_best_variant": "broad_half_reference",
+    "reference_v127a_best_final_equity": 1249251.8292,
+    "reference_v127a_best_max_drawdown": 0.19378829,
+    "best_variant": "broad_half_reference",
+    "best_variant_final_equity": 1261238.592,
+    "best_variant_max_drawdown": 0.12870312,
+    "best_variant_executed_order_count": 251
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "executed_order_count": 251,
+      "final_equity": 1261238.592,
+      "max_drawdown": 0.12870312
+    },
+    {
+      "variant": "overdrive_continuation_half",
+      "executed_order_count": 27,
+      "final_equity": 1236159.6484,
+      "max_drawdown": 0.21997867
+    },
+    {
+      "variant": "weak_drift_event_neutral_half",
+      "executed_order_count": 84,
+      "final_equity": 1314566.5548,
+      "max_drawdown": 0.1769551
+    }
+  ],
+  "interpretation": [
+    "V1.27E scans a genuinely orthogonal downside family rather than narrowing the same phase-aware branch again.",
+    "The candidate families come from the weakest semantic slices in the recent label table: overdrive+continuation and weak-drift+event-neutral."
+  ]
+}

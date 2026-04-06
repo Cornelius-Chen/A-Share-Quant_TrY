@@ -1,0 +1,9 @@
+﻿opening_gate,status,detail
+explicit_shadow_only_policy_shift,mandatory,"Boundary extension may open only through an explicit shadow-only policy shift, never by silent refresh from existing raw coverage."
+current_boundary_frozen_by_default,mandatory,The existing lockout-aligned derivation boundary remains authoritative until the shift is explicitly approved.
+read_only_shadow_lane_preserved,mandatory,The shadow replay lane must remain read-only and protocol-first during any boundary-extension work.
+execution_authority_stays_blocked,mandatory,"Boundary extension may not be used to smuggle execution authority into reentry, unlock, or add."
+dual_surface_extension_required,mandatory,Daily-state and phase-geometry surfaces must be extended together; one-sided extension is not sufficient.
+unlock_quality_debate_deferred,mandatory,Do not debate post-lockout unlock quality until the board surfaces themselves have been explicitly extended.
+bridge_handoff_stays_blocked_during_prelaunch,mandatory,Reentry-to-add handoff remains blocked during checklist/prelaunch work and does not reopen just because extension is being considered.
+program_status_refresh_required,mandatory,Program and frontier status cards must be refreshed when and only when the policy actually shifts.

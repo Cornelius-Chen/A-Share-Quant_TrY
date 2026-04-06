@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129d_commercial_aerospace_phase_specific_walk_forward_support_audit_v1",
+    "fold_count": 3,
+    "supported_folds": [
+      "full_pre_dedicated_fold",
+      "full_dedicated_fold"
+    ],
+    "unsupported_folds": [
+      "post_impulse_holdout_fold"
+    ],
+    "authoritative_status": "phase_specific_walk_forward_support_partially_available",
+    "authoritative_rule": "commercial-aerospace high-intensity supervision should move from a single split to phase-specific walk-forward only where train and test both contain the target state"
+  },
+  "fold_rows": [
+    {
+      "fold_name": "full_pre_dedicated_fold",
+      "target_state": "full_pre",
+      "train_start": "20240129",
+      "train_end": "20251211",
+      "test_start": "20251212",
+      "test_end": "20251223",
+      "train_row_count": 5424,
+      "test_row_count": 96,
+      "train_positive_count": 21,
+      "test_positive_count": 24,
+      "supports_target_both_sides": true
+    },
+    {
+      "fold_name": "full_dedicated_fold",
+      "target_state": "full",
+      "train_start": "20240129",
+      "train_end": "20260106",
+      "test_start": "20260107",
+      "test_end": "20260112",
+      "train_row_count": 5616,
+      "test_row_count": 48,
+      "train_positive_count": 32,
+      "test_positive_count": 4,
+      "supports_target_both_sides": true
+    },
+    {
+      "fold_name": "post_impulse_holdout_fold",
+      "target_state": "high_intensity",
+      "train_start": "20240129",
+      "train_end": "20260112",
+      "test_start": "20260113",
+      "test_end": "20260320",
+      "train_row_count": 5664,
+      "test_row_count": 516,
+      "train_positive_count": 81,
+      "test_positive_count": 0,
+      "supports_target_both_sides": false
+    }
+  ],
+  "interpretation": [
+    "V1.29D checks whether commercial-aerospace high-intensity states can be supported by dedicated lawful walk-forward folds even though a single global split fails.",
+    "This does not reopen replay; it only decides whether phase-specific supervision is supportable before the next pilot."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134r_commercial_aerospace_qr_mild_block_triage_v1",
+    "authoritative_status": "promote_predicted_mild_block_inside_broader_hit_phase2_lane",
+    "triage_csv": "data\\training\\commercial_aerospace_qr_mild_block_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "predicted_mild_boundary_change",
+      "status": "promote_inside_phase_2",
+      "detail": "same_day_loss_avoided_delta = 5409.5064, blocked_mild_session_count = 6"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "This is a local boundary tightening only and does not authorize any wider surface expansion."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "This refinement remains inside phase 2 and does not authorize replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34R judges whether the first boundary-tightening refinement should replace the original broader-hit widening inside phase 2.",
+    "The judgment remains entirely local to phase 2 and does not alter the replay boundary."
+  ]
+}

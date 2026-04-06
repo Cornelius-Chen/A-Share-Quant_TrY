@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134av_commercial_aerospace_au_next_orthogonal_direction_triage_v1",
+    "authoritative_status": "shift_next_supervision_to_post_exit_reentry_gap_family",
+    "triage_csv": "data\\training\\commercial_aerospace_au_next_orthogonal_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "sell_side_false_first_reversal_family",
+      "status": "frozen_stopline",
+      "detail": "This family has already collapsed into a singular residue."
+    },
+    {
+      "component": "next_orthogonal_family",
+      "status": "post_exit_reentry_gap",
+      "detail": "dominant_pattern = neg_1d|pos_3d|pos_5d, delayed_rebound_share = 0.66666667, remaining_rebound_case_count = 3"
+    },
+    {
+      "component": "phase2_direction",
+      "status": "stay_in_supervision_and_shift_from_sell_timing_to_reentry_supervision",
+      "detail": "The remaining misses are more consistent with missing rebuild timing than with same-day sell timing."
+    }
+  ],
+  "interpretation": [
+    "V1.34AV converts the post-exit rebound pattern audit into the next orthogonal direction judgment.",
+    "If most remaining rebound-cost cases are negative on day 1 but positive later, the next family should be a rebuild or re-entry supervision family rather than another sell-side timing family."
+  ]
+}

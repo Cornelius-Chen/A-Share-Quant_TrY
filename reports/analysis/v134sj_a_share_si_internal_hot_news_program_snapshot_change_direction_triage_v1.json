@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "change_row_count": 1,
+    "top_risk_change_state": "stable",
+    "top_opportunity_change_state": "stable",
+    "authoritative_status": "continue_serving_snapshot_change_signal_for_polling_or_alert_logic"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_state",
+      "direction": "treat_stable_as_no_new_top-level_rotation_even_if_background_feeds_still_exist"
+    },
+    {
+      "component": "entity_change_state",
+      "direction": "treat_top_entity_changed_as_a_higher-priority_rotation_signal_than_simple_score_drift"
+    },
+    {
+      "component": "score_shift_state",
+      "direction": "treat_major_or_minor_score_shift_as_signal_intensity_change_without_assuming_entity_rotation"
+    }
+  ],
+  "interpretation": [
+    "The snapshot change signal is a thin alert layer above the snapshot, not a new semantic source.",
+    "It is most useful when the consumer polls frequently and only wants to react to top-level changes."
+  ]
+}

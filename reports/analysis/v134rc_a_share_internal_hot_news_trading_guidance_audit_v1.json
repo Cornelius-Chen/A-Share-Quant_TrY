@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "guidance_row_count": 20,
+    "guidance_event_count": 1,
+    "risk_event_count": 16,
+    "trigger_event_count": 0,
+    "market_guidance_row_count": 1,
+    "board_signal_row_count": 1,
+    "risk_queue_row_count": 16,
+    "decision_signal_row_count": 20,
+    "authoritative_output": "a_share_internal_hot_news_trading_guidance_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "trading_guidance_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "guidance_row_count",
+      "value": "20"
+    },
+    {
+      "component": "board_guidance_summary",
+      "component_state": "materialized",
+      "metric": "board_summary_count",
+      "value": "2"
+    },
+    {
+      "component": "market_guidance_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "market_guidance_row_count",
+      "value": "1"
+    },
+    {
+      "component": "board_signal_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "board_signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "risk_queue_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "risk_queue_row_count",
+      "value": "16"
+    },
+    {
+      "component": "decision_signal_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "decision_signal_row_count",
+      "value": "20"
+    },
+    {
+      "component": "serving_view",
+      "component_state": "multi_view_materialized",
+      "metric": "serving_view_count",
+      "value": "5"
+    }
+  ],
+  "interpretation": [
+    "The internal hot-news fast lane now emits structured trading guidance instead of only raw news snippets.",
+    "Messages are normalized into source role, event domain, target scope, guidance class, direction, strength, routing bucket, and candidate beneficiary symbols.",
+    "The pipeline now also emits separate market guidance, board signal, risk queue, and decision signal views for downstream trading consumption."
+  ]
+}

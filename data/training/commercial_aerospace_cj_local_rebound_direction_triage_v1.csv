@@ -1,0 +1,4 @@
+﻿component,status,detail
+local_rebound_residue_registry,retain_supervision_only,"residue_seed_count = 4, top_residue_case = 20260120 300342"
+persistent_vs_transient_split,mandatory,"persistent_rebound_residue_count = 2, transient_rebound_residue_count = 2"
+next_real_work,stay_local_case_supervision_only,"If the branch keeps going, it should only inspect these residue cases locally; do not reopen broader sell-family tuning or replay binding."

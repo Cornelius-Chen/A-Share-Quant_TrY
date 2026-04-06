@@ -1,0 +1,4 @@
+﻿attention_component,component_state,artifact_path,coverage_note
+attention_registry,materialized_bootstrap,data\reference\info_center\attention_registry\a_share_attention_registry_v1.csv,attention_registry_count = 5
+hard_attention_roles,singleton_hard_case_present,data\reference\info_center\attention_registry\a_share_attention_registry_v1.csv,hard_attention_role_count = 1
+soft_attention_candidates,materialized_backlog_driven,data\reference\info_center\attention_registry\a_share_attention_backlog_v1.csv,soft_attention_candidate_count = 4

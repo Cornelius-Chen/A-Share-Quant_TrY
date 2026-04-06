@@ -1,0 +1,5 @@
+﻿component,status,detail
+same_day_protection,retain,same_day_protected_mark_to_close_total = 15466.0594
+short_horizon_followthrough,retain_with_horizon_caveat,"net_horizon_pnl_if_held_1d = -26604.0, net_horizon_pnl_if_held_3d = 2243.0, net_horizon_pnl_if_held_5d = -11881.0"
+next_real_work,do_not_expand_surface_local_binding_attribution_next,"The next justified work is local attribution/failure review inside the isolated sell-side lane, not replay binding or reentry execution."
+scope_guardrail,mandatory,Keep the branch sell-side only and holdings-aware only; do not reopen wider all-session expansion or full replay binding.

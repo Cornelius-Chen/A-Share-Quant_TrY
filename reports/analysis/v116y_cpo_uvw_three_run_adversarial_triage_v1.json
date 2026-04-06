@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116y_cpo_uvw_three_run_adversarial_triage_v1",
+    "review_scope": "v116u_v116v_v116w",
+    "coverage_bug_remaining": false,
+    "authoritative_current_problem": "quality_discrimination_after_coverage_repair",
+    "timing_relitigation_needed_now": false,
+    "promotion_allowed": false,
+    "recommended_next_posture": "keep_candidate_only_and_test_quality_side_cooled_refinement_without_reopening_timing_or_coverage"
+  },
+  "triage_rows": [
+    {
+      "triage_target": "expanded_window_candidate_base_rebuild",
+      "triage_posture": "retain_as_authoritative_repair",
+      "rebuilt_day_count": 3,
+      "rebuilt_row_count": 6,
+      "reason": "coverage_repair_is_real_and_should_not_be_reopened"
+    },
+    {
+      "triage_target": "post_rebuild_coverage_status",
+      "triage_posture": "freeze_as_clean_precondition",
+      "days_with_add_candidate_rows": 9,
+      "days_with_held_mature_symbols": 9,
+      "true_coverage_gap_day_count_after_rebuild": 0,
+      "reason": "coverage_gap_is_no_longer_the_main_problem"
+    },
+    {
+      "triage_target": "corrected_cooled_shadow_candidate",
+      "triage_posture": "retain_candidate_only_but_block_promotion",
+      "hit_day_count": 4,
+      "new_hit_day_count": 1,
+      "positive_expectancy_hit_rate": 0.75,
+      "avg_expectancy_proxy_3d": 0.098337,
+      "avg_max_adverse_return_3d": -0.027288,
+      "reason": "coverage_repair_partially_rescued_the_line_but_external_extension_remains_narrow"
+    },
+    {
+      "triage_target": "hot_upper_bound_reference",
+      "triage_posture": "retain_audit_ceiling_only",
+      "hit_day_count": 9,
+      "new_hit_day_count": 3,
+      "positive_expectancy_hit_rate": 0.6875,
+      "reason": "broader_hit_surface_still_comes_with_worse_quality_and_is_not_a_candidate_for_law"
+    },
+    {
+      "triage_target": "rebuilt_new_day_contrast",
+      "triage_posture": "quality_not_timing_is_now_the_authoritative_problem",
+      "2023_11_07_diagnosis": "late_only_positive_quality_not_enough_for_corrected_cooled",
+      "2024_01_18_diagnosis": "early_visible_and_quality_sufficient_for_corrected_cooled_hit",
+      "2024_01_23_diagnosis": "late_only_and_quality_weak",
+      "reason": "only_2024_01_18_converts_after_repair_so_the_next_step_should_target_quality_side_discrimination"
+    }
+  ],
+  "subagent_views": [
+    {
+      "reviewer": "Pauli",
+      "position": "coverage_fixed_but_rebuilt_rows_vs_old_geometry_remain_a_method_risk",
+      "main_judgement": "current_main_problem_is_quality_gate_not_timing"
+    },
+    {
+      "reviewer": "Tesla",
+      "position": "2024_01_18_is_the_only_new_day_that_meets_the_narrow_confirmation_style",
+      "main_judgement": "keep_working_on_quality_discrimination_not_timing_relitigation"
+    },
+    {
+      "reviewer": "James",
+      "position": "coverage_bug_is_gone_and_2024_01_23_non_hit_is_reasonable_due_to_weak_quality",
+      "main_judgement": "line_is_near_same_family_boundary_but_not_dead"
+    }
+  ],
+  "interpretation": [
+    "The U/V/W three-run review accepts the coverage repair as complete and refuses to reopen the old 'missing rows' diagnosis.",
+    "The corrected cooled visible-only line was partially rescued by the rebuild, but only one of the three rebuilt new days converts into a corrected cooled hit.",
+    "The next problem is therefore quality-side discrimination: 2023-11-07 stays late-only positive, 2024-01-18 converts cleanly, and 2024-01-23 stays late-only and weak."
+  ]
+}

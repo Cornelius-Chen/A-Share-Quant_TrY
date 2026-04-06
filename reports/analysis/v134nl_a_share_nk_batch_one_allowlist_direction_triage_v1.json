@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "batch_one_source_count": 6,
+    "host_review_unit_count": 4,
+    "authoritative_status": "batch_one_allowlist_should_be_reviewed_by_host_units_not_promoted_yet"
+  },
+  "triage_rows": [
+    {
+      "component": "primary_sina_family",
+      "direction": "review_finance_sina_com_cn_first_as_primary_batch_one_host_family"
+    },
+    {
+      "component": "sibling_sina_host",
+      "direction": "keep_stock_finance_sina_com_cn_as_follow_on_review_after_primary_sina_family_outcome"
+    },
+    {
+      "component": "independent_t2_hosts",
+      "direction": "review_yicai_and_stcn_as_independent_batch_one_hosts_after_primary_sina_family"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "keep_all_batch_one_hosts_not_promoted_until_manual_license_review_records_exist"
+    }
+  ],
+  "interpretation": [
+    "Batch-one now has a disciplined host-level review order, but still no automatic allowlist promotion.",
+    "The next source-side gain should come from manual review records, not from reclassifying more hosts."
+  ]
+}

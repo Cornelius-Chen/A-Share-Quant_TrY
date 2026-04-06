@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134co_commercial_aerospace_cn_reduce_handoff_direction_triage_v1",
+    "authoritative_status": "freeze_reduce_handoff_package_and_do_not_reopen_reduce_mainline_before_future_frontier_shift",
+    "execution_blocker_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_cn_reduce_handoff_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_branch",
+      "status": "freeze_mainline",
+      "detail": "Treat reduce as frozen mainline research rather than an open semantic frontier."
+    },
+    {
+      "component": "residue_policy",
+      "status": "local_maintenance_only",
+      "detail": "Only local residue supervision remains justified inside reduce; do not reopen broad tuning."
+    },
+    {
+      "component": "execution_policy",
+      "status": "still_blocked_by_infrastructure",
+      "detail": "execution_blocker_count = 4"
+    },
+    {
+      "component": "future_handoff",
+      "status": "approved_but_not_triggered_now",
+      "detail": "The branch is ready for a later handoff to intraday add, but this step does not start that frontier."
+    }
+  ],
+  "interpretation": [
+    "V1.34CO converts the reduce handoff package into the final direction judgment for the current frontier.",
+    "The branch should now treat reduce as frozen mainline research, with only local maintenance allowed until a later frontier shift is intentionally opened."
+  ]
+}

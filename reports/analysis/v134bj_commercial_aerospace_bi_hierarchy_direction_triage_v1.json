@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bj_commercial_aerospace_bi_hierarchy_direction_triage_v1",
+    "authoritative_status": "freeze_hierarchy_governance_spec_and_keep_board_first_governance_only",
+    "hierarchy_level_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_bi_hierarchy_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "board_cooling_lockout",
+      "status": "retained_as_top_level_veto",
+      "detail": "Cooling lockout remains the first decision layer once post-impulse board deterioration is confirmed."
+    },
+    {
+      "component": "local_only_rebound_guard",
+      "status": "retained_as_explicit_false_bounce_guard",
+      "detail": "A few strong rebound names inside weak breadth must not be upgraded into board revival."
+    },
+    {
+      "component": "board_revival_unlock",
+      "status": "retained_as_only_release_discussion_gate",
+      "detail": "Only broad board revival may release lockout discussion; isolated strength cannot."
+    },
+    {
+      "component": "seed_reentry_ladder",
+      "status": "kept_subordinate",
+      "detail": "Seed-level rebuild supervision regains meaning only after board-level unlock no longer vetoes it."
+    },
+    {
+      "component": "execution_binding",
+      "status": "still_blocked",
+      "detail": "Hierarchy remains governance-only and does not authorize replay or live intraday execution binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34BJ turns the hierarchy spec into a direction judgment.",
+    "The branch should now reason board first: lockout, then anti-false-bounce guard, then unlock, and only then seed-level rebuild supervision."
+  ]
+}

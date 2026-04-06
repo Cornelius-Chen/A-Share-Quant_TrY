@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131h_commercial_aerospace_intraday_collection_manifest_v1",
+    "manifest_row_count": 4,
+    "high_priority_count": 2,
+    "medium_priority_count": 2,
+    "manifest_csv": "data\\training\\commercial_aerospace_intraday_collection_manifest_v1.csv",
+    "authoritative_rule": "collect minute bars for retained override positives first, then reversal watches, before opening any commercial-aerospace intraday prototype"
+  },
+  "manifest_rows": [
+    {
+      "failure_id": "20260113_601698",
+      "symbol": "601698",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high"
+    },
+    {
+      "failure_id": "20260126_300342",
+      "symbol": "300342",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high"
+    },
+    {
+      "failure_id": "20260113_000738",
+      "symbol": "000738",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium"
+    },
+    {
+      "failure_id": "20260126_300045",
+      "symbol": "300045",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium"
+    }
+  ],
+  "interpretation": [
+    "V1.31H turns the current failure library into a concrete minute-data collection manifest.",
+    "It deliberately avoids broad universe expansion and instead prioritizes the exact sessions needed to study the retained override seeds."
+  ]
+}

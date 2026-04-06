@@ -1,0 +1,6 @@
+﻿component,status,detail
+canonical_seed_simulator,retain_and_continue_inside_phase_2,simulated_order_count = 8
+chronology_boundary,accepted_after_correction,seed actions now execute in trigger-minute order rather than tier-name order
+seed_attribution_signal,retain_for_direction,"top_tier = reversal_watch, top_symbol = 300342"
+broader_session_expansion,still_blocked,the branch should first finish deterministic/attribution understanding on canonical seeds before widening phase 2
+phase_3_replay_lane,still_blocked,seed simulator plus attribution does not authorize opening an intraday replay lane

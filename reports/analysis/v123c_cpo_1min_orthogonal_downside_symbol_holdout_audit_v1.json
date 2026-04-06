@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123c_cpo_1min_orthogonal_downside_symbol_holdout_audit_v1",
+    "chosen_score_name": "gap_exhaustion_stall_score",
+    "symbol_count": 4,
+    "mean_test_balanced_accuracy": 0.53970323,
+    "min_test_balanced_accuracy": 0.52670002,
+    "recommended_next_posture": "three_agent_triage_chosen_orthogonal_1min_downside_branch"
+  },
+  "symbol_rows": [
+    {
+      "holdout_symbol": "300308",
+      "test_row_count": 1925,
+      "threshold": 0.13695341,
+      "balanced_accuracy": 0.52670002
+    },
+    {
+      "holdout_symbol": "300502",
+      "test_row_count": 1925,
+      "threshold": 0.13290641,
+      "balanced_accuracy": 0.54212819
+    },
+    {
+      "holdout_symbol": "300757",
+      "test_row_count": 1925,
+      "threshold": 0.10962133,
+      "balanced_accuracy": 0.55332912
+    },
+    {
+      "holdout_symbol": "688498",
+      "test_row_count": 1925,
+      "threshold": 0.08840711,
+      "balanced_accuracy": 0.5366556
+    }
+  ],
+  "interpretation": [
+    "V1.23C tests whether the best orthogonal 1-minute downside branch survives symbol transfer.",
+    "This is the final non-replay hurdle before adversarial triage.",
+    "The next step is three-agent review."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "supervision_loop_mode": "steady_supervision_loop",
+    "signal_priority": "p2",
+    "reopen_target": "none",
+    "authoritative_status": "continue_serving_runtime-stack_supervisor_loop_signal_feed_above_the_supervisor_surface_and_change-signal"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_supervision_loop_branch",
+      "direction": "keep_the_supervising_loop_on_steady polling when supervision_loop_mode remains steady_supervision_loop"
+    },
+    {
+      "component": "tight_supervision_loop_branch",
+      "direction": "tighten_the_supervising_loop and reopen the requested supervisor target when supervision_loop_mode rotates into tight_supervision_loop"
+    },
+    {
+      "component": "interrupt_supervision_loop_branch",
+      "direction": "interrupt_the_supervising_loop immediately when supervision_loop_mode rotates into interrupt_supervision_loop"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest loop-facing routing surface above the compact runtime-stack supervisor card.",
+    "A supervising loop can stop here without rereading the supervisor surface unless it needs deeper context."
+  ]
+}

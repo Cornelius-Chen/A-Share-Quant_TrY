@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134iq_commercial_aerospace_expanded_symbol_universe_carrier_search_audit_v1",
+    "expanded_formal_symbol_count": 3,
+    "outside_named_formal_symbol_count": 3,
+    "priority_second_carrier_candidate_count": 1,
+    "formal_strength_watch_count": 1,
+    "carrier_search_csv": "data\\training\\commercial_aerospace_expanded_symbol_universe_carrier_search_v1.csv",
+    "authoritative_rule": "the first disciplined expanded-universe pass points to one priority outside-named second-carrier search candidate inside the formal/core symbol set, while the other formal names remain watches or noncandidates"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "002085",
+      "display_name": "万丰奥威",
+      "inside_named_set": false,
+      "local_top_day_count": 0,
+      "post_lockout_max_vs_pre_lockout_peak": -0.28167844,
+      "post_lockout_max_return_from_start": 0.0,
+      "post_lockout_drawdown_from_max_to_end": -0.22440717,
+      "post_lockout_max_trade_date": "20260115",
+      "avg_turnover_rate_f": 3.52272157,
+      "max_turnover_rate_f": 11.3085,
+      "carrier_search_label": "formal_noncandidate",
+      "learning_reading": "formal/core symbol lacks the combination of local leadership and post-lockout strength needed for second-carrier search"
+    },
+    {
+      "symbol": "000738",
+      "display_name": "航发控制",
+      "inside_named_set": false,
+      "local_top_day_count": 3,
+      "post_lockout_max_vs_pre_lockout_peak": 0.16911473,
+      "post_lockout_max_return_from_start": 0.34720952,
+      "post_lockout_drawdown_from_max_to_end": -0.29643463,
+      "post_lockout_max_trade_date": "20260213",
+      "avg_turnover_rate_f": 7.66339804,
+      "max_turnover_rate_f": 18.4941,
+      "carrier_search_label": "priority_second_carrier_search_candidate",
+      "learning_reading": "formal/core symbol shows repeated local rebound leadership plus post-lockout breakout strength, so it deserves explicit search as the best outside-named second-carrier candidate"
+    },
+    {
+      "symbol": "600118",
+      "display_name": "中国卫星",
+      "inside_named_set": false,
+      "local_top_day_count": 0,
+      "post_lockout_max_vs_pre_lockout_peak": -0.10385122,
+      "post_lockout_max_return_from_start": 0.01937658,
+      "post_lockout_drawdown_from_max_to_end": -0.2943067,
+      "post_lockout_max_trade_date": "20260123",
+      "avg_turnover_rate_f": 10.24657255,
+      "max_turnover_rate_f": 26.6647,
+      "carrier_search_label": "formal_strength_watch_not_yet_carrier",
+      "learning_reading": "formal/core symbol has some post-lockout repair but does not yet carry enough local leadership evidence to enter second-carrier promotion"
+    }
+  ],
+  "interpretation": [
+    "V1.34IQ opens the expanded-symbol-universe route conservatively by searching only the formal/core commercial aerospace names first.",
+    "The point is not to promote a new carrier immediately, but to prove whether the next evidence source really exists outside the original named set."
+  ]
+}

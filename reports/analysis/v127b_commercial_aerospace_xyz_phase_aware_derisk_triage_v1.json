@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127b_commercial_aerospace_xyz_phase_aware_derisk_triage_v1",
+    "economic_reference_variant": "v126o_economic_reference",
+    "cleaner_reference_variant": "v126q_cleaner_reference",
+    "retired_aggressive_shadow_variant": "v126v_retained_aggressive_shadow",
+    "new_aggressive_shadow_variant": "broad_half_reference",
+    "new_aggressive_shadow_final_equity": 1249251.8292,
+    "new_aggressive_shadow_max_drawdown": 0.19378829,
+    "replaces_old_aggressive_shadow": true,
+    "promotable_to_reference_frontier": false,
+    "authoritative_status": "replace_aggressive_shadow_and_continue_phase_aware_downside_grammar"
+  },
+  "interpretation": [
+    "V1.27B freezes the commercial-aerospace shadow stack after phase-aware de-risking: V1.26O remains the economic reference, V1.26Q the cleaner reference, and V1.27A replaces V1.26V inside the aggressive slot.",
+    "This is still not a promotion to the reference frontier; the remaining optimization layer is narrower downside execution grammar, not further entry amplification."
+  ]
+}

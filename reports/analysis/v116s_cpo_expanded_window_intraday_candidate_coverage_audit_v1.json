@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116s_cpo_expanded_window_intraday_candidate_coverage_audit_v1",
+    "expanded_window_day_count": 10,
+    "days_with_add_candidate_rows": 6,
+    "days_with_held_mature_symbols": 9,
+    "missing_new_day_count": 4,
+    "recommended_next_posture": "rebuild_intraday_action_timepoint_table_for_new_expanded_window_days_before_more_visible_only_validation"
+  },
+  "coverage_rows": [
+    {
+      "trade_date": "2023-04-28",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.153414,
+      "held_mature_symbols": [],
+      "held_mature_symbol_count": 0,
+      "add_candidate_row_count": 0,
+      "add_candidate_symbols": [],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-05-18",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.147434,
+      "held_mature_symbols": [
+        "300502"
+      ],
+      "held_mature_symbol_count": 1,
+      "add_candidate_row_count": 1,
+      "add_candidate_symbols": [
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-04-17",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.111344,
+      "held_mature_symbols": [
+        "300502"
+      ],
+      "held_mature_symbol_count": 1,
+      "add_candidate_row_count": 1,
+      "add_candidate_symbols": [
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-11-07",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.067488,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 0,
+      "add_candidate_symbols": [],
+      "coverage_gap": true
+    },
+    {
+      "trade_date": "2023-09-22",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.049504,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2023-06-14",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.044335,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-01-18",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.036908,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 0,
+      "add_candidate_symbols": [],
+      "coverage_gap": true
+    },
+    {
+      "trade_date": "2024-01-23",
+      "is_original_top_miss": false,
+      "under_exposure_gap": 0.03017,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 0,
+      "add_candidate_symbols": [],
+      "coverage_gap": true
+    },
+    {
+      "trade_date": "2023-12-08",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.028668,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    },
+    {
+      "trade_date": "2024-02-06",
+      "is_original_top_miss": true,
+      "under_exposure_gap": 0.027412,
+      "held_mature_symbols": [
+        "300308",
+        "300502"
+      ],
+      "held_mature_symbol_count": 2,
+      "add_candidate_row_count": 2,
+      "add_candidate_symbols": [
+        "300308",
+        "300502"
+      ],
+      "coverage_gap": false
+    }
+  ],
+  "interpretation": [
+    "V1.16S audits whether the expanded repaired-window surface is actually represented inside the existing intraday add-vs-hold candidate base table.",
+    "This distinguishes a true signal failure from a coverage failure where the widened surface contains held mature names but the intraday action-timepoint table never generated add-candidate rows for those days.",
+    "If the new expanded days are mostly missing from the candidate base, the next step is table rebuilding rather than more threshold tuning."
+  ]
+}

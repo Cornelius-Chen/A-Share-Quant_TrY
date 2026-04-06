@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "research_view_count": 6,
+    "shadow_view_count": 4,
+    "live_like_view_count": 2,
+    "authoritative_status": "serving_workstream_complete_enough_to_freeze_and_shift_into_governance"
+  },
+  "triage_rows": [
+    {
+      "serving_component": "research_views",
+      "direction": "freeze_as_current_default_research_surface"
+    },
+    {
+      "serving_component": "shadow_views",
+      "direction": "retain_as_read_only_shadow_serving_surface"
+    },
+    {
+      "serving_component": "live_like_views",
+      "direction": "keep_deferred_until_governance_and_automation_bindings_exist"
+    },
+    {
+      "serving_component": "next_frontier",
+      "direction": "shift_into_governance_workstream_to_add_registry_control_heartbeat_and_promotion_gates"
+    }
+  ],
+  "interpretation": [
+    "Serving is now sufficient for research and read-only shadow consumption.",
+    "The next bottleneck is governance, because promotion control and operational registry discipline must exist before live-like serving can be opened."
+  ]
+}

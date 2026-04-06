@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "current_top_opportunity_theme": "gold",
+    "shadow_top_opportunity_theme": "consumer_staples",
+    "current_top_watch_symbol": "601899",
+    "shadow_top_watch_symbol": "600887",
+    "shadow_rotation_state": "candidate_lane_would_rotate_focus",
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_shadow_control_packet_materialized",
+    "authoritative_status": "accepted_rotation_shadow_control_packet_ready_without_mutating_the_current_primary_control_packet"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_control_visibility",
+      "direction": "use the shadow control packet to inspect accepted post-rotation control state without touching the current primary packet"
+    },
+    {
+      "component": "promotion_guard",
+      "direction": "keep the primary control packet unchanged until the accepted rotation is deliberately promoted"
+    },
+    {
+      "component": "control_consumer_review",
+      "direction": "review shadow control impact before deciding whether top-level consumers should adopt the accepted rotation"
+    }
+  ],
+  "interpretation": [
+    "The accepted rotation is now visible not only as a snapshot but also as a control-packet-level shadow state.",
+    "This preserves promotion discipline while exposing the likely top-level control outcome."
+  ]
+}

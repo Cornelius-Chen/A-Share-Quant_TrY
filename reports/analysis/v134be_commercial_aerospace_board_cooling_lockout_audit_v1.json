@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134be_commercial_aerospace_board_cooling_lockout_audit_v1",
+    "post_full_candidate_count": 29,
+    "cluster_count": 1,
+    "lockout_seed_count": 1,
+    "earliest_lockout_seed_trade_date": "20260115",
+    "suggested_min_cooldown_trading_days": 60,
+    "seed_csv": "data\\training\\commercial_aerospace_board_cooling_lockout_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_board_cooling_lockout_audit_ready_for_direction_triage"
+  },
+  "seed_rows": [
+    {
+      "lockout_start_trade_date": "20260115",
+      "lockout_end_trade_date": "20260320",
+      "cluster_day_count": 29,
+      "dominant_regime_semantic": "weak_drift_chop",
+      "start_drawdown_from_peak": -0.12695396,
+      "start_forward_board_return_20d": -0.13429061,
+      "start_forward_board_return_40d": -0.19003424,
+      "lockout_label": "board_cooling_lockout_watch",
+      "cooldown_guidance": "treat_as_multi_month_cooling_until_clear_board_rebuild_context",
+      "suggested_min_cooldown_trading_days": 60
+    }
+  ],
+  "cluster_rows": [
+    {
+      "start_trade_date": "20260115",
+      "end_trade_date": "20260320",
+      "cluster_day_count": 29,
+      "dominant_regime_semantic": "weak_drift_chop",
+      "min_drawdown_in_cluster": -0.29510649,
+      "start_drawdown_from_peak": -0.12695396,
+      "start_forward_board_return_20d": -0.13429061,
+      "start_forward_board_return_40d": -0.19003424,
+      "max_turning_point_risk_in_cluster": 0.84648172
+    }
+  ],
+  "interpretation": [
+    "V1.34BE asks whether some post-impulse weakness is no longer a rebuild problem at all, but a board-level cooling lockout.",
+    "This stays at supervision level and uses board overlay drawdown plus structure-regime persistence, not single-stock weakness, to name the lockout seed."
+  ]
+}

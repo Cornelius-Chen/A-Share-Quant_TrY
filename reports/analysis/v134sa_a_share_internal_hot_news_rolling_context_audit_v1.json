@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "context_row_count": 3,
+    "important_impact_row_count": 2,
+    "active_impact_count": 2,
+    "accelerating_context_count": 0,
+    "cooling_context_count": 2,
+    "authoritative_output": "a_share_internal_hot_news_rolling_context_and_impact_window_materialized"
+  },
+  "rows": [
+    {
+      "component": "rolling_context_surface",
+      "component_state": "materialized",
+      "metric": "context_row_count",
+      "value": "3"
+    },
+    {
+      "component": "important_impact_window",
+      "component_state": "materialized",
+      "metric": "important_impact_row_count",
+      "value": "2"
+    },
+    {
+      "component": "active_impact_window",
+      "component_state": "measured",
+      "metric": "active_impact_count",
+      "value": "2"
+    },
+    {
+      "component": "context_velocity",
+      "component_state": "materialized",
+      "metric": "accelerating_context_count",
+      "value": "0"
+    },
+    {
+      "component": "context_cooling",
+      "component_state": "materialized",
+      "metric": "cooling_context_count",
+      "value": "2"
+    }
+  ],
+  "interpretation": [
+    "The hot-news lane now emits rolling context rows instead of forcing the consumer to reason over isolated message rows only.",
+    "Important messages also carry a separate impact-window surface so the trading layer can remember them beyond the raw hot-news sequence.",
+    "Rolling context now includes recent-60m/recent-180m counts, recency-weighted signal scores, and explicit velocity/cooling states."
+  ]
+}

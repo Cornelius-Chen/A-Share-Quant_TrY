@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134df_commercial_aerospace_intraday_add_prelaunch_heartbeat_v1",
+    "frontier_name": "intraday_add",
+    "frontier_state": "deferred",
+    "opening_gate_count": 9,
+    "silent_opening_allowed": false,
+    "ready_to_open_now": false,
+    "heartbeat_csv": "data\\training\\commercial_aerospace_intraday_add_prelaunch_heartbeat_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_prelaunch_heartbeat_ready_for_direction_triage"
+  },
+  "heartbeat_rows": [
+    {
+      "key": "frontier_name",
+      "value": "intraday_add"
+    },
+    {
+      "key": "frontier_state",
+      "value": "deferred"
+    },
+    {
+      "key": "opening_posture",
+      "value": "prelaunch_only"
+    },
+    {
+      "key": "opening_gate_count",
+      "value": 9
+    },
+    {
+      "key": "silent_opening_allowed",
+      "value": false
+    },
+    {
+      "key": "ready_to_open_now",
+      "value": false
+    }
+  ],
+  "interpretation": [
+    "V1.34DF turns the deferred add frontier into a simple heartbeat: named, gated, and explicitly not open now.",
+    "The heartbeat exists to prevent repeated continuation messages from being mistaken for permission to start the frontier."
+  ]
+}

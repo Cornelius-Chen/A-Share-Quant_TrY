@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130s_bk0808_rs_watch_window_governance_triage_v1",
+    "near_surface_watch_day_count": 8,
+    "authoritative_status": "retain_bk0808_watch_windows_for_governance_but_keep_worker_frozen"
+  },
+  "authoritative_decision": [
+    "Keep BK0808 frozen.",
+    "Retain the 600118 near-surface watch windows as governance evidence.",
+    "Do not convert near-surface windows into replay authority before real v6 same-plane support exists."
+  ],
+  "watch_rows": [
+    {
+      "trade_date": "2024-07-16",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.566719,
+      "board_composite": 0.976585,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-18",
+      "symbol": "600118",
+      "assignment_layer": "core",
+      "assignment_score": 0.533446,
+      "board_composite": 0.783029,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-19",
+      "symbol": "600118",
+      "assignment_layer": "core",
+      "assignment_score": 0.523847,
+      "board_composite": 0.931191,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-24",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.696973,
+      "board_composite": 0.786505,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-08-15",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.459496,
+      "board_composite": 0.502405,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-08-19",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.451081,
+      "board_composite": 0.649884,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-09-25",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.636655,
+      "board_composite": 0.68059,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-09-30",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.810773,
+      "board_composite": 0.925639,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    }
+  ]
+}

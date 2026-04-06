@@ -1,0 +1,6 @@
+﻿symbol,display_name,search_status,hard_anchor_candidate,hard_decoy_candidate,blocking_reason,next_requirement
+000547,航天发展,current_hard_counterpanel_case,yes,yes,,acts_as_existing_counterpanel_reference
+603601,再升科技,carrier_candidate_not_counterpanel,no,no,event_backed_carrier_role_conflicts_with_counterpanel_usage,would need explicit heat-anchor evidence plus later failed board participation
+002361,神剑股份,crowding_without_hard_heat_evidence,no,soft_only,crowding_and_near_high_repair_exist_but_no explicit hard heat-anchor event,would need decisive attention-anchor evidence before promotion to hard counterpanel
+300342,天银机电,outlier_breakout_without_hard_heat_evidence,no,soft_only,breakout path exists but supporting theme-heat event is not retained as decisive,would need retained heat-anchor evidence plus later failed board restart reading
+301306,西测测试,follow_candidate_not_counterpanel,no,no,follow_candidate_lacks_anchor_heat_role,would need clear attention-anchor evidence before any decoy evaluation

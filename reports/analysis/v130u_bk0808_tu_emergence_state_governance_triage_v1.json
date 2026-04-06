@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130u_bk0808_tu_emergence_state_governance_triage_v1",
+    "symbol": "600118",
+    "authoritative_status": "retain_bk0808_watch_state_machine_as_governance_only_and_keep_worker_frozen"
+  },
+  "authoritative_decision": [
+    "Keep BK0808 frozen.",
+    "Retain the 600118 watch state machine as governance infrastructure.",
+    "Use near-surface watch as an early warning state only; do not reinterpret it as replay authority."
+  ],
+  "state_counts": {
+    "near_surface_watch": 8,
+    "inactive_watch": 2
+  }
+}

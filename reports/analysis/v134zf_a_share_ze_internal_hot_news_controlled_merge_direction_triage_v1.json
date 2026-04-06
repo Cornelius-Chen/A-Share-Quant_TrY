@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "cls_row_count": 20,
+    "sina_row_count": 50,
+    "combined_row_count": 70,
+    "merge_cluster_count": 67,
+    "cross_source_duplicate_candidate_count": 0,
+    "additive_sina_candidate_count": 13,
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_review_materialized",
+    "authoritative_status": "open_controlled_cls_sina_merge_candidate_only_after_duplicate_candidates_are_explicitly_reviewed"
+  },
+  "triage_rows": [
+    {
+      "component": "cross_source_duplicates",
+      "direction": "review cross-source duplicate candidates before allowing both sources into the same primary fastlane stream"
+    },
+    {
+      "component": "additive_sina_candidates",
+      "direction": "treat additive sina themed rows as the highest-value merge candidates because they improve theme and symbol diversity"
+    },
+    {
+      "component": "merge_gate",
+      "direction": "merge through a controlled candidate surface first instead of replacing the current cls-only fastlane in one step"
+    }
+  ],
+  "interpretation": [
+    "The second source has already proven value; the remaining question is controlled duplicate handling.",
+    "This keeps merge progression empirical and reversible."
+  ]
+}

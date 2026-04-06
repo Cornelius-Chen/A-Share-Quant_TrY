@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123y_cpo_heat_conditioned_riskoff_execution_audit_v1",
+    "baseline_final_equity": 1766466.6096,
+    "baseline_max_drawdown": 0.134272,
+    "variant_count": 6,
+    "riskoff_thresholds": {
+      "q85": 2.390718,
+      "q90": 3.087657,
+      "q95": 4.346481
+    },
+    "best_tradeoff_variant_name": "balanced_heat_reference",
+    "recommended_next_posture": "compare_heat_conditioned_riskoff_to_top_drawdown_intervals_before_any_triage"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "balanced_heat_reference",
+      "riskoff_quantile": "none",
+      "heat_gross_trigger": "none",
+      "heat_symbol_trigger": "none",
+      "reduce_fraction": 0.0,
+      "executed_reduce_count": 0,
+      "suppressed_reduce_count": 0,
+      "executed_add_count": 8,
+      "final_equity": 4148870.3072,
+      "max_drawdown": 0.376524,
+      "delta_vs_baseline": 2382403.6976
+    },
+    {
+      "variant_name": "balanced_hc_riskoff_q85_g55_s20_r25",
+      "riskoff_quantile": "q85",
+      "heat_gross_trigger": 0.55,
+      "heat_symbol_trigger": 0.2,
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 5,
+      "suppressed_reduce_count": 47,
+      "executed_add_count": 9,
+      "final_equity": 3063269.812,
+      "max_drawdown": 0.26301,
+      "delta_vs_baseline": 1296803.2024
+    },
+    {
+      "variant_name": "balanced_hc_riskoff_q90_g55_s20_r25",
+      "riskoff_quantile": "q90",
+      "heat_gross_trigger": 0.55,
+      "heat_symbol_trigger": 0.2,
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 4,
+      "suppressed_reduce_count": 31,
+      "executed_add_count": 8,
+      "final_equity": 3059244.828,
+      "max_drawdown": 0.296965,
+      "delta_vs_baseline": 1292778.2184
+    },
+    {
+      "variant_name": "balanced_hc_riskoff_q85_g60_s20_r25",
+      "riskoff_quantile": "q85",
+      "heat_gross_trigger": 0.6,
+      "heat_symbol_trigger": 0.2,
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 4,
+      "suppressed_reduce_count": 48,
+      "executed_add_count": 8,
+      "final_equity": 3059244.828,
+      "max_drawdown": 0.296965,
+      "delta_vs_baseline": 1292778.2184
+    },
+    {
+      "variant_name": "balanced_hc_riskoff_q85_g55_s25_r25",
+      "riskoff_quantile": "q85",
+      "heat_gross_trigger": 0.55,
+      "heat_symbol_trigger": 0.25,
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 4,
+      "suppressed_reduce_count": 48,
+      "executed_add_count": 9,
+      "final_equity": 3127456.492,
+      "max_drawdown": 0.26301,
+      "delta_vs_baseline": 1360989.8824
+    },
+    {
+      "variant_name": "balanced_hc_riskoff_q85_g55_s20_r15",
+      "riskoff_quantile": "q85",
+      "heat_gross_trigger": 0.55,
+      "heat_symbol_trigger": 0.2,
+      "reduce_fraction": 0.15,
+      "executed_reduce_count": 7,
+      "suppressed_reduce_count": 45,
+      "executed_add_count": 9,
+      "final_equity": 3306700.5668,
+      "max_drawdown": 0.295859,
+      "delta_vs_baseline": 1540233.9572
+    }
+  ],
+  "interpretation": [
+    "V1.23Y retries risk-off execution only inside elevated-heat states instead of firing broad de-risking everywhere.",
+    "The aim is to preserve the heat guardrail's return profile while using risk-off only when the book is already too full.",
+    "This is still research-only and must beat the plain balanced heat reference before any policy upgrade is considered."
+  ]
+}

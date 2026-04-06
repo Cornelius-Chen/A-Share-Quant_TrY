@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118d_cpo_add_vs_entry_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.466667,
+    "min_test_balanced_accuracy": 0.4,
+    "stability_posture": "candidate_unstable_under_time_split",
+    "recommended_next_posture": "send_BCD_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_best_threshold": -441961000.0,
+      "train_best_balanced_accuracy": 0.833333,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_add_recall": 1.0,
+      "test_entry_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_best_threshold": -441961000.0,
+      "train_best_balanced_accuracy": 0.785714,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_add_recall": 1.0,
+      "test_entry_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_best_threshold": 1621220000.0,
+      "train_best_balanced_accuracy": 0.833333,
+      "test_balanced_accuracy": 0.4,
+      "test_positive_add_recall": 0.0,
+      "test_entry_reject_rate": 0.8
+    }
+  ],
+  "interpretation": [
+    "V1.18D does not ask whether the add-vs-entry discriminator looks neat on the full table. It asks whether the separation survives crude chronology.",
+    "If not, the branch should stay candidate-only or die quickly instead of becoming the next mainline distraction.",
+    "This closes the first candidate cycle for the add-vs-entry branch."
+  ]
+}

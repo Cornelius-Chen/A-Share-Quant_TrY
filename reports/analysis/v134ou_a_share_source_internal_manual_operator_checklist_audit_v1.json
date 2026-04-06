@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "checklist_row_count": 4,
+    "stage_1_count": 1,
+    "stage_2_count": 2,
+    "stage_3_count": 1,
+    "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_source_internal_manual_operator_checklist_v1.csv",
+    "authoritative_output": "a_share_source_internal_manual_operator_checklist_materialized"
+  },
+  "checklist_rows": [
+    {
+      "decision_unit_id": "allowlist_review_finance_sina_com_cn",
+      "host": "finance.sina.com.cn",
+      "checklist_stage": "stage_1_primary_host_family_review",
+      "dependency_state": "primary_review_completed",
+      "required_checks": "license_terms|robots_policy|commercial_use_risk|fetch_scope_restriction",
+      "required_decisions": "manual_license_outcome|manual_runtime_outcome",
+      "source_url_count": "3",
+      "authority_scores": "4|4|4",
+      "operator_action_state": "manual_checklist_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stcn_com",
+      "host": "stcn.com",
+      "checklist_stage": "stage_2_independent_host_review_after_primary",
+      "dependency_state": "independent_review_completed",
+      "required_checks": "license_terms|robots_policy|commercial_use_risk|fetch_scope_restriction",
+      "required_decisions": "manual_license_outcome|manual_runtime_outcome",
+      "source_url_count": "1",
+      "authority_scores": "4",
+      "operator_action_state": "manual_checklist_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_www_yicai_com",
+      "host": "www.yicai.com",
+      "checklist_stage": "stage_2_independent_host_review_after_primary",
+      "dependency_state": "independent_review_completed",
+      "required_checks": "license_terms|robots_policy|commercial_use_risk|fetch_scope_restriction",
+      "required_decisions": "manual_license_outcome|manual_runtime_outcome",
+      "source_url_count": "1",
+      "authority_scores": "4",
+      "operator_action_state": "manual_checklist_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stock_finance_sina_com_cn",
+      "host": "stock.finance.sina.com.cn",
+      "checklist_stage": "stage_3_sibling_host_review_after_primary_outcome",
+      "dependency_state": "sibling_review_completed",
+      "required_checks": "license_terms|robots_policy|commercial_use_risk|fetch_scope_restriction",
+      "required_decisions": "manual_license_outcome|manual_runtime_outcome",
+      "source_url_count": "1",
+      "authority_scores": "4",
+      "operator_action_state": "manual_checklist_completed_pending_runtime_promotion"
+    }
+  ],
+  "interpretation": [
+    "The source-side manual lane still has a compact operator checklist with explicit staged ordering instead of only status cards and handoff bundles.",
+    "Batch-one checklist stages are now completed and preserved, while runtime promotion remains a later gate."
+  ]
+}

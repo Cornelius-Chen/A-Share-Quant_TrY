@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "residual_count": 3,
+    "external_boundary_count": 2,
+    "internal_calendar_alignment_count": 1,
+    "authoritative_status": "replay_market_context_residuals_should_split_into_boundary_retention_and_small_internal_calendar_inspection"
+  },
+  "triage_rows": [
+    {
+      "component": "external_boundary_residuals",
+      "direction": "retain_pre_coverage_residuals_as_boundary_exceptions_not_as_current_build_failures"
+    },
+    {
+      "component": "internal_calendar_alignment_candidate",
+      "direction": "inspect_the_single_off_calendar_shadow_slice_before_freezing_it_as_hard_residual"
+    },
+    {
+      "component": "replay_governance",
+      "direction": "do_not_reopen_execution_but_allow_a_narrow_shadow_calendar_alignment_check"
+    }
+  ],
+  "interpretation": [
+    "The residual set is now small enough to separate immutable boundary residue from one potentially fixable shadow-input issue.",
+    "That means the next replay move should be a narrow calendar-alignment inspection, not another broad market-context rebuild."
+  ]
+}

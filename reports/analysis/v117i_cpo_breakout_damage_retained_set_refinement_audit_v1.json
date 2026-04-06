@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117i_cpo_breakout_damage_retained_set_refinement_audit_v1",
+    "retained_row_count": 8,
+    "retained_positive_count": 6,
+    "retained_weak_count": 2,
+    "positive_mean_score": 1059181000.0,
+    "weak_mean_score": 194746000.0,
+    "mean_score_gap_positive_minus_weak": 864435000.0,
+    "best_retained_threshold": 791060000.0,
+    "best_retained_balanced_accuracy": 1.0,
+    "retained_set_refinement_value_clear": true,
+    "recommended_next_posture": "if_retained_refinement_stays_clear_send_breakout_damage_branch_to_three_run_adversarial_review"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1302939000.0,
+      "tp": 1,
+      "fn": 5,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.166667,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.583333
+    },
+    {
+      "threshold": 1188918000.0,
+      "tp": 2,
+      "fn": 4,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.333333,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.666667
+    },
+    {
+      "threshold": 1106029000.0,
+      "tp": 3,
+      "fn": 3,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.5,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": 1096927000.0,
+      "tp": 4,
+      "fn": 2,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.666667,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.833333
+    },
+    {
+      "threshold": 869213000.0,
+      "tp": 5,
+      "fn": 1,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 0.833333,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 0.916667
+    },
+    {
+      "threshold": 791060000.0,
+      "tp": 6,
+      "fn": 0,
+      "fp": 0,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "weak_reject_rate": 1.0,
+      "balanced_accuracy": 1.0
+    },
+    {
+      "threshold": 425281000.0,
+      "tp": 6,
+      "fn": 0,
+      "fp": 1,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "weak_reject_rate": 0.5,
+      "balanced_accuracy": 0.75
+    },
+    {
+      "threshold": -35789000.0,
+      "tp": 6,
+      "fn": 0,
+      "fp": 2,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "weak_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "retained_score_rows": [
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "damage_positive_score": 1824627000.0,
+      "damage_negative_score": 521688000.0,
+      "candidate_damage_score": 1302939000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "damage_positive_score": 1976810000.0,
+      "damage_negative_score": 787892000.0,
+      "candidate_damage_score": 1188918000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "damage_positive_score": 1713049000.0,
+      "damage_negative_score": 607020000.0,
+      "candidate_damage_score": 1106029000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "damage_positive_score": 1878053000.0,
+      "damage_negative_score": 781126000.0,
+      "candidate_damage_score": 1096927000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "True",
+      "expectancy_proxy_3d": 0.064312,
+      "max_adverse_return_3d": -0.021501,
+      "damage_positive_score": 1575047000.0,
+      "damage_negative_score": 705834000.0,
+      "candidate_damage_score": 869213000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_high",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": 0.020214,
+      "max_adverse_return_3d": -0.017008,
+      "damage_positive_score": 2029613000.0,
+      "damage_negative_score": 1238553000.0,
+      "candidate_damage_score": 791060000.0,
+      "positive_under_proxy_definition": true
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "damage_positive_score": 1253043000.0,
+      "damage_negative_score": 827762000.0,
+      "candidate_damage_score": 425281000.0,
+      "positive_under_proxy_definition": false
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "group_name": "q25_hit",
+      "state_band": "pc1_low__pc2_low",
+      "action_favored_3d": "False",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "damage_positive_score": 758483000.0,
+      "damage_negative_score": 794272000.0,
+      "candidate_damage_score": -35789000.0,
+      "positive_under_proxy_definition": false
+    }
+  ],
+  "interpretation": [
+    "V1.17I asks the same retained-set question that killed the continuation-integrity branch, but now for the new breakout-damage branch.",
+    "If this branch still separates positive retained rows from weak retained rows after the first external audit, then it has a stronger claim to be a genuine new quality-side path.",
+    "This is still candidate-only and should be read as a retained-set refinement audit, not a promotion step."
+  ]
+}

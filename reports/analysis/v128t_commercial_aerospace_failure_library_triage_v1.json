@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128t_commercial_aerospace_failure_library_triage_v1",
+    "failure_case_count": 6,
+    "retained_intraday_override_case_count": 2,
+    "blocked_watch_only_case_count": 4,
+    "next_direction": "use retained cases as supervision objects for future intraday collapse override grammar without contaminating current EOD lawful replay"
+  },
+  "retained_rows": [
+    {
+      "failure_id": "20260113_601698",
+      "symbol": "601698",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "status": "retain_for_intraday_override_library",
+      "why": "lawful overnight buy but severe same-day collapse suggests missing intraday emergency-exit grammar rather than time leakage"
+    },
+    {
+      "failure_id": "20260126_300342",
+      "symbol": "300342",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "status": "retain_for_intraday_override_library",
+      "why": "lawful overnight buy but severe same-day collapse suggests missing intraday emergency-exit grammar rather than time leakage"
+    }
+  ],
+  "blocked_rows": [
+    {
+      "failure_id": "20251208_003009",
+      "symbol": "003009",
+      "status": "watch_only",
+      "why": "not severe or not clean enough to become the first authoritative intraday-override archetype"
+    },
+    {
+      "failure_id": "20251208_688523",
+      "symbol": "688523",
+      "status": "watch_only",
+      "why": "not severe or not clean enough to become the first authoritative intraday-override archetype"
+    },
+    {
+      "failure_id": "20260113_000738",
+      "symbol": "000738",
+      "status": "watch_only",
+      "why": "not severe or not clean enough to become the first authoritative intraday-override archetype"
+    },
+    {
+      "failure_id": "20260126_300045",
+      "symbol": "300045",
+      "status": "watch_only",
+      "why": "not severe or not clean enough to become the first authoritative intraday-override archetype"
+    }
+  ],
+  "interpretation": [
+    "V1.28T freezes the first commercial-aerospace failure-library triage.",
+    "Retained cases do not become training labels yet; they become supervised governance objects for the later intraday emergency-exit layer."
+  ]
+}

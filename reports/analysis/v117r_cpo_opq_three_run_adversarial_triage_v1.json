@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117r_cpo_opq_three_run_adversarial_triage_v1",
+    "triage_scope": "V117O_V117P_V117Q",
+    "breakout_damage_branch_status": "degraded_to_candidate_explanatory_component_only",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "mainline_investment_allowed": false,
+    "secondary_explanatory_layer_retained": true,
+    "authoritative_current_problem": "the_branch_fails_broader_external_and_time_split_validation_even_if_false_positives_are_explainable",
+    "recommended_next_posture": "stop_mainline_investment_in_breakout_damage_and_reopen_new_quality_side_discovery_only_after_reset"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "stop_mainline_investment_now",
+      "key_reason": "External-pool signal is no longer clear and time-split validation is already weak enough to stop further mainline effort."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "false_positive_overhang_is_the_real_failure_mode",
+      "key_reason": "The branch can still tell a good story on neat rows, but the broader pool produces too many false positives and the timing split does not rescue it."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "candidate_only_even_as_training_asset",
+      "key_reason": "There is still some learnability, but it is not strong enough to justify replay-facing status or continued mainline training investment."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "degrade_breakout_damage_and_keep_reverse_human_layers_explanatory_only",
+      "key_reason": "V117O external_clear=False, V117P mean_test_bal_acc=0.375, V117Q top_explanatory_metric=retail_chase_trap_score."
+    }
+  ],
+  "interpretation": [
+    "V1.17R is the scheduled adversarial review over the O/P/Q cycle: broader external audit, time-split external validation, and false-positive explanatory audit.",
+    "All three reviewers converged that breakout-damage is no longer strong enough to remain the active replay-facing candidate branch once tested on the broader and dirtier surface.",
+    "The branch is therefore degraded to candidate/explanatory-only. Reverse-signal and human-heuristic layers remain useful only for false-positive explanation, not as new mainline policy."
+  ]
+}

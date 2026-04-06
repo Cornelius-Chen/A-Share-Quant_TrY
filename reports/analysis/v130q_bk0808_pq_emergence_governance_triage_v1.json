@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130q_bk0808_pq_emergence_governance_triage_v1",
+    "reopen_candidate_symbol": "600118",
+    "authoritative_status": "monitor_600118_as_bk0808_emergence_trigger_but_keep_worker_frozen_until_real_same_plane_support_appears"
+  },
+  "triage_rows": [
+    {
+      "symbol": "600118",
+      "direction": "reopen_candidate_only_after_real_v6_emergence"
+    }
+  ],
+  "authoritative_decision": [
+    "Keep BK0808 frozen.",
+    "Treat 600118 as the decisive emergence watch name.",
+    "Upgrade BK0808 only when 600118 gains actual v6 same-plane support while board strength remains acceptable.",
+    "Do not treat timeline-native support alone as enough for reopening."
+  ]
+}

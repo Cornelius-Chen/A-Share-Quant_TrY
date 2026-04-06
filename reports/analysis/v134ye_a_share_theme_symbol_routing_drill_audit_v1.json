@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "case_count": 33,
+    "routed_count": 33,
+    "direct_route_count": 33,
+    "unresolved_primary_count": 0,
+    "authoritative_output": "a_share_theme_symbol_routing_drill_materialized"
+  },
+  "rows": [
+    {
+      "component": "theme_symbol_routing_drill",
+      "component_state": "materialized",
+      "metric": "case_count",
+      "value": "33"
+    },
+    {
+      "component": "theme_symbol_routing_drill",
+      "component_state": "measured",
+      "metric": "routed_count",
+      "value": "33"
+    },
+    {
+      "component": "theme_symbol_routing_drill",
+      "component_state": "measured",
+      "metric": "direct_route_count",
+      "value": "33"
+    },
+    {
+      "component": "theme_symbol_routing_drill",
+      "component_state": "measured",
+      "metric": "unresolved_primary_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "This drill validates the full route from detected theme strings to governed primary theme and top symbol route.",
+    "It is stricter than alias reachability because it asks whether the current registry can produce a usable top symbol."
+  ]
+}

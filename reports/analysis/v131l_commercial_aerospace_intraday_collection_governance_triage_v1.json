@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131l_commercial_aerospace_intraday_collection_governance_triage_v1",
+    "authoritative_status": "freeze_intraday_collection_governance_until_required_minute_files_arrive",
+    "required_artifact_count": 4,
+    "missing_artifact_count": 4,
+    "program_status": "blocked_for_minute_data",
+    "authoritative_rule": "retain the intraday branch as governance plus collection state, and reopen modeling only when the file-based minute-data gate is fully satisfied"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_override_supervision_bundle",
+      "status": "retain",
+      "rationale": "the governance bundle is ready and should be preserved as the seed geometry for future minute-level work"
+    },
+    {
+      "component": "minute_data_collection_gate",
+      "status": "installed",
+      "rationale": "all four required symbol files are missing, so the unblock condition must stay mechanical rather than discretionary"
+    },
+    {
+      "component": "intraday_modeling",
+      "status": "blocked",
+      "rationale": "do not open intraday modeling until coverage reaches full support across the required failure-seed symbols"
+    }
+  ],
+  "interpretation": [
+    "V1.31L freezes the commercial-aerospace intraday branch into a governance-and-collection posture.",
+    "This is the honest next state: useful supervision exists, but lawful modeling remains blocked by missing minute artifacts."
+  ]
+}

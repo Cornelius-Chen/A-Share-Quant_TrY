@@ -1,0 +1,7 @@
+﻿opening_stage,status,detail
+frontier_scope,opened_protocol_only,"The new frontier is a unified intraday shadow replay lane, but only at protocol and supervision-binding scope."
+reduce_branch,read_only_frozen_input,freeze_reduce_handoff_package_and_do_not_reopen_reduce_mainline_before_future_frontier_shift
+add_branch,read_only_frozen_supervision_input,freeze_add_supervision_mainline_as_complete_enough_and_leave_only_local_residue_maintenance
+first_module,reentry_unlock_bridge_first,The lane should first bind reentry/unlock supervision between frozen reduce and frozen add supervision before any broader intraday execution claims.
+execution_authority,still_blocked,The lane stays read-only and shadow-only; it does not inherit execution authority from reduce or promote add into execution.
+build_order,reuse_existing_intraday_protocol,Reuse V1.33M sequencing: phase_1_visibility -> phase_2_simulation -> phase_3_replay_lane

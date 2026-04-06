@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "precondition_count": 5,
+    "unsatisfied_count": 1,
+    "priority_runtime_candidate_count": 1,
+    "lane_row_count": 1,
+    "status_csv": "data\\training\\a_share_runtime_scheduler_activation_precondition_status_v1.csv",
+    "authoritative_output": "a_share_runtime_scheduler_activation_preconditions_materialized"
+  },
+  "rows": [
+    {
+      "precondition": "single_runtime_candidate_isolated",
+      "precondition_state": "satisfied",
+      "supporting_count": 1,
+      "blocking_reason": "single html-article runtime candidate has been isolated"
+    },
+    {
+      "precondition": "activation_policy_bound",
+      "precondition_state": "satisfied",
+      "supporting_count": 1,
+      "blocking_reason": "html-article adapter already has selective-after-license-review activation policy"
+    },
+    {
+      "precondition": "retry_policy_bound",
+      "precondition_state": "satisfied",
+      "supporting_count": 1,
+      "blocking_reason": "html-article adapter already has retry policy binding"
+    },
+    {
+      "precondition": "scheduler_runtime_activation",
+      "precondition_state": "unsatisfied",
+      "supporting_count": 1,
+      "blocking_reason": "runtime binding still remains scheduler_stub_not_activated"
+    },
+    {
+      "precondition": "scheduler_stub_replacement_lane_materialized",
+      "precondition_state": "satisfied_foundation_only",
+      "supporting_count": 1,
+      "blocking_reason": "single html-article scheduler stub replacement lane has been materialized"
+    }
+  ],
+  "interpretation": [
+    "The first runtime lane is no longer blocked by candidate ambiguity; it is narrowed to one scheduler activation precondition.",
+    "The remaining source-side runtime blocker is scheduler stub activation, not host review or retry-policy design.",
+    "A single scheduler-stub replacement lane is now explicitly materialized as foundation-ready support for that future activation step."
+  ]
+}

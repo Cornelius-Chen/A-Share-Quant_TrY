@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133f_commercial_aerospace_intraday_reopen_change_gate_v1",
+    "artifact_count": 5,
+    "changed_artifact_count": 0,
+    "missing_artifact_count": 3,
+    "rerun_required": false,
+    "gate_csv": "data\\training\\commercial_aerospace_intraday_reopen_change_gate_v1.csv",
+    "authoritative_rule": "the commercial-aerospace intraday lane should stay frozen until a lawful point-in-time state feed, an execution simulator, and a separate intraday replay lane exist"
+  },
+  "artifact_rows": [
+    {
+      "artifact_type": "minute_visibility_surface",
+      "path": "data/training/commercial_aerospace_intraday_supervision_registry_v1.csv",
+      "state": "present_but_governance_only",
+      "reopen_relevance": "needs lawful point-in-time successor, not just current governance table"
+    },
+    {
+      "artifact_type": "minute_session_archives",
+      "path": "data/raw/intraday_a_share_1min_monthly",
+      "state": "present",
+      "reopen_relevance": "supports research, but not sufficient alone to unlock intraday execution"
+    },
+    {
+      "artifact_type": "intraday_execution_simulator",
+      "path": "MISSING: lawful_intraday_execution_simulator",
+      "state": "missing",
+      "reopen_relevance": "must exist before intraday replay can reopen"
+    },
+    {
+      "artifact_type": "point_in_time_intraday_state_feed",
+      "path": "MISSING: point_in_time_intraday_state_feed",
+      "state": "missing",
+      "reopen_relevance": "must exist before intraday execution can be lawful"
+    },
+    {
+      "artifact_type": "separate_intraday_replay_lane",
+      "path": "MISSING: commercial_aerospace_intraday_replay_lane",
+      "state": "missing",
+      "reopen_relevance": "must exist so minute execution can be tested without contaminating frozen EOD primary"
+    }
+  ],
+  "interpretation": [
+    "V1.33F defines the explicit change-gate for reopening commercial-aerospace intraday execution work.",
+    "The gate is intentionally infrastructural, because the remaining blockers are no longer local analytical gaps."
+  ]
+}

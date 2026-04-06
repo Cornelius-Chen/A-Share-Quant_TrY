@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hy_commercial_aerospace_event_attention_role_candidate_audit_v1",
+    "existing_hard_role_seed_count": 2,
+    "candidate_symbol_count": 5,
+    "hard_retained_count": 1,
+    "soft_candidate_count": 4,
+    "attention_anchor_hard_symbol": "000547",
+    "candidate_csv": "data\\training\\commercial_aerospace_event_attention_role_candidates_v1.csv",
+    "authoritative_rule": "the second event-attention expansion should remain candidate-based: 航天发展 remains the only hard anchor/decoy seed, while 再升科技、神剑股份、天银机电、西测测试 are retained as role candidates with different evidence strengths rather than being prematurely promoted into hard anchor or decoy labels"
+  },
+  "candidate_rows": [
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "candidate_status": "hard_retained",
+      "candidate_role": "attention_anchor_and_attention_decoy",
+      "source_backing": "ca_source_007 + local_path",
+      "evidence_strength": "high",
+      "role_reasoning": "explicit turning-point heat naming plus later weak repair makes it the first hard anchor/decoy case",
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "counterexample_family": "locked_board_weak_repair_only",
+      "post_lockout_max_vs_pre_lockout_peak": -0.1585,
+      "avg_turnover_rate_f": 20.64860392,
+      "max_turnover_rate_f": 39.7029,
+      "max_date_zone": "lockout_window"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "crowded_attention_carrier_candidate",
+      "source_backing": "ca_source_010 + crowding_module",
+      "evidence_strength": "medium",
+      "role_reasoning": "has a real supply-chain validation event and later strong crowded rebound, but no hard local evidence yet that it was the main attention anchor rather than a later crowded beneficiary",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "avg_turnover_rate_f": 26.1588098,
+      "max_turnover_rate_f": 62.0638,
+      "max_date_zone": "post_lockout_raw_only_window"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "crowding_only_role_candidate",
+      "source_backing": "crowding_module_only",
+      "evidence_strength": "medium_low",
+      "role_reasoning": "shows shelter-like crowding and near-high repair, but lacks a retained event source proving anchor status",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "counterexample_family": "locked_board_weak_repair_only",
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "avg_turnover_rate_f": 22.9258,
+      "max_turnover_rate_f": 56.1441,
+      "max_date_zone": "post_lockout_raw_only_window"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "outlier_breakout_concentration_candidate",
+      "source_backing": "ca_source_004_theme_heat + local_breakout_path",
+      "evidence_strength": "medium_low",
+      "role_reasoning": "breaks prior highs inside lockout and appears in a theme-heat list, but the event itself was not retained as decisive, so this remains a local concentration candidate rather than a hard anchor",
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "counterexample_family": "lockout_outlier_breakout_then_fade",
+      "post_lockout_max_vs_pre_lockout_peak": 0.1,
+      "avg_turnover_rate_f": 17.83263725,
+      "max_turnover_rate_f": 32.6589,
+      "max_date_zone": "lockout_window"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "candidate_status": "soft_candidate",
+      "candidate_role": "high_beta_attention_follow_candidate",
+      "source_backing": "ca_source_011 + raw_only_rebound",
+      "evidence_strength": "medium",
+      "role_reasoning": "has direct supply-chain validation and strong raw-only rebound, but current evidence fits a high-beta following role more than an attention anchor role",
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "counterexample_family": "raw_only_near_high_rebound_without_breakout",
+      "post_lockout_max_vs_pre_lockout_peak": -0.0169697,
+      "avg_turnover_rate_f": 19.75018824,
+      "max_turnover_rate_f": 41.3251,
+      "max_date_zone": "post_lockout_raw_only_window"
+    }
+  ],
+  "interpretation": [
+    "V1.34HY expands the role layer without pretending the evidence is equally strong for every named symbol.",
+    "The key discipline is asymmetric promotion: one hard role seed can coexist with several softer role candidates, which is better than flattening everything into the same anchor/decoy confidence level."
+  ]
+}

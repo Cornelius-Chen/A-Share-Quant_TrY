@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "fastlane_row_count": 20,
+    "cluster_row_count": 20,
+    "deduped_row_count": 20,
+    "duplicate_reduction_count": 0,
+    "authoritative_output": "a_share_internal_hot_news_event_cluster_and_deduped_stream_materialized"
+  },
+  "rows": [
+    {
+      "component": "event_cluster_surface",
+      "component_state": "materialized",
+      "metric": "cluster_row_count",
+      "value": "20"
+    },
+    {
+      "component": "deduped_event_stream",
+      "component_state": "read_ready_internal_only",
+      "metric": "deduped_row_count",
+      "value": "20"
+    },
+    {
+      "component": "duplicate_reduction",
+      "component_state": "measured",
+      "metric": "duplicate_reduction_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "The hot-news lane now materializes event clusters before downstream trading consumption.",
+    "The trading layer can read a deduped event stream instead of consuming every raw telegraph row as an independent event."
+  ]
+}

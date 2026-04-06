@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "raw_file_count": 11,
+    "beyond_2024_source_count": 1,
+    "authoritative_status": "index_daily_true_source_gap_closed_reaudit_required"
+  },
+  "triage_rows": [
+    {
+      "component": "index_daily_source_horizon",
+      "direction": "retire_old_true_source_gap_narrative_and_reopen_downstream_reaudit"
+    },
+    {
+      "component": "paired_surface_promotion",
+      "direction": "move_focus_from_source_absence_to_paired_surface_and_limit_halt_recheck"
+    }
+  ],
+  "interpretation": [
+    "The dominant replay-side blocker is no longer raw-source absence once a beyond-2024 index file is retained.",
+    "The correct next move is downstream re-audit, not continued source-gap framing."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "handoff_row_count": 4,
+    "ready_primary_review_count": 1,
+    "authoritative_status": "source_internal_manual_should_now_transition_from_internal_packaging_to_actual_manual_review_execution"
+  },
+  "triage_rows": [
+    {
+      "component": "handoff_package",
+      "direction": "use_handoff_package_as_the_terminal_source_internal_manual_operator_surface"
+    },
+    {
+      "component": "primary_host_family",
+      "direction": "execute_finance_sina_manual_review_first"
+    },
+    {
+      "component": "independent_hosts",
+      "direction": "review_stcn_and_yicai_only_after_primary_host_family_record_exists"
+    },
+    {
+      "component": "sibling_host",
+      "direction": "retain_stock_finance_sina_dependency_until_primary_host_family_outcome_exists"
+    }
+  ],
+  "interpretation": [
+    "The source-side manual lane has reached its internal packaging stopline.",
+    "Further forward motion now requires actual manual review execution rather than additional internal modeling."
+  ]
+}

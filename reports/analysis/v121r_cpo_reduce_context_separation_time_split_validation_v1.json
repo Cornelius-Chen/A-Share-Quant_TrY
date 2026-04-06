@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121r_cpo_reduce_context_separation_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.519735,
+    "min_test_balanced_accuracy": 0.351852,
+    "stability_posture": "candidate_unstable_under_time_split",
+    "recommended_next_posture": "send_PQR_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 70,
+      "test_row_count": 29,
+      "train_positive_count": 12,
+      "test_positive_count": 2,
+      "train_best_threshold": 0.714283,
+      "train_best_balanced_accuracy": 0.711207,
+      "test_balanced_accuracy": 0.351852,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.703704
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 68,
+      "test_row_count": 31,
+      "train_positive_count": 7,
+      "test_positive_count": 7,
+      "train_best_threshold": -1.028383,
+      "train_best_balanced_accuracy": 0.622951,
+      "test_balanced_accuracy": 0.625,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.25
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 60,
+      "test_row_count": 39,
+      "train_positive_count": 9,
+      "test_positive_count": 5,
+      "train_best_threshold": 0.900801,
+      "train_best_balanced_accuracy": 0.676471,
+      "test_balanced_accuracy": 0.582353,
+      "test_positive_recall": 0.4,
+      "test_negative_reject_rate": 0.764706
+    }
+  ],
+  "interpretation": [
+    "V1.21R applies chronology discipline to the first explicit reduce-context separation branch.",
+    "This is the right chronology test because the branch is trying to separate reduce from other positive action contexts, not just rank generic risk states.",
+    "A line that fails here should be downgraded quickly."
+  ]
+}

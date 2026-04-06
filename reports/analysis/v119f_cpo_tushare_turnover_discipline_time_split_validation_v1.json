@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119f_cpo_tushare_turnover_discipline_time_split_validation_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.75,
+    "min_test_balanced_accuracy": 0.5,
+    "stability_posture": "candidate_stable_enough_for_next_adversarial_review",
+    "recommended_next_posture": "send_DEF_to_three_run_adversarial_review"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 9,
+      "test_row_count": 7,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.537167,
+      "train_best_balanced_accuracy": 0.7,
+      "test_balanced_accuracy": 1.0,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 12,
+      "test_row_count": 4,
+      "train_positive_count": 2,
+      "test_positive_count": 3,
+      "train_best_threshold": 2.104021,
+      "train_best_balanced_accuracy": 0.95,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 11,
+      "test_row_count": 5,
+      "train_positive_count": 4,
+      "test_positive_count": 1,
+      "train_best_threshold": 0.537167,
+      "train_best_balanced_accuracy": 0.928571,
+      "test_balanced_accuracy": 0.75,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.19F applies chronology discipline to the Tushare-backed turnover-discipline branch.",
+    "A branch that only looks good after adding new daily data but still fails crude year splits should be stopped before it becomes another data-rich mirage.",
+    "This closes the first three-run block for the Tushare orthogonal hardening line."
+  ]
+}

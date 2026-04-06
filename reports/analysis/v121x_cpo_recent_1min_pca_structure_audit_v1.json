@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121x_cpo_recent_1min_pca_structure_audit_v1",
+    "row_count": 7880,
+    "feature_count": 16,
+    "pc1_explained_ratio": 0.37780228,
+    "pc2_explained_ratio": 0.20160805,
+    "band_count": 9,
+    "recommended_next_posture": "derive_1min_candidate_microstructure_families_from_pc_structure"
+  },
+  "component_rows": [
+    {
+      "component": "pc1",
+      "explained_ratio": 0.37780228,
+      "top_loadings": [
+        {
+          "feature": "pullback_from_high",
+          "loading": -0.35609233,
+          "abs_loading": 0.35609233
+        },
+        {
+          "feature": "micro_pullback_depth",
+          "loading": 0.35562671,
+          "abs_loading": 0.35562671
+        },
+        {
+          "feature": "minute_return",
+          "loading": -0.35013346,
+          "abs_loading": 0.35013346
+        },
+        {
+          "feature": "body_pct",
+          "loading": -0.35013346,
+          "abs_loading": 0.35013346
+        },
+        {
+          "feature": "reclaim_after_break_score",
+          "loading": -0.31973665,
+          "abs_loading": 0.31973665
+        }
+      ]
+    },
+    {
+      "component": "pc2",
+      "explained_ratio": 0.20160805,
+      "top_loadings": [
+        {
+          "feature": "range_pct",
+          "loading": -0.44465291,
+          "abs_loading": 0.44465291
+        },
+        {
+          "feature": "value_ratio_5",
+          "loading": -0.34751293,
+          "abs_loading": 0.34751293
+        },
+        {
+          "feature": "volume_ratio_5",
+          "loading": -0.34650893,
+          "abs_loading": 0.34650893
+        },
+        {
+          "feature": "upper_shadow_pct",
+          "loading": -0.33059669,
+          "abs_loading": 0.33059669
+        },
+        {
+          "feature": "burst_then_fade_score",
+          "loading": -0.32059749,
+          "abs_loading": 0.32059749
+        }
+      ]
+    }
+  ],
+  "band_rows": [
+    {
+      "band": "pc1_high__pc2_high",
+      "row_count": 1069,
+      "mean_close_vs_vwap": -0.01029461,
+      "mean_push_efficiency": -0.81496804,
+      "mean_burst_then_fade_score": 0.00169054,
+      "mean_late_session_integrity_score": -0.09947969
+    },
+    {
+      "band": "pc1_high__pc2_low",
+      "row_count": 773,
+      "mean_close_vs_vwap": -0.0033004,
+      "mean_push_efficiency": -0.403534,
+      "mean_burst_then_fade_score": 0.00701089,
+      "mean_late_session_integrity_score": -0.01282021
+    },
+    {
+      "band": "pc1_high__pc2_mid",
+      "row_count": 785,
+      "mean_close_vs_vwap": -0.00602765,
+      "mean_push_efficiency": -0.65017143,
+      "mean_burst_then_fade_score": 0.00307151,
+      "mean_late_session_integrity_score": -0.03398136
+    },
+    {
+      "band": "pc1_low__pc2_high",
+      "row_count": 431,
+      "mean_close_vs_vwap": -0.01137305,
+      "mean_push_efficiency": 0.53354216,
+      "mean_burst_then_fade_score": 5.743e-05,
+      "mean_late_session_integrity_score": 0.12368889
+    },
+    {
+      "band": "pc1_low__pc2_low",
+      "row_count": 1195,
+      "mean_close_vs_vwap": -6.56e-05,
+      "mean_push_efficiency": 0.73693466,
+      "mean_burst_then_fade_score": 0.00060825,
+      "mean_late_session_integrity_score": 0.08485862
+    },
+    {
+      "band": "pc1_low__pc2_mid",
+      "row_count": 1001,
+      "mean_close_vs_vwap": -0.00818288,
+      "mean_push_efficiency": 0.6688398,
+      "mean_burst_then_fade_score": 0.00014206,
+      "mean_late_session_integrity_score": 0.17788463
+    },
+    {
+      "band": "pc1_mid__pc2_high",
+      "row_count": 1127,
+      "mean_close_vs_vwap": -0.01265277,
+      "mean_push_efficiency": -0.35616017,
+      "mean_burst_then_fade_score": 0.00051068,
+      "mean_late_session_integrity_score": -0.02342653
+    },
+    {
+      "band": "pc1_mid__pc2_low",
+      "row_count": 659,
+      "mean_close_vs_vwap": -0.00654122,
+      "mean_push_efficiency": 0.20730451,
+      "mean_burst_then_fade_score": 0.00201981,
+      "mean_late_session_integrity_score": 0.03889082
+    },
+    {
+      "band": "pc1_mid__pc2_mid",
+      "row_count": 840,
+      "mean_close_vs_vwap": -0.00958453,
+      "mean_push_efficiency": -0.01736477,
+      "mean_burst_then_fade_score": 0.00091555,
+      "mean_late_session_integrity_score": 0.04017664
+    }
+  ],
+  "interpretation": [
+    "V1.21X turns the recent 1-minute feature table into a concrete high-dimensional structure audit instead of hand-defining a new family first.",
+    "The immediate value is identifying dominant microstructure axes and continuous bands before any replay-facing use.",
+    "The next step is to derive one or two candidate 1-minute families from this structure and audit them adversarially."
+  ]
+}

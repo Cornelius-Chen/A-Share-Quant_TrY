@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122u_cpo_1min_downside_attachment_stopline_v1",
+    "direct_historical_bridge_allowed": false,
+    "recent_same_plane_stack_attachment_allowed": false,
+    "standalone_1min_downside_soft_component_retained": true,
+    "attachment_posture": "defer_until_historical_1min_or_better_same_plane_increment_exists",
+    "recommended_next_posture": "three_run_adversarial_review_for_attachment_decision"
+  },
+  "decision_rows": [
+    {
+      "decision_name": "direct_historical_bridge",
+      "allowed": false,
+      "reason": "date_overlap_required_between_recent_1min_and_historical_reduce_surface"
+    },
+    {
+      "decision_name": "recent_same_plane_stack_attachment",
+      "allowed": false,
+      "reason": "stack_must_improve_discovery_and_transfer_together"
+    },
+    {
+      "decision_name": "retain_1min_downside_component",
+      "allowed": true,
+      "reason": "standalone_soft_component_still_has_positive_but_weak_signal"
+    }
+  ],
+  "interpretation": [
+    "V1.22U freezes the bridge decision rather than letting the project quietly smuggle the recent 1-minute downside line into the broader risk stack.",
+    "If the historical bridge is impossible and the recent same-plane stack does not clearly improve over base, attachment must be deferred.",
+    "The correct retained object is the standalone 1-minute downside soft component, not a pretend integrated rule."
+  ]
+}

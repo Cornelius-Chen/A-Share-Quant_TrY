@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_driver_signal_mode": "passive_polling",
+    "interrupt_required": "false",
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "top_opportunity_primary_theme_slug": "gold",
+    "top_opportunity_theme_governance_state": "single_theme_passthrough",
+    "top_opportunity_mapping_confidence": "medium",
+    "top_opportunity_linkage_class": "direct_beneficiary",
+    "top_opportunity_beneficiary_symbols_top5": "601899",
+    "top_watch_symbol": "601899",
+    "top_watch_primary_theme_slug": "gold",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "601899",
+    "top_watch_symbol_change": "stable",
+    "symbol_watch_change_signal_priority": "p2",
+    "authoritative_status": "continue_serving_single-row_control-packet_above_status_snapshot_and_driver-signal_layers"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_control_packet_branch",
+      "direction": "keep_the_program_on_low-cost_single-row_polling_when_the_control_packet_stays_in_passive_mode"
+    },
+    {
+      "component": "elevated_control_packet_branch",
+      "direction": "escalate_attention_when_the_control_packet_rotates_into_elevated_driver_signal_mode"
+    },
+    {
+      "component": "interrupt_control_packet_branch",
+      "direction": "interrupt_the_current_consumer_loop_when_the_control_packet_sets_interrupt_required_to_true"
+    },
+    {
+      "component": "timing_context_branch",
+      "direction": "always interpret_the_top_risk_and_top_opportunity references through the packet trading-day and session-phase context"
+    }
+  ],
+  "interpretation": [
+    "This is the single-row topmost control surface for the internal hot-news program stack.",
+    "A consumer can stop at this layer unless it needs to open lower tables for deeper detail.",
+    "The control packet now carries top-opportunity beneficiary mapping detail, reducing the need for an extra round-trip into the opportunity feed.",
+    "It also carries the top governed watch symbol and top-five watch bundle, so a symbol-first consumer can start routing from the packet itself.",
+    "Because symbol-watch change state is also embedded here, an outer consumer can decide whether to reopen symbol-level views without another layer hop.",
+    "It also carries the governed primary theme so top-level routing does not need to flatten overlapping theme hits on its own."
+  ]
+}

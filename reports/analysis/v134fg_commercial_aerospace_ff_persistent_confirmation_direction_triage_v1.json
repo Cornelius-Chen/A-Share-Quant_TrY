@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fg_commercial_aerospace_ff_persistent_confirmation_direction_triage_v1",
+    "authoritative_status": "retain_persistent_permission_confirmation_as_local_supervision_only",
+    "best_open_to_60m_threshold": 0.01,
+    "best_continuation_threshold": 0.005,
+    "best_burst_amount_share_cap": 0.4,
+    "best_precision": 1.0,
+    "best_coverage": 0.9,
+    "authoritative_rule": "the add frontier should keep the new persistent-permission continuation gate as a local supervision layer while broader positive add promotion remains blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "persistent_permission_confirmation",
+      "status": "retain_as_local_confirmation_layer",
+      "rationale": "a simple first-hour continuation gate cleanly separates most persistent permission candidates from fragile and failed counterfactuals"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the confirmation layer sharpens local supervision, but it still does not justify broader positive add promotion or execution binding"
+    },
+    {
+      "component": "fragile_failed_counterfactuals",
+      "status": "retain_as_negative_context",
+      "rationale": "the add branch still needs the nearby fragile and failed families to keep the permission frontier honest"
+    }
+  ],
+  "interpretation": [
+    "V1.34FG converts the first persistent-permission confirmation audit into a governance verdict.",
+    "The branch now has a credible local continuation confirmation layer, but it remains a supervision object rather than a permission authority."
+  ]
+}

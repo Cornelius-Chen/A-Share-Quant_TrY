@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116t_cpo_qrs_three_run_adversarial_triage_v1",
+    "review_scope": "v116q_v116r_v116s",
+    "retained_candidate_still_valid": true,
+    "replay_facing_expansion_allowed": false,
+    "authoritative_current_problem": "expanded_window_candidate_base_coverage_gap",
+    "actual_gap_day_count": 3,
+    "recommended_next_posture": "rebuild_intraday_action_timepoint_table_for_actual_gap_days_before_more_visible_only_validation"
+  },
+  "triage_rows": [
+    {
+      "triage_target": "expanded_repaired_window_manifest",
+      "triage_posture": "retain_as_authoritative_audit_surface",
+      "expanded_window_day_count": 10,
+      "new_day_count_beyond_top_miss": 4,
+      "reason": "sample_expansion_was_the_right_move_before_any_more_visible_only_replay_facing_steps"
+    },
+    {
+      "triage_target": "corrected_cooled_shadow_candidate",
+      "triage_posture": "retain_candidate_only_but_block_more_replay",
+      "hit_day_count": 3,
+      "new_hit_day_count": 0,
+      "positive_expectancy_hit_rate": 0.666667,
+      "reason": "expanded_window_validation_failure_on_new_days_is_best_read_as_coverage_failure_not_signal_death"
+    },
+    {
+      "triage_target": "hot_upper_bound_reference",
+      "triage_posture": "retain_audit_ceiling_only",
+      "hit_day_count": 6,
+      "new_hit_day_count": 0,
+      "positive_expectancy_hit_rate": 0.6,
+      "reason": "coverage_is_broader_but_line_remains_too_mixed_and_too_hot"
+    },
+    {
+      "triage_target": "expanded_window_candidate_base_table",
+      "triage_posture": "coverage_gap_is_current_authoritative_problem",
+      "days_with_held_mature_symbols": 9,
+      "days_with_add_candidate_rows": 6,
+      "actual_gap_day_count": 3,
+      "actual_gap_days": [
+        "2023-11-07",
+        "2024-01-18",
+        "2024-01-23"
+      ],
+      "non_add_eligible_day_count": 1,
+      "non_add_eligible_days": [
+        "2023-04-28"
+      ],
+      "reason": "new_expanded_days_cannot_be_judged_until_the_intraday_action_timepoint_table_is_rebuilt"
+    }
+  ],
+  "interpretation": [
+    "The V116Q/V116R/V116S triage accepts the wider repaired-window audit surface but refuses to read the zero new-day hits in V116R as a clean signal failure.",
+    "The authoritative current diagnosis is that the expanded-window intraday candidate base table never generated add-vs-hold rows for three true held-mature gap days: 2023-11-07, 2024-01-18, and 2024-01-23.",
+    "Therefore the next step is table rebuilding, not threshold tuning and not any further replay-facing visible-only expansion."
+  ]
+}

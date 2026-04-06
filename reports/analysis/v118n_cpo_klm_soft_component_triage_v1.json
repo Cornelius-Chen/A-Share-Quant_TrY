@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118n_cpo_klm_soft_component_triage_v1",
+    "triage_scope": "V118K_V118L_V118M",
+    "breakout_damage_soft_component_status": "archived_soft_component",
+    "active_integration_allowed": false,
+    "candidate_training_allowed": false,
+    "replay_facing_allowed": false,
+    "authoritative_current_problem": "no_material_integration_gain_over_cooling_baseline",
+    "recommended_next_posture": "archive_breakout_damage_soft_component_and_keep_only_for_explanatory_or_future_interaction_use"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "archive_it",
+      "key_reason": "The best alpha is still zero, so the soft component adds no real integration value."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "archived_soft_component_not_active",
+      "key_reason": "The branch deserves to survive above pure explanation, but only in archive form because active integration produced no material gain."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "stop_active_integration",
+      "key_reason": "If the integrated optimum is alpha zero, the component should stay archived and stop consuming active research effort."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "archive_breakout_damage_soft_component",
+      "key_reason": "V118K best_alpha=0.0, V118L best_bal_acc=0.772727, V118M stability_posture=no_material_time_split_gain."
+    }
+  ],
+  "interpretation": [
+    "V1.18N is the scheduled triage over the first active integration attempt for the reclassified breakout-damage soft expectancy component.",
+    "All three reviewers converged on the same answer: the component may remain archived because it still has conceptual expectancy value, but it should not stay active because its best integration weight is effectively zero.",
+    "This closes the breakout-damage afterlife: archived, not dead, but no longer active in the current CPO training line."
+  ]
+}

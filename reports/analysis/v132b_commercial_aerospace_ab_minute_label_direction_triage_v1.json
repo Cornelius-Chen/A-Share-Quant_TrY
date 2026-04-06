@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132b_commercial_aerospace_ab_minute_label_direction_triage_v1",
+    "authoritative_status": "freeze_minute_tiered_label_specification_and_shift_next_to_local_1min_seed_window_extraction",
+    "registry_row_count": 6,
+    "severity_tier_count": 3,
+    "authoritative_rule": "the commercial-aerospace minute branch should next extract local 1-minute seed windows under the frozen severe/reversal/mild supervision vocabulary"
+  },
+  "triage_rows": [
+    {
+      "component": "minute_tiered_label_specification",
+      "status": "freeze_minute_tiered_label_specification_and_shift_next_to_local_1min_seed_window_extraction",
+      "rationale": "the branch is ready to move from 5-minute governed supervision into explicit 1-minute seed-window extraction under tiered labels"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "tier specification still belongs to supervision and does not authorize replay contamination"
+    }
+  ],
+  "interpretation": [
+    "V1.32B freezes the minute-tier vocabulary as the next canonical step for the commercial-aerospace intraday branch.",
+    "The next task is local 1-minute seed-window extraction, not replay modification."
+  ]
+}

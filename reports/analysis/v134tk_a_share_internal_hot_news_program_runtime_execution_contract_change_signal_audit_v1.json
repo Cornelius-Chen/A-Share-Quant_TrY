@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "runtime_consumer_mode_change": "stable",
+    "contract_action_change": "stable",
+    "sleep_strategy_change": "stable",
+    "backoff_mode_change": "stable",
+    "reopen_target_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_execution_contract_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_execution_contract_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "runtime_consumer_mode_change",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "contract_action_change",
+      "component_state": "materialized",
+      "metric": "contract_action_change",
+      "value": "stable"
+    },
+    {
+      "component": "sleep_strategy_change",
+      "component_state": "materialized",
+      "metric": "sleep_strategy_change",
+      "value": "stable"
+    },
+    {
+      "component": "backoff_mode_change",
+      "component_state": "materialized",
+      "metric": "backoff_mode_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This layer sits above the runtime execution contract and isolates whether the loop contract itself materially changed.",
+    "A program can watch it to avoid reloading the execution contract unless loop behavior really changed."
+  ]
+}

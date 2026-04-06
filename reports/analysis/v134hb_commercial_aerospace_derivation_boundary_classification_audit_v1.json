@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hb_commercial_aerospace_derivation_boundary_classification_audit_v1",
+    "orders_last_trade_date": "20260227",
+    "grouped_actions_last_trade_date": "20260227",
+    "daily_state_last_trade_date": "20260320",
+    "phase_table_last_trade_date": "20260320",
+    "raw_daily_last_trade_date": "20260403",
+    "raw_intraday_last_trade_date": "20260403",
+    "lockout_end_trade_date": "20260320",
+    "derived_stop_matches_lockout_end": true,
+    "derived_stop_after_last_execution": true,
+    "raw_coverage_beyond_derived": true,
+    "boundary_classification": "lockout_aligned_derivation_boundary",
+    "boundary_csv": "data\\training\\commercial_aerospace_derivation_boundary_classification_v1.csv",
+    "authoritative_rule": "the current board-surface stop is better read as a lockout-aligned derivation boundary than as a raw-data deficit or a simple last-execution cutoff"
+  },
+  "boundary_rows": [
+    {
+      "surface_name": "orders_execution_surface",
+      "last_trade_date": "20260227",
+      "boundary_reading": "execution history stops here"
+    },
+    {
+      "surface_name": "grouped_actions_surface",
+      "last_trade_date": "20260227",
+      "boundary_reading": "daily grouped action history stops here"
+    },
+    {
+      "surface_name": "daily_state_surface",
+      "last_trade_date": "20260320",
+      "boundary_reading": "board state derivation stops here"
+    },
+    {
+      "surface_name": "phase_geometry_surface",
+      "last_trade_date": "20260320",
+      "boundary_reading": "phase geometry derivation stops here"
+    },
+    {
+      "surface_name": "raw_daily_bars",
+      "last_trade_date": "20260403",
+      "boundary_reading": "raw daily bars continue through this date"
+    },
+    {
+      "surface_name": "raw_intraday_calendar",
+      "last_trade_date": "20260403",
+      "boundary_reading": "raw intraday calendar continues through this date"
+    },
+    {
+      "surface_name": "board_lockout_end",
+      "last_trade_date": "20260320",
+      "boundary_reading": "lockout regime formally ends here"
+    }
+  ],
+  "interpretation": [
+    "V1.34HB classifies the boundary instead of extending it.",
+    "Orders stop on 20260227, derived board surfaces stop on 20260320, and raw daily/intraday coverage continues to 20260403. That pattern points to a lockout-aligned derivation boundary rather than missing raw data or an execution-history truncation."
+  ]
+}

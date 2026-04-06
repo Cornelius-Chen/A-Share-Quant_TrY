@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "review_row_count": 1,
+    "scheduler_pending_count": 1,
+    "governance_closed_count": 1,
+    "authoritative_status": "runtime_opening_followthrough_should_continue_from_single_scheduler_governance_review_surface_only"
+  },
+  "triage_rows": [
+    {
+      "component": "opening_review_surface",
+      "direction": "use_the_single_row_scheduler_governance_review_surface_as_the_only_source-side_opening_followthrough_surface"
+    },
+    {
+      "component": "next_controlled_movement",
+      "direction": "activate_scheduler_runtime_binding_first_then_reaudit_live_like_and_execution_governance_opening"
+    },
+    {
+      "component": "opening_boundary",
+      "direction": "retain_silent_opening_disallowed_and_do_not_auto-promote_the_html-article_candidate"
+    }
+  ],
+  "interpretation": [
+    "Source-side no longer needs more queue, lane, or deployment-candidate expansion; opening followthrough should continue only from the single combined review surface.",
+    "Scheduler movement should come first, while governance opening remains an explicit re-audit step rather than an automatic consequence."
+  ]
+}

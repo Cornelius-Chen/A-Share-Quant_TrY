@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118f_cpo_add_vs_strong_entry_external_audit_v1",
+    "candidate_name": "add_vs_strong_entry_separation_score_candidate",
+    "positive_add_row_count": 5,
+    "strong_entry_row_count": 5,
+    "positive_add_mean_score": 1694561800.0,
+    "strong_entry_mean_score": -543520800.0,
+    "mean_gap_positive_add_minus_strong_entry": 2238082600.0,
+    "best_threshold": 1621220000.0,
+    "best_balanced_accuracy": 0.9,
+    "recommended_next_posture": "challenge_candidate_under_role_family_holdout_before_any_further_branch_commitment"
+  },
+  "threshold_rows": [
+    {
+      "threshold": 2957674000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 0,
+      "tn": 5,
+      "positive_add_recall": 0.2,
+      "strong_entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": 2685442000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 0,
+      "tn": 5,
+      "positive_add_recall": 0.4,
+      "strong_entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.7
+    },
+    {
+      "threshold": 1650434000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 0,
+      "tn": 5,
+      "positive_add_recall": 0.6,
+      "strong_entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.8
+    },
+    {
+      "threshold": 1621220000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 0,
+      "tn": 5,
+      "positive_add_recall": 0.8,
+      "strong_entry_reject_rate": 1.0,
+      "balanced_accuracy": 0.9
+    },
+    {
+      "threshold": 969992000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 1,
+      "tn": 4,
+      "positive_add_recall": 0.8,
+      "strong_entry_reject_rate": 0.8,
+      "balanced_accuracy": 0.8
+    },
+    {
+      "threshold": -441961000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 1,
+      "tn": 4,
+      "positive_add_recall": 1.0,
+      "strong_entry_reject_rate": 0.8,
+      "balanced_accuracy": 0.9
+    },
+    {
+      "threshold": -626213000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 2,
+      "tn": 3,
+      "positive_add_recall": 1.0,
+      "strong_entry_reject_rate": 0.6,
+      "balanced_accuracy": 0.8
+    },
+    {
+      "threshold": -767485000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 3,
+      "tn": 2,
+      "positive_add_recall": 1.0,
+      "strong_entry_reject_rate": 0.4,
+      "balanced_accuracy": 0.7
+    },
+    {
+      "threshold": -1066426000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 4,
+      "tn": 1,
+      "positive_add_recall": 1.0,
+      "strong_entry_reject_rate": 0.2,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": -1227472000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 5,
+      "tn": 0,
+      "positive_add_recall": 1.0,
+      "strong_entry_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "interpretation": [
+    "V1.18F hardens the problem surface by comparing positive add windows only against strong entry windows, not all entry windows.",
+    "If the branch cannot separate add from the strongest entry lookalikes, then the previous V118C result was too easy.",
+    "This is still candidate-only and non-replay."
+  ]
+}

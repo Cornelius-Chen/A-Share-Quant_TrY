@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "current_top_opportunity_theme": "oil_gas",
+    "challenger_top_opportunity_theme": "defense_industry",
+    "current_top_watch_symbol": "601857",
+    "challenger_top_watch_symbol": "600760",
+    "challenger_source_family": "sina",
+    "challenger_support_row_count": 5,
+    "top_opportunity_change_if_accepted": "would_change",
+    "top_watch_change_if_accepted": "would_change",
+    "authoritative_output": "a_share_internal_hot_news_challenger_rotation_candidate_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "challenger_rotation_packet",
+      "component_state": "materialized",
+      "metric": "current_top_opportunity_theme",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_rotation_packet",
+      "component_state": "materialized",
+      "metric": "challenger_top_opportunity_theme",
+      "value": "defense_industry"
+    },
+    {
+      "component": "challenger_rotation_packet",
+      "component_state": "materialized",
+      "metric": "current_top_watch_symbol",
+      "value": "601857"
+    },
+    {
+      "component": "challenger_rotation_packet",
+      "component_state": "materialized",
+      "metric": "challenger_top_watch_symbol",
+      "value": "600760"
+    }
+  ],
+  "interpretation": [
+    "This packet shows the exact top-opportunity and top-watch state the consumers would see if the current top challenger were explicitly accepted.",
+    "It keeps challenger-state simulation separate from the current primary consumer chain."
+  ]
+}

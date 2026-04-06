@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126f_commercial_aerospace_zero_trigger_audit_v1",
+    "impulse_continuation_test_count": 84,
+    "global_threshold_impulse_hits": 0,
+    "regime_local_threshold_impulse_hits": 45,
+    "authoritative_rule": "commercial_aerospace_zero_trade_shadow_replay_should_be_treated_as_global_threshold_mismatch_not_absence_of_impulse_regime"
+  },
+  "audit_rows": [
+    {
+      "audit_item": "impulse_continuation_rows_in_test",
+      "value": 84
+    },
+    {
+      "audit_item": "global_low_pass_q80_threshold",
+      "value": -12.49039151
+    },
+    {
+      "audit_item": "impulse_local_low_pass_q80_threshold",
+      "value": 13.48004681
+    },
+    {
+      "audit_item": "global_threshold_impulse_hits",
+      "value": 0
+    },
+    {
+      "audit_item": "regime_local_threshold_impulse_hits",
+      "value": 45
+    }
+  ],
+  "interpretation": [
+    "V1.26F separates a true no-opportunity period from a threshold mismatch.",
+    "If regime-local eligibility hits exist while global-threshold hits are zero, the blocker is calibration geometry rather than missing structure."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "change_row_count": 1,
+    "top_watch_symbol_change": "stable",
+    "top_watch_bundle_change": "stable",
+    "top_watch_theme_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_symbol_watch_summary_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "symbol_watch_summary_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "change_row_count",
+      "value": "1"
+    },
+    {
+      "component": "top_watch_symbol_change",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_watch_bundle_change",
+      "component_state": "materialized",
+      "metric": "top_watch_bundle_change",
+      "value": "stable"
+    },
+    {
+      "component": "top_watch_theme_change",
+      "component_state": "materialized",
+      "metric": "top_watch_theme_change",
+      "value": "stable"
+    },
+    {
+      "component": "signal_priority",
+      "component_state": "materialized",
+      "metric": "signal_priority",
+      "value": "p2"
+    }
+  ],
+  "interpretation": [
+    "This change layer is the symbol-first counterpart to the higher-level snapshot and control-packet change signals.",
+    "It only elevates when the top watch symbol, the top-five symbol bundle, or the top watch theme actually rotates."
+  ]
+}

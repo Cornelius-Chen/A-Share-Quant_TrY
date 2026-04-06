@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "theme_count": 19,
+    "registry_row_count": 58,
+    "symbol_count": 49,
+    "alias_theme_count": 20,
+    "registry_alias_intersection_count": 19,
+    "authoritative_status": "continue_expanding_high-frequency_theme_families_before_chasing_long-tail_edge_themes"
+  },
+  "triage_rows": [
+    {
+      "component": "high_frequency_theme_families",
+      "direction": "keep_prioritizing themes that regularly appear in policy, macro, commodity, and technology news before chasing long-tail concept names"
+    },
+    {
+      "component": "alias_binding",
+      "direction": "expand alias coverage together with symbol mapping so registry growth can actually be reached by the hot-news classifier"
+    },
+    {
+      "component": "symbol_watch_delivery",
+      "direction": "prefer downstream symbol-level watch surfaces when beneficiary rows are already curated and avoid re-parsing theme strings in consumers"
+    }
+  ],
+  "interpretation": [
+    "The registry is no longer a tiny seed; it is now a broader curated layer intended to catch common recurring A-share themes.",
+    "The next gains should come from adding more high-frequency families and validating them against real incoming news, not from trying to enumerate every possible long-tail concept at once."
+  ]
+}

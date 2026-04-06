@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122c_cpo_1min_supportive_continuation_holdout_audit_v1",
+    "symbol_count": 4,
+    "date_count": 9,
+    "evaluable_symbol_count": 4,
+    "evaluable_date_count": 9,
+    "positive_symbol_rate": 1.0,
+    "positive_date_rate": 1.0,
+    "recommended_next_posture": "continue_only_if_supportive_family_keeps_positive_symbol_and_date_edge"
+  },
+  "symbol_rows": [
+    {
+      "group": "300308",
+      "sample_count": 542,
+      "mean_forward_return_5": 0.00036549,
+      "positive_forward_rate_5": 0.56457565,
+      "mean_max_favorable_return_5": 0.00430454,
+      "mean_max_adverse_return_5": -0.00630046
+    },
+    {
+      "group": "300502",
+      "sample_count": 550,
+      "mean_forward_return_5": 9.31e-05,
+      "positive_forward_rate_5": 0.53090909,
+      "mean_max_favorable_return_5": 0.00435508,
+      "mean_max_adverse_return_5": -0.0067052
+    },
+    {
+      "group": "300757",
+      "sample_count": 557,
+      "mean_forward_return_5": 0.00242716,
+      "positive_forward_rate_5": 0.52782765,
+      "mean_max_favorable_return_5": 0.00729216,
+      "mean_max_adverse_return_5": -0.00685702
+    },
+    {
+      "group": "688498",
+      "sample_count": 527,
+      "mean_forward_return_5": 0.00055571,
+      "positive_forward_rate_5": 0.52941176,
+      "mean_max_favorable_return_5": 0.00642039,
+      "mean_max_adverse_return_5": -0.00842073
+    }
+  ],
+  "date_rows": [
+    {
+      "group": "2026-03-24",
+      "sample_count": 111,
+      "mean_forward_return_5": 0.07136693,
+      "positive_forward_rate_5": 0.75675676,
+      "mean_max_favorable_return_5": 0.09202957,
+      "mean_max_adverse_return_5": -0.00779151
+    },
+    {
+      "group": "2026-03-25",
+      "sample_count": 253,
+      "mean_forward_return_5": 0.03250043,
+      "positive_forward_rate_5": 0.53754941,
+      "mean_max_favorable_return_5": 0.04495018,
+      "mean_max_adverse_return_5": -0.00855915
+    },
+    {
+      "group": "2026-03-26",
+      "sample_count": 256,
+      "mean_forward_return_5": 0.02950916,
+      "positive_forward_rate_5": 0.40625,
+      "mean_max_favorable_return_5": 0.04104841,
+      "mean_max_adverse_return_5": -0.00797255
+    },
+    {
+      "group": "2026-03-27",
+      "sample_count": 271,
+      "mean_forward_return_5": 0.02546151,
+      "positive_forward_rate_5": 0.55719557,
+      "mean_max_favorable_return_5": 0.03511735,
+      "mean_max_adverse_return_5": -0.00770235
+    },
+    {
+      "group": "2026-03-30",
+      "sample_count": 236,
+      "mean_forward_return_5": 0.02917966,
+      "positive_forward_rate_5": 0.52542373,
+      "mean_max_favorable_return_5": 0.03975515,
+      "mean_max_adverse_return_5": -0.00672063
+    },
+    {
+      "group": "2026-03-31",
+      "sample_count": 221,
+      "mean_forward_return_5": 0.02938406,
+      "positive_forward_rate_5": 0.53393665,
+      "mean_max_favorable_return_5": 0.04107489,
+      "mean_max_adverse_return_5": -0.00828366
+    },
+    {
+      "group": "2026-04-01",
+      "sample_count": 297,
+      "mean_forward_return_5": 0.02190404,
+      "positive_forward_rate_5": 0.60942761,
+      "mean_max_favorable_return_5": 0.03024557,
+      "mean_max_adverse_return_5": -0.00618768
+    },
+    {
+      "group": "2026-04-02",
+      "sample_count": 235,
+      "mean_forward_return_5": 0.02835481,
+      "positive_forward_rate_5": 0.3787234,
+      "mean_max_favorable_return_5": 0.03868402,
+      "mean_max_adverse_return_5": -0.00675051
+    },
+    {
+      "group": "2026-04-03",
+      "sample_count": 271,
+      "mean_forward_return_5": 0.02231652,
+      "positive_forward_rate_5": 0.50922509,
+      "mean_max_favorable_return_5": 0.03118797,
+      "mean_max_adverse_return_5": -0.00787497
+    }
+  ],
+  "interpretation": [
+    "V1.22C checks whether the supportive 1-minute family keeps its directional edge across symbols and across days.",
+    "This is still recent-sample work, but it is a stronger audit than looking only at pooled averages.",
+    "The family should only continue if it preserves positive expectancy across both symbols and dates, not just in aggregate."
+  ]
+}

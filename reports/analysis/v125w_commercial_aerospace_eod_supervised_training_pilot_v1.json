@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125w_commercial_aerospace_eod_supervised_training_pilot_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "label_count": 4,
+    "model_family": "nearest_centroid_eod_candidate",
+    "balanced_accuracy": 0.24566042,
+    "authoritative_status": "first_lawful_eod_supervised_training_pilot_non_execution"
+  },
+  "label_rows": [
+    {
+      "label": "de_risk_target",
+      "test_count": 359,
+      "recall": 0.2005571
+    },
+    {
+      "label": "full_eligibility_target",
+      "test_count": 286,
+      "recall": 0.11888112
+    },
+    {
+      "label": "neutral_hold",
+      "test_count": 360,
+      "recall": 0.53333333
+    },
+    {
+      "label": "probe_eligibility_target",
+      "test_count": 231,
+      "recall": 0.12987013
+    }
+  ],
+  "interpretation": [
+    "V1.25W is the first lawful EOD supervised pilot on commercial aerospace after removing the regime-semantic leakage blocker.",
+    "It is strictly an offline training sanity check, not a replay rule and not an intraday model."
+  ]
+}

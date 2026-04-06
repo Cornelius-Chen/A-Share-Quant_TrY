@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134m_commercial_aerospace_lm_broader_hit_simulator_triage_v1",
+    "authoritative_status": "retain_broader_hit_widening_inside_phase_2_but_keep_replay_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_lm_broader_hit_simulator_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "broader_hit_phase2_widening",
+      "status": "retained_inside_phase_2",
+      "detail": "broader_hit_session_count = 24, simulated_order_count = 35"
+    },
+    {
+      "component": "mild_execution_boundary",
+      "status": "preserved",
+      "detail": "mild remains non-executable inside broader-hit widening."
+    },
+    {
+      "component": "replay_boundary",
+      "status": "still_blocked",
+      "detail": "The broader-hit simulator is still a normalized shadow object, not a replay lane."
+    }
+  ],
+  "interpretation": [
+    "V1.34M judges the first broader-hit widening result.",
+    "The wider simulator is retained as a phase-2 shadow object only; it still does not authorize replay binding or all-session expansion."
+  ]
+}

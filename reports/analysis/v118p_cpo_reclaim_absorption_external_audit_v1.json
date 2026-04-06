@@ -1,0 +1,326 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118p_cpo_reclaim_absorption_external_audit_v1",
+    "candidate_discriminator_name": "reclaim_absorption_score_candidate",
+    "positive_mean_score": 1361934400.0,
+    "negative_mean_score": 1589124272.727273,
+    "mean_gap_positive_minus_negative": -227189872.727273,
+    "best_threshold": 1973780000.0,
+    "best_balanced_accuracy": 0.609091,
+    "external_pool_signal_clear": false,
+    "recommended_next_posture": "time_split_validate_reclaim_absorption_if_external_pool_gap_stays_positive"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 2096546000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 0,
+      "tn": 11,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 1.0,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": 2057473000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.554545
+    },
+    {
+      "threshold": 2021132000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.509091
+    },
+    {
+      "threshold": 1973780000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": 1904195000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": 1860846000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 1746239000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.472727
+    },
+    {
+      "threshold": 1726948000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.427273
+    },
+    {
+      "threshold": 1697060000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.381818
+    },
+    {
+      "threshold": 1565300000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.336364
+    },
+    {
+      "threshold": 1409120000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.290909
+    },
+    {
+      "threshold": 1330938000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.390909
+    },
+    {
+      "threshold": 1286753000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.345455
+    },
+    {
+      "threshold": 953082000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.445455
+    },
+    {
+      "threshold": 455326000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": 205301000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "scored_rows": [
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "reclaim_absorption_score": 2096546000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "reclaim_absorption_score": 1973780000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "reclaim_absorption_score": 1330938000.0
+    },
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "reclaim_absorption_score": 953082000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "reclaim_absorption_score": 455326000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "reclaim_absorption_score": 2057473000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "reclaim_absorption_score": 2021132000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "reclaim_absorption_score": 1904195000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "reclaim_absorption_score": 1860846000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "reclaim_absorption_score": 1746239000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "reclaim_absorption_score": 1726948000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "reclaim_absorption_score": 1697060000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "reclaim_absorption_score": 1565300000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "reclaim_absorption_score": 1409120000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "reclaim_absorption_score": 1286753000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "reclaim_absorption_score": 205301000.0
+    }
+  ],
+  "interpretation": [
+    "V1.18P is the first hard audit for reclaim-absorption on the full add pool.",
+    "The branch only deserves time-split budget if it still ranks positive add rows above the negative ones outside discovery phrasing.",
+    "If the external gap collapses here, the branch should die immediately instead of becoming another semantic tunnel."
+  ]
+}

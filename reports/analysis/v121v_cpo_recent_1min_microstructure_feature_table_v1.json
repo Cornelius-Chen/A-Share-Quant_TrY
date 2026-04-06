@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121v_cpo_recent_1min_microstructure_feature_table_v1",
+    "symbol_count": 4,
+    "total_row_count": 7880,
+    "feature_count": 21,
+    "output_path": "data\\training\\cpo_recent_1min_microstructure_feature_table_v1.csv",
+    "recommended_next_posture": "start_1min_microstructure_discovery_on_core_names"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "300308",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "300502",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "300757",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    },
+    {
+      "symbol": "688498",
+      "row_count": 1970,
+      "start_time": "2026-03-24 13:53:00",
+      "end_time": "2026-04-03 15:00:00"
+    }
+  ],
+  "interpretation": [
+    "V1.21V converts the recent rolling 1-minute plane into a concrete microstructure feature table instead of leaving it as raw bars.",
+    "The current table is suitable for local feature discovery around reclaim, fade, shadow, VWAP quality, and late-session integrity.",
+    "The next useful step is discovery and adversarial auditing on this 1-minute plane, not replay promotion."
+  ]
+}

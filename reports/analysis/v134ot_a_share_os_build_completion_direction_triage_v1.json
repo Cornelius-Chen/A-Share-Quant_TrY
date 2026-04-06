@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "foundation_complete_count": 13,
+    "global_blocker_count": 7,
+    "authoritative_status": "information_center_should_now_be_managed_as_completed_core_plus_gated_residual_closure"
+  },
+  "triage_rows": [
+    {
+      "component": "core_build",
+      "direction": "treat_information_center_core_as_built_complete_enough"
+    },
+    {
+      "component": "source_side",
+      "direction": "advance_only_via_manual_closure_not_via_more_registry_buildout"
+    },
+    {
+      "component": "replay_side",
+      "direction": "treat_replay_extension_as_opened_past_source_gap_and_limit_halt_derivation_with_a_controlled_promotable_subset"
+    },
+    {
+      "component": "execution_live_like",
+      "direction": "retain_intentional_block_until_source_side_and_replay_side_stoplines_move"
+    }
+  ],
+  "interpretation": [
+    "The project should no longer be narrated as unfinished core construction.",
+    "The correct framing is completed core build with explicitly gated residual closure work."
+  ]
+}

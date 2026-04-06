@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fw_commercial_aerospace_fv_recent_reduce_exclusion_direction_triage_v1",
+    "authoritative_status": "retain_recent_reduce_residue_as_local_active_wave_exclusion_clue_and_keep_add_execution_blocked",
+    "candidate_count": 3,
+    "excluded_count": 1,
+    "displaced_precision": 1.0,
+    "displaced_coverage": 1.0,
+    "authoritative_rule": "recent reduce residue can now stay as the first active-wave exclusion clue, while broader promotion and execution remain blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "recent_reduce_residue_exclusion",
+      "status": "retain_as_local_negative_clue",
+      "rationale": "it excludes the only displaced active-wave candidate and none of the selected candidates"
+    },
+    {
+      "component": "active_wave_daily_ranker",
+      "status": "not_yet_authorized",
+      "rationale": "the exclusion clue is still too small to be treated as a full ranking or execution authority layer"
+    },
+    {
+      "component": "add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the branch now owns a local exclusion clue, not a complete add-selection engine"
+    }
+  ],
+  "interpretation": [
+    "V1.34FW turns the first active-wave exclusion audit into the current governance verdict for the add frontier.",
+    "The branch should retain recent-reduce residue as a local exclusion clue, but it should not mistake that for a complete daily ranker or execution-ready authority."
+  ]
+}

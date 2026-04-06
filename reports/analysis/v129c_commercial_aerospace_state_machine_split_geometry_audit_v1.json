@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129c_commercial_aerospace_state_machine_split_geometry_audit_v1",
+    "row_count": 6180,
+    "split_count": 6,
+    "high_intensity_supported_split_ratios": [
+      0.85,
+      0.88,
+      0.9
+    ],
+    "full_pre_supported_split_ratios": [
+      0.85,
+      0.88
+    ],
+    "full_supported_split_ratios": [
+      0.9
+    ],
+    "joint_full_pre_and_full_supported_split_ratios": [],
+    "best_high_intensity_support_ratio": 0.85,
+    "authoritative_status": "single_split_joint_support_unavailable",
+    "authoritative_rule": "if no single lawful chronology split supports both full_pre and full on both sides, model improvement should shift from classifier tuning to split geometry / walk-forward redesign"
+  },
+  "split_rows": [
+    {
+      "split_ratio": 0.8,
+      "train_date_start": "20240129",
+      "train_date_end": "20251016",
+      "test_date_start": "20251017",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 19,
+        "full_pre": 0,
+        "full": 0,
+        "de_risk": 459,
+        "neutral_hold": 4466
+      },
+      "test_counts": {
+        "probe": 182,
+        "full_pre": 45,
+        "full": 36,
+        "de_risk": 114,
+        "neutral_hold": 859
+      },
+      "train_high_intensity_count": 0,
+      "test_high_intensity_count": 81,
+      "supports_high_intensity_both_sides": false,
+      "supports_full_pre_both_sides": false,
+      "supports_full_both_sides": false,
+      "supports_joint_full_pre_and_full_both_sides": false
+    },
+    {
+      "split_ratio": 0.85,
+      "train_date_start": "20240129",
+      "train_date_end": "20251121",
+      "test_date_start": "20251124",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 39,
+        "full_pre": 2,
+        "full": 0,
+        "de_risk": 482,
+        "neutral_hold": 4733
+      },
+      "test_counts": {
+        "probe": 162,
+        "full_pre": 43,
+        "full": 36,
+        "de_risk": 91,
+        "neutral_hold": 592
+      },
+      "train_high_intensity_count": 2,
+      "test_high_intensity_count": 79,
+      "supports_high_intensity_both_sides": true,
+      "supports_full_pre_both_sides": true,
+      "supports_full_both_sides": false,
+      "supports_joint_full_pre_and_full_both_sides": false
+    },
+    {
+      "split_ratio": 0.88,
+      "train_date_start": "20240129",
+      "train_date_end": "20251212",
+      "test_date_start": "20251215",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 71,
+        "full_pre": 24,
+        "full": 0,
+        "de_risk": 501,
+        "neutral_hold": 4840
+      },
+      "test_counts": {
+        "probe": 130,
+        "full_pre": 21,
+        "full": 36,
+        "de_risk": 72,
+        "neutral_hold": 485
+      },
+      "train_high_intensity_count": 24,
+      "test_high_intensity_count": 57,
+      "supports_high_intensity_both_sides": true,
+      "supports_full_pre_both_sides": true,
+      "supports_full_both_sides": false,
+      "supports_joint_full_pre_and_full_both_sides": false
+    },
+    {
+      "split_ratio": 0.9,
+      "train_date_start": "20240129",
+      "train_date_end": "20251229",
+      "test_date_start": "20251230",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 120,
+        "full_pre": 45,
+        "full": 22,
+        "de_risk": 501,
+        "neutral_hold": 4880
+      },
+      "test_counts": {
+        "probe": 81,
+        "full_pre": 0,
+        "full": 14,
+        "de_risk": 72,
+        "neutral_hold": 445
+      },
+      "train_high_intensity_count": 67,
+      "test_high_intensity_count": 14,
+      "supports_high_intensity_both_sides": true,
+      "supports_full_pre_both_sides": false,
+      "supports_full_both_sides": true,
+      "supports_joint_full_pre_and_full_both_sides": false
+    },
+    {
+      "split_ratio": 0.92,
+      "train_date_start": "20240129",
+      "train_date_end": "20260114",
+      "test_date_start": "20260115",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 161,
+        "full_pre": 45,
+        "full": 36,
+        "de_risk": 527,
+        "neutral_hold": 4919
+      },
+      "test_counts": {
+        "probe": 40,
+        "full_pre": 0,
+        "full": 0,
+        "de_risk": 46,
+        "neutral_hold": 406
+      },
+      "train_high_intensity_count": 81,
+      "test_high_intensity_count": 0,
+      "supports_high_intensity_both_sides": false,
+      "supports_full_pre_both_sides": false,
+      "supports_full_both_sides": false,
+      "supports_joint_full_pre_and_full_both_sides": false
+    },
+    {
+      "split_ratio": 0.95,
+      "train_date_start": "20240129",
+      "train_date_end": "20260204",
+      "test_date_start": "20260205",
+      "test_date_end": "20260320",
+      "train_counts": {
+        "probe": 172,
+        "full_pre": 45,
+        "full": 36,
+        "de_risk": 551,
+        "neutral_hold": 5064
+      },
+      "test_counts": {
+        "probe": 29,
+        "full_pre": 0,
+        "full": 0,
+        "de_risk": 22,
+        "neutral_hold": 261
+      },
+      "train_high_intensity_count": 81,
+      "test_high_intensity_count": 0,
+      "supports_high_intensity_both_sides": false,
+      "supports_full_pre_both_sides": false,
+      "supports_full_both_sides": false,
+      "supports_joint_full_pre_and_full_both_sides": false
+    }
+  ],
+  "interpretation": [
+    "V1.29C checks whether the current commercial-aerospace state machine failure is a classifier problem or a chronology support problem.",
+    "The key question is not whether some ratio can support a combined high-intensity bucket, but whether one lawful split can support both full_pre and full on both train and test."
+  ]
+}

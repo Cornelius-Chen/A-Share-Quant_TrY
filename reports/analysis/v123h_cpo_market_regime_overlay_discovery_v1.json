@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123h_cpo_market_regime_overlay_discovery_v1",
+    "sample_count": 242,
+    "positive_count": 104,
+    "negative_count": 138,
+    "chosen_score_name": "liquidity_drought_regime_score",
+    "chosen_gap": 0.14394085,
+    "chosen_q75_balanced_accuracy": 0.56563545,
+    "recommended_next_posture": "time_split_audit_chosen_market_regime_overlay"
+  },
+  "candidate_rows": [
+    {
+      "score_name": "broad_riskoff_contraction_score",
+      "mean_gap_positive_minus_negative": 0.14418283,
+      "q75_threshold": 0.44500448,
+      "q75_balanced_accuracy": 0.50661929
+    },
+    {
+      "score_name": "market_board_double_weakness_score",
+      "mean_gap_positive_minus_negative": 0.11205316,
+      "q75_threshold": 0.46090259,
+      "q75_balanced_accuracy": 0.46446488
+    },
+    {
+      "score_name": "liquidity_drought_regime_score",
+      "mean_gap_positive_minus_negative": 0.14394085,
+      "q75_threshold": 0.45823918,
+      "q75_balanced_accuracy": 0.56563545
+    }
+  ],
+  "interpretation": [
+    "V1.23H scans simple top-level regime scores built from broad index returns, liquidity contraction, and CPO board state.",
+    "The purpose is to see whether major research-baseline drawdown windows are already legible from the regime layer before policy text or event timestamps are introduced.",
+    "The next step is chronology audit on the best regime candidate."
+  ]
+}

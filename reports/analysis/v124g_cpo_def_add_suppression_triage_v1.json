@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124g_cpo_def_add_suppression_triage_v1",
+    "related_runs": [
+      "V124D",
+      "V124E",
+      "V124F"
+    ],
+    "authoritative_status": "keep_add_suppression_blocked",
+    "majority_vote": {
+      "keep_add_suppression_blocked": 3
+    },
+    "replay_facing_allowed": false,
+    "recommended_next_posture": "keep_balanced_heat_reference_as_only_live_execution_control_and_stop_add_suppression_family"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "verdict": "keep_add_suppression_blocked",
+      "reason": "branch_is_inactive_not_merely_weak_because_overlap_with_real_riskoff_inside_hot_states_is_zero",
+      "recommended_next_step": "stop_this_family_instead_of_tuning_thresholds_or_heat_gates"
+    },
+    {
+      "reviewer": "Tesla",
+      "verdict": "keep_add_suppression_blocked",
+      "reason": "suppressed_add_count_zero_and_rows_over_threshold_zero_mean_no_execution_surface_exists",
+      "recommended_next_step": "treat_as_non-starter_and_do_not_spend_more_execution_budget_here"
+    },
+    {
+      "reviewer": "James",
+      "verdict": "keep_add_suppression_blocked",
+      "reason": "there_is_no_real_trigger_overlap_so_further_work_would_be_empty_tuning",
+      "recommended_next_step": "close_the_family_and_move_to_the_next_real_control_problem"
+    }
+  ],
+  "interpretation": [
+    "V1.24G freezes the add-suppression branch after the heat-ladder freeze and overlap audit.",
+    "The branch is blocked not because it is mildly weak, but because it has no real execution surface in the current sample: zero threshold overlap and zero suppressed adds.",
+    "That makes further tuning wasteful rather than cautious."
+  ]
+}

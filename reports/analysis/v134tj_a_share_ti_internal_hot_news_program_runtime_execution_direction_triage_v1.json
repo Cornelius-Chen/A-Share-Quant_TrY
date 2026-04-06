@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "contract_row_count": 1,
+    "runtime_consumer_mode": "passive_polling_only",
+    "contract_action": "keep_passive_polling",
+    "sleep_strategy_seconds": "300",
+    "backoff_mode": "steady_interval",
+    "authoritative_status": "continue_serving_runtime-execution_contract_above_the_runtime-envelope"
+  },
+  "triage_rows": [
+    {
+      "component": "passive_execution_branch",
+      "direction": "keep_the_loop_on_sleep-and-poll_when_contract_action_stays_keep_passive_polling"
+    },
+    {
+      "component": "elevated_execution_branch",
+      "direction": "tighten_the_loop_and_reopen_requested_layers_when_contract_action_rotates_into_elevate_or_reopen states"
+    },
+    {
+      "component": "interrupt_execution_branch",
+      "direction": "break_the_current_loop_and_reassess_immediately_when_contract_action_rotates_into_interrupt_loop_and_reopen_target"
+    }
+  ],
+  "interpretation": [
+    "This is the highest execution-facing contract in the internal hot-news stack.",
+    "A consumer loop can use it as the next-iteration instruction without reading any lower diagnostic tables."
+  ]
+}

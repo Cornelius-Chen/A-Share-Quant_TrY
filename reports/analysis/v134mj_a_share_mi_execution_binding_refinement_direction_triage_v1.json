@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "blocker_count": 7,
+    "source_blocker_count": 2,
+    "authoritative_status": "execution_binding_kept_blocked_until_refined_source_and_replay_gates_close"
+  },
+  "triage_rows": [
+    {
+      "component": "source_activation",
+      "direction": "close_license_review_and_runtime_scheduler_gates_before_any_network-assisted_promotion"
+    },
+    {
+      "component": "replay_and_governance",
+      "direction": "retain_read_only_shadow_and_closed_execution_gates_until_binding_and_cost_model_backlogs_close"
+    }
+  ],
+  "interpretation": [
+    "The blocker stack is now precise enough to guide closure work without reopening semantic research.",
+    "Execution should remain blocked until the refined source gates and replay/governance blockers are explicitly resolved."
+  ]
+}

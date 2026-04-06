@@ -1,0 +1,5 @@
+﻿component,status,detail
+intraday_execution_lane,frozen,governance package ready but execution infrastructure still blocked
+current_primary_variant,tail_weakdrift_full,lawful EOD primary remains authoritative and isolated from minute execution work
+rerun_required,False,intraday reopening should not start until the explicit change gate changes state
+missing_artifact_count,3,number of missing infrastructure pieces before intraday execution can reopen

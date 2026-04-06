@@ -1,0 +1,6 @@
+﻿transition_stage,status,detail
+freeze_reduce_mainline,mandatory,Treat reduce as frozen handoff package; no broad reduce tuning may continue during add frontier startup.
+allow_only_local_reduce_residue_maintenance,mandatory,"If any reduce work reappears, it must stay strictly inside the four local rebound-residue seeds."
+start_intraday_add_as_new_frontier,approved_but_deferred,"The next frontier should be intraday add, but only as a separate frontier rather than an extension of reduce."
+carry_forward_environment_and_board_governance,mandatory,"Board lockout, local-only rebound guard, and board revival unlock remain upstream vetoes when add research later begins."
+do_not_reuse_reduce_execution_claims,mandatory,Intraday add must not inherit execution-facing authority from reduce; it starts as a new supervision frontier.

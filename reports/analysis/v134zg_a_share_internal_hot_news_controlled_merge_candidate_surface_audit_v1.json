@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "candidate_row_count": 30,
+    "cls_primary_count": 17,
+    "sina_additive_count": 13,
+    "unique_theme_count": 6,
+    "unique_symbol_count": 6,
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_candidate_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "candidate_surface",
+      "component_state": "materialized",
+      "metric": "candidate_row_count",
+      "value": "30"
+    },
+    {
+      "component": "candidate_surface",
+      "component_state": "materialized",
+      "metric": "cls_primary_count",
+      "value": "17"
+    },
+    {
+      "component": "candidate_surface",
+      "component_state": "materialized",
+      "metric": "sina_additive_count",
+      "value": "13"
+    },
+    {
+      "component": "coverage",
+      "component_state": "measured",
+      "metric": "unique_theme_count",
+      "value": "6"
+    },
+    {
+      "component": "coverage",
+      "component_state": "measured",
+      "metric": "unique_symbol_count",
+      "value": "6"
+    }
+  ],
+  "interpretation": [
+    "This candidate surface keeps the cls primary line intact while exposing additive second-source themed rows.",
+    "It is a controlled merge lane, not a direct fastlane promotion."
+  ]
+}

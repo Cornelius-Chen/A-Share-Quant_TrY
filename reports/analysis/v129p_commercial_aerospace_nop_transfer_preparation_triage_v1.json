@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129p_commercial_aerospace_nop_transfer_preparation_triage_v1",
+    "recommended_next_primary_board": "BK0480",
+    "recommended_next_primary_board_name": "航天航空",
+    "shadow_later_board": "BK0808",
+    "portable_layer_count": 5,
+    "local_reset_layer_count": 5,
+    "authoritative_status": "start_bk0480_transfer_preparation_with_local_reset_and_keep_bk0808_as_shadow_only",
+    "authoritative_rule": "transfer_the_grammar_and_governance_schema_but_not_the_commercial_aerospace_local_windows_symbol_facts_or_rule_names"
+  },
+  "direction_rows": [
+    {
+      "direction": "bk0480_transfer_preparation",
+      "status": "start_as_next_primary_worker",
+      "reason": "BK0480 is the closest adjacent aerospace board and best first portability test without archetype mixing."
+    },
+    {
+      "direction": "bk0808_transfer",
+      "status": "keep_shadow_only",
+      "reason": "BK0808 remains broader and noisier, so it should stay queued as a later shadow transfer target."
+    },
+    {
+      "direction": "portable_grammar",
+      "status": "carry_forward",
+      "reason": "Methodology, execution grammar compaction, downside-first repair sequence, and promotion discipline are portable."
+    },
+    {
+      "direction": "commercial_aerospace_local_semantics",
+      "status": "hard_reset_before_bk0480_replay",
+      "reason": "Chronology windows, symbol pressure maps, named rules, and board-specific archetype semantics must be relearned locally."
+    },
+    {
+      "direction": "commercial_aerospace_board_local_tuning",
+      "status": "stop",
+      "reason": "commercial-aerospace should now move from board-local replay tuning to governance-backed transfer preparation"
+    }
+  ],
+  "interpretation": [
+    "V1.29P freezes the first post-commercial-aerospace move: BK0480 transfer preparation with explicit local reset.",
+    "This keeps the proven methodology while preventing silent cloning of commercial-aerospace-specific chronology and symbol facts."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127n_commercial_aerospace_lmn_phase_drag_veto_triage_v1",
+    "old_primary_variant": "broad_half_reference",
+    "old_primary_final_equity": 1261238.592,
+    "old_primary_max_drawdown": 0.12870312,
+    "new_primary_variant": "veto_drag_trio_impulse_only",
+    "new_primary_final_equity": 1276010.378,
+    "new_primary_max_drawdown": 0.11536441,
+    "authoritative_status": "promote_selective_phase_drag_veto_to_primary_reference",
+    "cleaner_alternative": "v126q_cleaner_reference",
+    "aggressive_shadow": "weak_drift_event_neutral_half"
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "promote_primary_reference",
+      "reason": "It improves all three frontier axes at once: final equity, drawdown, and order count."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "promote_primary_reference",
+      "reason": "The selective veto is not a stylistic alternative; it is a cleaner frontier improvement over the old broad-half reference."
+    },
+    {
+      "subagent": "James",
+      "vote": "promote_primary_reference",
+      "reason": "The impulse-only drag veto removes the wrong impulse entries without degrading the rest of the stack."
+    }
+  ],
+  "interpretation": [
+    "V1.27N promotes the selective phase-conditioned drag veto to the new primary reference after a unanimous subagent vote.",
+    "Commercial aerospace should now treat veto_drag_trio_impulse_only as the authoritative replay-facing primary reference."
+  ]
+}

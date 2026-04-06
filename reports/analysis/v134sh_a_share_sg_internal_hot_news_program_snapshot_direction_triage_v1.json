@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "snapshot_row_count": 1,
+    "risk_feed_row_count": 16,
+    "opportunity_feed_row_count": 1,
+    "session_handling_mode": "non_trading_day_watch_only",
+    "risk_consumer_gate": "watch_risk_non_trading_day",
+    "opportunity_consumer_gate": "watch_opportunity_non_trading_day",
+    "snapshot_consumer_gate_mode": "non_trading_day_watch_only",
+    "top_risk_score": 50.6,
+    "top_opportunity_score": 55.9,
+    "top_opportunity_primary_theme_slug": "gold",
+    "top_opportunity_theme_governance_state": "single_theme_passthrough",
+    "top_opportunity_mapping_confidence": "medium",
+    "top_opportunity_linkage_class": "direct_beneficiary",
+    "top_opportunity_beneficiary_symbols_top5": "601899",
+    "top_watch_symbol": "601899",
+    "top_watch_primary_theme_slug": "gold",
+    "top_watch_mapping_confidence": "medium",
+    "top_watch_linkage_class": "direct_beneficiary",
+    "top_watch_symbols_top5": "601899",
+    "authoritative_status": "continue_serving_downstream_with_single_program_snapshot_row"
+  },
+  "triage_rows": [
+    {
+      "component": "polling_consumer",
+      "direction": "prefer_the_program_snapshot_when_the_consumer_only_needs_current_top-risk_and_top-opportunity_state_plus_current_feed_gates"
+    },
+    {
+      "component": "deeper_consumer",
+      "direction": "fall_back_to_split_feeds_when_the_consumer_needs_more_than_the_top_snapshot_row_or_needs_row-level_risk_opportunity_details"
+    },
+    {
+      "component": "debug_consumer",
+      "direction": "fall_back_to_minimal_view_or_full_ingress_for_diagnostics_and_feature_validation"
+    }
+  ],
+  "interpretation": [
+    "The snapshot is a convenience layer above the split feeds, not a replacement for deeper internal surfaces.",
+    "This is the most compact consumer interface built so far on the hot-news pipeline, and it now carries the current feed-level consumer gates.",
+    "The snapshot now also carries the top-opportunity beneficiary mapping payload so top-level consumers can act without rejoining the opportunity feed.",
+    "It also carries the top governed watch symbol and top-five watch bundle so a symbol-first consumer can stay on the snapshot layer for the first watch decision.",
+    "It additionally exposes the governed primary theme so overlap handling can stay below the top-level consumer boundary."
+  ]
+}

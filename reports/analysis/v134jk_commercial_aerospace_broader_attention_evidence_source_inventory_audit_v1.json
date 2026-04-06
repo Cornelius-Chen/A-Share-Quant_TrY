@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jk_commercial_aerospace_broader_attention_evidence_source_inventory_audit_v1",
+    "frontier_name": "broader_attention_evidence",
+    "frontier_state": "opened_protocol_only",
+    "frozen_input_count": 1,
+    "ready_local_broader_source_count": 3,
+    "deferred_source_count": 1,
+    "blocked_consumer_count": 1,
+    "market_snapshot_row_count": 968,
+    "theme_snapshot_row_count": 3136,
+    "decisive_registry_row_count": 16,
+    "decisive_registry_retained_count": 12,
+    "inventory_csv": "data\\training\\commercial_aerospace_broader_attention_evidence_source_inventory_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_attention_evidence_source_inventory_ready_for_direction_triage"
+  },
+  "source_rows": [
+    {
+      "source_component": "board_local_event_attention_capital_handoff",
+      "source_status": "frozen_read_only_input",
+      "source_scope": "board_local_supervision",
+      "row_count": "n/a",
+      "retained_count": "n/a",
+      "readiness": "ready_as_frozen_input",
+      "detail": "freeze_event_attention_capital_local_route_and_do_not_drift_inside_same_local_inventory"
+    },
+    {
+      "source_component": "market_snapshot_inventory_v6",
+      "source_status": "available_local_broader_symbol_surface",
+      "source_scope": "broader_symbol_attention_search",
+      "row_count": "968",
+      "retained_count": "968",
+      "readiness": "ready_for_broader_attention_supervision",
+      "detail": "market-wide snapshot surface with concept, liquidity, resonance, and sector context fields"
+    },
+    {
+      "source_component": "theme_snapshot_inventory_v7",
+      "source_status": "available_local_broader_theme_surface",
+      "source_scope": "broader_heat_proxy_expansion",
+      "row_count": "3136",
+      "retained_count": "3136",
+      "readiness": "ready_for_broader_attention_supervision",
+      "detail": "theme-level snapshot surface suitable for local heat and role proxy expansion"
+    },
+    {
+      "source_component": "decisive_event_registry_v1",
+      "source_status": "available_local_event_source_surface",
+      "source_scope": "retained_symbol_source_and_event_alignment_expansion",
+      "row_count": "16",
+      "retained_count": "12",
+      "readiness": "ready_for_broader_event_attention_supervision",
+      "detail": "retained_event_count = 12; turning_point_watch_count = 2; layer_counts = {'capital_mapping': 5, 'theme_heat': 5, 'general_theme_context': 1, 'supply_chain_validation': 3, 'policy_or_industry_event': 1, 'industry_progress': 1}"
+    },
+    {
+      "source_component": "concept_purity_business_reference_layer",
+      "source_status": "deferred_not_in_current_local_inventory",
+      "source_scope": "future_cross_theme_and_basic_business_validation",
+      "row_count": "0",
+      "retained_count": "0",
+      "readiness": "deferred_until_future_full_a_share_coverage",
+      "detail": "user explicitly deferred broader concept-purity and business-reference integration until fuller A-share information exists"
+    },
+    {
+      "source_component": "capital_true_selection_promotion",
+      "source_status": "blocked_downstream_consumer",
+      "source_scope": "future_only",
+      "row_count": "0",
+      "retained_count": "0",
+      "readiness": "still_blocked",
+      "detail": "inventory readiness does not authorize promotion; it only opens the evidence frontier"
+    }
+  ],
+  "interpretation": [
+    "V1.34JK is the first concrete inventory surface under the broader_attention_evidence frontier.",
+    "It shows that the frontier is not empty: broader snapshot surfaces and retained event-source registry are already locally available, while concept-purity and business-reference expansion remain intentionally deferred."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "precondition_count": 5,
+    "unsatisfied_count": 1,
+    "foundation_only_count": 4,
+    "promotable_now_count": 14,
+    "status_csv": "data\\training\\a_share_shadow_execution_stub_replacement_precondition_status_v1.csv",
+    "authoritative_output": "a_share_shadow_execution_stub_replacement_preconditions_explicit"
+  },
+  "rows": [
+    {
+      "precondition": "market_context_coverage_closed",
+      "precondition_state": "unsatisfied",
+      "supporting_count": 2,
+      "blocking_reason": "base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2"
+    },
+    {
+      "precondition": "daily_market_promotion_nonblocked",
+      "precondition_state": "satisfied_foundation_only",
+      "supporting_count": 14,
+      "blocking_reason": "promotable_now_count = 14"
+    },
+    {
+      "precondition": "paired_surfaces_promotive",
+      "precondition_state": "satisfied_foundation_only",
+      "supporting_count": 16,
+      "blocking_reason": "index_candidate_cover_count = 16; limit_halt_candidate_cover_count = 14"
+    },
+    {
+      "precondition": "cost_model_foundation_ready",
+      "precondition_state": "satisfied_foundation_only",
+      "supporting_count": 0,
+      "blocking_reason": "cost models exist but cannot promote execution journaling while only external boundary residuals still remain unresolved"
+    },
+    {
+      "precondition": "shadow_stub_replacement_lane_materialized",
+      "precondition_state": "satisfied_foundation_only",
+      "supporting_count": 15,
+      "blocking_reason": "lane_overlay_row_count = 15; excluded_boundary_count = 2"
+    }
+  ],
+  "interpretation": [
+    "Shadow execution journal replacement is no longer a vague replay backlog; it now has an explicit precondition surface.",
+    "The blocker is no longer paired-surface or promotion absence. Those are now foundation-ready, while market context closure remains unsatisfied only because two external boundary residuals still remain after the shadow overlay recheck.",
+    "The 15-row shadow stub-replacement lane is now explicitly recognized as foundation-ready rather than being buried inside the generic replay backlog."
+  ]
+}

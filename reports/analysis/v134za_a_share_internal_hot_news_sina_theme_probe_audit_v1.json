@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "fetch_row_count": 50,
+    "sample_row_count": 50,
+    "broad_market_only_count": 37,
+    "theme_hit_count": 13,
+    "theme_hit_with_symbol_route_count": 13,
+    "unique_primary_theme_count": 5,
+    "authoritative_output": "a_share_internal_hot_news_sina_theme_probe_materialized"
+  },
+  "rows": [
+    {
+      "component": "sina_probe_fetch",
+      "component_state": "internal_only_probe_active",
+      "metric": "fetch_row_count",
+      "value": "50"
+    },
+    {
+      "component": "sina_theme_probe",
+      "component_state": "materialized",
+      "metric": "theme_hit_count",
+      "value": "13"
+    },
+    {
+      "component": "sina_theme_probe",
+      "component_state": "materialized",
+      "metric": "theme_hit_with_symbol_route_count",
+      "value": "13"
+    },
+    {
+      "component": "sina_theme_probe",
+      "component_state": "materialized",
+      "metric": "unique_primary_theme_count",
+      "value": "5"
+    }
+  ],
+  "interpretation": [
+    "This probe tests whether a second live source increases real theme-hit density before merging it into the primary hot-news fastlane.",
+    "It stays outside the main fastlane so source expansion can be measured without destabilizing the current trading-consumer surfaces."
+  ]
+}

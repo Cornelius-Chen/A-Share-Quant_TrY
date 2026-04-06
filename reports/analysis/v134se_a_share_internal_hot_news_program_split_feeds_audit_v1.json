@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "risk_feed_row_count": 16,
+    "opportunity_feed_row_count": 2,
+    "critical_risk_count": 1,
+    "critical_opportunity_count": 2,
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "session_handling_mode": "non_trading_day_watch_only",
+    "risk_consumer_gate": "watch_risk_non_trading_day",
+    "opportunity_consumer_gate": "watch_opportunity_non_trading_day",
+    "top_opportunity_theme_slug": "defense_industry",
+    "top_opportunity_focus_total_score": "2.7476",
+    "authoritative_output": "a_share_internal_hot_news_program_split_feeds_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_risk_feed",
+      "component_state": "read_ready_internal_only",
+      "metric": "risk_feed_row_count",
+      "value": "16"
+    },
+    {
+      "component": "program_opportunity_feed",
+      "component_state": "read_ready_internal_only",
+      "metric": "opportunity_feed_row_count",
+      "value": "2"
+    },
+    {
+      "component": "critical_risk_feed",
+      "component_state": "materialized",
+      "metric": "critical_risk_count",
+      "value": "1"
+    },
+    {
+      "component": "critical_opportunity_feed",
+      "component_state": "materialized",
+      "metric": "critical_opportunity_count",
+      "value": "2"
+    },
+    {
+      "component": "timing_gate",
+      "component_state": "materialized",
+      "metric": "session_handling_mode",
+      "value": "non_trading_day_watch_only"
+    },
+    {
+      "component": "risk_consumer_gate",
+      "component_state": "materialized",
+      "metric": "risk_consumer_gate",
+      "value": "watch_risk_non_trading_day"
+    },
+    {
+      "component": "opportunity_consumer_gate",
+      "component_state": "materialized",
+      "metric": "opportunity_consumer_gate",
+      "value": "watch_opportunity_non_trading_day"
+    },
+    {
+      "component": "opportunity_focus_scoring",
+      "component_state": "materialized",
+      "metric": "top_opportunity_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "opportunity_focus_scoring",
+      "component_state": "materialized",
+      "metric": "top_opportunity_focus_total_score",
+      "value": "2.7476"
+    }
+  ],
+  "interpretation": [
+    "The trading program no longer needs to split risk and opportunity messages itself.",
+    "The minimal consumer view is now further decomposed into two narrower feeds: risk first and opportunity first, both with explicit session-handling context and direct consumer gates.",
+    "Opportunity feed ordering now also reflects focus-cycle scoring, not just the earlier generic program-priority field."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "change_row_count": 1,
+    "top_risk_change_state": "stable",
+    "top_opportunity_change_state": "stable",
+    "top_risk_changed_flag": "false",
+    "top_opportunity_changed_flag": "false",
+    "trading_day_state_change": "stable",
+    "session_phase_change": "stable",
+    "session_handling_mode_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_snapshot_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "snapshot_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "change_row_count",
+      "value": "1"
+    },
+    {
+      "component": "top_risk_change",
+      "component_state": "materialized",
+      "metric": "top_risk_change_state",
+      "value": "stable"
+    },
+    {
+      "component": "top_opportunity_change",
+      "component_state": "materialized",
+      "metric": "top_opportunity_change_state",
+      "value": "stable"
+    },
+    {
+      "component": "session_change",
+      "component_state": "materialized",
+      "metric": "session_handling_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "signal_priority",
+      "component_state": "materialized",
+      "metric": "signal_priority",
+      "value": "p2"
+    }
+  ],
+  "interpretation": [
+    "The program can now distinguish a stable snapshot from a real top-risk or top-opportunity change.",
+    "This change layer now also treats trading-day and session-handling transitions as first-class snapshot changes."
+  ]
+}

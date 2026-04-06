@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "sample_row_count": 20,
+    "broad_market_only_count": 19,
+    "theme_hit_count": 1,
+    "theme_hit_with_symbol_watch_count": 1,
+    "theme_hit_without_symbol_watch_count": 0,
+    "unique_primary_theme_count": 1,
+    "unique_watch_symbol_count": 1,
+    "authoritative_status": "use themed-hit replay as the practical validation layer before expanding more theme registry breadth"
+  },
+  "triage_rows": [
+    {
+      "component": "broad_market_only_rows",
+      "direction": "treat broad-market-heavy samples as macro/risk traffic rather than a mapping failure"
+    },
+    {
+      "component": "theme_hit_with_symbol_watch_rows",
+      "direction": "treat symbol-watch hits as the highest-value validation path for current theme-to-symbol curation"
+    },
+    {
+      "component": "theme_hit_without_symbol_watch_rows",
+      "direction": "use uncovered themed rows as the next curation queue before adding more long-tail theme families"
+    }
+  ],
+  "interpretation": [
+    "This replay is a reality check on the current sample stream rather than an abstract registry-only metric.",
+    "It helps distinguish a broad-market news day from a genuine theme-mapping miss."
+  ]
+}

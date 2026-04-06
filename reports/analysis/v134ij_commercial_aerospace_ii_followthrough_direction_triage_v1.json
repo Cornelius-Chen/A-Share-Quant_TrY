@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ij_commercial_aerospace_ii_followthrough_direction_triage_v1",
+    "symbol_count": 4,
+    "persistent_followthrough_count": 1,
+    "authoritative_status": "retain_symbol_followthrough_as_its_own_supervision_layer_without_promoting_true_selection"
+  },
+  "triage_rows": [
+    {
+      "followthrough_label": "persistent_symbol_followthrough_without_board_unlock",
+      "direction": "retain_as_symbol_level_persistence_not_true_selection"
+    },
+    {
+      "followthrough_label": "moderate_symbol_followthrough_without_board_unlock",
+      "direction": "retain_as_supporting_evidence_not_promotion_license"
+    },
+    {
+      "followthrough_label": "weak_or_nonpersistent_followthrough",
+      "direction": "retain_as_negative_or_neutral_supporting_evidence"
+    },
+    {
+      "followthrough_label": "capital_true_selection",
+      "direction": "continue_blocked_even_after_followthrough_surface_exists"
+    }
+  ],
+  "interpretation": [
+    "V1.34IJ converts the first followthrough surface into direction.",
+    "The key boundary remains intact: symbol persistence is useful to learn, but it still does not automatically authorize true selection."
+  ]
+}

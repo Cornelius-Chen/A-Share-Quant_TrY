@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gm_commercial_aerospace_gl_forced_collapse_direction_triage_v1",
+    "authoritative_status": "retain_reset_slot_as_forced_collapse_surrogate_and_keep_single_slot_promotion_blocked",
+    "preferred_surrogate_slot": "reset_slot",
+    "preferred_surrogate_symbol": "002085",
+    "reset_higher_metric_count": 3,
+    "continuation_higher_metric_count": 1,
+    "authoritative_rule": "forced-collapse preference may favor reset locally, but single-slot fallback remains unobserved and non-portable"
+  },
+  "triage_rows": [
+    {
+      "component": "forced_collapse_surrogate",
+      "status": "retain_as_reset_only",
+      "rationale": "under a forced one-slot local reading, reset remains the only slot with a stronger combined allocation-plus-quality claim"
+    },
+    {
+      "component": "continuation_slot",
+      "status": "retain_as_companion_only",
+      "rationale": "continuation keeps a local early-impulse edge but does not carry the stronger forced-collapse claim"
+    },
+    {
+      "component": "portable_single_slot_template",
+      "status": "still_blocked",
+      "rationale": "forced collapse on one dual-slot day is still not evidence of an observed portable single-slot state"
+    },
+    {
+      "component": "execution_single_slot_rule",
+      "status": "still_blocked",
+      "rationale": "the branch still lacks an observed execution-safe one-slot template"
+    }
+  ],
+  "interpretation": [
+    "V1.34GM turns the forced single-slot collapse audit into the current governance verdict.",
+    "The branch may retain reset as the stronger local surrogate under forced collapse, but that does not unlock a portable single-slot rule."
+  ]
+}

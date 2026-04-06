@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jm_commercial_aerospace_broader_attention_source_applicability_audit_v1",
+    "inventory_frontier_state": "opened_protocol_only",
+    "current_frontier_symbol_count": 8,
+    "market_snapshot_overlap_count": 3,
+    "theme_snapshot_overlap_count": 0,
+    "market_snapshot_temporal_alignment": "misaligned_2024_only",
+    "theme_snapshot_temporal_alignment": "misaligned_2024_only",
+    "decisive_registry_temporal_alignment": "aligned_2026_event_surface",
+    "same_plane_ready_source_count": 1,
+    "structural_prior_only_source_count": 2,
+    "applicability_csv": "data\\training\\commercial_aerospace_broader_attention_source_applicability_v1.csv",
+    "authoritative_output": "commercial_aerospace_broader_attention_source_applicability_ready_for_direction_triage"
+  },
+  "source_rows": [
+    {
+      "source_component": "market_snapshot_inventory_v6",
+      "temporal_alignment": "misaligned_2024_only",
+      "frontier_symbol_overlap_count": "3",
+      "frontier_symbol_overlap": "000738|002085|600118",
+      "same_plane_applicability": "structural_prior_only_not_same_plane_live_evidence",
+      "detail": "coverage = 2024-01-02 -> 2024-12-31"
+    },
+    {
+      "source_component": "theme_snapshot_inventory_v7",
+      "temporal_alignment": "misaligned_2024_only",
+      "frontier_symbol_overlap_count": "0",
+      "frontier_symbol_overlap": "none",
+      "same_plane_applicability": "theme_structure_prior_only_not_same_plane_live_evidence",
+      "detail": "coverage = 2024-01-02 -> 2024-12-31"
+    },
+    {
+      "source_component": "decisive_event_registry_v1",
+      "temporal_alignment": "aligned_2026_event_surface",
+      "frontier_symbol_overlap_count": "n/a",
+      "frontier_symbol_overlap": "n/a",
+      "same_plane_applicability": "first_live_same_plane_expansion_source",
+      "detail": "coverage = 2026-01-08 20:52:00 -> "
+    }
+  ],
+  "interpretation": [
+    "V1.34JM asks whether the newly inventoried broader-attention sources are actually usable on the same temporal plane as the current 2026 commercial-aerospace route.",
+    "The answer is asymmetric: the decisive event registry is same-plane ready, while the snapshot inventories are still useful only as structural priors because they stop in 2024."
+  ]
+}

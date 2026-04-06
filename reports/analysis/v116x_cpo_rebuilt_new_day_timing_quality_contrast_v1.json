@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116x_cpo_rebuilt_new_day_timing_quality_contrast_v1",
+    "reviewed_new_day_count": 3,
+    "corrected_cooled_new_hit_day_count": 1,
+    "coverage_bug_remaining": false,
+    "authoritative_current_problem": "quality_discrimination_after_coverage_repair",
+    "recommended_next_posture": "keep_candidate_only_and_target_quality_side_refinement_not_timing_relitigation"
+  },
+  "contrast_rows": [
+    {
+      "signal_trade_date": "2023-11-07",
+      "rebuilt_row_count": 2,
+      "symbol_set": [
+        "300308",
+        "300502"
+      ],
+      "state_bands": [
+        "pc1_low__pc2_low"
+      ],
+      "avg_expectancy_proxy_3d": 0.130639,
+      "avg_max_adverse_return_3d": -0.009789,
+      "action_favored_count": 2,
+      "corrected_cooled_hit": false,
+      "hot_upper_bound_hit": true,
+      "earliest_visible_checkpoints": [
+        "14:00"
+      ],
+      "late_confirmation_checkpoints": [
+        "14:00"
+      ],
+      "all_early_visible": false,
+      "all_late_only": true,
+      "diagnosis": "late_only_positive_quality_not_enough_for_corrected_cooled"
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "rebuilt_row_count": 2,
+      "symbol_set": [
+        "300308",
+        "300502"
+      ],
+      "state_bands": [
+        "pc1_low__pc2_high"
+      ],
+      "avg_expectancy_proxy_3d": 0.042263,
+      "avg_max_adverse_return_3d": -0.019255,
+      "action_favored_count": 1,
+      "corrected_cooled_hit": true,
+      "hot_upper_bound_hit": true,
+      "earliest_visible_checkpoints": [
+        "10:30"
+      ],
+      "late_confirmation_checkpoints": [
+        "14:00"
+      ],
+      "all_early_visible": true,
+      "all_late_only": false,
+      "diagnosis": "early_visible_and_quality_sufficient_for_corrected_cooled_hit"
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "rebuilt_row_count": 2,
+      "symbol_set": [
+        "300308",
+        "300502"
+      ],
+      "state_bands": [
+        "pc1_low__pc2_high",
+        "pc1_low__pc2_low"
+      ],
+      "avg_expectancy_proxy_3d": -0.052168,
+      "avg_max_adverse_return_3d": -0.056817,
+      "action_favored_count": 0,
+      "corrected_cooled_hit": false,
+      "hot_upper_bound_hit": true,
+      "earliest_visible_checkpoints": [
+        "14:00"
+      ],
+      "late_confirmation_checkpoints": [
+        "14:00"
+      ],
+      "all_early_visible": false,
+      "all_late_only": true,
+      "diagnosis": "late_only_and_quality_weak"
+    }
+  ],
+  "interpretation": [
+    "V1.16X compares the three rebuilt expanded-window days side by side after the V116U/V116V coverage repair and the V116W rebuilt-base validation.",
+    "The key distinction is no longer missing candidate rows. The surviving difference is whether a new day reaches the corrected cooled line early enough and with enough quality to survive the cooled confirmation gate.",
+    "2024-01-18 is the only rebuilt new day that converts into a corrected cooled hit. 2023-11-07 stays positive but late-only, while 2024-01-23 is both late-only and materially weaker."
+  ]
+}

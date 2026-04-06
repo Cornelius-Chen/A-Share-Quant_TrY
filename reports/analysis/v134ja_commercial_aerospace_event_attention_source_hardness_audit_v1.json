@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ja_commercial_aerospace_event_attention_source_hardness_audit_v1",
+    "symbol_count": 5,
+    "hard_anchor_grade_source_count": 1,
+    "retained_but_non_anchor_source_count": 2,
+    "discarded_or_missing_source_count": 2,
+    "only_hard_anchor_symbol": "000547",
+    "source_hardness_csv": "data\\training\\commercial_aerospace_event_attention_source_hardness_v1.csv",
+    "authoritative_rule": "event-attention source hardness remains single-case: only 000547 has anchor-grade source backing, while 603601 and 301306 have retained but non-anchor support sources, 300342 has only discarded theme heat, and 002361 has no retained event source"
+  },
+  "source_rows": [
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "candidate_role": "attention_anchor_and_attention_decoy",
+      "separated_role": "",
+      "source_backing": "ca_source_007 + local_path",
+      "event_registry_id": "ca_source_007",
+      "event_scope": "theme_heat",
+      "decisive_semantic": "turning_point_watch",
+      "decisive_retained": "True",
+      "decisive_reason": "decisive_turning_point_risk",
+      "source_hardness": "hard_anchor_grade_source",
+      "hardness_reasoning": "explicit symbol-named turning-point theme-heat source retained as decisive risk seed"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "candidate_role": "crowded_attention_carrier_candidate",
+      "separated_role": "event_backed_attention_carrier_candidate",
+      "source_backing": "ca_source_010 + crowding_module",
+      "event_registry_id": "ca_source_010",
+      "event_scope": "supply_chain_validation",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_retained": "True",
+      "decisive_reason": "supply_chain_validation",
+      "source_hardness": "retained_continuation_support_source",
+      "hardness_reasoning": "retained supply-chain validation source supports continuation and carrier watch, but it is not a direct heat-axis naming source"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "candidate_role": "crowding_only_role_candidate",
+      "separated_role": "non_anchor_crowded_concentration_candidate",
+      "source_backing": "crowding_module_only",
+      "event_registry_id": "",
+      "event_scope": "",
+      "decisive_semantic": "",
+      "decisive_retained": "",
+      "decisive_reason": "",
+      "source_hardness": "no_retained_event_source",
+      "hardness_reasoning": "current local role is built from crowding path only and has no retained event source to harden anchor status"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "candidate_role": "outlier_breakout_concentration_candidate",
+      "separated_role": "non_anchor_outlier_breakout_candidate",
+      "source_backing": "ca_source_004_theme_heat + local_breakout_path",
+      "event_registry_id": "ca_source_004",
+      "event_scope": "theme_heat",
+      "decisive_semantic": "discarded_theme_heat",
+      "decisive_retained": "False",
+      "decisive_reason": "non_decisive_theme_heat_excluded",
+      "source_hardness": "discarded_theme_heat_source",
+      "hardness_reasoning": "theme-heat source exists, but it was explicitly discarded as non-decisive and cannot support hard anchor promotion"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "candidate_role": "high_beta_attention_follow_candidate",
+      "separated_role": "event_backed_high_beta_follow_candidate",
+      "source_backing": "ca_source_011 + raw_only_rebound",
+      "event_registry_id": "ca_source_011",
+      "event_scope": "supply_chain_validation",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_retained": "True",
+      "decisive_reason": "supply_chain_validation",
+      "source_hardness": "retained_follow_support_source",
+      "hardness_reasoning": "retained supply-chain validation source supports follow behavior, but current evidence still reads as follower-grade rather than anchor-grade"
+    }
+  ],
+  "interpretation": [
+    "V1.34JA asks a narrower question than role quality: what kind of source is actually backing each role candidate.",
+    "This makes the current stopline explicit: the stack is not missing a threshold tweak, it is missing a second anchor-grade source."
+  ]
+}

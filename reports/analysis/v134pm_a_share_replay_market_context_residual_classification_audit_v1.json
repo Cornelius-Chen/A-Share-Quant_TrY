@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "missing_residual_count": 3,
+    "pre_coverage_count": 2,
+    "off_calendar_count": 1,
+    "other_count": 0,
+    "coverage_start": "2024-01-02",
+    "coverage_end": "2026-04-03",
+    "status_csv": "data\\training\\a_share_replay_market_context_residual_classification_status_v1.csv",
+    "authoritative_output": "a_share_replay_market_context_residuals_classified"
+  },
+  "rows": [
+    {
+      "slice_id": "slice_20230922_113526",
+      "decision_trade_date": "2023-09-22",
+      "weekday_name": "Friday",
+      "residual_class": "pre_coverage_shadow_slice",
+      "coverage_window": "2024-01-02 -> 2026-04-03"
+    },
+    {
+      "slice_id": "slice_20231208_152916",
+      "decision_trade_date": "2023-12-08",
+      "weekday_name": "Friday",
+      "residual_class": "pre_coverage_shadow_slice",
+      "coverage_window": "2024-01-02 -> 2026-04-03"
+    },
+    {
+      "slice_id": "slice_20260328_194152",
+      "decision_trade_date": "2026-03-28",
+      "weekday_name": "Saturday",
+      "residual_class": "off_calendar_shadow_slice",
+      "coverage_window": "2024-01-02 -> 2026-04-03"
+    }
+  ],
+  "interpretation": [
+    "Replay market-context residuals are no longer a single undifferentiated gap.",
+    "The remaining three missing dates split into two pre-coverage slices and one off-calendar shadow slice.",
+    "That means the current residual is not a broad market-surface failure but a narrow boundary-and-calendar issue."
+  ]
+}

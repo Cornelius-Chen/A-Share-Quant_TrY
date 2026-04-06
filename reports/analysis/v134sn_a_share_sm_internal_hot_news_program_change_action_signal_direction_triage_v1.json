@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "top_risk_action_state": "stable",
+    "top_opportunity_action_state": "stable",
+    "global_program_action_mode_state": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_action-level_change_signal_above_action_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_action_state",
+      "direction": "treat_stable_as_no_new_program-level_reaction_needed_beyond_existing_action_surface"
+    },
+    {
+      "component": "action_changed_state",
+      "direction": "treat_action_changed_as_a_higher-priority_consumer_event_than_simple_snapshot_score_drift"
+    },
+    {
+      "component": "signal_priority",
+      "direction": "use_signal_priority_to_decide_whether_to_poll_only_or_raise_an_internal_alert"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest program-facing signal in the hot-news pipeline so far.",
+    "It should be used as an alert hint, while the action surface remains the explanatory layer."
+  ]
+}

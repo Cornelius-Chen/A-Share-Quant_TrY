@@ -1,0 +1,824 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121e_cpo_close_context_narrowing_audit_v1",
+    "candidate_discriminator_name": "participation_collapse_close_risk_score_candidate",
+    "close_context_row_count": 85,
+    "positive_close_row_count": 75,
+    "negative_close_row_count": 10,
+    "best_threshold": -0.0,
+    "best_balanced_accuracy": 0.65,
+    "positive_recall_at_best_threshold": 1.0,
+    "negative_reject_rate_at_best_threshold": 0.3,
+    "recommended_next_posture": "chronology_audit_inside_close_context_only"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": -0.0,
+      "tp": 75,
+      "fp": 7,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.3,
+      "balanced_accuracy": 0.65
+    },
+    {
+      "threshold": -564427750.0,
+      "tp": 75,
+      "fp": 8,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.2,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": -2852544250.0,
+      "tp": 75,
+      "fp": 9,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.1,
+      "balanced_accuracy": 0.55
+    },
+    {
+      "threshold": -5230995750.0,
+      "tp": 75,
+      "fp": 10,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "scored_rows": [
+    {
+      "signal_trade_date": "2024-03-15",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.105594,
+      "max_adverse_return_3d": -0.071329,
+      "participation_collapse_close_risk_score": -5230995750.0
+    },
+    {
+      "signal_trade_date": "2025-09-12",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.040744,
+      "max_adverse_return_3d": -0.046073,
+      "participation_collapse_close_risk_score": -2852544250.0
+    },
+    {
+      "signal_trade_date": "2025-12-19",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": 0.115905,
+      "max_adverse_return_3d": 0.0,
+      "participation_collapse_close_risk_score": -564427750.0
+    },
+    {
+      "signal_trade_date": "2023-05-04",
+      "symbol": "300502",
+      "board_phase": "mixed_risk",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.055781,
+      "max_adverse_return_3d": -0.085938,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-06-06",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.573981,
+      "max_adverse_return_3d": -0.337053,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-06-21",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.239269,
+      "max_adverse_return_3d": -0.150741,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-06-21",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.390658,
+      "max_adverse_return_3d": -0.212541,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-06-26",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.086035,
+      "max_adverse_return_3d": -0.098209,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-06-26",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.196951,
+      "max_adverse_return_3d": -0.142346,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-07",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.207713,
+      "max_adverse_return_3d": -0.114118,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-10",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.099304,
+      "max_adverse_return_3d": -0.088631,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.331623,
+      "max_adverse_return_3d": -0.183701,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-18",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.344098,
+      "max_adverse_return_3d": -0.185486,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-19",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.256542,
+      "max_adverse_return_3d": -0.147729,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-19",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.255396,
+      "max_adverse_return_3d": -0.147629,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-07-26",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.139877,
+      "max_adverse_return_3d": -0.083273,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-08-15",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.107857,
+      "max_adverse_return_3d": -0.060376,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-08-23",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.237823,
+      "max_adverse_return_3d": -0.145081,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-08-23",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.207551,
+      "max_adverse_return_3d": -0.115306,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-09-13",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.219744,
+      "max_adverse_return_3d": -0.116171,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-09-13",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.175846,
+      "max_adverse_return_3d": -0.093582,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-13",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.108091,
+      "max_adverse_return_3d": -0.080217,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-13",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.169562,
+      "max_adverse_return_3d": -0.114231,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-16",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.130439,
+      "max_adverse_return_3d": -0.078125,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-16",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.162179,
+      "max_adverse_return_3d": -0.09704,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-18",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.310983,
+      "max_adverse_return_3d": -0.16986,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-19",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.245856,
+      "max_adverse_return_3d": -0.144962,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-20",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.166872,
+      "max_adverse_return_3d": -0.096429,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-20",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.194086,
+      "max_adverse_return_3d": -0.101738,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2023-10-23",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.174033,
+      "max_adverse_return_3d": -0.107841,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-01-02",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.170012,
+      "max_adverse_return_3d": -0.090826,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-01-26",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.244611,
+      "max_adverse_return_3d": -0.149142,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-01-26",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.360297,
+      "max_adverse_return_3d": -0.188746,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-03-25",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.1884,
+      "max_adverse_return_3d": -0.12,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-04-30",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.312725,
+      "max_adverse_return_3d": -0.169012,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-05-23",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.142886,
+      "max_adverse_return_3d": -0.10151,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-06-19",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.124666,
+      "max_adverse_return_3d": -0.07827,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-07-15",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.19453,
+      "max_adverse_return_3d": -0.127179,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-07-23",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.13266,
+      "max_adverse_return_3d": -0.094483,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-08-02",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.111903,
+      "max_adverse_return_3d": -0.089132,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-08-26",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.115928,
+      "max_adverse_return_3d": -0.091268,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-08-27",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.110453,
+      "max_adverse_return_3d": -0.097825,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-09-02",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.112318,
+      "max_adverse_return_3d": -0.084018,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-10-09",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.055887,
+      "max_adverse_return_3d": -0.081204,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-10-09",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": 0.106106,
+      "max_adverse_return_3d": -0.087945,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-10-11",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.104225,
+      "max_adverse_return_3d": -0.071831,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-10-15",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.012242,
+      "max_adverse_return_3d": -0.156043,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-11-12",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.304633,
+      "max_adverse_return_3d": -0.155026,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-11-14",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.182201,
+      "max_adverse_return_3d": -0.12036,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-11-14",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.239459,
+      "max_adverse_return_3d": -0.150364,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-11-21",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.14199,
+      "max_adverse_return_3d": -0.09333,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-11-21",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.191854,
+      "max_adverse_return_3d": -0.10922,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-12-13",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.32975,
+      "max_adverse_return_3d": -0.17375,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-12-27",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.246047,
+      "max_adverse_return_3d": -0.127907,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2024-12-31",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.561763,
+      "max_adverse_return_3d": -0.285714,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.50011,
+      "max_adverse_return_3d": -0.252578,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-01-23",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.263949,
+      "max_adverse_return_3d": -0.163949,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-01-27",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.173136,
+      "max_adverse_return_3d": -0.134068,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-02-25",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.261129,
+      "max_adverse_return_3d": -0.144379,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-02-27",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.212893,
+      "max_adverse_return_3d": -0.135167,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-02-27",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.18878,
+      "max_adverse_return_3d": -0.148672,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-02-28",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.107035,
+      "max_adverse_return_3d": -0.090436,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-02-28",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.261269,
+      "max_adverse_return_3d": -0.162284,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-03-21",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.118482,
+      "max_adverse_return_3d": -0.094188,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.293229,
+      "max_adverse_return_3d": -0.176928,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-03",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.305938,
+      "max_adverse_return_3d": -0.2335,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-07",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.082519,
+      "max_adverse_return_3d": -0.133351,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-07",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.065633,
+      "max_adverse_return_3d": -0.168035,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-15",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.245159,
+      "max_adverse_return_3d": -0.193084,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-16",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.307118,
+      "max_adverse_return_3d": -0.183816,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-04-22",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.22,
+      "max_adverse_return_3d": -0.124567,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-05-23",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.581624,
+      "max_adverse_return_3d": -0.307436,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-06-19",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.144863,
+      "max_adverse_return_3d": -0.081162,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-02",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.091254,
+      "max_adverse_return_3d": -0.129577,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-04",
+      "symbol": "300308",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.085498,
+      "max_adverse_return_3d": -0.089995,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-04",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": false,
+      "expectancy_proxy_3d": -0.046791,
+      "max_adverse_return_3d": -0.080498,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-24",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.149829,
+      "max_adverse_return_3d": -0.085205,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-30",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.197366,
+      "max_adverse_return_3d": -0.130481,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-09-30",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.264159,
+      "max_adverse_return_3d": -0.157291,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-10-13",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.215462,
+      "max_adverse_return_3d": -0.128479,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-10-13",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.167125,
+      "max_adverse_return_3d": -0.092417,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-10-30",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.159235,
+      "max_adverse_return_3d": -0.096789,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-11-07",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.15145,
+      "max_adverse_return_3d": -0.097357,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2025-12-25",
+      "symbol": "300757",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.183225,
+      "max_adverse_return_3d": -0.09588,
+      "participation_collapse_close_risk_score": -0.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "divergence_and_decay",
+      "positive_close_label": true,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "participation_collapse_close_risk_score": -0.0
+    }
+  ],
+  "interpretation": [
+    "V1.21E narrows the first downside branch to the only context where it shows actual discrimination: close_vs_hold.",
+    "This does not promote the branch; it only tests whether the broad risk prior becomes useful once the action context is held fixed.",
+    "If the line stays weak even here, it should remain soft-only and stop consuming candidate budget."
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "shadow_slice_count": 17,
+    "date_level_bound_count": 14,
+    "daily_gap_count": 3,
+    "total_intraday_present_count": 9,
+    "intraday_present_daily_missing_count": 0,
+    "status_csv": "data\\training\\a_share_replay_market_coverage_gap_status_v1.csv",
+    "authoritative_output": "a_share_replay_market_coverage_gap_explicit"
+  },
+  "rows": [
+    {
+      "slice_id": "slice_20230922_113526",
+      "decision_trade_date": "2023-09-22",
+      "intraday_present": false,
+      "daily_present": false,
+      "coverage_gap_state": "full_market_context_missing"
+    },
+    {
+      "slice_id": "slice_20231208_152916",
+      "decision_trade_date": "2023-12-08",
+      "intraday_present": false,
+      "daily_present": false,
+      "coverage_gap_state": "full_market_context_missing"
+    },
+    {
+      "slice_id": "slice_20250319_080736",
+      "decision_trade_date": "2025-03-19",
+      "intraday_present": false,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20250513_180228",
+      "decision_trade_date": "2025-05-13",
+      "intraday_present": false,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20250724_164500",
+      "decision_trade_date": "2025-07-24",
+      "intraday_present": false,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20250819_082110",
+      "decision_trade_date": "2025-08-19",
+      "intraday_present": false,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20250922_124200",
+      "decision_trade_date": "2025-09-22",
+      "intraday_present": false,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20251224_174200",
+      "decision_trade_date": "2025-12-24",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20251226_103958",
+      "decision_trade_date": "2025-12-26",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260108_180005",
+      "decision_trade_date": "2026-01-08",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260108_181651",
+      "decision_trade_date": "2026-01-08",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260108_205200",
+      "decision_trade_date": "2026-01-08",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260112_115033",
+      "decision_trade_date": "2026-01-12",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260113_193236",
+      "decision_trade_date": "2026-01-13",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260121_140547",
+      "decision_trade_date": "2026-01-21",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260306_020027",
+      "decision_trade_date": "2026-03-06",
+      "intraday_present": true,
+      "daily_present": true,
+      "coverage_gap_state": "covered"
+    },
+    {
+      "slice_id": "slice_20260328_194152",
+      "decision_trade_date": "2026-03-28",
+      "intraday_present": false,
+      "daily_present": false,
+      "coverage_gap_state": "full_market_context_missing"
+    }
+  ],
+  "interpretation": [
+    "Replay's market-context blocker is no longer a blind daily-window mismatch; it is now an explicit residual after date-level tradeable-context binding.",
+    "That makes the next replay-side closure target narrower: close the remaining missing date contexts instead of repeating full market-surface bootstrap work."
+  ]
+}

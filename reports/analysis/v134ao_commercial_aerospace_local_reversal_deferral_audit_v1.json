@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ao_commercial_aerospace_local_reversal_deferral_audit_v1",
+    "variant_count": 5,
+    "best_neutral_streak_len": 2,
+    "best_gap_minute": 10,
+    "best_impacted_case_count": 1,
+    "best_same_day_loss_avoided_delta_total": 153.7228,
+    "best_rebound_cost_saved_5d_total": 154.0,
+    "variant_csv": "data\\training\\commercial_aerospace_local_reversal_deferral_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_local_reversal_deferral_audit_ready_for_direction_triage"
+  },
+  "variant_rows": [
+    {
+      "neutral_streak_len": 2,
+      "gap_minute": 8,
+      "impacted_case_count": 1,
+      "same_day_loss_avoided_delta_total": 153.7228,
+      "rebound_cost_saved_5d_total": 154.0
+    },
+    {
+      "neutral_streak_len": 2,
+      "gap_minute": 10,
+      "impacted_case_count": 1,
+      "same_day_loss_avoided_delta_total": 153.7228,
+      "rebound_cost_saved_5d_total": 154.0
+    },
+    {
+      "neutral_streak_len": 2,
+      "gap_minute": 12,
+      "impacted_case_count": 1,
+      "same_day_loss_avoided_delta_total": -153.7228,
+      "rebound_cost_saved_5d_total": -154.0
+    },
+    {
+      "neutral_streak_len": 3,
+      "gap_minute": 8,
+      "impacted_case_count": 0,
+      "same_day_loss_avoided_delta_total": 0.0,
+      "rebound_cost_saved_5d_total": 0.0
+    },
+    {
+      "neutral_streak_len": 3,
+      "gap_minute": 10,
+      "impacted_case_count": 0,
+      "same_day_loss_avoided_delta_total": 0.0,
+      "rebound_cost_saved_5d_total": 0.0
+    }
+  ],
+  "impacted_rows": [
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "first_reversal_minute": 43,
+      "deferred_trigger_minute": 54,
+      "current_fill_price": 42.68,
+      "adjusted_fill_price": 42.75,
+      "same_day_delta": 153.7228,
+      "rebound_cost_saved_5d": 154.0
+    }
+  ],
+  "compare_rows": [
+    {
+      "variant": "current_full_reversal_reference",
+      "same_day_loss_avoided_delta_total": 0.0,
+      "rebound_cost_saved_5d_total": 0.0
+    },
+    {
+      "variant": "local_reversal_deferral_best_variant",
+      "same_day_loss_avoided_delta_total": 153.7228,
+      "rebound_cost_saved_5d_total": 154.0
+    }
+  ],
+  "interpretation": [
+    "V1.34AO audits a narrower local expression for rebound-cost cases than simple partial selling.",
+    "It only defers the first full reversal when the initial reversal is followed by a clean neutral reclaim before any re-entry into reversal, then exits on the next reversal or severe trigger."
+  ]
+}

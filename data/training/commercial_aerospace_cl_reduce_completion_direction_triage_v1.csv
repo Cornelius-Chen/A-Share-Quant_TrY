@@ -1,0 +1,5 @@
+﻿component,status,detail
+reduce_mainline_research,complete_enough_to_freeze,"sell_side_binding_reference_ready = True, broad_reduce_tuning_stopped = True"
+remaining_work,residue_maintenance_only,"local_residue_supervision_only = True, residue_seed_count = 4"
+execution_closure,still_infrastructure_blocked,remaining_execution_blocker_count = 4
+next_research_frontier,do_not_switch_inside_this_step_but_reduce_is_ready_for_handoff,Reduce mainline research can now be considered frozen; any future effort should either stay local-residue only or wait for the later handoff to intraday add.

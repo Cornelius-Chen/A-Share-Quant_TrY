@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jb_commercial_aerospace_ja_source_hardness_direction_triage_v1",
+    "only_hard_anchor_symbol": "000547",
+    "hard_anchor_grade_source_count": 1,
+    "authoritative_status": "retain_source_hardness_stopline_and_keep_true_selection_blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "000547",
+      "direction": "retain_as_only_hard_anchor_grade_source_and_only_hard_anchor_decoy_counterpanel"
+    },
+    {
+      "component": "603601_and_301306",
+      "direction": "retain_as_retained_event_supported_but_non_anchor_source_cases"
+    },
+    {
+      "component": "300342_and_002361",
+      "direction": "retain_as_discarded_or_missing_source_cases_not_eligible_for_hard_anchor_promotion"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_because_source_hardness_is_still_single_case"
+    }
+  ],
+  "interpretation": [
+    "V1.34JB converts source-hardness classification into direction.",
+    "The stack can now say exactly why the current role candidates do not thicken the hard counterpanel: they are lacking anchor-grade source hardness, not merely lagging on price."
+  ]
+}

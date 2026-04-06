@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jo_commercial_aerospace_decisive_event_registry_expansion_utility_audit_v1",
+    "same_plane_ready_source_count": 1,
+    "retained_registry_row_count": 12,
+    "broader_symbol_pool_expander_count": 4,
+    "heat_axis_and_counterpanel_expander_count": 2,
+    "carrier_follow_search_expander_count": 3,
+    "event_context_alignment_expander_count": 2,
+    "risk_constraint_anchor_expander_count": 1,
+    "utility_csv": "data\\training\\commercial_aerospace_decisive_event_registry_expansion_utility_v1.csv",
+    "authoritative_output": "commercial_aerospace_decisive_event_registry_expansion_utility_ready_for_direction_triage"
+  },
+  "utility_rows": [
+    {
+      "registry_id": "ca_source_001",
+      "layer": "capital_mapping",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "capital_mapping_with_real_board_implication",
+      "extracted_candidate_count": "5",
+      "utility_class": "broader_symbol_pool_expander",
+      "source_name": "东方财富财富号-盘中主要热点题材"
+    },
+    {
+      "registry_id": "ca_source_005",
+      "layer": "capital_mapping",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "capital_mapping_with_real_board_implication",
+      "extracted_candidate_count": "6",
+      "utility_class": "broader_symbol_pool_expander",
+      "source_name": "新浪财经-华菱线缆收购星鑫航天事件"
+    },
+    {
+      "registry_id": "ca_source_006",
+      "layer": "capital_mapping",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "capital_mapping_with_real_board_implication",
+      "extracted_candidate_count": "159",
+      "utility_class": "broader_symbol_pool_expander",
+      "source_name": "韭研公社-持有蓝箭航天的各个公司"
+    },
+    {
+      "registry_id": "ca_source_007",
+      "layer": "theme_heat",
+      "decisive_semantic": "turning_point_watch",
+      "decisive_reason": "decisive_turning_point_risk",
+      "extracted_candidate_count": "2",
+      "utility_class": "heat_axis_and_counterpanel_expander",
+      "source_name": "同花顺-商业航天板块集体跳水"
+    },
+    {
+      "registry_id": "ca_source_008",
+      "layer": "general_theme_context",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "general_context_but_industry_specific",
+      "extracted_candidate_count": "1",
+      "utility_class": "event_context_alignment_expander",
+      "source_name": "e公司/产业报道-*ST铖昌深耕卫星通信领域"
+    },
+    {
+      "registry_id": "ca_source_009",
+      "layer": "supply_chain_validation",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "supply_chain_validation",
+      "extracted_candidate_count": "6",
+      "utility_class": "carrier_follow_search_expander",
+      "source_name": "新浪/产业链梳理-卫星互联网核心企业概念股"
+    },
+    {
+      "registry_id": "ca_source_010",
+      "layer": "supply_chain_validation",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "supply_chain_validation",
+      "extracted_candidate_count": "2",
+      "utility_class": "carrier_follow_search_expander",
+      "source_name": "搜狐/再升科技航天材料逻辑"
+    },
+    {
+      "registry_id": "ca_source_011",
+      "layer": "supply_chain_validation",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "supply_chain_validation",
+      "extracted_candidate_count": "6",
+      "utility_class": "carrier_follow_search_expander",
+      "source_name": "新浪财经-西测测试商业航天核心赛道"
+    },
+    {
+      "registry_id": "ca_anchor_001",
+      "layer": "policy_or_industry_event",
+      "decisive_semantic": "termination_or_regulation_risk",
+      "decisive_reason": "regulatory_or_financing_constraint_anchor",
+      "extracted_candidate_count": "0",
+      "utility_class": "risk_constraint_anchor_expander",
+      "source_name": "商业航天政策/监管发布"
+    },
+    {
+      "registry_id": "ca_anchor_002",
+      "layer": "industry_progress",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "launch_or_deployment_anchor",
+      "extracted_candidate_count": "0",
+      "utility_class": "event_context_alignment_expander",
+      "source_name": "火箭发射/卫星组网进展"
+    },
+    {
+      "registry_id": "ca_anchor_003",
+      "layer": "capital_mapping",
+      "decisive_semantic": "continuation_enabler",
+      "decisive_reason": "capital_mapping_anchor",
+      "extracted_candidate_count": "0",
+      "utility_class": "broader_symbol_pool_expander",
+      "source_name": "股权/并购/融资映射变化"
+    },
+    {
+      "registry_id": "ca_anchor_004",
+      "layer": "theme_heat",
+      "decisive_semantic": "turning_point_watch",
+      "decisive_reason": "sentiment_transition_anchor",
+      "extracted_candidate_count": "0",
+      "utility_class": "heat_axis_and_counterpanel_expander",
+      "source_name": "板块情绪扩散/镜像龙头切换"
+    }
+  ],
+  "interpretation": [
+    "V1.34JO is the first real expansion audit under the broader-attention-evidence frontier.",
+    "It does not yet promote symbols. It first separates the retained 2026-aligned event registry into utility classes so that broader expansion can proceed by evidence role instead of by vague event importance."
+  ]
+}

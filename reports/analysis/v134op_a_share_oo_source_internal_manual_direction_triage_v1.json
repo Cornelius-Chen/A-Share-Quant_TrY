@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "queue_row_count": 4,
+    "ready_primary_review_count": 1,
+    "authoritative_status": "source_internal_manual_should_now_be_handled_as_manual_closure_lane_not_as_structural_build_lane"
+  },
+  "triage_rows": [
+    {
+      "component": "primary_review_step",
+      "direction": "fill_finance_sina_primary_host_family_first"
+    },
+    {
+      "component": "secondary_review_steps",
+      "direction": "prepare_stcn_and_yicai_after_primary_without_creating_new_structure"
+    },
+    {
+      "component": "sibling_host_dependency",
+      "direction": "keep_stock_finance_sina_blocked_until_primary_host_family_outcome_exists"
+    },
+    {
+      "component": "source_internal_manual_lane",
+      "direction": "treat_operator_queue_and_handoff_package_as_terminal_internal_control_surface"
+    }
+  ],
+  "interpretation": [
+    "The remaining gain on the source-side comes from closing the first manual review step, not from additional modeling work.",
+    "Once the operator queue and handoff package exist, further internal structure-building would be drift."
+  ]
+}

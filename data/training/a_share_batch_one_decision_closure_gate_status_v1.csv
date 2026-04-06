@@ -1,0 +1,5 @@
+﻿closure_component,closure_state,supporting_count,blocking_reason
+primary_host_family,manual_decision_completed,1,primary batch-one host family manual approval is complete
+independent_hosts,manual_decision_completed_after_primary,2,independent T2 host manual approvals are complete
+sibling_host_dependency,manual_decision_completed_after_primary_outcome,1,sibling Sina host manual approval is complete after the primary family outcome
+promotion_gate,closed_pending_runtime_promotion,0,manual approvals are complete but runtime promotion remains closed

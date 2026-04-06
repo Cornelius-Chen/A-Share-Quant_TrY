@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "index_candidate_cover_count": 16,
+    "limit_halt_candidate_cover_count": 14,
+    "authoritative_output": "a_share_paired_surface_extension_status_explicit"
+  },
+  "rows": [
+    {
+      "paired_surface": "index_daily",
+      "candidate_cover_count": 16,
+      "paired_surface_state": "candidate_available"
+    },
+    {
+      "paired_surface": "limit_halt",
+      "candidate_cover_count": 14,
+      "paired_surface_state": "candidate_available"
+    }
+  ],
+  "interpretation": [
+    "Paired surfaces are now separated cleanly instead of being bundled into one blocker.",
+    "Both candidate layers are now present, so the next replay-side question moves from candidate absence to promotion and derivation readiness."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "promotion_gate_state": "promotion_gate_hold",
+    "shadow_change_signal_priority": "p1",
+    "accepted_top_opportunity_theme": "consumer_staples",
+    "accepted_top_watch_symbol": "600887",
+    "plan_state": "manual_acceptance_required_before_primary_consumer_promotion",
+    "plan_step_count": 4,
+    "authoritative_output": "a_share_internal_hot_news_accepted_rotation_primary_consumer_promotion_plan_materialized",
+    "authoritative_status": "primary_consumer_promotion_requires_explicit_manual_acceptance_before_any_focus_rotation_is_applied"
+  },
+  "triage_rows": [
+    {
+      "component": "acceptance_gate",
+      "direction": "do not promote while promotion_gate_state remains hold and the p1 rotation has not been explicitly accepted"
+    },
+    {
+      "component": "promotion_sequence",
+      "direction": "promote snapshot first, then control packet, then rebaseline change signals in order"
+    },
+    {
+      "component": "discipline_boundary",
+      "direction": "keep all accepted-state artifacts in shadow form until the manual acceptance step is complete"
+    }
+  ],
+  "interpretation": [
+    "The merge problem is now reduced to a human acceptance decision followed by a bounded rollout sequence.",
+    "No silent primary-consumer mutation is needed or allowed before that decision."
+  ]
+}

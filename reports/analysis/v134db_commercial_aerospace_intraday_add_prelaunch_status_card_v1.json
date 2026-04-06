@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134db_commercial_aerospace_intraday_add_prelaunch_status_card_v1",
+    "reduce_status": "frozen_mainline",
+    "next_frontier": "intraday_add",
+    "next_frontier_state": "deferred",
+    "opening_gate_count": 9,
+    "status_card_csv": "data\\training\\commercial_aerospace_intraday_add_prelaunch_status_card_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_prelaunch_status_card_ready_for_direction_triage"
+  },
+  "status_rows": [
+    {
+      "key": "active_board",
+      "value": "commercial_aerospace"
+    },
+    {
+      "key": "current_frontier",
+      "value": "reduce"
+    },
+    {
+      "key": "current_frontier_status",
+      "value": "frozen_mainline"
+    },
+    {
+      "key": "next_frontier",
+      "value": "intraday_add"
+    },
+    {
+      "key": "next_frontier_state",
+      "value": "deferred"
+    },
+    {
+      "key": "opening_gate_count",
+      "value": 9
+    },
+    {
+      "key": "opening_posture",
+      "value": "prelaunch_only"
+    },
+    {
+      "key": "silent_opening_allowed",
+      "value": false
+    }
+  ],
+  "interpretation": [
+    "V1.34DB compresses the current board-level posture into a single prelaunch card: reduce is frozen and intraday add is named but still deferred.",
+    "The card exists to reduce ambiguity later; preparation is allowed, but silent opening is not."
+  ]
+}

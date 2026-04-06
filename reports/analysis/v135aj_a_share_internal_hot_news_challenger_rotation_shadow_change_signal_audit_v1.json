@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "top_opportunity_theme_change": "would_change",
+    "top_watch_symbol_change": "would_change",
+    "signal_priority": "p1",
+    "authoritative_output": "a_share_internal_hot_news_challenger_rotation_shadow_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "challenger_shadow_change_signal",
+      "component_state": "materialized",
+      "metric": "top_opportunity_theme_change",
+      "value": "would_change"
+    },
+    {
+      "component": "challenger_shadow_change_signal",
+      "component_state": "materialized",
+      "metric": "top_watch_symbol_change",
+      "value": "would_change"
+    },
+    {
+      "component": "challenger_shadow_change_signal",
+      "component_state": "materialized",
+      "metric": "signal_priority",
+      "value": "p1"
+    }
+  ],
+  "interpretation": [
+    "This change signal compresses the difference between the current primary control packet and the challenger shadow control packet.",
+    "It highlights whether accepting the challenger would change top opportunity or top watch, and how urgent that shadow delta is."
+  ]
+}

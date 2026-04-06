@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134kl_a_share_attention_foundation_audit_v1",
+    "attention_registry_count": 5,
+    "hard_attention_role_count": 1,
+    "soft_attention_candidate_count": 4,
+    "attention_status_csv": "data\\training\\a_share_attention_foundation_status_v1.csv",
+    "authoritative_output": "a_share_attention_foundation_ready_for_direction_triage"
+  },
+  "attention_rows": [
+    {
+      "attention_component": "attention_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\attention_registry\\a_share_attention_registry_v1.csv",
+      "coverage_note": "attention_registry_count = 5"
+    },
+    {
+      "attention_component": "hard_attention_roles",
+      "component_state": "singleton_hard_case_present",
+      "artifact_path": "data\\reference\\info_center\\attention_registry\\a_share_attention_registry_v1.csv",
+      "coverage_note": "hard_attention_role_count = 1"
+    },
+    {
+      "attention_component": "soft_attention_candidates",
+      "component_state": "materialized_backlog_driven",
+      "artifact_path": "data\\reference\\info_center\\attention_registry\\a_share_attention_backlog_v1.csv",
+      "coverage_note": "soft_attention_candidate_count = 4"
+    }
+  ],
+  "interpretation": [
+    "V1.34KL completes the first attention workstream pass by converting existing anchor/decoy and heat-proxy research into a central bootstrap attention registry.",
+    "The registry is intentionally asymmetric: one hard retained case and multiple soft candidates, with backlog status preserved instead of overpromotion."
+  ]
+}

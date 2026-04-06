@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gk_commercial_aerospace_gj_single_slot_direction_triage_v1",
+    "authoritative_status": "retain_single_slot_fallback_as_unobserved_and_keep_only_reset_slot_as_weak_local_surrogate",
+    "observed_single_slot_day_count": 0,
+    "weak_surrogate_count": 1,
+    "surrogate_slot_name": "reset_slot",
+    "authoritative_rule": "single-slot fallback remains unobserved; only a weak reset-slot surrogate may be retained under local supervision"
+  },
+  "triage_rows": [
+    {
+      "component": "observed_single_slot_fallback",
+      "status": "still_unobserved",
+      "rationale": "the current strict active-wave sample still does not contain a genuine retained single-slot day"
+    },
+    {
+      "component": "reset_slot_surrogate",
+      "status": "retain_as_weak_local_surrogate",
+      "rationale": "if a forced one-slot local reading is needed, reset-primary structure gives the reset slot the stronger provisional claim"
+    },
+    {
+      "component": "continuation_slot",
+      "status": "retain_as_companion_only",
+      "rationale": "continuation remains useful as a companion slot but is not yet the branch's local fallback template"
+    },
+    {
+      "component": "execution_single_slot_rule",
+      "status": "still_blocked",
+      "rationale": "single-slot fallback is not observed as a portable state, so execution promotion remains premature"
+    }
+  ],
+  "interpretation": [
+    "V1.34GK turns the single-slot fallback audit into the current governance verdict.",
+    "The branch should keep single-slot fallback blocked as a portable rule while allowing only a weak local reset-slot surrogate reading under explicit supervision."
+  ]
+}

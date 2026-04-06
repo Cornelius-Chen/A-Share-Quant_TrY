@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "supervisor_mode": "steady_supervision",
+    "supervision_loop_mode": "steady_supervision_loop",
+    "contract_action": "keep_steady_supervision",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_control_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_control_packet",
+      "component_state": "read_ready_internal_only",
+      "metric": "packet_row_count",
+      "value": "1"
+    },
+    {
+      "component": "supervisor_mode",
+      "component_state": "materialized",
+      "metric": "supervisor_mode",
+      "value": "steady_supervision"
+    },
+    {
+      "component": "supervision_loop_mode",
+      "component_state": "materialized",
+      "metric": "supervision_loop_mode",
+      "value": "steady_supervision_loop"
+    },
+    {
+      "component": "contract_action",
+      "component_state": "materialized",
+      "metric": "contract_action",
+      "value": "keep_steady_supervision"
+    },
+    {
+      "component": "signal_priority",
+      "component_state": "materialized",
+      "metric": "signal_priority",
+      "value": "p2"
+    }
+  ],
+  "interpretation": [
+    "This is the single-row outermost control packet above the runtime-stack supervision contract and its change signal.",
+    "An external top controller can poll this one row to learn topmost supervision state, action, cadence, and whether the stack remains steady."
+  ]
+}

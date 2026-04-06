@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134am_commercial_aerospace_local_veto_experiment_audit_v1",
+    "impacted_session_count": 2,
+    "same_day_loss_avoided_delta_total": -2651.0416,
+    "rebound_cost_saved_5d_total": 3147.0,
+    "impact_csv": "data\\training\\commercial_aerospace_local_veto_experiment_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_local_veto_experiment_audit_ready_for_direction_triage"
+  },
+  "impacted_rows": [
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "current_same_day_loss_avoided": 1194.9872,
+      "adjusted_same_day_loss_avoided": 597.4936,
+      "same_day_delta": -597.4936,
+      "current_rebound_cost_5d": 3036.0,
+      "adjusted_rebound_cost_5d": 1518.0,
+      "rebound_cost_saved_5d": 1518.0,
+      "severe_follow_on_used": false
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "current_same_day_loss_avoided": 3878.924,
+      "adjusted_same_day_loss_avoided": 1825.376,
+      "same_day_delta": -2053.548,
+      "current_rebound_cost_5d": 3077.0,
+      "adjusted_rebound_cost_5d": 1448.0,
+      "rebound_cost_saved_5d": 1629.0,
+      "severe_follow_on_used": false
+    }
+  ],
+  "compare_rows": [
+    {
+      "variant": "current_full_reversal_reference",
+      "same_day_loss_avoided_delta": 0.0,
+      "rebound_cost_saved_5d": 0.0
+    },
+    {
+      "variant": "local_veto_experiment_reversal_50pct_on_matched_cases",
+      "same_day_loss_avoided_delta": -2651.0416,
+      "rebound_cost_saved_5d": 3147.0
+    }
+  ],
+  "interpretation": [
+    "V1.34AM runs the first local veto experiment inside the current wider phase-2 reference.",
+    "It only touches the two matched rebound-cost cases and downgrades full reversal to partial reversal there, while leaving the broader surface and all other sessions unchanged."
+  ]
+}

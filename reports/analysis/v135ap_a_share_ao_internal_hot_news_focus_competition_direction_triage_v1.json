@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "current_primary_theme_slug": "oil_gas",
+    "current_primary_rank": 2,
+    "leader_theme_slug": "defense_industry",
+    "leader_watch_symbol": "600760",
+    "incumbent_is_leader": "false",
+    "challenger_count": 5,
+    "authoritative_status": "focus_competition_leaderboard_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "ranking_visibility",
+      "direction": "use the leaderboard to see whether current incumbent strength is still first, tied, or trailing without reopening challenger surfaces one by one."
+    },
+    {
+      "component": "rotation_context",
+      "direction": "combine leaderboard rank with challenger review attention so a single noisy challenger does not silently become the narrative anchor."
+    },
+    {
+      "component": "next_review_trigger",
+      "direction": "only promote a challenger when it both climbs the leaderboard and clears the separate review threshold."
+    }
+  ],
+  "interpretation": [
+    "The leaderboard adds competition context around the incumbent instead of reducing the system to a single challenger-only view.",
+    "It is useful when several themes are near each other and the top challenger alone is not enough to judge focus stability."
+  ]
+}

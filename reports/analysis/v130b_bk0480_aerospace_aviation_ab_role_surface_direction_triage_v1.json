@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130b_bk0480_aerospace_aviation_ab_role_surface_direction_triage_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "confirmation_count": 1,
+    "quarantine_count": 2,
+    "authoritative_status": "freeze_bk0480_role_surface_v2_and_move_to_control_surface_refresh_with_harmonization_guard",
+    "authoritative_rule": "bk0480_may_widen_locally_but_cannot_unlock_replay_until_the_wider_surface_is_reduced_to_a_clean_control_semantics_layer"
+  },
+  "direction_rows": [
+    {
+      "direction": "internal_owner_stack",
+      "status": "retain_000738_and_600118",
+      "reason": "BK0480 still needs the original dual-core owners to define authority/support semantics."
+    },
+    {
+      "direction": "600760_confirmation_layer",
+      "status": "admit_as_confirmation_only",
+      "reason": "600760 is the only widening step justified by strong BK0480-native evidence, but it still lacks current-v6 owner authority."
+    },
+    {
+      "direction": "002273_601989",
+      "status": "keep_quarantined",
+      "reason": "They are interesting enough to retain, but not clean enough to widen the actionable control surface."
+    },
+    {
+      "direction": "000099",
+      "status": "keep_reject_pending",
+      "reason": "It remains a negative local example rather than a usable confirmation or mirror layer."
+    },
+    {
+      "direction": "next_primary_direction",
+      "status": "refresh_control_surface_with_feed_harmonization_guard",
+      "reason": "The next lawful move is to refresh BK0480 control semantics while explicitly blocking cross-version authority leakage."
+    },
+    {
+      "direction": "replay_unlock",
+      "status": "still_blocked",
+      "reason": "A wider role surface now exists, but replay should remain blocked until the refreshed control surface is audited."
+    }
+  ],
+  "interpretation": [
+    "V1.30B freezes BK0480 role surface v2 as the correct local expansion posture.",
+    "The board can now move from local universe expansion to control-surface refresh, but replay remains explicitly blocked."
+  ]
+}

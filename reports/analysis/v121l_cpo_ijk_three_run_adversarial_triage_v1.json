@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121l_cpo_ijk_three_run_adversarial_triage_v1",
+    "related_runs": [
+      "V121I",
+      "V121J",
+      "V121K"
+    ],
+    "candidate_discriminator_name": "board_risk_off_reduce_score_candidate",
+    "discovery_mean_gap_positive_minus_negative": 1.31783,
+    "external_best_balanced_accuracy": 0.687336,
+    "time_split_mean_test_balanced_accuracy": 0.615348,
+    "time_split_min_test_balanced_accuracy": 0.525,
+    "authoritative_status": "candidate_only",
+    "replay_facing_allowed": false
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "classification": "soft_component",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "External signal is positive but not hard enough for an independent reduce law.",
+        "Time-split stability stays alive but is far from hard-candidate territory.",
+        "The line looks like a broad risk-off prior, not a clean reduce trigger."
+      ]
+    },
+    {
+      "reviewer": "Tesla",
+      "classification": "candidate_only",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "External audit is clearly positive and keeps the branch alive.",
+        "Chronology survives with mean/min balanced accuracy above the stopline.",
+        "Positive sample count remains too thin for hard-candidate status."
+      ]
+    },
+    {
+      "reviewer": "James",
+      "classification": "candidate_only",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "The branch is the first live reduce-side line beyond pure explanation.",
+        "The evidence supports continued non-replay auditing, not replay expansion.",
+        "The branch is still broad and needs narrower reduce-side discipline before any promotion."
+      ]
+    }
+  ],
+  "authoritative_conclusion": {
+    "branch_name": "board_risk_off_reduce_score_candidate",
+    "authoritative_status": "candidate_only",
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "majority_vote": {
+      "candidate_only": 2,
+      "soft_component": 1
+    },
+    "why_not_hard_candidate": [
+      "external best balanced accuracy 0.687336 is positive but not strong enough for promotion",
+      "time-split mean/min 0.615348 / 0.525 shows survival, not maturity",
+      "positive reduce row count is still only 14"
+    ],
+    "next_posture": "continue_non_replay_reduce_side_narrowing_before_any_execution_use"
+  },
+  "interpretation": [
+    "V1.21L freezes the first adversarial verdict for the formal reduce-side board risk-off branch.",
+    "The branch is alive and stronger than the earlier close-only downside line, but it still lacks the evidence needed for replay-facing use.",
+    "The correct next move is continued non-replay narrowing, not execution promotion."
+  ]
+}

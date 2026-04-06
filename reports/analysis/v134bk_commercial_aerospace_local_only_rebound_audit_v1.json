@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bk_commercial_aerospace_local_only_rebound_audit_v1",
+    "lockout_start_trade_date": "20260115",
+    "local_only_rebound_seed_count": 10,
+    "top_seed_trade_date": "20260115",
+    "top_seed_symbol": "000738",
+    "seed_csv": "data\\training\\commercial_aerospace_local_only_rebound_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_local_only_rebound_guard_ready_for_direction_triage"
+  },
+  "seed_rows": [
+    {
+      "trade_date": "20260115",
+      "top_symbol": "000738",
+      "top_symbol_forward_return_10": 0.16148216,
+      "top_positive_forward_share": 0.88781916,
+      "positive_symbol_count": 2,
+      "probe_count": 0,
+      "full_count": 0,
+      "probe_plus_full_count": 0,
+      "de_risk_count": 6,
+      "board_drawdown": -0.12695396,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260130",
+      "top_symbol": "000738",
+      "top_symbol_forward_return_10": 0.20548506,
+      "top_positive_forward_share": 0.91600085,
+      "positive_symbol_count": 2,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.20215259,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260202",
+      "top_symbol": "000738",
+      "top_symbol_forward_return_10": 0.21777967,
+      "top_positive_forward_share": 0.792266,
+      "positive_symbol_count": 3,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.20977322,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260312",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.21450802,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.24156736,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260313",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.23548307,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.26617285,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260316",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.28329759,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.27108916,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260317",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.23173378,
+      "top_positive_forward_share": 0.73012863,
+      "positive_symbol_count": 4,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.29510649,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260318",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.1830516,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 0,
+      "full_count": 0,
+      "probe_plus_full_count": 0,
+      "de_risk_count": 11,
+      "board_drawdown": -0.26475694,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260319",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.22350885,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.2712944,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    },
+    {
+      "trade_date": "20260320",
+      "top_symbol": "300342",
+      "top_symbol_forward_return_10": 0.222559,
+      "top_positive_forward_share": 1.0,
+      "positive_symbol_count": 1,
+      "probe_count": 1,
+      "full_count": 0,
+      "probe_plus_full_count": 1,
+      "de_risk_count": 0,
+      "board_drawdown": -0.2928626,
+      "local_only_rebound_label": "local_only_rebound_watch",
+      "guidance": "treat_as_local_strength_inside_locked_board_not_board_revival"
+    }
+  ],
+  "threshold_rows": [
+    {
+      "rule_name": "local_only_rebound_watch_seed",
+      "top_symbol_forward_return_10_min": 0.15,
+      "top_positive_forward_share_min": 0.45,
+      "probe_plus_full_count_max": 3,
+      "full_count_max": 1,
+      "board_drawdown_max": -0.08,
+      "guard": "keep_board_lockout_if_breadth_fails_even_when_single_names_rebound"
+    }
+  ],
+  "interpretation": [
+    "V1.34BK isolates dates when one or a few symbols rebound sharply while the board itself still lacks unlock-quality breadth.",
+    "These are exactly the days that can fool discretionary and quantitative systems into mistaking local strength for board revival."
+  ]
+}

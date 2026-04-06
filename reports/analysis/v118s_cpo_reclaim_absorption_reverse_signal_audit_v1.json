@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118s_cpo_reclaim_absorption_reverse_signal_audit_v1",
+    "source_branch": "reclaim_absorption_score_candidate",
+    "reverse_signal_status": "not_stable_reverse_signal",
+    "negative_mean_reverse_score": -1589124272.727273,
+    "positive_mean_reverse_score": -1361934400.0,
+    "reverse_gap_negative_minus_positive": -227189872.727273,
+    "best_balanced_accuracy": 0.609091,
+    "mean_test_balanced_accuracy": 0.375,
+    "min_test_balanced_accuracy": 0.25,
+    "recommended_next_posture": "do_not_rescue_reclaim_absorption_as_reverse_signal"
+  },
+  "threshold_rows": [
+    {
+      "threshold": -205301000.0,
+      "negative_recall": 0.090909,
+      "positive_reject_rate": 1.0,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -455326000.0,
+      "negative_recall": 0.090909,
+      "positive_reject_rate": 0.8,
+      "balanced_accuracy": 0.445455
+    },
+    {
+      "threshold": -953082000.0,
+      "negative_recall": 0.090909,
+      "positive_reject_rate": 0.6,
+      "balanced_accuracy": 0.345455
+    },
+    {
+      "threshold": -1286753000.0,
+      "negative_recall": 0.181818,
+      "positive_reject_rate": 0.6,
+      "balanced_accuracy": 0.390909
+    },
+    {
+      "threshold": -1330938000.0,
+      "negative_recall": 0.181818,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.290909
+    },
+    {
+      "threshold": -1409120000.0,
+      "negative_recall": 0.272727,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.336364
+    },
+    {
+      "threshold": -1565300000.0,
+      "negative_recall": 0.363636,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.381818
+    },
+    {
+      "threshold": -1697060000.0,
+      "negative_recall": 0.454545,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.427273
+    },
+    {
+      "threshold": -1726948000.0,
+      "negative_recall": 0.545455,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.472727
+    },
+    {
+      "threshold": -1746239000.0,
+      "negative_recall": 0.636364,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": -1860846000.0,
+      "negative_recall": 0.727273,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": -1904195000.0,
+      "negative_recall": 0.818182,
+      "positive_reject_rate": 0.4,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": -1973780000.0,
+      "negative_recall": 0.818182,
+      "positive_reject_rate": 0.2,
+      "balanced_accuracy": 0.509091
+    },
+    {
+      "threshold": -2021132000.0,
+      "negative_recall": 0.909091,
+      "positive_reject_rate": 0.2,
+      "balanced_accuracy": 0.554545
+    },
+    {
+      "threshold": -2057473000.0,
+      "negative_recall": 1.0,
+      "positive_reject_rate": 0.2,
+      "balanced_accuracy": 0.6
+    },
+    {
+      "threshold": -2096546000.0,
+      "negative_recall": 1.0,
+      "positive_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_best_threshold": -1746239000.0,
+      "train_best_balanced_accuracy": 0.65,
+      "test_balanced_accuracy": 0.25,
+      "test_negative_recall": 0.5,
+      "test_positive_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_best_threshold": -205301000.0,
+      "train_best_balanced_accuracy": 0.55,
+      "test_balanced_accuracy": 0.5,
+      "test_negative_recall": 0.0,
+      "test_positive_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_best_threshold": -1904195000.0,
+      "train_best_balanced_accuracy": 0.678571,
+      "test_balanced_accuracy": 0.375,
+      "test_negative_recall": 0.75,
+      "test_positive_reject_rate": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.18S checks the user's reverse-indicator hypothesis directly: if the forward branch is wrong, is it at least stable when inverted?",
+    "The audit inverts the reclaim-absorption score and tests whether negative add rows are ranked above positive ones, then applies the same crude year-split discipline.",
+    "A reverse branch only deserves rescue if it is both directionally correct and chronology-stable; otherwise it should die cleanly."
+  ]
+}

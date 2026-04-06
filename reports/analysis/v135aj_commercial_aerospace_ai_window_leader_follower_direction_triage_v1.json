@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "full_window_hold_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_008",
+      "final_training_admission": "subwindow_ready_but_full_window_not_ready",
+      "recommendation": "keep_subwindow_learning_only_and_use_february_failure_as_non-promotion_evidence"
+    }
+  ]
+}

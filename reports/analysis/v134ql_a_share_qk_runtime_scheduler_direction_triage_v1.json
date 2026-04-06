@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "precondition_count": 5,
+    "unsatisfied_count": 1,
+    "authoritative_status": "runtime_scheduler_followthrough_should_focus_on_a_single_stub_activation_gate"
+  },
+  "triage_rows": [
+    {
+      "component": "candidate_selection",
+      "direction": "keep_only_network_html_article_fetch_inside_the_first_runtime_followthrough_lane"
+    },
+    {
+      "component": "scheduler_gate",
+      "direction": "treat_scheduler_stub_not_activated_as_the_only_remaining_source-side runtime blocker"
+    },
+    {
+      "component": "excluded_adapters",
+      "direction": "keep_social_and_reserved_official_adapters_outside_this_followthrough_lane"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime followthrough now has a single remaining operational blocker: scheduler activation for html-article fetch.",
+    "This should stay a controlled lane rather than a broad runtime opening."
+  ]
+}

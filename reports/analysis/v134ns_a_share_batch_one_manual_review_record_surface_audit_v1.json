@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "record_row_count": 4,
+    "pending_record_count": 0,
+    "completed_record_count": 4,
+    "status_csv": "data\\training\\a_share_batch_one_manual_review_record_surface_status_v1.csv",
+    "authoritative_output": "a_share_batch_one_manual_review_record_surface_preserved_after_manual_completion"
+  },
+  "record_rows": [
+    {
+      "decision_unit_id": "allowlist_review_finance_sina_com_cn",
+      "host": "finance.sina.com.cn",
+      "review_priority_order": "1",
+      "review_started_ts": "2026-04-05 12:00:00",
+      "review_completed_ts": "2026-04-05 12:05:00",
+      "review_operator": "user",
+      "license_terms_checked": "checked",
+      "robots_policy_checked": "checked",
+      "commercial_use_risk_checked": "accepted_risk",
+      "fetch_scope_restriction_checked": "checked",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "review_notes": "manual approval from user on 2026-04-05",
+      "record_state": "manual_review_completed"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stcn_com",
+      "host": "stcn.com",
+      "review_priority_order": "2",
+      "review_started_ts": "2026-04-05 12:05:00",
+      "review_completed_ts": "2026-04-05 12:10:00",
+      "review_operator": "user",
+      "license_terms_checked": "checked",
+      "robots_policy_checked": "checked",
+      "commercial_use_risk_checked": "accepted_risk",
+      "fetch_scope_restriction_checked": "checked",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "review_notes": "manual approval from user on 2026-04-05",
+      "record_state": "manual_review_completed"
+    },
+    {
+      "decision_unit_id": "allowlist_review_www_yicai_com",
+      "host": "www.yicai.com",
+      "review_priority_order": "2",
+      "review_started_ts": "2026-04-05 12:10:00",
+      "review_completed_ts": "2026-04-05 12:15:00",
+      "review_operator": "user",
+      "license_terms_checked": "checked",
+      "robots_policy_checked": "checked",
+      "commercial_use_risk_checked": "accepted_risk",
+      "fetch_scope_restriction_checked": "checked",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "review_notes": "manual approval from user on 2026-04-05",
+      "record_state": "manual_review_completed"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stock_finance_sina_com_cn",
+      "host": "stock.finance.sina.com.cn",
+      "review_priority_order": "3",
+      "review_started_ts": "2026-04-05 12:15:00",
+      "review_completed_ts": "2026-04-05 12:20:00",
+      "review_operator": "user",
+      "license_terms_checked": "checked",
+      "robots_policy_checked": "checked",
+      "commercial_use_risk_checked": "accepted_risk",
+      "fetch_scope_restriction_checked": "checked",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "review_notes": "manual approval from user on 2026-04-05",
+      "record_state": "manual_review_completed"
+    }
+  ],
+  "interpretation": [
+    "Batch-one manual review keeps a fixed record format instead of relying on free-form notes.",
+    "Existing operator-filled records are preserved across reruns instead of being overwritten back to pending."
+  ]
+}

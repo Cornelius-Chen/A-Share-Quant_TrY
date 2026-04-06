@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122k_cpo_hij_1min_proxy_label_triage_v1",
+    "supportive_continuation_status": "candidate_family_only",
+    "reviewer_consensus": "unanimous",
+    "main_issue": "supportive_family_enriched_for_both_add_and_reduce_probes",
+    "forbidden_next_step": "new_1min_family_discovery_or_replay_promotion",
+    "recommended_next_posture": "run_supportive_family_add_vs_reduce_separation_audit"
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "supportive_continuation_status": "candidate_family_only",
+      "main_issue": "add_reduce_not_separated",
+      "recommended_next_step": "add_probe_vs_reduce_probe_separation_audit"
+    },
+    {
+      "reviewer": "Tesla",
+      "supportive_continuation_status": "candidate_family_only",
+      "main_issue": "active_management_family_not_clean_add_family",
+      "recommended_next_step": "add_probe_vs_reduce_probe_separation_audit"
+    },
+    {
+      "reviewer": "James",
+      "supportive_continuation_status": "candidate_family_only",
+      "main_issue": "add_enrichment_and_reduce_enrichment_coexist",
+      "recommended_next_step": "add_probe_vs_reduce_probe_separation_audit"
+    }
+  ],
+  "interpretation": [
+    "All three reviewers agree the supportive continuation family survives the proxy label plane but only as candidate_family_only.",
+    "The family is no longer unlabeled geometry, but it still mixes add and reduce semantics too much to be a clean candidate.",
+    "The next correct step is add-vs-reduce separation, not more family discovery and not replay."
+  ]
+}

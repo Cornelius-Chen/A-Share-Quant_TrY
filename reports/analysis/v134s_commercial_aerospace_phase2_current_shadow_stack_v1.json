@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134s_commercial_aerospace_phase2_current_shadow_stack_v1",
+    "current_phase2_wider_reference": "broader_hit_mild_blocked",
+    "current_phase2_narrow_reference": "canonical_seed_simulator",
+    "phase2_best_same_day_loss_avoided_total": 25934.8882,
+    "phase2_best_simulated_order_count": 30,
+    "stack_csv": "data\\training\\commercial_aerospace_phase2_current_shadow_stack_v1.csv",
+    "authoritative_output": "commercial_aerospace_phase2_current_shadow_stack_ready_for_direction_triage"
+  },
+  "stack_rows": [
+    {
+      "variant": "canonical_seed_simulator",
+      "scope": "6 canonical sessions",
+      "same_day_loss_avoided_total": 3732.6954,
+      "simulated_order_count": 8,
+      "status": "retained_narrow_reference"
+    },
+    {
+      "variant": "broader_hit_base",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 20525.3818,
+      "simulated_order_count": 35,
+      "status": "superseded_by_mild_block_refinement"
+    },
+    {
+      "variant": "broader_hit_mild_blocked",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 25934.8882,
+      "simulated_order_count": 30,
+      "status": "current_phase2_wider_reference"
+    }
+  ],
+  "interpretation": [
+    "V1.34S freezes the current phase-2 shadow stack after the broader-hit mild-boundary refinement.",
+    "The purpose is to stop drift: the branch should now treat the mild-blocked broader-hit lane as the current wider reference and stop comparing against already-superseded wider variants."
+  ]
+}

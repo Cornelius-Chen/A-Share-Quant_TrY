@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131u_commercial_aerospace_local_5min_override_coverage_audit_v1",
+    "buy_execution_row_count": 55,
+    "true_positive_seed_hits": 4,
+    "non_override_flagged_count": 2,
+    "ambiguous_hit_count": 2,
+    "ambiguous_total": 19,
+    "ambiguous_hit_rate": 0.10526316,
+    "clean_control_hit_count": 0,
+    "clean_control_total": 30,
+    "clean_control_hit_rate": 0.0,
+    "authoritative_rule": "the local 5min prototype remains valuable only if it behaves like a severe-case supervision layer and keeps ordinary clean buys untouched"
+  },
+  "label_breakdown_rows": [
+    {
+      "supervision_label": "ambiguous_non_override",
+      "row_count": 19,
+      "prototype_hit_count": 2,
+      "prototype_hit_rate": 0.10526316,
+      "mean_ret15": -0.004161,
+      "mean_ret60": -0.01379064,
+      "mean_close_loc60": 0.27142689
+    },
+    {
+      "supervision_label": "clean_control",
+      "row_count": 30,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0,
+      "mean_ret15": 0.00758187,
+      "mean_ret60": 0.01316613,
+      "mean_close_loc60": 0.54839113
+    },
+    {
+      "supervision_label": "mismatch_watch",
+      "row_count": 2,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0,
+      "mean_ret15": 0.0098359,
+      "mean_ret60": 0.00351563,
+      "mean_close_loc60": 0.49626494
+    },
+    {
+      "supervision_label": "override_positive",
+      "row_count": 2,
+      "prototype_hit_count": 2,
+      "prototype_hit_rate": 1.0,
+      "mean_ret15": -0.0466017,
+      "mean_ret60": -0.07443503,
+      "mean_close_loc60": 0.005
+    },
+    {
+      "supervision_label": "reversal_watch",
+      "row_count": 2,
+      "prototype_hit_count": 2,
+      "prototype_hit_rate": 1.0,
+      "mean_ret15": -0.03403548,
+      "mean_ret60": -0.05955273,
+      "mean_close_loc60": 0.0985312
+    }
+  ],
+  "semantic_breakdown_rows": [
+    {
+      "phase_window_semantic": "impulse_window",
+      "signal_label_pg": "de_risk_target",
+      "action": "add",
+      "row_count": 2,
+      "prototype_hit_count": 2,
+      "prototype_hit_rate": 1.0
+    },
+    {
+      "phase_window_semantic": "impulse_window",
+      "signal_label_pg": "neutral_hold",
+      "action": "add",
+      "row_count": 1,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "impulse_window",
+      "signal_label_pg": "probe_eligibility_target",
+      "action": "add",
+      "row_count": 1,
+      "prototype_hit_count": 1,
+      "prototype_hit_rate": 1.0
+    },
+    {
+      "phase_window_semantic": "impulse_window",
+      "signal_label_pg": "probe_eligibility_target",
+      "action": "open",
+      "row_count": 2,
+      "prototype_hit_count": 1,
+      "prototype_hit_rate": 0.5
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "de_risk_target",
+      "action": "add",
+      "row_count": 1,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "de_risk_target",
+      "action": "open",
+      "row_count": 1,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "full_eligibility_target",
+      "action": "add",
+      "row_count": 3,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "full_eligibility_target",
+      "action": "open",
+      "row_count": 2,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "neutral_hold",
+      "action": "add",
+      "row_count": 17,
+      "prototype_hit_count": 2,
+      "prototype_hit_rate": 0.11764706
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "neutral_hold",
+      "action": "open",
+      "row_count": 20,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "probe_eligibility_target",
+      "action": "add",
+      "row_count": 4,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    },
+    {
+      "phase_window_semantic": "preheat_window",
+      "signal_label_pg": "probe_eligibility_target",
+      "action": "open",
+      "row_count": 1,
+      "prototype_hit_count": 0,
+      "prototype_hit_rate": 0.0
+    }
+  ],
+  "flagged_non_override_rows": [
+    {
+      "signal_trade_date": "20251117",
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "action": "add",
+      "signal_label_pg": "neutral_hold",
+      "phase_window_semantic": "preheat_window",
+      "supervision_label": "ambiguous_non_override",
+      "ret15": -0.03992806,
+      "ret60": -0.05071942,
+      "draw60": -0.0528777,
+      "close_loc60": 0.03947368
+    },
+    {
+      "signal_trade_date": "20251216",
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "action": "add",
+      "signal_label_pg": "neutral_hold",
+      "phase_window_semantic": "preheat_window",
+      "supervision_label": "ambiguous_non_override",
+      "ret15": -0.00829726,
+      "ret60": -0.0494228,
+      "draw60": -0.0515873,
+      "close_loc60": 0.02884615
+    }
+  ],
+  "interpretation": [
+    "V1.31U expands V1.31S from raw retained-case hits into a full-buy-execution coverage and false-positive audit.",
+    "The key governance question is not only whether the prototype catches severe cases, but whether its non-override hits remain concentrated in ambiguous edge cases rather than ordinary clean controls."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122m_cpo_1min_supportive_add_vs_reduce_time_split_audit_v1",
+    "split_count": 8,
+    "mean_test_balanced_accuracy": 0.49219842,
+    "min_test_balanced_accuracy": 0.47983149,
+    "recommended_next_posture": "triage_supportive_add_vs_reduce_separation_score"
+  },
+  "split_rows": [
+    {
+      "train_end_date": "2026-03-24",
+      "test_start_date": "2026-03-25",
+      "test_row_count": 790,
+      "threshold": 0.5248843,
+      "balanced_accuracy": 0.49612973
+    },
+    {
+      "train_end_date": "2026-03-25",
+      "test_start_date": "2026-03-26",
+      "test_row_count": 694,
+      "threshold": 0.46660155,
+      "balanced_accuracy": 0.50400701
+    },
+    {
+      "train_end_date": "2026-03-26",
+      "test_start_date": "2026-03-27",
+      "test_row_count": 589,
+      "threshold": 0.4215103,
+      "balanced_accuracy": 0.48684118
+    },
+    {
+      "train_end_date": "2026-03-27",
+      "test_start_date": "2026-03-30",
+      "test_row_count": 481,
+      "threshold": 0.39208811,
+      "balanced_accuracy": 0.47983149
+    },
+    {
+      "train_end_date": "2026-03-30",
+      "test_start_date": "2026-03-31",
+      "test_row_count": 391,
+      "threshold": 0.37292854,
+      "balanced_accuracy": 0.48340139
+    },
+    {
+      "train_end_date": "2026-03-31",
+      "test_start_date": "2026-04-01",
+      "test_row_count": 295,
+      "threshold": 0.34454479,
+      "balanced_accuracy": 0.49026545
+    },
+    {
+      "train_end_date": "2026-04-01",
+      "test_start_date": "2026-04-02",
+      "test_row_count": 189,
+      "threshold": 0.33797056,
+      "balanced_accuracy": 0.4965333
+    },
+    {
+      "train_end_date": "2026-04-02",
+      "test_start_date": "2026-04-03",
+      "test_row_count": 103,
+      "threshold": 0.33888357,
+      "balanced_accuracy": 0.50057781
+    }
+  ],
+  "interpretation": [
+    "V1.22M tests whether the supportive-family add-vs-reduce separation score survives date split.",
+    "This is the minimum chronology audit needed before deciding whether the supportive family is moving toward a real add rule.",
+    "The next step is triage, not replay."
+  ]
+}

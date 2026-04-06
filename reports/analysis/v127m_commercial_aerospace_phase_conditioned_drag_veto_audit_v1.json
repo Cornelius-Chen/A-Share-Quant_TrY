@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127m_commercial_aerospace_phase_conditioned_drag_veto_audit_v1",
+    "reference_variant": "broad_half_reference",
+    "reference_final_equity": 1261238.592,
+    "reference_max_drawdown": 0.12870312,
+    "drag_symbols_ranked": [
+      "688066",
+      "002085",
+      "688523"
+    ],
+    "best_variant": "veto_drag_trio_impulse_only",
+    "best_variant_final_equity": 1276010.378,
+    "best_variant_max_drawdown": 0.11536441
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "final_equity": 1261238.592,
+      "max_drawdown": 0.12870312,
+      "executed_order_count": 251
+    },
+    {
+      "variant": "veto_drag_trio_preheat_only",
+      "final_equity": 1211419.2814,
+      "max_drawdown": 0.1697065,
+      "executed_order_count": 223
+    },
+    {
+      "variant": "veto_drag_trio_impulse_only",
+      "final_equity": 1276010.378,
+      "max_drawdown": 0.11536441,
+      "executed_order_count": 241
+    },
+    {
+      "variant": "veto_688066_global_others_preheat",
+      "final_equity": 1189854.1528,
+      "max_drawdown": 0.17734738,
+      "executed_order_count": 214
+    },
+    {
+      "variant": "veto_688066_global_others_impulse",
+      "final_equity": 1237431.2752,
+      "max_drawdown": 0.15265084,
+      "executed_order_count": 227
+    }
+  ],
+  "interpretation": [
+    "V1.27M tests whether the chronic-drag symbols should be blocked only in specific entry phases instead of globally.",
+    "This branch keeps the v127e broad-half control family intact and only changes where chronic drag symbols are allowed to enter."
+  ]
+}

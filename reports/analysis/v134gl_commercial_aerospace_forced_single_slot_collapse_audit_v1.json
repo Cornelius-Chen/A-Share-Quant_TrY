@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gl_commercial_aerospace_forced_single_slot_collapse_audit_v1",
+    "dual_slot_reference_trade_date": "20251219",
+    "preferred_surrogate_slot": "reset_slot",
+    "preferred_surrogate_symbol": "002085",
+    "reset_higher_metric_count": 3,
+    "continuation_higher_metric_count": 1,
+    "reset_to_continuation_weight_ratio": 2.04828842,
+    "weak_surrogate_count": 1,
+    "authoritative_rule": "if the lone observed dual-slot day is forcibly collapsed into one slot, the reset slot has the stronger local claim; this remains a forced-collapse surrogate, not an observed single-slot template"
+  },
+  "collapse_rows": [
+    {
+      "collapse_state": "forced_one_slot_local_reading",
+      "status": "prefer_reset_slot_surrogate",
+      "trade_date": "20251219",
+      "preferred_slot": "reset_slot",
+      "preferred_symbol": "002085",
+      "supporting_reading": "metric_edge=3:1|weight_ratio=2.04828842"
+    },
+    {
+      "collapse_state": "continuation_slot_counterfactual",
+      "status": "retain_only_as_companion",
+      "trade_date": "20251219",
+      "preferred_slot": "continuation_slot",
+      "preferred_symbol": "000738",
+      "supporting_reading": "open_to_15m_edge=0.02739726|secondary_weight=0.033507"
+    }
+  ],
+  "interpretation": [
+    "V1.34GL asks the smallest possible follow-up after single-slot fallback remains unobserved: on the lone dual-slot day, which slot survives a forced collapse into one slot?",
+    "The answer stays narrow. Reset survives the forced collapse because it combines the larger local allocation weight with stronger close-location and hour-end continuation, while continuation keeps only an early-impulse companion edge."
+  ]
+}

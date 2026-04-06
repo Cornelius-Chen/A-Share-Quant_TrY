@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "replay_component_count": 6,
+    "stub_only_count": 1,
+    "promotable_subset_count": 1,
+    "true_source_gap_count": 0,
+    "status_csv": "data\\training\\a_share_replay_promotion_latest_status_card_v1.csv",
+    "authoritative_output": "a_share_replay_promotion_latest_status_card_materialized"
+  },
+  "rows": [
+    {
+      "replay_component": "shadow_execution_journal",
+      "status_class": "stub_only",
+      "decisive_metric": "execution_journal_stub_count = 17",
+      "next_closure_mode": "replace_stub_only_after_market_context_closes"
+    },
+    {
+      "replay_component": "market_coverage",
+      "status_class": "external_boundary_residuals_only_under_shadow_overlay",
+      "decisive_metric": "base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2",
+      "next_closure_mode": "retain_shadow_overlay_for_internal_rechecks_and_treat_remaining_rows_as_external_boundary_residuals"
+    },
+    {
+      "replay_component": "daily_market_promotion",
+      "status_class": "promotable_subset_materialized",
+      "decisive_metric": "promotable_now_count = 14",
+      "next_closure_mode": "recheck_replay_internal_build_preconditions_from_the_controlled_promotable_subset"
+    },
+    {
+      "replay_component": "paired_surfaces",
+      "status_class": "semantic_pair_layer_materialized",
+      "decisive_metric": "index_candidate_cover_count = 16; limit_halt_materialized_count = 14",
+      "next_closure_mode": "use_semantic_pair_layer_for_replay_internal_build_recheck"
+    },
+    {
+      "replay_component": "index_daily_source_horizon",
+      "status_class": "source_gap_closed",
+      "decisive_metric": "beyond_2024_source_count = 1",
+      "next_closure_mode": "retire_source_gap_and_reopen_downstream_reaudit"
+    },
+    {
+      "replay_component": "shadow_corrected_recheck",
+      "status_class": "shadow_overlay_materialized",
+      "decisive_metric": "corrected_via_effective_trade_date_count = 1",
+      "next_closure_mode": "retain_as_shadow_only_overlay_without_replacing_base_binding"
+    }
+  ],
+  "interpretation": [
+    "Replay promotion is no longer blocked by vague incompleteness; its current blockers are explicit and layered.",
+    "Index-daily raw-source absence has been closed, and semantic pair-layer materialization has reopened replay promotion with a controlled promotable subset.",
+    "Replay should now be steered as boundary-residual handling plus internal-build precondition recheck, not as open-ended replay design.",
+    "The only internally fixable calendar residual has already been removed inside a shadow-only corrected binding overlay."
+  ]
+}

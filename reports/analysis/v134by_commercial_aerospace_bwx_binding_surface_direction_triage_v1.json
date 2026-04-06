@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134by_commercial_aerospace_bwx_binding_surface_direction_triage_v1",
+    "authoritative_status": "freeze_binding_surface_spec_and_build_ledger_plus_precedence_before_isolated_lane",
+    "must_build_component_count": 5,
+    "collision_session_count": 8,
+    "triage_csv": "data\\training\\commercial_aerospace_bwx_binding_surface_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "start_of_day_holdings_ledger",
+      "status": "approved_for_build",
+      "detail": "Build a carried-inventory ledger first; the current wider sell shadow cannot bind without it."
+    },
+    {
+      "component": "same_day_precedence_policy",
+      "status": "approved_for_build",
+      "detail": "Build explicit precedence for open/add protection and EOD reduce/close reconciliation before opening an isolated sell-side lane."
+    },
+    {
+      "component": "isolated_sell_side_shadow_lane",
+      "status": "blocked_until_surface_exists",
+      "detail": "Do not open the isolated lane before the ledger and precedence policy exist as concrete surfaces."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "Keep the next step sell-side only and continue excluding reentry execution and full replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34BY converts the holdings-ledger and precedence audits into the next binding direction.",
+    "The branch should build the ledger and precedence surfaces first, then revisit whether an isolated sell-side shadow lane is safe to open."
+  ]
+}

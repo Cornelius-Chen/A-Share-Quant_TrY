@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118b_cpo_add_vs_entry_discriminator_discovery_v1",
+    "candidate_name": "add_vs_strong_entry_separation_score_candidate",
+    "positive_add_row_count": 5,
+    "leaked_entry_row_count": 4,
+    "mean_gap_positive_add_minus_leaked_entry": 880530550.0,
+    "top_separation_feature": "f30_breakout_efficiency_rz",
+    "recommended_next_posture": "audit_candidate_on_full_add_vs_all_entry_pool_and_keep_candidate_only"
+  },
+  "feature_rows": [
+    {
+      "feature_name": "f30_breakout_efficiency_rz",
+      "positive_add_mean": 475408600.0,
+      "leaked_entry_mean": 114932250.0,
+      "mean_gap_add_minus_entry": 360476350.0,
+      "abs_gap": 360476350.0
+    },
+    {
+      "feature_name": "f60_breakout_efficiency_rz",
+      "positive_add_mean": 475408600.0,
+      "leaked_entry_mean": 114932250.0,
+      "mean_gap_add_minus_entry": 360476350.0,
+      "abs_gap": 360476350.0
+    },
+    {
+      "feature_name": "f30_high_time_ratio_rz",
+      "positive_add_mean": 700000000.0,
+      "leaked_entry_mean": 593750000.0,
+      "mean_gap_add_minus_entry": 106250000.0,
+      "abs_gap": 106250000.0
+    },
+    {
+      "feature_name": "d5_30_close_vs_vwap_rz",
+      "positive_add_mean": -22803600.0,
+      "leaked_entry_mean": 4676500.0,
+      "mean_gap_add_minus_entry": -27480100.0,
+      "abs_gap": 27480100.0
+    },
+    {
+      "feature_name": "d15_60_close_vs_vwap_rz",
+      "positive_add_mean": -21003400.0,
+      "leaked_entry_mean": -723250.0,
+      "mean_gap_add_minus_entry": -20280150.0,
+      "abs_gap": 20280150.0
+    },
+    {
+      "feature_name": "f60_last_bar_return_rz",
+      "positive_add_mean": 62400.0,
+      "leaked_entry_mean": 5630000.0,
+      "mean_gap_add_minus_entry": -5567600.0,
+      "abs_gap": 5567600.0
+    }
+  ],
+  "candidate_rows": [
+    {
+      "label_family": "positive_add",
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "score": 2957674000.0,
+      "expectancy_proxy_3d": 0.34476
+    },
+    {
+      "label_family": "positive_add",
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "score": 2685442000.0,
+      "expectancy_proxy_3d": 0.419088
+    },
+    {
+      "label_family": "positive_add",
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "score": 1650434000.0,
+      "expectancy_proxy_3d": 0.296191
+    },
+    {
+      "label_family": "positive_add",
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "score": 1621220000.0,
+      "expectancy_proxy_3d": 0.258901
+    },
+    {
+      "label_family": "positive_add",
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "score": -441961000.0,
+      "expectancy_proxy_3d": 0.198983
+    },
+    {
+      "label_family": "leaked_entry",
+      "signal_trade_date": "2023-04-28",
+      "symbol": "300502",
+      "score": 2149964000.0,
+      "expectancy_proxy_3d": -0.210379
+    },
+    {
+      "label_family": "leaked_entry",
+      "signal_trade_date": "2024-04-18",
+      "symbol": "300757",
+      "score": 1363641000.0,
+      "expectancy_proxy_3d": -0.132278
+    },
+    {
+      "label_family": "leaked_entry",
+      "signal_trade_date": "2023-06-07",
+      "symbol": "300308",
+      "score": 969992000.0,
+      "expectancy_proxy_3d": 0.196418
+    },
+    {
+      "label_family": "leaked_entry",
+      "signal_trade_date": "2025-09-08",
+      "symbol": "688498",
+      "score": -1227472000.0,
+      "expectancy_proxy_3d": 0.315625
+    }
+  ],
+  "interpretation": [
+    "V1.18B does not search for another generic false-positive filter. It targets the now-authoritative problem directly: separating true add windows from strong entry windows that look add-like.",
+    "The score intentionally rewards stronger breakout efficiency and persistent intraday occupancy while punishing overly warm prior anchors and late-bar chase behavior.",
+    "This is still discovery only. It becomes real only if it survives a full add-vs-all-entry external audit next."
+  ]
+}

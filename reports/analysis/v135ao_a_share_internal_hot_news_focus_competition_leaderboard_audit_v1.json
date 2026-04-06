@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "leaderboard_row_count": 6,
+    "current_primary_theme_slug": "defense_industry",
+    "current_primary_watch_symbol": "600760",
+    "current_primary_support_row_count": 5,
+    "current_primary_focus_total_score": 2.7476,
+    "current_primary_rank": 1,
+    "leader_theme_slug": "defense_industry",
+    "leader_watch_symbol": "600760",
+    "leader_support_row_count": 5,
+    "leader_focus_total_score": 2.7476,
+    "incumbent_is_leader": "true",
+    "challenger_count": 5,
+    "authoritative_output": "a_share_internal_hot_news_focus_competition_leaderboard_materialized"
+  },
+  "rows": [
+    {
+      "component": "focus_leaderboard",
+      "component_state": "materialized",
+      "metric": "leaderboard_row_count",
+      "value": "6"
+    },
+    {
+      "component": "current_primary",
+      "component_state": "materialized",
+      "metric": "current_primary_rank",
+      "value": "1"
+    },
+    {
+      "component": "current_primary",
+      "component_state": "materialized",
+      "metric": "incumbent_is_leader",
+      "value": "true"
+    },
+    {
+      "component": "leader_focus",
+      "component_state": "materialized",
+      "metric": "leader_theme_slug",
+      "value": "defense_industry"
+    },
+    {
+      "component": "leader_focus",
+      "component_state": "materialized",
+      "metric": "leader_support_row_count",
+      "value": "5"
+    },
+    {
+      "component": "leader_focus",
+      "component_state": "materialized",
+      "metric": "leader_focus_total_score",
+      "value": "2.7476"
+    }
+  ],
+  "interpretation": [
+    "This leaderboard now ranks the current incumbent beside all challengers by focus score, not just raw support depth.",
+    "Focus score blends source authority, policy wording, cycle persistence, second-wave retrigger potential, crowding exhaustion, and tradability.",
+    "It makes it explicit whether the incumbent still leads the field or is now merely being held despite trailing scored focus quality."
+  ]
+}

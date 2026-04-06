@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132s_commercial_aerospace_intraday_override_action_ladder_v1",
+    "authoritative_status": "retain_intraday_override_action_ladder_as_governed_state_translation",
+    "governance_posture_source": "retain_local_1min_rules_as_shadow_benefit_aligned_window_governance",
+    "tier_count": 3,
+    "authoritative_rule": "the commercial-aerospace minute branch should now be read as an action ladder for governance translation, not just as a registry of bad cases"
+  },
+  "action_rows": [
+    {
+      "minute_tier_label": "severe_override_positive",
+      "seed_count": 2,
+      "governance_action": "emergency_exit_shadow_override",
+      "execution_posture": "supervision_only_not_replay_facing",
+      "rationale": "severe hits represent the clearest intraday collapse path and should become the first future emergency-exit supervision objects"
+    },
+    {
+      "minute_tier_label": "reversal_watch",
+      "seed_count": 2,
+      "governance_action": "panic_derisk_watch",
+      "execution_posture": "supervision_only_not_replay_facing",
+      "rationale": "reversal hits are not full collapse exits but do justify an explicit panic de-risk watch state"
+    },
+    {
+      "minute_tier_label": "mild_override_watch",
+      "seed_count": 2,
+      "governance_action": "do_not_readd_watch",
+      "execution_posture": "supervision_only_not_replay_facing",
+      "rationale": "mild hits mostly act as downgrade governance, especially against impulsive re-add behavior after weak first-hour structure"
+    }
+  ],
+  "interpretation": [
+    "V1.32S translates the frozen commercial-aerospace minute tiers into explicit governance actions.",
+    "This is still not replay execution logic; it is the state-translation layer that future lawful intraday work should inherit."
+  ]
+}

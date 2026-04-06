@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "status_row_count": 1,
+    "program_health_state": "healthy_internal_only",
+    "global_program_action_mode": "dual_focus_risk_and_opportunity",
+    "change_signal_priority": "p2",
+    "needs_attention": "false",
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "session_phase_confidence": "exact_with_trade_calendar",
+    "freshness_state": "fresh",
+    "heartbeat_timeout_state": "within_timeout",
+    "stale_alert_level": "none",
+    "force_refresh": "false",
+    "authoritative_output": "a_share_internal_hot_news_program_status_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "program_status_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "status_row_count",
+      "value": "1"
+    },
+    {
+      "component": "program_health",
+      "component_state": "materialized",
+      "metric": "program_health_state",
+      "value": "healthy_internal_only"
+    },
+    {
+      "component": "global_action_mode",
+      "component_state": "materialized",
+      "metric": "global_program_action_mode",
+      "value": "dual_focus_risk_and_opportunity"
+    },
+    {
+      "component": "attention_gate",
+      "component_state": "materialized",
+      "metric": "needs_attention",
+      "value": "false"
+    },
+    {
+      "component": "session_gate",
+      "component_state": "materialized",
+      "metric": "session_phase",
+      "value": "non_trading_day"
+    },
+    {
+      "component": "session_confidence_gate",
+      "component_state": "materialized",
+      "metric": "session_phase_confidence",
+      "value": "exact_with_trade_calendar"
+    },
+    {
+      "component": "freshness_gate",
+      "component_state": "materialized",
+      "metric": "freshness_state",
+      "value": "fresh"
+    },
+    {
+      "component": "heartbeat_timeout_gate",
+      "component_state": "materialized",
+      "metric": "heartbeat_timeout_state",
+      "value": "within_timeout"
+    },
+    {
+      "component": "stale_alert_gate",
+      "component_state": "materialized",
+      "metric": "stale_alert_level",
+      "value": "none"
+    }
+  ],
+  "interpretation": [
+    "The program now has a single health/status row above snapshot, action surface, and change signal.",
+    "A downstream consumer can check one row first before deciding whether to inspect deeper feeds.",
+    "The status row now exposes trade-calendar-backed timing plus freshness, timeout state, and stale-alert level so the consumer can reject stale or mistimed internal state."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ic_commercial_aerospace_carrier_grade_evidence_gap_audit_v1",
+    "event_backed_attention_carrier_count": 1,
+    "hard_anchor_case_count": 1,
+    "hard_decoy_case_count": 1,
+    "active_gap_count": 4,
+    "gap_csv": "data\\training\\commercial_aerospace_carrier_grade_evidence_gap_v1.csv",
+    "authoritative_rule": "capital_true_selection remains blocked for explicit reasons: the current layer lacks a second event-backed carrier case, lacks a thicker hard anchor/decoy counterpanel, and still has no dedicated followthrough surface"
+  },
+  "gap_rows": [
+    {
+      "gap_name": "second_event_backed_carrier_case_missing",
+      "status": "active_gap",
+      "evidence": 1,
+      "required_minimum": 2,
+      "reading": "only one event-backed carrier-grade soft case exists, so there is no second case to compare against before promoting true selection"
+    },
+    {
+      "gap_name": "anchor_decoy_counterpanel_too_thin",
+      "status": "active_gap",
+      "evidence": 1,
+      "required_minimum": 2,
+      "reading": "the role layer currently has only one hard anchor/decoy case, so divergence patterns are still under-specified"
+    },
+    {
+      "gap_name": "carrier_followthrough_not_yet_labeled",
+      "status": "active_gap",
+      "evidence": "unlabeled",
+      "required_minimum": "first_followthrough_registry",
+      "reading": "the current role layer separates carrier/follow/concentration, but it has not yet built a dedicated followthrough label surface"
+    },
+    {
+      "gap_name": "board_event_alignment_not_yet_explicit",
+      "status": "active_gap",
+      "evidence": "partial",
+      "required_minimum": "event_to_board_alignment_panel",
+      "reading": "event trigger validity exists, but the degree of board-level alignment after event visibility is not yet scored as its own supervision object"
+    }
+  ],
+  "interpretation": [
+    "V1.34IC turns the carrier-grade blocker into explicit gaps instead of a vague feeling that the evidence is not enough.",
+    "This matters because the next work can now be driven by named missing evidence rather than by subjective hesitation."
+  ]
+}

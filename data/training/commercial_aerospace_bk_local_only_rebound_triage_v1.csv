@@ -1,0 +1,4 @@
+﻿component,status,detail
+local_only_rebound_seed,retained_as_board_false_bounce_guard,local_only_rebound_seed_count = 10.
+unlock_override,blocked,Local-only rebound seeds cannot release board_cooling_lockout or substitute for board_revival_unlock.
+symbol_reentry_interpretation,subordinate_only,"When this guard fires, strong symbols may be watched but board-level reentry discussion stays blocked."

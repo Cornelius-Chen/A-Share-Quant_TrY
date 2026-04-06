@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129l_commercial_aerospace_post_entry_state_management_grammar_v1",
+    "current_primary_variant": "tail_weakdrift_full",
+    "state_management_focus": "post_entry_upgrade_derisk_tail_repair_governance",
+    "authoritative_output": "commercial_aerospace_post_entry_state_management_grammar_frozen"
+  },
+  "grammar_rows": [
+    {
+      "step": 1,
+      "state_transition": "probe_to_full_pre",
+      "rule": "preheat escalation should be acknowledged as a distinct state transition, but replay should not automatically upgrade all late-preheat full adds until the full_pre supervision layer proves economic benefit",
+      "source": "retain_probe_full_pre_full_de_risk_state_machine_for_translation"
+    },
+    {
+      "step": 2,
+      "state_transition": "full_pre_to_full",
+      "rule": "full remains phase-contextual rather than directly supervised; transition into full must stay tied to impulse window semantics, not generic classifier confidence",
+      "source": "move_to_phase_specific_walk_forward_for_full_pre_only_and_keep_full_phase_contextual"
+    },
+    {
+      "step": 3,
+      "state_transition": "full_to_main_window_derisk",
+      "rule": "the primary commercial-aerospace edge comes from intensifying downside control inside the dominant drawdown window rather than broadening entry heat",
+      "source": "entry_surface_stable_plus_window_specific_derisk_intensification"
+    },
+    {
+      "step": 4,
+      "state_transition": "main_window_derisk_to_tail_repair",
+      "rule": "after the main drawdown window is repaired, post-window weak-drift selling becomes the next lawful state-management layer",
+      "source": "entry_surface_stable_plus_window_specific_derisk_intensification"
+    },
+    {
+      "step": 5,
+      "state_transition": "late_preheat_full_mismatch_to_governance",
+      "rule": "late-preheat full entries that mismatch the full_pre state must be downgraded into governance/failure review rather than replay-facing promotion candidates",
+      "source": "retain_governance_rule_and_failure_cases"
+    }
+  ],
+  "interpretation": [
+    "V1.29L compacts commercial-aerospace into a post-entry state-management grammar rather than another replay frontier table.",
+    "The goal is to make the frozen primary reusable: entry remains stable, while upgrades, de-risk, tail repair, and governance are expressed as ordered state transitions."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "row_count": 7,
+    "covered_window_count": 1,
+    "december_leader_count": 1,
+    "december_follower_count": 3,
+    "february_leader_deterioration_count": 1,
+    "february_follower_failure_count": 2,
+    "full_window_hold_count": 1
+  },
+  "rows": [
+    {
+      "sample_window_id": "ca_train_window_008",
+      "december_leader_count": "1",
+      "december_follower_count": "3",
+      "february_leader_deterioration_count": "1",
+      "february_follower_failure_count": "2",
+      "excluded_soft_candidate_count": "1",
+      "final_training_admission": "subwindow_ready_but_full_window_not_ready",
+      "strict_supervisor_conclusion": "Window 008 now has one December leader, three December followers, and a February failure map; this is enough to study diffusion-versus-failed-followthrough, but still not enough for a full-window final-training pass."
+    }
+  ],
+  "interpretation": [
+    "Window 008 is now split into a December selective-diffusion map and a February failed-followthrough map.",
+    "The most important negative evidence is that the best December leader also broke in February.",
+    "This artifact clarifies why the meeting chain is useful for subwindow learning but still not fit for a full-window final-training pass."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ig_commercial_aerospace_anchor_decoy_counterpanel_search_audit_v1",
+    "searched_symbol_count": 5,
+    "current_hard_counterpanel_count": 1,
+    "second_hard_counterpanel_found": false,
+    "soft_decoy_only_candidate_count": 2,
+    "search_csv": "data\\training\\commercial_aerospace_anchor_decoy_counterpanel_search_v1.csv",
+    "authoritative_rule": "the anchor/decoy counterpanel still has only one hard case, 航天发展; 神剑股份 and 天银机电 are at most soft decoy-only candidates, while 再升科技 and 西测测试 remain outside hard counterpanel status for explicit role reasons"
+  },
+  "search_rows": [
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "search_status": "current_hard_counterpanel_case",
+      "hard_anchor_candidate": "yes",
+      "hard_decoy_candidate": "yes",
+      "blocking_reason": "",
+      "next_requirement": "acts_as_existing_counterpanel_reference"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "search_status": "carrier_candidate_not_counterpanel",
+      "hard_anchor_candidate": "no",
+      "hard_decoy_candidate": "no",
+      "blocking_reason": "event_backed_carrier_role_conflicts_with_counterpanel_usage",
+      "next_requirement": "would need explicit heat-anchor evidence plus later failed board participation"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "search_status": "crowding_without_hard_heat_evidence",
+      "hard_anchor_candidate": "no",
+      "hard_decoy_candidate": "soft_only",
+      "blocking_reason": "crowding_and_near_high_repair_exist_but_no explicit hard heat-anchor event",
+      "next_requirement": "would need decisive attention-anchor evidence before promotion to hard counterpanel"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "search_status": "outlier_breakout_without_hard_heat_evidence",
+      "hard_anchor_candidate": "no",
+      "hard_decoy_candidate": "soft_only",
+      "blocking_reason": "breakout path exists but supporting theme-heat event is not retained as decisive",
+      "next_requirement": "would need retained heat-anchor evidence plus later failed board restart reading"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "search_status": "follow_candidate_not_counterpanel",
+      "hard_anchor_candidate": "no",
+      "hard_decoy_candidate": "no",
+      "blocking_reason": "follow_candidate_lacks_anchor_heat_role",
+      "next_requirement": "would need clear attention-anchor evidence before any decoy evaluation"
+    }
+  ],
+  "interpretation": [
+    "V1.34IG searches for a second hard anchor/decoy counterpanel case instead of assuming one must already exist.",
+    "The result remains conservative: there is still only one hard counterpanel case, with a few softer decoy-only candidates and several explicit non-fits."
+  ]
+}

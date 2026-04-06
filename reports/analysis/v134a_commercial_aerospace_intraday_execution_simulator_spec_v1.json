@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134a_commercial_aerospace_intraday_execution_simulator_spec_v1",
+    "upstream_workstream": "intraday_execution_simulation_surface",
+    "phase_1_status": "complete_phase_1_visibility_and_keep_intraday_execution_lane_blocked",
+    "simulator_component_count": 6,
+    "action_mapping_count": 3,
+    "cost_item_count": 4,
+    "acceptance_item_count": 5,
+    "spec_csv": "data\\training\\commercial_aerospace_intraday_execution_simulator_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_execution_simulator_spec_ready_for_phase_2_triage"
+  },
+  "simulator_rows": [
+    {
+      "component": "trigger_evaluation_clock",
+      "policy": "minute_close_only",
+      "detail": "all minute-tier triggers are evaluated only after the current 1min bar closes"
+    },
+    {
+      "component": "earliest_fill_policy",
+      "policy": "next_bar_open_only",
+      "detail": "a trigger fired on minute t may fill no earlier than the next visible minute open"
+    },
+    {
+      "component": "fill_price_reference",
+      "policy": "next_bar_open_plus_slippage",
+      "detail": "fills use the next minute open with fixed bps slippage applied in the adverse direction"
+    },
+    {
+      "component": "execution_lane_scope",
+      "policy": "canonical_seed_sessions_first",
+      "detail": "phase 2 starts on the canonical six seed sessions before any broader session simulation is allowed"
+    },
+    {
+      "component": "position_mutation_boundary",
+      "policy": "intraday_shadow_read_only_relative_to_eod_primary",
+      "detail": "the simulator may read frozen EOD positions as starting state but may not mutate the authoritative EOD primary outputs"
+    },
+    {
+      "component": "same_session_readd_guardrail",
+      "policy": "blocked_after_severe_and_cooldown_after_reversal",
+      "detail": "severe exits forbid same-session re-add; reversal-triggered de-risk opens a cooldown-only no-readd watch for the rest of the audited window"
+    }
+  ],
+  "action_rows": [
+    {
+      "minute_tier_label": "severe_override_positive",
+      "governance_action": "emergency_exit_shadow_override",
+      "trigger_eval_ts": "bar_close_t",
+      "fill_ts": "open_t_plus_1",
+      "position_effect": "sell_100_percent_of_remaining_position",
+      "same_session_readd": "forbidden",
+      "ladder_consistency": true
+    },
+    {
+      "minute_tier_label": "reversal_watch",
+      "governance_action": "panic_derisk_watch",
+      "trigger_eval_ts": "bar_close_t",
+      "fill_ts": "open_t_plus_1",
+      "position_effect": "sell_50_percent_of_remaining_position",
+      "same_session_readd": "cooldown_for_rest_of_window",
+      "ladder_consistency": true
+    },
+    {
+      "minute_tier_label": "mild_override_watch",
+      "governance_action": "do_not_readd_watch",
+      "trigger_eval_ts": "bar_close_t",
+      "fill_ts": "no_immediate_trade",
+      "position_effect": "hold_position_but_block_incremental_readd",
+      "same_session_readd": "forbidden",
+      "ladder_consistency": true
+    }
+  ],
+  "cost_rows": [
+    {
+      "cost_item": "commission_rate",
+      "value": 0.0003,
+      "unit": "fraction",
+      "detail": "matched to the frozen commercial-aerospace lawful EOD primary cost baseline"
+    },
+    {
+      "cost_item": "min_commission",
+      "value": 5.0,
+      "unit": "cny",
+      "detail": "minimum per-order commission floor"
+    },
+    {
+      "cost_item": "sell_stamp_tax_rate",
+      "value": 0.001,
+      "unit": "fraction",
+      "detail": "applies only to sell-side minute fills"
+    },
+    {
+      "cost_item": "slippage_bps",
+      "value": 5.0,
+      "unit": "bps",
+      "detail": "applied in the adverse direction against the simulated fill price"
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "phase_1_complete_prerequisite",
+      "status": "required",
+      "detail": "complete_phase_1_visibility_and_keep_intraday_execution_lane_blocked"
+    },
+    {
+      "acceptance_item": "same_bar_future_knowledge_impossible",
+      "status": "required",
+      "detail": "trigger evaluation at minute-close and fill at next-bar open prohibit same-bar trading on incomplete information"
+    },
+    {
+      "acceptance_item": "seed_session_reproducibility",
+      "status": "required",
+      "detail": "all six canonical seed sessions must produce deterministic trigger and fill rows when rerun"
+    },
+    {
+      "acceptance_item": "position_and_cash_conservation",
+      "status": "required",
+      "detail": "minute fills must conserve signed position quantity, cash, and cost accounting independently from the frozen EOD lane"
+    },
+    {
+      "acceptance_item": "phase_3_still_blocked",
+      "status": "required",
+      "detail": "the simulator spec does not authorize replay-lane binding or promotion into the authoritative EOD primary"
+    }
+  ],
+  "interpretation": [
+    "V1.34A converts the blocked phase-2 lane into an explicit minute-execution simulator specification.",
+    "The spec stays narrow: it defines trigger timing, fill timing, action sizing, cost treatment, and no-readd guardrails for a shadow-only intraday lane."
+  ]
+}

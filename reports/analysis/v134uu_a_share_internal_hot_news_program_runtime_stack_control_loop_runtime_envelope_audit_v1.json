@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "envelope_row_count": 1,
+    "loop_signal_mode": "steady_runtime_stack_control_loop",
+    "runtime_consumer_mode": "passive_polling_only",
+    "runtime_attention_level": "low",
+    "suggested_poll_interval_seconds": "300",
+    "reopen_target": "none",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_control_loop_runtime_envelope_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_runtime_envelope",
+      "component_state": "read_ready_internal_only",
+      "metric": "envelope_row_count",
+      "value": "1"
+    },
+    {
+      "component": "runtime_consumer_mode",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode",
+      "value": "passive_polling_only"
+    },
+    {
+      "component": "runtime_attention_level",
+      "component_state": "materialized",
+      "metric": "runtime_attention_level",
+      "value": "low"
+    },
+    {
+      "component": "suggested_poll_interval",
+      "component_state": "materialized",
+      "metric": "suggested_poll_interval_seconds",
+      "value": "300"
+    }
+  ],
+  "interpretation": [
+    "This runtime envelope converts the narrow runtime-stack control-loop signal into an execution-facing polling and reopening envelope.",
+    "An outer controller can stop here when it wants explicit polling cadence and attention level rather than raw loop-signal semantics."
+  ]
+}

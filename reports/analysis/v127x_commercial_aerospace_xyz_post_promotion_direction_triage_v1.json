@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127x_commercial_aerospace_xyz_post_promotion_direction_triage_v1",
+    "current_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "current_primary_final_equity": 1298439.6031,
+    "current_primary_max_drawdown": 0.09889703,
+    "authoritative_next_step": "stronger_walk_forward_and_robustness_audit",
+    "stop_doing": [
+      "do_not_open_new_family_yet",
+      "do_not_continue_symbol_micro_tuning",
+      "do_not_assume_long_term_freeze_without_robustness"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "stronger_walk_forward_and_robustness_audit",
+      "reason": "The latest frontier improvement should be tested for chronology robustness before further promotion or freeze."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "stronger_walk_forward_and_robustness_audit",
+      "reason": "The current primary is strong enough that the highest-value next step is to rule out window-specific luck."
+    },
+    {
+      "subagent": "James",
+      "vote": "stronger_walk_forward_and_robustness_audit",
+      "reason": "Attribution can wait; what matters now is whether the new primary survives harder robustness checks."
+    }
+  ],
+  "interpretation": [
+    "V1.27X freezes the unanimous post-promotion direction after the new primary reference was upgraded.",
+    "Commercial aerospace should now move to stronger walk-forward and robustness audits rather than more local tuning."
+  ]
+}

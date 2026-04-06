@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bs_commercial_aerospace_sell_side_binding_readiness_audit_v1",
+    "ready_shadow_input_count": 2,
+    "ready_shadow_reference_count": 1,
+    "missing_binding_component_count": 2,
+    "authoritative_output": "commercial_aerospace_sell_side_binding_readiness_ready_for_direction_triage",
+    "readiness_csv": "data\\training\\commercial_aerospace_sell_side_binding_readiness_audit_v1.csv"
+  },
+  "readiness_rows": [
+    {
+      "component": "all_session_visibility_surface",
+      "status": "ready_as_shadow_input",
+      "evidence": "all_session_count = 612",
+      "what_it_solves": "minute-lawful state visibility exists across the current six-symbol first-hour surface",
+      "remaining_gap": "not yet bound to execution-state transitions"
+    },
+    {
+      "component": "deterministic_seed_simulator",
+      "status": "ready_as_shadow_input",
+      "evidence": "double_run_exact_match = True, monotonic_fill_violation_count = 0",
+      "what_it_solves": "trigger-to-fill timing and chronology are already deterministic on canonical seeds",
+      "remaining_gap": "still session-isolated and not portfolio-state bound"
+    },
+    {
+      "component": "phase2_wider_sell_shadow",
+      "status": "ready_as_shadow_reference",
+      "evidence": "reference = broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral, same_day_loss_avoided_total = 46082.7278",
+      "what_it_solves": "current best sell-side shadow behavior is already frozen on broader-hit surface",
+      "remaining_gap": "still same-day shadow and not execution-bound"
+    },
+    {
+      "component": "holdings_aware_sell_binding_surface",
+      "status": "missing",
+      "evidence": "no portfolio-stateful intraday sell lane exists",
+      "what_it_solves": "would connect minute triggers to real held quantity, cooldown state, and do-not-readd state",
+      "remaining_gap": "must still be built"
+    },
+    {
+      "component": "isolated_sell_side_shadow_lane",
+      "status": "missing",
+      "evidence": "sell_side_binding_blocker_count = 2",
+      "what_it_solves": "would bind visibility plus simulator into a read-only sell-side execution lane without touching board reentry yet",
+      "remaining_gap": "must still be built"
+    }
+  ],
+  "interpretation": [
+    "V1.34BS separates what already exists as shadow-grade sell-side infrastructure from what is still missing for binding.",
+    "The branch is no longer blocked because it has no sell-side artifacts. It is blocked because those artifacts are not yet connected through a holdings-aware, isolated execution surface."
+  ]
+}

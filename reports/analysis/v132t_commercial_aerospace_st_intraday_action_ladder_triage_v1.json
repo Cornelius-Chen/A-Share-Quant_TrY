@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132t_commercial_aerospace_st_intraday_action_ladder_triage_v1",
+    "authoritative_status": "retain_intraday_override_action_ladder_as_governance_state_machine_extension",
+    "tier_count": 3,
+    "authoritative_rule": "the minute branch should now extend the governance state machine with explicit severe / reversal / mild action semantics while the lawful EOD replay remains unchanged"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_override_action_ladder",
+      "status": "retain_intraday_override_action_ladder_as_governance_state_machine_extension",
+      "rationale": "the minute branch has enough structure to translate tiers into governance actions even though it is still not replay-facing"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "action semantics strengthen governance and future intraday design, but they do not yet permit direct replay modification"
+    }
+  ],
+  "interpretation": [
+    "V1.32T freezes the intraday action ladder as the next extension of the commercial-aerospace governance stack.",
+    "The ladder is organizational and semantic: it prepares future lawful intraday work without altering the frozen EOD primary."
+  ]
+}

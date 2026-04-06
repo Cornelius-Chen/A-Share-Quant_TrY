@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121m_cpo_reduce_side_symbol_holdout_audit_v1",
+    "symbol_holdout_count": 3,
+    "mean_evaluable_test_balanced_accuracy": 0.631365,
+    "min_evaluable_test_balanced_accuracy": 0.580508,
+    "symbol_generalization_posture": "candidate_survives_symbol_holdout",
+    "recommended_next_posture": "audit_out_of_set_false_positive_control_before_any_status_upgrade"
+  },
+  "symbol_rows": [
+    {
+      "holdout_symbol": "300308",
+      "train_row_count": 279,
+      "test_row_count": 61,
+      "train_positive_count": 12,
+      "test_positive_count": 2,
+      "train_best_threshold": 0.237382,
+      "train_best_balanced_accuracy": 0.703184,
+      "test_balanced_accuracy": 0.580508,
+      "test_positive_recall": 0.5,
+      "test_negative_reject_rate": 0.661017
+    },
+    {
+      "holdout_symbol": "300502",
+      "train_row_count": 169,
+      "test_row_count": 171,
+      "train_positive_count": 7,
+      "test_positive_count": 7,
+      "train_best_threshold": 0.695122,
+      "train_best_balanced_accuracy": 0.690476,
+      "test_balanced_accuracy": 0.627178,
+      "test_positive_recall": 0.571429,
+      "test_negative_reject_rate": 0.682927
+    },
+    {
+      "holdout_symbol": "300757",
+      "train_row_count": 232,
+      "test_row_count": 108,
+      "train_positive_count": 9,
+      "test_positive_count": 5,
+      "train_best_threshold": 0.237382,
+      "train_best_balanced_accuracy": 0.687095,
+      "test_balanced_accuracy": 0.686408,
+      "test_positive_recall": 0.8,
+      "test_negative_reject_rate": 0.572816
+    }
+  ],
+  "interpretation": [
+    "V1.21M checks whether the new reduce-side branch is just a disguised single-symbol story.",
+    "A live downside candidate should at least avoid collapsing immediately when one symbol family is removed from training.",
+    "This audit matters because the earlier close-only branch stalled partly due to symbol concentration."
+  ]
+}

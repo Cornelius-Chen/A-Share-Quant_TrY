@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fc_commercial_aerospace_fb_reduce_volume_price_direction_triage_v1",
+    "authoritative_status": "freeze_reduce_volume_price_supplement_inside_frozen_handoff_package",
+    "strongest_reduce_volume_price_feature": "post_reversal_up_amount_share",
+    "best_local_veto_up_share_threshold": 0.45,
+    "authoritative_rule": "the reduce branch remains frozen, but its quantity-price supplement is now an explicit part of the frozen handoff governance package"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_volume_price_confirmation",
+      "status": "retain_as_governance_appendix",
+      "rationale": "reversal-side quantity-price confirmation already helps distinguish rebound-cost cases from follow-through benefit cases"
+    },
+    {
+      "component": "reduce_local_veto",
+      "status": "retain_as_local_supervision_only",
+      "rationale": "the local veto improves interpretation for rebound-cost residue without reopening the frozen reduce mainline"
+    },
+    {
+      "component": "reduce_execution_authority",
+      "status": "still_blocked",
+      "rationale": "the supplement strengthens frozen governance but does not change the execution blocker count"
+    }
+  ],
+  "interpretation": [
+    "V1.34FC makes the reduce-side quantity-price supplement explicit in governance language.",
+    "The branch stays frozen, but its handoff package is now clearer: price-only reduce research was not the endpoint; quantity-price context is part of the retained governance stack."
+  ]
+}

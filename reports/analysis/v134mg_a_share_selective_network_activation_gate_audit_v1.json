@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "selective_candidate_host_count": 20,
+    "deferred_review_only_count": 2,
+    "license_review_gap_present": true,
+    "runtime_scheduler_gap_present": true,
+    "status_csv": "data\\training\\a_share_selective_network_activation_gate_status_v1.csv",
+    "authoritative_output": "a_share_selective_network_activation_gates_explicit"
+  },
+  "rows": [
+    {
+      "gate_id": "license_review_gate",
+      "gate_state": "closed",
+      "supporting_count": 20,
+      "gate_reason": "selective candidate hosts exist but all require manual license review before activation"
+    },
+    {
+      "gate_id": "runtime_scheduler_gate",
+      "gate_state": "closed",
+      "supporting_count": 1,
+      "gate_reason": "network adapters are policy-bound but not attached to a live scheduler runtime"
+    },
+    {
+      "gate_id": "review_only_social_gate",
+      "gate_state": "deferred_review_only",
+      "supporting_count": 2,
+      "gate_reason": "social/column hosts remain review-only and are excluded from activation promotion"
+    }
+  ],
+  "interpretation": [
+    "Selective network activation is no longer a vague future task; it is blocked by two explicit gates: license review and runtime scheduler activation.",
+    "This separates legitimate T2/T3 article activation candidates from permanently review-only social hosts."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "fetch_row_count": 20,
+    "fastlane_row_count": 20,
+    "important_row_count": 2,
+    "retention_queue_count": 20,
+    "runtime_state": "internal_only_active",
+    "authoritative_output": "a_share_internal_hot_news_fastlane_internal_only_loop_materialized"
+  },
+  "rows": [
+    {
+      "component": "internal_hot_news_runtime",
+      "component_state": "internal_only_active",
+      "metric": "fetch_row_count",
+      "value": "20"
+    },
+    {
+      "component": "fastlane_pipeline",
+      "component_state": "pipeline_ready_for_trading_program",
+      "metric": "fastlane_row_count",
+      "value": "20"
+    },
+    {
+      "component": "important_promotion",
+      "component_state": "rule_based_bootstrap_active",
+      "metric": "important_row_count",
+      "value": "2"
+    },
+    {
+      "component": "retention",
+      "component_state": "hot_5d_ttl_active",
+      "metric": "retention_queue_count",
+      "value": "20"
+    }
+  ],
+  "interpretation": [
+    "A parallel internal-only hot-news fast lane is now active without changing live/execution governance gates.",
+    "The loop is concrete: CLS telegraph fetch -> fast pipeline surface -> important promotion candidate layer -> 5-day TTL retention queue."
+  ]
+}

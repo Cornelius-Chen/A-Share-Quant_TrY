@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v123w_cpo_heat_plus_riskoff_integration_audit_v1",
+    "baseline_final_equity": 1766466.6096,
+    "baseline_max_drawdown": 0.134272,
+    "variant_count": 8,
+    "riskoff_thresholds": {
+      "q75": 1.192462,
+      "q85": 2.390718,
+      "q90": 3.087657
+    },
+    "best_tradeoff_variant_name": "balanced_heat_reference",
+    "recommended_next_posture": "triage_heat_plus_riskoff_execution_audit_before_any_more_risk_family_work"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "balanced_heat_reference",
+      "riskoff_quantile": "none",
+      "reduce_fraction": 0.0,
+      "executed_reduce_count": 0,
+      "executed_add_count": 8,
+      "final_equity": 4148870.3072,
+      "max_drawdown": 0.376524,
+      "delta_vs_baseline": 2382403.6976
+    },
+    {
+      "variant_name": "strict_heat_reference",
+      "riskoff_quantile": "none",
+      "reduce_fraction": 0.0,
+      "executed_reduce_count": 0,
+      "executed_add_count": 8,
+      "final_equity": 3587484.856,
+      "max_drawdown": 0.327114,
+      "delta_vs_baseline": 1821018.2464
+    },
+    {
+      "variant_name": "balanced_plus_riskoff_q75_r25",
+      "riskoff_quantile": "q75",
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 30,
+      "executed_add_count": 11,
+      "final_equity": 1307526.7159,
+      "max_drawdown": 0.09045,
+      "delta_vs_baseline": -458939.8937
+    },
+    {
+      "variant_name": "balanced_plus_riskoff_q85_r25",
+      "riskoff_quantile": "q85",
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 28,
+      "executed_add_count": 13,
+      "final_equity": 1626557.9285,
+      "max_drawdown": 0.095633,
+      "delta_vs_baseline": -139908.6811
+    },
+    {
+      "variant_name": "balanced_plus_riskoff_q85_r35",
+      "riskoff_quantile": "q85",
+      "reduce_fraction": 0.35,
+      "executed_reduce_count": 24,
+      "executed_add_count": 12,
+      "final_equity": 1303251.7794,
+      "max_drawdown": 0.076201,
+      "delta_vs_baseline": -463214.8302
+    },
+    {
+      "variant_name": "strict_plus_riskoff_q75_r25",
+      "riskoff_quantile": "q75",
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 30,
+      "executed_add_count": 11,
+      "final_equity": 1307526.7159,
+      "max_drawdown": 0.09045,
+      "delta_vs_baseline": -458939.8937
+    },
+    {
+      "variant_name": "strict_plus_riskoff_q85_r25",
+      "riskoff_quantile": "q85",
+      "reduce_fraction": 0.25,
+      "executed_reduce_count": 28,
+      "executed_add_count": 13,
+      "final_equity": 1626557.9285,
+      "max_drawdown": 0.095633,
+      "delta_vs_baseline": -139908.6811
+    },
+    {
+      "variant_name": "strict_plus_riskoff_q85_r35",
+      "riskoff_quantile": "q85",
+      "reduce_fraction": 0.35,
+      "executed_reduce_count": 24,
+      "executed_add_count": 12,
+      "final_equity": 1303251.7794,
+      "max_drawdown": 0.076201,
+      "delta_vs_baseline": -463214.8302
+    }
+  ],
+  "interpretation": [
+    "V1.23W integrates the frozen control priority order into one execution audit: heat guardrails first, then a broad reduce prior.",
+    "This is still research-only because board_risk_off_reduce_score remains candidate-only and highly broad.",
+    "The goal is to see whether partial de-risk on top of heat caps can compress drawdowns further without destroying the overlay's return profile."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134jp_commercial_aerospace_jo_event_registry_expansion_direction_triage_v1",
+    "retained_registry_row_count": 12,
+    "broader_symbol_pool_expander_count": 4,
+    "capital_true_selection_blocked": true,
+    "authoritative_status": "treat_broader_symbol_pool_expansion_from_the_decisive_registry_as_the_first_live_same_plane_branch_and_keep_true_selection_blocked"
+  },
+  "triage_rows": [
+    {
+      "component": "broader_symbol_pool_expander",
+      "direction": "promote_as_first_decisive_registry_symbol_expansion_branch"
+    },
+    {
+      "component": "heat_axis_and_counterpanel_expander",
+      "direction": "retain_as_second_decisive_registry_expansion_branch"
+    },
+    {
+      "component": "carrier_follow_search_expander",
+      "direction": "retain_as_parallel_registry_branch_for_future_carrier_support"
+    },
+    {
+      "component": "event_context_alignment_and_risk_anchors",
+      "direction": "retain_as_environment_alignment_support_only"
+    },
+    {
+      "component": "capital_true_selection",
+      "direction": "continue_blocked_during_registry_expansion_stage"
+    }
+  ],
+  "interpretation": [
+    "V1.34JP converts decisive-registry utility classes into branch order.",
+    "The first live branch should be broader symbol-pool expansion because it directly addresses the current lack of additional same-plane named evidence, while true-selection promotion remains blocked."
+  ]
+}

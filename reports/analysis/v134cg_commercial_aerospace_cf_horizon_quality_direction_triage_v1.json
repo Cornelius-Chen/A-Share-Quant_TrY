@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cg_commercial_aerospace_cf_horizon_quality_direction_triage_v1",
+    "authoritative_status": "retain_isolated_sell_side_binding_surface_with_horizon_caveat_and_audit_local_binding_attribution_next",
+    "executed_order_count": 12,
+    "same_day_protected_mark_to_close_total": 15466.0594,
+    "triage_csv": "data\\training\\commercial_aerospace_cf_horizon_quality_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "same_day_protection",
+      "status": "retain",
+      "detail": "same_day_protected_mark_to_close_total = 15466.0594"
+    },
+    {
+      "component": "short_horizon_followthrough",
+      "status": "retain_with_horizon_caveat",
+      "detail": "net_horizon_pnl_if_held_1d = -26604.0, net_horizon_pnl_if_held_3d = 2243.0, net_horizon_pnl_if_held_5d = -11881.0"
+    },
+    {
+      "component": "next_real_work",
+      "status": "do_not_expand_surface_local_binding_attribution_next",
+      "detail": "The next justified work is local attribution/failure review inside the isolated sell-side lane, not replay binding or reentry execution."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "Keep the branch sell-side only and holdings-aware only; do not reopen wider all-session expansion or full replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34CG converts the first horizon audit on the isolated sell-side binding surface into a direction judgment.",
+    "The lane remains worth retaining, but now with an explicit horizon caveat and a narrower next step inside local binding attribution rather than replay expansion."
+  ]
+}

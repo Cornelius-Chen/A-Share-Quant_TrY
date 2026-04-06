@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133x_commercial_aerospace_wx_broader_visibility_triage_v1",
+    "broader_hit_session_count": 24,
+    "authoritative_status": "accept_broader_phase_1_visibility_surface_and_keep_execution_lane_blocked",
+    "triage_csv": "data\\training\\commercial_aerospace_wx_broader_visibility_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "broader_hit_visibility_surface",
+      "status": "accepted_as_phase_1_broader_surface",
+      "rationale": "the broader 24-session surface passes the same point-in-time legality checks as the canonical seed surface"
+    },
+    {
+      "component": "all_session_visibility_expansion",
+      "status": "next_allowed_move",
+      "rationale": "the next lawful expansion is from the broader hit surface to a still-wider minute visibility surface, not to simulation"
+    },
+    {
+      "component": "intraday_execution_simulator",
+      "status": "still_blocked",
+      "rationale": "passing broader visibility audits still does not satisfy the separate simulator or replay-lane prerequisites"
+    }
+  ],
+  "interpretation": [
+    "V1.33X converts the broader visibility audit into a direction decision for the next lawful expansion inside phase 1.",
+    "The branch may widen visibility further, but simulation and replay remain explicitly closed."
+  ]
+}

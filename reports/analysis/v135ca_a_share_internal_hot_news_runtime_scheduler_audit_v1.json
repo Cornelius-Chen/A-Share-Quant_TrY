@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "runtime_state": "cycle_completed",
+    "executed_step_count": 40,
+    "cls_fetch_row_count": 20,
+    "sina_fetch_row_count": 50,
+    "top_opportunity_theme": "defense_industry",
+    "top_watch_symbol": "600760",
+    "program_health_state": "healthy_internal_only",
+    "freshness_state": "fresh",
+    "focus_rotation_readiness_state": "rotation_review_open_now",
+    "retention_active_queue_count": 43,
+    "retention_expired_cleanup_count": 0,
+    "retention_cap_pruned_file_count": 0,
+    "retention_cap_removed_row_count": 0,
+    "manifest_step_count": 40
+  },
+  "rows": [
+    {
+      "metric": "runtime_state",
+      "value": "cycle_completed"
+    },
+    {
+      "metric": "executed_step_count",
+      "value": "40"
+    },
+    {
+      "metric": "cls_fetch_row_count",
+      "value": "20"
+    },
+    {
+      "metric": "sina_fetch_row_count",
+      "value": "50"
+    },
+    {
+      "metric": "top_opportunity_theme",
+      "value": "defense_industry"
+    },
+    {
+      "metric": "top_watch_symbol",
+      "value": "600760"
+    },
+    {
+      "metric": "program_health_state",
+      "value": "healthy_internal_only"
+    },
+    {
+      "metric": "freshness_state",
+      "value": "fresh"
+    },
+    {
+      "metric": "focus_rotation_readiness_state",
+      "value": "rotation_review_open_now"
+    },
+    {
+      "metric": "retention_active_queue_count",
+      "value": "43"
+    },
+    {
+      "metric": "retention_expired_cleanup_count",
+      "value": "0"
+    },
+    {
+      "metric": "retention_cap_pruned_file_count",
+      "value": "0"
+    },
+    {
+      "metric": "retention_cap_removed_row_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "This registry is the single-cycle runtime heartbeat for the internal hot-news stack.",
+    "It proves the stack can be externally scheduled without introducing another abstract control layer.",
+    "The cycle refreshes fetch, consumer surfaces, focus governance, and the top control packet in one runnable pass.",
+    "It also keeps a hot-layer retention queue and records expired hot-copy cleanup so the 5-day TTL is part of the runtime loop.",
+    "Runtime artifact retention caps keep history-like files and cleanup logs bounded so continuous running does not drift toward unbounded storage."
+  ]
+}

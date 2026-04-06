@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "base_missing_count": 3,
+    "corrected_missing_count": 2,
+    "boundary_only_residual_count": 2,
+    "calendar_alignment_residual_count": 0,
+    "corrected_via_effective_trade_date_count": 1,
+    "status_csv": "data\\training\\a_share_replay_shadow_corrected_recheck_status_v1.csv",
+    "authoritative_output": "a_share_replay_shadow_corrected_recheck_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_corrected_overlay",
+      "component_state": "materialized_and_replay_recheck_ready",
+      "base_missing_count": 3,
+      "corrected_missing_count": 2,
+      "improvement_count": 1
+    },
+    {
+      "component": "corrected_market_context_residual",
+      "component_state": "boundary_only_after_shadow_overlay",
+      "boundary_only_residual_count": 2,
+      "calendar_alignment_residual_count": 0,
+      "corrected_via_effective_trade_date_count": 1
+    },
+    {
+      "component": "replay_internal_build_recheck",
+      "component_state": "narrowed_to_external_boundary_residuals_under_shadow_overlay",
+      "remaining_blocker_class": "external_boundary_residual_only",
+      "remaining_missing_count": 2
+    }
+  ],
+  "interpretation": [
+    "The shadow-only corrected binding view does what it was supposed to do: it removes the only internally fixable replay residual.",
+    "After the overlay, the replay residual set is reduced to external boundary slices only.",
+    "That means replay internal build no longer has an internally fixable calendar-alignment residual on this branch."
+  ]
+}

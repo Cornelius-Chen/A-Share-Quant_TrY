@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "calendar_row_count": 1096,
+    "open_day_count": 727,
+    "coverage_start": "2024-01-01",
+    "coverage_end": "2026-12-31",
+    "today_calendar_state": "non_trading_day",
+    "authoritative_output": "a_share_trade_calendar_registry_materialized"
+  },
+  "rows": [
+    {
+      "component": "trade_calendar_registry",
+      "component_state": "materialized",
+      "metric": "calendar_row_count",
+      "value": "1096"
+    },
+    {
+      "component": "trade_calendar_coverage",
+      "component_state": "materialized",
+      "metric": "coverage_start",
+      "value": "2024-01-01"
+    },
+    {
+      "component": "trade_calendar_coverage",
+      "component_state": "materialized",
+      "metric": "coverage_end",
+      "value": "2026-12-31"
+    },
+    {
+      "component": "today_calendar_state",
+      "component_state": "materialized",
+      "metric": "today_calendar_state",
+      "value": "non_trading_day"
+    }
+  ],
+  "interpretation": [
+    "The internal hot-news status layer now has a real SSE trade calendar instead of weekday-only approximation.",
+    "This closes the largest remaining timing approximation at the outermost program-status layer."
+  ]
+}

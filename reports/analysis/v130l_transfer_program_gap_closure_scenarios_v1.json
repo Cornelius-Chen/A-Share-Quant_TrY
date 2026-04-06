@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130l_transfer_program_gap_closure_scenarios_v1",
+    "candidate_board_count": 5,
+    "single_action_reopen_candidate_count": 1,
+    "nearest_reopen_sector_id": "BK0808",
+    "authoritative_status": "freeze_transfer_program_and_rank_gap_closure_paths",
+    "authoritative_rule": "do_not_reopen_a_board_worker_until_the_gap_closure_path_is_realized_in_local_same_plane_support_not_just_described_in_words"
+  },
+  "scenario_rows": [
+    {
+      "sector_id": "BK0808",
+      "sector_name": "军民融合",
+      "scenario_class": "nearest_reopen_candidate",
+      "current_v6_symbols": "300474",
+      "current_v5_symbols": "600760",
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.0,
+      "bridge_block": true,
+      "single_action_reopen_possible": true,
+      "minimum_reopen_path": "add_one_more_v6_same_plane_symbol_and_clear_bridge_only_status"
+    },
+    {
+      "sector_id": "BK0994",
+      "sector_name": "空间站概念",
+      "scenario_class": "same_plane_first_then_semantic_recheck",
+      "current_v6_symbols": "600118",
+      "current_v5_symbols": "",
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.023575000000000013,
+      "bridge_block": true,
+      "single_action_reopen_possible": false,
+      "minimum_reopen_path": "add_one_more_v6_same_plane_symbol_then_recheck_non_bridge_semantics"
+    },
+    {
+      "sector_id": "BK0715",
+      "sector_name": "航母概念",
+      "scenario_class": "multi_step_gap_closure",
+      "current_v6_symbols": "000738",
+      "current_v5_symbols": "000099",
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.07686799999999999,
+      "bridge_block": true,
+      "single_action_reopen_possible": false,
+      "minimum_reopen_path": "needs_multi_step_gap_closure_not_single_action"
+    },
+    {
+      "sector_id": "BK0814",
+      "sector_name": "大飞机",
+      "scenario_class": "multi_step_gap_closure",
+      "current_v6_symbols": "600118",
+      "current_v5_symbols": "600760",
+      "same_plane_symbol_gap": 1,
+      "board_composite_gap": 0.09785100000000002,
+      "bridge_block": true,
+      "single_action_reopen_possible": false,
+      "minimum_reopen_path": "needs_multi_step_gap_closure_not_single_action"
+    },
+    {
+      "sector_id": "BK0490",
+      "sector_name": "军工",
+      "scenario_class": "no_same_plane_surface",
+      "current_v6_symbols": "",
+      "current_v5_symbols": "000099|600760",
+      "same_plane_symbol_gap": 2,
+      "board_composite_gap": null,
+      "bridge_block": true,
+      "single_action_reopen_possible": false,
+      "minimum_reopen_path": "establish_any_v6_same_plane_surface_before_doing_anything_else"
+    }
+  ],
+  "interpretation": [
+    "V1.30L turns the frozen watchlist into concrete gap-closure paths instead of passive waiting.",
+    "BK0808 is still the closest candidate, but it remains blocked until one more v6 same-plane symbol appears and the bridge-only condition is cleared."
+  ]
+}

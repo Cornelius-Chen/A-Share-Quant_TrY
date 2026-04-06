@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "candidate_row_count": 1,
+    "promotable_now_count": 0,
+    "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_runtime_scheduler_deployment_candidate_view_v1.csv",
+    "authoritative_output": "a_share_runtime_scheduler_deployment_candidate_view_materialized"
+  },
+  "candidate_rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "flow_id": "daily_bootstrap_cycle",
+      "retry_policy_id": "html_article_standard_retry",
+      "activation_scope": "selective_after_license_review",
+      "queue_state": "awaiting_runtime_deployment",
+      "lane_state": "scheduler_stub_replacement_lane_materialized",
+      "deployment_candidate_state": "single_candidate_pending_governance_and_scheduler_opening",
+      "promotable_now": "False",
+      "blocking_reason": "batch-one manual approvals complete; runtime scheduler gate still closed"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime followthrough now has a concrete single-row deployment candidate view instead of only separate queue and lane surfaces.",
+    "The candidate remains non-promotive because scheduler activation and governance gates are still closed."
+  ]
+}

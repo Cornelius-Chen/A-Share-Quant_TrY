@@ -1,0 +1,5 @@
+﻿pti_component,component_state,artifact_path,coverage_note
+event_ledger,materialized_bootstrap,data\reference\info_center\event_registry\a_share_pti_event_ledger_v1.csv,event_ledger_count = 52
+time_slice_view,materialized_bootstrap,data\derived\info_center\time_slices\a_share_time_slice_view_v1.csv,time_slice_count = 17
+state_transition_journal,materialized_bootstrap,data\reference\info_center\state_transition_journal\a_share_state_transition_journal_v1.csv,state_transition_count = 57
+transition_backlog,backlog_materialized_not_bound_to_replay,data\reference\info_center\state_transition_journal\a_share_state_transition_backlog_v1.csv,transition_backlog_count = 3

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gb_commercial_aerospace_dual_slot_allocation_supervision_audit_v1",
+    "dual_slot_day_count": 1,
+    "allocation_row_count": 2,
+    "continuation_slot_weight": 0.033507,
+    "reset_slot_weight": 0.068632,
+    "reset_to_continuation_weight_ratio": 2.04828842,
+    "authoritative_rule": "the current local dual-slot day supports a primary-reset plus secondary-continuation allocation reading, but only as local supervision"
+  },
+  "allocation_rows": [
+    {
+      "trade_date": "20251219",
+      "slot_name": "continuation_slot",
+      "symbol": "000738",
+      "action": "add",
+      "weight_vs_initial_capital": 0.033507,
+      "allocation_role": "secondary_incremental_slot"
+    },
+    {
+      "trade_date": "20251219",
+      "slot_name": "reset_slot",
+      "symbol": "002085",
+      "action": "open",
+      "weight_vs_initial_capital": 0.068632,
+      "allocation_role": "primary_reset_slot"
+    }
+  ],
+  "interpretation": [
+    "V1.34GB asks the smallest allocation question after dual-slot permission becomes credible: when both slots are actually live on the same day, do they look symmetric or tiered?",
+    "The current local answer is tiered. The reset slot carries the larger primary participation, while the continuation slot behaves like a smaller incremental companion slot."
+  ]
+}

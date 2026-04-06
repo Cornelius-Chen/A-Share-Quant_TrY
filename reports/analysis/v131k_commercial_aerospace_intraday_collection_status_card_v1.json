@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131k_commercial_aerospace_intraday_collection_status_card_v1",
+    "program_status": "blocked_for_minute_data",
+    "required_artifact_count": 4,
+    "present_artifact_count": 0,
+    "missing_artifact_count": 4,
+    "highest_priority_missing_symbols": [
+      "300342",
+      "601698"
+    ],
+    "status_card_csv": "data\\training\\commercial_aerospace_intraday_collection_status_card_v1.csv",
+    "authoritative_rule": "treat the commercial-aerospace intraday branch as blocked until the required minute artifact count reaches full coverage"
+  },
+  "status_rows": [
+    {
+      "program_branch": "commercial_aerospace_intraday_override",
+      "status": "blocked",
+      "missing_required_artifacts": 4,
+      "required_artifacts": 4,
+      "next_action": "collect_required_minute_files_then_rerun_intraday_chain",
+      "highest_priority_missing_symbols": "300342/601698",
+      "authoritative_status": "keep_intraday_override_governance_bundle_but_block_intraday_modeling_until_minute_data_arrives"
+    }
+  ],
+  "interpretation": [
+    "V1.31K compresses the intraday branch into a single operational status card.",
+    "It is the minute-data analogue of the frozen transfer status card: blocked now, mechanically unblocked later."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131a_transfer_program_operational_status_card_v1",
+    "program_status": "frozen",
+    "rerun_required": false,
+    "nearest_candidate_sector_id": "BK0808",
+    "decisive_watch_symbol": "600118",
+    "authoritative_status": "operational_status_card_ready_for_do_not_rerun_posture",
+    "authoritative_rule": "under_current_static_data_the_only_correct_action_is_to_monitor_the_change_gate_not_to_restart_transfer_analysis"
+  },
+  "status_rows": [
+    {
+      "status_key": "program_status",
+      "status_value": "frozen"
+    },
+    {
+      "status_key": "rerun_required",
+      "status_value": false
+    },
+    {
+      "status_key": "changed_artifact_count",
+      "status_value": 0
+    },
+    {
+      "status_key": "nearest_candidate_sector_id",
+      "status_value": "BK0808"
+    },
+    {
+      "status_key": "decisive_watch_symbol",
+      "status_value": "600118"
+    },
+    {
+      "status_key": "bk0808_current_v6_symbol_count",
+      "status_value": 1
+    },
+    {
+      "status_key": "bk0808_same_plane_symbol_gap",
+      "status_value": 1
+    },
+    {
+      "status_key": "bk0808_board_composite_gap",
+      "status_value": 0.0
+    },
+    {
+      "status_key": "bk0808_bridge_block",
+      "status_value": true
+    },
+    {
+      "status_key": "watch_symbol_timeline_days",
+      "status_value": 10
+    },
+    {
+      "status_key": "watch_symbol_leader_core_days",
+      "status_value": 9
+    },
+    {
+      "status_key": "watch_symbol_near_surface_days",
+      "status_value": 8
+    },
+    {
+      "status_key": "watch_symbol_inactive_days",
+      "status_value": 2
+    },
+    {
+      "status_key": "next_action",
+      "status_value": "wait_for_real_v6_same_plane_emergence_of_600118_then_rerun_transfer_chain"
+    }
+  ],
+  "interpretation": [
+    "V1.31A compresses the frozen transfer program into a single operational status card.",
+    "This is not a new research frontier; it is an execution aid that answers three questions immediately: are we frozen, who is closest, and what exact event would justify a rerun."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125z_commercial_aerospace_regime_conditioned_binary_audit_v1",
+    "task_count": 2,
+    "best_task_name": "riskoff_derisk_binary",
+    "best_test_balanced_accuracy": 0.57870303,
+    "authoritative_status": "lawful_eod_regime_conditioned_binary_audit_non_execution"
+  },
+  "task_rows": [
+    {
+      "task_name": "impulse_eligibility_binary",
+      "row_count": 96,
+      "train_row_count": 72,
+      "test_row_count": 24,
+      "train_balanced_accuracy": 0.75260626,
+      "test_balanced_accuracy": 0.56818182,
+      "q80_test_spread": 0.14938377,
+      "q80_pass_count": 0,
+      "status": "ok"
+    },
+    {
+      "task_name": "riskoff_derisk_binary",
+      "row_count": 2688,
+      "train_row_count": 2148,
+      "test_row_count": 540,
+      "train_balanced_accuracy": 0.62915754,
+      "test_balanced_accuracy": 0.57870303,
+      "q80_test_spread": -0.01191866,
+      "q80_pass_count": 268,
+      "status": "ok"
+    }
+  ],
+  "interpretation": [
+    "V1.25Z asks the more realistic question: can lawful EOD supervision separate eligibility and de-risk better once the board is already inside the relevant regime proxy?",
+    "This is the last audit step before considering any replay-adjacent shadow protocol."
+  ]
+}

@@ -1,0 +1,10 @@
+﻿trade_date,symbol,reentry_family,window_name,day_range,supervision_state,action
+20260113,000738,deep_washout_reentry_gap,same_day,T+0,blocked,block_same_day_chase
+20260113,000738,deep_washout_reentry_gap,observation_only,T+1~T+4,washout_observation_only,observe_only_no_rebuild
+20260113,000738,deep_washout_reentry_gap,rebuild_watch,T+5+,base_then_rebuild_watch,wait_for_base_then_rebuild_watch
+20260120,300342,delayed_rebound_reentry_gap,same_day,T+0,blocked,block_same_day_chase
+20260120,300342,delayed_rebound_reentry_gap,observation_only,T+1~T+2,reclaim_observation_only,observe_only_no_rebuild
+20260120,300342,delayed_rebound_reentry_gap,rebuild_watch,T+3+,reclaim_rebuild_watch,watch_for_reclaim_rebuild_not_same_day_chase
+20260120,688523,delayed_rebound_reentry_gap,same_day,T+0,blocked,block_same_day_chase
+20260120,688523,delayed_rebound_reentry_gap,observation_only,T+1~T+2,reclaim_observation_only,observe_only_no_rebuild
+20260120,688523,delayed_rebound_reentry_gap,rebuild_watch,T+3+,reclaim_rebuild_watch,watch_for_reclaim_rebuild_not_same_day_chase

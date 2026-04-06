@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cd_commercial_aerospace_isolated_sell_side_binding_quality_audit_v1",
+    "broader_hit_session_count": 24,
+    "executed_session_count": 12,
+    "executed_session_share": 0.5,
+    "total_protected_mark_to_close": 15466.0594,
+    "protected_mark_to_close_mean_if_executed": 1288.8383,
+    "best_symbol": "300342",
+    "best_trigger_tier": "reversal_watch",
+    "same_day_new_lots_protected_total": 12400,
+    "clipped_reconciliation_count": 2,
+    "clipped_quantity_total": 2800,
+    "skip_no_inventory_count": 8,
+    "no_inventory_same_day_new_lots_only_count": 1,
+    "quality_csv": "data\\training\\commercial_aerospace_isolated_sell_side_binding_quality_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_isolated_sell_side_binding_quality_ready_for_direction_triage"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "000738",
+      "session_count": 1,
+      "executed_session_count": 0,
+      "skip_no_inventory_count": 1,
+      "skip_mild_count": 0,
+      "protected_mark_to_close_total": 0.0,
+      "protected_mark_to_close_mean_if_executed": 0.0,
+      "same_day_reduce_close_clipped_total": 0
+    },
+    {
+      "symbol": "300045",
+      "session_count": 3,
+      "executed_session_count": 2,
+      "skip_no_inventory_count": 0,
+      "skip_mild_count": 1,
+      "protected_mark_to_close_total": 1474.5406,
+      "protected_mark_to_close_mean_if_executed": 737.2703,
+      "same_day_reduce_close_clipped_total": 0
+    },
+    {
+      "symbol": "300342",
+      "session_count": 5,
+      "executed_session_count": 3,
+      "skip_no_inventory_count": 2,
+      "skip_mild_count": 0,
+      "protected_mark_to_close_total": 9774.9552,
+      "protected_mark_to_close_mean_if_executed": 3258.3184,
+      "same_day_reduce_close_clipped_total": 2800
+    },
+    {
+      "symbol": "601698",
+      "session_count": 3,
+      "executed_session_count": 2,
+      "skip_no_inventory_count": 1,
+      "skip_mild_count": 0,
+      "protected_mark_to_close_total": 1220.7366,
+      "protected_mark_to_close_mean_if_executed": 610.3683,
+      "same_day_reduce_close_clipped_total": 0
+    },
+    {
+      "symbol": "688066",
+      "session_count": 6,
+      "executed_session_count": 3,
+      "skip_no_inventory_count": 1,
+      "skip_mild_count": 2,
+      "protected_mark_to_close_total": 999.252,
+      "protected_mark_to_close_mean_if_executed": 333.084,
+      "same_day_reduce_close_clipped_total": 0
+    },
+    {
+      "symbol": "688523",
+      "session_count": 6,
+      "executed_session_count": 2,
+      "skip_no_inventory_count": 3,
+      "skip_mild_count": 1,
+      "protected_mark_to_close_total": 1996.575,
+      "protected_mark_to_close_mean_if_executed": 998.2875,
+      "same_day_reduce_close_clipped_total": 0
+    }
+  ],
+  "trigger_tier_rows": [
+    {
+      "trigger_tier": "reversal_watch",
+      "order_count": 11,
+      "sell_quantity_total": 14500,
+      "protected_mark_to_close_total": 15429.6904,
+      "protected_mark_to_close_mean": 1402.6991
+    },
+    {
+      "trigger_tier": "severe_override_positive",
+      "order_count": 1,
+      "sell_quantity_total": 200,
+      "protected_mark_to_close_total": 36.369,
+      "protected_mark_to_close_mean": 36.369
+    }
+  ],
+  "clip_rows": [
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "same_day_reduce_close_requested": 2200,
+      "same_day_reduce_close_effective": 0,
+      "same_day_reduce_close_clipped": 2200,
+      "same_day_new_lots_protected": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300342",
+      "same_day_reduce_close_requested": 600,
+      "same_day_reduce_close_effective": 0,
+      "same_day_reduce_close_clipped": 600,
+      "same_day_new_lots_protected": 1400
+    }
+  ],
+  "skip_rows": [
+    {
+      "trade_date": "20251118",
+      "symbol": "688523",
+      "skip_reason": "mild_is_governance_only",
+      "same_day_new_lots_quantity": 700,
+      "start_of_day_quantity": 1400,
+      "eligible_intraday_sell_quantity": 1400
+    },
+    {
+      "trade_date": "20251126",
+      "symbol": "300045",
+      "skip_reason": "mild_is_governance_only",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 100,
+      "eligible_intraday_sell_quantity": 100
+    },
+    {
+      "trade_date": "20251217",
+      "symbol": "688066",
+      "skip_reason": "mild_is_governance_only",
+      "same_day_new_lots_quantity": 2300,
+      "start_of_day_quantity": 200,
+      "eligible_intraday_sell_quantity": 200
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 4000,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260116",
+      "symbol": "688066",
+      "skip_reason": "mild_is_governance_only",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 200,
+      "eligible_intraday_sell_quantity": 200
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "300342",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "601698",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "300342",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "688523",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    },
+    {
+      "trade_date": "20260403",
+      "symbol": "688066",
+      "skip_reason": "no_eligible_start_of_day_inventory",
+      "same_day_new_lots_quantity": 0,
+      "start_of_day_quantity": 0,
+      "eligible_intraday_sell_quantity": 0
+    }
+  ],
+  "interpretation": [
+    "V1.34CD converts the first isolated sell-side lane from a runnable surface into a binding-quality audit.",
+    "The point is to verify that the lane protects real carried inventory, preserves same-day new lots, and only clips later EOD actions when the carried bucket has already been consumed intraday."
+  ]
+}

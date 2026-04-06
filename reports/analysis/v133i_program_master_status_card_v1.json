@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133i_program_master_status_card_v1",
+    "line_count": 5,
+    "frozen_line_count": 5,
+    "authoritative_output": "program_master_status_card_ready_for_do_not_drift_posture",
+    "status_card_csv": "data\\training\\program_master_status_card_v1.csv"
+  },
+  "status_rows": [
+    {
+      "program_line": "cpo_lawful_eod_primary",
+      "status": "frozen_authoritative",
+      "current_variant": "v114t_cpo_replay_integrity_repair_v1",
+      "next_action": "rerun_under_exposure_and_sizing_reviews_on_integrity_repaired_replay_before_any_new_promotion"
+    },
+    {
+      "program_line": "commercial_aerospace_lawful_eod_primary",
+      "status": "frozen_authoritative",
+      "current_variant": "tail_weakdrift_full",
+      "next_action": "retain_frozen_primary_and_do_not_resume_board_local_replay_tuning"
+    },
+    {
+      "program_line": "commercial_aerospace_intraday_governance_package",
+      "status": "frozen_packaged",
+      "current_variant": "freeze_commercial_aerospace_intraday_governance_package_and_stop_local_micro_tuning",
+      "next_action": "wait_for_either_transfer_context_or_lawful_intraday_execution_unblock"
+    },
+    {
+      "program_line": "commercial_aerospace_intraday_execution_lane",
+      "status": "frozen",
+      "current_variant": "intraday_execution_change_gate",
+      "next_action": "wait_for_point_in_time_visibility_execution_simulator_and_separate_intraday_replay_lane"
+    },
+    {
+      "program_line": "transfer_program",
+      "status": "frozen",
+      "current_variant": "BK0808",
+      "next_action": "wait_for_real_v6_same_plane_emergence_of_600118_then_rerun_transfer_chain"
+    }
+  ],
+  "interpretation": [
+    "V1.33I compresses the whole active research program into a single master status card.",
+    "The goal is operational clarity: at this stage, discipline means not drifting into locally frozen lines without an explicit gate opening."
+  ]
+}

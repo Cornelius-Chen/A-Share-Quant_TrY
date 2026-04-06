@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116i_cpo_visible_only_wider_repaired_window_revalidation_v1",
+    "wider_window_day_count": 10,
+    "candidate_base_row_count": 10,
+    "recommended_next_posture": "use_wider_repaired_window_revalidation_to_decide_whether_visible_only_candidates_deserve_more_replay_expansion"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "pc2_only_q_0p25",
+      "candidate_base_row_count": 10,
+      "wider_window_day_count": 10,
+      "hit_row_count": 0,
+      "hit_day_count": 0,
+      "hit_day_rate": 0.0,
+      "positive_expectancy_hit_rate": 0.0,
+      "avg_expectancy_proxy_3d": 0.0,
+      "avg_max_adverse_return_3d": 0.0
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "candidate_base_row_count": 10,
+      "wider_window_day_count": 10,
+      "hit_row_count": 7,
+      "hit_day_count": 4,
+      "hit_day_rate": 0.4,
+      "positive_expectancy_hit_rate": 0.714286,
+      "avg_expectancy_proxy_3d": 0.128348,
+      "avg_max_adverse_return_3d": -0.036368
+    }
+  ],
+  "hit_rows": [
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_avg_return": 0.060855,
+      "board_breadth": 0.9,
+      "under_exposure_gap": 0.044335,
+      "pc1_score": -1800477055.125041,
+      "pc2_score": -346959614.839558,
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "under_exposure_gap": 0.049504,
+      "pc1_score": -2147065472.931145,
+      "pc2_score": 193747127.670887,
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_avg_return": 0.102375,
+      "board_breadth": 1.0,
+      "under_exposure_gap": 0.049504,
+      "pc1_score": -2191535200.700509,
+      "pc2_score": 294336787.679518,
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "under_exposure_gap": 0.028668,
+      "pc1_score": -1992500112.932292,
+      "pc2_score": -107289225.297167,
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_avg_return": 0.07548,
+      "board_breadth": 0.8,
+      "under_exposure_gap": 0.028668,
+      "pc1_score": -1686518902.258995,
+      "pc2_score": -327415092.587373,
+      "state_band": "pc1_low__pc2_low",
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "under_exposure_gap": 0.027412,
+      "pc1_score": -2389676170.764463,
+      "pc2_score": 234908796.649846,
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266
+    },
+    {
+      "variant_name": "pc1_or_pc2_q_0p25",
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_avg_return": 0.076915,
+      "board_breadth": 0.9,
+      "under_exposure_gap": 0.027412,
+      "pc1_score": -2106195442.122717,
+      "pc2_score": 369295055.754939,
+      "state_band": "pc1_low__pc2_high",
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604
+    }
+  ],
+  "interpretation": [
+    "V1.16I revalidates retained visible-only candidates against a wider repaired under-exposure window rather than the original strict nine-row sample.",
+    "This is still audit-only: the goal is to see whether the retained candidates have any explanatory coverage over broader repaired strong-day misses.",
+    "A candidate that cannot even touch wider repaired under-exposed windows should not receive broader replay expansion priority."
+  ]
+}

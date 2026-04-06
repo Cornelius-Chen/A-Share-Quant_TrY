@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "handoff_row_count": 4,
+    "manual_review_completed_count": 4,
+    "primary_completed_count": 1,
+    "independent_completed_count": 2,
+    "sibling_completed_count": 1,
+    "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_source_internal_manual_handoff_package_v1.csv",
+    "authoritative_output": "a_share_source_internal_manual_handoff_package_materialized"
+  },
+  "handoff_rows": [
+    {
+      "decision_unit_id": "allowlist_review_finance_sina_com_cn",
+      "host": "finance.sina.com.cn",
+      "review_priority_order": "1",
+      "dependency_state": "primary_review_completed",
+      "next_action": "await_runtime_promotion_binding",
+      "source_ids": "src_0002|src_0005|src_0011",
+      "source_names": "新浪财经-商业航天概念再度上演涨停潮 | 新浪财经-华菱线缆收购星鑫航天事件 | 新浪财经-西测测试商业航天核心赛道",
+      "source_urls": "https://finance.sina.com.cn/stock/jsy/2026-01-08/doc-inhfqyhp6590844.shtml | https://finance.sina.com.cn/roll/2026-01-21/doc-inhhzyea3582419.shtml | https://finance.sina.com.cn/stock/bxjj/2025-12-26/doc-inheautp8208706.shtml",
+      "source_tiers": "T2_reliable_media|T2_reliable_media|T2_reliable_media",
+      "authority_scores": "4|4|4",
+      "pending_field_count": "0",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "handoff_state": "manual_review_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stcn_com",
+      "host": "stcn.com",
+      "review_priority_order": "2",
+      "dependency_state": "independent_review_completed",
+      "next_action": "await_runtime_promotion_binding",
+      "source_ids": "src_0023",
+      "source_names": "证券时报 2024-09-25 CPO概念爆发",
+      "source_urls": "https://stcn.com/article/detail/1703076.html",
+      "source_tiers": "T2_reliable_media",
+      "authority_scores": "4",
+      "pending_field_count": "0",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "handoff_state": "manual_review_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_www_yicai_com",
+      "host": "www.yicai.com",
+      "review_priority_order": "2",
+      "dependency_state": "independent_review_completed",
+      "next_action": "await_runtime_promotion_binding",
+      "source_ids": "src_0019",
+      "source_names": "天孚通信互动平台/CPO产品进展",
+      "source_urls": "https://www.yicai.com/news/102780055.html",
+      "source_tiers": "T2_reliable_media",
+      "authority_scores": "4",
+      "pending_field_count": "0",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "handoff_state": "manual_review_completed_pending_runtime_promotion"
+    },
+    {
+      "decision_unit_id": "allowlist_review_stock_finance_sina_com_cn",
+      "host": "stock.finance.sina.com.cn",
+      "review_priority_order": "3",
+      "dependency_state": "sibling_review_completed",
+      "next_action": "await_runtime_promotion_binding",
+      "source_ids": "src_0018",
+      "source_names": "新易盛2024年报/2025Q1点评",
+      "source_urls": "https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/798851138700/index.phtml",
+      "source_tiers": "T2_reliable_media",
+      "authority_scores": "4",
+      "pending_field_count": "0",
+      "manual_license_outcome": "allow",
+      "manual_runtime_outcome": "allow",
+      "handoff_state": "manual_review_completed_pending_runtime_promotion"
+    }
+  ],
+  "interpretation": [
+    "All source-side closure context now fits in one handoff package with review order, dependency state, evidence URLs, and completed manual outcomes.",
+    "This package is now a runtime-promotion handoff rather than a manual-review preparation bundle."
+  ]
+}

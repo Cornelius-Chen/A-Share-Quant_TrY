@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134aw_commercial_aerospace_post_exit_reentry_seed_registry_v1",
+    "registry_count": 3,
+    "family_count": 2,
+    "dominant_reentry_family": "delayed_rebound_reentry_gap",
+    "registry_csv": "data\\training\\commercial_aerospace_post_exit_reentry_seed_registry_v1.csv",
+    "authoritative_output": "commercial_aerospace_post_exit_reentry_seed_registry_ready_for_direction_triage"
+  },
+  "registry_rows": [
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "month_bucket": "2026-01",
+      "reversal_minute": 4,
+      "pattern_key": "neg_1d|neg_3d|pos_5d",
+      "reentry_family": "deep_washout_reentry_gap",
+      "horizon_pnl_1d": -4600.0,
+      "horizon_pnl_3d": -7480.0,
+      "horizon_pnl_5d": 5000.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "reversal_minute": 41,
+      "pattern_key": "neg_1d|pos_3d|pos_5d",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "horizon_pnl_1d": -8364.0,
+      "horizon_pnl_3d": 11339.0,
+      "horizon_pnl_5d": 3077.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "reversal_minute": 12,
+      "pattern_key": "neg_1d|pos_3d|pos_5d",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "horizon_pnl_1d": -4875.0,
+      "horizon_pnl_3d": 15585.0,
+      "horizon_pnl_5d": 1920.0
+    }
+  ],
+  "interpretation": [
+    "V1.34AW freezes the first canonical seed registry for the next orthogonal supervision family: post-exit reentry gaps.",
+    "The point is not to solve reentry yet, only to convert the remaining rebound-cost misses into a governed seed set."
+  ]
+}

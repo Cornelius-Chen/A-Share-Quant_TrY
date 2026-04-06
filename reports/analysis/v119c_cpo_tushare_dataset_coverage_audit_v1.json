@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119c_cpo_tushare_dataset_coverage_audit_v1",
+    "daily_basic_row_count": 15665,
+    "moneyflow_row_count": 15665,
+    "stk_limit_row_count": 15700,
+    "critical_daily_basic_ready": true,
+    "critical_moneyflow_ready": true,
+    "critical_stk_limit_ready": true,
+    "recommended_next_posture": "replace_proxy_float_turnover_context_with_tushare_daily_basic_and_use_moneyflow_stk_limit_as_auxiliary_inputs"
+  },
+  "field_rows": [
+    {
+      "dataset": "daily_basic",
+      "field": "turnover_rate",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "daily_basic",
+      "field": "turnover_rate_f",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "daily_basic",
+      "field": "float_share",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "daily_basic",
+      "field": "free_share",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "daily_basic",
+      "field": "total_mv",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "daily_basic",
+      "field": "circ_mv",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "moneyflow",
+      "field": "net_mf_amount",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "moneyflow",
+      "field": "buy_lg_amount",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "moneyflow",
+      "field": "sell_lg_amount",
+      "row_count": 15665,
+      "nonnull_count": 15665,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "stk_limit",
+      "field": "up_limit",
+      "row_count": 15700,
+      "nonnull_count": 15700,
+      "coverage_ratio": 1.0
+    },
+    {
+      "dataset": "stk_limit",
+      "field": "down_limit",
+      "row_count": 15700,
+      "nonnull_count": 15700,
+      "coverage_ratio": 1.0
+    }
+  ],
+  "interpretation": [
+    "V1.19C audits whether the first Tushare-backed CPO datasets are clean enough to replace proxy free-float and turnover context.",
+    "The highest-priority purpose is to harden free-float, turnover-rate, and price-limit references before further training or replay work.",
+    "Moneyflow is treated as auxiliary context rather than a standalone branch input at this stage."
+  ]
+}

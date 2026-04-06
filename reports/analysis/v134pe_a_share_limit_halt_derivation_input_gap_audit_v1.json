@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "current_surface_field_count": 11,
+    "raw_daily_field_count": 12,
+    "directly_present_field_count": 2,
+    "missing_direct_field_count": 9,
+    "semantic_dependency_field_count": 4,
+    "status_csv": "data\\training\\a_share_limit_halt_derivation_input_gap_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_derivation_input_gap_explicit"
+  },
+  "rows": [
+    {
+      "input_class": "directly_present_in_raw_daily",
+      "field_count": 2,
+      "fields": "trade_date|symbol"
+    },
+    {
+      "input_class": "missing_directly_in_raw_daily",
+      "field_count": 9,
+      "fields": "board|is_st|is_suspended|limit_ratio|upper_limit_price|lower_limit_price|limit_up_hit|limit_down_hit|halt_or_suspend_flag"
+    },
+    {
+      "input_class": "semantic_dependency_cluster",
+      "field_count": 4,
+      "fields": "board|is_st|is_suspended|halt_or_suspend_flag"
+    }
+  ],
+  "interpretation": [
+    "Raw daily price/volume data is not the main replay-side gap anymore; it already covers the shadow horizon.",
+    "The primary limit-halt derivation gap is semantic: board/ST/suspension inputs are not present in the raw daily file and therefore cannot be silently inferred as if they were ordinary price fields."
+  ]
+}

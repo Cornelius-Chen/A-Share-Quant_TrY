@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cm_commercial_aerospace_cl_reduce_completion_direction_triage_v1",
+    "authoritative_status": "freeze_reduce_mainline_as_research_complete_and_leave_only_local_residue_maintenance",
+    "remaining_execution_blocker_count": 4,
+    "residue_seed_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_cl_reduce_completion_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reduce_mainline_research",
+      "status": "complete_enough_to_freeze",
+      "detail": "sell_side_binding_reference_ready = True, broad_reduce_tuning_stopped = True"
+    },
+    {
+      "component": "remaining_work",
+      "status": "residue_maintenance_only",
+      "detail": "local_residue_supervision_only = True, residue_seed_count = 4"
+    },
+    {
+      "component": "execution_closure",
+      "status": "still_infrastructure_blocked",
+      "detail": "remaining_execution_blocker_count = 4"
+    },
+    {
+      "component": "next_research_frontier",
+      "status": "do_not_switch_inside_this_step_but_reduce_is_ready_for_handoff",
+      "detail": "Reduce mainline research can now be considered frozen; any future effort should either stay local-residue only or wait for the later handoff to intraday add."
+    }
+  ],
+  "interpretation": [
+    "V1.34CM turns the reduce completion audit into a final direction judgment for the mainline research branch.",
+    "The correct reading is not that execution is solved. The correct reading is that broad reduce research is now finished enough to freeze, leaving only local residue maintenance under supervision."
+  ]
+}

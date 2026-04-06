@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122j_cpo_1min_supportive_family_proxy_label_audit_v1",
+    "supportive_row_count": 2016,
+    "base_row_count": 7700,
+    "supportive_add_enrichment": 0.11916306,
+    "supportive_reduce_enrichment": 0.0849062,
+    "supportive_close_enrichment": -0.03833874,
+    "recommended_next_posture": "triage_supportive_family_against_proxy_label_plane"
+  },
+  "label_rows": [
+    {
+      "label": "add_probe",
+      "supportive_count": 368,
+      "supportive_rate": 0.18253968,
+      "overall_count": 488,
+      "overall_rate": 0.06337662,
+      "enrichment_vs_overall": 0.11916306
+    },
+    {
+      "label": "close_probe",
+      "supportive_count": 51,
+      "supportive_rate": 0.02529762,
+      "overall_count": 490,
+      "overall_rate": 0.06363636,
+      "enrichment_vs_overall": -0.03833874
+    },
+    {
+      "label": "hold_probe",
+      "supportive_count": 1125,
+      "supportive_rate": 0.55803571,
+      "overall_count": 5573,
+      "overall_rate": 0.72376623,
+      "enrichment_vs_overall": -0.16573052
+    },
+    {
+      "label": "reduce_probe",
+      "supportive_count": 472,
+      "supportive_rate": 0.23412698,
+      "overall_count": 1149,
+      "overall_rate": 0.14922078,
+      "enrichment_vs_overall": 0.0849062
+    }
+  ],
+  "interpretation": [
+    "V1.22J checks whether the surviving supportive 1-minute family actually concentrates in add-probe rows rather than just looking directionally positive in aggregate.",
+    "This is the first direct bridge between the surviving 1-minute family and the stricter proxy action-timepoint label base.",
+    "The next step is to triage whether this enrichment is enough to keep the family alive under the new label plane."
+  ]
+}

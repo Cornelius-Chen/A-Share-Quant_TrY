@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "incumbent_theme_slug": "consumer_staples",
+    "incumbent_watch_symbol": "600887",
+    "challenger_theme_slug": "defense_industry",
+    "challenger_watch_symbol": "600760",
+    "support_delta_vs_incumbent": 4,
+    "review_state": "open_next_rotation_review",
+    "authoritative_status": "incumbent_vs_challenger_rotation_review_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "incumbent_hold",
+      "direction": "keep the current primary focus as the live anchor while the challenger advantage remains below the open-review threshold."
+    },
+    {
+      "component": "challenger_monitoring",
+      "direction": "continue watching whether challenger support keeps compounding across new second-source rows instead of reacting to a single current spike."
+    },
+    {
+      "component": "next_rotation_rule",
+      "direction": "only open the next accepted-rotation review once challenger support exceeds incumbent support by the configured margin."
+    }
+  ],
+  "interpretation": [
+    "The current review is a stopline between continuous challenger monitoring and a new full rotation plan.",
+    "It converts the next rotation question from intuition into a simple gated comparison between incumbent support and challenger support."
+  ]
+}

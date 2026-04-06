@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "loop_signal_mode": "passive_polling",
+    "interrupt_required": "false",
+    "signal_priority": "p2",
+    "reopen_target": "none",
+    "authoritative_output": "a_share_internal_hot_news_program_control_loop_signal_feed_materialized"
+  },
+  "rows": [
+    {
+      "component": "control_loop_signal_feed",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "loop_signal_mode",
+      "component_state": "materialized",
+      "metric": "loop_signal_mode",
+      "value": "passive_polling"
+    },
+    {
+      "component": "interrupt_required",
+      "component_state": "materialized",
+      "metric": "interrupt_required",
+      "value": "false"
+    },
+    {
+      "component": "reopen_target",
+      "component_state": "materialized",
+      "metric": "reopen_target",
+      "value": "none"
+    }
+  ],
+  "interpretation": [
+    "This is the narrowest control-loop-facing signal in the internal hot-news stack.",
+    "A consumer can use it to decide whether to stay passive, elevate attention, or reopen the top control packet."
+  ]
+}

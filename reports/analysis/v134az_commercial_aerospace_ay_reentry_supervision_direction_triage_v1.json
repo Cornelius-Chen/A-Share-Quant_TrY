@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134az_commercial_aerospace_ay_reentry_supervision_direction_triage_v1",
+    "authoritative_status": "freeze_reentry_supervision_spec_and_continue_seed_level_reentry_supervision",
+    "triage_csv": "data\\training\\commercial_aerospace_ay_reentry_supervision_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "post_exit_reentry_supervision_spec",
+      "status": "frozen",
+      "detail": "seed_count = 3, dominant_family = delayed_rebound_reentry_gap"
+    },
+    {
+      "component": "next_supervision_build",
+      "status": "approved_for_seed_level_reentry_supervision",
+      "detail": "Continue with seed-level rebuild timing supervision before any simulation or replay work."
+    },
+    {
+      "component": "reentry_simulator_lane",
+      "status": "still_blocked",
+      "detail": "No reentry simulator or replay lane is authorized from seed labels alone."
+    }
+  ],
+  "interpretation": [
+    "V1.34AZ converts the new reentry supervision spec into the next direction judgment.",
+    "The branch should move into seed-level reentry supervision, but still must not build replay-facing execution from these labels yet."
+  ]
+}

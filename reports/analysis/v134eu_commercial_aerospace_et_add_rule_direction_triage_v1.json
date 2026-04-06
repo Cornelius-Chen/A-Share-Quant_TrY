@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134eu_commercial_aerospace_et_add_rule_direction_triage_v1",
+    "authoritative_status": "keep_local_add_rule_candidates_as_draft_only",
+    "matched_count": 51,
+    "registry_row_count": 55,
+    "authoritative_rule": "the intraday-add frontier may keep local add rule candidates as governed seed rules once they preserve the frozen add-tier ordering, but broader false-positive auditing must come before any stronger claims"
+  },
+  "triage_rows": [
+    {
+      "component": "local_add_rule_candidates",
+      "status": "keep_local_add_rule_candidates_as_draft_only",
+      "rationale": "add seed rules are worth keeping only if they preserve the frozen four-tier add ordering before any broader minute-surface expansion"
+    },
+    {
+      "component": "intraday_add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "seed-rule coherence does not authorize add execution or replay binding"
+    },
+    {
+      "component": "reduce_mainline",
+      "status": "retain_frozen",
+      "rationale": "advancing add seed rules does not reopen reduce or inherit reduce execution authority"
+    }
+  ],
+  "interpretation": [
+    "V1.34EU turns the first add rule-candidate audit into a governance verdict.",
+    "The next correct move is a broader add false-positive audit over local minute sessions, not execution binding."
+  ]
+}

@@ -1,0 +1,13 @@
+﻿column,domain,visibility_rule,allowed_at_t,notes
+minute_ts,identity,exact minute close timestamp of the current 1min bar,yes,all other columns must be attributable to this timestamp or earlier
+symbol,identity,static session identity,yes,used for joining minute bars to seed-session governance context
+open_px/high_px/low_px/close_px,bar_price,current bar OHLC is only available after the 1min bar closes,close_of_bar_only,same-minute aggregates must not be visible before bar close
+bar_volume/bar_turnover,bar_volume,current bar aggregates are only available after the 1min bar closes,close_of_bar_only,no mid-bar completion assumptions
+ret_1m_lag1/ret_3m_lag1/ret_5m_lag1,lagged_path,computed only from fully closed bars strictly earlier than minute t,yes,prevents same-bar leakage inside path features
+draw_from_open_lag1/draw_15m_lag1/draw_30m_lag1,lagged_path,computed from the session path up to the last fully closed bar,yes,used to reconstruct severe/reversal/mild escalation without same-bar peeking
+close_location_lag1,lagged_path,"close-location over the last visible rolling window, ending at the prior closed bar",yes,must not use the current minute range before bar close
+phase_state_visible,governance_context,session-level state inherited from frozen EOD/minute governance and visible from the open,yes,"examples: preheat_window, impulse_window, weak_drift proxy context"
+event_state_visible,event_context,must carry first_visible_ts and only activate at or after that timestamp,first_visible_ts_or_later,"day-level events must be converted into minute-visible state updates, never backfilled earlier"
+pre_open_event_status,event_context,session-level status frozen before the open,yes,can be joined from the open because it is already decided before trading starts
+severity_tier_shadow,shadow_label,derived minute governance tier for supervision/shadow only,shadow_only,cannot be bound into the authoritative EOD lane
+first_visible_ts/source_cutoff_ts,lineage_guardrail,mandatory lineage columns for every event/state field,yes,core PIT audit fields; missing values fail the protocol

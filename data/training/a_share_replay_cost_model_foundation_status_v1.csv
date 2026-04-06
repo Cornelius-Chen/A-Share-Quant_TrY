@@ -1,0 +1,4 @@
+﻿component,component_state,artifact_path,coverage_note
+cost_model_registry,materialized_foundation_stub,data\reference\info_center\replay_registry\a_share_replay_cost_model_registry_v1.csv,cost_model_count = 3
+shadow_execution_journal,materialized_stub_surface,data\reference\info_center\replay_registry\a_share_shadow_execution_journal_stub_v1.csv,execution_journal_stub_count = 17
+cost_model_residual,materialized_named_residuals,data\reference\info_center\replay_registry\a_share_replay_cost_model_residual_v1.csv,limit_hit_count = 22

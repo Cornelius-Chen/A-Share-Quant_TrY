@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "completed_step_count": 3,
+    "pending_step_count": 1,
+    "authoritative_status": "source_runtime_followthrough_should_continue_only_through_scheduler_activation"
+  },
+  "triage_rows": [
+    {
+      "component": "completed_prework",
+      "direction": "retain_completed candidate-selection and policy-binding steps without reopening them"
+    },
+    {
+      "component": "remaining_step",
+      "direction": "treat scheduler runtime binding as the only remaining source-side followthrough step"
+    },
+    {
+      "component": "excluded_adapters",
+      "direction": "keep non-html adapters outside this lane during scheduler followthrough"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime followthrough is now a checklist problem with one remaining pending step, not a multi-branch activation problem.",
+    "This keeps the lane narrow and avoids reopening excluded adapters."
+  ]
+}

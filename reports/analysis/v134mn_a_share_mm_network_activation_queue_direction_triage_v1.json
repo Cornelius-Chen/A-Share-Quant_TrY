@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "allowlist_queue_count": 20,
+    "runtime_queue_count": 3,
+    "authoritative_status": "network_activation_queue_surface_complete_enough_to_freeze_until_queue_processing"
+  },
+  "triage_rows": [
+    {
+      "component": "allowlist_decision_queue",
+      "direction": "process_license_terms_and_allowlist_decisions_before_any_host_activation"
+    },
+    {
+      "component": "runtime_deployment_queue",
+      "direction": "deploy_scheduler_runtime_only_after_allowlist_progress_and gate alignment"
+    }
+  ],
+  "interpretation": [
+    "The source-side path has reached a queue-processing stopline.",
+    "Further progress now requires actual review decisions or scheduler deployment work, not more inventory scaffolding."
+  ]
+}

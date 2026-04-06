@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "intake_step_count": 4,
+    "closed_step_count": 4,
+    "artifact_path": "data\\reference\\info_center\\market_registry\\a_share_index_daily_source_intake_checklist_v1.csv",
+    "authoritative_output": "a_share_index_daily_source_intake_checklist_materialized"
+  },
+  "checklist_rows": [
+    {
+      "intake_step": "new_raw_source_present",
+      "required_evidence": "raw_file_or_feed_arrival",
+      "success_condition": "source_extends_beyond_2024_12_31",
+      "current_state": "closed"
+    },
+    {
+      "intake_step": "source_horizon_matches_shadow_window",
+      "required_evidence": "coverage_end_ge_shadow_horizon_end",
+      "success_condition": "coverage_end_reaches_2026_03_28_or_beyond",
+      "current_state": "closed"
+    },
+    {
+      "intake_step": "materialization_review_reopen",
+      "required_evidence": "new_source_registered_and_reviewable",
+      "success_condition": "index_daily_registry_materialization_can_be_reaudited",
+      "current_state": "closed"
+    },
+    {
+      "intake_step": "paired_surface_promotion_recheck",
+      "required_evidence": "index_daily_boundary_moves",
+      "success_condition": "daily_market_promotion_can_be_reconsidered",
+      "current_state": "closed"
+    }
+  ],
+  "interpretation": [
+    "Replay-side future movement now has a single intake checklist instead of requiring re-reading multiple blocker cards.",
+    "No internal work can reopen this lane without new raw index source arrival, but the intake checklist now defines exactly how that reopening should be handled."
+  ]
+}

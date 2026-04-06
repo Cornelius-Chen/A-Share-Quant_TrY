@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gy_commercial_aerospace_gx_unlock_vacancy_direction_triage_v1",
+    "authoritative_status": "retain_post_lockout_unlock_vacancy_audit_and_keep_handoff_blocked_until_post_lockout_board_surface_exists",
+    "lockout_end_trade_date": "20260320",
+    "post_lockout_trade_date_count": 10,
+    "derived_board_surface_present_count": 0,
+    "raw_only_vacancy_count": 10,
+    "post_lockout_unlock_positive_count": 0,
+    "post_lockout_unlock_worthy_count": 0,
+    "authoritative_rule": "reentry-to-add handoff stays blocked after lockout not because raw dates disappear but because post-lockout board-state derivation has not yet produced any surface on which unlock context could be judged"
+  },
+  "triage_rows": [
+    {
+      "component": "post_lockout_raw_calendar",
+      "status": "retain",
+      "rationale": "post-lockout local intraday dates do exist, so the vacancy is not a raw-data absence"
+    },
+    {
+      "component": "derived_board_surface",
+      "status": "dominant_blocker",
+      "rationale": "every post-lockout raw trading date still lacks the derived board-state surface needed to evaluate unlock context"
+    },
+    {
+      "component": "unlock_context",
+      "status": "keep_absent",
+      "rationale": "without post-lockout derived board coverage there can be no lawful unlock-positive or unlock-worthy context"
+    },
+    {
+      "component": "reentry_to_add_handoff",
+      "status": "keep_blocked",
+      "rationale": "handoff remains blocked because the bridge has no post-lockout board surface to reopen into"
+    },
+    {
+      "component": "execution_authority",
+      "status": "still_blocked",
+      "rationale": "this vacancy audit clarifies a missing context layer and does not promote execution"
+    }
+  ],
+  "interpretation": [
+    "V1.34GY converts the vacancy audit into the current governance verdict for the shadow replay lane.",
+    "The next blocker is now narrower than before: post-lockout local dates exist, but the board-level derived surface has not been extended beyond lockout end, so unlock consultation cannot yet restart."
+  ]
+}

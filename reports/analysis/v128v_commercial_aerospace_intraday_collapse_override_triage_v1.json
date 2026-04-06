@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128v_commercial_aerospace_intraday_collapse_override_triage_v1",
+    "proxy_hit_order_count": 2,
+    "retained_failure_coverage_rate": 1.0,
+    "watch_only_trigger_count": 0,
+    "authoritative_status": "retain_supervision_only_not_replay_facing",
+    "next_direction": "keep building intraday override supervision objects and delay promotion until lawful minute-level support exists"
+  },
+  "retained_rows": [
+    {
+      "status": "retain_as_supervision_only_override_proto",
+      "why": "proxy cleanly isolates retained severe intraday-collapse failures and does not fire on broader watch-only cases",
+      "next_use": "future intraday emergency-exit grammar once minute-level lawful support exists"
+    }
+  ],
+  "blocked_rows": [
+    {
+      "status": "blocked_for_current_replay",
+      "why": "proxy depends on execution-day path information and therefore cannot be translated into current lawful EOD replay"
+    }
+  ],
+  "interpretation": [
+    "V1.28V freezes the first intraday-collapse-override supervision proto.",
+    "It is worth keeping as a future intraday governance object, but it is explicitly blocked from current EOD replay promotion."
+  ]
+}

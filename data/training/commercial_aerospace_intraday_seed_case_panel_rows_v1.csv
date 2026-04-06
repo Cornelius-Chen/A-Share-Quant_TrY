@@ -1,0 +1,7 @@
+﻿signal_trade_date,execution_trade_date,symbol,action,severity_tier,phase_window_semantic,event_state,first_mild_minute,first_reversal_minute,first_severe_minute,session_close_return_pct,session_low_drawdown_pct
+20251117,20251118,688523,add,mild_override_watch,preheat_window,event_neutral,33,43,,-2.518,-5.2878
+20251216,20251217,688066,add,mild_override_watch,preheat_window,event_neutral,23,36,,-4.329,-5.6638
+20260112,20260113,000738,open,reversal_watch,impulse_window,continuation_active,3,4,25,-7.8296,-8.6815
+20260112,20260113,601698,add,severe_override_positive,impulse_window,continuation_active,,106,3,-9.987,-9.987
+20260123,20260126,300045,add,reversal_watch,impulse_window,continuation_active,50,60,,-7.3202,-7.7394
+20260123,20260126,300342,add,severe_override_positive,impulse_window,continuation_active,51,83,152,-9.0,-9.7

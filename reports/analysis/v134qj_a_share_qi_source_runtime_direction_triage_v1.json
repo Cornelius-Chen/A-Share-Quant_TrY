@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "priority_runtime_candidate_count": 1,
+    "lane_row_count": 1,
+    "unsatisfied_precondition_count": 1,
+    "authoritative_status": "source_runtime_promotion_should_progress_through_a_single_scheduler_gate_lane"
+  },
+  "triage_rows": [
+    {
+      "component": "html_article_runtime_lane",
+      "direction": "treat_as_the_only_first_runtime_promotion_candidate_lane"
+    },
+    {
+      "component": "runtime_stub_replacement_lane",
+      "direction": "treat_as_stub-replacement lane foundation_ready_support_for_the_single_html_article_runtime_followthrough_lane"
+    },
+    {
+      "component": "excluded_runtime_adapters",
+      "direction": "keep_social_and_reserved_official_adapters_outside_the_first_runtime_lane"
+    },
+    {
+      "component": "remaining_gate",
+      "direction": "close_scheduler_runtime_promotion_before_any_source-side runtime opening"
+    }
+  ],
+  "interpretation": [
+    "Source-side runtime work should now move through one scheduler-gated lane supported by a single materialized stub-replacement lane instead of broad activation language.",
+    "This narrows the remaining source backlog to a single operational gate."
+  ]
+}

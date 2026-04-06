@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lq_a_share_review_activation_audit_v1",
+    "review_registry_count": 3,
+    "low_confidence_queue_count": 45,
+    "contradiction_queue_count": 15,
+    "attention_soft_queue_count": 4,
+    "status_csv": "data\\training\\a_share_review_activation_status_v1.csv",
+    "authoritative_output": "a_share_review_activation_ready_for_direction_triage"
+  },
+  "rows": [
+    {
+      "component": "review_activation_registry",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\automation_registry\\a_share_review_activation_registry_v1.csv",
+      "coverage_note": "review_registry_count = 3"
+    },
+    {
+      "component": "low_confidence_event_queue",
+      "component_state": "active_bootstrap_queue",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_low_confidence_event_queue_v1.csv",
+      "coverage_note": "low_confidence_queue_count = 45"
+    },
+    {
+      "component": "contradiction_queue",
+      "component_state": "active_bootstrap_queue",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_contradiction_queue_v1.csv",
+      "coverage_note": "contradiction_queue_count = 15"
+    },
+    {
+      "component": "attention_soft_candidate_queue",
+      "component_state": "active_bootstrap_queue",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_attention_soft_candidate_queue_v1.csv",
+      "coverage_note": "attention_soft_queue_count = 4"
+    }
+  ],
+  "interpretation": [
+    "Review is no longer just a job contract. The information center now materializes real bootstrap queues for low-confidence events, contradictions, and soft attention candidates.",
+    "This is the minimum human-in-the-loop layer needed before more aggressive source activation and live-like gates can be considered."
+  ]
+}

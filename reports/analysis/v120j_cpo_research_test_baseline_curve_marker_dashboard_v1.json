@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120j_cpo_research_test_baseline_curve_marker_dashboard_v1",
+    "curve_marker_dashboard_png": "reports\\analysis\\v120j_cpo_research_test_baseline_curve_marker_dashboard_v1.png",
+    "marker_count": 20,
+    "final_equity": 5844604.996,
+    "final_cash": 401633.496
+  },
+  "marker_rows": [
+    {
+      "trade_date": "2023-05-04",
+      "symbol": "300502",
+      "label": "OPEN",
+      "weight": 0.0748,
+      "equity": 995749.1424,
+      "held_symbols_after_close": "300502"
+    },
+    {
+      "trade_date": "2023-06-08",
+      "symbol": "300308",
+      "label": "OPEN",
+      "weight": 0.0955,
+      "equity": 986187.7504,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-06-15",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0536,
+      "equity": 1019664.0504,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-06-15",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0336,
+      "equity": 1019664.0504,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-09-25",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0666,
+      "equity": 947533.112,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-09-25",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.022,
+      "equity": 947533.112,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-12-11",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0938,
+      "equity": 1002476.6784,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-12-11",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.053,
+      "equity": 1002476.6784,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2023-12-21",
+      "symbol": "300502",
+      "label": "ADD",
+      "weight": 0.0123,
+      "equity": 972801.5534,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-01-19",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0674,
+      "equity": 963419.3118,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-01-19",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0417,
+      "equity": 963419.3118,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-02-06",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0996,
+      "equity": 1025095.6366,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-02-07",
+      "symbol": "300308",
+      "label": "SADD",
+      "weight": 0.0985,
+      "equity": 1031426.8918,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-02-07",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0975,
+      "equity": 1031426.8918,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-03-18",
+      "symbol": "300308",
+      "label": "CLOSE",
+      "weight": 0.1609,
+      "equity": 1468456.3168,
+      "held_symbols_after_close": "300308,300502"
+    },
+    {
+      "trade_date": "2024-04-19",
+      "symbol": "300757",
+      "label": "OPEN",
+      "weight": 0.0955,
+      "equity": 1363649.896,
+      "held_symbols_after_close": "300308,300502,300757"
+    },
+    {
+      "trade_date": "2025-06-04",
+      "symbol": "300502",
+      "label": "SADD",
+      "weight": 0.0974,
+      "equity": 1238044.516,
+      "held_symbols_after_close": "300308,300502,300757"
+    },
+    {
+      "trade_date": "2025-07-25",
+      "symbol": "300308",
+      "label": "ADD",
+      "weight": 0.093,
+      "equity": 2213699.116,
+      "held_symbols_after_close": "300308,300502,300757"
+    },
+    {
+      "trade_date": "2025-09-15",
+      "symbol": "300308",
+      "label": "CLOSE",
+      "weight": 0.205,
+      "equity": 4598405.616,
+      "held_symbols_after_close": "300308,300502,300757"
+    },
+    {
+      "trade_date": "2025-09-30",
+      "symbol": "300502",
+      "label": "REDUCE",
+      "weight": 0.2334,
+      "equity": 4688674.996,
+      "held_symbols_after_close": "300308,300502,300757"
+    }
+  ]
+}

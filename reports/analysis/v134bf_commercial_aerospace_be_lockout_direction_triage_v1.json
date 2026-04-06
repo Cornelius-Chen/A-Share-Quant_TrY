@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bf_commercial_aerospace_be_lockout_direction_triage_v1",
+    "authoritative_status": "freeze_board_cooling_lockout_supervision_and_continue_board_level_governance_only",
+    "triage_csv": "data\\training\\commercial_aerospace_be_lockout_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "board_cooling_lockout_seed",
+      "status": "retained_as_supervision",
+      "detail": "lockout_seed_count = 1, earliest_lockout_seed_trade_date = 20260115"
+    },
+    {
+      "component": "reentry_ladder_override",
+      "status": "approved_as_upper_governance_veto",
+      "detail": "When board-level lockout is active, seed-level reentry ladder should remain subordinate. suggested_min_cooldown_trading_days = 60."
+    },
+    {
+      "component": "execution_binding",
+      "status": "still_blocked",
+      "detail": "Lockout remains supervision-only and does not reopen replay or authorize live binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34BF converts the new board-level cooling audit into the next direction judgment.",
+    "The lockout seed may sit above seed-level reentry supervision, but it remains governance-only and does not authorize execution binding."
+  ]
+}

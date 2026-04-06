@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "overlay_row_count": 15,
+    "excluded_boundary_count": 2,
+    "overlay_path": "data\\reference\\info_center\\replay_registry\\a_share_shadow_execution_candidate_journal_overlay_v1.csv",
+    "status_csv": "data\\training\\a_share_shadow_execution_candidate_journal_overlay_status_v1.csv",
+    "authoritative_output": "a_share_shadow_execution_candidate_journal_overlay_materialized"
+  },
+  "rows": [
+    {
+      "component": "shadow_execution_candidate_journal_overlay",
+      "component_state": "materialized_shadow_only_candidate_journal_overlay",
+      "overlay_row_count": 15,
+      "excluded_boundary_count": 2
+    },
+    {
+      "component": "overlay_boundary_policy",
+      "component_state": "retain_boundary_rows_outside_candidate_overlay",
+      "overlay_row_count": 15,
+      "excluded_boundary_count": 2
+    }
+  ],
+  "interpretation": [
+    "The candidate journal overlay turns the 15-row eligible subset into a concrete shadow-only journal-shaped surface.",
+    "That makes replay internal build more operational without pretending the two excluded boundary rows belong inside the same journal lane."
+  ]
+}

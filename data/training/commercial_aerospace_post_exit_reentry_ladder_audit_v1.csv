@@ -1,0 +1,13 @@
+﻿trade_date,symbol,ladder_step,day_range,state,action
+20260113,000738,1,T+0,same_day_chase_blocked,block_same_day_chase
+20260113,000738,2,T+1~T+4,observation_only,observe_only_no_rebuild
+20260113,000738,3,T+5+,base_then_rebuild_watch,open_rebuild_watch
+20260113,000738,4,post_watch_confirmation,late_base_confirmation,continue_base_watch_not_rebuild_chase
+20260120,300342,1,T+0,same_day_chase_blocked,block_same_day_chase
+20260120,300342,2,T+1~T+2,observation_only,observe_only_no_rebuild
+20260120,300342,3,T+3+,reclaim_rebuild_watch,open_rebuild_watch
+20260120,300342,4,post_watch_confirmation,persistent_reclaim_confirmation,allow_stronger_rebuild_observation
+20260120,688523,1,T+0,same_day_chase_blocked,block_same_day_chase
+20260120,688523,2,T+1~T+2,observation_only,observe_only_no_rebuild
+20260120,688523,3,T+3+,reclaim_rebuild_watch,open_rebuild_watch
+20260120,688523,4,post_watch_confirmation,persistent_reclaim_confirmation,allow_stronger_rebuild_observation

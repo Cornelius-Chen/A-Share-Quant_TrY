@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118m_cpo_breakout_damage_soft_component_time_split_v1",
+    "alpha": 0.0,
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.736111,
+    "min_test_balanced_accuracy": 0.666667,
+    "baseline_mean_test_balanced_accuracy": 0.736111,
+    "stability_posture": "no_material_time_split_gain",
+    "recommended_next_posture": "send_KLM_to_triage_and_decide_whether_active_soft_integration_is_worthkeeping"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_best_threshold": 489402000.0,
+      "train_best_balanced_accuracy": 0.9,
+      "test_balanced_accuracy": 0.666667,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.333333
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_best_threshold": 663769000.0,
+      "train_best_balanced_accuracy": 0.8,
+      "test_balanced_accuracy": 0.666667,
+      "test_positive_recall": 0.333333,
+      "test_negative_reject_rate": 1.0
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_best_threshold": 489402000.0,
+      "train_best_balanced_accuracy": 0.714286,
+      "test_balanced_accuracy": 0.875,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.75
+    }
+  ],
+  "interpretation": [
+    "V1.18M checks whether the breakout-damage soft component changes chronology behavior when attached to the live cooling candidate.",
+    "If time-split behavior stays unchanged, the component may still be worth archiving but does not deserve active integration effort."
+  ]
+}

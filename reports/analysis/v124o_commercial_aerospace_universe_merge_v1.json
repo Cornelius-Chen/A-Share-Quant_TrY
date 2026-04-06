@@ -1,0 +1,481 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124o_commercial_aerospace_universe_merge_v1",
+    "base_count": 39,
+    "wave2_added_count": 12,
+    "merged_count": 51,
+    "group_counts": {
+      "卖铲组": 18,
+      "同走势镜像组": 15,
+      "概念助推组": 6,
+      "正式组": 12
+    },
+    "recommended_next_posture": "use_merged_universe_as_input_to_universe_triage_or_control_extraction_depending_adversarial_review"
+  },
+  "merged_rows": [
+    {
+      "symbol": "001208",
+      "name": "华菱线缆",
+      "group": "卖铲组",
+      "subgroup": "特种线缆/卖铲人",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "实质切入航空航天线缆与并购星鑫航天事件，非纯概念。"
+    },
+    {
+      "symbol": "001270",
+      "name": "*ST铖昌",
+      "group": "卖铲组",
+      "subgroup": "星载相控阵T/R芯片",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇产业报道明确其在低轨卫星与星载领域持续发力，是商业航天核心芯片卖铲人。"
+    },
+    {
+      "symbol": "002342",
+      "name": "巨力索具",
+      "group": "卖铲组",
+      "subgroup": "火箭回收/地面装置",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺细分方向明确给出可回收火箭产品支持。"
+    },
+    {
+      "symbol": "002413",
+      "name": "雷科防务",
+      "group": "卖铲组",
+      "subgroup": "有源相控阵天线",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "与通宇通讯并列被点名。"
+    },
+    {
+      "symbol": "002792",
+      "name": "通宇通讯",
+      "group": "卖铲组",
+      "subgroup": "有源相控阵天线",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪直接点名为有源相控阵天线细分龙头。"
+    },
+    {
+      "symbol": "300065",
+      "name": "海兰信",
+      "group": "卖铲组",
+      "subgroup": "海上回收系统",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺给出海南商发回收系统中标线索。"
+    },
+    {
+      "symbol": "300129",
+      "name": "泰胜风能",
+      "group": "卖铲组",
+      "subgroup": "箭体/贮箱/回收设施",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺给出与整箭商合作布局火箭结构与回收设施。"
+    },
+    {
+      "symbol": "300900",
+      "name": "广联航空",
+      "group": "卖铲组",
+      "subgroup": "航天结构件/制造配套",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "火箭回收与航天制造链条中反复出现，工业位置更清晰。"
+    },
+    {
+      "symbol": "301005",
+      "name": "超捷股份",
+      "group": "卖铲组",
+      "subgroup": "箭体结构件",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺列出其为蓝箭/天兵/中科宇航提供箭体大部段等。"
+    },
+    {
+      "symbol": "301306",
+      "name": "西测测试",
+      "group": "卖铲组",
+      "subgroup": "检测验证/质量守门人",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇报道把它作为商业航天核心赛道强势票，同时具备元器件到整机全流程测试验证能力。"
+    },
+    {
+      "symbol": "600862",
+      "name": "中航高科",
+      "group": "卖铲组",
+      "subgroup": "航空航天复合材料",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "航天强国与航空航天材料链条中的高置信卖铲。"
+    },
+    {
+      "symbol": "603267",
+      "name": "鸿远电子",
+      "group": "卖铲组",
+      "subgroup": "电子元器件",
+      "confidence": "medium",
+      "source_layer": "wave2",
+      "reason": "常见于军工航天高端元件链，但商业航天直接度略弱于前述票。"
+    },
+    {
+      "symbol": "688102",
+      "name": "斯瑞新材",
+      "group": "卖铲组",
+      "subgroup": "高温合金/材料",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "既在蓝箭相关资本映射中出现，也在高端材料链里站得住。"
+    },
+    {
+      "symbol": "688122",
+      "name": "西部超导",
+      "group": "卖铲组",
+      "subgroup": "钛合金/超导材料",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "高端材料与航天应用强相关。"
+    },
+    {
+      "symbol": "688143",
+      "name": "长盈通",
+      "group": "卖铲组",
+      "subgroup": "光纤器件/上游材料",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "在火箭/卫星配套材料链条中多次出现。"
+    },
+    {
+      "symbol": "688270",
+      "name": "臻镭科技",
+      "group": "卖铲组",
+      "subgroup": "星载射频芯片/微系统",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "卫星互联网与商业航天报道多次点名，属于星载收发链路核心芯片供应商。"
+    },
+    {
+      "symbol": "688539",
+      "name": "高华科技",
+      "group": "卖铲组",
+      "subgroup": "传感器/检测配套",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "火箭回收及航天电子产业链梳理中多次出现。"
+    },
+    {
+      "symbol": "688636",
+      "name": "智明达",
+      "group": "卖铲组",
+      "subgroup": "航天电子/嵌入式计算",
+      "confidence": "high",
+      "source_layer": "wave2",
+      "reason": "多篇产业链梳理将其纳入火箭/卫星电子链。"
+    },
+    {
+      "symbol": "000547",
+      "name": "航天发展",
+      "group": "同走势镜像组",
+      "subgroup": "情绪龙头/概念高辨识",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺和东方财富多次点名其为商业航天高辨识龙头。"
+    },
+    {
+      "symbol": "000768",
+      "name": "中航西飞",
+      "group": "同走势镜像组",
+      "subgroup": "大飞机/军工镜像",
+      "confidence": "medium",
+      "source_layer": "wave2",
+      "reason": "更偏大飞机，但常作为航天军工风险偏好的大票镜像。"
+    },
+    {
+      "symbol": "000901",
+      "name": "航天科技",
+      "group": "同走势镜像组",
+      "subgroup": "高辨识镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇行情报道高频点名。"
+    },
+    {
+      "symbol": "002361",
+      "name": "神剑股份",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇行情报道高频点名。"
+    },
+    {
+      "symbol": "002519",
+      "name": "银河电子",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "东方财富与新浪近期涨停名单中高频出现。"
+    },
+    {
+      "symbol": "002865",
+      "name": "钧达股份",
+      "group": "同走势镜像组",
+      "subgroup": "跨细分热点镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "强势名单反复出现，适合当扩散镜像观察。"
+    },
+    {
+      "symbol": "300102",
+      "name": "乾照光电",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇行情报道高频点名。"
+    },
+    {
+      "symbol": "301079",
+      "name": "邵阳液压",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪、东方财富高频强势名单。"
+    },
+    {
+      "symbol": "600135",
+      "name": "乐凯胶片",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪与东方财富名单中出现。"
+    },
+    {
+      "symbol": "600316",
+      "name": "洪都航空",
+      "group": "同走势镜像组",
+      "subgroup": "军工高辨识镜像",
+      "confidence": "medium",
+      "source_layer": "wave2",
+      "reason": "航天军工风险偏好抬升时常与商业航天同振。"
+    },
+    {
+      "symbol": "600775",
+      "name": "南京熊猫",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪强势主升浪名单中出现。"
+    },
+    {
+      "symbol": "600869",
+      "name": "远东股份",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪强势名单中出现。"
+    },
+    {
+      "symbol": "601399",
+      "name": "国机重装",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪涨停主升浪名单中出现。"
+    },
+    {
+      "symbol": "603698",
+      "name": "航天工程",
+      "group": "同走势镜像组",
+      "subgroup": "工程建设/高辨识镜像",
+      "confidence": "medium",
+      "source_layer": "wave2",
+      "reason": "名称与题材耦合度高，容易成为情绪镜像。"
+    },
+    {
+      "symbol": "605123",
+      "name": "派克新材",
+      "group": "同走势镜像组",
+      "subgroup": "材料/高弹性镜像",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "新浪与东方财富名单中出现。"
+    },
+    {
+      "symbol": "002202",
+      "name": "金风科技",
+      "group": "概念助推组",
+      "subgroup": "参股蓝箭航天/资本映射",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "东方财富和社区汇总都指向其为蓝箭航天重要股权关联方。"
+    },
+    {
+      "symbol": "002471",
+      "name": "中超控股",
+      "group": "概念助推组",
+      "subgroup": "主题扩散助推/高弹性",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇盘面与资金流报道把它列为商业航天概念主力净流入和强势涨停代表，更像A股主题助推主力。"
+    },
+    {
+      "symbol": "002565",
+      "name": "顺灏股份",
+      "group": "概念助推组",
+      "subgroup": "太空算力/概念强弹性",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "同花顺与新浪多次作为强势概念股提及。"
+    },
+    {
+      "symbol": "600783",
+      "name": "鲁信创投",
+      "group": "概念助推组",
+      "subgroup": "参股蓝箭航天/资本映射",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "东方财富、新浪、社区都把它列为典型商业航天助推主力。"
+    },
+    {
+      "symbol": "603131",
+      "name": "上海沪工",
+      "group": "概念助推组",
+      "subgroup": "卫星制造/概念助推",
+      "confidence": "medium",
+      "source_layer": "wave2",
+      "reason": "A股卫星制造与商业航天老题材高弹性标的。"
+    },
+    {
+      "symbol": "603601",
+      "name": "再升科技",
+      "group": "概念助推组",
+      "subgroup": "航天保温材料/概念弹性",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "具备真实航天材料和SpaceX供应逻辑，但公开资料显示当前营收仍非商业航天主导，更像高价值概念助推。"
+    },
+    {
+      "symbol": "000738",
+      "name": "航发控制",
+      "group": "正式组",
+      "subgroup": "核心控制/稳定支撑",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "当前本地 snapshot 已将其识别为商业航天/航天航空交叉中的稳定核心支撑。"
+    },
+    {
+      "symbol": "002085",
+      "name": "万丰奥威",
+      "group": "正式组",
+      "subgroup": "低空/飞行器平台龙头",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "当前本地 snapshot 已将其识别为商业航天/航空交叉中的液态主驱动之一，必须进入正式组。"
+    },
+    {
+      "symbol": "002465",
+      "name": "海格通信",
+      "group": "正式组",
+      "subgroup": "通信导航配套",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "近期ETF持仓和板块强势名单高频出现。"
+    },
+    {
+      "symbol": "003009",
+      "name": "中天火箭",
+      "group": "正式组",
+      "subgroup": "火箭细分龙头",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "行业评论反复归入高纯度商业航天链。"
+    },
+    {
+      "symbol": "300045",
+      "name": "华力创通",
+      "group": "正式组",
+      "subgroup": "卫星导航/通信配套",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "ETF与热点报道中多次出现。"
+    },
+    {
+      "symbol": "300342",
+      "name": "天银机电",
+      "group": "正式组",
+      "subgroup": "卫星/航天配套",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "ETF近期强势持仓之一。"
+    },
+    {
+      "symbol": "600118",
+      "name": "中国卫星",
+      "group": "正式组",
+      "subgroup": "卫星整机/核心龙头",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多源报道反复作为商业航天和卫星制造核心龙头出现。"
+    },
+    {
+      "symbol": "600879",
+      "name": "航天电子",
+      "group": "正式组",
+      "subgroup": "核心配套",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "ETF持仓与热点名单反复出现，属于主驱动链条。"
+    },
+    {
+      "symbol": "601698",
+      "name": "中国卫通",
+      "group": "正式组",
+      "subgroup": "卫星运营/核心龙头",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "板块高辨识龙头，概念过热时也被监管风险提示。"
+    },
+    {
+      "symbol": "688066",
+      "name": "航天宏图",
+      "group": "正式组",
+      "subgroup": "卫星应用/遥感服务",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "多篇行业评论列作下游运营服务龙头。"
+    },
+    {
+      "symbol": "688523",
+      "name": "航天环宇",
+      "group": "正式组",
+      "subgroup": "卫星/航天器配套",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "近期活跃且在ETF/热点报道中持续出现。"
+    },
+    {
+      "symbol": "688568",
+      "name": "中科星图",
+      "group": "正式组",
+      "subgroup": "卫星数据应用",
+      "confidence": "base_retained",
+      "source_layer": "wave1",
+      "reason": "近期盘中强势名单高频出现。"
+    }
+  ],
+  "interpretation": [
+    "V1.24O merges the retained wave1 universe and the confidence-tagged wave2 additions into one working table.",
+    "This is not a claim that every merged name is equally authoritative.",
+    "It is simply the cleanest handoff artifact for the next step."
+  ]
+}

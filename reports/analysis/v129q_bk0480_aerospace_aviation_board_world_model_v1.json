@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129q_bk0480_aerospace_aviation_board_world_model_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "next_phase": "role_grammar",
+    "board_row_count": 92,
+    "active_day_count": 72,
+    "board_composite": 0.505195,
+    "role_row_count": 2,
+    "recommended_next_posture": "start_bk0480_role_grammar_from_dual_core_world_model_with_local_reset"
+  },
+  "board_label_summary": {
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "board_character": "adjacent_aerospace_dual_core_board",
+    "board_strength_posture": "narrower_adjacent_transfer_target_after_commercial_aerospace_freeze",
+    "stable_core_primary": "000738",
+    "high_quality_dual_core_support": "600118"
+  },
+  "world_model_prior": {
+    "thesis": "BK0480 looks like the correct next transfer-preparation board because it is adjacent to commercial aerospace but structurally narrower, forcing portable grammar to prove itself on a dual-core aerospace board instead of a broad thematic impulse board.",
+    "object_stack": [
+      {
+        "object_type": "board",
+        "object_name": "航天航空",
+        "role": "adjacent_aerospace_transfer_target"
+      },
+      {
+        "object_type": "symbol",
+        "object_name": "000738",
+        "role": "stable_core_primary"
+      },
+      {
+        "object_type": "symbol",
+        "object_name": "600118",
+        "role": "high_quality_dual_core_support"
+      }
+    ],
+    "risk_note": "The board is much narrower and less liquid than commercial aerospace, so future phases should assume lower breadth and avoid transferring commercial-aerospace aggression or chronology windows.",
+    "next_phase_recommendation": "role_grammar"
+  },
+  "role_rows": [
+    {
+      "symbol": "000738",
+      "row_count": 85,
+      "avg_expected_upside": 0.566877,
+      "avg_non_junk": 0.58752,
+      "avg_drive_strength": 0.554291,
+      "avg_stability": 0.697026,
+      "avg_liquidity": 0.242995,
+      "avg_resonance": 0.566659,
+      "symbol_composite": 0.535895,
+      "role_label": "stable_core_primary"
+    },
+    {
+      "symbol": "600118",
+      "row_count": 23,
+      "avg_expected_upside": 0.471307,
+      "avg_non_junk": 0.573534,
+      "avg_drive_strength": 0.570155,
+      "avg_stability": 0.671597,
+      "avg_liquidity": 0.217343,
+      "avg_resonance": 0.577715,
+      "symbol_composite": 0.513609,
+      "role_label": "high_quality_dual_core_support"
+    }
+  ],
+  "interpretation": [
+    "V1.29Q starts the BK0480 worker from transfer preparation rather than from a raw queue entry.",
+    "BK0480 presents as a narrower adjacent aerospace board with a dual-core structure led by 000738 and supported by 600118.",
+    "That makes it a good first portability test because the method transfers, but the board semantics still need local relearning."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "retained_family_count": 4,
+    "authoritative_status": "limit_halt_side_input_families_are_now_present_but_require_semantic_materialization"
+  },
+  "triage_rows": [
+    {
+      "component": "board_and_price_band",
+      "direction": "treat_board_identity_and_stk_limit_as_available_foundation_inputs"
+    },
+    {
+      "component": "st_and_suspension",
+      "direction": "treat_namechange_and_suspend_d_as_sparse_semantic_inputs_to_be_materialized_not_ignored"
+    },
+    {
+      "component": "next_step",
+      "direction": "build_a_replay-facing_limit_halt_semantic_surface_instead_of_searching_for_more_raw_feeds"
+    }
+  ],
+  "interpretation": [
+    "The replay blocker has narrowed again: it is no longer source-family absence, but semantic unification across retained side-input families.",
+    "The next valid move is to materialize a usable limit-halt semantic surface from board, stk_limit, namechange, and suspend_d."
+  ]
+}

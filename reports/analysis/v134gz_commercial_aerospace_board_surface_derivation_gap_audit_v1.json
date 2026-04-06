@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gz_commercial_aerospace_board_surface_derivation_gap_audit_v1",
+    "lockout_end_trade_date": "20260320",
+    "raw_last_trade_date": "20260403",
+    "daily_last_trade_date": "20260320",
+    "phase_last_trade_date": "20260320",
+    "post_lockout_raw_trade_date_count": 10,
+    "daily_post_lockout_gap_count": 10,
+    "phase_post_lockout_gap_count": 10,
+    "synchronized_surface_stop": true,
+    "first_post_lockout_gap_trade_date": "20260323",
+    "last_post_lockout_gap_trade_date": "20260403",
+    "gap_csv": "data\\training\\commercial_aerospace_board_surface_derivation_gap_v1.csv",
+    "authoritative_rule": "post-lockout unlock vacancy is currently a synchronized board-surface derivation gap: raw intraday dates extend past lockout end, but both daily-state and phase-geometry surfaces stop exactly at the lockout boundary"
+  },
+  "gap_rows": [
+    {
+      "surface_name": "raw_intraday_calendar",
+      "last_trade_date": "20260403",
+      "post_lockout_trade_date_count": 10,
+      "post_lockout_gap_count": 0,
+      "stop_alignment": "continues_past_lockout_end",
+      "gap_reading": "local raw calendar extends beyond lockout end"
+    },
+    {
+      "surface_name": "daily_state_surface",
+      "last_trade_date": "20260320",
+      "post_lockout_trade_date_count": 10,
+      "post_lockout_gap_count": 10,
+      "stop_alignment": "stops_at_lockout_end",
+      "gap_reading": "board daily-state derivation does not cover post-lockout raw dates"
+    },
+    {
+      "surface_name": "phase_geometry_surface",
+      "last_trade_date": "20260320",
+      "post_lockout_trade_date_count": 10,
+      "post_lockout_gap_count": 10,
+      "stop_alignment": "stops_at_lockout_end",
+      "gap_reading": "board phase-geometry derivation does not cover post-lockout raw dates"
+    }
+  ],
+  "interpretation": [
+    "V1.34GZ audits coverage rather than market meaning.",
+    "It shows whether the shadow replay lane is blocked by weak post-lockout context or by the simpler fact that the board-level derived surfaces were never extended beyond the lockout end date."
+  ]
+}

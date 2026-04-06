@@ -1,0 +1,4 @@
+﻿component,status,detail
+same_day_reentry,still_blocked,same_day_entry_authorized_seed_count = 0; no seed authorizes same-day rebuild.
+seed_level_reentry_ladder,approved_to_continue,"Use the ladder states for deeper supervision: block, observe, open rebuild watch, then later confirmation. persistent_recovery_seed_count = 2."
+reentry_simulator_lane,still_blocked,Ladder supervision still does not authorize execution simulation or replay binding.

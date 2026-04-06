@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "candidate_row_count": 1,
+    "promotable_now_count": 0,
+    "authoritative_status": "runtime_deployment_followthrough_should_continue_from_single_candidate_view_only"
+  },
+  "triage_rows": [
+    {
+      "component": "deployment_candidate_view",
+      "direction": "use_the_single_row_candidate_view_as_the_only_runtime_deployment_followthrough_surface"
+    },
+    {
+      "component": "remaining_gate",
+      "direction": "retain_scheduler_and_governance_opening_as_the_next_real movement"
+    }
+  ],
+  "interpretation": [
+    "The source-side runtime path is now compact enough to follow through from one candidate deployment view.",
+    "No additional adapter expansion is justified before scheduler and governance movement."
+  ]
+}

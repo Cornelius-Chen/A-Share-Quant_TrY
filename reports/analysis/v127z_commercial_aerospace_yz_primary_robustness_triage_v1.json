@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127z_commercial_aerospace_yz_primary_robustness_triage_v1",
+    "current_primary_variant": "window_riskoff_full_weakdrift_075_impulse_half",
+    "prior_primary_variant": "veto_drag_trio_impulse_only",
+    "split_frontier_wins": 4,
+    "split_total": 4,
+    "suffix_frontier_wins": 4,
+    "suffix_total": 4,
+    "worst_split_equity_delta_new_minus_old": 22429.2251,
+    "worst_split_drawdown_delta_new_minus_old": -0.01646738,
+    "worst_suffix_equity_delta_new_minus_old": 0.0,
+    "worst_suffix_drawdown_delta_new_minus_old": 0.0,
+    "authoritative_status": "freeze_current_primary_after_robustness",
+    "authoritative_next_step": "return_to_primary_reference_attribution_and_understanding",
+    "stop_doing": [
+      "do_not_continue_same_plane_robustness_escalation",
+      "do_not_open_new_aggressive_gating_yet",
+      "do_not_reopen_old_primary_without_new_failure"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "freeze_current_primary": true,
+      "next_step": "B_return_to_attribution_understanding",
+      "reason": "The robustness question has been answered cleanly enough that further same-plane auditing has diminishing returns."
+    },
+    {
+      "subagent": "Tesla",
+      "freeze_current_primary": true,
+      "next_step": "B_return_to_attribution_understanding",
+      "reason": "The current primary has survived the meaningful split and suffix checks; the next value is understanding where it wins."
+    },
+    {
+      "subagent": "James",
+      "freeze_current_primary": true,
+      "next_step": "B_return_to_attribution_understanding",
+      "reason": "At this point the highest-value work is to explain the symbol, phase, and window contributions behind the new primary."
+    }
+  ],
+  "interpretation": [
+    "V1.27Z freezes the current commercial-aerospace primary reference after alternate split and suffix robustness cleared cleanly against the prior primary.",
+    "The q75 suffix is a no-trade tie, so the freeze is based on the meaningful earlier suffixes and split windows rather than on late empty-window symmetry.",
+    "The next step is attribution and understanding, not more same-plane robustness escalation and not a new aggressive gating branch."
+  ]
+}

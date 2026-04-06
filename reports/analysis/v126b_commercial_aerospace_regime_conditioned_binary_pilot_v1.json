@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126b_commercial_aerospace_regime_conditioned_binary_pilot_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "best_task_name": "eligibility_binary_rc",
+    "best_test_balanced_accuracy": 0.76291294,
+    "authoritative_status": "regime_conditioned_lawful_eod_binary_pilot_non_execution"
+  },
+  "task_rows": [
+    {
+      "task_name": "eligibility_binary_rc",
+      "train_positive_count": 19,
+      "test_positive_count": 142,
+      "train_balanced_accuracy": 0.97573604,
+      "test_balanced_accuracy": 0.76291294
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "train_positive_count": 1006,
+      "test_positive_count": 304,
+      "train_balanced_accuracy": 0.60491672,
+      "test_balanced_accuracy": 0.59158996
+    }
+  ],
+  "interpretation": [
+    "V1.26B reruns binary action learning after replacing global labels with regime-conditioned labels.",
+    "This is the direct test of whether the replay blocker was label geometry rather than signal content."
+  ]
+}

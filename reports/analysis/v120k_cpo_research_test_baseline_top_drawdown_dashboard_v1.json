@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v120k_cpo_research_test_baseline_top_drawdown_dashboard_v1",
+    "top_drawdown_dashboard_png": "reports\\analysis\\v120k_cpo_research_test_baseline_top_drawdown_dashboard_v1.png",
+    "top_drawdown_count": 3
+  },
+  "top_drawdown_rows": [
+    {
+      "rank": 1,
+      "peak_date": "2024-10-08",
+      "peak_equity": 1985805.896,
+      "trough_date": "2025-04-09",
+      "trough_equity": 1005714.396,
+      "drawdown": 0.493548,
+      "drawdown_amount": 980091.5
+    },
+    {
+      "rank": 2,
+      "peak_date": "2024-07-10",
+      "peak_equity": 1600077.896,
+      "trough_date": "2024-09-06",
+      "trough_equity": 1163217.396,
+      "drawdown": 0.273025,
+      "drawdown_amount": 436860.5
+    },
+    {
+      "rank": 3,
+      "peak_date": "2023-06-20",
+      "peak_equity": 1091357.0504,
+      "trough_date": "2023-11-01",
+      "trough_equity": 879959.112,
+      "drawdown": 0.193702,
+      "drawdown_amount": 211397.9384
+    }
+  ]
+}

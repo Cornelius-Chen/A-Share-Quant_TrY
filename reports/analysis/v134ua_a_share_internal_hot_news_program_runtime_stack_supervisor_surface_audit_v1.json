@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "surface_row_count": 1,
+    "supervisor_mode": "steady_supervision",
+    "program_health_state": "healthy_internal_only",
+    "runtime_consumer_mode": "passive_polling_only",
+    "scheduler_loop_signal_mode": "steady_polling",
+    "orchestration_loop_signal_mode": "steady_orchestration_loop",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_supervisor_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_supervisor_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "surface_row_count",
+      "value": "1"
+    },
+    {
+      "component": "supervisor_mode",
+      "component_state": "materialized",
+      "metric": "supervisor_mode",
+      "value": "steady_supervision"
+    },
+    {
+      "component": "runtime_consumer_mode",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode",
+      "value": "passive_polling_only"
+    },
+    {
+      "component": "scheduler_loop_signal_mode",
+      "component_state": "materialized",
+      "metric": "scheduler_loop_signal_mode",
+      "value": "steady_polling"
+    },
+    {
+      "component": "orchestration_loop_signal_mode",
+      "component_state": "materialized",
+      "metric": "orchestration_loop_signal_mode",
+      "value": "steady_orchestration_loop"
+    }
+  ],
+  "interpretation": [
+    "This surface is the top-level supervisor card above runtime, scheduler, and orchestration layers.",
+    "A human or supervising process can use it as a compact readout instead of separately reading the three upper stacks."
+  ]
+}

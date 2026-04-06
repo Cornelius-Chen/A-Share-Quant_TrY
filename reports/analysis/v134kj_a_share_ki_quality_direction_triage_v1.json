@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134kj_a_share_ki_quality_direction_triage_v1",
+    "materialized_source_quality_count": 36,
+    "materialized_event_quality_count": 52,
+    "authoritative_status": "quality_workstream_complete_enough_to_freeze_as_bootstrap_and_shift_into_attention_with_quality_guardrails"
+  },
+  "triage_rows": [
+    {
+      "quality_component": "source_quality_registry",
+      "direction": "retain_bootstrap_source_tiers_and_replace_heuristics_with_reviewed_source_master_enrichment_later"
+    },
+    {
+      "quality_component": "event_quality_registry",
+      "direction": "use_bootstrap_evidence_gate_for_shadow_and_research_sorting_only_not_execution"
+    },
+    {
+      "quality_component": "repost_control_registry",
+      "direction": "retain_as_first_noise_control_surface_and_expand_from_duplicate_registry_reference_to_real_document_hashing_later"
+    },
+    {
+      "quality_component": "contradiction_backlog",
+      "direction": "feed_into_review_jobs_before_attention_and_decision_layers_start_trusting_quality_labels_too_much"
+    },
+    {
+      "quality_component": "next_frontier",
+      "direction": "move_into_attention_layer_using_quality_registry_as_guardrail_input"
+    }
+  ],
+  "interpretation": [
+    "V1.34KJ converts the quality audit into direction.",
+    "The next move is not to overtrust the heuristics; it is to use them as guardrails while the attention layer and later review jobs start consuming the explicit quality surface."
+  ]
+}

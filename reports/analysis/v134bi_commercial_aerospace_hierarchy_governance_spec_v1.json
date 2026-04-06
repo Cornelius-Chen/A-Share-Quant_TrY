@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bi_commercial_aerospace_hierarchy_governance_spec_v1",
+    "hierarchy_level_count": 4,
+    "lockout_seed_count": 1,
+    "local_only_rebound_seed_count": 10,
+    "unlock_positive_seed_count": 8,
+    "reentry_seed_count": 3,
+    "hierarchy_csv": "data\\training\\commercial_aerospace_hierarchy_governance_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_hierarchy_governance_spec_ready_for_direction_triage"
+  },
+  "hierarchy_rows": [
+    {
+      "precedence": 1,
+      "state_name": "board_cooling_lockout",
+      "state_role": "top_level_veto",
+      "activation_condition": "board drawdown plus persistent weak-drift/risk-off cluster after full window",
+      "release_condition": "only board_revival_unlock_seed may discuss release",
+      "subordinate_effect": "seed-level reentry ladder remains subordinate while lockout is active"
+    },
+    {
+      "precedence": 2,
+      "state_name": "local_only_rebound_guard",
+      "state_role": "anti_false_bounce_guard",
+      "activation_condition": "few-stock rebound under lockout with concentrated top-symbol forward strength but insufficient board breadth",
+      "release_condition": "none; it is negative evidence that supports keeping lockout active",
+      "subordinate_effect": "blocks treating isolated strong names as board revival"
+    },
+    {
+      "precedence": 3,
+      "state_name": "board_revival_unlock",
+      "state_role": "lockout_release_guard",
+      "activation_condition": "probe_plus_full_count >= 6, full_count >= 2, de_risk_count = 0",
+      "release_condition": "governance-only release discussion; still no execution binding",
+      "subordinate_effect": "only after this guard turns favorable does seed-level rebuild discussion recover meaning"
+    },
+    {
+      "precedence": 4,
+      "state_name": "seed_reentry_ladder",
+      "state_role": "symbol_level_rebuild_supervision",
+      "activation_condition": "board unlock supervision no longer vetoes rebuild discussion",
+      "release_condition": "n/a",
+      "subordinate_effect": "governs block -> observe -> rebuild watch -> later confirmation at seed level"
+    }
+  ],
+  "interpretation": [
+    "V1.34BI formalizes the stack the branch has been converging toward: board lockout first, anti-false-bounce local rebound guard second, board unlock third, seed reentry ladder last.",
+    "This makes the user's intuition explicit: a few strong names can exist inside a weak board, but they cannot release a board-level cooling lockout on their own."
+  ]
+}

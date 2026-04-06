@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "replay_component_count": 5,
+    "true_source_gap_count": 0,
+    "authoritative_status": "replay_promotion_should_shift_from_derivation_blocker_narrative_to_internal_build_precondition_recheck"
+  },
+  "triage_rows": [
+    {
+      "component": "shadow_execution_journal",
+      "direction": "retain_execution_journal_as_stub_only_until_market_context_closes"
+    },
+    {
+      "component": "daily_market_promotion",
+      "direction": "use_the_promotable_subset_as_the_new_replay-facing_entry_surface_without_opening_execution"
+    },
+    {
+      "component": "paired_surfaces",
+      "direction": "retire_limit_halt_as_primary_blocker_and_treat_semantic_pair_materialization_as_done_enough_for_recheck"
+    },
+    {
+      "component": "index_daily_source_horizon",
+      "direction": "retire_old_freeze_and_continue_with_downstream_reaudit"
+    }
+  ],
+  "interpretation": [
+    "Replay promotion should now be governed by replay-internal precondition closure rather than source-gap or derivation-gap framing.",
+    "The correct next move is execution-stub precondition recheck from the promotable subset, not continued index-source or limit-halt materialization work."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "window_count": 1,
+    "negative_sample_ready_count": 1
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_005",
+      "final_training_admission": "negative_sample_ready",
+      "recommendation": "allow_negative_sample_training_and_use_it_to_teach_logic_valid_but_board_not_upgraded"
+    }
+  ]
+}

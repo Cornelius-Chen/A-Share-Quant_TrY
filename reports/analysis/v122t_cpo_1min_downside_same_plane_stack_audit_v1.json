@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122t_cpo_1min_downside_same_plane_stack_audit_v1",
+    "row_count": 7700,
+    "base_discovery_gap": 0.08154386,
+    "stack_discovery_gap": 0.10833396,
+    "base_q75_balanced_accuracy": 0.5206375,
+    "stack_q75_balanced_accuracy": 0.51908727,
+    "base_time_split_mean": 0.52515907,
+    "stack_time_split_mean": 0.52230714,
+    "base_symbol_holdout_mean": 0.51487065,
+    "stack_symbol_holdout_mean": 0.51482082,
+    "stack_improves_over_base": false,
+    "recommended_next_posture": "formal_attachment_decision_stopline"
+  },
+  "comparison_rows": [
+    {
+      "score_name": "downside_failure_score",
+      "mean_gap_positive_minus_negative": 0.08154386,
+      "threshold_q75": 0.33319652,
+      "balanced_accuracy_q75": 0.5206375,
+      "mean_test_balanced_accuracy": 0.51487065,
+      "min_test_balanced_accuracy": 0.50074656
+    },
+    {
+      "score_name": "board_micro_risk_stack_score",
+      "mean_gap_positive_minus_negative": 0.10833396,
+      "threshold_q75": 0.48662474,
+      "balanced_accuracy_q75": 0.51908727,
+      "mean_test_balanced_accuracy": 0.51482082,
+      "min_test_balanced_accuracy": 0.50212302
+    }
+  ],
+  "interpretation": [
+    "V1.22T tests the only honest attachment posture available right now: a recent same-plane stack on the 1-minute label surface.",
+    "The question is not whether the stack looks more sophisticated, but whether it materially improves over the standalone downside failure score.",
+    "If the stack does not improve discovery and transfer together, attachment should be deferred."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126x_commercial_aerospace_conditional_derisk_audit_v1",
+    "reference_v126v_final_equity": 1246105.7532,
+    "reference_v126v_max_drawdown": 0.22518706,
+    "best_variant": "weakest_half_full_exit",
+    "best_variant_final_equity": 1199188.2952,
+    "best_variant_max_drawdown": 0.20635114,
+    "best_variant_executed_order_count": 68
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "executed_order_count": 150,
+      "final_equity": 1246105.7532,
+      "max_drawdown": 0.22518706
+    },
+    {
+      "variant": "weak_only_full_exit",
+      "executed_order_count": 25,
+      "final_equity": 1198891.13,
+      "max_drawdown": 0.22231584
+    },
+    {
+      "variant": "weakest_half_full_exit",
+      "executed_order_count": 68,
+      "final_equity": 1199188.2952,
+      "max_drawdown": 0.20635114
+    }
+  ],
+  "interpretation": [
+    "V1.26X audits whether commercial-aerospace downside is better controlled by selective de-risk on the weakest names instead of broad half-sells.",
+    "No factor, label, or replay legality changes are introduced; this is a pure conditional sell grammar audit on top of V1.26V."
+  ]
+}

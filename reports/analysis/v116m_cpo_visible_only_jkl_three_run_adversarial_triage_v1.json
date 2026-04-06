@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116m_cpo_visible_only_jkl_three_run_adversarial_triage_v1",
+    "review_scope": "v116j_v116k_v116l",
+    "hot_upper_bound_variant": "earliest_visible_reference",
+    "corrected_retained_shadow_variant": "double_confirm_late_quarter",
+    "v116l_retention_valid": false,
+    "recommended_next_posture": "replace_v116l_retention_with_corrected_cooled_shadow_retention_and_continue_candidate_only"
+  },
+  "triage_rows": [
+    {
+      "triage_target": "earliest_visible_reference",
+      "triage_posture": "demote_to_hot_upper_bound_only",
+      "reason": "v116l_reselected_hottest_line_instead_of_cooled_candidate",
+      "final_equity": 3862407.3777,
+      "max_drawdown": 0.267821,
+      "executed_order_count": 10
+    },
+    {
+      "triage_target": "double_confirm_late_quarter",
+      "triage_posture": "retain_as_corrected_cooled_shadow_candidate",
+      "reason": "lowest_heat_among_executing_double_confirm_variants",
+      "final_equity": 2462276.6695,
+      "max_drawdown": 0.184151,
+      "executed_order_count": 6
+    },
+    {
+      "triage_target": "v116l_retention_result",
+      "triage_posture": "overruled",
+      "reason": "retention_scoring_overweighted_equity",
+      "retained_variant_name": "earliest_visible_reference",
+      "retained_final_equity": 3862407.3777,
+      "retained_max_drawdown": 0.267821
+    }
+  ],
+  "interpretation": [
+    "The second three-run adversarial review over V116J/V116K/V116L concludes that the wider visible-only line still contains signal, but the hottest replay line cannot be kept as the cooled retained object.",
+    "V116L is overruled because it retained `earliest_visible_reference`, which conflicts with the explicit heat-trim intent of V116K.",
+    "The only corrected cooled-shadow retained candidate after triage is `double_confirm_late_quarter`; `earliest_visible_reference` remains an audit-only hot upper bound."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "program_health_state_change": "stable",
+    "global_program_action_mode_change": "stable",
+    "needs_attention_change": "stable",
+    "trading_day_state_change": "stable",
+    "session_phase_change": "stable",
+    "program_consumer_gate_mode_change": "stable",
+    "program_driver_action_mode_change": "stable",
+    "program_driver_transition_class": "stable",
+    "driver_escalation_priority": "p2",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_status-level_change_signal_above_the_program_status_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_outer_state",
+      "direction": "when_the_status-level_change_signal_is_stable_keep_the_consumer_on_lightweight_status_polling_only"
+    },
+    {
+      "component": "state_changed_outer_state",
+      "direction": "when_any_outer_state_changes_treat_it_as_a_higher-priority_consumer_event_than_inner_feed_noise"
+    },
+    {
+      "component": "signal_priority_branch",
+      "direction": "use_signal_priority_as_the_switch_between_passive_polling_and_active_reaction_or_alerting"
+    },
+    {
+      "component": "session_timing_branch",
+      "direction": "treat_session_phase_change_or_trading_day_state_change_as_a_legitimate_outer-state_rotation_even_if_the_message_content_stack_itself_is_stable"
+    },
+    {
+      "component": "driver_action_branch",
+      "direction": "treat_program_driver_action_mode_change_as_a_top-level_operational_rotation_because_it_directly_changes_how_the_program_should_consume_the_hot-news_stack"
+    },
+    {
+      "component": "driver_transition_escalation_branch",
+      "direction": "escalate_watch_only-to-prepare_or_live_route_and_any_rotation_into_stale_block_above_ordinary_outer-state_changes_because_these_transitions directly alter whether the program should stay passive, prepare, route live, or block itself"
+    }
+  ],
+  "interpretation": [
+    "This is now the topmost change detector in the internal hot-news program stack.",
+    "A consumer can stay on this layer most of the time and only descend when it changes.",
+    "The driver-transition branch separates meaningful operating-mode jumps from ordinary stable-state refresh noise."
+  ]
+}

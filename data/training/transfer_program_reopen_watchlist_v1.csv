@@ -1,0 +1,6 @@
+sector_id,sector_name,current_v6_symbol_count,current_v5_symbol_count,current_v6_board_composite,same_plane_symbol_trigger_threshold,same_plane_symbol_trigger_met,non_bridge_trigger_required,non_bridge_trigger_met,board_composite_trigger_threshold,board_composite_trigger_met,reopen_ready,current_status
+BK0808,军民融合,1,1,0.473136,2,False,True,False,0.45,True,False,blocked_waiting_for_richer_same_plane_support
+BK0715,航母概念,1,1,0.373132,2,False,True,False,0.45,False,False,blocked_waiting_for_richer_same_plane_support
+BK0994,空间站概念,1,0,0.426425,2,False,True,False,0.45,False,False,blocked_waiting_for_richer_same_plane_support
+BK0814,大飞机,1,1,0.352149,2,False,True,False,0.45,False,False,blocked_waiting_for_richer_same_plane_support
+BK0490,军工,0,2,,2,False,True,False,0.45,False,False,blocked_waiting_for_richer_same_plane_support

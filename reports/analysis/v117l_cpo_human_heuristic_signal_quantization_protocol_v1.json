@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117l_cpo_human_heuristic_signal_quantization_protocol_v1",
+    "heuristic_family_count": 4,
+    "top_currently_observable_heuristic": "retail_chase_trap_proxy",
+    "allow_interaction_terms": true,
+    "recommended_next_posture": "treat_human_heuristics_as_context_conditioned_candidate_vectors_not_direct_trading_laws"
+  },
+  "heuristic_rows": [
+    {
+      "heuristic_name": "retail_chase_trap_proxy",
+      "feature_count": 6,
+      "nonzero_rate": 0.076754,
+      "mean_abs_feature_value": 29431870.614035,
+      "context_requirement": "must_be_conditioned_on_board_phase_and_role_not_used_as_global_law",
+      "current_posture": "candidate_only"
+    },
+    {
+      "heuristic_name": "shooting_star_trap_proxy",
+      "feature_count": 6,
+      "nonzero_rate": 0.055556,
+      "mean_abs_feature_value": 32816865.862573,
+      "context_requirement": "must_be_conditioned_on_board_phase_and_role_not_used_as_global_law",
+      "current_posture": "candidate_only"
+    },
+    {
+      "heuristic_name": "doji_exhaustion_proxy",
+      "feature_count": 6,
+      "nonzero_rate": 0.055556,
+      "mean_abs_feature_value": 18438915.935673,
+      "context_requirement": "must_be_conditioned_on_board_phase_and_role_not_used_as_global_law",
+      "current_posture": "candidate_only"
+    },
+    {
+      "heuristic_name": "false_breakout_damage_proxy",
+      "feature_count": 6,
+      "nonzero_rate": 0.051901,
+      "mean_abs_feature_value": 16334809.945175,
+      "context_requirement": "must_be_conditioned_on_board_phase_and_role_not_used_as_global_law",
+      "current_posture": "candidate_only"
+    }
+  ],
+  "interpretation": [
+    "V1.17L does not treat human pattern names as laws. It translates them into objective proxy families and checks whether the required fields are actually observable in the current mid-frequency base table.",
+    "The correct use is context-conditioned: a heuristic proxy only matters inside the right board phase, role family, and continuation state. It should be a vector component or interaction term, not a standalone rule.",
+    "This gives the project a disciplined way to borrow useful human experience without turning subjective candle lore into immediate policy."
+  ]
+}

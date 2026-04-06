@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cj_commercial_aerospace_local_rebound_residue_registry_v1",
+    "residue_seed_count": 4,
+    "persistent_rebound_residue_count": 2,
+    "transient_rebound_residue_count": 2,
+    "top_residue_case": "20260120 300342",
+    "registry_csv": "data\\training\\commercial_aerospace_local_rebound_residue_registry_v1.csv",
+    "authoritative_output": "commercial_aerospace_local_rebound_residue_registry_ready_for_direction_triage"
+  },
+  "registry_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 1077.0,
+      "horizon_pnl_if_held_3d": 3030.0,
+      "horizon_pnl_if_held_5d": -1035.0,
+      "residue_type": "transient_rebound_residue_watch"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 6845.16,
+      "horizon_pnl_if_held_3d": 20010.0,
+      "horizon_pnl_if_held_5d": 5430.0,
+      "residue_type": "persistent_rebound_residue_watch"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688066",
+      "predicted_tier": "severe_override_positive",
+      "same_day_protected_mark_to_close": 577.042,
+      "horizon_pnl_if_held_3d": 166.0,
+      "horizon_pnl_if_held_5d": 224.0,
+      "residue_type": "persistent_rebound_residue_watch"
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "same_day_protected_mark_to_close": 1203.6736,
+      "horizon_pnl_if_held_3d": 32.0,
+      "horizon_pnl_if_held_5d": -1712.0,
+      "residue_type": "transient_rebound_residue_watch"
+    }
+  ],
+  "interpretation": [
+    "V1.34CJ freezes the remaining 3-day rebound-cost residues from the first real sell binding surface into explicit local supervision seeds.",
+    "The split between persistent and transient residue prevents the branch from treating all rebound-cost cases as one family when some simply fade again by 5 days."
+  ]
+}

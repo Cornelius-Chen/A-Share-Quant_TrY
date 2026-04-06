@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119p_cpo_elg_support_symbol_holdout_audit_v1",
+    "holdout_count": 3,
+    "evaluable_holdout_count": 2,
+    "mean_evaluable_test_balanced_accuracy": 0.4375,
+    "min_evaluable_test_balanced_accuracy": 0.375,
+    "recommended_next_posture": "pair_symbol_holdout_with_role_holdout_and_out_of_set_false_positive_audit_before_any_reclassification"
+  },
+  "holdout_rows": [
+    {
+      "holdout_symbol": "300308",
+      "train_best_threshold": 592782000.639792,
+      "train_best_balanced_accuracy": 0.777778,
+      "test_positive_add_count": 3,
+      "test_negative_add_count": 2,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0,
+      "test_balanced_accuracy": 0.5
+    },
+    {
+      "holdout_symbol": "300502",
+      "train_best_threshold": 1308551001.817649,
+      "train_best_balanced_accuracy": 0.833333,
+      "test_positive_add_count": 2,
+      "test_negative_add_count": 8,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.75,
+      "test_balanced_accuracy": 0.375
+    },
+    {
+      "holdout_symbol": "300757",
+      "train_best_threshold": 592782000.639792,
+      "train_best_balanced_accuracy": 0.7,
+      "test_positive_add_count": 0,
+      "test_negative_add_count": 1,
+      "test_positive_recall": null,
+      "test_negative_reject_rate": 1.0,
+      "test_balanced_accuracy": null
+    }
+  ],
+  "interpretation": [
+    "V1.19P checks whether the ELG-supported hard candidate survives symbol holdouts.",
+    "If symbol holdouts break badly, the branch may still be object-specific rather than stable add semantics.",
+    "This remains a non-replay adversarial audit only."
+  ]
+}

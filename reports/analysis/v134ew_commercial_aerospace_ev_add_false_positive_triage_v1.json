@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ew_commercial_aerospace_ev_add_false_positive_triage_v1",
+    "authoritative_status": "keep_add_positive_rules_seed_only_and_shift_next_to_context_gating_audit",
+    "total_session_count": 1224,
+    "non_seed_positive_hit_count": 495,
+    "non_seed_positive_hit_rate": 0.42343884,
+    "authoritative_rule": "the intraday-add frontier must keep positive add rules as seed-only until additional context gating is strong enough to suppress broader shape-only false positives"
+  },
+  "triage_rows": [
+    {
+      "component": "positive_add_rule_expansion",
+      "status": "keep_add_positive_rules_seed_only_and_shift_next_to_context_gating_audit",
+      "rationale": "shape-only positive add rules are too dense on the broader session surface and cannot yet be promoted beyond seed-only governed rules"
+    },
+    {
+      "component": "negative_governance_families",
+      "status": "retain_as_useful_bounded_signals",
+      "rationale": "failed and blocked add families remain much sparser and can be retained as bounded governance references"
+    },
+    {
+      "component": "intraday_add_execution_authority",
+      "status": "still_blocked",
+      "rationale": "broader false-positive density blocks any move toward add execution or replay binding"
+    }
+  ],
+  "interpretation": [
+    "V1.34EW converts the broader add false-positive audit into a governance verdict.",
+    "The next correct move is not broader rule promotion but context-gating work that can distinguish real add permission from generic early-session rebounds."
+  ]
+}

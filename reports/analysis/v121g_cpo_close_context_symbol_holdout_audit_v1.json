@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121g_cpo_close_context_symbol_holdout_audit_v1",
+    "holdout_count": 3,
+    "mean_test_balanced_accuracy": 0.625,
+    "min_test_balanced_accuracy": 0.5,
+    "recommended_next_posture": "send_EFG_to_adversarial_review_before_any_additional_narrowing"
+  },
+  "holdout_rows": [
+    {
+      "holdout_symbol": "300308",
+      "train_row_count": 69,
+      "test_row_count": 16,
+      "train_positive_count": 63,
+      "test_positive_count": 12,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.5,
+      "test_balanced_accuracy": 0.875,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.75
+    },
+    {
+      "holdout_symbol": "300502",
+      "train_row_count": 41,
+      "test_row_count": 44,
+      "train_positive_count": 34,
+      "test_positive_count": 41,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.714286,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0
+    },
+    {
+      "holdout_symbol": "300757",
+      "train_row_count": 60,
+      "test_row_count": 25,
+      "train_positive_count": 53,
+      "test_positive_count": 22,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.714286,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.21G tests whether the narrowed close-risk branch survives object transfer inside the close-only context.",
+    "This matters because several earlier add-side lines died once symbol and role entanglement was exposed.",
+    "A line that only works on one name should not be mistaken for a reusable close-side rule."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132y_commercial_aerospace_intraday_seed_case_panel_v1",
+    "seed_case_count": 6,
+    "panel_png": "reports\\analysis\\v132y_commercial_aerospace_intraday_seed_case_panel_v1.png",
+    "case_rows_csv": "data\\training\\commercial_aerospace_intraday_seed_case_panel_rows_v1.csv",
+    "authoritative_rule": "the minute governance branch should remain visually inspectable through canonical seed sessions before any future lawful intraday execution work is attempted"
+  },
+  "case_rows": [
+    {
+      "signal_trade_date": "20251117",
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "action": "add",
+      "severity_tier": "mild_override_watch",
+      "phase_window_semantic": "preheat_window",
+      "event_state": "event_neutral",
+      "first_mild_minute": 33,
+      "first_reversal_minute": 43,
+      "first_severe_minute": "",
+      "session_close_return_pct": -2.518,
+      "session_low_drawdown_pct": -5.2878
+    },
+    {
+      "signal_trade_date": "20251216",
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "action": "add",
+      "severity_tier": "mild_override_watch",
+      "phase_window_semantic": "preheat_window",
+      "event_state": "event_neutral",
+      "first_mild_minute": 23,
+      "first_reversal_minute": 36,
+      "first_severe_minute": "",
+      "session_close_return_pct": -4.329,
+      "session_low_drawdown_pct": -5.6638
+    },
+    {
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "action": "open",
+      "severity_tier": "reversal_watch",
+      "phase_window_semantic": "impulse_window",
+      "event_state": "continuation_active",
+      "first_mild_minute": 3,
+      "first_reversal_minute": 4,
+      "first_severe_minute": 25,
+      "session_close_return_pct": -7.8296,
+      "session_low_drawdown_pct": -8.6815
+    },
+    {
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "action": "add",
+      "severity_tier": "severe_override_positive",
+      "phase_window_semantic": "impulse_window",
+      "event_state": "continuation_active",
+      "first_mild_minute": "",
+      "first_reversal_minute": 106,
+      "first_severe_minute": 3,
+      "session_close_return_pct": -9.987,
+      "session_low_drawdown_pct": -9.987
+    },
+    {
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "action": "add",
+      "severity_tier": "reversal_watch",
+      "phase_window_semantic": "impulse_window",
+      "event_state": "continuation_active",
+      "first_mild_minute": 50,
+      "first_reversal_minute": 60,
+      "first_severe_minute": "",
+      "session_close_return_pct": -7.3202,
+      "session_low_drawdown_pct": -7.7394
+    },
+    {
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "action": "add",
+      "severity_tier": "severe_override_positive",
+      "phase_window_semantic": "impulse_window",
+      "event_state": "continuation_active",
+      "first_mild_minute": 51,
+      "first_reversal_minute": 83,
+      "first_severe_minute": 152,
+      "session_close_return_pct": -9.0,
+      "session_low_drawdown_pct": -9.7
+    }
+  ],
+  "interpretation": [
+    "V1.32Y packages the six canonical commercial-aerospace minute seed sessions into a single visual case panel.",
+    "The panel is a governance aid: it makes the severe / reversal / mild action ladder inspectable without altering the lawful EOD replay."
+  ]
+}

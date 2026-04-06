@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "theme_count": 30,
+    "direct_row_count": 75,
+    "proxy_row_count": 15,
+    "weak_row_count": 0,
+    "direct_clean_theme_count": 18,
+    "proxy_heavy_theme_count": 0,
+    "weak_exposed_theme_count": 0,
+    "authoritative_output": "a_share_theme_beneficiary_mapping_quality_summary_materialized"
+  },
+  "rows": [
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "theme_count",
+      "value": "30"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "direct_row_count",
+      "value": "75"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "proxy_row_count",
+      "value": "15"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "weak_row_count",
+      "value": "0"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "direct_clean_theme_count",
+      "value": "18"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "proxy_heavy_theme_count",
+      "value": "0"
+    },
+    {
+      "component": "mapping_quality_summary",
+      "component_state": "materialized",
+      "metric": "weak_exposed_theme_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "This summary compresses the curated theme-to-symbol registry into a quality overview by theme.",
+    "It shows where the registry is already direct-led and where proxy or weak mappings still dominate."
+  ]
+}

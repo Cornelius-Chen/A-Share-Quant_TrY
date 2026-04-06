@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129h_commercial_aerospace_ghi_late_preheat_filter_triage_v1",
+    "reference_variant": "tail_weakdrift_full_reference",
+    "best_variant": "tail_weakdrift_full_reference",
+    "best_variant_final_equity": 1309426.5555,
+    "best_variant_max_drawdown": 0.09309927,
+    "authoritative_status": "keep_current_primary_and_retain_late_preheat_filter_as_supervision_only",
+    "authoritative_rule": "late-preheat full-pre supervision should only enter replay if it improves the current primary frontier rather than merely cleaning one suspicious trade"
+  },
+  "interpretation": [
+    "V1.29H freezes whether late-preheat full-pre supervision is strong enough to modify the current commercial-aerospace primary replay.",
+    "If it does not beat the current primary, it should remain as supervision/governance rather than replay-facing tuning."
+  ]
+}

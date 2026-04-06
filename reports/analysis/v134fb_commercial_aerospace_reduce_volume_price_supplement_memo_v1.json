@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fb_commercial_aerospace_reduce_volume_price_supplement_memo_v1",
+    "strongest_reduce_volume_price_feature": "post_reversal_up_amount_share",
+    "strongest_reduce_volume_price_gap": 0.097386,
+    "best_local_veto_up_share_threshold": 0.45,
+    "best_local_veto_open_burst_floor": -0.01,
+    "reduce_execution_blocker_count": 4,
+    "authoritative_rule": "the frozen reduce handoff should explicitly retain its quantity-price confirmation layer and its local rebound-cost veto as governance appendices"
+  },
+  "memo_rows": [
+    {
+      "component": "reversal_volume_price_confirmation",
+      "status": "already_available_inside_reduce_governance",
+      "detail": "strongest_feature = post_reversal_up_amount_share, gap = 0.097386"
+    },
+    {
+      "component": "rebound_cost_local_veto",
+      "status": "already_available_inside_reduce_governance",
+      "detail": "up_share_threshold = 0.45, open_burst_floor = -0.01, precision = 1.0"
+    },
+    {
+      "component": "reduce_mainline_status",
+      "status": "frozen_handoff",
+      "detail": "reduce_reopen_ready = False, execution_blocker_count = 4"
+    }
+  ],
+  "interpretation": [
+    "V1.34FB does not reopen reduce; it only makes the existing quantity-price supplement explicit inside the frozen handoff package.",
+    "This keeps the reduce branch honest: volume-price already adds value there, but it remains governance-only until full execution infrastructure exists."
+  ]
+}

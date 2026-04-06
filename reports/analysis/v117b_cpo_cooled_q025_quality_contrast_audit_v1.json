@@ -1,0 +1,107 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117b_cpo_cooled_q025_quality_contrast_audit_v1",
+    "retained_variant_name": "cooled_q_0p25",
+    "reviewed_day_count": 3,
+    "authoritative_current_problem": "quality_side_contrast_for_cooled_q_0p25",
+    "recommended_next_posture": "if_visible_only_continues_use_quality_axes_not_new_quantiles_or_timing_rework"
+  },
+  "contrast_rows": [
+    {
+      "signal_trade_date": "2023-11-07",
+      "corrected_cooled_hit": false,
+      "timing_gate": "late_only",
+      "continuation_gate": "strong",
+      "vwap_gate": "positive",
+      "outcome_gate_vs_retained": "above_retained_avg",
+      "risk_gate_vs_retained": "contained",
+      "state_bands": [
+        "pc1_low__pc2_low"
+      ],
+      "action_favored_count": 2,
+      "avg_expectancy_proxy_3d": 0.130639,
+      "avg_max_adverse_return_3d": -0.009789,
+      "f30_close_vs_vwap_rz": 57459500.0,
+      "f60_close_vs_vwap_rz": 53390000.0,
+      "f30_close_location_rz": 825310000.0,
+      "f60_close_location_rz": 825310000.0,
+      "f30_high_time_ratio_rz": 875000000.0,
+      "f60_high_time_ratio_rz": 1000000000.0,
+      "f30_afternoon_volume_share_rz": 711943000.0,
+      "f60_afternoon_volume_share_rz": 711943000.0,
+      "f30_upper_shadow_ratio_rz": 244225500.0,
+      "f60_upper_shadow_ratio_rz": 288767000.0,
+      "f30_body_ratio_rz": 508416000.0,
+      "f60_body_ratio_rz": 574596000.0,
+      "pc1_score": -2245758701.562069,
+      "pc2_score": -200880419.208189,
+      "final_judgement": "late_visibility_blocks_otherwise_good_day"
+    },
+    {
+      "signal_trade_date": "2024-01-18",
+      "corrected_cooled_hit": true,
+      "timing_gate": "early_visible",
+      "continuation_gate": "strong",
+      "vwap_gate": "positive",
+      "outcome_gate_vs_retained": "below_retained_avg",
+      "risk_gate_vs_retained": "contained",
+      "state_bands": [
+        "pc1_low__pc2_high"
+      ],
+      "action_favored_count": 1,
+      "avg_expectancy_proxy_3d": 0.042263,
+      "avg_max_adverse_return_3d": -0.019255,
+      "f30_close_vs_vwap_rz": 39909000.0,
+      "f60_close_vs_vwap_rz": 36558000.0,
+      "f30_close_location_rz": 977980000.0,
+      "f60_close_location_rz": 977980000.0,
+      "f30_high_time_ratio_rz": 937500000.0,
+      "f60_high_time_ratio_rz": 1000000000.0,
+      "f30_afternoon_volume_share_rz": 434256500.0,
+      "f60_afternoon_volume_share_rz": 434256500.0,
+      "f30_upper_shadow_ratio_rz": 244223500.0,
+      "f60_upper_shadow_ratio_rz": 153468000.0,
+      "f30_body_ratio_rz": 531850000.0,
+      "f60_body_ratio_rz": 654072000.0,
+      "pc1_score": -2326448778.399345,
+      "pc2_score": 122424685.245182,
+      "final_judgement": "retained_quality_standard_met"
+    },
+    {
+      "signal_trade_date": "2024-01-23",
+      "corrected_cooled_hit": false,
+      "timing_gate": "late_only",
+      "continuation_gate": "strong",
+      "vwap_gate": "positive",
+      "outcome_gate_vs_retained": "below_retained_avg",
+      "risk_gate_vs_retained": "worse_than_retained_avg",
+      "state_bands": [
+        "pc1_low__pc2_high",
+        "pc1_low__pc2_low"
+      ],
+      "action_favored_count": 0,
+      "avg_expectancy_proxy_3d": -0.052168,
+      "avg_max_adverse_return_3d": -0.056817,
+      "f30_close_vs_vwap_rz": 1438000.0,
+      "f60_close_vs_vwap_rz": 4569000.0,
+      "f30_close_location_rz": 621868000.0,
+      "f60_close_location_rz": 621868000.0,
+      "f30_high_time_ratio_rz": 687500000.0,
+      "f60_high_time_ratio_rz": 750000000.0,
+      "f30_afternoon_volume_share_rz": 369255500.0,
+      "f60_afternoon_volume_share_rz": 369255500.0,
+      "f30_upper_shadow_ratio_rz": 320647500.0,
+      "f60_upper_shadow_ratio_rz": 310561000.0,
+      "f30_body_ratio_rz": 430817500.0,
+      "f60_body_ratio_rz": 458570000.0,
+      "pc1_score": -1555451247.279582,
+      "pc2_score": -65826785.37558,
+      "final_judgement": "late_and_quality_weak"
+    }
+  ],
+  "interpretation": [
+    "V1.17B turns the rebuilt-new-day comparison into a cooled_q_0p25-specific quality audit instead of leaving the distinction as a narrative judgement.",
+    "The report shows that 2024-01-18 is not simply 'the day that hit'; it is the only rebuilt new day that combines early visibility with acceptable risk and non-negative continuation quality under the retained cooled reference.",
+    "2023-11-07 fails mainly because it arrives too late despite decent quality, while 2024-01-23 fails because it is both late and materially weaker."
+  ]
+}

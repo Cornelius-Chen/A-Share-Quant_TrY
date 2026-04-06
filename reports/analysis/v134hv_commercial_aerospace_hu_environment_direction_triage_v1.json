@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hv_commercial_aerospace_hu_environment_direction_triage_v1",
+    "semantic_count": 3,
+    "authoritative_status": "retain_negative_environment_semantics_as_next_main_supervision_frontier_and_keep_them_board_local_until_event_attention_labels_exist"
+  },
+  "triage_rows": [
+    {
+      "semantic_name": "attention_distorted",
+      "direction": "retain_as_primary_negative_environment_semantic_and_do_not_confuse_symbol_heat_with_board_restart"
+    },
+    {
+      "semantic_name": "capital_misaligned_with_board",
+      "direction": "retain_as_primary_negative_environment_semantic_and_use_before_true_selection_training"
+    },
+    {
+      "semantic_name": "board_fragile_divergence",
+      "direction": "retain_as_higher_level_veto_semantic_above_add_reentry"
+    },
+    {
+      "semantic_name": "external_policy_news_context",
+      "direction": "keep_deferred_to_event_attention_layer_not_current_registry"
+    }
+  ],
+  "interpretation": [
+    "V1.34HV converts the first environment-level registry into direction.",
+    "The board-local semantics are strong enough to promote, but they are not yet the full environment truth; policy/news context still belongs to the next layer rather than being silently backfilled now."
+  ]
+}

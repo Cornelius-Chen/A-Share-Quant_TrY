@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "minimal_view_row_count": 21,
+    "risk_guardrail_count": 16,
+    "top_down_guidance_count": 2,
+    "board_watch_trigger_count": 0,
+    "symbol_focus_available_count": 2,
+    "trading_day_state": "non_trading_day",
+    "session_phase": "non_trading_day",
+    "session_handling_mode": "non_trading_day_watch_only",
+    "authoritative_output": "a_share_internal_hot_news_trading_program_minimal_view_materialized"
+  },
+  "rows": [
+    {
+      "component": "minimal_consumer_view",
+      "component_state": "read_ready_internal_only",
+      "metric": "minimal_view_row_count",
+      "value": "21"
+    },
+    {
+      "component": "risk_guardrail",
+      "component_state": "materialized",
+      "metric": "risk_guardrail_count",
+      "value": "16"
+    },
+    {
+      "component": "top_down_guidance",
+      "component_state": "materialized",
+      "metric": "top_down_guidance_count",
+      "value": "2"
+    },
+    {
+      "component": "board_watch_trigger",
+      "component_state": "materialized",
+      "metric": "board_watch_trigger_count",
+      "value": "0"
+    },
+    {
+      "component": "symbol_focus",
+      "component_state": "materialized",
+      "metric": "symbol_focus_available_count",
+      "value": "2"
+    },
+    {
+      "component": "timing_gate",
+      "component_state": "materialized",
+      "metric": "session_handling_mode",
+      "value": "non_trading_day_watch_only"
+    }
+  ],
+  "interpretation": [
+    "The hot-news lane now exposes a compact trading-program view instead of forcing the consumer to read the full ingress surface.",
+    "The minimal view keeps only routing-critical fields: priority, action class, focus class, timing window, signal direction, mapping confidence, and current session handling mode."
+  ]
+}

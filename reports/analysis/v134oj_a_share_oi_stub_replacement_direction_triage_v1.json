@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "precondition_count": 4,
+    "unsatisfied_count": 1,
+    "promotable_now_count": 14,
+    "authoritative_status": "shadow_execution_stub_should_remain_until_market_context_closes_despite_replay_foundation_progress"
+  },
+  "triage_rows": [
+    {
+      "component": "market_context",
+      "direction": "treat_market_context_closure_as_first_real_requirement_for_stub_replacement"
+    },
+    {
+      "component": "paired_surface_promotion",
+      "direction": "treat_daily_market_promotion_and_pairing_as_foundation_ready_but_not_sufficient_without_market_context_closure"
+    },
+    {
+      "component": "cost_model_foundation",
+      "direction": "retain_cost_model_foundation_as_ready_but_nonpromotive_support_only"
+    }
+  ],
+  "interpretation": [
+    "The correct next replay-internal move is not to redesign the execution journal stub.",
+    "The stub should remain because market-context coverage is still open, even though replay promotion and pairing have materially advanced."
+  ]
+}

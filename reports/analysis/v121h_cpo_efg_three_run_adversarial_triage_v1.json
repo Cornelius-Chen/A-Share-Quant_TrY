@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121h_cpo_efg_three_run_adversarial_triage_v1",
+    "branch_name": "participation_collapse_close_risk_score_candidate",
+    "authoritative_status": "soft_component",
+    "majority_vote": {
+      "soft_component": 2,
+      "candidate_only": 1
+    },
+    "core_failure_mode": "close_only_line_survives_but_is_300308_weighted_not_general_close_gate",
+    "close_context_best_balanced_accuracy": 0.65,
+    "close_context_time_split_mean_min_ba": [
+      0.644444,
+      0.5
+    ],
+    "close_context_symbol_holdout_mean_min_ba": [
+      0.625,
+      0.5
+    ],
+    "recommended_next_posture": "keep_as_close_side_soft_component_only_and_do_not_promote"
+  },
+  "subagent_conclusions": [
+    {
+      "agent": "Pauli",
+      "status": "soft_component",
+      "takeaway": "??? 300308 ????? close-risk ?????"
+    },
+    {
+      "agent": "Tesla",
+      "status": "soft_component",
+      "takeaway": "? close-only ??????????? prior??? candidate?"
+    },
+    {
+      "agent": "James",
+      "status": "candidate_only",
+      "takeaway": "?????????????? replay/promote?"
+    }
+  ],
+  "interpretation": [
+    "The first explicit downside line improves materially once narrowed into close-only context.",
+    "However, it remains too broad and too 300308-weighted to become a general close-side candidate.",
+    "Authoritative treatment is soft-component-only, not candidate promotion."
+  ]
+}

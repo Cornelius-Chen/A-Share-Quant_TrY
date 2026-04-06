@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v116p_cpo_visible_only_mno_three_run_adversarial_triage_v1",
+    "review_scope": "v116m_v116n_v116o",
+    "retained_candidate_still_valid": true,
+    "promotion_allowed": false,
+    "recommended_next_posture": "expand_repaired_window_sample_before_any_new_replay_facing_visible_only_expansion"
+  },
+  "triage_rows": [
+    {
+      "triage_target": "double_confirm_late_quarter",
+      "triage_posture": "retain_candidate_only",
+      "reason": "cleaner_than_hot_upper_bound_but_wider_revalidation_still_too_thin",
+      "hit_day_count": 3,
+      "hit_day_rate": 0.5,
+      "positive_expectancy_hit_rate": 0.666667,
+      "avg_expectancy_proxy_3d": 0.117029
+    },
+    {
+      "triage_target": "hot_upper_bound_reference",
+      "triage_posture": "audit_only_upper_bound",
+      "reason": "broader_coverage_but_too_mixed_and_too_hot",
+      "hit_day_count": 6,
+      "hit_day_rate": 1.0,
+      "positive_expectancy_hit_rate": 0.6,
+      "avg_expectancy_proxy_3d": 0.075894
+    },
+    {
+      "triage_target": "next_step",
+      "triage_posture": "expand_repaired_window_before_more_replay",
+      "reason": "same_family_and_small_sample_risk_remains_primary_issue",
+      "current_wider_window_day_count": 6
+    }
+  ],
+  "interpretation": [
+    "The V116M/V116N/V116O triage accepts the corrected cooled-shadow retention but refuses to treat the wider revalidation as sufficient replay-facing evidence.",
+    "The retained object stays alive only as a candidate-only shadow candidate; the hot upper bound remains useful only as a reference ceiling.",
+    "The primary blocker is no longer retention coherence but repaired-window sample thinness and same-family overfitting risk."
+  ]
+}

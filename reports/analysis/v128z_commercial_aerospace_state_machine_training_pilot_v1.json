@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v128z_commercial_aerospace_state_machine_training_pilot_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "label_count": 5,
+    "model_family": "nearest_centroid_state_machine_candidate",
+    "balanced_accuracy": 0.24227227,
+    "authoritative_status": "offline_state_machine_supervised_pilot_non_execution"
+  },
+  "label_rows": [
+    {
+      "label": "de_risk",
+      "test_count": 114,
+      "recall": 0.24561404
+    },
+    {
+      "label": "full",
+      "test_count": 36,
+      "recall": 0.0
+    },
+    {
+      "label": "full_pre",
+      "test_count": 45,
+      "recall": 0.0
+    },
+    {
+      "label": "neutral_hold",
+      "test_count": 859,
+      "recall": 0.38882421
+    },
+    {
+      "label": "probe",
+      "test_count": 182,
+      "recall": 0.57692308
+    }
+  ],
+  "interpretation": [
+    "V1.28Z is the first offline training pilot on the refreshed commercial-aerospace state machine.",
+    "It remains a non-execution audit: the purpose is to see whether full-pre becomes a learnable middle state before any replay is re-opened."
+  ]
+}

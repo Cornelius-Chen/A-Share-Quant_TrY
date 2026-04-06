@@ -1,0 +1,5 @@
+﻿blocker_order,blocker_name,status,affects_stage,why_it_matters,required_for,source
+1,point_in_time_intraday_visibility,still_blocked,intraday_sell_ladder,"without minute-lawful visibility, sell ladder triggers cannot be execution-bound without leak risk",sell-side binding,v133c / v133m / v133n
+2,intraday_execution_simulation_surface,still_blocked,intraday_sell_ladder_and_board_gate,board gate and sell ladder cannot be tested as a unified intraday action path without a deterministic fill model,sell-plus-board binding,v133c / v133m
+3,separate_intraday_replay_lane,still_blocked,all_reduce_closure_stages,"without a separate lane, sell, lockout, unlock, and reentry cannot be bound together without contaminating the frozen EOD primary",full_reduce_binding,v133c / v133m / v134bo
+4,reentry_execution_surface,not_started,seed_reentry_ladder,"reentry timing supervision exists, but no lawful simulator or fill policy exists for rebuild actions",reentry binding,v134bc / v134bo

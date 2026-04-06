@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131p_commercial_aerospace_op_local_1min_direction_triage_v1",
+    "authoritative_status": "commercial_aerospace_local_1min_override_branch_unblocked",
+    "ready_count": 4,
+    "manifest_row_count": 4,
+    "authoritative_rule": "local retained-session coverage unlocks the commercial-aerospace intraday branch for local modeling work, but does not yet make the branch replay-facing by itself"
+  },
+  "triage_rows": [
+    {
+      "component": "local_1min_override_branch",
+      "status": "commercial_aerospace_local_1min_override_branch_unblocked",
+      "rationale": "the exact retained override sessions now have local archive support and no longer depend on external provider stability"
+    },
+    {
+      "component": "minute_collection_gate",
+      "status": "superseded_for_retained_sessions",
+      "rationale": "the original collection gate remains useful for future expansion, but the retained sessions can now move to local processing"
+    }
+  ],
+  "interpretation": [
+    "V1.31P turns the local 1-minute archive audit into a go/no-go direction for the retained override sessions.",
+    "This is still a governance step: it unblocks local intraday prototyping, not direct replay promotion."
+  ]
+}

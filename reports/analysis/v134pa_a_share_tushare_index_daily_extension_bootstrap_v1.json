@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "provider": "tushare",
+    "symbol_count": 3,
+    "row_count": 1872,
+    "coverage_start": "2023-09-01",
+    "coverage_end": "2026-04-03",
+    "artifact_path": "data\\raw\\index_daily_bars\\tushare_index_daily_bars_extension_v1.csv",
+    "authoritative_output": "a_share_tushare_index_daily_extension_raw_materialized"
+  },
+  "output_rows": [
+    {
+      "symbol": "000001",
+      "row_count": 624,
+      "ts_code": "000001.SH"
+    },
+    {
+      "symbol": "000300",
+      "row_count": 624,
+      "ts_code": "000300.SH"
+    },
+    {
+      "symbol": "399006",
+      "row_count": 624,
+      "ts_code": "399006.SZ"
+    }
+  ],
+  "interpretation": [
+    "Tushare now materializes an index-daily raw extension beyond the legacy 2024 horizon.",
+    "This closes the old no-source condition and converts replay-side movement from raw-source absence to post-intake re-audit work."
+  ]
+}

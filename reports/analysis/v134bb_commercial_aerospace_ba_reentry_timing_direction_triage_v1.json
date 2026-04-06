@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bb_commercial_aerospace_ba_reentry_timing_direction_triage_v1",
+    "authoritative_status": "freeze_reentry_timing_supervision_and_continue_seed_level_timing_supervision",
+    "triage_csv": "data\\training\\commercial_aerospace_ba_reentry_timing_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "same_day_reentry",
+      "status": "blocked",
+      "detail": "positive_1d_seed_count = 0; no seed authorizes same-day chase."
+    },
+    {
+      "component": "seed_level_reentry_timing_supervision",
+      "status": "approved_to_continue",
+      "detail": "Use the timing windows as supervision only before any simulator or replay-facing lane."
+    },
+    {
+      "component": "earliest_rebuild_watch",
+      "status": "family_split_retained",
+      "detail": "Delayed-rebound seeds may open rebuild watch from T+3; deep-washout seeds remain base-only until T+5. positive_3d_seed_count = 2."
+    },
+    {
+      "component": "reentry_simulator_lane",
+      "status": "still_blocked",
+      "detail": "No reentry simulator is authorized from timing supervision alone."
+    }
+  ],
+  "interpretation": [
+    "V1.34BB turns the new timing supervision audit into the next direction judgment.",
+    "The branch may continue reentry timing supervision, but same-day chase and any simulator lane remain blocked."
+  ]
+}

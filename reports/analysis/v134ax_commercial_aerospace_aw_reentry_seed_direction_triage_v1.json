@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ax_commercial_aerospace_aw_reentry_seed_direction_triage_v1",
+    "authoritative_status": "freeze_reentry_seed_registry_and_shift_next_to_seed_level_reentry_supervision",
+    "triage_csv": "data\\training\\commercial_aerospace_aw_reentry_seed_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "post_exit_reentry_seed_registry",
+      "status": "frozen",
+      "detail": "registry_count = 3, dominant_reentry_family = delayed_rebound_reentry_gap"
+    },
+    {
+      "component": "next_supervision_build",
+      "status": "approved_for_seed_level_reentry_supervision",
+      "detail": "The next work should stay at seed-level and define rebuild/reentry supervision labels before any simulator work."
+    },
+    {
+      "component": "replay_lane",
+      "status": "still_blocked",
+      "detail": "Reentry seeds are only a new supervision family, not a replay-facing lane."
+    }
+  ],
+  "interpretation": [
+    "V1.34AX turns the new post-exit reentry seed registry into the next supervised direction.",
+    "The branch should move from sell-side refinement to seed-level rebuild timing supervision without touching replay boundaries."
+  ]
+}

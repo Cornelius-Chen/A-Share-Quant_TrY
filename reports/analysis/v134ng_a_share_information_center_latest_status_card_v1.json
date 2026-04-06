@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "foundation_complete_count": 13,
+    "workstream_count": 13,
+    "queue_stopline_count": 1,
+    "promotable_subset_count": 1,
+    "true_source_gap_count": 0,
+    "semantic_surface_materialized_count": 1,
+    "explicit_blocked_stack_count": 1,
+    "market_context_residual_count": 1,
+    "status_csv": "data\\training\\a_share_information_center_latest_status_card_v1.csv",
+    "authoritative_output": "a_share_information_center_latest_status_card_materialized"
+  },
+  "rows": [
+    {
+      "status_component": "information_center_foundation",
+      "status_class": "foundation_complete_enough",
+      "decisive_metric": "foundation_complete_count = 13",
+      "next_closure_mode": "keep_framework_frozen_and_close_named_backlogs_only"
+    },
+    {
+      "status_component": "source_activation_queue_surface",
+      "status_class": "single_runtime_opening_review_stopline",
+      "decisive_metric": "review_row_count = 1; scheduler_pending_count = 1; runtime_queue_count = 3",
+      "next_closure_mode": "continue_only_through_the_single_scheduler_governance_opening_review_surface"
+    },
+    {
+      "status_component": "daily_market_promotion",
+      "status_class": "promotable_subset_materialized",
+      "decisive_metric": "promotable_now_count = 14",
+      "next_closure_mode": "recheck_replay_internal_build_from_the_controlled_promotable_subset"
+    },
+    {
+      "status_component": "paired_surface_extension",
+      "status_class": "semantic_pair_layer_materialized",
+      "decisive_metric": "index_candidate_cover_count = 16; limit_halt_materialized_count = 14",
+      "next_closure_mode": "use_the_semantic_pair_layer_for_replay_internal_build_recheck"
+    },
+    {
+      "status_component": "index_daily_source_horizon",
+      "status_class": "source_gap_closed",
+      "decisive_metric": "beyond_2024_source_count = 1",
+      "next_closure_mode": "retire_old_source_gap_and_keep_extension_in_downstream_reaudit_mode"
+    },
+    {
+      "status_component": "limit_halt_derivation",
+      "status_class": "semantic_surface_materialized_for_recheck",
+      "decisive_metric": "limit_halt_materialized_count = 14",
+      "next_closure_mode": "retire_old_derivation_blocker_and_keep_named_semantic_residuals_explicit"
+    },
+    {
+      "status_component": "execution_live_like_gate_stack",
+      "status_class": "explicitly_blocked",
+      "decisive_metric": "blocker_count = 6",
+      "next_closure_mode": "close_source_and_replay_blockers_before_live_like_or_execution_review"
+    },
+    {
+      "status_component": "market_context_residuals",
+      "status_class": "external_boundary_residuals_only_under_shadow_overlay",
+      "decisive_metric": "base_missing_count = 3; corrected_missing_count = 2; boundary_only_residual_count = 2",
+      "next_closure_mode": "retain_shadow_overlay_and_treat_remaining_rows_as_boundary-handling_work_not_full_market-surface_rebuild"
+    }
+  ],
+  "interpretation": [
+    "The information center is no longer in scaffold-building mode; the core foundation is complete enough and current work is blocker closure.",
+    "Source-side has reached queue-processing stopline, replay-side has reached a controlled promotable subset, and index-daily raw-source absence has now been closed.",
+    "Replay-side has now advanced again: semantic limit-halt materialization is done enough to reopen replay promotion with a controlled promotable subset.",
+    "The remaining replay market-context gap is no longer broad; under the shadow-only corrected binding overlay it narrows to external boundary residuals only.",
+    "Live-like and execution remain explicitly blocked by a named gate stack rather than by vague incompleteness."
+  ]
+}

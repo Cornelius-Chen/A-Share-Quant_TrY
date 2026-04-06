@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129m_commercial_aerospace_klm_governance_packaging_triage_v1",
+    "governance_layer_count": 7,
+    "state_management_focus": "post_entry_upgrade_derisk_tail_repair_governance",
+    "authoritative_status": "freeze_commercial_aerospace_primary_plus_governance_and_shift_to_transfer_preparation",
+    "authoritative_rule": "commercial-aerospace should now move from board-local replay tuning to governance-backed transfer preparation"
+  },
+  "direction_rows": [
+    {
+      "direction": "freeze_primary_replay",
+      "status": "continue",
+      "reason": "late-preheat filtering and full-pre replay attachment did not beat the current primary frontier"
+    },
+    {
+      "direction": "governance_stack",
+      "status": "promote_to_authoritative_companion_surface",
+      "reason": "timechain, failure library, intraday collapse supervision, phase state machine, and late-preheat mismatch now form a coherent oversight layer"
+    },
+    {
+      "direction": "post_entry_state_management_template",
+      "status": "prepare_for_cross_board_transfer",
+      "reason": "commercial aerospace now has a compact, ordered state-management grammar that can be tested on another archetype without copying board-local windows"
+    },
+    {
+      "direction": "further_board_local_replay_tuning",
+      "status": "stop",
+      "reason": "commercial-aerospace board-local replay tuning has reached diminishing returns and now risks turning into local curve carving"
+    }
+  ],
+  "interpretation": [
+    "V1.29M freezes the post-commercial-aerospace direction after replay-side and supervision-side work converged.",
+    "The result is a two-part package: the frozen primary replay plus its governance/state-management companion surface."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bn_commercial_aerospace_bm_expectancy_direction_triage_v1",
+    "authoritative_status": "freeze_board_expectancy_supervision_and_use_expectancy_as_board_level_reduce_context",
+    "triage_csv": "data\\training\\commercial_aerospace_bm_expectancy_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "unlock_worthy_expectancy",
+      "status": "retained_as_positive_board_state",
+      "detail": "count = 8, mean_forward_20d = 0.43084978, mean_rr20 = 18.13736804."
+    },
+    {
+      "component": "false_bounce_only_expectancy",
+      "status": "retained_as_negative_board_state",
+      "detail": "count = 10, mean_forward_20d = -0.041926, mean_rr20 = 0.14139521."
+    },
+    {
+      "component": "lockout_worthy_expectancy",
+      "status": "retained_as_top_level_veto_state",
+      "detail": "count = 1, mean_forward_20d = -0.13429061, mean_rr20 = 0.5207344."
+    },
+    {
+      "component": "shape_only_judgment",
+      "status": "demoted",
+      "detail": "Board state should now be discussed in expectancy / reward-risk terms first, not only in shape terms."
+    }
+  ],
+  "interpretation": [
+    "V1.34BN turns board state from a shape debate into an expectancy debate: is the board worth touching at all?",
+    "This does not create execution binding. It gives the reduce hierarchy a harder top-level language: lockout-worthy, false-bounce-only, or unlock-worthy expectancy."
+  ]
+}

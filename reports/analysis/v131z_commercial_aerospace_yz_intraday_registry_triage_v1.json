@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131z_commercial_aerospace_yz_intraday_registry_triage_v1",
+    "authoritative_status": "freeze_commercial_aerospace_intraday_supervision_registry_and_shift_next_to_minute_tiered_label_specification",
+    "registry_row_count": 6,
+    "severe_override_positive_count": 2,
+    "reversal_watch_count": 2,
+    "mild_override_watch_count": 2,
+    "authoritative_rule": "the commercial-aerospace intraday branch should move next to minute-tiered label specification using the frozen supervision registry as the only canonical seed source"
+  },
+  "triage_rows": [
+    {
+      "component": "intraday_supervision_registry",
+      "status": "freeze_commercial_aerospace_intraday_supervision_registry_and_shift_next_to_minute_tiered_label_specification",
+      "rationale": "the registry is now the canonical seed object for future minute-level work because it preserves severity tiers and governance lineage"
+    },
+    {
+      "component": "lawful_eod_primary",
+      "status": "retain_unchanged",
+      "rationale": "the new registry still serves supervision only and does not authorize replay contamination"
+    }
+  ],
+  "interpretation": [
+    "V1.31Z converts the new intraday supervision registry into a next-step governance direction.",
+    "The correct next move is minute-tiered label specification, not direct replay modification."
+  ]
+}

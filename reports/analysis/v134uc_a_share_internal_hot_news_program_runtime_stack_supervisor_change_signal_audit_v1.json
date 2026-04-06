@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "supervisor_mode_change": "stable",
+    "program_health_state_change": "stable",
+    "runtime_consumer_mode_change": "stable",
+    "scheduler_loop_signal_mode_change": "stable",
+    "orchestration_loop_signal_mode_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_supervisor_change_signal_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_supervisor_change_signal",
+      "component_state": "read_ready_internal_only",
+      "metric": "signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "supervisor_mode_change",
+      "component_state": "materialized",
+      "metric": "supervisor_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "program_health_state_change",
+      "component_state": "materialized",
+      "metric": "program_health_state_change",
+      "value": "stable"
+    },
+    {
+      "component": "runtime_consumer_mode_change",
+      "component_state": "materialized",
+      "metric": "runtime_consumer_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "scheduler_loop_signal_mode_change",
+      "component_state": "materialized",
+      "metric": "scheduler_loop_signal_mode_change",
+      "value": "stable"
+    },
+    {
+      "component": "orchestration_loop_signal_mode_change",
+      "component_state": "materialized",
+      "metric": "orchestration_loop_signal_mode_change",
+      "value": "stable"
+    }
+  ],
+  "interpretation": [
+    "This layer sits above the runtime-stack supervisor card and isolates whether the compact supervision view itself changed.",
+    "A supervising process can watch it to avoid reopening the supervisor card unless one of the upper stacks materially changed."
+  ]
+}

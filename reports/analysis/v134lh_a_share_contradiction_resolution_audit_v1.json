@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134lh_a_share_contradiction_resolution_audit_v1",
+    "registry_group_count": 36,
+    "duplicate_merge_candidate_count": 16,
+    "semantic_divergence_count": 0,
+    "review_queue_count": 15,
+    "residual_count": 0,
+    "status_csv": "data\\training\\a_share_contradiction_resolution_status_v1.csv",
+    "authoritative_output": "a_share_contradiction_resolution_ready_for_direction_triage"
+  },
+  "rows": [
+    {
+      "component": "contradiction_graph",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_contradiction_graph_v1.csv",
+      "coverage_note": "registry_group_count = 36"
+    },
+    {
+      "component": "review_queue",
+      "component_state": "materialized_bootstrap",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_contradiction_review_queue_v1.csv",
+      "coverage_note": "review_queue_count = 15"
+    },
+    {
+      "component": "residual_backlog",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\reference\\info_center\\quality_registry\\a_share_contradiction_resolution_residual_v1.csv",
+      "coverage_note": "residual_count = 0"
+    }
+  ],
+  "interpretation": [
+    "This closes the first quality contradiction backlog by separating duplicate-materialization cases from true semantic divergence review.",
+    "The result is a reusable contradiction graph and review queue, rather than a flat unreviewed backlog."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bx_commercial_aerospace_same_day_precedence_policy_audit_v1",
+    "collision_session_count": 8,
+    "collision_family_count": 5,
+    "open_or_add_collision_count": 6,
+    "reduce_or_close_collision_count": 4,
+    "largest_collision_family": "add",
+    "collision_csv": "data\\training\\commercial_aerospace_same_day_precedence_policy_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_same_day_precedence_policy_ready_for_direction_triage"
+  },
+  "policy_rows": [
+    {
+      "policy_name": "open_add_protection",
+      "status": "mandatory",
+      "rule": "same-day open/add lots enter the new-lots bucket and are not sellable by the intraday sell lane on that day"
+    },
+    {
+      "policy_name": "intraday_first_consumption_on_carried_inventory",
+      "status": "mandatory",
+      "rule": "intraday sell triggers consume only carried start-of-day inventory in trigger-time order"
+    },
+    {
+      "policy_name": "eod_reduce_close_reconciliation",
+      "status": "mandatory",
+      "rule": "same-day EOD reduce/close actions must reconcile against residual carried inventory after intraday sells, not against original morning inventory"
+    },
+    {
+      "policy_name": "mixed_collision_explicit_noop_or_clip",
+      "status": "mandatory",
+      "rule": "if same-day primary actions exceed residual eligible quantity, the shadow lane must emit clipped or noop reconciliation rows instead of negative inventory"
+    }
+  ],
+  "collision_rows": [
+    {
+      "trade_date": "20251118",
+      "symbol": "688523",
+      "predicted_tier": "mild_override_watch",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "add|reduce",
+      "policy_implication": "same_day_new_lots_protected"
+    },
+    {
+      "trade_date": "20251126",
+      "symbol": "300045",
+      "predicted_tier": "mild_override_watch",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "close",
+      "policy_implication": "intraday_sells_must_preconsume_before_eod_reduce_close_reconciliation"
+    },
+    {
+      "trade_date": "20251217",
+      "symbol": "688066",
+      "predicted_tier": "mild_override_watch",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "add",
+      "policy_implication": "same_day_new_lots_protected"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "predicted_tier": "reversal_watch",
+      "holding_status": "no_actual_holding",
+      "collision_family": "open",
+      "policy_implication": "same_day_new_lots_protected"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "601698",
+      "predicted_tier": "severe_override_positive",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "add",
+      "policy_implication": "same_day_new_lots_protected"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "holding_status": "fully_funded_overlap",
+      "collision_family": "reduce",
+      "policy_implication": "intraday_sells_must_preconsume_before_eod_reduce_close_reconciliation"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "add",
+      "policy_implication": "same_day_new_lots_protected"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300342",
+      "predicted_tier": "severe_override_positive",
+      "holding_status": "underfunded_vs_reference",
+      "collision_family": "add|reduce",
+      "policy_implication": "same_day_new_lots_protected"
+    }
+  ],
+  "interpretation": [
+    "V1.34BX turns same-day primary collisions into explicit policy families instead of leaving them as an implementation afterthought.",
+    "The binding lane must protect same-day new lots and reconcile later EOD reduce/close actions against residual carried inventory only."
+  ]
+}

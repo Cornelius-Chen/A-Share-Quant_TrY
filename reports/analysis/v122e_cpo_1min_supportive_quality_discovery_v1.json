@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122e_cpo_1min_supportive_quality_discovery_v1",
+    "sample_count": 2016,
+    "positive_count": 1080,
+    "negative_count": 936,
+    "discovery_mean_gap_positive_minus_negative": 0.04119105,
+    "threshold_q75": 0.32931903,
+    "threshold_positive_rate": 0.53769841,
+    "recommended_next_posture": "audit_supportive_quality_score_out_of_set"
+  },
+  "score_rows": [
+    {
+      "group": "positive_forward_5",
+      "sample_count": 1080,
+      "mean_supportive_quality_score": 0.01912442
+    },
+    {
+      "group": "non_positive_forward_5",
+      "sample_count": 936,
+      "mean_supportive_quality_score": -0.02206663
+    }
+  ],
+  "interpretation": [
+    "V1.22E hardens the supportive continuation family with a visible-only quality score instead of inventing a new family.",
+    "The score should only continue if positive short-horizon outcomes cluster in the upper-score region.",
+    "This remains a non-replay discovery step and must be followed by out-of-set audit."
+  ]
+}

@@ -1,0 +1,5 @@
+﻿component,status,detail
+reduce_mainline,do_not_drift,Do not reopen broad reduce tuning; the branch is frozen as complete enough for research.
+residue_cases,local_only,Only local residue supervision is still allowed inside reduce.
+execution_closure,wait_for_infrastructure,execution_blocker_count = 4
+future_frontier,deferred_next_step,"The next frontier is intraday add, but it remains deferred until the later explicit shift."

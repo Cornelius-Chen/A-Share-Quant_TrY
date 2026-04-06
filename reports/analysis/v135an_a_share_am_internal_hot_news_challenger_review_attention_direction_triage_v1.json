@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "incumbent_theme_slug": "oil_gas",
+    "challenger_theme_slug": "defense_industry",
+    "support_delta_vs_incumbent": 0,
+    "review_state": "hold_incumbent_focus",
+    "attention_state": "background_monitor_only",
+    "attention_priority": "p3",
+    "authoritative_status": "challenger_review_attention_packet_materialized"
+  },
+  "triage_rows": [
+    {
+      "component": "incumbent_hold",
+      "direction": "keep the incumbent primary focus live while the challenger review attention packet remains below full open-rotation state."
+    },
+    {
+      "component": "challenger_attention",
+      "direction": "raise or lower challenger review attention directly from the packet instead of reopening the full review chain for every poll."
+    },
+    {
+      "component": "rotation_gate",
+      "direction": "only escalate from attention to full rotation once review state crosses into open-next-rotation territory."
+    }
+  ],
+  "interpretation": [
+    "This packet is the compact stopline between routine challenger monitoring and a new accepted-rotation rollout.",
+    "It keeps top-level review semantics visible without silently promoting the challenger into the primary consumer chain."
+  ]
+}

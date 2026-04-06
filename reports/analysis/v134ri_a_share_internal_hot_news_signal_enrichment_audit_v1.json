@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "board_signal_row_count": 1,
+    "important_queue_row_count": 2,
+    "curated_match_count": 2,
+    "matched_board_signal_count": 0,
+    "matched_important_queue_count": 0,
+    "missing_surface_count": 0,
+    "authoritative_output": "a_share_internal_hot_news_signal_enrichment_materialized"
+  },
+  "rows": [
+    {
+      "component": "board_signal_enriched",
+      "component_state": "materialized",
+      "metric": "board_signal_row_count",
+      "value": "1"
+    },
+    {
+      "component": "important_queue_enriched",
+      "component_state": "materialized",
+      "metric": "important_queue_row_count",
+      "value": "2"
+    },
+    {
+      "component": "curated_mapping_status",
+      "component_state": "measured",
+      "metric": "curated_match_count",
+      "value": "2"
+    },
+    {
+      "component": "mapping_status",
+      "component_state": "measured",
+      "metric": "missing_surface_count",
+      "value": "0"
+    }
+  ],
+  "interpretation": [
+    "Board and important trading signals now carry explicit beneficiary-mapping status instead of leaving blank symbol lists unexplained.",
+    "Curated theme beneficiaries are applied first when the local securities pool has a credible proxy list for the detected theme.",
+    "The trading layer can distinguish broad-market guidance, successfully matched board signals, and theme hits that still lack a member surface."
+  ]
+}

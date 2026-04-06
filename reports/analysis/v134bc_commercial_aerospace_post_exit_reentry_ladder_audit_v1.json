@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bc_commercial_aerospace_post_exit_reentry_ladder_audit_v1",
+    "seed_count": 3,
+    "same_day_entry_authorized_seed_count": 0,
+    "delayed_reclaim_watch_seed_count": 2,
+    "deep_washout_watch_seed_count": 1,
+    "persistent_recovery_seed_count": 2,
+    "late_only_recovery_seed_count": 1,
+    "ladder_csv": "data\\training\\commercial_aerospace_post_exit_reentry_ladder_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_post_exit_reentry_ladder_ready_for_direction_triage"
+  },
+  "seed_rows": [
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "reentry_family": "deep_washout_reentry_gap",
+      "same_day_chase_blocked": true,
+      "rebuild_watch_start_day": 5,
+      "observation_only_through_day": 4,
+      "rebuild_watch_label": "base_then_rebuild_watch",
+      "recovery_shape": "late_only_recovery",
+      "positive_3d": false,
+      "positive_5d": true
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "same_day_chase_blocked": true,
+      "rebuild_watch_start_day": 3,
+      "observation_only_through_day": 2,
+      "rebuild_watch_label": "reclaim_rebuild_watch",
+      "recovery_shape": "persistent_recovery",
+      "positive_3d": true,
+      "positive_5d": true
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "same_day_chase_blocked": true,
+      "rebuild_watch_start_day": 3,
+      "observation_only_through_day": 2,
+      "rebuild_watch_label": "reclaim_rebuild_watch",
+      "recovery_shape": "persistent_recovery",
+      "positive_3d": true,
+      "positive_5d": true
+    }
+  ],
+  "ladder_rows": [
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "ladder_step": 1,
+      "day_range": "T+0",
+      "state": "same_day_chase_blocked",
+      "action": "block_same_day_chase"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "ladder_step": 2,
+      "day_range": "T+1~T+4",
+      "state": "observation_only",
+      "action": "observe_only_no_rebuild"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "ladder_step": 3,
+      "day_range": "T+5+",
+      "state": "base_then_rebuild_watch",
+      "action": "open_rebuild_watch"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "ladder_step": 4,
+      "day_range": "post_watch_confirmation",
+      "state": "late_base_confirmation",
+      "action": "continue_base_watch_not_rebuild_chase"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "ladder_step": 1,
+      "day_range": "T+0",
+      "state": "same_day_chase_blocked",
+      "action": "block_same_day_chase"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "ladder_step": 2,
+      "day_range": "T+1~T+2",
+      "state": "observation_only",
+      "action": "observe_only_no_rebuild"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "ladder_step": 3,
+      "day_range": "T+3+",
+      "state": "reclaim_rebuild_watch",
+      "action": "open_rebuild_watch"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "ladder_step": 4,
+      "day_range": "post_watch_confirmation",
+      "state": "persistent_reclaim_confirmation",
+      "action": "allow_stronger_rebuild_observation"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "ladder_step": 1,
+      "day_range": "T+0",
+      "state": "same_day_chase_blocked",
+      "action": "block_same_day_chase"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "ladder_step": 2,
+      "day_range": "T+1~T+2",
+      "state": "observation_only",
+      "action": "observe_only_no_rebuild"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "ladder_step": 3,
+      "day_range": "T+3+",
+      "state": "reclaim_rebuild_watch",
+      "action": "open_rebuild_watch"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "ladder_step": 4,
+      "day_range": "post_watch_confirmation",
+      "state": "persistent_reclaim_confirmation",
+      "action": "allow_stronger_rebuild_observation"
+    }
+  ],
+  "interpretation": [
+    "V1.34BC turns the timing windows into a ladder: block, observe, open rebuild watch, then require later confirmation shape.",
+    "This is still supervision only. The ladder names timing states; it does not authorize a reentry simulator or same-day rebuild."
+  ]
+}

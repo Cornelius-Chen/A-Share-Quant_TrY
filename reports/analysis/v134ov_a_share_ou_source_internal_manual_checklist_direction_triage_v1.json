@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "checklist_row_count": 4,
+    "stage_1_count": 1,
+    "authoritative_status": "source_internal_manual_should_now_be_worked_from_checklist_stage_order"
+  },
+  "triage_rows": [
+    {
+      "component": "stage_1",
+      "direction": "execute_primary_host_family_checklist_first"
+    },
+    {
+      "component": "stage_2",
+      "direction": "hold_independent_hosts_until_stage_1_record_exists"
+    },
+    {
+      "component": "stage_3",
+      "direction": "retain_sibling_host_blocked_until_primary_outcome_exists"
+    },
+    {
+      "component": "lane_mode",
+      "direction": "treat_source_side_as_manual_checklist_execution_not_structural_build"
+    }
+  ],
+  "interpretation": [
+    "The remaining internally actionable lane now has an explicit staged checklist order.",
+    "The next gain comes from executing stage 1, not from further modeling or registry expansion."
+  ]
+}

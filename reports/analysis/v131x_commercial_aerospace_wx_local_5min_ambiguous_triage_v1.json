@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131x_commercial_aerospace_wx_local_5min_ambiguous_triage_v1",
+    "authoritative_status": "retain_all_flagged_ambiguous_hits_as_mild_override_watch_seeds",
+    "flagged_non_override_case_count": 2,
+    "mild_override_watch_count": 2,
+    "documented_false_positive_count": 0,
+    "authoritative_rule": "ambiguous local 5min hits may expand the supervision seed library only when they look like mild override watches; otherwise they remain explicit false-positive boundaries"
+  },
+  "triage_rows": [
+    {
+      "component": "flagged_ambiguous_5min_cases",
+      "status": "retain_all_flagged_ambiguous_hits_as_mild_override_watch_seeds",
+      "rationale": "ambiguous hits should only be promoted when they resemble genuine mild override behavior rather than ordinary prototype leakage"
+    },
+    {
+      "component": "local_5min_override_prototype",
+      "status": "retain_governed_supervision",
+      "rationale": "the broader prototype remains governance-only regardless of whether some ambiguous hits are retained as mild watch seeds"
+    }
+  ],
+  "interpretation": [
+    "V1.31X turns the ambiguous-hit case audit into a narrow governance verdict.",
+    "The decision here affects only the supervision seed library, not the lawful EOD primary replay."
+  ]
+}

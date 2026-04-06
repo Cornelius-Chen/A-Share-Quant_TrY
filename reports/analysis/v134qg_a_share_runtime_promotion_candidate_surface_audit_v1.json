@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "runtime_row_count": 3,
+    "priority_runtime_candidate_count": 1,
+    "excluded_runtime_row_count": 2,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_runtime_promotion_candidate_surface_status_v1.csv",
+    "authoritative_output": "a_share_runtime_promotion_candidate_surface_materialized"
+  },
+  "rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "queue_priority": "first_runtime_candidate_after_batch_one_allowlist",
+      "dependency_state": "manual_batch_one_cleared_pending_runtime_scheduler",
+      "candidate_class": "priority_runtime_candidate",
+      "candidate_state": "manual_review_cleared_pending_scheduler_activation",
+      "promotable_now": "False",
+      "excluded_from_first_runtime_lane": "False",
+      "blocking_reason": "batch-one manual approvals complete; runtime scheduler gate still closed"
+    },
+    {
+      "adapter_id": "network_social_column_fetch",
+      "queue_priority": "keep_review_only_deferred",
+      "dependency_state": "review_only_nonpromotive",
+      "candidate_class": "review_only_excluded",
+      "candidate_state": "nonpromotive_review_only",
+      "promotable_now": "False",
+      "excluded_from_first_runtime_lane": "True",
+      "blocking_reason": "social column adapter remains review-only by design"
+    },
+    {
+      "adapter_id": "network_official_source_fetch",
+      "queue_priority": "reserve_until_primary_official_hosts_exist",
+      "dependency_state": "reserved_for_future_primary_sources",
+      "candidate_class": "reserved_primary_source_excluded",
+      "candidate_state": "reserved_until_primary_official_hosts_exist",
+      "promotable_now": "False",
+      "excluded_from_first_runtime_lane": "True",
+      "blocking_reason": "official primary host inventory not yet activated"
+    }
+  ],
+  "interpretation": [
+    "Runtime promotion is no longer one flat blocked set; it is partitioned into one first candidate and two excluded adapters.",
+    "The only meaningful first runtime lane is html-article fetch after completed manual approval, but scheduler activation still keeps it non-promotive."
+  ]
+}

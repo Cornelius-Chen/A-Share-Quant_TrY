@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125y_commercial_aerospace_eod_score_threshold_calibration_v1",
+    "train_row_count": 4944,
+    "test_row_count": 1236,
+    "best_eligibility_spread": 0.00286605,
+    "best_de_risk_spread": -0.04038986,
+    "authoritative_status": "lawful_eod_score_calibration_non_execution"
+  },
+  "threshold_rows": [
+    {
+      "task_name": "eligibility_binary",
+      "threshold_quantile": 0.6,
+      "selected_threshold": 0.42096815,
+      "pass_count": 146,
+      "pass_rate": 0.11812298,
+      "pass_forward_mean": 0.04877605,
+      "fail_forward_mean": 0.04651361,
+      "test_spread": 0.00226244
+    },
+    {
+      "task_name": "eligibility_binary",
+      "threshold_quantile": 0.7,
+      "selected_threshold": 0.55706009,
+      "pass_count": 76,
+      "pass_rate": 0.06148867,
+      "pass_forward_mean": 0.03150293,
+      "fail_forward_mean": 0.04778183,
+      "test_spread": -0.0162789
+    },
+    {
+      "task_name": "eligibility_binary",
+      "threshold_quantile": 0.8,
+      "selected_threshold": 0.72033488,
+      "pass_count": 54,
+      "pass_rate": 0.04368932,
+      "pass_forward_mean": 0.03346543,
+      "fail_forward_mean": 0.04738918,
+      "test_spread": -0.01392375
+    },
+    {
+      "task_name": "eligibility_binary",
+      "threshold_quantile": 0.9,
+      "selected_threshold": 0.84512925,
+      "pass_count": 3,
+      "pass_rate": 0.00242718,
+      "pass_forward_mean": 0.04963996,
+      "fail_forward_mean": 0.0467739,
+      "test_spread": 0.00286605
+    },
+    {
+      "task_name": "de_risk_binary",
+      "threshold_quantile": 0.6,
+      "selected_threshold": -0.04441954,
+      "pass_count": 854,
+      "pass_rate": 0.69093851,
+      "pass_forward_mean": 0.05926381,
+      "fail_forward_mean": 0.01887395,
+      "test_spread": -0.04038986
+    },
+    {
+      "task_name": "de_risk_binary",
+      "threshold_quantile": 0.7,
+      "selected_threshold": 0.30822081,
+      "pass_count": 693,
+      "pass_rate": 0.56067961,
+      "pass_forward_mean": 0.06884037,
+      "fail_forward_mean": 0.01862756,
+      "test_spread": -0.05021282
+    },
+    {
+      "task_name": "de_risk_binary",
+      "threshold_quantile": 0.8,
+      "selected_threshold": 0.74179316,
+      "pass_count": 536,
+      "pass_rate": 0.43365696,
+      "pass_forward_mean": 0.08538419,
+      "fail_forward_mean": 0.01722174,
+      "test_spread": -0.06816245
+    },
+    {
+      "task_name": "de_risk_binary",
+      "threshold_quantile": 0.9,
+      "selected_threshold": 1.37592001,
+      "pass_count": 339,
+      "pass_rate": 0.27427184,
+      "pass_forward_mean": 0.09801793,
+      "fail_forward_mean": 0.02741702,
+      "test_spread": -0.07060091
+    }
+  ],
+  "interpretation": [
+    "V1.25Y calibrates score thresholds on train-only quantiles and then asks whether test-side forward spread is economically meaningful.",
+    "This is the bridge from lawful offline learning into replay-adjacent score semantics."
+  ]
+}

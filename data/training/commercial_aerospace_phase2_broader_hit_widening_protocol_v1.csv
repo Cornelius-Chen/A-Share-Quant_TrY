@@ -1,0 +1,7 @@
+﻿protocol_component,status,detail
+widening_scope,approved_with_guardrails,"Expand from canonical seeds to broader-hit sessions only: 24 hit sessions, not 612 all sessions."
+allowed_execution_tiers,approved_with_guardrails,Only reversal_watch and severe_override_positive may enter broader phase-2 simulation.
+mild_tier_handling,blocked_from_execution,mild_override_watch stays governance-only and may only feed do-not-readd logic.
+clock_and_cost_model,mandatory,"Keep minute-close trigger, next-bar-open fill, and the same frozen EOD cost model with no local modifications."
+determinism_gate,mandatory,double_run_exact_match = True must remain true before and after widening.
+replay_boundary,still_blocked,Broader-hit widening remains inside phase 2 and does not authorize phase-3 replay binding.

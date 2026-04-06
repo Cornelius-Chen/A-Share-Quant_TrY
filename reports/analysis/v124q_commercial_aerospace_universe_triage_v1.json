@@ -1,0 +1,503 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v124q_commercial_aerospace_universe_triage_v1",
+    "merged_universe_count": 51,
+    "snapshot_supported_count": 3,
+    "control_eligible_count": 2,
+    "confirmation_count": 1,
+    "pending_count": 48,
+    "authoritative_rule": "only_snapshot_supported_symbols_may_enter_machine_role_triage_now_and_web_only_symbols_remain_pending_or_confirmation_only",
+    "recommended_next_posture": "use_control_eligible_core_for_control_extraction_candidate_surface_and_keep_pending_names_outside_lawful_controls"
+  },
+  "control_eligible_rows": [
+    {
+      "symbol": "002085",
+      "name": "万丰奥威",
+      "group": "正式组",
+      "subgroup": "低空/飞行器平台龙头",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "snapshot_row_count": 242,
+      "snapshot_sector_names": "商业航天",
+      "machine_cluster_id": 0,
+      "machine_semantic": "control_eligible_primary",
+      "avg_liquidity": 0.567873,
+      "avg_stability": 0.37245,
+      "avg_context_heat": 0.629609,
+      "avg_expected_upside": 0.53438
+    },
+    {
+      "symbol": "000738",
+      "name": "航发控制",
+      "group": "正式组",
+      "subgroup": "核心控制/稳定支撑",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "snapshot_row_count": 110,
+      "snapshot_sector_names": "商业航天|航天航空",
+      "machine_cluster_id": 1,
+      "machine_semantic": "control_eligible_support",
+      "avg_liquidity": 0.19613,
+      "avg_stability": 0.698202,
+      "avg_context_heat": 0.494603,
+      "avg_expected_upside": 0.564584
+    }
+  ],
+  "confirmation_rows": [
+    {
+      "symbol": "600118",
+      "name": "中国卫星",
+      "group": "正式组",
+      "subgroup": "卫星整机/核心龙头",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "snapshot_row_count": 242,
+      "snapshot_sector_names": "商业航天|大飞机|空间站概念|航天航空",
+      "machine_cluster_id": 2,
+      "machine_semantic": "confirmation_only_adjacent",
+      "avg_liquidity": 0.258844,
+      "avg_stability": 0.64394,
+      "avg_context_heat": 0.428782,
+      "avg_expected_upside": 0.494558
+    }
+  ],
+  "pending_rows": [
+    {
+      "symbol": "001208",
+      "name": "华菱线缆",
+      "group": "卖铲组",
+      "subgroup": "特种线缆/卖铲人",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "001270",
+      "name": "*ST铖昌",
+      "group": "卖铲组",
+      "subgroup": "星载相控阵T/R芯片",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002342",
+      "name": "巨力索具",
+      "group": "卖铲组",
+      "subgroup": "火箭回收/地面装置",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002413",
+      "name": "雷科防务",
+      "group": "卖铲组",
+      "subgroup": "有源相控阵天线",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002792",
+      "name": "通宇通讯",
+      "group": "卖铲组",
+      "subgroup": "有源相控阵天线",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300065",
+      "name": "海兰信",
+      "group": "卖铲组",
+      "subgroup": "海上回收系统",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300129",
+      "name": "泰胜风能",
+      "group": "卖铲组",
+      "subgroup": "箭体/贮箱/回收设施",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300900",
+      "name": "广联航空",
+      "group": "卖铲组",
+      "subgroup": "航天结构件/制造配套",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "301005",
+      "name": "超捷股份",
+      "group": "卖铲组",
+      "subgroup": "箭体结构件",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "301306",
+      "name": "西测测试",
+      "group": "卖铲组",
+      "subgroup": "检测验证/质量守门人",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600862",
+      "name": "中航高科",
+      "group": "卖铲组",
+      "subgroup": "航空航天复合材料",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "603267",
+      "name": "鸿远电子",
+      "group": "卖铲组",
+      "subgroup": "电子元器件",
+      "source_layer": "wave2",
+      "confidence": "medium",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688102",
+      "name": "斯瑞新材",
+      "group": "卖铲组",
+      "subgroup": "高温合金/材料",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688122",
+      "name": "西部超导",
+      "group": "卖铲组",
+      "subgroup": "钛合金/超导材料",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688143",
+      "name": "长盈通",
+      "group": "卖铲组",
+      "subgroup": "光纤器件/上游材料",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688270",
+      "name": "臻镭科技",
+      "group": "卖铲组",
+      "subgroup": "星载射频芯片/微系统",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688539",
+      "name": "高华科技",
+      "group": "卖铲组",
+      "subgroup": "传感器/检测配套",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688636",
+      "name": "智明达",
+      "group": "卖铲组",
+      "subgroup": "航天电子/嵌入式计算",
+      "source_layer": "wave2",
+      "confidence": "high",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "000547",
+      "name": "航天发展",
+      "group": "同走势镜像组",
+      "subgroup": "情绪龙头/概念高辨识",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "000768",
+      "name": "中航西飞",
+      "group": "同走势镜像组",
+      "subgroup": "大飞机/军工镜像",
+      "source_layer": "wave2",
+      "confidence": "medium",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "000901",
+      "name": "航天科技",
+      "group": "同走势镜像组",
+      "subgroup": "高辨识镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002361",
+      "name": "神剑股份",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002519",
+      "name": "银河电子",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002865",
+      "name": "钧达股份",
+      "group": "同走势镜像组",
+      "subgroup": "跨细分热点镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300102",
+      "name": "乾照光电",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "301079",
+      "name": "邵阳液压",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600135",
+      "name": "乐凯胶片",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600316",
+      "name": "洪都航空",
+      "group": "同走势镜像组",
+      "subgroup": "军工高辨识镜像",
+      "source_layer": "wave2",
+      "confidence": "medium",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600775",
+      "name": "南京熊猫",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600869",
+      "name": "远东股份",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "601399",
+      "name": "国机重装",
+      "group": "同走势镜像组",
+      "subgroup": "情绪强势镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "603698",
+      "name": "航天工程",
+      "group": "同走势镜像组",
+      "subgroup": "工程建设/高辨识镜像",
+      "source_layer": "wave2",
+      "confidence": "medium",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "605123",
+      "name": "派克新材",
+      "group": "同走势镜像组",
+      "subgroup": "材料/高弹性镜像",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002202",
+      "name": "金风科技",
+      "group": "概念助推组",
+      "subgroup": "参股蓝箭航天/资本映射",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002471",
+      "name": "中超控股",
+      "group": "概念助推组",
+      "subgroup": "主题扩散助推/高弹性",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002565",
+      "name": "顺灏股份",
+      "group": "概念助推组",
+      "subgroup": "太空算力/概念强弹性",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600783",
+      "name": "鲁信创投",
+      "group": "概念助推组",
+      "subgroup": "参股蓝箭航天/资本映射",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "603131",
+      "name": "上海沪工",
+      "group": "概念助推组",
+      "subgroup": "卫星制造/概念助推",
+      "source_layer": "wave2",
+      "confidence": "medium",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "603601",
+      "name": "再升科技",
+      "group": "概念助推组",
+      "subgroup": "航天保温材料/概念弹性",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "002465",
+      "name": "海格通信",
+      "group": "正式组",
+      "subgroup": "通信导航配套",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "003009",
+      "name": "中天火箭",
+      "group": "正式组",
+      "subgroup": "火箭细分龙头",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300045",
+      "name": "华力创通",
+      "group": "正式组",
+      "subgroup": "卫星导航/通信配套",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "300342",
+      "name": "天银机电",
+      "group": "正式组",
+      "subgroup": "卫星/航天配套",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "600879",
+      "name": "航天电子",
+      "group": "正式组",
+      "subgroup": "核心配套",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "601698",
+      "name": "中国卫通",
+      "group": "正式组",
+      "subgroup": "卫星运营/核心龙头",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688066",
+      "name": "航天宏图",
+      "group": "正式组",
+      "subgroup": "卫星应用/遥感服务",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688523",
+      "name": "航天环宇",
+      "group": "正式组",
+      "subgroup": "卫星/航天器配套",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    },
+    {
+      "symbol": "688568",
+      "name": "中科星图",
+      "group": "正式组",
+      "subgroup": "卫星数据应用",
+      "source_layer": "wave1",
+      "confidence": "base_retained",
+      "pending_reason": "web_only_no_snapshot_support_yet"
+    }
+  ],
+  "interpretation": [
+    "V1.24Q is the first data-driven universe triage for commercial aerospace.",
+    "It does not pretend the machine already understands every web-added name; it only lets snapshot-supported names enter machine role triage now.",
+    "That preserves the user's broad A-share universe while preventing web-only names from being silently upgraded into lawful control authority."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ah_commercial_aerospace_ag_horizon_direction_triage_v1",
+    "authoritative_status": "retain_reversal_100pct_with_horizon_caveat",
+    "triage_csv": "data\\training\\commercial_aerospace_ag_horizon_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reversal_100pct_same_day_shadow",
+      "status": "retain_with_horizon_caveat",
+      "detail": "net_horizon_pnl_if_held_5d = -47506.0, rebound_cost_total_5d = 13033.0"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "Horizon sanity does not authorize wider surface expansion."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Horizon sanity is supervisory only and does not convert same-day shadow optimization into replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34AH converts the horizon sanity audit into the next supervision judgment.",
+    "The branch is allowed to keep the same-day optimal full-reversal reference, but the result must stay explicitly labeled as horizon-limited if later rebound opportunity cost remains material."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134dg_commercial_aerospace_df_prelaunch_playbook_v1",
+    "frontier_name": "intraday_add",
+    "frontier_state": "deferred",
+    "opening_gate_count": 9,
+    "playbook_step_count": 5,
+    "playbook_csv": "data\\training\\commercial_aerospace_intraday_add_prelaunch_playbook_v1.csv",
+    "authoritative_output": "commercial_aerospace_intraday_add_prelaunch_playbook_ready_for_future_explicit_shift"
+  },
+  "playbook_rows": [
+    {
+      "step": "confirm_explicit_shift",
+      "status": "required",
+      "detail": "Do not open intraday add unless the frontier shift is explicit rather than implied by repeated continuation."
+    },
+    {
+      "step": "reconfirm_reduce_frozen",
+      "status": "required",
+      "detail": "Reduce must remain frozen_mainline with only local residue supervision allowed."
+    },
+    {
+      "step": "reassert_board_veto_stack",
+      "status": "required",
+      "detail": "Board lockout, local-only rebound guard, and revival unlock remain upstream even when add opens later."
+    },
+    {
+      "step": "open_as_supervision_only",
+      "status": "required",
+      "detail": "The first add frontier step must be supervision-only and may not claim execution authority."
+    },
+    {
+      "step": "refresh_program_master_status",
+      "status": "required",
+      "detail": "Update the program master card so the frontier changes from deferred to opened in a single deliberate move."
+    }
+  ],
+  "interpretation": [
+    "V1.34DG turns the add-opening checklist into a shorter operational playbook for the later explicit shift.",
+    "The playbook is intentionally procedural: it says how to open the frontier cleanly without letting deferred readiness become premature execution."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129r_bk0480_aerospace_aviation_transfer_worker_kickoff_triage_v1",
+    "authoritative_status": "bk0480_transfer_worker_started_from_dual_core_world_model_with_local_reset",
+    "selected_board": "BK0480",
+    "selected_board_name": "航天航空",
+    "next_phase": "role_grammar",
+    "authoritative_rule": "start_bk0480_from_transfer_packaging_but_force_local_role_and_time relearning before any control extraction or replay"
+  },
+  "direction_rows": [
+    {
+      "direction": "bk0480_board_worker",
+      "status": "start",
+      "reason": "Transfer target and portability boundaries are now frozen, and BK0480 has enough local snapshot support to open role grammar."
+    },
+    {
+      "direction": "commercial_aerospace_local_windows",
+      "status": "blocked",
+      "reason": "BK0480 worker must relearn local chronology instead of importing commercial-aerospace main/post windows."
+    },
+    {
+      "direction": "commercial_aerospace_symbol_pressure_map",
+      "status": "blocked",
+      "reason": "BK0480 worker must not reuse symbol facts from commercial aerospace."
+    },
+    {
+      "direction": "next_phase",
+      "status": "role_grammar",
+      "reason": "start_bk0480_role_grammar_from_dual_core_world_model_with_local_reset"
+    }
+  ],
+  "interpretation": [
+    "V1.29R is the first true kickoff artifact for the post-commercial-aerospace board worker.",
+    "BK0480 now moves from transfer memo into its own local role-grammar phase under an explicit local-reset rule."
+  ]
+}

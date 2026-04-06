@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "namechange_row_count": 1,
+    "suspend_row_count": 23,
+    "authoritative_status": "semantic_side_input_sources_bootstrapped_for_limit_halt_replay_closure"
+  },
+  "triage_rows": [
+    {
+      "component": "namechange_source",
+      "direction": "treat_namechange_as_the_first_retained_st_proxy_source_for_limit_halt_side_input_closure"
+    },
+    {
+      "component": "suspend_source",
+      "direction": "treat_suspend_d_as_the_first_retained_suspension_source_for_limit_halt_side_input_closure"
+    },
+    {
+      "component": "next_materialization_step",
+      "direction": "reframe_the_remaining_replay_gap_as_side_input_materialization_not_source_absence"
+    }
+  ],
+  "interpretation": [
+    "The replay-side semantic gap is no longer a pure source-absence problem once namechange and suspend_d are retained locally.",
+    "The next step shifts to materializing usable ST/suspension side-input surfaces rather than searching for yet another external feed."
+  ]
+}

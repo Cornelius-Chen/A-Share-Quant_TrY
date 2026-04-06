@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118i_cpo_fgh_three_run_adversarial_triage_v1",
+    "triage_scope": "V118F_V118G_V118H",
+    "add_vs_entry_branch_status": "degraded_to_explanatory_only",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "shadow_replay_allowed": false,
+    "mainline_investment_allowed": false,
+    "candidate_only_allowed": false,
+    "explanatory_only_allowed": true,
+    "authoritative_current_problem": "role_year_entanglement_not_threshold_tuning",
+    "recommended_next_posture": "stop_branch_training_and_keep_as_explanatory_layer_only"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "degrade_after_role_holdout_failure",
+      "key_reason": "The branch looks strong on the narrowed strong-entry surface, but role-family holdouts break it badly enough to end mainline investment."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "explanatory_only_due_to_object_shift",
+      "key_reason": "The branch has explanatory value because it exposes role-year object shift, but it is not a stable action discriminator."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "stop_training_keep_explanation",
+      "key_reason": "Role-year entanglement dominates this branch. Keep it only to explain chronology failure rather than as a live candidate line."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "degrade_to_explanatory_only",
+      "key_reason": "V118F best_bal_acc=0.9, V118G mean_role_holdout_bal_acc=0.25, V118H interpretation=chronology_instability_is_partly_role_year_entanglement."
+    }
+  ],
+  "interpretation": [
+    "V1.18I is the scheduled three-run adversarial review over the add-vs-strong-entry branch after strengthening the entry surface and challenging the branch under role holdouts.",
+    "All three reviewers converged that the branch should be degraded, not because the add-vs-entry problem was wrong, but because the current solution is mostly tracking role-year pockets rather than a stable action distinction.",
+    "The branch therefore stops as a candidate line and remains only as an explanatory layer for chronology and object-shift failure."
+  ]
+}

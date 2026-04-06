@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118l_cpo_breakout_damage_soft_component_external_audit_v1",
+    "alpha": 0.0,
+    "best_threshold": 489402000.0,
+    "best_balanced_accuracy": 0.772727,
+    "mean_gap_positive_minus_negative": 727155309.090909,
+    "recommended_next_posture": "time_split_validate_only_if_external_gain_is_material"
+  },
+  "threshold_rows": [
+    {
+      "threshold": 489402000.0,
+      "positive_add_recall": 1.0,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.772727
+    }
+  ],
+  "interpretation": [
+    "V1.18L audits the best soft-component integration candidate from V118K on the same broader add pool.",
+    "If external discrimination does not improve materially over the cooling-control baseline, breakout-damage should remain archived rather than actively integrated."
+  ]
+}

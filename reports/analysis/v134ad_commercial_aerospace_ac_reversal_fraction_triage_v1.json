@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ad_commercial_aerospace_ac_reversal_fraction_triage_v1",
+    "authoritative_status": "promote_best_reversal_fraction_inside_current_wider_reference",
+    "triage_csv": "data\\training\\commercial_aerospace_ac_reversal_fraction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "reversal_sell_fraction",
+      "status": "promote_inside_current_wider_reference",
+      "detail": "best_reversal_fraction = 1.0, delta = 19013.4678"
+    },
+    {
+      "component": "all_session_widening",
+      "status": "still_blocked",
+      "detail": "This supervision step only changes the internal sell ladder inside the existing broader-hit boundary."
+    },
+    {
+      "component": "phase3_replay_lane",
+      "status": "still_blocked",
+      "detail": "Reversal sell-fraction tuning remains a phase-2 shadow refinement only."
+    }
+  ],
+  "interpretation": [
+    "V1.34AD converts the reversal sell-fraction audit into the next local supervision judgment.",
+    "The branch is only allowed to promote a different fraction if the same-day-loss-avoided improvement is positive without changing the existing broader-hit surface boundary."
+  ]
+}

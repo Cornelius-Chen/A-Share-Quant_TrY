@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122q_cpo_1min_downside_failure_symbol_holdout_audit_v1",
+    "symbol_count": 4,
+    "mean_test_balanced_accuracy": 0.51487065,
+    "min_test_balanced_accuracy": 0.50074656,
+    "recommended_next_posture": "triage_1min_downside_failure_branch"
+  },
+  "symbol_rows": [
+    {
+      "holdout_symbol": "300308",
+      "test_row_count": 1925,
+      "threshold": 0.36511377,
+      "balanced_accuracy": 0.5167856
+    },
+    {
+      "holdout_symbol": "300502",
+      "test_row_count": 1925,
+      "threshold": 0.35940928,
+      "balanced_accuracy": 0.51857414
+    },
+    {
+      "holdout_symbol": "300757",
+      "test_row_count": 1925,
+      "threshold": 0.31752047,
+      "balanced_accuracy": 0.52337632
+    },
+    {
+      "holdout_symbol": "688498",
+      "test_row_count": 1925,
+      "threshold": 0.29371154,
+      "balanced_accuracy": 0.50074656
+    }
+  ],
+  "interpretation": [
+    "V1.22Q tests whether the new 1-minute downside failure score survives symbol holdout.",
+    "If this branch survives both chronology and symbol transfer, it becomes the strongest recent 1-minute downside candidate.",
+    "The next step is adversarial triage."
+  ]
+}

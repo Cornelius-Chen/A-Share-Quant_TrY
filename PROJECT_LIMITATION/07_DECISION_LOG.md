@@ -4218,3 +4218,5715 @@ Evidence:
 - Expected Benefits: Remove the main leakage objection while preserving a usable timing-aware candidate family for later adversarial review.
 - Risks: The visible-only variants are still based on the same narrow `CPO` timing-aware sample and remain candidate-only. `all_intraday_strict_visible` is likely too loose, while the cleaner thresholded variants may still be path-dependent.
 - Follow-up Actions: Carry visible-only executing variants forward, accumulate two more runs, and subject the line to the next mandatory three-run adversarial review before any promotion discussion.
+
+
+### DEC-0228 Visible-only intraday candidates must pass three-run adversarial review and time-split rebuilding before any promotion discussion
+
+- Date: 2026-04-01
+- Title: Demote same-sample lucky bands, retain only coherent visible-only candidates, and require time-split threshold rebuilding
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116F, V116G
+- Context: The first three-run adversarial review over `V116C/V116D/V116E` concluded that the visible-only rebuild fixed the explicit future-label leakage, but still suffered from same-sample threshold carving across the same `9` strict windows.
+- Decision: Accept the first visible-only triage posture:
+  - retain `all_intraday_strict_visible` only as an audit ceiling,
+  - retain `pc2_only_q_0p25` as the clean coherent executing candidate,
+  - retain `pc1_or_pc2_q_0p25` as the expressive shadow candidate,
+  - block `pc1_only_q_0p2` from further “clean candidate” status,
+  - and require time-split threshold rebuilding as the primary guardrail against lucky bands.
+- Alternatives Considered: Keep treating `pc1_only_q_0p2` as the clean winner, or continue tuning visible-only thresholds on the same `9` windows without a time split.
+- Expected Benefits: Prevent same-sample threshold carving from silently hardening into a law and keep the visible-only line candidate-only but methodologically cleaner.
+- Risks: The time-split audit still sits on a very small `9`-row sample, so even retained candidates remain fragile and cannot yet be promoted.
+- Follow-up Actions: Use time-split rows as the main anti-overfit guardrail, and next repair checkpoint-to-fill semantics before any wider replay expansion.
+
+
+### DEC-0229 Prefer the expressive visible-only shadow candidate over the cleaner narrow candidate when revalidating against wider repaired under-exposure windows
+
+- Date: 2026-04-01
+- Title: Wider repaired-window revalidation demotes `pc2_only_q_0p25` as the main expansion target and shifts priority to `pc1_or_pc2_q_0p25`
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116I
+- Context: After the first visible-only triage and time-split repair, the next question was whether the retained candidates could explain a wider set of repaired under-exposed strong-day misses rather than only the original strict sample.
+- Decision: Accept the wider repaired-window revalidation posture:
+  - `pc2_only_q_0p25` remains a clean coherence candidate but should not be the next expansion target because it hits none of the wider repaired under-exposed windows.
+  - `pc1_or_pc2_q_0p25` becomes the preferred wider-window candidate because it reaches `4/10` repaired miss days and `7/10` repaired add rows with positive average expectancy.
+- Alternatives Considered: Keep prioritizing the cleaner narrow candidate despite zero wider-window coverage, or reject visible-only candidates entirely because coverage is still partial.
+- Expected Benefits: Align the next replay-facing effort with the candidate that actually touches broader repaired under-exposure rather than the one that only looks cleaner on the narrow original sample.
+- Risks: `pc1_or_pc2_q_0p25` still catches some negative-expectancy rows, so it remains candidate-only and must not be promoted to law.
+- Follow-up Actions: Carry `pc1_or_pc2_q_0p25` forward as the next broader replay-facing shadow candidate, while retaining `pc2_only_q_0p25` only as a narrow clean reference.
+
+
+### DEC-0230 Rebuild broader visible-only shadow replay on the repaired miss surface, but keep it strictly candidate-only
+
+- Date: 2026-04-01
+- Title: Use `pc1_or_pc2_q_0p25` as the wider repaired-window shadow replay line and block any promotion despite strong replay delta
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116J
+- Context: After the three-run review over `V116G/V116H/V116I`, the line with the most replay-facing value was no longer the cleaner narrow candidate but the expressive visible-only shadow candidate. The next step was to replay it on the repaired miss surface with strict checkpoint-aware timing semantics.
+- Decision: Accept the rebuilt wider shadow replay posture:
+  - use repaired miss days from `V114W` and repaired sizing floors from `V114X`,
+  - rebuild visible-only timing on checkpoint scores rather than inheriting old miss-hit tables,
+  - replay only `pc1_or_pc2_q_0p25`,
+  - keep the line held-position only, add-only, same-session next-bar execution,
+  - and explicitly block promotion because the replay becomes too hot despite being timing-correct.
+- Alternatives Considered: Keep using the old optimistic miss surface, keep prioritizing `pc2_only_q_0p25`, or refuse wider replay expansion entirely before more repaired-window evidence.
+- Expected Benefits: Align the broader visible-only replay with the repaired execution baseline and test the only candidate that actually touches wider under-exposed repaired strong days.
+- Risks: The resulting replay can still overstate confidence because the expressive candidate remains mixed and now produces a very hot equity delta. This strengthens the case for shadow-only status, not for promotion.
+- Follow-up Actions: Retain `pc1_or_pc2_q_0p25` only as a broader shadow replay line, trigger the next three-run adversarial review on `V116J` plus the next two visible-only runs, and do not let this replay delta harden into law.
+
+
+### DEC-0231 The second visible-only three-run review overrules the mistaken cooled-shadow retention
+
+- Date: 2026-04-02
+- Title: Use the V116J/V116K/V116L adversarial triage to demote the hot retained object and correct the carried-forward shadow candidate
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116J, V116K, V116L, V116M
+- Context: `V116J` rebuilt the broader visible-only shadow replay on the repaired miss surface and produced a very hot replay. `V116K` then built a heat-trim family, but `V116L` mistakenly retained `earliest_visible_reference`, which is the hottest line rather than the cooled retained object the family was supposed to produce.
+- Decision: Accept the second three-run adversarial triage posture:
+  - overrule `V116L` as the authoritative cooled-shadow retention result,
+  - demote `earliest_visible_reference` to a hot upper-bound audit line,
+  - retain `double_confirm_late_quarter` as the corrected cooled shadow candidate,
+  - and keep the entire visible-only family candidate-only.
+- Alternatives Considered: Leave `V116L` untouched because it had the highest equity, or keep both `earliest_visible_reference` and `double_confirm_late_quarter` as equally valid retained objects.
+- Expected Benefits: Prevent the project from silently relabeling the hottest replay line as the cooled retained object and restore consistency between the heat-trim intent and the carried-forward candidate.
+- Risks: The corrected retained candidate still lives inside the same fragile visible-only family and remains far from promotable.
+- Follow-up Actions: Carry `double_confirm_late_quarter` forward as the only corrected cooled shadow retained object and continue broader candidate-only validation from there.
+
+
+### DEC-0232 Freeze the corrected cooled-shadow retained object after the V116J/V116K/V116L triage
+
+- Date: 2026-04-02
+- Title: Replace the mistaken V116L retained object with `double_confirm_late_quarter`
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116N
+- Context: After `V116M` overruled `V116L`, the project needed a new authoritative retained object that actually represented a cooled visible-only shadow line rather than the hottest replay reference.
+- Decision: Accept `double_confirm_late_quarter` as the corrected cooled-shadow retained candidate and continue to treat `earliest_visible_reference` only as an audit upper bound.
+- Alternatives Considered: Keep `V116L` unchanged, or re-run a fresh heat-trim family before freezing any replacement retained object.
+- Expected Benefits: Restore consistency between the heat-trim family and the carried-forward retained candidate used in later visible-only reviews.
+- Risks: The corrected retained object still sits on a narrow candidate family and must not be promoted into law.
+- Follow-up Actions: Use `V116N` instead of `V116L` whenever the project refers to the retained cooled visible-only shadow candidate.
+
+
+### DEC-0233 The V116M/V116N/V116O triage keeps the corrected cooled-shadow candidate alive but blocks replay-facing expansion
+
+- Date: 2026-04-02
+- Title: Accept `double_confirm_late_quarter` as the only retained visible-only candidate, but require wider repaired-window expansion before any new replay-facing step
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116O, V116P
+- Context: After correcting the retained object in `V116N`, the next question was whether the cooled candidate had enough broader repaired-window support to justify another replay-facing expansion.
+- Decision: Accept the second post-correction triage posture:
+  - keep `double_confirm_late_quarter` as the only retained visible-only candidate,
+  - keep `earliest_visible_reference` only as a hot upper-bound audit reference,
+  - block any new replay-facing visible-only expansion,
+  - and require wider repaired-window sample expansion first.
+- Alternatives Considered: Immediately replay the corrected cooled candidate on a broader shadow basis, or freeze the visible-only line entirely until unrelated out-of-family data appears.
+- Expected Benefits: Prevent the project from mistaking a cleaner but still thin retained object for a replay-ready candidate, while keeping the visible-only line alive in a disciplined way.
+- Risks: The line may appear to stall, because methodological caution is now constraining replay expansion more strongly than before.
+- Follow-up Actions: Expand the repaired-window audit surface before any further replay-facing visible-only experiment.
+
+
+### DEC-0234 Expand the repaired-window audit surface from 6 top-miss days to the full 10 remaining under-exposed strong days
+
+- Date: 2026-04-02
+- Title: Freeze an expanded repaired-window manifest so visible-only reviews stop orbiting the original top-miss family
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116Q
+- Context: The V116M/V116N/V116O triage concluded that the main blocker is no longer retention coherence but the thinness of the repaired-window audit surface itself.
+- Decision: Accept the expanded repaired-window manifest built from all `10` remaining under-exposed strong days in `V114H`, while preserving which `6` rows belonged to the original repaired top-miss subset.
+- Alternatives Considered: Keep auditing on the original 6-day top-miss family only, or jump straight to replay expansion without first widening the repaired-window surface.
+- Expected Benefits: Create a wider and more honest audit surface for subsequent visible-only candidate checks without conflating replay expansion with sample expansion.
+- Risks: The widened manifest still comes from the same CPO family and does not by itself solve the cross-family generalization problem.
+- Follow-up Actions: Use the expanded 10-day repaired-window manifest as the next visible-only candidate revalidation surface.
+
+
+### DEC-0235 Treat the expanded-window candidate-base coverage gap as the authoritative blocker after the V116Q/V116R/V116S triage
+
+- Date: 2026-04-02
+- Title: Freeze the Q/R/S triage and stop reading the zero new-day hits as clean signal failure
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116Q, V116R, V116S, V116T
+- Context: `V116R` showed that neither the corrected cooled candidate nor the hot upper bound hit any of the 4 newly added repaired-window days. `V116S` then showed that 3 of those 4 new days had held mature symbols but no add-vs-hold candidate rows in the existing intraday PCA table.
+- Decision: Accept the Q/R/S three-run triage posture:
+  - keep the expanded repaired-window manifest as the authoritative audit surface,
+  - keep the corrected cooled visible-only candidate alive only as candidate-only,
+  - block further replay-facing visible-only expansion,
+  - and treat the expanded-window candidate-base coverage gap as the current authoritative blocker.
+- Alternatives Considered: Continue tuning visible-only thresholds, re-run replay expansion immediately, or treat the new-day zero hits as direct evidence that the corrected candidate is dead.
+- Expected Benefits: Shift the line back from replay aesthetics to data-layer integrity by distinguishing candidate-base blind spots from genuine signal failure.
+- Risks: This slows visible-only replay progress because it prioritizes table rebuilding over new performance experiments.
+- Follow-up Actions: Rebuild intraday add-vs-hold action-timepoint rows for the true gap days before running any more visible-only validation.
+
+
+### DEC-0236 Rebuild the intraday action-timepoint table for the three true expanded-window coverage-gap days
+
+- Date: 2026-04-02
+- Title: Append rebuilt add-vs-hold PCA rows for 2023-11-07, 2024-01-18, and 2024-01-23
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116U
+- Context: The Q/R/S triage concluded that the visible-only line was blocked by candidate-base coverage rather than by clean signal death. The missing days all had held mature names, but no add-vs-hold rows existed in the PCA band table.
+- Decision: Rebuild the intraday action-timepoint rows for the three true gap days by:
+  - querying fresh Baostock 5/15/30/60-minute bars,
+  - rebuilding the high-dimensional feature row,
+  - projecting each new row into the existing PCA geometry,
+  - and appending the resulting add-vs-hold rows into a merged expanded-window PCA band table.
+- Alternatives Considered: Keep validating on the old PCA table, rebuild the entire historical table from scratch, or re-tune visible-only thresholds without fixing the coverage blind spot.
+- Expected Benefits: Repair the data-layer blind spot without changing the PCA geometry or silently moving the visible-only family onto a different representation base.
+- Risks: The rebuilt rows still sit inside the same CPO family and may expose new signal weakness once coverage is repaired.
+- Follow-up Actions: Re-audit expanded-window coverage on the merged PCA table before any fresh visible-only validation.
+
+
+### DEC-0237 Freeze the post-rebuild coverage re-audit before re-running visible-only candidate validation
+
+- Date: 2026-04-02
+- Title: Require a clean coverage re-audit after the expanded-window action-timepoint rebuild
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116V
+- Context: After `V116U`, the project needed to verify whether the reconstructed add-vs-hold rows actually closed the three true coverage gaps rather than assuming that the rebuild worked.
+- Decision: Accept the post-rebuild coverage re-audit result:
+  - `days_with_add_candidate_rows = 9`,
+  - `days_with_held_mature_symbols = 9`,
+  - `true_coverage_gap_day_count_after_rebuild = 0`,
+  - and only then allow the next step to be a fresh visible-only candidate validation on the expanded window.
+- Alternatives Considered: Skip coverage re-audit and jump straight back into replay/validation, or rebuild more rows before checking whether the original blind spot was already closed.
+- Expected Benefits: Make the next visible-only validation meaningful by ensuring the expanded-window candidate base is no longer missing the three held-mature repair days.
+- Risks: Closing the coverage gap does not guarantee that the corrected cooled candidate will validate well; it only removes the main data-layer excuse.
+- Follow-up Actions: Re-run corrected cooled-shadow expanded-window validation on the rebuilt candidate base and judge the visible-only line again from there.
+
+
+### DEC-0238 Treat the rebuilt-base expanded-window validation as the first real post-coverage read on the corrected cooled candidate
+
+- Date: 2026-04-02
+- Title: Re-run corrected cooled visible-only validation only after the expanded-window candidate base is structurally complete
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116W
+- Context: `V116U` and `V116V` removed the true candidate-base blind spots on 2023-11-07, 2024-01-18, and 2024-01-23. The next question was whether the corrected cooled candidate would now reach any new expanded-window days once coverage excuses were removed.
+- Decision: Accept the rebuilt-base validation posture:
+  - keep the visible-only family ex-ante by continuing to filter only on point-in-time-visible checkpoint scores,
+  - validate on the rebuilt expanded-window PCA base rather than the original thin base,
+  - and read the result as a post-coverage signal test rather than a promotion screen.
+- Alternatives Considered: Continue delaying validation, re-run on the old base again, or promote the candidate simply because coverage is now complete.
+- Expected Benefits: Produce the first honest read on whether the corrected cooled candidate truly extends beyond the original top-miss family once the data layer is repaired.
+- Risks: The rebuilt-base validation can still overstate confidence if later work mistakenly lets rebuilt rows' future labels leak into filter construction.
+- Follow-up Actions: Keep future labels audit-only, read the new-day hit structure carefully, and only then decide whether another visible-only triage or further expansion is justified.
+
+
+### DEC-0239 Freeze the rebuilt-new-day contrast and move the visible-only line from coverage repair into quality discrimination
+
+- Date: 2026-04-02
+- Title: Treat 2024-01-18 as a true post-repair cooled hit and demote 2023-11-07 / 2024-01-23 into quality-side comparison days
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116X
+- Context: `V116U/V116V/V116W` repaired the expanded-window candidate-base coverage gap and showed that the corrected cooled candidate now hits one new rebuilt day. The next question was whether the remaining misses still reflect timing/coverage issues or a narrower quality gate.
+- Decision: Accept the rebuilt-new-day contrast posture:
+  - freeze `2024-01-18` as the only rebuilt new day that cleanly converts into a corrected cooled hit,
+  - read `2023-11-07` as late-only positive quality that is still not enough for the cooled gate,
+  - read `2024-01-23` as late-only and weak,
+  - and therefore move the visible-only family's current blocker from coverage repair to quality-side discrimination.
+- Alternatives Considered: Re-open the coverage-gap diagnosis, or continue treating timing as the primary blocker on all rebuilt new days.
+- Expected Benefits: Prevent the project from relitigating fixed coverage/timing issues and force the next step to target the actual remaining discriminator.
+- Risks: The conclusion still sits inside one-board same-family evidence and may overfit the rebuilt-day contrast if later generalized carelessly.
+- Follow-up Actions: Keep the line candidate-only and use quality-side refinement rather than timing relitigation as the next visible-only research posture.
+
+
+### DEC-0240 Freeze the U/V/W three-run adversarial review and block any replay-facing visible-only expansion until quality-side work is done
+
+- Date: 2026-04-02
+- Title: Accept the post-rebuild triage that closes the coverage chapter and keeps the corrected cooled line candidate-only
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116U, V116V, V116W, V116Y
+- Context: After `V116U/V116V/V116W`, the project needed the next mandatory three-run adversarial review to decide whether the corrected cooled visible-only line had graduated beyond coverage repair into a promotable replay-facing candidate.
+- Decision: Accept the U/V/W triage posture:
+  - coverage repair is now authoritative and should not be reopened,
+  - the corrected cooled visible-only line remains alive but only as a candidate-only survivor,
+  - the hot upper bound remains audit-only,
+  - and the current authoritative blocker is now `quality_discrimination_after_coverage_repair`, not timing and not coverage.
+- Alternatives Considered: Continue replay-facing expansion immediately after `V116W`, or reopen timing/coverage debugging as if the rebuilt-base validation had not already settled them.
+- Expected Benefits: Keep the visible-only family aligned with the three-run adversarial cadence and stop it from drifting back into replay-first expansion after the coverage repair.
+- Risks: The line may appear to stall again because the project is now forcing quality-side discipline instead of chasing another replay delta.
+- Follow-up Actions: Continue any visible-only work only on the quality side, keep rebuilt-row future labels audit-only, and do not reopen replay-facing expansion until a new candidate survives that quality-side step.
+
+
+### DEC-0241 Freeze the first quality-side cooled refinement pass and treat the visible-only family as effectively PC1-driven at this stage
+
+- Date: 2026-04-02
+- Title: Keep timing fixed, sweep only visible-score quality thresholds, and stop pretending PC2 is carrying the cooled line
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V116Z
+- Context: After `V116X/V116Y`, the current main problem was defined as `quality_discrimination_after_coverage_repair`. The next clean move was to keep the cooled timing structure fixed and test whether visible-score quality gates could improve the retained candidate.
+- Decision: Accept the first quality-side cooled refinement posture:
+  - keep the cooled timing structure fixed,
+  - sweep only visible-score quantiles,
+  - treat `q=0.25` as the current quality-side reference,
+  - recognize that `q=0.33` is effectively equivalent on the current sample,
+  - reject `q=0.40` as too hot,
+  - and accept that the family is effectively PC1-driven at this stage because PC2 never becomes an active driver in the retained variants.
+- Alternatives Considered: Re-open timing, re-open coverage, or keep treating the visible-only line as a genuinely two-dimensional `pc1/pc2` family despite the new audit.
+- Expected Benefits: Prevent repetitive debate over the same quantile family and align the next visible-only step with the actual current geometry of the line.
+- Risks: The result is still same-family and same-board. Treating the line as PC1-driven now may prove temporary if later richer data revives a real PC2 role.
+- Follow-up Actions: Carry `q=0.25` forward as the quality-side cooled reference and stop regrinding the same quantiles inside the current visible-only family.
+
+
+### DEC-0242 Freeze the quality-side cooled retention and block further same-family quantile grinding
+
+- Date: 2026-04-02
+- Title: Retain `cooled_q_0p25`, keep `cooled_q_0p33` only as an equivalent shadow, and reject hotter or narrower same-family variants
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V117A
+- Context: `V116Z` showed that the first quality-side cooled refinement pass produced a plateau rather than a new winner: `q=0.25` and `q=0.33` were effectively equivalent, `q=0.20` was narrower and weaker, and `q=0.40` reintroduced heat.
+- Decision: Accept the quality-side cooled retention posture:
+  - retain `cooled_q_0p25` as the authoritative quality-side cooled reference,
+  - keep `cooled_q_0p33` only as an equivalent shadow,
+  - reject `cooled_q_0p20` as too narrow,
+  - reject `cooled_q_0p40` as too hot,
+  - reject `cooled_q_0p25_pc1_only` as redundant.
+- Alternatives Considered: Continue quantile grinding inside the same visible-only family, or declare a new winner despite the plateau.
+- Expected Benefits: Close the current quantile loop cleanly and keep later work from drifting back into the same-family threshold grind.
+- Risks: The line may now appear to stall because the project is intentionally choosing to stop local quantile carving before another replay-facing step.
+- Follow-up Actions: If visible-only work continues, it should leave this quantile family alone and only proceed through a genuinely new quality-side discriminator or a later three-run adversarial review.
+
+
+### DEC-0243 Freeze the cooled_q_0p25 quality contrast and treat late-only visibility as the main blocker on otherwise good rebuilt days
+
+- Date: 2026-04-02
+- Title: Make the rebuilt-day quality contrast explicit so the next visible-only step stops guessing why 2024-01-18 passes and 2023-11-07 / 2024-01-23 do not
+- Status: accepted
+- Related Protocol Version: protocol_v1.16
+- Related Runs: V117B
+- Context: After `V116X/V116Y/V116Z/V117A`, the line had already been narrowed to `cooled_q_0p25`, but the project still needed a hard answer for why the rebuilt new days separated the way they did.
+- Decision: Accept the cooled_q_0p25 quality contrast posture:
+  - treat `2024-01-18` as the only rebuilt new day that satisfies the retained quality standard,
+  - treat `2023-11-07` as an otherwise good late-only day that still fails the cooled line because visibility arrives too late,
+  - treat `2024-01-23` as late and weak,
+  - and use this contrast as the authoritative explanation of the current visible-only boundary.
+- Alternatives Considered: Leave the distinction informal in chat, or re-open broad feature search before first freezing the current contrast.
+- Expected Benefits: Turn the current quality-side boundary into an explicit report so later work can target the real blocker instead of re-arguing already-settled cases.
+- Risks: The contrast still lives inside a single-board same-family setting and should not be mistaken for a universal law.
+- Follow-up Actions: If the visible-only line continues, target a genuinely new quality-side discriminator instead of reworking timing, coverage, or the same quantile family.
+
+
+### DEC-0244 Keep the continuation-integrity score only as a candidate quality component and block standalone promotion
+
+- Date: 2026-04-02
+- Title: Accept the new visible-only quality score as informative but not sufficient to replace the retained cooled boundary
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117C, V117D
+- Context: `V117C` discovered a candidate continuation-integrity score from visible-only features, but the project still needed to know whether that score could stand alone as a new discriminator or whether it only added partial quality signal.
+- Decision: Accept the continuation-integrity score only as a candidate quality component:
+  - keep it as an audit/discovery object,
+  - do not let it replace the retained `cooled_q_0p25` boundary,
+  - do not let it replace the timing gate,
+  - do not let it become a standalone replay-facing filter yet.
+- Alternatives Considered: Treat the positive mean-gap result from `V117C` as sufficient evidence for a new quality-side rule, or discard the score entirely because the best standalone threshold is too strict.
+- Expected Benefits: Preserve the useful part of the new score without over-promoting a discriminator that still fails the rebuilt retained day under its best standalone threshold.
+- Risks: Progress looks slower because the project is deliberately demoting an attractive new score from “possible law” to “quality component only.”
+- Follow-up Actions: If visible-only work continues, use the continuation-integrity score only inside future candidate quality audits; do not reopen timing, quantile, or same-family replay expansion on its behalf.
+
+
+### DEC-0245 Degrade the continuation-integrity branch to explanatory-only after the V117C/V117D/V117E adversarial review
+
+- Date: 2026-04-02
+- Title: End mainline investment in the continuation-integrity score and retain it only as an explanatory audit field
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117C, V117D, V117E, V117F
+- Context: The project completed a full three-run cycle around the `continuation_integrity_score_candidate`: discovery (`V117C`), standalone audit (`V117D`), and retained-set refinement audit (`V117E`). A scheduled three-agent adversarial review then assessed whether the branch still justified mainline effort.
+- Decision: Degrade the continuation-integrity branch to explanatory-only:
+  - do not let it become a new standalone gate,
+  - do not let it re-enter replay-facing expansion,
+  - do not let it displace the retained visible-only cooled boundary,
+  - keep it only as a quality-side explanatory component for later audits.
+- Alternatives Considered: Continue investing in the branch as a potential new gate because the external `q25_hit` vs `hot_only` score gap looked large, or freeze it in ambiguous “candidate” status.
+- Expected Benefits: Close a same-family branch cleanly once three-run adversarial review confirms it adds explanation but not robust decision value.
+- Risks: The project gives up a branch that still looks attractive on first-pass descriptive metrics, which may feel conservative.
+- Follow-up Actions: Visible-only work should now move on to a genuinely new quality-side discriminator rather than returning to continuation-integrity score refinement.
+
+
+### DEC-0246 Keep the breakout-damage branch alive as the new quality-side candidate, but block promotion until wider external audit
+
+- Date: 2026-04-02
+- Title: Accept the breakout-damage branch as the first post-continuation quality-side candidate that survives retained-set refinement
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117G, V117H, V117I, V117J
+- Context: After the continuation-integrity branch was demoted, the project opened a new quality-side branch centered on breakout efficiency and price-damage containment, then ran discovery, candidate audit, retained-set refinement, and a scheduled three-run adversarial review.
+- Decision: Keep the breakout-damage branch alive, but only as `candidate-only`:
+  - allow further external/wider audit,
+  - block replay-facing promotion,
+  - block standalone law promotion,
+  - treat the branch as the current best new quality-side candidate.
+- Alternatives Considered: Demote it immediately like the previous branch because of small sample size, or prematurely promote it because `V117I` looked unusually clean.
+- Expected Benefits: Preserve the first visible-only quality branch that shows retained-set discrimination, while still respecting the small-sample risk surfaced by the adversarial review.
+- Risks: The branch may still collapse once tested on a wider or dirtier surface, because current retained-set evidence is based on only `8` rows.
+- Follow-up Actions: Continue only through wider external audit or larger-sample validation; do not let this branch become replay-facing law yet.
+
+
+### DEC-0247 Degrade the reverse-signal branch and keep human-heuristic quantization only as a protocol-level auxiliary layer
+
+- Date: 2026-04-02
+- Title: End mainline investment in the current reverse-signal branch after K/L/M adversarial review
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117K, V117L, V117M, V117N
+- Context: The project opened a reverse-signal branch plus a human-heuristic quantization layer to see whether downside-control signals or quantized retail/candlestick heuristics could add drawdown-control value alongside the positive-side quality work.
+- Decision: Degrade the current reverse/heuristic line:
+  - demote the reverse-signal branch to a secondary explanatory drawdown component,
+  - keep human-heuristic quantization as a protocol-only auxiliary layer,
+  - do not allocate further mainline replay-facing resources to either branch,
+  - keep current mainline focus on the stronger breakout-damage branch.
+- Alternatives Considered: Continue investing in the reverse branch because the broad-sample discovery looked usable, or prematurely push heuristic patterns into the training core.
+- Expected Benefits: Stop a side branch that failed once conditioned into the real main-uptrend held-position problem, while still preserving useful protocol ideas for later contextual feature work.
+- Risks: The project may overlook future downside-control opportunity if a better reverse branch is not reopened later with richer data or a better problem framing.
+- Follow-up Actions: Keep reverse/heuristic outputs only as low-priority audit or interaction-side references and continue the mainline on the stronger positive-side quality branch.
+
+
+### DEC-0248 Degrade the breakout-damage branch after broader external-pool and time-split validation fail, and keep reverse/human layers only as explanatory false-positive aids
+
+- Date: 2026-04-02
+- Title: Stop mainline investment in breakout-damage once the broader add-pool and time-split audits break its replay-facing claim
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117O, V117P, V117Q, V117R
+- Context: After `V117J`, the breakout-damage branch remained alive only as a candidate pending wider external audit. `V117O` moved it to a broader `add_vs_hold` pool, `V117P` tested threshold stability under time splits, and `V117Q` checked whether reverse/human layers explained the branch's false positives.
+- Decision: Degrade the breakout-damage branch to `candidate/explanatory-only`:
+  - stop replay-facing expansion,
+  - stop mainline training investment,
+  - keep the branch only as a candidate explanatory quality component,
+  - keep reverse-signal and human-heuristic layers only as explanatory false-positive aids.
+- Alternatives Considered: Continue investing in breakout-damage because it still looked usable on the neat retained family, or reopen replay-facing shadow expansion because false positives could be partly explained.
+- Expected Benefits: Prevent the project from overcommitting to a branch that collapses once tested on a broader and dirtier add pool, while preserving the useful explanatory residue for later interaction work.
+- Risks: The project gives up the strongest visible-only quality-side candidate discovered so far, which may create a temporary vacuum before the next discovery branch is opened.
+- Follow-up Actions: Reset the quality-side mainline search rather than continuing same-family refinement; any reuse of breakout-damage should be explanatory only, not replay-facing.
+
+
+### DEC-0249 Keep the cooling-reacceleration branch alive for one more candidate-only audit cycle, but block replay-facing use
+
+- Date: 2026-04-02
+- Title: Preserve the new cooling-reacceleration branch as the next candidate line without letting it become replay-facing
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117S, V117T, V117U, V117V
+- Context: After `DEC-0248` removed breakout-damage from mainline status, the project reopened discovery directly from the broader `add_vs_hold` pool. The new branch was then tested on an external pool and year-based time splits before the scheduled three-agent review.
+- Decision: Keep the cooling-reacceleration branch alive, but only as `candidate-only`:
+  - do not allow replay-facing expansion,
+  - do not allow promotion,
+  - do not allocate full mainline investment,
+  - allow one more non-replay audit cycle focused on false-positive control and time-split stability.
+- Alternatives Considered: Kill the branch immediately because `min_test_balanced_accuracy = 0.375`, or over-promote it because the broader external-pool gap stayed positive and materially stronger than the degraded breakout-damage line.
+- Expected Benefits: Preserve a genuinely new candidate branch that survives the broader external pool better than the previous one, while still respecting its unresolved stability problem.
+- Risks: The branch may still fail on the next audit cycle, which would mean another reset after additional work.
+- Follow-up Actions: Continue one more candidate-only audit cycle on false-positive control and temporal stability; do not allow replay-facing research until those improve materially.
+
+
+### DEC-0250 Keep the cooling-reacceleration false-positive-control branch alive only as candidate-only, and continue blocking replay-facing use
+
+- Date: 2026-04-02
+- Title: Accept W/X/Y as a real improvement over the original cooling-reacceleration line without loosening the replay ban
+- Status: accepted
+- Related Protocol Version: protocol_v1.17
+- Related Runs: V117W, V117X, V117Y, V117Z
+- Context: `DEC-0249` allowed one extra non-replay audit cycle on false-positive control and temporal robustness. `V117W` introduced a visible-only overheat penalty, `V117X` showed better broader external-pool discrimination, and `V117Y` materially improved crude time-split stability. The scheduled three-agent review then reassessed whether this was enough to relax the branch status.
+- Decision: Keep the refined branch alive, but only as `candidate-only`:
+  - do not allow replay-facing expansion,
+  - do not allow shadow replay,
+  - do not allow promotion,
+  - continue only with non-replay false-positive-control or out-of-set audits.
+- Alternatives Considered: Stop the branch immediately because the sample is still small, or loosen it into shadow replay because W/X/Y materially improved both external-pool and time-split metrics.
+- Expected Benefits: Preserve a genuinely improved quality-side candidate while preventing another drift into replay-facing work before the branch has hardened its false-positive rejection boundary.
+- Risks: The branch may consume additional candidate-stage effort only to fail once tested on a wider or dirtier surface.
+- Follow-up Actions: Continue candidate-only and focus on out-of-set false-positive control; no replay-facing work until negative rejection and threshold stability improve further.
+
+
+### DEC-0251 Keep the add-vs-entry branch alive for one more non-replay cycle, but treat chronology instability as the main blocker
+
+- Date: 2026-04-02
+- Title: Preserve the add-vs-strong-entry discriminator only as a candidate branch under a strict replay ban
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V118B, V118C, V118D, V118E
+- Context: `V118A` showed the cooling-reacceleration control branch mainly leaks into strong entry, not into reduce/close. `V118B` reopened discovery directly on the add-vs-entry problem, `V118C` showed meaningful full-surface separation, and `V118D` then tested chronology stability across year splits.
+- Decision: Keep the add-vs-entry branch alive, but only as `candidate-only`:
+  - do not allow replay-facing expansion,
+  - do not allow shadow replay,
+  - do not allow promotion,
+  - allow one more non-replay adversarial / out-of-set cycle focused on chronology instability.
+- Alternatives Considered: Kill the branch immediately because time-split metrics are weak, or over-promote it because the external add-vs-entry balanced accuracy reaches `0.775`.
+- Expected Benefits: Preserve a branch that attacks the now-authoritative contamination mode directly, while preventing another replay-facing drift before chronology robustness exists.
+- Risks: The branch may still be another small-sample threshold story and fail quickly once challenged outside the current table.
+- Follow-up Actions: Continue candidate-only and focus on chronology-hardening or out-of-set adversarial checks; no replay-facing work until time-split behavior becomes materially more stable.
+
+
+### DEC-0252 Degrade the add-vs-entry branch to explanatory-only after role-family holdout failure exposes role-year entanglement
+
+- Date: 2026-04-02
+- Title: Stop training investment in the add-vs-entry branch once the strengthened entry surface still collapses under role-family holdout
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V118F, V118G, V118H, V118I
+- Context: `DEC-0251` kept the add-vs-entry branch alive for one more non-replay cycle. `V118F` strengthened the challenge by using only strong entry rows, `V118G` then tested role-family holdouts, and `V118H` checked whether chronology failure was partly a role-year entanglement problem.
+- Decision: Degrade the add-vs-entry branch to `explanatory-only`:
+  - stop candidate training investment,
+  - stop replay-facing and shadow-replay work,
+  - keep the branch only as explanation for chronology/object-shift failure.
+- Alternatives Considered: Continue candidate-only because the strong-entry external audit still looked excellent, or reopen chronology-hardening because the problem framing was semantically correct.
+- Expected Benefits: Prevent the project from overinvesting in a branch that solves the right conceptual problem but still does not survive role-based generalization.
+- Risks: The project gives up another seemingly more semantically correct branch, which may feel like repeated resets.
+- Follow-up Actions: Preserve the role-year entanglement finding as an explanatory guardrail and reopen discovery on a new line rather than continue same-family refinement.
+
+
+### DEC-0253 Reclassify degraded legacy branches under a probability-expectancy view and rescue only breakout-damage as a soft expectancy component
+
+- Date: 2026-04-02
+- Title: Stop treating all degraded branches as equally dead and retain only breakout-damage above pure explanation
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V117F, V117N, V117R, V118I, V118J
+- Context: After repeated branch demotions, the user explicitly raised a probability-expectancy objection: some branches may still be worth keeping if their expectancy contribution remains high even when they fail as hard laws. Three subagents were asked to reclassify the previously degraded branches under a richer taxonomy: `hard candidate / soft expectancy component / explanatory only / dead`.
+- Decision: Reclassify the old branches as follows:
+  - `continuation_integrity` -> `explanatory only`
+  - `reverse/human heuristic` -> `explanatory only`
+  - `breakout_damage` -> `soft expectancy component`
+  - `add-vs-entry` -> `explanatory only`
+- Alternatives Considered: Keep the old binary framing and leave every degraded branch at explanatory-only, or over-rescue multiple branches as soft components without enough consensus.
+- Expected Benefits: Preserve the only degraded branch that still appears to contain usable expectancy information, without reopening it as a live candidate or replay-facing line.
+- Risks: The project may still overestimate breakout-damage's residual value and leak it back toward candidate status if boundaries are not kept explicit.
+- Follow-up Actions: Use breakout-damage only as a soft expectancy penalty/correction layer, never as a revived candidate branch; keep the other degraded lines explanatory only.
+
+
+### DEC-0254 Archive breakout-damage as a soft expectancy component instead of keeping it actively integrated
+
+- Date: 2026-04-02
+- Title: Close the breakout-damage afterlife once active integration fails to beat the cooling baseline
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V118K, V118L, V118M, V118N
+- Context: `DEC-0253` rescued breakout-damage above pure explanation and reclassified it as a soft expectancy component. `V118K/V118L/V118M` then tested whether that component deserved active integration into the live cooling candidate.
+- Decision: Reclassify breakout-damage from `active soft component candidate` to `archived soft component`:
+  - stop active integration work,
+  - stop allocating mainline resources to it,
+  - keep it only as archived expectancy material for future explanatory or interaction use.
+- Alternatives Considered: Keep testing more integration weights because the gap improved numerically, or demote the branch all the way back to explanatory-only.
+- Expected Benefits: Keep the taxonomy honest by distinguishing between a branch that deserves preservation and a branch that deserves active integration effort.
+- Risks: A potentially useful future interaction component may be underused because it is archived too early.
+- Follow-up Actions: Do not actively integrate breakout-damage into the current CPO training line again unless a new branch later creates a materially different stacking surface.
+
+
+### DEC-0255 Kill reclaim-absorption immediately because the branch is directionally wrong on the external pool
+
+- Date: 2026-04-02
+- Title: Stop reclaim-absorption before it becomes another semantic dead-end
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V118O, V118P, V118Q, V118R
+- Context: A fresh quality-side branch was opened around intraday absorption and reclaim quality, using lower-shadow support, reclaim back toward VWAP, and contained upper-shadow damage. The branch was intentionally given only one three-run block before triage.
+- Decision: Classify `reclaim_absorption_score_candidate` as `dead`:
+  - no hard-candidate budget,
+  - no soft-expectancy rescue,
+  - no explanatory retention budget,
+  - no replay-facing follow-up.
+- Alternatives Considered: Keep it alive as a soft expectancy component because the idea sounded trader-intuitive, or let it survive one more cycle because its best balanced accuracy still exceeded `0.6`.
+- Expected Benefits: Prevent the project from spending more time on a branch that is not merely unstable but directionally wrong on the broader add pool.
+- Risks: A potentially useful but underexpressed lower-shadow/reclaim idea may be abandoned too early because the current mid-frequency representation is still coarse.
+- Follow-up Actions: Reopen quality-side discovery on a different axis instead of revisiting reclaim-absorption.
+
+### DEC-0256 Retain sustained-participation non-chase as candidate-only and forbid replay-facing expansion for now
+
+- Date: 2026-04-02
+- Title: Keep the new participation-quality branch alive, but only at candidate level
+- Status: accepted
+- Related Protocol Version: protocol_v1.18
+- Related Runs: V118T, V118U, V118V, V118W
+- Context: After killing reclaim-absorption, a new quality-side branch was opened around sustained intraday participation, afternoon reinforcement, and non-chase close behavior. The first three-run block gave it a positive broad-pool gap and decent external balanced accuracy, but chronology still had a weak holdout year.
+- Decision: Classify `sustained_participation_non_chase_score_candidate` as `candidate-only`:
+  - no hard-candidate promotion,
+  - no replay-facing use,
+  - no shadow replay,
+  - allow one more non-replay hardening cycle.
+- Alternatives Considered: Promote it early because the external audit looked as good as the cooling branch, or kill it immediately because the minimum time-split score still fell below `0.5`.
+- Expected Benefits: Preserve a genuinely live quality-side branch without letting another promising line jump into replay before chronology is clean enough.
+- Risks: The project may again spend time on a branch that ultimately stalls at the chronology stage.
+- Follow-up Actions: Focus the next cycle on false-positive control and temporal robustness only.
+
+### DEC-0257 Kill the prior-heat/late-fade false-positive control while keeping the sustained-participation family alive
+
+- Date: 2026-04-02
+- Title: Stop the XYZ same-family hardening branch once it fails to improve either the broad-pool score or chronology
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V118X, V118Y, V118Z, V119A
+- Context: `DEC-0256` allowed one non-replay hardening cycle on the sustained-participation non-chase family. That cycle introduced a narrow visible-only penalty for prior heat, late fade, and tail-volume overheat, then audited the controlled score externally and under year splits.
+- Decision: Classify `sustained_participation_non_chase_prior_heat_late_fade_control_candidate` as `dead`:
+  - stop all same-family work on this control branch,
+  - do not reopen it unless a genuinely orthogonal hardening idea appears,
+  - keep the parent `sustained_participation_non_chase_score_candidate` unchanged at `candidate-only`.
+- Alternatives Considered: Keep the control as another candidate-only branch because the parent family is still alive, or rescue it as a soft expectancy component because the raw gap remains positive.
+- Expected Benefits: Prevent the project from tunneling into same-family hardening that leaves both external balanced accuracy and chronology effectively unchanged.
+- Risks: A narrow visible-only control that might have become useful under a larger sample could be killed too early.
+- Follow-up Actions: Do not spend more budget on this prior-heat/late-fade control; if the parent family continues, it must do so through a genuinely new hardening idea rather than more prior-heat or late-fade penalty tuning.
+
+### DEC-0258 Bootstrap Tushare daily_basic, moneyflow, and stk_limit for the full CPO cohort and replace proxy float-turnover context going forward
+
+- Date: 2026-04-02
+- Title: Use Tushare to harden free-float, turnover-rate, moneyflow, and limit-price context before further CPO research
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119B, V119C
+- Context: The project had already repaired replay integrity but was still relying on proxy float-share and turnover context in several places. The user then provided a live Tushare token and explicitly asked to complete the planned data-side work before moving on.
+- Decision: Bootstrap and freeze a first Tushare-backed CPO data pack:
+  - `daily_basic` for `turnover_rate`, `turnover_rate_f`, `float_share`, `free_share`, `total_mv`, `circ_mv`
+  - `moneyflow` as auxiliary capital-flow context
+  - `stk_limit` as daily limit-price reference
+  - scope restricted to the bounded `CPO` cohort from `V112AA`
+- Alternatives Considered: Keep using proxy float/market-cap context until minute-level work is complete, or delay Tushare integration until a broader multi-board data phase.
+- Expected Benefits: Replace several proxy fields with directly sourced turnover and float context, making later intraday and replay work less dependent on approximations.
+- Risks: Tushare fields are still daily, not minute-level, so this does not solve intraday action timing by itself.
+- Follow-up Actions: Use the new Tushare datasets as the default float/turnover/limit reference for future CPO audits and training surfaces.
+
+### DEC-0259 Keep the first Tushare-backed turnover-discipline branch at candidate-only even though it is the strongest new orthogonal hardening line so far
+
+- Date: 2026-04-02
+- Title: Accept the DEF branch as the current best new data-backed hardening line, but block replay until the 2024 holdout weakness is addressed
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119D, V119E, V119F, V119G
+- Context: After Tushare daily data was integrated, a new orthogonal hardening branch was opened around non-frothy add conditions: lower free-float turnover, lower volume-ratio overheat, and healthier large-order buy-sell balance. The branch immediately outperformed most prior quality-side lines on the full add pool and under crude year splits.
+- Decision: Classify `tushare_turnover_discipline_score_candidate` as `candidate-only`:
+  - acknowledge it as the strongest new orthogonal hardening line so far,
+  - do not promote it to hard-candidate status yet,
+  - do not allow replay-facing or shadow-replay use,
+  - allocate one more non-replay audit cycle specifically to the `holdout_2024` failure surface.
+- Alternatives Considered: Promote it directly to `hard candidate` because the external audit and mean time-split scores are already strong, or stay overly conservative and dismiss it as just another fragile branch.
+- Expected Benefits: Preserve a genuinely improved branch without repeating the pattern of promoting attractive lines before the weakest chronology bucket is understood.
+- Risks: The project may still lose momentum if the extra caution prevents timely integration of the first actually strong orthogonal line.
+- Follow-up Actions: Focus the next cycle on the 2024 holdout recall hole and do not widen the branch into replay before that surface is better understood.
+
+### DEC-0260 Freeze the participation-turnover combo as the strongest live CPO candidate while still blocking replay until the 2024 holdout weakness is better understood
+
+- Date: 2026-04-02
+- Title: Keep the HIJ combo branch alive as candidate-only instead of either promoting too early or throwing away the first genuinely stronger combo line
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119H, V119I, V119J, V119K
+- Context: After the Tushare daily data pack was integrated, the project combined the strongest live intraday line (`sustained_participation_non_chase`) with the strongest new daily orthogonal line (`turnover_discipline`) to see whether the remaining 2024 chronology hole could be materially reduced without opening replay-facing scope.
+- Decision: Freeze `participation_turnover_combo_score_candidate` as `candidate-only`:
+  - acknowledge that it is stronger than each component alone on both the external-pool and year-split surfaces,
+  - keep replay and shadow replay blocked,
+  - do not yet call it a hard candidate in the authoritative log,
+  - allocate one more non-replay audit cycle to the still-open 2024 recall weakness.
+- Alternatives Considered: Promote the combo directly to `hard candidate` because the external and mean time-split metrics are now the best among live lines, or stay overly rigid and refuse to recognize the combo as materially better than the single-family branches.
+- Expected Benefits: Preserve the strongest current live branch without repeating the earlier promotion mistake on incomplete chronology evidence.
+- Risks: The protocol may remain too conservative if a branch that is already practically useful is kept off the mainline too long.
+- Follow-up Actions: Keep the combo non-replay-only for one more audit cycle and focus the next analysis on the remaining 2024 holdout weakness rather than widening branch scope.
+
+### DEC-0261 Promote the ELG-supported participation-turnover combo to the first non-replay hard candidate while keeping replay gates closed
+
+- Date: 2026-04-02
+- Title: Accept the majority adversarial view that the ELG-supported combo is now stronger than candidate-only, but still block execution-facing use
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119L, V119M, V119N, V119O
+- Context: The initial participation-turnover combo from `V119H/I/J` materially improved chronology but still left a visible 2024 holdout hole. A narrow ELG buy-sell support term was then added to test whether one more orthogonal daily capital-flow dimension could harden the branch without reopening broad feature search.
+- Decision: Freeze `participation_turnover_elg_support_score_candidate` as `hard_candidate_non_replay_only`:
+  - acknowledge that it is now the strongest live CPO intraday quality-side line,
+  - accept hard-candidate language because external and time-split surfaces materially improved,
+  - keep replay and shadow replay blocked,
+  - require one more non-replay audit cycle before any execution-facing consideration.
+- Alternatives Considered: Keep the branch at `candidate-only` for one more full cycle out of extra caution, or promote it too far into replay-facing scope because it is the first branch with truly strong chronology metrics.
+- Expected Benefits: Preserve discipline while finally recognizing when a line has crossed the threshold from interesting candidate to genuinely hard non-replay asset.
+- Risks: Even this stronger line may still hide chronology fragility that only appears under a different audit surface, so an early hard-candidate label could still prove optimistic.
+- Follow-up Actions: Continue exactly one more non-replay audit cycle and do not let the branch touch replay until that cycle confirms the strength is not just the product of the current add-pool geometry.
+
+### DEC-0262 Revoke hard-candidate language from the ELG-supported combo after symbol and role holdouts exposed object-shift failure
+
+- Date: 2026-04-02
+- Title: Downgrade the first non-replay hard candidate back to candidate-only when object-shift and leakage surfaces fail
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119P, V119Q, V119R, V119S
+- Context: After `V119O` promoted the ELG-supported participation-turnover combo to `hard_candidate_non_replay_only`, the next mandated non-replay audit cycle tested symbol holdouts, role-family holdouts, and out-of-set leakage. Those surfaces were substantially weaker than the earlier chronology metrics.
+- Decision: Revoke hard-candidate status and freeze `participation_turnover_elg_support_score_candidate` back at `candidate-only`:
+  - `V119P` symbol holdout `mean/min = 0.4375 / 0.375`
+  - `V119Q` role holdout `mean/min = 0.440476 / 0.333333`
+  - `V119R` leakage remained high on `entry` and especially `close`
+  - keep replay and shadow replay blocked
+- Alternatives Considered: Defend the hard-candidate label because the previous external and year-split surfaces were strong, or kill the entire family immediately.
+- Expected Benefits: Preserve protocol credibility by showing that hard-candidate status is reversible when later adversarial audits uncover object-shift and leakage problems.
+- Risks: A branch with real signal may now be held back too long if the failed holdouts are partly a data-thickness problem rather than true semantic failure.
+- Follow-up Actions: Keep the family alive only as `candidate-only`; any further work must target de-entangling symbol/role geometry or leakage rather than widening branch scope.
+
+### DEC-0263 Kill the narrow limit-band discipline branch as a scoring candidate after it tied the parent externally and weakened chronology
+
+- Date: 2026-04-02
+- Title: Freeze the limit-discipline support line at explanatory-only rather than letting a cosmetic non-chase story consume candidate budget
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119V, V119W, V119X, V119Y
+- Context: After the ELG-supported combo hit the same-family de-entangling stopline, a narrow orthogonal repair was tested using daily limit-band discipline: keep more distance from the up-limit chase posture and avoid over-extended closes. The branch produced a slightly larger discovery mean gap, tied the parent on the broad external surface, but weakened the year-split chronology surface.
+- Decision: Freeze `limit_discipline_support_score_candidate` at `explanatory_only`:
+  - discovery gap `1.863218` vs parent `1.810537`
+  - external `0.909091` vs parent `0.909091`
+  - time-split mean/min `0.819445 / 0.666667` vs parent `0.875 / 0.833333`
+  - replay and shadow replay remain blocked
+- Alternatives Considered: Keep it alive as a low-priority candidate because the non-chase story is intuitively plausible, or kill it completely with no explanatory retention.
+- Expected Benefits: Stop spending budget on a branch that adds narrative clarity but not operational edge, while still preserving the idea as a descriptive overlay for future analysis.
+- Risks: A very small branch could still hide niche usefulness that is now being abandoned too early.
+- Follow-up Actions: Do not reopen this limit-band branch as a scorer; move to a genuinely new orthogonal discovery line.
+
+### DEC-0264 Stop further orthogonal micro-scans inside the current Tushare daily_basic/moneyflow/stk_limit plane
+
+- Date: 2026-04-02
+- Title: Freeze a stopline for the current Tushare daily data plane after remaining narrow ideas failed to beat the parent ELG-supported combo
+- Status: accepted
+- Related Protocol Version: protocol_v1.19
+- Related Runs: V119Z
+- Context: After the ELG-supported combo branch was downgraded back to candidate-only and same-family de-entangling hit a stopline, the remaining obvious narrow orthogonal ideas inside the current Tushare daily plane were scanned together rather than opened one by one as new branches.
+- Decision: Treat the current Tushare `daily_basic + moneyflow + stk_limit` micro-scan space as locally exhausted:
+  - scanned `9` remaining narrow directions
+  - `viable_increment_candidate_count = 0`
+  - no remaining narrow idea beat the parent on both external and chronology surfaces
+- Alternatives Considered: Continue opening one more narrow branch from retail crowding, limit discipline, float/cap structure, or medium-flow support even without a clear increment signal.
+- Expected Benefits: Prevent further local overfitting and stop spending budget on cosmetic daily-data variations that do not improve the live parent branch.
+- Risks: A niche combination across these same fields might still exist but remains undiscovered because the stopline now blocks more brute-force local exploration.
+- Follow-up Actions: Shift the next discovery cycle to a genuinely new data plane rather than continuing inside the current Tushare daily field family.
+
+### DEC-0265 Open the first formal reduce-side / board risk-off candidate and keep it non-replay until adversarial review
+
+- Date: 2026-04-03
+- Title: Freeze `board_risk_off_reduce_score_candidate` as the first formal reduce-side branch after the close-only branch stalled at soft-component status
+- Status: accepted
+- Related Protocol Version: protocol_v1.21
+- Related Runs: V121I, V121J, V121K
+- Context: The project concluded that the current weakness is no longer "how to add more" but "how to de-risk before damage becomes too deep". The earlier close-only narrowing branch survived only as a `300308`-weighted soft component, so the next move was to open a broader `reduce_vs_hold` branch around board risk-off rather than keep polishing close-only gates.
+- Decision: Freeze `board_risk_off_reduce_score_candidate` as a live `candidate-only` risk-side branch pending adversarial review:
+  - discovery mean gap `1.31783`
+  - external best balanced accuracy `0.687336`
+  - time-split mean/min `0.615348 / 0.525`
+  - branch uses board deterioration and hotter daily participation as early de-risk structure:
+    - lower `board_avg_return`
+    - lower `board_breadth`
+    - higher `turnover_rate_f`
+    - higher `volume_ratio`
+- Alternatives Considered: Reopen the close-only branch, keep forcing intraday reduce-side discovery despite missing feature coverage, or stop risk-side work until `1min` data arrives.
+- Expected Benefits: Give the project its first formally-audited reduce-side candidate that is broader than a close-only prior and can be challenged by the same chronology discipline used on add-side branches.
+- Risks: The branch may still be too broad and may collapse under adversarial or holdout review, especially if it mainly captures generic stress days rather than true reduce semantics.
+- Follow-up Actions: Send `V121I/J/K` to the next three-run adversarial review before any replay-facing expansion.
+
+### DEC-0266 Keep the first formal reduce-side board risk-off branch alive as candidate-only and block replay-facing use
+
+- Date: 2026-04-03
+- Title: Freeze `board_risk_off_reduce_score_candidate` at `candidate_only` after the first adversarial review
+- Status: accepted
+- Related Protocol Version: protocol_v1.21
+- Related Runs: V121I, V121J, V121K, V121L
+- Context: The first formal `reduce_vs_hold` board risk-off branch produced a positive discovery gap, a positive broad external surface, and chronology that survived crude year splits. The question was whether that was enough to upgrade it beyond the earlier downside soft-component lines.
+- Decision: Keep `board_risk_off_reduce_score_candidate` alive as `candidate_only`, but continue to block replay-facing and shadow-replay use:
+  - discovery mean gap `1.31783`
+  - external best balanced accuracy `0.687336`
+  - time-split mean/min `0.615348 / 0.525`
+  - adversarial vote: `candidate_only` `2`, `soft_component` `1`
+- Alternatives Considered: Downgrade immediately to `soft_component` because the line is still broad and sample-thin, or upgrade too early because it is the first reduce-side line that clearly survives chronology.
+- Expected Benefits: Preserve the first genuinely live reduce-side branch without pretending it is already strong enough to govern execution.
+- Risks: The branch may still be a generic stress-state detector rather than a clean reduce law and may fail the next narrowing stage.
+- Follow-up Actions: Continue only with non-replay reduce-side narrowing; replay-facing and shadow replay remain blocked.
+
+### DEC-0267 Keep the board risk-off reduce branch alive after symbol holdout, but explicitly block it from execution because cross-action leakage is total
+
+- Date: 2026-04-03
+- Title: Freeze `board_risk_off_reduce_score_candidate` at candidate-only after symbol holdout survived but cross-action leakage hit 100%
+- Status: accepted
+- Related Protocol Version: protocol_v1.21
+- Related Runs: V121L, V121M, V121N, V121O
+- Context: After the first adversarial review kept the reduce-side board risk-off branch alive as `candidate_only`, the next question was whether it generalized across symbols and whether it stayed specific to reduce context rather than degenerating into a generic risk flag.
+- Decision: Keep the branch alive as `candidate_only`, but continue to block replay-facing and shadow-replay use:
+  - symbol holdout mean/min balanced accuracy `0.631365 / 0.580508`
+  - symbol generalization posture: `candidate_survives_symbol_holdout`
+  - but cross-action leakage is total at the current threshold:
+    - `reduce_pass_rate = 1.0`
+    - `add_leakage_rate = 1.0`
+    - `entry_leakage_rate = 1.0`
+    - `close_leakage_rate = 1.0`
+- Alternatives Considered: Downgrade immediately to `soft_component` because the branch behaves like a generic risk prior, or ignore the leakage because symbol holdout finally looked decent.
+- Expected Benefits: Preserve a live downside candidate without pretending it is already specific enough to govern reduce decisions.
+- Risks: Leaving the branch alive could encourage future over-interpretation of a score that is still too broad to separate action contexts cleanly.
+- Follow-up Actions: Continue only with reduce-side context separation and threshold/feature narrowing; execution use remains blocked.
+
+### DEC-0268 Defer attachment of the recent `1min` downside soft component to the broader downside stack until historical overlap or a clearly better same-plane increment exists
+
+- Date: 2026-04-03
+- Title: Freeze the recent `1min` downside branch as a standalone soft component and block attachment to the historical downside stack
+- Status: accepted
+- Related Protocol Version: protocol_v1.22
+- Related Runs: V122R, V122S, V122T, V122U, V122V
+- Context: The recent `1min` plane finally produced a living downside soft component in `V122R`. The next question was whether that component could be honestly attached to the broader historical downside stack or at least improve the recent same-plane stack enough to justify attachment pressure.
+- Decision: Keep the recent `1min` downside line only as the standalone soft component already accepted in `V122R`, and block attachment for now:
+  - direct historical overlap between the old reduce surface and the recent `1min` plane is `0` days
+  - same-plane stack improves discovery gap `0.08154386 -> 0.10833396`
+  - but does **not** improve the transfer metrics that matter:
+    - q75 balanced accuracy `0.5206375 -> 0.51908727`
+    - time-split mean `0.52515907 -> 0.52230714`
+    - symbol-holdout mean `0.51487065 -> 0.51482082`
+- Alternatives Considered: Pretend the recent `1min` line can be bridged into the historical stack despite zero overlap, or treat the small discovery-gap lift as sufficient evidence for attachment.
+- Expected Benefits: Prevent quiet leakage of a recent-only soft component into a broader downside stack before there is either historical `1min` coverage or a genuinely better same-plane stack.
+- Risks: The project may underuse a weak but real soft component in the short term; however, this is less harmful than promoting a bridge that the data does not support.
+- Follow-up Actions: Retain `V122R` as a standalone `1min downside soft component`; do not attach it to the broader downside stack until historical `1min` data exists or a new same-plane stack materially improves both discovery and transfer.
+## DEC-0269 V123A-D 1min Orthogonal Downside Branch
+- Date: 2026-04-03
+- Branch: `gap_exhaustion_stall_score`
+- Inputs:
+  - `V123A` orthogonal scan on recent 1min proxy label plane
+  - `V123B` chronology audit
+  - `V123C` symbol holdout audit
+  - `V123D` three-reviewer triage
+- Key findings:
+  - `gap_exhaustion_stall_score` is the best low-correlation recent 1min downside branch:
+    - discovery gap `0.10445157`
+    - q75 BA `0.54544126`
+    - corr vs `downside_failure` `0.46646728`
+  - chronology survives above random:
+    - mean/min BA `0.54016402 / 0.5242303`
+  - symbol transfer survives above random:
+    - mean/min BA `0.53970323 / 0.52670002`
+- Decision:
+  - Freeze as `soft_component`
+  - Forbid replay-facing and shadow replay
+  - Allow at most one non-replay same-plane integration audit against `downside_failure`
+- Rationale:
+  - Better than the prior recent 1min downside line on orthogonality and transfer
+  - Still not strong enough to act as a standalone candidate rule
+## DEC-0270 V123E-G 1min Same-Plane Downside Attachment Stopline
+- Date: 2026-04-03
+- Branches:
+  - `downside_failure_score`
+  - `gap_exhaustion_stall_score`
+- Inputs:
+  - `V123E` same-plane integration audit
+  - `V123F` same-plane stopline
+  - `V123G` three-reviewer attachment triage
+- Key findings:
+  - Best standalone remains `gap_exhaustion_stall_reference`
+    - q75 BA `0.54544126`
+    - time mean/min `0.54016402 / 0.5242303`
+    - symbol mean/min `0.53970323 / 0.52670002`
+  - Best blend is `orthogonal_heavy_blend_score`
+    - q75 BA `0.54544126`
+    - time mean/min `0.5456252 / 0.53881731`
+    - symbol mean/min `0.54027241 / 0.51846487`
+  - Blend improves some chronology metrics but worsens symbol minimum and creates no material q75 uplift
+- Decision:
+  - Keep same-plane attachment blocked
+  - Keep both recent `1min` downside lines as detached `soft_component`s
+  - Stop same-plane blend tuning
+- Rationale:
+  - The blend only reshuffles metrics locally and does not produce material non-replay increment over the best standalone recent `1min` downside branch
+## DEC-0271 V123H-K Market Regime Overlay
+- Date: 2026-04-03
+- Branch: `liquidity_drought_regime_score`
+- Inputs:
+  - `V123H` market regime discovery
+  - `V123I` chronology audit
+  - `V123J` year evaluability audit
+  - `V123K` three-reviewer triage
+- Key findings:
+  - pooled discovery looks meaningful:
+    - gap `0.14394085`
+    - q75 BA `0.56563545`
+  - chronology does not survive:
+    - time-split mean/min `0.4402025 / 0.0`
+  - year holdout is not evaluable because current index bootstrap covers only one year
+- Decision:
+  - Freeze as `explanatory_only`
+  - Forbid candidate promotion and replay-facing use
+- Rationale:
+  - The branch explains why major research-baseline drawdown windows cluster in weak-liquidity broad-market states
+  - It does not yet provide stable transfer evidence strong enough for execution logic
+## DEC-0272 V123L Heat Guardrail Drawdown Interval Compare
+- Date: 2026-04-03
+- Inputs:
+  - `V122Y` baseline vs research drawdown interval compare
+  - `V122Z` heat guardrail review
+  - `V123L` interval-by-interval heat comparison
+- Key findings:
+  - Heat guardrails materially improve the two largest drawdowns:
+    - Drawdown 1 `2024-10-08 -> 2025-04-09`
+      - uncapped `49.35%`
+      - balanced `37.65%`
+      - strict `32.71%`
+    - Drawdown 2 `2024-07-10 -> 2024-09-06`
+      - uncapped `27.30%`
+      - balanced `19.14%`
+      - strict `16.42%`
+  - The third drawdown `2023-06-20 -> 2023-11-01` is unchanged under both heat guardrails:
+    - all three variants stay at `19.37%`
+  - The reason is direct:
+    - in drawdowns 1 and 2 the guardrails reduce `300308` carry by `2500-2900` shares and `300502` by `300-1300` shares
+    - in drawdown 3 the guardrails do not reduce position sizes at all
+- Decision:
+  - Freeze heat guardrails as a real first-order fix for the later large drawdowns
+  - Do not overstate them as a universal solve, because they leave the earlier drawdown untouched
+- Rationale:
+  - Position heat is a real first cause of the worst later drawdowns
+  - But not every painful interval is caused by excessive carry, so reduce/close-side work still matters
+## DEC-0273 V123M-P Daily Residual Downside Branch
+- Date: 2026-04-03
+- Inputs:
+  - `V122Y` baseline vs research drawdown compare
+  - `V123L` heat guardrail interval compare
+  - `V123M/V123N/V123O` residual downside discovery, chronology, and boundary audit
+  - `V123P` three-reviewer triage
+- Key findings:
+  - A non-overheated residual downside subset exists:
+    - both `300308` and `300502` are held
+    - cash ratio still exceeds `60%`
+    - the unresolved pain is concentrated in the third drawdown interval `2023-06-20 -> 2023-11-01`
+  - The best branch is `held_pair_deterioration_score`
+    - discovery gap `1.555429`
+    - q75 BA `0.580257`
+    - time-split mean/min `0.568327 / 0.556833`
+    - boundary false positives remain below the true interval pass rate:
+      - pre `0.125`
+      - post `0.259259`
+      - positive interval `0.483146`
+- Decision:
+  - Freeze `held_pair_deterioration_score` as `candidate_only`
+  - Forbid replay-facing and shadow replay use
+  - Allow only narrow non-replay residual revalidation inside the `300308 + 300502 + high-cash` context
+- Rationale:
+  - The branch is stronger than a pure explanatory layer because it survives chronology and keeps nearby false positives contained
+  - But it is still too context-specific to be promoted into a general downside rule
+## DEC-0274 V123Q Residual Cash-Floor Sensitivity
+- Date: 2026-04-03
+- Inputs:
+  - `V123M` residual downside discovery
+  - `V123N` chronology audit
+  - `V123Q` cash-floor sensitivity audit
+- Key findings:
+  - `held_pair_deterioration_score` is not an artifact of carving the high-cash subset at exactly `60%`
+  - cash floors `0.55 / 0.60 / 0.65` all produce the same sample and essentially identical metrics:
+    - discovery gap `1.555429`
+    - q75 BA `0.580257`
+    - time mean/min `0.568327 / 0.556833`
+  - only when the floor is raised to `0.70` does the branch start to weaken:
+    - sample `97`
+    - q75 BA `0.529352`
+    - time min `0.458333`
+- Decision:
+  - Freeze the residual branch as stable across adjacent high-cash floors
+  - Do not downgrade it as a threshold-artifact branch
+- Rationale:
+  - The branch is narrow, but its signal is not coming from a single arbitrary cash-floor cut
+## DEC-0275 V123R-T Residual Core-Focus Demotion
+- Date: 2026-04-03
+- Inputs:
+  - `V123Q` residual cash-floor sensitivity
+  - `V123R` core-stress audit
+  - `V123S` granular boundary audit
+  - `V123T` three-reviewer triage
+- Key findings:
+  - The residual branch survives chronology and boundary containment, but it does **not** focus on the deepest stress core inside the unresolved drawdown:
+    - core mean score `0.33515`
+    - fringe mean score `0.545276`
+    - core pass rate `0.466667`
+    - fringe pass rate `0.5`
+  - All three reviewers agreed that this makes the branch too diffuse to keep candidate budget.
+- Decision:
+  - Demote `held_pair_deterioration_score` from `candidate_only` to `soft_component`
+  - Retain it only as a narrow residual downside penalty inside the `300308 + 300502 + high-cash` context
+  - Stop advancing it as a standalone residual candidate
+- Rationale:
+  - The branch is still more than noise because chronology and boundary checks remain alive
+  - But it is not concentrated enough on the true stress core to justify broader downside candidate status
+## DEC-0276 V123U-V Drawdown Control Priority Freeze
+- Date: 2026-04-03
+- Inputs:
+  - `V122W` research drawdown attribution
+  - `V122Y` baseline vs research drawdown compare
+  - `V123L` heat guardrail interval compare
+  - `V121L` broad board risk-off candidate triage
+  - `V123K` market regime explanatory triage
+  - `V123T` residual downside soft-component triage
+- Key findings:
+  - Two of the three largest research-baseline drawdowns are clearly heat-dominated:
+    - interval 1 and interval 2 both shrink materially under balanced/strict heat guardrails
+  - The third drawdown is not heat-dominated:
+    - heat improvement is exactly `0`
+    - it is better explained by narrow held-pair residual deterioration
+  - Broad board risk-off remains the only live reduce-side candidate, but only as a broad prior
+  - Market regime remains explanatory-only
+- Decision:
+  - Freeze the control-layer order as:
+    1. `position_heat_guardrail`
+    2. `board_risk_off_reduce_prior`
+    3. `held_pair_residual_soft_penalty`
+    4. `market_regime_explanatory_overlay`
+- Rationale:
+  - This order reflects what actually explains the three largest drawdowns
+  - It prevents further family discovery from outrunning the real risk-control priorities
+## DEC-0277 V123W-X Risk-Off Execution Use Is Downgraded
+- Date: 2026-04-03
+- Inputs:
+  - `V123U` drawdown risk-layer attribution matrix
+  - `V123V` drawdown control priority freeze
+  - `V123W` heat-plus-riskoff integration audit
+  - `V123X` UVW control integration triage
+- Key findings:
+  - `balanced_heat_reference` remains the best execution tradeoff:
+    - final equity `4148870.3072`
+    - max drawdown `0.376524`
+  - Adding `board_risk_off_reduce_prior` as an execution overlay crushes drawdown but destroys return too hard:
+    - `balanced_plus_riskoff_q75_r25` final equity `1307526.7159`, max drawdown `0.09045`
+    - `balanced_plus_riskoff_q85_r25` final equity `1626557.9285`, max drawdown `0.095633`
+  - All three reviewers agreed that this is too over-defensive for replay-facing use.
+- Decision:
+  - Keep `position_heat_guardrail` as the only replay-facing execution control in the research line
+  - Downgrade `board_risk_off_reduce_prior` back out of execution use
+  - Retain `board_risk_off_reduce_prior` only as a non-replay broad downside prior
+- Rationale:
+  - The broad risk-off prior still has explanatory and narrowing value
+  - But in execution form it over-fires and collapses equity too hard to justify attachment
+## DEC-0278 V123Y-Z / V124A Narrow Risk-Off Stays Shadow-Only
+- Date: 2026-04-03
+- Inputs:
+  - `V123Y` heat-conditioned risk-off execution audit
+  - `V123Z` heat-conditioned risk-off drawdown compare
+  - `V124A` YZA heat-conditioned risk-off triage
+- Key findings:
+  - Conditioning risk-off on elevated heat materially improves over the broad execution attempt:
+    - `balanced_hc_riskoff_q85_g55_s20_r25` -> `3063269.812 / 0.26301`
+    - `balanced_hc_riskoff_q85_g55_s25_r25` -> `3127456.492 / 0.26301`
+    - `balanced_hc_riskoff_q85_g55_s20_r15` -> `3306700.5668 / 0.295859`
+  - This proves the broad prior was too wide, not directionally wrong.
+  - But none of the narrow variants beat `balanced_heat_reference`:
+    - `4148870.3072 / 0.376524`
+  - All three reviewers agreed the narrow line is useful as a defensive shadow only, not as a promotable execution path.
+- Decision:
+  - Keep `balanced_heat_reference` as the only replay-facing control
+  - Archive the heat-conditioned risk-off family as `shadow_only_not_promotable`
+  - Stop further execution-promotion work on this family
+- Rationale:
+  - The narrow line is informative because it shows risk-off can be made less blunt
+  - But it still gives up too much return to justify replacing or joining the heat-primary execution stack
+## DEC-0279 V124B-D Heat-Aware Add Ladder Is Frozen
+- Date: 2026-04-03
+- Inputs:
+  - `V124B` heat-aware add ladder audit
+  - `V124C` heat-aware add ladder drawdown compare
+  - `V124D` BCD heat ladder triage
+- Key findings:
+  - All alternative ladders reduce notional and lower drawdown somewhat:
+    - `mid_20_30_40` -> `3798847.2816 / 0.350561`
+    - `soft_15_25_35` -> `3451156.726 / 0.313248`
+    - `flat_20_25_30` -> `3487002.9933 / 0.312659`
+    - `convex_10_25_45` -> `3636503.1155 / 0.336872`
+  - But none of them beat `balanced_heat_reference`:
+    - `4148870.3072 / 0.376524`
+  - Interval compare confirms the best ladder is still the reference itself.
+- Decision:
+  - Keep `balanced_heat_reference` frozen as the only replay-facing add budget
+  - Block all alternative ladder variants from replay-facing use
+  - Stop same-family add-ladder tuning under the current heat framework
+- Rationale:
+  - The ladder family is now locally exhausted
+  - Further tuning would only trade return for incremental drawdown relief without creating a better total objective
+## DEC-0280 V124E-G Add Suppression Family Is Blocked
+- Date: 2026-04-03
+- Inputs:
+  - `V124E` heat-plus-riskoff add suppression audit
+  - `V124F` add suppression overlap audit
+  - `V124G` DEF add suppression triage
+- Key findings:
+  - All add-suppression execution variants are identical to `balanced_heat_reference`:
+    - `4148870.3072 / 0.376524`
+  - The overlap audit explains why:
+    - overlay execution rows `13`
+    - rows with any risk-off signal `1`
+    - rows above q75/q85/q90 threshold `0`
+    - rows above threshold and gross-heat trigger `0`
+  - All three reviewers agreed this is not a weak branch but an inactive one.
+- Decision:
+  - Keep add-suppression blocked
+  - Stop execution work on this family
+  - Retain `balanced_heat_reference` as the only live execution control
+- Rationale:
+  - There is no actual execution surface here to refine
+  - Further threshold or gate tuning would be empty work rather than meaningful narrowing
+## DEC-0281 V124H Next Board Queue Expands Beyond CPO
+- Date: 2026-04-03
+- Inputs:
+  - `V114F` multi-board autonomous research orchestrator protocol
+  - `V114G` initial board queue seed
+  - `market_research_sector_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv`
+  - `market_research_stock_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv`
+- Key findings:
+  - `CPO` execution-side search is effectively frozen at `baseline + balanced_heat_reference`
+  - The strongest next sector candidate on current snapshot breadth is `商业航天 (BK0963)`:
+    - `composite = 0.597884`
+    - `active_days = 167`
+    - `row_count = 242`
+  - Shadow alternates are:
+    - `航天航空 (BK0480)` with `composite = 0.505195`
+    - `军民融合 (BK0808)` with `composite = 0.473136`
+- Decision:
+  - Freeze `CPO` as the current terminal board with a heat-only executable stack
+  - Expand the multi-board queue so `商业航天` becomes the next primary board
+  - Keep `航天航空` and `军民融合` as queued shadow alternates
+- Rationale:
+  - Continuing to mine `CPO` execution branches would be local overfit work
+  - The queue must become explicit again before portability work can start cleanly
+## DEC-0282 V124I Start Commercial Aerospace Board Worker
+- Date: 2026-04-03
+- Inputs:
+  - `V124H` multi-board queue expansion
+  - `market_research_sector_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv`
+  - `market_research_stock_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv`
+- Key findings:
+  - `商业航天 (BK0963)` remains the strongest queued next board after queue expansion
+  - Its current symbol structure is usable for phase-1 startup:
+    - primary liquid leader: `002085`
+    - stable core support: `000738`
+    - high-quality sparse alternate: `600118`
+- Decision:
+  - Start the next board worker at `board_world_model` for `商业航天`
+  - Advance its declared next phase to `role_grammar`
+- Rationale:
+  - The queue should not stop at selection; it should immediately become a live board handoff
+  - Current symbol structure is good enough to begin mechanism transfer without pretending the board is already complete
+## DEC-0283 V124J Commercial Aerospace Breadth Must Be Tiered
+- Date: 2026-04-03
+- Inputs:
+  - `V124I` commercial aerospace board world model
+  - user warning that commercial aerospace is a very broad concept and many sympathy names can rise with it
+- Key findings:
+  - The direct supported board worker currently has a tight tier-1 core:
+    - `002085`
+    - `000738`
+    - `600118`
+  - Broad concept names may still matter for breadth and propagation, but should not be allowed to redefine the main learning unit early
+- Decision:
+  - Freeze a four-tier breadth classification protocol
+  - Keep broad concept examples such as `顺灏股份 / 金风科技 / 鲁信创投` in a tier-3 thematic propagation watchlist
+  - Do not let tier-3 or tier-4 names drive world-model or role-grammar decisions until tier-1 and tier-2 are stable
+- Rationale:
+  - Commercial aerospace is broader and more narratively contagious than CPO
+  - Without tiering, sympathy names would dilute mechanism discovery and corrupt later control extraction
+## DEC-0284 V124K Cross-Board Propulsion Allies Are Real Forces, Not Noise
+- Date: 2026-04-03
+- Inputs:
+  - `V124J` commercial aerospace breadth classification protocol
+  - user correction that some non-board names are still genuine drivers of the commercial-aerospace move
+- Key findings:
+  - A pure direct-board-only classification is too narrow for `商业航天`
+  - Some names outside the direct board label should be treated as real行情助推主力 rather than demoted to weak concept noise
+- Decision:
+  - Introduce `layer_2_cross_board_propulsion_allies`
+  - Seed it with the user-noted names:
+    - `002565 顺灏股份`
+    - `002202 金风科技`
+    - `600783 鲁信创投`
+  - Allow this layer to influence:
+    - breadth confirmation
+    - theme heat confirmation
+    - diffusion support audit
+    - spillover risk monitoring
+  - Keep direct role grammar ownership with the direct board core
+- Rationale:
+  - These names may not define the internal board mechanism, but they can still be decisive for the observable move
+  - Treating them as noise would throw away real market structure
+## DEC-0285 V124L Commercial Aerospace Needs A Web-Extended A-Share Style Universe
+- Date: 2026-04-03
+- Inputs:
+  - user request to search major websites/forums for commercial-aerospace names, including shovel sellers and non-obvious sympathy names
+  - web review of Eastmoney/同花顺/新浪/韭研公社 materials
+- Key findings:
+  - The usable commercial-aerospace universe in A股 is broader than the direct board label
+  - It naturally breaks into:
+    - `正式组`
+    - `概念助推组`
+    - `卖铲组`
+    - `同走势镜像组`
+  - User-named names such as `顺灏股份 / 金风科技 / 鲁信创投` are not disposable noise and should remain inside the research universe
+  - `华菱线缆` deserves explicit shovel-seller treatment rather than blanket concept demotion
+- Decision:
+  - Freeze a web-extended dual-universe review for commercial aerospace
+  - Promote the user-named names into the retained research universe
+  - Prepare to run role grammar on the expanded universe instead of the earlier narrow triplet alone
+- Rationale:
+  - A股 theme trading frequently routes real force through concept propagation, capital linkage, and shovel-seller names
+  - Ignoring that would miss real breadth and diffusion structure unique to this market
+## DEC-0287 V124L Add Missing Commercial Aerospace Names From Web Reality Check
+- Date: 2026-04-03
+- Inputs:
+  - user correction that `*ST铖昌/铖昌科技`、`再升科技`、`臻镭科技` were omitted
+  - supplemental web review on chip and material suppliers
+- Decision:
+  - add `001270 *ST铖昌` to `卖铲组`
+  - add `688270 臻镭科技` to `卖铲组`
+  - add `603601 再升科技` to `概念助推组`
+- Rationale:
+  - `*ST铖昌` and `臻镭科技` are better treated as core aerospace chip shovel-sellers than as disposable concept noise
+  - `再升科技` has real航天材料逻辑, but public descriptions still suggest its current market function is closer to high-value concept propulsion than direct internal ownership
+## DEC-0288 V124L Continue Universe Repair With 西测测试 And 中超控股
+- Date: 2026-04-03
+- Inputs:
+  - user correction that `中超控股`、`西测测试` were still missing
+- Decision:
+  - add `301306 西测测试` to `卖铲组`
+  - add `002471 中超控股` to `概念助推组`
+- Rationale:
+  - `西测测试` is better treated as a commercial-aerospace testing/verification shovel-seller than as a loose mirror name
+  - `中超控股` is currently better captured as an A股主题扩散助推主力 rather than direct internal ownership
+## DEC-0289 V124N Commercial Aerospace Universe Expansion Needs Confidence Tiers
+- Date: 2026-04-03
+- Inputs:
+  - second-pass web sweep across 新浪/搜狐/淘股吧/雪球 style commercial-aerospace stock lists
+- Key findings:
+  - the universe is still materially wider than the first-pass retained set
+  - but the new names are not equally trustworthy
+- Decision:
+  - add a `wave2` expansion layer with explicit confidence tags
+  - merge high-confidence names such as `广联航空 / 智明达 / 长盈通 / 高华科技 / 斯瑞新材 / 中航高科 / 西部超导`
+  - keep looser names in `pending` instead of granting them equal status immediately
+- Rationale:
+  - commercial-aerospace is too broad for a single-pass universe build
+  - confidence tagging is the only way to keep expanding without turning the worker into a concept dump
+## DEC-0290 V124P Universe Triage Must Come Before Control Extraction
+- Date: 2026-04-03
+- Inputs:
+  - `V124L` web-extended universe
+  - `V124M` role grammar
+  - `V124N` wave2 universe expansion
+  - adversarial review from Pauli / Tesla / James
+- Key findings:
+  - the universe is now broad enough for board mapping
+  - it is not yet clean enough for direct control extraction
+  - the most likely pollution source is the mirror layer and the web-only names sitting too close to internal ownership
+- Decision:
+  - freeze `universe_triage_first`
+  - block further broad expansion for now
+  - block immediate control extraction
+- Rationale:
+  - the next bottleneck is boundary cleanliness, not missing breadth
+## DEC-0286 V124M Commercial Aerospace Role Grammar Uses Layered Authority
+- Date: 2026-04-03
+- Inputs:
+  - `V124K` cross-board force protocol
+  - `V124L` web concept universe review
+- Key findings:
+  - The expanded universe is useful only if authority is separated cleanly
+  - Direct owners, cross-board propulsion names, shovel suppliers, and mirror names all matter, but not in the same way
+- Decision:
+  - Freeze a layered role grammar:
+    - internal owners
+    - cross-board propulsion stack
+    - shovel confirmation stack
+    - sentiment mirror stack
+  - Advance next phase to `control_extraction`
+- Rationale:
+  - This preserves A股 breadth information while preventing concept sprawl from hijacking core board controls
+## DEC-0291 V124R Commercial Aerospace Local Tushare Feed Bootstrap
+- Date: 2026-04-03
+- Inputs:
+  - `V124O` merged commercial-aerospace universe
+  - local `TUSHARE_TOKEN`
+- Key findings:
+  - the board no longer needs to stay trapped at `web_only`
+  - a lawful machine surface now requires local daily bars, daily_basic, moneyflow, and stk_limit for the full merged universe
+- Decision:
+  - bootstrap all `51` merged names into local Tushare-backed feeds
+  - treat this as a data-layer legality step, not replay authorization
+- Rationale:
+  - the next blocker is machine-readable support, not missing names
+## DEC-0292 V124S Full Local Support Removes Data As The Immediate Blocker
+- Date: 2026-04-03
+- Inputs:
+  - `V124R` Tushare feed bootstrap
+- Key findings:
+  - `fully_supported_count = 51`
+  - `unsupported_count = 0`
+- Decision:
+  - freeze the posture that all merged commercial-aerospace names are now locally supported
+  - move the blocker from `data availability` to `control-core cleanliness`
+- Rationale:
+  - replay and control extraction are still blocked, but no longer because names are only web concepts
+## DEC-0293 V124T Local Feed Machine Triage Refreshes The Board But Over-Admits Control Names
+- Date: 2026-04-03
+- Inputs:
+  - `V124R` local feeds
+  - `V124S` support audit
+- Key findings:
+  - `control_eligible_count = 16`
+  - the refreshed machine triage now covers the full `51`-name local board
+  - it also lifts obvious concept and mirror names too close to control authority
+- Decision:
+  - freeze the triage refresh as useful but not lawful for direct control extraction
+  - require adversarial review before any control surface work
+- Rationale:
+  - a wider machine surface is only useful if authority remains honest
+## DEC-0294 V124U Three-Subagent Review Freezes Core-Thinning As The Next Step
+- Date: 2026-04-03
+- Inputs:
+  - `V124R`
+  - `V124S`
+  - `V124T`
+  - adversarial review from Pauli / Tesla / James
+- Key findings:
+  - all three reviewers agree data is now ready
+  - all three reviewers agree control extraction is still blocked
+  - the shared blocker is `concept/mirror pollution inside control_eligible`
+- Decision:
+  - freeze `triage_refresh_success_but_core_thinning_required`
+  - block replay
+  - block direct control extraction
+- Rationale:
+  - the lawful next step is a thinner authority-bounded re-triage
+## DEC-0295 V124V Control Authority Is Thinned To Formal Owners Only
+- Date: 2026-04-03
+- Inputs:
+  - `V124T` refreshed machine triage
+  - `V124U` subagent review
+- Key findings:
+  - formal board names can be kept in a thinner control core
+  - shovel, concept-propulsion, and mirror names still matter but should not hold owner-level control authority
+- Decision:
+  - freeze `formal_group_only_may_hold_control_authority`
+  - keep `卖铲组` as confirmation-only supply-chain layer
+  - keep `概念助推组` as confirmation-only propulsion layer
+  - keep `同走势镜像组` as mirror-only
+- Rationale:
+  - this preserves A-share breadth while creating the first lawful commercial-aerospace control-extraction surface
+## DEC-0296 V125D/V125E Freeze Sentiment-Watch Quarantine Instead Of Free Sentiment Authority
+- Date: 2026-04-03
+- Inputs:
+  - `V125D`
+  - `V125E`
+- Key findings:
+  - non-formal names still matter for heat and sympathy
+  - but none are clean enough to hold lawful control authority
+  - `000547` is important yet remains a boundary-risk name
+- Decision:
+  - replace the loose sentiment-leadership idea with `sentiment_watch_quarantine`
+  - keep replay blocked
+- Rationale:
+  - visibility is necessary, authority is not
+## DEC-0297 V125G Shows Clean Boundaries Alone Still Cannot Rescue The Control Surface
+- Date: 2026-04-03
+- Inputs:
+  - `V125F`
+  - `V125G`
+- Key findings:
+  - boundary cleanup works
+  - but clean-core control semantics remain negative on year splits
+- Decision:
+  - keep replay blocked
+  - escalate from pure structure into the bounded event layer
+- Rationale:
+  - the missing driver is no longer board breadth but point-in-time catalyst semantics
+## DEC-0298 V125I/V125J/V125K Partially Unblock Commercial Aerospace Via Event Conditioning But Still Block Replay
+- Date: 2026-04-03
+- Inputs:
+  - `V125H`
+  - `V125I`
+  - `V125J`
+  - adversarial review from Pauli / Tesla / James
+- Key findings:
+  - `quality_event_gate` materially improves the control surface
+  - `eligibility_year_spread_mean = 0.17870564`
+  - `de_risk_year_spread_mean = 0.00760836`
+  - but `2024` has zero eligibility coverage and `2026` remains negative on eligibility
+- Decision:
+  - freeze `event_conditioned_control_surface_partially_unblocked_but_still_not_lawful_for_replay`
+  - keep first lawful replay blocked
+  - move to event-coverage gap auditing before any replay decision
+- Rationale:
+  - the event layer helped, but chronology coverage is still broken at the tails
+## DEC-0299 V125M Narrows Commercial Aerospace Events To Decisive Classes Only
+- Date: 2026-04-03
+- Inputs:
+  - `V125H`
+  - user requirement to keep only decisive turning/continuation/regulation-financing events
+- Key findings:
+  - broad theme-heat collection is too noisy for lawful control semantics
+  - decisive continuation, turning-point, and regulation/financing-risk rows are enough to keep an event layer alive
+- Decision:
+  - freeze a decisive-event protocol
+  - discard generic theme-heat news from control semantics
+- Rationale:
+  - commercial-aerospace event learning should use board-defining events, not every hot-theme article
+## DEC-0300 V125N/V125O Move Commercial Aerospace Chronology From Calendar Years To Machine-Discovered Structure Regimes
+- Date: 2026-04-03
+- Inputs:
+  - `V125I`
+  - `V125M`
+  - `V125N`
+  - `V125O`
+- Key findings:
+  - the board naturally separates into `impulse_expansion`, `sentiment_overdrive_transition`, `weak_drift_chop`, and `risk_off_deterioration`
+  - `quality_event_gate` only shows strong positive eligibility in `impulse_expansion`
+  - `sentiment_overdrive_transition` and `weak_drift_chop` are structurally negative for eligibility
+- Decision:
+  - stop discussing commercial-aerospace chronology primarily in year language
+  - make structure-regime language the authoritative lens for the next control audit
+- Rationale:
+  - the user is right that the board should be understood by structural行情, not by calendar buckets
+## DEC-0303 BK0480 Stops At Role Surface Plus Historical Bridge
+- Context:
+  - `BK0480` was chosen as the first transfer target after commercial aerospace freezing.
+  - We widened the local role surface, refreshed owners, and formalized the only viable historical bridge.
+- Inputs:
+  - `V129Y`
+  - `V129Z`
+  - `V130A`
+  - `V130B`
+  - `V130C`
+  - `V130D`
+  - `V130E`
+  - `V130F`
+- Key findings:
+  - `000738` and `600118` remain the only stable same-plane core inside `BK0480`
+  - `600760` is real enough to keep as a historical confirmation bridge, but not strong enough for control authority
+  - no non-core symbol has `v6` same-plane support, so a wider control surface would be fake harmonization
+- Decision:
+  - freeze `BK0480` after role surface v2 plus historical bridge formalization
+  - do not pretend replay readiness
+- Rationale:
+  - the board yields a valid transfer-preparation lesson, but not a lawful replay-capable local system
+## DEC-0304 Freeze The Transfer Program Until Same-Plane Support Thickens
+- Context:
+  - After freezing `BK0480`, the remaining queue (`BK0808`, `BK0715`, `BK0994`, `BK0814`, `BK0490`) was re-audited.
+  - The question was whether to force a new board worker or to stop the transfer program.
+- Inputs:
+  - `V130G`
+  - `V130H`
+  - `V130I`
+  - `V130J`
+  - `V130K`
+- Key findings:
+  - no candidate board has multi-symbol `v6` same-plane support
+  - every remaining board is either single-symbol same-plane or bridge-only
+  - `BK0808` is the closest candidate, but still fails both the same-plane and non-bridge triggers
+- Decision:
+  - freeze the transfer program
+  - keep an explicit reopen watchlist with hard triggers instead of vague hope
+- Rationale:
+  - forcing a new board worker now would collapse the method into single-symbol pseudo-board research
+## DEC-0305 Rank Gap-Closure Paths But Keep Transfer Frozen
+- Context:
+  - The transfer program freeze was already decided, but the next practical question was whether any candidate board had a realistic near-term reopen path.
+  - We converted the frozen watchlist into explicit gap-closure scenarios.
+- Inputs:
+  - `V130L`
+  - `V130M`
+- Key findings:
+  - `BK0808` is the only `single_action_reopen_possible` candidate
+  - even `BK0808` still needs:
+    - one more `v6` same-plane symbol
+    - bridge-only status cleared
+  - all other candidates require multi-step closure or even a first `v6` same-plane surface
+- Decision:
+  - keep the transfer program frozen
+  - monitor `BK0808` closely as the nearest reopen candidate
+  - do not reopen any board worker until the gap closure is realized in local support
+- Rationale:
+  - the right next move is explicit monitoring, not premature worker creation based on “almost ready” stories
+## DEC-0306 BK0808 Gets A Watch Candidate, Not A Worker
+- Context:
+  - After `V130L/V130M`, the next useful question was whether `BK0808` had any credible second symbol to watch without violating the freeze.
+  - We audited BK0808-native snapshot and timeline evidence directly.
+- Inputs:
+  - `V130N`
+  - `V130O`
+- Key findings:
+  - `300474` remains the only current `v6` same-plane owner
+  - `600118` already has strong BK0808 timeline-native support and is the nearest same-plane watch candidate
+  - `600760` remains only a historical bridge watch
+- Decision:
+  - keep transfer frozen
+  - monitor `600118` as BK0808's nearest second same-plane candidate
+  - keep `600760` as bridge memory only
+- Rationale:
+  - this adds directional supervision without pretending BK0808 has already cleared the replay or worker thresholds
+## DEC-0307 600118 Becomes The Explicit BK0808 Emergence Trigger
+- Context:
+  - Once `600118` was identified as BK0808's nearest watch candidate, the remaining question was whether its emergence would actually be enough to move BK0808 toward reopening.
+- Inputs:
+  - `V130P`
+  - `V130Q`
+- Key findings:
+  - BK0808 already clears the board-strength threshold
+  - BK0808 is blocked mainly because it has only one `v6` same-plane symbol and remains bridge-tainted
+  - if `600118` gains real `v6` same-plane support, BK0808 would become a legitimate reopen candidate
+- Decision:
+  - monitor `600118` as the explicit emergence trigger for BK0808
+  - keep BK0808 frozen until that emergence becomes real in local same-plane support
+- Rationale:
+  - this turns “watch BK0808” into a concrete operational condition rather than a vague narrative
+## DEC-0308 BK0808 Watch Is Now A State Machine, Not A Story
+- Context:
+  - After `V130P/V130Q`, the remaining governance task was to make the BK0808 watch operational on dated windows instead of static labels.
+- Inputs:
+  - `V130R`
+  - `V130S`
+  - `V130T`
+  - `V130U`
+- Key findings:
+  - `600118` has `8` real `near_surface_watch` days inside `BK0808`
+  - `600118` also has `2` `inactive_watch` days, so the watch is not permanently “on”
+  - even on active days, BK0808 still lacks real `v6` same-plane support and therefore never enters a live reopen-candidate state
+- Decision:
+  - retain BK0808 emergence monitoring as governance state machine only
+  - keep the worker frozen
+- Rationale:
+  - this gives operational supervision without diluting the hard same-plane requirement
+## DEC-0309 Freeze Transfer Reanalysis Under Static Data
+- Context:
+  - By `V130V/V130W`, the transfer program had a complete governance stack:
+    - frozen watchlist
+    - ranked gap closure paths
+    - BK0808 decisive emergence trigger
+    - BK0808 watch windows
+    - BK0808 emergence state machine
+- Inputs:
+  - `V130V`
+  - `V130W`
+- Key findings:
+  - `BK0808` remains the closest candidate
+  - `600118` remains the decisive watch symbol
+  - no board is reopen-ready under current local data
+  - further analytics on the same unchanged evidence would only restate the freeze
+- Decision:
+  - stop same-data transfer reanalysis
+  - wait for new local `v6` same-plane support before reopening board research
+- Rationale:
+  - governance is complete enough that more static reprocessing now adds noise, not information
+## DEC-0310 Install A Mechanical Change Gate For Transfer Reopen
+- Context:
+  - After freezing same-data reanalysis, the remaining governance gap was procedural: how to know exactly when the transfer program should be rerun.
+- Inputs:
+  - `V130X`
+  - `V130Y`
+- Key findings:
+  - the transfer program now has a complete monitored artifact set:
+    - `v6` stock snapshot
+    - `v5` stock snapshot
+    - `v6` sector snapshot
+    - BK0808 `600118` timeline
+    - BK0808 `600760` bridge timeline
+  - no artifact change has occurred yet, so the current posture remains frozen
+- Decision:
+  - install a static-data change gate
+  - rerun transfer analysis only after one or more monitored artifacts change
+- Rationale:
+  - this removes the last discretionary loophole for reopening under unchanged evidence
+## DEC-0311 Freeze Transfer Into An Operational Status Card
+- Context:
+  - With the change gate installed, the final remaining gap was operational readability: the current posture was correct but still spread across many reports.
+- Inputs:
+  - `V131A`
+- Key findings:
+  - the transfer program is frozen
+  - `rerun_required = false`
+  - `BK0808` is still the nearest candidate
+  - `600118` is still the decisive watch symbol
+  - the exact next action is still `wait_for_real_v6_same_plane_emergence_of_600118_then_rerun_transfer_chain`
+- Decision:
+  - keep the status card as the single operational view of the frozen transfer program
+- Rationale:
+  - this makes the correct “do not rerun” posture visible without reopening interpretive debate
+## DEC-0312 Add A Dormant Rerun Command Sheet
+- Context:
+  - After the status card and heartbeat were in place, the only remaining operational ambiguity was how to rerun the transfer chain cleanly if the change gate ever opens.
+- Inputs:
+  - `V131C`
+- Key findings:
+  - the frozen transfer program now has three explicit rerun chains:
+    - `v130g_to_v130w`
+    - `v129y_to_v130w`
+    - `v130n_to_v130w`
+  - this improves restart readiness without changing any evidence or weakening the freeze
+- Decision:
+  - retain a rerun command sheet as dormant operational infrastructure
+  - do not invoke it unless the monitored-artifact change gate opens
+- Rationale:
+  - a frozen program is safer when the future restart path is explicit but not prematurely used
+## DEC-0313 Retain Intraday Override As Supervision-Only Governance
+- Context:
+  - With transfer frozen, the next highest-value unresolved defect remained inside commercial aerospace: lawful EOD buys that were point-in-time legal but became obvious intraday collapse mistakes.
+- Inputs:
+  - `V131D`
+  - `V131E`
+  - `V131F`
+- Key findings:
+  - the current primary replay has `55` buy executions that can be organized into a supervision table
+  - among them:
+    - `2` retained override positives
+    - `2` reversal watches
+    - `2` mismatch watches
+    - `30` clean controls
+  - override positives are materially distinct from clean controls:
+    - `open_to_close_separation = -0.11965941`
+    - `close_location_separation = -0.59915096`
+    - `forward_return_10_separation = -0.37291824`
+- Decision:
+  - retain the intraday override bundle as supervision-only governance
+  - keep it outside current lawful EOD replay and labels
+- Rationale:
+  - the bundle is clearly useful as future minute-level point-in-time supervision seed geometry, but it still depends on execution-day path information and therefore cannot be lawfully retrofitted into the present replay stack
+## DEC-0314 Block Commercial Aerospace Intraday Modeling Until Minute Data Arrives
+- Context:
+  - After retaining the intraday override supervision bundle, the next practical question was whether commercial aerospace now had enough local minute support to begin lawful intraday prototyping.
+- Inputs:
+  - `V131G`
+  - `V131H`
+  - `V131I`
+- Key findings:
+  - the current primary replay trades `12` symbols, but the intraday override branch only needs `4` immediate failure-seed symbols:
+    - `000738`
+    - `300045`
+    - `300342`
+    - `601698`
+  - local minute coverage for these required symbols is:
+    - `0 / 4`
+  - a concrete collection manifest now exists with:
+    - `2` high-priority rows for retained override positives
+    - `2` medium-priority rows for reversal watches
+- Decision:
+  - keep the intraday override bundle
+  - block all commercial-aerospace intraday modeling until the required minute-bar gap closes
+  - use the collection manifest as the only approved next-step intake path
+- Rationale:
+  - this preserves the supervision geometry without pretending that lawful intraday modeling can start before the local minute-data base exists
+## DEC-0315 Install A File-Based Intraday Collection Gate
+- Context:
+  - After the minute-data gap was identified, the remaining governance problem was procedural: how to keep the intraday branch blocked without re-arguing the same missing-data point each time.
+- Inputs:
+  - `V131J`
+  - `V131K`
+  - `V131L`
+- Key findings:
+  - the intraday branch now has an explicit artifact gate:
+    - `000738`
+    - `300045`
+    - `300342`
+    - `601698`
+  - current status remains:
+    - `present_artifact_count = 0`
+    - `missing_artifact_count = 4`
+  - the highest-priority missing symbols are:
+    - `300342`
+    - `601698`
+- Decision:
+  - freeze the commercial-aerospace intraday branch behind a file-based collection gate
+  - keep a status card instead of reopening interpretation under unchanged data
+- Rationale:
+  - this turns the intraday branch into the same kind of honest operational freeze already used for the transfer program
+## DEC-0316 Local A-share 1min Archives Fully Unblock The Narrow Commercial-Aerospace Intraday Branch
+- Date: 2026-04-04
+- Related artifacts:
+  - `V131O`
+  - `V131P`
+  - `V131Q`
+  - `V131R`
+- Key findings:
+  - the retained override manifest now has exact local `1min` archive support:
+    - `000738`
+    - `300045`
+    - `300342`
+    - `601698`
+  - readiness is now:
+    - `ready_count = 4 / 4`
+    - `local_1min_fully_ready = true`
+  - local `5min` resampling from the new monthly `1min` archives is also fully ready:
+    - `ready_count = 4 / 4`
+    - `local_5min_fully_ready = true`
+- Decision:
+  - supersede the old minute-data collection block for the retained override sessions
+  - unblock the narrow commercial-aerospace local `1min` / local `5min` prototype branch
+  - keep the branch governance-bound and non-replay-facing until a concrete prototype audit is completed
+- Rationale:
+  - once the exact retained failure sessions are locally covered end to end, there is no reason to keep pretending the intraday branch is waiting on external providers
+## DEC-0317 Local 5-Minute Collapse-Override Prototype Retained As Governed Supervision
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace intraday branch
+
+### Context
+- The local monthly A-share 1-minute archives are now present under `data/raw/intraday_a_share_1min_monthly`.
+- The retained override sessions for commercial aerospace are fully covered by local minute data, which unblocked both the narrow local 1-minute branch and the derived local 5-minute branch.
+- The next question was whether a first narrow 5-minute collapse-override prototype is strong enough to keep as a governed supervision layer.
+
+### Decision
+- Freeze and retain `V131S/V131T` as:
+  - `retain_commercial_aerospace_local_5min_override_prototype_as_governed_supervision`
+- Do not let this prototype directly modify the current lawful EOD primary replay stack.
+
+### Evidence
+- `V131S` prototype audit:
+  - `override_positive_hit_count = 2 / 2`
+  - `reversal_watch_hit_count = 2 / 2`
+  - `clean_control_hit_count = 0 / 30`
+  - `ambiguous_hit_count = 2 / 19`
+  - `mismatch_watch_hit_count = 0 / 2`
+- `V131T` governance triage froze the correct posture as supervision-first.
+
+### Interpretation
+- The first local 5-minute prototype is not replay-facing yet.
+- Its current value is governance:
+  - catching retained severe override positives
+  - staying off clean controls
+  - seeding later lawful minute-level work
+
+### Consequence
+- Commercial aerospace now has:
+  - frozen lawful EOD primary
+  - frozen intraday failure library
+  - frozen local 5-minute governed supervision prototype
+- The correct next direction is not replay modification yet, but continuing minute-level governance and later lawful intraday formalization.
+## DEC-0318 Local 5-Minute Override Prototype Coverage Bounds Frozen
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace intraday governance branch
+
+### Context
+- `V131S/V131T` already retained the first local 5-minute collapse-override prototype as governed supervision.
+- The remaining governance question was whether the prototype stays narrow when expanded across the full buy-execution surface instead of only the most severe retained cases.
+
+### Decision
+- Freeze `V131U/V131V` as:
+  - `retain_local_5min_override_prototype_as_narrow_governed_supervision_with_false_positive_bounds_documented`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- Full buy-execution surface:
+  - `buy_execution_row_count = 55`
+  - `true_positive_seed_hits = 4`
+  - `clean_control_hit_count = 0 / 30`
+  - `ambiguous_hit_count = 2 / 19`
+  - `non_override_flagged_count = 2`
+- The two residual non-override hits stayed entirely inside `ambiguous_non_override`, not `clean_control`.
+
+### Interpretation
+- The local 5-minute prototype is still too narrow and path-dependent to be replay-facing.
+- But it is now bounded enough to keep as a documented supervision object.
+- The false-positive surface is explicit:
+  - zero intrusion into ordinary clean buys
+  - limited residual overlap with ambiguous executions
+
+### Consequence
+- Commercial aerospace intraday governance now has:
+  - failure library
+  - retained override positives
+  - reversal-watch seeds
+  - local 5-minute governed prototype
+  - documented false-positive bounds
+- This remains governance only, not a lawful replay modifier.
+## DEC-0319 Ambiguous Local 5-Minute Hits Reclassified As Mild Override-Watch Seeds
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace intraday governance branch
+
+### Context
+- `V131U/V131V` already showed that the retained local 5-minute prototype stays off clean controls and only leaks into two ambiguous executions.
+- The remaining question was whether those two ambiguous hits should stay documented as false-positive boundary cases or be promoted into a weaker supervision tier.
+
+### Decision
+- Freeze `V131W/V131X` as:
+  - `retain_all_flagged_ambiguous_hits_as_mild_override_watch_seeds`
+- Keep the broader prototype as governed supervision only.
+
+### Evidence
+- `flagged_non_override_case_count = 2`
+- `mild_override_watch_count = 2`
+- `documented_false_positive_count = 0`
+- Both ambiguous hits satisfied the mild-watch rule:
+  - `ret60 <= -0.045`
+  - `draw60 <= -0.045`
+  - `close_loc60 <= 0.05`
+
+### Interpretation
+- These cases are no longer best understood as prototype leakage.
+- They are better understood as weak but real intraday deterioration seeds:
+  - not severe enough to rewrite the replay
+  - strong enough to stay in the supervision library
+
+### Consequence
+- The intraday supervision stack now contains:
+  - retained severe override positives
+  - retained reversal-watch seeds
+  - retained mild override-watch seeds
+  - governed local 5-minute prototype
+- This still does not authorize replay contamination; it expands only the future minute-level supervision seed library.
+## DEC-0320 Commercial-Aerospace Intraday Supervision Registry Frozen As Canonical Seed Source
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- The minute branch already had:
+  - severe override positives
+  - reversal-watch seeds
+  - mild override-watch seeds
+  - a governed local 5-minute prototype
+- The missing piece was a single canonical registry that preserves those tiers and can serve as the only seed source for future minute-level label work.
+
+### Decision
+- Freeze `V131Y/V131Z` as:
+  - `freeze_commercial_aerospace_intraday_supervision_registry_and_shift_next_to_minute_tiered_label_specification`
+- Do not let the registry contaminate the lawful EOD primary replay.
+
+### Evidence
+- `registry_row_count = 6`
+- `severe_override_positive_count = 2`
+- `reversal_watch_count = 2`
+- `mild_override_watch_count = 2`
+
+### Interpretation
+- The minute branch is no longer a loose set of cases.
+- It now has a canonical registry with explicit severity tiers.
+- That registry is the correct handoff object for future 1-minute label formalization.
+
+### Consequence
+- The next correct direction is:
+  - `minute_tiered_label_specification`
+- Not:
+  - replay modification
+  - silent governance leakage into the EOD primary
+## DEC-0321 First Local 1-Minute Tier Rules Retained As Governed Seed Rules
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132A/V132B` froze the minute-tier vocabulary:
+  - `severe_override_positive`
+  - `reversal_watch`
+  - `mild_override_watch`
+- `V132C/V132D` then materialized those six retained supervision seeds into local one-minute first-hour windows.
+- The next governance question was whether a first explicit 1-minute rule ordering could preserve the frozen seed hierarchy without collapsing tiers into each other.
+
+### Decision
+- Freeze `V132G/V132H` as:
+  - `retain_local_1min_tier_rule_candidates_as_governed_seed_rules_and_shift_next_to_broader_false_positive_audit`
+- Do not let the seed rules contaminate the lawful EOD primary.
+
+### Evidence
+- `registry_row_count = 6`
+- `matched_count = 6`
+- `match_rate = 1.0`
+- `unmatched_count = 0`
+- All six retained seeds preserved their intended severity tier under the first explicit 1-minute rule ordering.
+
+### Interpretation
+- The minute branch now has more than a registry and more than an envelope summary.
+- It now has a first coherent set of governed 1-minute seed rules that respect the frozen severe/reversal/mild hierarchy on the retained seed set.
+- This still does not mean the rules are replay-worthy.
+
+### Consequence
+- The next correct task is:
+  - `broader_false_positive_audit`
+- Not:
+  - replay modification
+  - silent injection into the lawful EOD stack
+## DEC-0322 First Local 1-Minute Tier Rules Survived The Buy-Surface False-Positive Audit
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132G/V132H` already showed that the first explicit 1-minute tier rules preserved the frozen six-seed severity ordering.
+- The next governance question was whether those rules would start leaking once applied to the full commercial-aerospace buy-execution surface.
+
+### Decision
+- Freeze `V132I/V132J` as:
+  - `retain_local_1min_tier_rule_candidates_as_bounded_governed_supervision_and_shift_next_to_minute_session_expansion_audit`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- `buy_execution_row_count = 55`
+- `seed_row_count = 6`
+- `seed_match_count = 6`
+- `non_seed_flagged_count = 0`
+- `clean_control_flagged_count = 0`
+- `ambiguous_flagged_count = 0`
+- `mismatch_flagged_count = 0`
+
+### Interpretation
+- The first 1-minute rules are no longer merely seed-consistent.
+- They are also bounded on the full buy-execution surface.
+- This is still governance, not replay.
+
+### Consequence
+- The next correct task is:
+  - `minute_session_expansion_audit`
+- Meaning:
+  - expand beyond replay buy executions
+  - test the same 1-minute rules on a broader local session surface for the retained seed symbols
+## DEC-0323 Local 1-Minute Rules Stayed Sparse On The Broader Session Surface
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132I/V132J` already showed that the first explicit 1-minute rules stayed perfectly bounded on the replay buy surface.
+- The next pressure test was broader:
+  - all locally available first-hour sessions
+  - for the six retained seed symbols
+
+### Decision
+- Freeze `V132K/V132L` as:
+  - `retain_local_1min_rules_as_sparse_bounded_governed_supervision`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- `seed_symbol_count = 6`
+- `expanded_session_count = 612`
+- `expanded_hit_count = 24`
+- `severe_hit_count = 5`
+- `reversal_hit_count = 13`
+- `mild_hit_count = 6`
+- `max_symbol_hit_rate = 0.05882353`
+
+### Interpretation
+- The rules do expand beyond the seed set, which is expected.
+- But they remain sparse on the broader retained-symbol session surface.
+- That keeps them in the governed-supervision regime instead of collapsing into a noisy minute screen.
+
+### Consequence
+- The minute branch can keep moving forward.
+- The next correct tasks are about understanding this 24-hit broader surface:
+  - clustering
+  - temporal concentration
+  - event overlap
+- Not replay modification.
+## DEC-0324 Local 1-Minute Rules Are Now Shadow-Benefit-Aligned Governance
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132K/V132L` already showed that the local 1-minute rules stayed sparse on the broader session surface.
+- `V132M/V132N` then showed that those broader hits were not sprayed uniformly through time:
+  - they clustered in the main risk window
+  - and especially in downside-oriented regime structure
+
+### Decision
+- Freeze `V132O/V132P` as:
+  - `retain_local_1min_rules_as_shadow_benefit_aligned_window_governance`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- `buy_execution_row_count = 55`
+- `flagged_execution_count = 6`
+- `flagged_execution_share = 0.10909091`
+- `flagged_negative_forward_notional_share = 0.7910412`
+- `flagged_adverse_notional_share = 0.56597491`
+
+### Interpretation
+- The minute branch is no longer merely bounded supervision.
+- A very small flagged slice of the buy surface now captures a disproportionate share of later bad notional.
+- That makes it stronger governance, even though it still does not qualify to alter the lawful replay path.
+
+### Consequence
+- The commercial-aerospace governance stack should be refreshed to include the local minute branch explicitly.
+- Replay remains unchanged until a lawful intraday execution path exists.
+## DEC-0325 The Minute Branch Now Extends The Governance State Machine
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132O/V132P` already upgraded the local minute branch from bounded supervision to shadow-benefit-aligned governance.
+- The next missing piece was action semantics:
+  - what severe means
+  - what reversal means
+  - what mild means
+
+### Decision
+- Freeze `V132Q/V132R` as:
+  - `commercial_aerospace_governance_stack_v2_frozen_with_local_minute_branch`
+- Freeze `V132S/V132T` as:
+  - `retain_intraday_override_action_ladder_as_governance_state_machine_extension`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- Governance stack now explicitly includes:
+  - `intraday_supervision_registry`
+  - `minute_tiered_label_specification`
+  - `local_1min_shadow_benefit_governance`
+- Minute action ladder now maps:
+  - `severe_override_positive -> emergency_exit_shadow_override`
+  - `reversal_watch -> panic_derisk_watch`
+  - `mild_override_watch -> do_not_readd_watch`
+
+### Interpretation
+- The minute branch is no longer only a set of cases or even only a set of bounded rules.
+- It now extends the commercial-aerospace governance state machine with explicit action semantics.
+
+### Consequence
+- Future lawful intraday work can inherit a ready-made state-translation layer.
+- The lawful EOD primary remains frozen until a true point-in-time intraday execution path is built.
+## DEC-0326 The Minute Branch Now Has Ordered Escalation Support
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132S/V132T` already translated severe / reversal / mild minute tiers into explicit governance actions.
+- The missing question was whether broader hit sessions actually evolved through those tiers in sequence, or whether the action ladder was only a semantic overlay.
+
+### Decision
+- Freeze `V132U/V132V` as:
+  - `retain_local_1min_branch_as_state_transition_aligned_governance`
+- Freeze `V132W/V132X` as:
+  - `freeze_commercial_aerospace_governance_stack_v3_with_state_transition_aligned_minute_branch`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- `hit_row_count = 24`
+- `unique_transition_pattern_count = 6`
+- `top_transition_pattern = neutral>mild_override_watch>reversal_watch>severe_override_positive`
+- `severe_hits_with_prior_reversal_share = 0.8`
+
+### Interpretation
+- The minute branch now has stronger support than bounded false positives and shadow benefit alone.
+- Broader hit sessions mostly evolve through ordered escalation patterns, which means the action ladder is reflecting real intraday path structure.
+
+### Consequence
+- Commercial aerospace now has a governance stack v3:
+  - registry
+  - tier rules
+  - shadow-benefit alignment
+  - action ladder
+  - state-transition support
+- This is the correct stopping point for minute governance until a lawful intraday execution path is built.
+## DEC-0327 The Minute Branch Now Has A Canonical Visual Case Panel
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132W/V132X` already froze the commercial-aerospace governance stack v3 with state-transition-aligned minute support.
+- The remaining gap was practical readability:
+  - rules existed
+  - ladders existed
+  - but the canonical minute sessions were not yet packaged into one visual reference object
+
+### Decision
+- Freeze `V132Y/V132Z` as:
+  - `retain_intraday_seed_case_panel_as_governance_visual_reference`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- `seed_case_count = 6`
+- panel artifact:
+  - `reports/analysis/v132y_commercial_aerospace_intraday_seed_case_panel_v1.png`
+- case rows artifact:
+  - `data/training/commercial_aerospace_intraday_seed_case_panel_rows_v1.csv`
+
+### Interpretation
+- The minute branch is now not only formally specified, but also directly inspectable.
+- That improves governance and future handoff quality without pretending the branch is replay-facing.
+
+### Consequence
+- Commercial aerospace minute work now ends this stage with:
+  - formal registry
+  - formal rules
+  - shadow-benefit evidence
+  - action ladder
+  - state-transition support
+  - canonical visual case panel
+## DEC-0328 Freeze The Commercial-Aerospace Intraday Governance Package
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V132Y/V132Z` gave the minute branch a canonical visual case layer.
+- At that point the branch already had:
+  - registry
+  - rules
+  - boundedness
+  - shadow-benefit
+  - action ladder
+  - state-transition support
+  - visual panel
+
+### Decision
+- Freeze `V133A/V133B` as:
+  - `freeze_commercial_aerospace_intraday_governance_package_and_stop_local_micro_tuning`
+- Keep the lawful EOD primary unchanged.
+
+### Evidence
+- governance layer count: `11`
+- transferable method pieces:
+  - tiered seed registry
+  - bounded false-positive audit
+  - shadow-benefit audit
+  - action-ladder translation
+  - state-transition audit
+  - visual case panel
+- unresolved execution blockers:
+  - point-in-time intraday visibility
+  - intraday execution simulation surface
+  - replay binding
+
+### Interpretation
+- The minute branch is now complete enough to package.
+- Further local tuning on commercial aerospace would add more overfitting risk than governance value.
+
+### Consequence
+- The correct next step is no longer minute micro-tuning on this board.
+- The package should wait for:
+  - either a new board context
+  - or a true lawful intraday execution path
+## DEC-0329 Freeze The Commercial-Aerospace Intraday Execution Lane Behind An Explicit Protocol
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace minute-governance branch
+
+### Context
+- `V133A/V133B` already froze the completed intraday governance package and stopped local micro-tuning.
+- What still remained ambiguous was operational readiness:
+  - when exactly should intraday execution work reopen
+  - and what still blocks it
+
+### Decision
+- Freeze `V133C/V133D/V133E` as:
+  - `freeze_commercial_aerospace_intraday_execution_lane_until_protocol_unblocks`
+
+### Evidence
+- blocked requirements: `3`
+  - `point_in_time_intraday_visibility`
+  - `intraday_execution_simulation_surface`
+  - `replay_binding`
+- ready requirement: `1`
+  - completed commercial-aerospace minute governance package
+
+### Interpretation
+- The minute branch no longer lacks structure.
+- It lacks lawful intraday execution infrastructure.
+- That means further research pressure belongs on execution unblocking, not on more board-local minute tuning.
+
+### Consequence
+- Commercial aerospace minute work now has:
+  - package
+  - unblock protocol
+  - status card
+  - freeze gate
+- The branch should remain frozen until the explicit intraday protocol changes state.
+## DEC-0330 Put The Commercial-Aerospace Intraday Branch Behind A Change Gate
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Commercial aerospace intraday execution lane
+
+### Context
+- `V133C/V133D/V133E` already defined the execution blockers and froze the intraday lane.
+- The last missing piece was the same one we solved for transfer work:
+  - explicit reopen mechanics
+  - heartbeat-style status
+  - change-gated continuation
+
+### Decision
+- Freeze `V133F/V133G/V133H` as:
+  - `freeze_commercial_aerospace_intraday_branch_and_wait_for_change_gate`
+
+### Evidence
+- artifact count: `5`
+- missing artifact count: `3`
+- missing items remain:
+  - lawful point-in-time intraday visibility
+  - intraday execution simulator
+  - separate intraday replay lane
+- `rerun_required = false`
+
+### Interpretation
+- The branch now has a complete frozen operational wrapper.
+- There is no reason to continue local intraday experimentation until the required infrastructure changes.
+
+### Consequence
+- Commercial aerospace now has:
+  - frozen EOD primary
+  - frozen minute governance package
+  - frozen intraday unblock protocol
+  - frozen intraday change gate
+  - frozen intraday heartbeat status
+## DEC-0331 Freeze The Whole Active Program Behind Explicit Gates
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Program-level governance
+
+### Context
+- CPO lawful EOD primary is frozen.
+- Commercial-aerospace lawful EOD primary is frozen.
+- Commercial-aerospace minute governance package is frozen.
+- Commercial-aerospace intraday execution lane is frozen.
+- Transfer program is frozen.
+
+### Decision
+- Freeze `V133I/V133J` as:
+  - `freeze_program_lines_and_wait_for_explicit_gate_changes`
+
+### Evidence
+- `line_count = 5`
+- `frozen_line_count = 5`
+- master status card now explicitly tracks:
+  - `cpo_lawful_eod_primary`
+  - `commercial_aerospace_lawful_eod_primary`
+  - `commercial_aerospace_intraday_governance_package`
+  - `commercial_aerospace_intraday_execution_lane`
+  - `transfer_program`
+
+### Interpretation
+- The active research program no longer lacks direction.
+- It lacks new gated conditions that justify reopening one of its frozen lines.
+
+### Consequence
+- Future continuation should be triggered by:
+  - transfer change gates
+  - intraday execution unblock conditions
+  - or genuinely new board-local data/support
+- Ungated continuation is now explicitly blocked at the program level.
+## DEC-0332 Freeze The Program With A Reopen Playbook And Heartbeat Snapshot
+
+- Date: 2026-04-04
+- Status: Frozen
+- Scope: Program-level operational governance
+
+### Context
+- `V133I/V133J` already compressed the whole active program into a master status card and blocked ungated continuation.
+- The final missing layer was practical operability:
+  - how to reopen
+  - how to read the program heartbeat quickly
+
+### Decision
+- Freeze `V133K/V133L` as:
+  - `program_reopen_playbook_ready_for_gate_driven_restart`
+  - `program_master_heartbeat_ready_for_do_not_drift_posture`
+
+### Evidence
+- Reopen playbook covers:
+  - CPO lawful EOD primary
+  - commercial-aerospace lawful EOD primary
+  - commercial-aerospace intraday execution lane
+  - transfer program
+- Heartbeat snapshot confirms:
+  - `program_status = frozen`
+  - `frozen_line_count = 5`
+  - `transfer_rerun_required = false`
+  - `intraday_rerun_required = false`
+
+### Interpretation
+- The program now has both strategic and operational freeze discipline.
+- There is no remaining ambiguity about whether to keep refining a frozen line.
+
+### Consequence
+- The correct future continuation posture is now fully explicit:
+  - watch gates
+  - wait for real infrastructure or support change
+  - do not resume ungated local research
+
+## DEC-0333 Approve Commercial-Aerospace Intraday Build Direction With Guardrails
+
+Date: 2026-04-04
+
+### Context
+- The commercial-aerospace minute branch is fully packaged as governance, but intraday execution remains blocked.
+- The user asked to first establish what is missing and then have three subagents review that build direction.
+
+### Decision
+- Freeze [v133m_commercial_aerospace_intraday_execution_build_protocol_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133m_commercial_aerospace_intraday_execution_build_protocol_v1.json) as the concrete three-workstream build protocol:
+  - `point_in_time_intraday_visibility`
+  - `intraday_execution_simulation_surface`
+  - `separate_intraday_replay_lane`
+- Freeze [v133n_commercial_aerospace_intraday_execution_build_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133n_commercial_aerospace_intraday_execution_build_triage_v1.json) as the three-subagent consensus:
+  - build direction approved
+  - only with hard guardrails
+  - start with `phase_1_visibility` only
+
+### Evidence
+- Subagent sequencing review: `point_in_time_intraday_visibility -> intraday_execution_simulation_surface -> separate_intraday_replay_lane` is the correct order.
+- Subagent legality review: the protocol needed a hard `first_visible_ts + close-bar activation` requirement for minute-visible states.
+- Subagent governance review: the intraday shadow lane must remain physically read-only relative to the frozen EOD primary.
+
+### Interpretation
+- The remaining intraday work is now executable, but only as infrastructure buildout.
+- The protocol is not permission to reopen board-local replay tuning or contaminate the frozen EOD primary.
+
+### Consequence
+- The next lawful move is now explicit:
+  - build `phase_1_visibility`
+  - enforce `first_visible_ts`
+  - enforce one-way read-only separation
+  - do not jump ahead to simulator or replay binding before the visibility feed passes audit
+
+## DEC-0334 Start Only Phase-1 Visibility For Commercial-Aerospace Intraday
+
+Date: 2026-04-04
+
+### Context
+- The intraday build direction has been approved with guardrails in `V133M/V133N`.
+- The next question was not whether to reopen replay, but what the lawful phase-1 visibility surface must look like.
+
+### Decision
+- Freeze [v133o_commercial_aerospace_point_in_time_visibility_spec_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133o_commercial_aerospace_point_in_time_visibility_spec_v1.json) as the authoritative minute-level point-in-time visibility specification.
+- Freeze [v133p_commercial_aerospace_op_visibility_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133p_commercial_aerospace_op_visibility_direction_triage_v1.json) as the start/stop decision:
+  - start `phase_1_visibility`
+  - keep simulator blocked
+  - keep replay binding blocked
+
+### Evidence
+- The visibility spec now hard-codes:
+  - `first_visible_ts`
+  - `source_cutoff_ts`
+  - close-bar activation for same-minute OHLCV and aggregates
+  - a shadow-only boundary relative to the frozen EOD primary
+- The triage explicitly blocks later phases until the visibility feed can reconstruct canonical seed sessions without leakage.
+
+### Interpretation
+- The program has moved from an abstract blocker list to a concrete minute-state specification.
+- This is still infrastructure buildout, not replay reopening.
+
+### Consequence
+- The only lawful next move is to implement the point-in-time visibility feed against canonical seed sessions first.
+- Do not open simulator work or replay binding until the visibility feed passes a timestamp-lineage audit.
+
+## DEC-0335 Retain Canonical Seed Sessions As The First Lawful Visibility Surface
+
+Date: 2026-04-04
+
+### Context
+- `V133O/V133P` approved implementation of `phase_1_visibility` only.
+- The first build target was the canonical commercial-aerospace seed sessions, not the broader minute session surface.
+
+### Decision
+- Freeze [v133q_commercial_aerospace_point_in_time_seed_feed_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133q_commercial_aerospace_point_in_time_seed_feed_v1.json) as the authoritative canonical point-in-time seed feed.
+- Freeze [v133r_commercial_aerospace_qr_visibility_seed_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133r_commercial_aerospace_qr_visibility_seed_triage_v1.json) as the direction triage:
+  - retain canonical seeds as `phase_1_visibility`
+  - keep broader session expansion blocked
+  - keep simulator buildout blocked
+
+### Evidence
+- `seed_session_count = 6`
+- `feed_row_count = 360`
+- `lineage_null_count = 0`
+- Lagged-feature nulls are warm-up nulls only, not PIT violations.
+
+### Interpretation
+- The branch now has a real minute-level point-in-time seed surface, not just a specification.
+- That is enough to continue phase 1, but not enough to justify simulator or replay work.
+
+### Consequence
+- The next lawful continuation remains inside phase 1:
+  - visibility audit on canonical seeds
+  - then broader minute surface only after the seed feed is accepted
+
+## DEC-0336 Complete Phase-1 Visibility And Keep Simulation Blocked
+
+Date: 2026-04-04
+
+### Context
+- `V133Q/V133R` established the canonical seed point-in-time feed as the lawful starting surface.
+- The branch then widened phase 1 in two bounded steps:
+  - broader hit sessions
+  - all first-hour sessions for the six seed symbols
+
+### Decision
+- Freeze [v133u_commercial_aerospace_point_in_time_broader_hit_feed_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133u_commercial_aerospace_point_in_time_broader_hit_feed_v1.json) and [v133v_commercial_aerospace_uv_broader_visibility_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133v_commercial_aerospace_uv_broader_visibility_direction_triage_v1.json) as the lawful broader-hit visibility extension.
+- Freeze [v133w_commercial_aerospace_point_in_time_broader_visibility_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133w_commercial_aerospace_point_in_time_broader_visibility_audit_v1.json) and [v133x_commercial_aerospace_wx_broader_visibility_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133x_commercial_aerospace_wx_broader_visibility_triage_v1.json) as the audit that accepted the broader 24-session visibility surface.
+- Freeze [v133y_commercial_aerospace_point_in_time_all_session_feed_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133y_commercial_aerospace_point_in_time_all_session_feed_v1.json) and [v133z_commercial_aerospace_yz_all_session_visibility_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v133z_commercial_aerospace_yz_all_session_visibility_triage_v1.json) as the terminal phase-1 visibility surface.
+
+### Evidence
+- Broader-hit surface:
+  - `broader_hit_session_count = 24`
+  - `feed_row_count = 1440`
+  - lineage nulls remain `0`
+- All-session surface:
+  - `seed_symbol_count = 6`
+  - `all_session_count = 612`
+  - lineage nulls remain `0`
+- Same-bar, cutoff, and monotonicity audits remained clean on the broader surface.
+
+### Interpretation
+- Phase 1 is now complete as a visibility program.
+- The branch no longer lacks a lawful point-in-time state surface; it lacks only the next blocked workstream.
+
+### Consequence
+- The next legitimate blocker is now `phase_2_simulation_surface`.
+- No further local visibility expansion is justified; the program should either stop here or explicitly open phase 2 under the existing guardrails.
+
+## DEC-0337 Open Phase-2 Simulator Spec But Keep Replay Binding Blocked
+
+Date: 2026-04-04
+
+### Context
+- `V133M/V133N` already approved the intraday execution build direction with guardrails.
+- `V133Z` closed phase 1 by completing the lawful point-in-time all-session visibility surface.
+- The branch now needs a real phase-2 boundary so simulator work can start without implicitly opening an intraday replay lane.
+
+### Decision
+- Freeze [v134a_commercial_aerospace_intraday_execution_simulator_spec_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134a_commercial_aerospace_intraday_execution_simulator_spec_v1.json) as the authoritative phase-2 simulator specification.
+- Freeze [v134b_commercial_aerospace_ab_simulator_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134b_commercial_aerospace_ab_simulator_direction_triage_v1.json) as the implementation triage that opens simulator buildout but keeps replay binding blocked.
+
+### Evidence
+- Trigger clock is fixed at minute-bar close and earliest fill is fixed at the next visible bar open.
+- Tier actions are explicit:
+  - `severe_override_positive -> sell_100_percent_of_remaining_position`
+  - `reversal_watch -> sell_50_percent_of_remaining_position`
+  - `mild_override_watch -> no immediate trade, do_not_readd_watch`
+- Cost model remains aligned with the frozen lawful EOD baseline:
+  - `commission_rate = 0.0003`
+  - `min_commission = 5.0`
+  - `sell_stamp_tax_rate = 0.001`
+  - `slippage_bps = 5.0`
+
+### Interpretation
+- Phase 2 is now explicit enough to implement.
+- The branch still does not have permission to open replay binding or mutate the frozen EOD primary.
+
+### Consequence
+- The next legitimate work is canonical seed-session simulator implementation only.
+- Broader session simulation and phase-3 replay lane remain blocked until a deterministic seed audit passes.
+
+## DEC-0338 Retain Canonical Seed Simulator And Keep Replay Binding Blocked
+
+Date: 2026-04-04
+
+### Context
+- `V134A/V134B` opened phase 2 only for canonical seed-session simulator work.
+- The branch still lacks a lawful replay lane, so the first simulator run must stay narrow and auditable.
+
+### Decision
+- Freeze [v134c_commercial_aerospace_intraday_seed_simulator_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134c_commercial_aerospace_intraday_seed_simulator_v1.json) as the first canonical-seed intraday shadow simulator.
+- Freeze [v134d_commercial_aerospace_cd_seed_simulator_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134d_commercial_aerospace_cd_seed_simulator_triage_v1.json) as the triage that retains the simulator but keeps replay binding blocked.
+
+### Evidence
+- `seed_session_count = 6`
+- simulated fills all occur on `trigger_minute + 1`
+- severe and reversal actions both produced explicit shadow sell rows
+- `pending_out_of_window_count = 0`
+
+### Interpretation
+- The simulator now exists as a lawful seed-surface object.
+- It still is not a replay lane, but the current canonical seed set is executable under the phase-2 timing rules.
+
+### Consequence
+- The next legitimate step, if the branch continues, is a deterministic seed audit refinement or horizon-extension protocol.
+- Phase-3 replay binding remains blocked.
+
+## DEC-0339 Correct Seed-Simulator Chronology And Retain Attribution Inside Phase 2
+
+Date: 2026-04-04
+
+### Context
+- The first `V134C` simulator object existed, but a chronology defect was discovered during review: trigger actions could be evaluated in tier-name order rather than true minute order.
+- The branch also still lacked a clear answer about which seed tiers and symbols were actually carrying the shadow-risk benefit.
+
+### Decision
+- Correct the seed simulator so all actions execute strictly in trigger-minute order.
+- Freeze [v134e_commercial_aerospace_intraday_seed_simulator_attribution_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134e_commercial_aerospace_intraday_seed_simulator_attribution_v1.json) as the canonical seed-attribution report.
+- Freeze [v134f_commercial_aerospace_ef_seed_simulator_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134f_commercial_aerospace_ef_seed_simulator_direction_triage_v1.json) as the direction triage that keeps the branch inside phase 2.
+
+### Evidence
+- Corrected simulator results:
+  - `simulated_order_count = 8`
+  - `severe_execution_count = 3`
+  - `reversal_execution_count = 5`
+  - `pending_out_of_window_count = 0`
+- The chronology correction removed the invalid late reversal sell on `2026-01-13 601698`; that session now exits directly via the early severe trigger.
+- Seed attribution now shows:
+  - `same_day_loss_avoided_total = 3732.6954`
+  - `top_symbol_by_same_day_loss_avoided = 300342`
+  - `top_tier_by_same_day_loss_avoided = reversal_watch`
+
+### Interpretation
+- Phase 2 is no longer only “a simulator exists”; it is now “the simulator is chronology-correct and its seed benefit concentration is understood.”
+- That is enough to continue inside phase 2, but not enough to widen to broader sessions or open replay binding.
+
+### Consequence
+- The next legitimate continuation remains inside phase 2:
+  - deterministic seed refinement
+  - seed-level benefit understanding
+- Broader session expansion and phase-3 replay lane remain blocked.
+
+## DEC-0340 Supervise Phase-2 Seed Outcomes Before Any Widening
+
+Date: 2026-04-04
+
+### Context
+- The commercial-aerospace intraday branch now has a lawful phase-2 seed simulator, chronology-correct execution, seed attribution, and deterministic audit.
+- That still leaves an unresolved program question: are the current training outcomes actually reasonable, and if phase 2 widens, which parts are worth widening rather than merely carrying seed-specific noise forward?
+
+### Decision
+- Freeze [v134i_commercial_aerospace_phase2_seed_supervision_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134i_commercial_aerospace_phase2_seed_supervision_review_v1.json) as the supervision review of the current phase-2 seed outcomes.
+- Freeze [v134j_commercial_aerospace_phase2_broader_hit_widening_protocol_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134j_commercial_aerospace_phase2_broader_hit_widening_protocol_v1.json) as the only widening protocol currently allowed.
+- Freeze [v134k_commercial_aerospace_ijk_phase2_widening_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134k_commercial_aerospace_ijk_phase2_widening_triage_v1.json) as the direction triage that approves only broader-hit widening with guardrails.
+
+### Evidence
+- The seed simulator remains deterministic:
+  - `double_run_exact_match = True`
+  - `monotonic_fill_violation_count = 0`
+- Seed attribution remains economically directional:
+  - `same_day_loss_avoided_total = 3732.6954`
+  - `top_tier_by_same_day_loss_avoided = reversal_watch`
+- Broader local rule surface remains sparse:
+  - `expanded_hit_count = 24`
+  - `expanded_session_count = 612`
+  - `max_symbol_hit_rate = 0.05882353`
+- Minute state transitions remain ordered:
+  - `top_transition_pattern = neutral>mild_override_watch>reversal_watch>severe_override_positive`
+  - `severe_hits_with_prior_reversal_share = 0.8`
+
+### Interpretation
+- The current phase-2 training outputs are reasonable, but not uniformly promotable.
+- `reversal_watch` is the strongest execution-tier widening candidate.
+- `severe_override_positive` remains necessary as a terminal emergency layer.
+- `mild_override_watch` should remain governance-only; its positive forward expectancy makes it the wrong place to promote sell execution.
+
+### Consequence
+- Phase 2 may continue, but only by widening from the canonical six seeds to the already-flagged broader-hit sessions.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0341 Widen Phase 2 Only To The Already-Flagged Broader-Hit Sessions
+
+Date: 2026-04-04
+
+### Context
+- The current phase-2 seed lane is now supervision-reviewed, deterministic, and explicitly judged reasonable with targeted optimization room.
+- The widening protocol allows one and only one immediate next step: widen from the six canonical seeds to the already-flagged broader-hit sessions while keeping all-session expansion and replay binding blocked.
+
+### Decision
+- Freeze [v134l_commercial_aerospace_intraday_broader_hit_simulator_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134l_commercial_aerospace_intraday_broader_hit_simulator_v1.json) as the first broader-hit phase-2 shadow simulator.
+- Freeze [v134m_commercial_aerospace_lm_broader_hit_simulator_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134m_commercial_aerospace_lm_broader_hit_simulator_triage_v1.json) as the direction triage that keeps this wider simulator inside phase 2.
+
+### Evidence
+- The widening surface remains bounded:
+  - `broader_hit_session_count = 24`
+  - `all_session_count = 612` remains unentered
+- The simulator preserves the tier boundary:
+  - executable tiers = `reversal_watch`, `severe_override_positive`
+  - `mild_override_watch` remains blocked from execution
+- The simulator preserves timing discipline:
+  - `pending_out_of_window_count = 0`
+
+### Interpretation
+- This is a real widening step, but still a supervised shadow step.
+- The branch is no longer stuck inside the six canonical seeds, yet it still has not crossed into replay-binding territory.
+
+### Consequence
+- Phase 2 now contains both a canonical seed simulator and a broader-hit simulator.
+- All-session expansion remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0342 Supervise The First Broader-Hit Widening And Tighten The Mild Boundary Next
+
+Date: 2026-04-04
+
+### Context
+- The first broader-hit phase-2 simulator exists and remains bounded to the 24 already-flagged local minute sessions.
+- The next question is no longer whether the branch can widen once. It is whether that first widening stayed directionally sensible, and where the first widening introduced drag that should be tightened before any further growth.
+
+### Decision
+- Freeze [v134n_commercial_aerospace_broader_hit_simulator_attribution_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134n_commercial_aerospace_broader_hit_simulator_attribution_v1.json) as the broader-hit attribution report.
+- Freeze [v134o_commercial_aerospace_broader_hit_supervision_failure_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134o_commercial_aerospace_broader_hit_supervision_failure_review_v1.json) as the failure review of the first broader-hit widening.
+- Freeze [v134p_commercial_aerospace_nop_broader_hit_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134p_commercial_aerospace_nop_broader_hit_direction_triage_v1.json) as the new direction triage.
+
+### Evidence
+- The first wider lane remains net positive:
+  - `same_day_loss_avoided_total = 20525.3818`
+- Attribution now shows:
+  - `worst_tier = mild_override_watch`
+- The failure review shows:
+  - `mild_tier_same_day_loss_avoided_total < 0`
+  - the next boundary change should be:
+    - `block_execution_for_predicted_mild_sessions_inside_broader_hit_lane`
+
+### Interpretation
+- The first wider lane is worth keeping.
+- The branch should not expand again before it tightens the mild-predicted slice.
+- The main optimization space is not more coverage. It is stricter execution eligibility inside the already-approved broader-hit surface.
+
+### Consequence
+- Broader-hit phase 2 is retained.
+- The next legitimate refinement is:
+  - keep reversal and severe executable
+  - stop executing predicted mild sessions in the wider lane
+- All-session expansion remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0343 Promote The Predicted-Mild Block Inside The Broader-Hit Phase-2 Lane
+
+Date: 2026-04-04
+
+### Context
+- The broader-hit phase-2 lane is retained, but supervision found a concentrated failure source:
+  - predicted mild sessions carry negative same-day loss avoidance when they are allowed to execute later reversal actions.
+- The branch therefore needs a local boundary refinement rather than another expansion.
+
+### Decision
+- Freeze [v134q_commercial_aerospace_broader_hit_mild_block_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134q_commercial_aerospace_broader_hit_mild_block_audit_v1.json) as the audit of blocking predicted mild sessions from execution inside the broader-hit lane.
+- Freeze [v134r_commercial_aerospace_qr_mild_block_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134r_commercial_aerospace_qr_mild_block_triage_v1.json) as the direction triage that promotes this local boundary change.
+
+### Evidence
+- The broader-hit supervision review identified:
+  - `mild_tier_same_day_loss_avoided_total = -5409.5064`
+- Blocking predicted mild execution improves the wider phase-2 lane:
+  - `same_day_loss_avoided_delta >= 0`
+  - `blocked_mild_session_count = 6`
+
+### Interpretation
+- The right next refinement is stricter execution eligibility, not more coverage.
+- Predicted mild sessions should remain governance-only even inside the broader-hit phase-2 lane.
+
+### Consequence
+- The broader-hit phase-2 lane remains retained, but now with a stricter mild boundary.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0344 Freeze The Updated Phase-2 Shadow Stack Around The Mild-Blocked Wider Lane
+
+Date: 2026-04-04
+
+### Context
+- The broader-hit mild-block refinement improved the wider phase-2 lane:
+  - `same_day_loss_avoided_delta = 5409.5064`
+- That means the branch now has an updated wider reference and should stop drifting between superseded wider variants.
+
+### Decision
+- Freeze [v134s_commercial_aerospace_phase2_current_shadow_stack_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134s_commercial_aerospace_phase2_current_shadow_stack_v1.json) as the current phase-2 shadow stack.
+- Freeze [v134t_commercial_aerospace_st_phase2_current_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134t_commercial_aerospace_st_phase2_current_direction_triage_v1.json) as the current direction triage.
+
+### Evidence
+- Current wider reference:
+  - `broader_hit_mild_blocked`
+  - `same_day_loss_avoided_total = 25934.8882`
+  - `simulated_order_count = 30`
+- Superseded wider reference:
+  - `broader_hit_base`
+  - `same_day_loss_avoided_total = 20525.3818`
+  - `simulated_order_count = 35`
+
+### Interpretation
+- The branch now has a stable narrow reference and a stable wider reference.
+- The next legitimate work is deeper supervision of the refined wider reference, not another widening jump.
+
+### Consequence
+- Current phase-2 narrow reference:
+  - `canonical_seed_simulator`
+- Current phase-2 wider reference:
+  - `broader_hit_mild_blocked`
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0345 Supervise The Current Wider Reference Internally Before Any New Surface Change
+
+Date: 2026-04-04
+
+### Context
+- The phase-2 shadow stack is now frozen around:
+  - narrow reference = `canonical_seed_simulator`
+  - wider reference = `broader_hit_mild_blocked`
+- The next legitimate question is no longer which wider variant to keep. It is whether the current wider reference remains directionally healthy once its symbol, tier, and month-window structure are inspected.
+
+### Decision
+- Freeze [v134u_commercial_aerospace_phase2_wider_reference_attribution_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134u_commercial_aerospace_phase2_wider_reference_attribution_v1.json) as the attribution report for the current wider reference.
+- Freeze [v134v_commercial_aerospace_phase2_wider_failure_cluster_review_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134v_commercial_aerospace_phase2_wider_failure_cluster_review_v1.json) as the failure-cluster review.
+- Freeze [v134w_commercial_aerospace_uvw_phase2_wider_supervision_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134w_commercial_aerospace_uvw_phase2_wider_supervision_triage_v1.json) as the current direction triage.
+
+### Evidence
+- The current wider reference remains net-positive:
+  - `same_day_loss_avoided_total > 0`
+- It has identifiable concentration rather than diffuse drift:
+  - explicit `best_symbol`
+  - explicit `best_month_bucket`
+  - non-empty `top_failure_cluster`
+
+### Interpretation
+- The current wider lane is worth retaining.
+- The next refinement should stay local:
+  - inspect the top failure cluster
+  - do not open a new surface
+- This keeps the branch inside phase 2 without turning the wider lane into an uncontrolled sandbox.
+
+### Consequence
+- Current wider reference retained.
+- Next legitimate continuation:
+  - local failure-cluster supervision
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0346 Promote A Local Late-Severe Block For The Only Remaining Reversal Failure Cluster
+
+Date: 2026-04-04
+
+### Context
+- The current wider reference has only one remaining negative cluster:
+  - `reversal_watch|2026-01`
+  - single case `20260115 300045`
+- The session path shows an early reversal trigger but only a very late severe trigger near the end of the day.
+
+### Decision
+- Freeze [v134x_commercial_aerospace_reversal_late_severe_block_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134x_commercial_aerospace_reversal_late_severe_block_audit_v1.json) as the local failure-cluster refinement audit.
+- Freeze [v134y_commercial_aerospace_xy_local_cluster_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134y_commercial_aerospace_xy_local_cluster_direction_triage_v1.json) as the direction triage that promotes the refinement inside the current wider reference.
+
+### Evidence
+- `late_severe_cutoff_minute = 180`
+- `impacted_session_count = 1`
+- `same_day_loss_avoided_delta > 0`
+
+### Interpretation
+- The remaining drag is not broad failure of the wider lane.
+- It is a local over-execution pattern:
+  - reversal-predicted session
+  - terminal severe reached too late
+- The correct response is a local late-severe block, not a new surface or a new global family.
+
+### Consequence
+- Current wider reference remains retained, now with a local late-severe refinement path approved.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0347 Freeze The Refined Phase-2 Shadow Stack After Local Cluster Promotion
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134aa_commercial_aerospace_phase2_current_shadow_stack_v2.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134aa_commercial_aerospace_phase2_current_shadow_stack_v2.json) as the updated phase-2 shadow stack.
+- Freeze [v134ab_commercial_aerospace_ab_phase2_current_direction_triage_v2.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ab_commercial_aerospace_ab_phase2_current_direction_triage_v2.json) as the current direction triage.
+
+### Evidence
+- `current_phase2_wider_reference = broader_hit_mild_blocked_plus_reversal_late_severe_block`
+- `phase2_best_same_day_loss_avoided_total = 26915.5372`
+- `phase2_best_simulated_order_count = 29`
+
+### Interpretation
+- The wider lane is no longer only protected against predicted-mild drag.
+- It now also absorbs the only remaining negative local cluster through a narrow late-severe block.
+- This is still a local supervision refinement, not a new surface authorization.
+
+### Consequence
+- The refined wider reference becomes the only current phase-2 wider reference.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0348 Freeze The Phase-2 Sell-Ladder Refinement As Same-Day Shadow Only
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ac_commercial_aerospace_reversal_sell_fraction_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ac_commercial_aerospace_reversal_sell_fraction_audit_v1.json) as the local sell-fraction supervision audit.
+- Freeze [v134ad_commercial_aerospace_ac_reversal_fraction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ad_commercial_aerospace_ac_reversal_fraction_triage_v1.json) as the promotion triage.
+- Freeze [v134ae_commercial_aerospace_phase2_current_shadow_stack_v3.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ae_commercial_aerospace_phase2_current_shadow_stack_v3.json) as the current phase-2 stack.
+- Freeze [v134af_commercial_aerospace_ae_phase2_current_direction_triage_v3.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134af_commercial_aerospace_ae_phase2_current_direction_triage_v3.json) as the current direction triage.
+
+### Evidence
+- `best_reversal_fraction = 1.0`
+- `current_same_day_loss_avoided_total = 26915.5372`
+- `best_same_day_loss_avoided_total = 45929.005`
+- `same_day_loss_avoided_delta = 19013.4678`
+
+### Interpretation
+- Inside the current broader-hit phase-2 boundary, full reversal exit dominates smaller partial reversal exits under the same-day shadow objective.
+- This is a refinement of the internal multi-stage sell ladder, not evidence that replay binding is now justified.
+- The result is strong enough to promote locally, but it must stay explicitly labeled as same-day shadow optimization.
+
+### Consequence
+- `broader_hit_current_plus_reversal_100pct` becomes the current phase-2 wider reference.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0349 Retain Full-Reversal Phase-2 Shadow Reference With Explicit Horizon Caveat
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ag_commercial_aerospace_reversal_full_horizon_sanity_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ag_commercial_aerospace_reversal_full_horizon_sanity_audit_v1.json) as the horizon sanity audit for the promoted full-reversal lane.
+- Freeze [v134ah_commercial_aerospace_ag_horizon_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ah_commercial_aerospace_ag_horizon_direction_triage_v1.json) as the horizon direction triage.
+
+### Evidence
+- `reversal_session_count = 13`
+- `net_horizon_pnl_if_held_1d = -28338.0`
+- `net_horizon_pnl_if_held_3d = -15958.0`
+- `net_horizon_pnl_if_held_5d = -47506.0`
+- `positive_rebound_cost_total_5d = 13033.0`
+
+### Interpretation
+- Full reversal exit still works as the best same-day defensive lane and remains favorable on aggregate across short forward horizons.
+- But the branch does give up real rebound opportunity in a minority of sessions.
+- The correct status is retention with an explicit horizon caveat, not unrestricted promotion.
+
+### Consequence
+- `broader_hit_current_plus_reversal_100pct` remains the current wider phase-2 reference.
+- The branch must remember this is a horizon-limited shadow result.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0350 Retain Volume-Price Confirmation As Supervision Only Until Separation Strengthens
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ai_commercial_aerospace_reversal_volume_price_confirmation_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ai_commercial_aerospace_reversal_volume_price_confirmation_audit_v1.json) as the first reversal-focused volume-price confirmation audit.
+- Freeze [v134aj_commercial_aerospace_ai_volume_price_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134aj_commercial_aerospace_ai_volume_price_direction_triage_v1.json) as the direction triage.
+
+### Evidence
+- `session_count = 12`
+- `rebound_cost_case_count = 4`
+- `followthrough_benefit_case_count = 8`
+- `strongest_feature = post_reversal_up_amount_share`
+- `strongest_feature_gap_rebound_minus_followthrough = 0.097386`
+
+### Interpretation
+- Rebound-cost cases do show a measurable volume-price difference after reversal.
+- The clearest current clue is that post-reversal up-amount share is higher in later rebound cases than in follow-through weakness cases.
+- But this is still only a separation audit, not enough evidence to rewrite the current execution ladder.
+
+### Consequence
+- Volume-price confirmation is retained inside supervision.
+- No direct execution rule change is authorized yet.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0351 Retain The First Local Rebound-Cost Veto As Supervision Only
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ak_commercial_aerospace_rebound_cost_local_veto_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ak_commercial_aerospace_rebound_cost_local_veto_audit_v1.json) as the local rebound-cost veto scan.
+- Freeze [v134al_commercial_aerospace_ak_local_veto_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134al_commercial_aerospace_ak_local_veto_direction_triage_v1.json) as the direction triage that approves a narrow local experiment.
+- Freeze [v134am_commercial_aerospace_local_veto_experiment_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134am_commercial_aerospace_local_veto_experiment_audit_v1.json) as the first local experiment audit.
+- Freeze [v134an_commercial_aerospace_am_local_veto_experiment_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134an_commercial_aerospace_am_local_veto_experiment_triage_v1.json) as the triage judgment that keeps the experiment in supervision only.
+
+### Evidence
+- Best local veto scan:
+  - `post_reversal_up_amount_share >= 0.45`
+  - `open_burst_return_5m >= -0.01`
+  - `matched_count = 2`
+  - `rebound_cost_hit_count = 2`
+  - `followthrough_hit_count = 0`
+- Local experiment result:
+  - `same_day_loss_avoided_delta_total = -2651.0416`
+  - `rebound_cost_saved_5d_total = 3147.0`
+
+### Interpretation
+- The veto clue is real and very clean as a selector.
+- But the first execution experiment gives back too much same-day protection relative to the current phase-2 objective.
+- So the correct status is not promotion into the current wider reference; it is retention as a supervision-side local clue.
+
+### Consequence
+- Current wider reference remains unchanged.
+- The local rebound-cost veto remains available for future targeted supervision.
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0352 Promote A Very Narrow Local Reversal Deferral Inside Phase 2 Only
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ao_commercial_aerospace_local_reversal_deferral_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ao_commercial_aerospace_local_reversal_deferral_audit_v1.json) as the audit for a narrower local rebound-cost execution expression.
+- Freeze [v134ap_commercial_aerospace_ao_local_deferral_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ap_commercial_aerospace_ao_local_deferral_direction_triage_v1.json) as the direction triage that approves the local deferral inside phase 2.
+- Freeze [v134aq_commercial_aerospace_phase2_current_shadow_stack_v4.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134aq_commercial_aerospace_phase2_current_shadow_stack_v4.json) as the new phase-2 current shadow stack.
+- Freeze [v134ar_commercial_aerospace_aq_phase2_current_direction_triage_v4.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ar_commercial_aerospace_aq_phase2_current_direction_triage_v4.json) as the updated phase-2 direction judgment.
+
+### Evidence
+- Best local deferral expression:
+  - `neutral_streak_len = 2`
+  - `gap_minute = 10`
+  - `impacted_case_count = 1`
+  - `same_day_loss_avoided_delta_total = 153.7228`
+  - `rebound_cost_saved_5d_total = 154.0`
+- Impacted case:
+  - `2025-12-19 688523`
+  - `first_reversal_minute = 43`
+  - `deferred_trigger_minute = 54`
+  - `current_fill_price = 42.68`
+  - `adjusted_fill_price = 42.75`
+- Phase-2 wider reference:
+  - `45929.005 -> 46082.7278`
+
+### Interpretation
+- The earlier partial-reversal veto experiment was too blunt.
+- A much narrower point-in-time path expression does work: only defer the first full reversal when the initial reversal cleanly resolves back to neutral before any re-entry and the next reversal comes back late enough to matter.
+- This is still not a new surface and not a replay result. It is a tiny execution refinement inside the same broader-hit shadow lane.
+
+### Consequence
+- The current phase-2 wider reference becomes:
+  - `broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral`
+- All-session widening remains blocked.
+- Phase-3 replay lane remains blocked.
+
+## DEC-0353 Freeze The Current Local Deferral And Stop Mining The Same Family
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134as_commercial_aerospace_local_deferral_cluster_singularity_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134as_commercial_aerospace_local_deferral_cluster_singularity_audit_v1.json) as the singularity audit for the promoted local deferral.
+- Freeze [v134at_commercial_aerospace_as_local_deferral_cluster_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134at_commercial_aerospace_as_local_deferral_cluster_triage_v1.json) as the direction triage that stops same-family mining.
+
+### Evidence
+- `reversal_session_count = 12`
+- `rebound_cost_case_count = 4`
+- `matched_local_deferral_count = 1`
+- `matched_local_deferral_share_of_reversal = 0.08333333`
+- `matched_local_deferral_share_of_rebound_cost = 0.25`
+- The only matched case remains:
+  - `2025-12-19 688523`
+
+### Interpretation
+- The promoted local reversal-deferral expression is real, but it is not the beginning of a broad new failure family.
+- It is a singular residue inside the current reversal branch.
+- Once the branch reaches that state, the right move is to freeze the expression and stop spending more local supervision budget on the same family.
+
+### Consequence
+- Keep:
+  - `broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral`
+- Stop:
+  - further same-family `false-first-reversal` mining
+- Continue:
+  - `all-session` widening blocked
+  - `phase3 replay lane` blocked
+
+## DEC-0354 Shift The Next Orthogonal Supervision Family To Post-Exit Reentry Gap
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134au_commercial_aerospace_post_exit_rebound_pattern_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134au_commercial_aerospace_post_exit_rebound_pattern_audit_v1.json) as the remaining rebound-cost pattern audit.
+- Freeze [v134av_commercial_aerospace_au_next_orthogonal_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134av_commercial_aerospace_au_next_orthogonal_direction_triage_v1.json) as the orthogonal direction triage that shifts next supervision from sell timing to reentry gap.
+- Freeze [v134aw_commercial_aerospace_post_exit_reentry_seed_registry_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134aw_commercial_aerospace_post_exit_reentry_seed_registry_v1.json) as the first reentry seed registry.
+- Freeze [v134ax_commercial_aerospace_aw_reentry_seed_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ax_commercial_aerospace_aw_reentry_seed_direction_triage_v1.json) as the direction triage that approves seed-level reentry supervision.
+- Freeze [v134ay_commercial_aerospace_post_exit_reentry_supervision_spec_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ay_commercial_aerospace_post_exit_reentry_supervision_spec_v1.json) as the first reentry supervision spec.
+- Freeze [v134az_commercial_aerospace_ay_reentry_supervision_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134az_commercial_aerospace_ay_reentry_supervision_direction_triage_v1.json) as the triage that keeps reentry work at seed-level supervision only.
+
+### Evidence
+- After excluding the promoted local deferral residue, remaining rebound-cost cases = `3`
+- Dominant horizon pattern:
+  - `neg_1d|pos_3d|pos_5d`
+  - `case_count = 2`
+  - `delayed_rebound_share = 0.66666667`
+- Reentry seed registry:
+  - `20260113 000738 -> deep_washout_reentry_gap`
+  - `20260120 300342 -> delayed_rebound_reentry_gap`
+  - `20260120 688523 -> delayed_rebound_reentry_gap`
+- Reentry supervision spec:
+  - `deep_washout_reentry_watch -> wait_for_base_then_rebuild_watch`
+  - `delayed_reclaim_reentry_watch -> watch_for_reclaim_rebuild_not_same_day_chase`
+
+### Interpretation
+- The remaining misses are no longer best explained as same-day sell-side timing errors.
+- They are better described as “sell was acceptable, but rebuild/reentry came back later and the branch had no governed path to participate.”
+- So the next orthogonal family should shift from sell-side refinement to post-exit reentry supervision.
+
+### Consequence
+- Current phase-2 sell-side wider reference remains:
+  - `broader_hit_current_plus_reversal_100pct_plus_local_reversal_deferral`
+- Next work moves to:
+  - seed-level `post_exit_reentry_gap` supervision
+- Still blocked:
+  - reentry simulator
+  - replay-facing reentry lane
+
+## DEC-0354 Open Oscillatory Breakdown Churn As The Next Orthogonal Supervision Family
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134au_commercial_aerospace_next_orthogonal_family_scan_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134au_commercial_aerospace_next_orthogonal_family_scan_v1.json) as the next orthogonal family scan.
+- Freeze [v134av_commercial_aerospace_au_next_family_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134av_commercial_aerospace_au_next_family_triage_v1.json) as the direction triage that approves the next family for targeted supervision.
+
+### Evidence
+- Remaining non-deferral rebound-cost residues: `3`
+- Best scan thresholds:
+  - `transition_floor = 30`
+  - `reversal_entry_floor = 15`
+  - `severe_entry_floor = 4`
+- Coverage:
+  - `remaining_rebound_cost_hit_count = 3`
+  - `other_hit_count = 4`
+- Hit residues:
+  - `2026-01-13 000738`
+  - `2026-01-20 300342`
+  - `2026-01-20 688523`
+
+### Interpretation
+- After false-first-reversal reaches stopline, the next orthogonal supervision family is not another reclaim-delay pattern.
+- It is a higher-churn family:
+  - many state flips
+  - many reversal re-entries
+  - repeated severe participation
+- This family is orthogonal because it is about oscillatory breakdown and repeated churn after the first sell trigger, not about one false first reversal that temporarily repairs.
+
+### Consequence
+- Open:
+  - `oscillatory_breakdown_churn` for targeted supervision only
+- Keep:
+  - `all-session` widening blocked
+  - `phase3 replay lane` blocked
+
+## DEC-0354 Retain Only A Weak Orthogonal Candidate After The Same-Family Stopline
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134au_commercial_aerospace_orthogonal_failure_family_scan_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134au_commercial_aerospace_orthogonal_failure_family_scan_v1.json) as the quick scan of orthogonal failure families.
+- Freeze [v134av_commercial_aerospace_au_orthogonal_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134av_commercial_aerospace_au_orthogonal_direction_triage_v1.json) as the direction triage after that scan.
+
+### Evidence
+- Strongest orthogonal candidate:
+  - `early_severe_reclaim`
+  - `primary_gap = -2.933333` on `post_severe_neutral_minutes_60`
+  - `support_gap = 10.466667` on `post_severe_reversal_minutes_60`
+- Competing candidate:
+  - `reversal_reclaim_churn`
+  - `primary_gap = -0.089583`
+  - `support_gap = 0.625`
+
+### Interpretation
+- After the same-family false-first-reversal line reached singularity stopline, the next likely orthogonal family is not another clean promotion candidate.
+- The best available next family is only a weak supervision candidate:
+  - `early_severe_reclaim`
+- That is enough to name the next plausible direction, but not enough to justify a new deep local refinement line yet.
+
+### Consequence
+- Keep current phase-2 wider reference unchanged.
+- Do not reopen the false-first-reversal family.
+- Retain `early_severe_reclaim` only as a weak candidate for later supervision.
+- Keep replay lane blocked.
+
+## DEC-0354 Shift The Next Orthogonal Supervision Family To Post-Exit Reentry Gap
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134au_commercial_aerospace_post_exit_rebound_pattern_audit_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134au_commercial_aerospace_post_exit_rebound_pattern_audit_v1.json) as the orthogonal rebound-pattern audit after the local deferral stopline.
+- Freeze [v134av_commercial_aerospace_au_next_orthogonal_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134av_commercial_aerospace_au_next_orthogonal_direction_triage_v1.json) as the next-direction judgment.
+
+### Evidence
+- Remaining rebound-cost cases after removing the local deferral case:
+  - `remaining_rebound_case_count = 3`
+- Dominant horizon pattern:
+  - `neg_1d|pos_3d|pos_5d`
+  - `case_count = 2`
+  - symbols: `300342|688523`
+- Delayed-rebound share:
+  - `0.66666667`
+
+### Interpretation
+- The sell-side false-first-reversal family has already been exhausted.
+- The remaining misses are not mostly “sold too early the same day.”
+- They are more consistent with:
+  - the sell being valid on day 0 and day 1
+  - but the branch lacking a later rebuild or re-entry supervision family
+
+### Consequence
+- Freeze the current sell-side wider reference.
+- Shift the next orthogonal supervision target to:
+  - `post_exit_reentry_gap_family`
+- Keep:
+  - `all-session` widening blocked
+  - `phase3 replay lane` blocked
+
+## DEC-0355 Freeze The First Post-Exit Reentry Seed Registry
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134aw_commercial_aerospace_post_exit_reentry_seed_registry_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134aw_commercial_aerospace_post_exit_reentry_seed_registry_v1.json) as the first seed registry for the next orthogonal family.
+- Freeze [v134ax_commercial_aerospace_aw_reentry_seed_direction_triage_v1.json](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ax_commercial_aerospace_aw_reentry_seed_direction_triage_v1.json) as the direction triage for the next build step.
+
+### Evidence
+- `registry_count = 3`
+- `family_count = 2`
+- dominant reentry family:
+  - `delayed_rebound_reentry_gap`
+- registry cases:
+  - `20260113 000738 -> deep_washout_reentry_gap`
+  - `20260120 300342 -> delayed_rebound_reentry_gap`
+  - `20260120 688523 -> delayed_rebound_reentry_gap`
+
+### Interpretation
+- The next orthogonal line is now concrete enough to leave the “just a direction” stage.
+- But it is still only a seed registry.
+- The correct next move is seed-level rebuild/reentry supervision, not a simulator and not replay binding.
+
+### Consequence
+- Freeze the current sell-side phase-2 stack.
+- Open only:
+  - `seed_level_reentry_supervision`
+- Keep:
+  - replay lane blocked
+  - all-session widening blocked
+
+## DEC-0356 Post-Exit Reentry Timing Must Start As Windowed Supervision
+
+Date: 2026-04-04
+
+### Context
+- The branch had already frozen the first post-exit reentry seed registry and supervision labels.
+- The next question was whether those seeds support any same-day rebuild or only delayed rebuild observation.
+
+### Decision
+- Freeze `v134ba_commercial_aerospace_post_exit_reentry_timing_supervision_audit_v1`.
+- Freeze `v134bb_commercial_aerospace_ba_reentry_timing_direction_triage_v1`.
+- Keep reentry as `seed_level_timing_supervision` only.
+
+### Evidence
+- `same_day_chase_block_seed_count = 3`
+- `positive_1d_seed_count = 0`
+- `positive_3d_seed_count = 2`
+- `positive_5d_seed_count = 3`
+- `deep_washout_reentry_gap` only turns positive by `T+5`
+- `delayed_rebound_reentry_gap` turns positive by `T+3`
+
+### Interpretation
+- The branch now has evidence-backed timing windows for rebuild watch.
+- It still does not have enough support to authorize same-day reentry or a reentry simulator lane.
+
+### Consequence
+- Keep:
+  - same-day reentry blocked
+  - reentry simulator blocked
+- Open only:
+  - continued seed-level reentry timing supervision
+
+## DEC-0357 Reentry Must Be Expressed As A Ladder Before It Becomes A Lane
+
+Date: 2026-04-04
+
+### Context
+- The branch had already frozen seed-level reentry timing windows.
+- The next question was whether those timing windows should remain flat watch labels or become a state ladder.
+
+### Decision
+- Freeze `v134bc_commercial_aerospace_post_exit_reentry_ladder_audit_v1`.
+- Freeze `v134bd_commercial_aerospace_bc_reentry_ladder_direction_triage_v1`.
+- Keep reentry inside `seed_level_ladder_supervision`.
+
+### Evidence
+- `same_day_entry_authorized_seed_count = 0`
+- `delayed_reclaim_watch_seed_count = 2`
+- `deep_washout_watch_seed_count = 1`
+- `persistent_recovery_seed_count = 2`
+- `late_only_recovery_seed_count = 1`
+
+### Interpretation
+- Reentry now has a four-step supervision grammar:
+  - block same-day chase
+  - observe only
+  - open rebuild watch
+  - require later confirmation shape
+- This is stronger than a flat timing table, but still not an execution lane.
+
+### Consequence
+- Keep:
+  - same-day reentry blocked
+  - reentry simulator blocked
+- Open only:
+  - deeper seed-level ladder supervision
+
+## DEC-0358 Board Cooling Lockout Must Sit Above Reentry Supervision
+
+Date: 2026-04-04
+
+### Context
+- Seed-level reentry supervision had become structurally clean.
+- The remaining open question was whether some post-impulse periods should still be treated as rebuild problems at all.
+
+### Decision
+- Freeze `v134be_commercial_aerospace_board_cooling_lockout_audit_v1`.
+- Freeze `v134bf_commercial_aerospace_be_lockout_direction_triage_v1`.
+- Retain board cooling lockout as an upper governance veto above seed-level reentry ladder supervision.
+
+### Evidence
+- `post_full_candidate_count = 29`
+- `cluster_count = 1`
+- `lockout_seed_count = 1`
+- `earliest_lockout_seed_trade_date = 20260115`
+- `start_forward_board_return_20d = -0.13429061`
+- `start_forward_board_return_40d = -0.19003424`
+- `suggested_min_cooldown_trading_days = 60`
+
+### Interpretation
+- The branch now has board-level evidence that the post-impulse deterioration is not just a rebuild timing problem.
+- From `20260115`, the commercial aerospace board behaves like a multi-month cooling lockout candidate.
+
+### Consequence
+- Keep:
+  - board cooling lockout as supervision only
+  - execution binding blocked
+- Allow:
+  - board lockout to override seed-level reentry ladder in governance discussions
+
+## DEC-0359 Board Revival Unlock Must Reuse Board-Rise Semantics With Extra Breadth Guards
+
+Date: 2026-04-04
+
+### Context
+- The branch had already frozen a board-level cooling lockout seed from `20260115`.
+- The next problem was how that lockout could ever be released without mistaking local rebound for true board recovery.
+
+### Decision
+- Freeze `v134bg_commercial_aerospace_board_revival_unlock_audit_v1`.
+- Freeze `v134bh_commercial_aerospace_bg_unlock_direction_triage_v1`.
+- Retain board revival unlock as the governance-only release condition above seed-level reentry ladder supervision.
+
+### Evidence
+- `positive_seed_count = 8`
+- `false_bounce_seed_count = 10`
+- Historical positive revival seeds share:
+  - `probe_plus_full_count >= 6`
+  - `full_count >= 2`
+  - `de_risk_count = 0`
+- False rebounds after lockout often still show:
+  - `full_count = 0`
+  - or residual `de_risk_count > 0`
+  - and negative forward board returns
+
+### Interpretation
+- Revival recognition does not need a new conceptual family.
+- It is the same board-rise recognition problem, but with stricter breadth and anti-small-rebound guards.
+
+### Consequence
+- Keep:
+  - board revival unlock as supervision only
+  - execution binding blocked
+- Allow:
+  - lockout release discussion only when broad revival seed shape reappears
+
+## DEC-0360 Local-Only Rebound Must Be Treated As Negative Evidence Under Lockout
+
+Date: 2026-04-04
+
+### Context
+- The board branch had already frozen:
+  - `board_cooling_lockout`
+  - `board_revival_unlock`
+- The remaining ambiguity was whether a few strong rebound names inside a weak board should soften the lockout or accelerate reentry discussion.
+
+### Decision
+- Freeze `v134bk_commercial_aerospace_local_only_rebound_audit_v1`.
+- Freeze `v134bl_commercial_aerospace_bk_local_only_rebound_triage_v1`.
+- Retain `local_only_rebound_guard` as explicit negative evidence under lockout.
+
+### Evidence
+- `local_only_rebound_seed_count = 10`
+- Representative seeds:
+  - `20260115` top symbol `000738`
+  - `20260130` top symbol `000738`
+  - `20260312 -> 20260320` top symbol often `300342`
+- Seed shape:
+  - `top_symbol_forward_return_10 >= 0.15`
+  - `top_positive_forward_share >= 0.45`
+  - `probe_plus_full_count <= 3`
+  - `full_count <= 1`
+  - board overlay still deeply off peak
+
+### Interpretation
+- A few strong names can coexist with a locked, weak board.
+- This is not a release condition. It is anti-false-bounce evidence.
+
+### Consequence
+- Keep:
+  - local-only rebound as governance only
+  - board unlock strict
+- Block:
+  - treating isolated strength as board revival
+
+## DEC-0361 Commercial Aerospace Governance Must Be Board-First, Not Symbol-First
+
+Date: 2026-04-04
+
+### Context
+- The branch now had all three governance objects:
+  - board lockout
+  - board unlock
+  - seed reentry ladder
+- A missing piece remained: their precedence relationship was still implicit.
+
+### Decision
+- Freeze `v134bi_commercial_aerospace_hierarchy_governance_spec_v1`.
+- Freeze `v134bj_commercial_aerospace_bi_hierarchy_direction_triage_v1`.
+- Formalize hierarchy:
+  1. `board_cooling_lockout`
+  2. `local_only_rebound_guard`
+  3. `board_revival_unlock`
+  4. `seed_reentry_ladder`
+
+### Evidence
+- `hierarchy_level_count = 4`
+- `lockout_seed_count = 1`
+- `local_only_rebound_seed_count = 10`
+- `unlock_positive_seed_count = 8`
+- `reentry_seed_count = 3`
+
+### Interpretation
+- Board state must dominate symbol-level rebuild interpretation.
+- The branch should no longer let a strong single-stock rebound reopen the board discussion.
+
+### Consequence
+- Keep:
+  - board-first governance
+  - execution binding blocked
+- Allow:
+  - seed reentry ladder discussion only after board-level unlock no longer vetoes it
+
+## DEC-0362 Board-Level Reduce Context Should Be Expressed As Expectancy, Not Shape
+
+Date: 2026-04-04
+
+### Context
+- The branch had already frozen:
+  - `board_cooling_lockout`
+  - `local_only_rebound_guard`
+  - `board_revival_unlock`
+- A remaining ambiguity persisted: these objects were still easy to read as shape or breadth objects rather than expectancy objects.
+
+### Decision
+- Freeze `v134bm_commercial_aerospace_board_expectancy_supervision_audit_v1`.
+- Freeze `v134bn_commercial_aerospace_bm_expectancy_direction_triage_v1`.
+- Retain board state as expectancy language:
+  - `lockout_worthy`
+  - `false_bounce_only`
+  - `unlock_worthy`
+
+### Evidence
+- `unlock_worthy_count = 8`
+  - `mean_forward_20d = 0.43084978`
+  - `mean_rr20 = 18.13736804`
+- `false_bounce_only_count = 10`
+  - `mean_forward_20d = -0.041926`
+  - `mean_rr20 = 0.14139521`
+- `lockout_worthy_count = 1`
+  - `mean_forward_20d = -0.13429061`
+  - `mean_rr20 = 0.5207344`
+
+### Interpretation
+- The real reduce question is not only whether the board "looks weak."
+- It is whether the board is worth touching on a forward expectancy / reward-risk basis at all.
+
+### Consequence
+- Keep:
+  - expectancy supervision as board-level reduce context
+  - execution binding blocked
+- Demote:
+  - shape-only judgment
+
+## DEC-0363 Reduce Is Mostly Closed As Governance But Not As Execution
+
+Date: 2026-04-04
+
+### Context
+- The branch now had:
+  - phase-2 sell-side shadow ladder
+  - board expectancy supervision
+  - board lockout / unlock hierarchy
+  - seed-level reentry ladder
+- Confusion remained about whether reduce was "done" or still materially open.
+
+### Decision
+- Freeze `v134bo_commercial_aerospace_reduce_closure_governance_spec_v1`.
+- Freeze `v134bp_commercial_aerospace_bo_reduce_closure_direction_triage_v1`.
+- State clearly:
+  - reduce is mostly closed as governance
+  - reduce is still open as execution binding
+
+### Evidence
+- `closure_stage_count = 5`
+- stages now explicit:
+  1. `intraday_sell_ladder`
+  2. `board_expectancy_gate`
+  3. `board_lockout_unlock_hierarchy`
+  4. `seed_reentry_ladder`
+  5. `execution_binding`
+- first four stages are populated and frozen as governance/supervision
+- fifth stage remains blocked
+
+### Interpretation
+- The branch no longer lacks conceptual structure for reduce.
+- It lacks the final replay-facing lane that would bind those structures into a single executable system.
+
+### Consequence
+- Keep:
+  - board-first reduce training
+  - execution binding blocked
+- Read:
+  - reduce as 70-80% closed in governance terms
+  - not closed in execution terms
+
+## DEC-0364 The Remaining Reduce Gap Splits Cleanly Into Four Binding Blockers
+
+Date: 2026-04-04
+
+### Context
+- The branch had already frozen the reduce closure governance stack.
+- A remaining ambiguity persisted: "execution binding" was still too abstract to guide engineering priority.
+
+### Decision
+- Freeze `v134bq_commercial_aerospace_reduce_execution_binding_blocker_audit_v1`.
+- Freeze `v134br_commercial_aerospace_bq_execution_binding_direction_triage_v1`.
+- Name four explicit blockers:
+  1. `point_in_time_intraday_visibility`
+  2. `intraday_execution_simulation_surface`
+  3. `separate_intraday_replay_lane`
+  4. `reentry_execution_surface`
+
+### Evidence
+- `blocker_count = 4`
+- `sell_side_binding_blocker_count = 2`
+- `full_reduce_binding_blocker_count = 4`
+- Sell-side binding is blocked by:
+  - point-in-time visibility
+  - intraday execution simulation
+- Full reduce closure remains blocked by:
+  - separate replay lane
+  - reentry execution surface
+
+### Interpretation
+- The branch no longer lacks a governance map for reduce.
+- It lacks the engineering surfaces required to bind that map into lawful execution.
+
+### Consequence
+- Keep:
+  - board-first governance
+  - reduce training at governance/supervision level
+- Stop:
+  - speaking about "execution binding" as one vague future task
+
+## DEC-0365 Sell-Side Binding Is Partially Ready And Should Only Build The Two Missing Surfaces
+
+Date: 2026-04-04
+
+### Context
+- The branch had already named four execution-binding blockers for the full reduce closure.
+- A remaining ambiguity persisted inside that set: whether sell-side binding was still conceptually immature, or whether it already had enough shadow infrastructure to stop researching semantics and start building surfaces.
+
+### Decision
+- Freeze `v134bs_commercial_aerospace_sell_side_binding_readiness_audit_v1`.
+- Freeze `v134bt_commercial_aerospace_bs_sell_side_binding_direction_triage_v1`.
+- Treat sell-side binding as partially ready rather than broadly blocked.
+- Build only:
+  1. `holdings_aware_sell_binding_surface`
+  2. `isolated_sell_side_shadow_lane`
+
+### Evidence
+- `ready_shadow_input_count = 2`
+- `ready_shadow_reference_count = 1`
+- `missing_binding_component_count = 2`
+- Ready inputs:
+  - `all_session_visibility_surface`
+  - `deterministic_seed_simulator`
+- Ready reference:
+  - `phase2_wider_sell_shadow`
+
+### Interpretation
+- Sell-side binding is no longer blocked because the branch lacks lawful minute visibility or stable sell logic.
+- It is blocked because those pieces are not yet connected through a holdings-aware, isolated binding layer.
+
+### Consequence
+- Keep:
+  - existing sell-side visibility research frozen
+  - existing wider sell shadow as the current binding reference
+- Build next:
+  - holdings-aware sell binding
+  - isolated sell-side shadow lane
+- Stop:
+  - reopening same-family sell semantics
+  - dragging reentry execution into the next step
+
+## DEC-0366 The Wider Sell Shadow Cannot Bind Directly Because It Is Mostly Reference-Notional
+
+Date: 2026-04-04
+
+### Context
+- The branch had already reduced sell-side execution ambiguity to two missing surfaces.
+- A remaining risk persisted: treating the current wider sell shadow as if it already represented real sellable holdings under the frozen EOD primary.
+
+### Decision
+- Freeze `v134bu_commercial_aerospace_holdings_aware_sell_binding_audit_v1`.
+- Freeze `v134bv_commercial_aerospace_bu_holdings_binding_direction_triage_v1`.
+- Treat the current wider sell shadow as a behavioral reference, not as a directly bindable execution blueprint.
+- Build next:
+  1. `start_of_day_holdings_ledger`
+  2. `same_day_precedence_policy`
+
+### Evidence
+- `broader_hit_session_count = 24`
+- `positive_start_quantity_count = 16`
+- `fully_funded_overlap_count = 1`
+- `underfunded_overlap_count = 15`
+- `no_actual_holding_count = 8`
+- `same_day_primary_collision_count = 8`
+
+### Interpretation
+- The branch does not lack a good sell-side shadow reference.
+- It lacks a lawful mapping from that reference into real held quantity and same-day action precedence under the frozen primary.
+
+### Consequence
+- Keep:
+  - current wider sell shadow frozen as the best sell-side behavioral reference
+- Build next:
+  - holdings-aware start-of-day sell surface
+  - collision policy for same-day primary actions
+- Stop:
+  - pretending the broader-hit reference quantities already equal real frozen-primary inventory
+
+## DEC-0367 Build The Start-Of-Day Holdings Ledger And Same-Day Precedence Before Any Isolated Sell Lane
+
+Date: 2026-04-04
+
+### Context
+- The branch had already established that the wider sell shadow was not directly bindable to the frozen EOD primary.
+- The remaining risk was to keep speaking about holdings-aware binding abstractly instead of defining the exact surfaces and policies required to make it lawful.
+
+### Decision
+- Freeze `v134bw_commercial_aerospace_start_of_day_sell_binding_surface_spec_v1`.
+- Freeze `v134bx_commercial_aerospace_same_day_precedence_policy_audit_v1`.
+- Freeze `v134by_commercial_aerospace_bwx_binding_surface_direction_triage_v1`.
+- Build next:
+  1. `start_of_day_holdings_ledger`
+  2. `same_day_precedence_policy`
+- Keep `isolated_sell_side_shadow_lane` blocked until those two surfaces exist.
+
+### Evidence
+- `must_build_component_count = 5`
+- `collision_session_count = 8`
+- `collision_family_count = 5`
+- `open_or_add_collision_count = 6`
+- `reduce_or_close_collision_count = 4`
+- Largest collision family:
+  - `add`
+
+### Interpretation
+- Holdings-aware binding is now explicit rather than conceptual.
+- The branch must protect same-day new lots, consume only carried inventory intraday, and reconcile later EOD reduce/close actions against residual carried quantity.
+
+### Consequence
+- Keep:
+  - wider sell shadow as the current behavioral reference
+  - reentry execution excluded from scope
+- Build next:
+  - carried-inventory ledger
+  - same-day precedence enforcement
+- Stop:
+  - discussing isolated sell-side lanes before inventory truth and collision rules exist
+
+## DEC-0368 The First Isolated Sell-Side Lane Should Be Retained As A Real Binding Reference
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cb_commercial_aerospace_isolated_sell_side_shadow_lane_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cb_commercial_aerospace_isolated_sell_side_shadow_lane_v1.json).
+- Freeze [v134cc_commercial_aerospace_cb_isolated_lane_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cc_commercial_aerospace_cb_isolated_lane_direction_triage_v1.json).
+- Freeze [v134cd_commercial_aerospace_isolated_sell_side_binding_quality_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cd_commercial_aerospace_isolated_sell_side_binding_quality_audit_v1.json).
+- Freeze [v134ce_commercial_aerospace_cd_binding_quality_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ce_commercial_aerospace_cd_binding_quality_direction_triage_v1.json).
+- Retain the isolated sell-side lane as the first real holdings-aware sell binding reference.
+- Keep the branch sell-side only and holdings-aware only.
+
+### Evidence
+- `executed_session_count = 12`
+- `total_protected_mark_to_close = 15466.0594`
+- `same_day_new_lots_protected_total = 12400`
+- `clipped_reconciliation_count = 2`
+- `clipped_quantity_total = 2800`
+- `best_symbol = 300342`
+- `best_trigger_tier = reversal_watch`
+
+### Interpretation
+- The branch is no longer stuck at reference-notional sell behavior.
+- It now has a real carried-inventory surface with explicit clipping against later EOD reduce/close actions.
+- Same-day new lots are protected rather than accidentally consumed by the intraday sell lane.
+
+### Consequence
+- Keep:
+  - isolated sell-side lane as the first real binding reference
+  - replay binding blocked
+- Build next:
+  - horizon quality audit on the isolated lane
+- Stop:
+  - widening the lane before binding quality is understood
+
+## DEC-0369 The First Real Sell Binding Surface Must Carry An Explicit Horizon Caveat
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cf_commercial_aerospace_isolated_sell_side_horizon_quality_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cf_commercial_aerospace_isolated_sell_side_horizon_quality_audit_v1.json).
+- Freeze [v134cg_commercial_aerospace_cf_horizon_quality_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cg_commercial_aerospace_cf_horizon_quality_direction_triage_v1.json).
+- Retain the isolated sell-side binding surface, but only with an explicit horizon caveat.
+
+### Evidence
+- `same_day_protected_mark_to_close_total = 15466.0594`
+- `net_horizon_pnl_if_held_1d = -26604.0`
+- `net_horizon_pnl_if_held_3d = 2243.0`
+- `net_horizon_pnl_if_held_5d = -11881.0`
+
+### Interpretation
+- The lane remains strongly protective on same-day and 1-day horizons.
+- The branch does pay a meaningful rebound-cost pocket at the 3-day horizon.
+- That means the lane is real and useful, but not yet clean enough to justify replay promotion.
+
+### Consequence
+- Keep:
+  - isolated sell-side lane as the current holdings-aware binding reference
+- Build next:
+  - local attribution and failure review inside the isolated lane
+- Stop:
+  - telling ourselves the binding problem is solved just because the same-day defense is strong
+
+## DEC-0370 The First Real Sell Binding Surface Should Stay Retained But Only With A Local Rebound Caveat
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ch_commercial_aerospace_isolated_sell_side_local_binding_attribution_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ch_commercial_aerospace_isolated_sell_side_local_binding_attribution_v1.json).
+- Freeze [v134ci_commercial_aerospace_ch_local_binding_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ci_commercial_aerospace_ch_local_binding_direction_triage_v1.json).
+- Retain the isolated sell-side binding surface.
+- Keep the remaining rebound issue under local supervision only.
+
+### Evidence
+- `best_same_day_symbol = 300342`
+- `worst_3d_rebound_symbol = 300342`
+- `positive_3d_rebound_case_count = 4`
+- `top_3d_rebound_case = 20260120 300342`
+
+### Interpretation
+- The remaining drag is not a broad surface failure.
+- It is concentrated enough to stay in local rebound-residue supervision.
+- This means the branch should not reopen wider surface changes or replay promotion.
+
+### Consequence
+- Keep:
+  - isolated sell-side binding surface as current reduce binding reference
+- Build next:
+  - only local rebound-residue supervision if needed
+- Stop:
+  - reopening broad sell-family exploration
+
+## DEC-0371 The Remaining Reduce Residue Should Stay Local And Must Not Reopen Broad Tuning
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cj_commercial_aerospace_local_rebound_residue_registry_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cj_commercial_aerospace_local_rebound_residue_registry_v1.json).
+- Freeze [v134ck_commercial_aerospace_cj_local_rebound_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ck_commercial_aerospace_cj_local_rebound_direction_triage_v1.json).
+- Retain the remaining rebound residues as local supervision only.
+- Stop broad reduce tuning.
+
+### Evidence
+- `residue_seed_count = 4`
+- `persistent_rebound_residue_count = 2`
+- `transient_rebound_residue_count = 2`
+- `top_residue_case = 20260120 300342`
+
+### Interpretation
+- The branch no longer has a broad reduce-family uncertainty.
+- The remaining issue is split between persistent and transient rebound residues.
+- That is narrow enough to keep under supervision without reopening the sell-side family.
+
+### Consequence
+- Keep:
+  - current isolated sell-side binding surface
+  - local rebound residue registry
+- Build next:
+  - only residue-local supervision if a later pass is justified
+- Stop:
+  - any further broad reduce retuning before shifting to the next research frontier
+
+## DEC-0372 Reduce Mainline Research Should Be Frozen As Complete Enough Even Though Execution Closure Remains Blocked
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cl_commercial_aerospace_reduce_completion_status_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cl_commercial_aerospace_reduce_completion_status_audit_v1.json).
+- Freeze [v134cm_commercial_aerospace_cl_reduce_completion_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cm_commercial_aerospace_cl_reduce_completion_direction_triage_v1.json).
+- Freeze broad reduce research as complete enough.
+- Leave only local residue maintenance under supervision.
+
+### Evidence
+- `governance_stack_ready = True`
+- `sell_side_binding_reference_ready = True`
+- `broad_reduce_tuning_stopped = True`
+- `local_residue_supervision_only = True`
+- `full_execution_binding_still_blocked = True`
+- `remaining_execution_blocker_count = 4`
+
+### Interpretation
+- The branch has now separated research completion from execution closure.
+- Reduce no longer needs broad semantic work.
+- What remains is infrastructure for full execution and small local residue maintenance.
+
+### Consequence
+- Keep:
+  - reduce mainline frozen
+  - local residue supervision retained
+- Build next:
+  - nothing broad inside reduce unless a residue case later justifies local inspection
+- Stop:
+  - reopening broad reduce tuning before the later handoff to the next frontier
+
+## DEC-0373 Reduce Should Now Be Treated As A Frozen Handoff Package Rather Than An Open Branch
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cn_commercial_aerospace_reduce_handoff_package_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cn_commercial_aerospace_reduce_handoff_package_v1.json).
+- Freeze [v134co_commercial_aerospace_cn_reduce_handoff_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134co_commercial_aerospace_cn_reduce_handoff_direction_triage_v1.json).
+- Treat reduce as a frozen handoff package.
+- Do not reopen reduce mainline before a later frontier shift.
+
+### Evidence
+- `reduce_mainline_frozen = True`
+- `local_residue_supervision_only = True`
+- `execution_blocker_count = 4`
+- `future_handoff_ready = True`
+
+### Interpretation
+- The branch is now cleanly packaged for future transition.
+- Reduce is no longer the active semantic frontier.
+- What remains inside reduce is maintenance, not exploration.
+
+### Consequence
+- Keep:
+  - reduce handoff package
+  - local residue maintenance only
+- Build next:
+  - no new broad reduce work unless a future explicit frontier shift requires it
+- Stop:
+  - treating reduce as if it were still an open mainline research problem
+
+## DEC-0374 Reduce And Add Now Need A Clean Frontier Gate Rather Than More Semantic Overlap
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134cz_commercial_aerospace_intraday_add_opening_checklist_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134cz_commercial_aerospace_intraday_add_opening_checklist_v1.json).
+- Freeze [v134da_commercial_aerospace_cz_intraday_add_opening_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134da_commercial_aerospace_cz_intraday_add_opening_triage_v1.json).
+- Treat intraday add opening as a prelaunch checklist problem, not as permission to start the frontier now.
+
+### Evidence
+- `reduce_status = frozen_mainline`
+- `program_frontier_state = deferred`
+- `checklist_gate_count = 9`
+- `authoritative_status = freeze_intraday_add_opening_checklist_and_keep_frontier_deferred_until_explicit_shift`
+
+### Interpretation
+- Reduce is now stable enough that the main remaining governance risk is frontier bleed, not semantic incompleteness.
+- The healthiest next move is to make the future add opening explicit while keeping it deferred.
+
+### Consequence
+- Keep:
+  - reduce frozen
+  - add deferred
+  - explicit opening checklist
+- Build next:
+  - nothing inside add until a later deliberate shift
+- Stop:
+  - using preparation work as an excuse to silently open the next frontier
+
+## DEC-0375 Once Add Is Deferred, The Most Useful Artifact Is A Prelaunch Status Card
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134db_commercial_aerospace_intraday_add_prelaunch_status_card_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134db_commercial_aerospace_intraday_add_prelaunch_status_card_v1.json).
+- Freeze [v134dc_commercial_aerospace_db_prelaunch_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134dc_commercial_aerospace_db_prelaunch_direction_triage_v1.json).
+- Keep intraday add in prelaunch-only status and continue blocking silent opening.
+
+### Evidence
+- `reduce_status = frozen_mainline`
+- `next_frontier = intraday_add`
+- `next_frontier_state = deferred`
+- `silent_opening_allowed = False`
+
+### Interpretation
+- The later frontier now has both an opening checklist and a single-card status summary.
+- That means the remaining governance need is clarity, not more preparation drift.
+
+### Consequence
+- Keep:
+  - reduce frozen
+  - add deferred
+  - prelaunch-only posture
+- Build next:
+  - nothing inside add until the later explicit shift
+- Stop:
+  - treating deferred-frontier readiness as active frontier work
+
+## DEC-0376 Program Master Status Should Also Reflect Deferred-Frontier Readiness
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134dd_program_master_status_card_v3](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134dd_program_master_status_card_v3.json).
+- Freeze [v134de_program_master_governance_triage_v3](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134de_program_master_governance_triage_v3.json).
+- Refresh program-level governance to include the intraday-add prelaunch gate count and silent-opening prohibition.
+
+### Evidence
+- `next_frontier = intraday_add`
+- `opening_gate_count = 9`
+- `silent_opening_allowed = False`
+- `authoritative_status = freeze_program_lines_with_reduce_complete_and_intraday_add_prelaunch_deferred`
+
+### Interpretation
+- The program-level card is now fully consistent with the board-level prelaunch package.
+- This removes the last ambiguity between "next frontier exists" and "next frontier may open now."
+
+### Consequence
+- Keep:
+  - reduce frozen
+  - add deferred prelaunch
+  - explicit silent-opening prohibition
+- Build next:
+  - nothing until a later explicit frontier shift
+- Stop:
+  - using repeated continuation as a substitute for an actual shift decision
+
+## DEC-0377 A Deferred Frontier Needs A Heartbeat And A Playbook, Not More Semantic Preparation
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134df_commercial_aerospace_intraday_add_prelaunch_heartbeat_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134df_commercial_aerospace_intraday_add_prelaunch_heartbeat_v1.json).
+- Freeze [v134dg_commercial_aerospace_df_prelaunch_playbook_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134dg_commercial_aerospace_df_prelaunch_playbook_v1.json).
+- Treat the deferred add frontier as operationally complete in governance terms: heartbeat present, opening playbook present, silent opening still blocked.
+
+### Evidence
+- `frontier_name = intraday_add`
+- `frontier_state = deferred`
+- `opening_gate_count = 9`
+- `ready_to_open_now = False`
+- `playbook_step_count = 5`
+
+### Interpretation
+- The deferred frontier now has everything it needs except the later explicit shift itself.
+- More preparation inside the same deferred state would be drift rather than progress.
+
+### Consequence
+- Keep:
+  - add deferred
+  - heartbeat retained
+  - opening playbook retained
+- Build next:
+  - nothing until the future explicit shift
+- Stop:
+  - further prelaunch elaboration inside the same deferred frontier
+
+## DEC-0378 Intraday Add Is Now Open, But Only As A Supervision Frontier
+
+Date: 2026-04-04
+
+### Decision
+- Open [v134eh_commercial_aerospace_intraday_add_frontier_opening_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134eh_commercial_aerospace_intraday_add_frontier_opening_v1.json).
+- Open [v134ei_commercial_aerospace_eh_add_frontier_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ei_commercial_aerospace_eh_add_frontier_direction_triage_v1.json).
+- Build [v134ej_commercial_aerospace_intraday_add_supervision_registry_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ej_commercial_aerospace_intraday_add_supervision_registry_v1.json).
+- Build [v134ek_commercial_aerospace_ej_add_registry_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ek_commercial_aerospace_ej_add_registry_direction_triage_v1.json).
+
+### Evidence
+- `frontier_state = opened_supervision_only`
+- `registry_row_count = 55`
+- `seed_family_count = 3`
+- `failed_add_seed_count = 2`
+- `blocked_add_seed_count = 4`
+
+### Interpretation
+- The later frontier is no longer deferred.
+- The cleanest first move is a registry bootstrap from the existing open/add execution surface, not an execution-facing add lane.
+
+### Consequence
+- Keep:
+  - reduce frozen
+  - board-level veto stack
+  - add at supervision scope
+- Build next:
+  - point-in-time add seed feed
+- Stop:
+  - pretending add already owns execution authority
+
+## DEC-0379 The First Add Feed Should Be Point-In-Time And Program Status Must Reflect The Shift
+
+Date: 2026-04-04
+
+### Decision
+- Build [v134el_commercial_aerospace_intraday_add_point_in_time_seed_feed_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134el_commercial_aerospace_intraday_add_point_in_time_seed_feed_v1.json).
+- Build [v134em_commercial_aerospace_el_add_seed_feed_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134em_commercial_aerospace_el_add_seed_feed_direction_triage_v1.json).
+- Refresh [v134en_program_master_status_card_v4](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134en_program_master_status_card_v4.json).
+- Refresh [v134eo_program_master_governance_triage_v4](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134eo_program_master_governance_triage_v4.json).
+
+### Evidence
+- `seed_session_count = 55`
+- `feed_row_count = 3300`
+- `lineage_null_count = 0`
+- `next_frontier_state = opened_supervision_only`
+
+### Interpretation
+- The add frontier now has lawful minute visibility on its seed surface.
+- Program-level governance is no longer allowed to speak as if add were still deferred.
+
+### Consequence
+- Keep:
+  - add as supervision-only
+  - reduce frozen
+  - execution blocked
+- Build next:
+  - add tiered label specification
+- Stop:
+  - using deferred-frontier language after the explicit shift has already occurred
+
+## DEC-0378 Intraday Add Can Now Open, But Only As A Supervision Frontier
+
+Date: 2026-04-04
+
+### Decision
+- Open [v134eh_commercial_aerospace_intraday_add_frontier_opening_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134eh_commercial_aerospace_intraday_add_frontier_opening_v1.json).
+- Open [v134ei_commercial_aerospace_eh_add_frontier_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ei_commercial_aerospace_eh_add_frontier_direction_triage_v1.json).
+- Build [v134ej_commercial_aerospace_intraday_add_supervision_registry_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ej_commercial_aerospace_intraday_add_supervision_registry_v1.json).
+- Build [v134ek_commercial_aerospace_ej_add_registry_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ek_commercial_aerospace_ej_add_registry_direction_triage_v1.json).
+- Treat the current user continuation as the explicit frontier shift that opens intraday add, but only as supervision.
+
+### Evidence
+- `frontier_state = opened_supervision_only`
+- `first_build_step = intraday_add_supervision_registry_v1`
+- `registry_row_count = 55`
+- `seed_family_count = 3`
+- `failed_add_seed_count = 2`
+- `blocked_add_seed_count = 4`
+
+### Interpretation
+- The next frontier is now active.
+- The narrowest clean starting point is the existing open/add execution surface, relabeled as allowed, failed, and blocked supervision seeds.
+- Add still does not inherit reduce execution authority.
+
+### Consequence
+- Keep:
+  - board-level veto stack
+  - reduce frozen
+  - add as supervision-only
+- Build next:
+  - point-in-time add seed feed
+- Stop:
+  - pretending add already owns execution or replay authority
+
+## DEC-0380 Freeze The First Add Tier Vocabulary Before Pattern Mining
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ep_commercial_aerospace_intraday_add_tiered_label_specification_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ep_commercial_aerospace_intraday_add_tiered_label_specification_v1.json).
+- Freeze [v134eq_commercial_aerospace_ep_add_label_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134eq_commercial_aerospace_ep_add_label_direction_triage_v1.json).
+- Treat intraday add as having four supervision tiers before any pattern-envelope work:
+  - `allowed_preheat_probe_add`
+  - `allowed_preheat_full_add`
+  - `failed_impulse_chase_add`
+  - `blocked_board_lockout_add`
+
+### Evidence
+- `registry_row_count = 55`
+- `label_tier_count = 4`
+- `allowed_preheat_probe_add = 33`
+- `allowed_preheat_full_add = 16`
+- `failed_impulse_chase_add = 2`
+- `blocked_board_lockout_add = 4`
+
+### Interpretation
+- The add frontier now has a canonical supervision vocabulary rather than only a raw registry.
+- `preheat_full` and `preheat_probe` are both allowed families, but they are not equally strong and should not stay merged.
+- Failed impulse adds and board-blocked adds are distinct negative classes and should remain separate.
+
+### Consequence
+- Keep:
+  - add as supervision-only
+  - board veto stack intact
+  - reduce frozen
+- Build next:
+  - local add pattern-envelope audit
+- Stop:
+  - jumping from registry/feed directly to add execution authority
+
+## DEC-0381 Freeze Local Add Pattern Envelopes Before Rule Mining
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134er_commercial_aerospace_local_add_pattern_envelope_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134er_commercial_aerospace_local_add_pattern_envelope_audit_v1.json).
+- Freeze [v134es_commercial_aerospace_er_add_pattern_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134es_commercial_aerospace_er_add_pattern_direction_triage_v1.json).
+- Treat the current intraday-add frontier as having four stable local early-session archetypes before any explicit rule-candidate audit.
+
+### Evidence
+- `label_tier_count = 4`
+- `separation_pair_count = 3`
+- `allowed_preheat_full_vs_allowed_preheat_probe.open_to_15m_gap = 0.01045125`
+- `allowed_preheat_full_vs_allowed_preheat_probe.close_loc_15m_gap = 0.32981895`
+- `failed_impulse_chase_vs_allowed_preheat_full.open_to_5m_gap = -0.08593751`
+- `blocked_board_lockout_vs_failed_impulse_chase.open_to_15m_gap = 0.08666843`
+
+### Interpretation
+- `preheat_full` is not just a larger `probe`; it is a more positively accepted early-session family.
+- Failed impulse adds are immediate hard-collapse chases, not noisy allowed adds.
+- Blocked board-lockout adds can show a brief early repair, but that does not weaken the upstream board veto.
+
+### Consequence
+- Keep:
+  - add execution blocked
+  - board veto stack unchanged
+  - reduce frozen
+- Build next:
+  - explicit early-session add rule-candidate audit
+- Stop:
+  - collapsing blocked or failed add cases back into the allowed tiers
+
+## DEC-0382 Keep The First Add Rules Only If They Preserve The Frozen Seed Ordering
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134et_commercial_aerospace_local_add_rule_candidate_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134et_commercial_aerospace_local_add_rule_candidate_audit_v1.json).
+- Freeze [v134eu_commercial_aerospace_et_add_rule_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134eu_commercial_aerospace_et_add_rule_direction_triage_v1.json).
+- Retain the first explicit local add rules as governed seed rules only because they preserve the full four-tier add ordering on the current 55-row seed surface.
+
+### Evidence
+- `registry_row_count = 55`
+- `matched_count = 55`
+- `match_rate = 1.0`
+- `unmatched_count = 0`
+
+### Interpretation
+- The new add rules are coherent enough to keep as seed-side governed rules.
+- `preheat_probe` needed a looser gate than `preheat_full`; forcing early upper-half acceptance there was too strict.
+- The branch is now ready for broader false-positive auditing instead of more seed-surface threshold tweaking.
+
+### Consequence
+- Keep:
+  - add rules as governed seed rules
+  - execution authority blocked
+  - board veto stack intact
+- Build next:
+  - broader add false-positive audit
+- Stop:
+  - continuing to overfit seed-surface thresholds without broader expansion
+
+## DEC-0383 Keep Positive Add Rules Seed-Only Until Context Gating Exists
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ev_commercial_aerospace_broader_add_false_positive_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ev_commercial_aerospace_broader_add_false_positive_audit_v1.json).
+- Freeze [v134ew_commercial_aerospace_ev_add_false_positive_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ew_commercial_aerospace_ev_add_false_positive_triage_v1.json).
+- Keep positive add rules as seed-only governed rules.
+- Do not promote shape-only positive add rules to broader local session expansion.
+
+### Evidence
+- `total_session_count = 1224`
+- `seed_session_count = 55`
+- `seed_match_count = 42`
+- `non_seed_positive_hit_count = 495`
+- `non_seed_positive_hit_rate = 0.42343884`
+- `non_seed_failed_hit_count = 2`
+- `non_seed_blocked_hit_count = 95`
+- `max_symbol_positive_hit_rate = 0.48039216`
+
+### Interpretation
+- Shape-only positive add rules are far too dense once they leave the supervised seed surface.
+- The negative governance families (`failed`, `blocked`) remain comparatively bounded.
+- The current blocker is not threshold polish; it is missing context that can separate real add permission from generic early-session rebounds.
+
+### Consequence
+- Keep:
+  - positive add rules as seed-only
+  - failed/blocked add families as bounded governance references
+  - execution authority blocked
+- Build next:
+  - context-gating audit for positive add permission
+- Stop:
+  - broader positive rule promotion without additional context
+
+## DEC-0384 Slow Context Alone Cannot Rescue Broader Positive Add Expansion
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ex_commercial_aerospace_add_context_gating_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ex_commercial_aerospace_add_context_gating_audit_v1.json).
+- Freeze [v134ey_commercial_aerospace_ex_context_gating_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ey_commercial_aerospace_ex_context_gating_direction_triage_v1.json).
+- Stop trying to rescue broader positive add expansion using only currently available slow contexts.
+
+### Evidence
+- `baseline_non_seed_to_seed_ratio = 10.53191489`
+- Best slow-context scenario:
+  - `unlock_worthy_plus_high_role`
+  - `non_seed_to_seed_ratio = 5.4`
+  - `seed_kept_count = 5`
+  - `non_seed_kept_count = 27`
+- `phase_window_only` and `unlock_worthy_only` both remain far too dense.
+
+### Interpretation
+- Existing slow contexts help, but not enough.
+- The branch is not blocked by threshold choice; it is blocked by missing point-in-time permission context.
+- Positive add permission needs a stronger context surface than:
+  - chronology window
+  - board expectancy seed dates
+  - crude high-role symbol membership
+
+### Consequence
+- Keep:
+  - positive add rules as seed-only
+  - negative governance families as bounded references
+  - execution authority blocked
+- Build next:
+  - point-in-time add-permission context audit
+- Stop:
+  - further slow-context combination tuning
+
+## DEC-0385 Point-In-Time Quantity-Price Moderation Helps Add, But Still Does Not Authorize Broader Promotion
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ez_commercial_aerospace_add_permission_context_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ez_commercial_aerospace_add_permission_context_audit_v1.json).
+- Freeze [v134fa_commercial_aerospace_ez_add_permission_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fa_commercial_aerospace_ez_add_permission_direction_triage_v1.json).
+- Keep positive add rules seed-only.
+- Retain the best point-in-time quantity-price permission clue as local supervision only.
+
+### Evidence
+- `positive_hit_session_count = 542`
+- `seed_allowed_hit_count = 47`
+- Baseline:
+  - `non_seed_to_seed_ratio = 10.53191489`
+- Best slow-context scenario from V1.34EX:
+  - `unlock_worthy_plus_high_role`
+  - `non_seed_to_seed_ratio = 5.4`
+- Best point-in-time broad moderation:
+  - `contained_close15_plus_burst15_plus_posmin15`
+  - `non_seed_to_seed_ratio = 4.93333333`
+  - `seed_kept_count = 15`
+  - `non_seed_kept_count = 74`
+- Best narrow high-confidence clue:
+  - `slow_unlock_high_role_plus_contained_burst15`
+  - `non_seed_to_seed_ratio = 3.8`
+  - `seed_kept_count = 5`
+  - `non_seed_kept_count = 19`
+
+### Interpretation
+- Point-in-time quantity-price moderation improves add density more than slow context alone.
+- Authentic add seeds look less chasey than the broader shape-only positive population.
+- The new permission clue is useful, but it is still too weak for broader positive promotion.
+
+### Consequence
+- Keep:
+  - positive add rules as seed-only
+  - the narrow high-confidence permission clue as local supervision
+  - add execution authority blocked
+- Build next:
+  - local permission-family supervision around the new quantity-price clue
+- Stop:
+  - pretending the add branch is just one threshold turn away from broader promotion
+
+## DEC-0386 Reduce Quantity-Price Context Is Now Explicit Inside The Frozen Handoff
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fb_commercial_aerospace_reduce_volume_price_supplement_memo_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fb_commercial_aerospace_reduce_volume_price_supplement_memo_v1.json).
+- Freeze [v134fc_commercial_aerospace_fb_reduce_volume_price_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fc_commercial_aerospace_fb_reduce_volume_price_direction_triage_v1.json).
+- Keep the reduce branch frozen.
+- Make its quantity-price supplement an explicit governance appendix inside the frozen handoff package.
+
+### Evidence
+- Existing reduce-side volume-price confirmation:
+  - strongest feature = `post_reversal_up_amount_share`
+  - gap = `0.097386`
+- Existing reduce-side local veto:
+  - `up_share_threshold = 0.45`
+  - `open_burst_floor = -0.01`
+  - `precision = 1.0`
+- Reduce remains frozen:
+  - `execution_blocker_count = 4`
+
+### Interpretation
+- Reduce was never purely a price-path branch; quantity-price already contributed real supervisory value.
+- The right move is not to reopen reduce, but to carry this layer explicitly inside the handoff package.
+
+### Consequence
+- Keep:
+  - reduce frozen
+  - quantity-price confirmation as governance appendix
+  - local veto as local supervision only
+- Stop:
+  - treating reduce as if its frozen handoff were price-only
+
+## DEC-0387 Add Quantity-Price Permission Clues Need Family Supervision, Not Promotion
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fd_commercial_aerospace_add_permission_family_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fd_commercial_aerospace_add_permission_family_audit_v1.json).
+- Freeze [v134fe_commercial_aerospace_fd_add_permission_family_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fe_commercial_aerospace_fd_add_permission_family_direction_triage_v1.json).
+- Keep the new quantity-price permission clue as local supervision only.
+- Do not promote broader positive add rules.
+
+### Evidence
+- High-confidence clue sessions:
+  - `24`
+  - `seed = 5`
+  - `non-seed = 19`
+- The clue is not monolithic:
+  - `persistent_permission_candidate = 10`
+  - `fragile_permission_watch = 7`
+  - `failed_permission_watch = 7`
+- Persistent family:
+  - `seed_allowed_count = 2`
+  - `non_seed_count = 8`
+  - `mean_open_to_60m = 0.03412105`
+  - `mean_continuation_15_to_60m = 0.02121791`
+- Failed family:
+  - `mean_open_to_60m = -0.0207333`
+  - `mean_continuation_15_to_60m = -0.01557406`
+
+### Interpretation
+- The new quantity-price clue does contain a real pocket of permission-like continuation.
+- But the same clue still mixes in fragile and failed sessions.
+- That means the right next step is family-level supervision, not blanket permission promotion.
+
+### Consequence
+- Keep:
+  - persistent permission as a local supervision family
+  - fragile and failed permission families as counterfactuals
+  - broader positive add promotion blocked
+- Build next:
+  - local family supervision inside the add frontier
+- Stop:
+  - collapsing the clue into a general positive add rule
+
+## DEC-0388 Persistent Add Permission Now Has A Clean Local Continuation Confirmation Layer
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ff_commercial_aerospace_persistent_permission_confirmation_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ff_commercial_aerospace_persistent_permission_confirmation_audit_v1.json).
+- Freeze [v134fg_commercial_aerospace_ff_persistent_confirmation_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fg_commercial_aerospace_ff_persistent_confirmation_direction_triage_v1.json).
+- Retain the persistent-permission continuation gate as local supervision only.
+- Keep broader positive add promotion blocked.
+
+### Evidence
+- Best local confirmation thresholds:
+  - `open_to_60m >= 0.01`
+  - `continuation_15_to_60m >= 0.005`
+  - `burst_amount_share_cap <= 0.4`
+- Best result:
+  - `matched_count = 9`
+  - `persistent_hit_count = 9`
+  - `counterfactual_hit_count = 0`
+  - `precision = 1.0`
+  - `coverage = 0.9`
+
+### Interpretation
+- Inside the narrow permission-family surface, first-hour continuation is the cleanest confirmation layer for persistent permission candidates.
+- This is the first add-side confirmation object that looks genuinely clean rather than merely less noisy.
+- But it is still a local supervision layer, not execution authority.
+
+### Consequence
+- Keep:
+  - persistent continuation confirmation as local supervision
+  - fragile and failed families as nearby counterfactual context
+  - broader positive add promotion blocked
+- Stop:
+  - pretending the add frontier still lacks any credible local confirmation structure
+
+## DEC-0389 Persistent Add Permission Now Has An Internal Quality Ladder
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fh_commercial_aerospace_persistent_permission_quality_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fh_commercial_aerospace_persistent_permission_quality_audit_v1.json).
+- Freeze [v134fi_commercial_aerospace_fh_persistent_quality_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fi_commercial_aerospace_fh_persistent_quality_direction_triage_v1.json).
+- Retain the persistent-permission family as a three-tier local supervision ladder:
+  - `full_quality`
+  - `bridge_quality`
+  - `probe_quality`
+
+### Evidence
+- `persistent_session_count = 10`
+- `full_quality_count = 5`
+  - `predicted_full_count = 5`
+- `bridge_quality_count = 2`
+  - mixed:
+    - `predicted_full_count = 1`
+    - `predicted_probe_count = 1`
+- `probe_quality_count = 3`
+  - `predicted_probe_count = 3`
+
+### Interpretation
+- Persistent permission is no longer a single local family.
+- The strongest pocket aligns cleanly with full-quality add behavior.
+- The bridge tier is exactly where the family still mixes full-like and probe-like cases, so it should stay a watch layer.
+
+### Consequence
+- Keep:
+  - full-quality persistent permission as the strongest local add-permission tier
+  - bridge-quality as upgrade-watch supervision
+  - probe-quality as lower-acceptance persistent permission
+- Stop:
+  - flattening all persistent permission cases into one bucket
+
+## DEC-0390 Full-Quality Persistent Permission Now Has A Minimal Archetype Anchor
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fj_commercial_aerospace_full_quality_add_archetype_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fj_commercial_aerospace_full_quality_add_archetype_audit_v1.json).
+- Freeze [v134fk_commercial_aerospace_fj_full_quality_archetype_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fk_commercial_aerospace_fj_full_quality_archetype_direction_triage_v1.json).
+- Retain the new full-quality add archetype as a local supervision anchor only.
+
+### Evidence
+- Minimal anchor:
+  - `close_loc_15m >= 0.63`
+- Result:
+  - `matched_count = 5`
+  - `full_quality_hit_count = 5`
+  - `counterfactual_hit_count = 0`
+  - `precision = 1.0`
+  - `coverage = 1.0`
+
+### Interpretation
+- The strongest local add tier no longer needs a multi-feature story just to be readable.
+- Inside the persistent permission quality ladder, first-15m close location is enough to anchor the full-quality archetype.
+
+### Consequence
+- Keep:
+  - the full-quality archetype as a local supervision anchor
+  - broader positive add promotion blocked
+  - add execution authority blocked
+- Stop:
+  - overstating this archetype as if it solved the broader add-permission problem
+
+## DEC-0391 The Strongest Add Archetype Still Fails Portability
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fl_commercial_aerospace_full_quality_module_portability_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fl_commercial_aerospace_full_quality_module_portability_audit_v1.json).
+- Freeze [v134fm_commercial_aerospace_fl_module_portability_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fm_commercial_aerospace_fl_module_portability_direction_triage_v1.json).
+- Keep the strongest add archetype local-only.
+- Block module promotion.
+
+### Evidence
+- Best portable-looking scenario:
+  - `unlock_high_role_full_archetype_with_burst`
+  - `seed_kept_count = 2`
+  - `non_seed_kept_count = 3`
+  - `non_seed_to_seed_ratio = 1.5`
+- Pure archetype or archetype-plus-local-confirmation are much worse:
+  - `archetype_only = 10.81818182`
+  - `local_confirmation_plus_archetype = 15.25`
+
+### Interpretation
+- The full-quality archetype is real.
+- But it remains local to the persistent-permission ladder.
+- Even with the strongest slow-context and burst moderation, it does not port cleanly enough to justify a broader module.
+
+### Consequence
+- Keep:
+  - full-quality archetype as local supervision anchor only
+  - module promotion blocked
+  - execution blocked
+- Stop:
+  - pretending the strongest local add object is already a portable module
+
+## DEC-0392 The Add Portability Stopline Is Now A Day-Level Selection Problem
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fn_commercial_aerospace_full_quality_module_counterfactual_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fn_commercial_aerospace_full_quality_module_counterfactual_audit_v1.json).
+- Freeze [v134fo_commercial_aerospace_fn_counterfactual_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fo_commercial_aerospace_fn_counterfactual_direction_triage_v1.json).
+- Keep the strongest add archetype local-only.
+- Keep broader add promotion blocked.
+- Shift the next supervision question from local shape to day-level selection authority.
+
+### Evidence
+- Best portable-looking scenario remains:
+  - `unlock_high_role_full_archetype_with_burst`
+  - `matched_session_count = 5`
+  - `seed_match_count = 2`
+  - `counterfactual_count = 3`
+- Residual non-seed hits are not random:
+  - `selection_displacement_counterfactual_count = 1`
+  - `no_order_day_post_seed_echo_count = 2`
+  - `mean_trading_days_since_prior_allowed_seed = 7.66666667`
+
+### Interpretation
+- The strongest local add object is still real.
+- But the remaining broader misses are better explained as displaced same-day alternatives or late echoes on symbols that already had earlier allowed-add phases.
+- That means the active blocker is no longer local shape quality.
+- It is the absence of a justified day-level selection authority.
+
+### Consequence
+- Keep:
+  - local add hierarchy frozen as supervision
+  - module promotion blocked
+  - execution blocked
+- Shift:
+  - from portability optimism
+  - to day-level selection-authority supervision
+
+## DEC-0393 Add Portability Residue Splits Cleanly At The Daily Choice Layer
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fp_commercial_aerospace_add_day_level_selection_authority_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fp_commercial_aerospace_add_day_level_selection_authority_audit_v1.json).
+- Freeze [v134fq_commercial_aerospace_fp_day_level_selection_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fq_commercial_aerospace_fp_day_level_selection_direction_triage_v1.json).
+- Keep the local add hierarchy intact.
+- Keep broader promotion blocked.
+- Shift the next supervision question to daily selection authority.
+
+### Evidence
+- Candidate day count under the strongest portable-looking scenario:
+  - `4`
+- These split cleanly into:
+  - `aligned_selection_day = 1`
+  - `displaced_selection_day = 1`
+  - `post_wave_echo_day = 2`
+
+### Interpretation
+- The frontier no longer lacks a local add object.
+- It now lacks a day-level authority for why one strong symbol is selected, another is displaced, and another is ignored on an echo day.
+- That means the next blocker is daily choice logic, not more local shape tuning.
+
+### Consequence
+- Keep:
+  - local add hierarchy as supervision
+  - broader promotion blocked
+  - execution blocked
+- Shift:
+  - from local portability tuning
+  - to day-level selection-authority supervision
+
+## DEC-0394 Add Daily Authority First Needs A Wave-State Split
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fr_commercial_aerospace_add_wave_state_authority_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fr_commercial_aerospace_add_wave_state_authority_audit_v1.json).
+- Freeze [v134fs_commercial_aerospace_fr_wave_state_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fs_commercial_aerospace_fr_wave_state_direction_triage_v1.json).
+- Retain a `post_wave_echo_guard`.
+- Shift the next add supervision layer to `active_wave_selection`.
+
+### Evidence
+- Candidate day count remains `4`.
+- These split into:
+  - `active_wave_selection_day = 2`
+  - `post_wave_echo_guard = 2`
+- The post-wave guard lines up exactly with the two late-echo days.
+
+### Interpretation
+- The daily add authority problem is not one blob.
+- Half of it is already easy: late echo days can be vetoed with simple recent order-flow state.
+- The harder residual problem is narrower:
+  - which symbol gets selected inside a live add wave
+
+### Consequence
+- Keep:
+  - broader add promotion blocked
+  - execution blocked
+  - post-wave echo guard retained
+- Shift:
+  - from generic daily authority
+  - to active-wave daily selection supervision
+
+## DEC-0395 Active-Wave Add Selection Now Has A First Local State Split
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134ft_commercial_aerospace_active_wave_selection_supervision_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ft_commercial_aerospace_active_wave_selection_supervision_audit_v1.json).
+- Freeze [v134fu_commercial_aerospace_ft_active_wave_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fu_commercial_aerospace_ft_active_wave_direction_triage_v1.json).
+- Retain a small active-wave selection supervision split.
+- Keep broader promotion and execution blocked.
+
+### Evidence
+- Active-wave day count: `2`
+- Candidate count: `4`
+- Selected candidates: `3`
+- Displaced candidates: `1`
+- State split:
+  - `same_symbol_continuation_selected = 1`
+  - `clean_reset_selected = 2`
+  - `recent_reduce_residue_displaced = 1`
+
+### Interpretation
+- The unresolved add problem is now smaller than before.
+- Inside active waves, the first useful local negative clue is recent symbol-level reduce residue.
+- Same-symbol continuation and clean reset remain the currently selected states.
+
+### Consequence
+- Keep:
+  - active-wave selection states as supervision only
+  - broader promotion blocked
+  - execution blocked
+- Stop:
+  - pretending the frontier still lacks any interpretable same-wave daily structure
+
+## DEC-0396 Recent Reduce Residue Is The First Clean Same-Wave Exclusion Clue
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fv_commercial_aerospace_recent_reduce_residue_exclusion_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fv_commercial_aerospace_recent_reduce_residue_exclusion_audit_v1.json).
+- Freeze [v134fw_commercial_aerospace_fv_recent_reduce_exclusion_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fw_commercial_aerospace_fv_recent_reduce_exclusion_direction_triage_v1.json).
+- Retain recent-reduce residue as a local active-wave exclusion clue.
+- Keep broader promotion and execution blocked.
+
+### Evidence
+- Active-wave candidate count: `3`
+- Excluded by recent-reduce residue: `1`
+- Excluded displaced count: `1`
+- Excluded selected count: `0`
+- `displaced_precision = 1.0`
+- `displaced_coverage = 1.0`
+
+### Interpretation
+- The first active-wave exclusion clue is now clean on the current local surface.
+- But it is still only a local clue, not a complete daily ranker.
+
+### Consequence
+- Keep:
+  - recent-reduce residue as local supervision
+  - broader promotion blocked
+  - execution blocked
+- Stop:
+  - confusing the first clean exclusion clue with full add authority
+
+## DEC-0397 Add Still Does Not Own A Positive Same-Wave Daily Ranker
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fx_commercial_aerospace_active_wave_positive_ranking_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fx_commercial_aerospace_active_wave_positive_ranking_audit_v1.json).
+- Freeze [v134fy_commercial_aerospace_fx_positive_ranking_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fy_commercial_aerospace_fx_positive_ranking_direction_triage_v1.json).
+- Retain the same-wave exclusion clue.
+- Block positive daily-ranker promotion.
+
+### Evidence
+- Retained selected candidate count: `2`
+- The two selected states do not collapse into one positive ranker:
+  - `same_symbol_higher_metric_count = 1`
+  - `clean_reset_higher_metric_count = 3`
+
+### Interpretation
+- The branch now knows how to exclude one local active-wave candidate.
+- But it still does not know how to positively rank the remaining selected states with enough coherence to claim a same-wave daily ranker.
+
+### Consequence
+- Keep:
+  - local exclusion clue
+  - broader promotion blocked
+  - execution blocked
+- Stop:
+  - pretending that active-wave selection already has a promotable positive ranking layer
+
+## DEC-0398 The Retained Add States Support Dual Slots Better Than A Single Winner
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134fz_commercial_aerospace_active_wave_dual_slot_permission_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134fz_commercial_aerospace_active_wave_dual_slot_permission_audit_v1.json).
+- Freeze [v134ga_commercial_aerospace_fz_dual_slot_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ga_commercial_aerospace_fz_dual_slot_direction_triage_v1.json).
+- Retain a local dual-slot permission view.
+- Keep the single positive ranker blocked.
+
+### Evidence
+- Retained selected candidate count: `2`
+- Slot count: `2`
+- The retained states remain complementary:
+  - `same_symbol_higher_metric_count = 1`
+  - `clean_reset_higher_metric_count = 2`
+
+### Interpretation
+- The branch still does not own a clean single-winner daily ranker.
+- But it now has enough local structure to say the two retained states can coexist as differentiated permission slots rather than as a forced winner/loser pair.
+
+### Consequence
+- Keep:
+  - local exclusion clue
+  - local dual-slot permission view
+  - broader promotion blocked
+  - execution blocked
+- Stop:
+  - overforcing a single best-symbol ranker when the retained states still behave like complementary risk-sharing slots
+
+## DEC-0399 The First Dual-Slot Allocation Archetype Is Tiered, Not Symmetric
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134gb_commercial_aerospace_dual_slot_allocation_supervision_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134gb_commercial_aerospace_dual_slot_allocation_supervision_audit_v1.json).
+- Freeze [v134gc_commercial_aerospace_gb_dual_slot_allocation_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134gc_commercial_aerospace_gb_dual_slot_allocation_direction_triage_v1.json).
+- Retain a local primary-reset plus secondary-continuation allocation archetype.
+- Keep execution allocation blocked.
+
+### Evidence
+- Dual-slot day count: `1`
+- Current local dual-slot day:
+  - `continuation_slot_weight = 0.033507`
+  - `reset_slot_weight = 0.068632`
+  - `reset_to_continuation_weight_ratio = 2.0484075`
+
+### Interpretation
+- The current local dual-slot object is not symmetric.
+- The reset slot carries the larger primary participation.
+- The continuation slot behaves like an incremental companion layer.
+
+### Consequence
+- Keep:
+  - dual-slot permission supervision
+  - local tiered allocation archetype
+  - execution blocked
+- Stop:
+  - mistaking one local allocation archetype for a deployable execution allocation rule
+
+## DEC-0400 Dual-Slot Capacity Is Conditional, Not Default
+
+Date: 2026-04-04
+
+### Decision
+- Freeze [v134gd_commercial_aerospace_dual_slot_capacity_audit_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134gd_commercial_aerospace_dual_slot_capacity_audit_v1.json).
+- Freeze [v134ge_commercial_aerospace_gd_dual_slot_capacity_direction_triage_v1](D:/Creativity/A-Share-Quant_TrY/reports/analysis/v134ge_commercial_aerospace_gd_dual_slot_capacity_direction_triage_v1.json).
+- Keep dual-slot coexistence conditional.
+- Keep default dual-slot promotion blocked.
+
+### Evidence
+- Active-wave day count: `2`
+- `dual_slot_day_count = 1`
+- `single_slot_day_count = 0`
+- `zero_slot_day_count = 1`
+
+### Interpretation
+- On the current strict local surface, dual-slot coexistence is real but rare.
+- It should be treated as a conditional local pattern rather than as a default operating assumption.
+
+### Consequence
+- Keep:
+  - dual-slot supervision
+  - conditional capacity language
+  - execution blocked
+- Stop:
+  - assuming both slots should be open by default whenever active-wave context appears
+
+## DEC-0401 Add Slot Capacity Is Exclusion-First, Not Default Dual-Slot
+
+Date: 2026-04-04
+
+### Decision
+Freeze current add slot capacity as an exclusion-first local hierarchy.
+
+### Evidence
+- v134gh_commercial_aerospace_slot_capacity_hierarchy_audit_v1
+- v134gi_commercial_aerospace_gh_slot_capacity_direction_triage_v1
+- active-wave day count = 2
+- zero-slot veto day count = 1
+- tiered dual-slot day count = 1
+- single-slot unobserved day count = 0
+
+### Consequence
+- Keep:
+  - zero-slot veto
+  - tiered dual-slot as local supervision
+  - add execution blocked
+- Stop:
+  - searching for a default dual-slot allocation rule on the current strict surface
+  - pretending single-slot fallback is already observed
+
+## DEC-0402 Single-Slot Fallback Remains Unobserved In Add
+
+Date: 2026-04-04
+
+### Decision
+Freeze single-slot fallback as unobserved on the current strict active-wave add surface.
+
+### Evidence
+- v134gj_commercial_aerospace_single_slot_fallback_supervision_audit_v1
+- v134gk_commercial_aerospace_gj_single_slot_direction_triage_v1
+- observed_single_slot_day_count = 0
+- weak_surrogate_count = 1
+- surrogate_slot_name = reset_slot
+
+### Consequence
+- Keep:
+  - zero-slot veto
+  - tiered dual-slot as local supervision
+  - reset slot only as weak local surrogate when a forced one-slot reading is needed
+- Stop:
+  - pretending a portable single-slot fallback already exists
+  - promoting single-slot allocation into execution logic
+
+## DEC-0403 Reset Only Wins Under Forced Collapse
+
+Date: 2026-04-04
+
+### Decision
+Freeze reset-slot preference as a forced-collapse local surrogate only.
+
+### Evidence
+- v134gl_commercial_aerospace_forced_single_slot_collapse_audit_v1
+- v134gm_commercial_aerospace_gl_forced_collapse_direction_triage_v1
+- preferred_surrogate_slot = reset_slot
+- reset_higher_metric_count = 3
+- continuation_higher_metric_count = 1
+- reset_to_continuation_weight_ratio = 2.04828842
+
+### Consequence
+- Keep:
+  - reset as weak local surrogate under forced one-slot reading
+  - continuation as companion-only
+  - single-slot execution blocked
+- Stop:
+  - treating forced collapse as evidence of an observed single-slot template
+  - promoting reset into a portable single-slot rule
+
+## DEC-0404 Add Supervision Mainline Is Complete Enough
+
+Date: 2026-04-04
+
+### Decision
+Freeze the add supervision mainline as complete enough and stop broad tuning.
+
+### Evidence
+- v134gn_commercial_aerospace_add_completion_status_audit_v1
+- v134go_commercial_aerospace_gn_add_completion_direction_triage_v1
+- seed_row_count = 55
+- seed_rule_match_rate = 1.0
+- non_seed_positive_hit_rate = 0.42343884
+- persistent_confirmation_precision = 1.0
+- observed_single_slot_day_count = 0
+
+### Consequence
+- Keep:
+  - seed supervision stack
+  - local permission hierarchy
+  - local slot-capacity hierarchy
+  - local residue maintenance only
+- Keep blocked:
+  - broader positive promotion
+  - portable single-slot template
+  - add execution authority
+- Stop:
+  - broad add tuning on the current surface
+
+## DEC-0405 Open A Unified Shadow Replay Lane, Not Another Local Alpha Branch
+
+Date: 2026-04-05
+
+### Decision
+Open a unified intraday shadow replay lane as the next protocol frontier.
+
+### Evidence
+- v134gp_commercial_aerospace_intraday_shadow_replay_lane_opening_v1
+- v134gq_commercial_aerospace_gp_shadow_lane_direction_triage_v1
+- v134gr_commercial_aerospace_reentry_unlock_shadow_bridge_spec_v1
+- v134gs_commercial_aerospace_gr_reentry_unlock_bridge_direction_triage_v1
+- reduce = frozen read-only input
+- add = frozen supervision read-only input
+- first module = reentry_unlock_shadow_bridge
+
+### Consequence
+- Keep:
+  - reduce read-only
+  - add read-only
+  - same-day reentry blocked
+  - execution authority blocked
+- Start:
+  - unified shadow replay lane protocol
+  - reentry/unlock bridge as the first module
+- Stop:
+  - reopening reduce/add as separate local tuning frontiers
+
+## DEC-0406 Reentry/Unlock Bridge Now Has A Concrete State Surface
+
+Date: 2026-04-05
+
+### Decision
+Retain the reentry/unlock shadow state surface as the first concrete bridge surface.
+
+### Evidence
+- v134gt_commercial_aerospace_reentry_unlock_shadow_state_surface_v1
+- v134gu_commercial_aerospace_gt_shadow_state_direction_triage_v1
+- seed_count = 3
+- pre_lockout_seed_count = 1
+- in_lockout_seed_count = 2
+- current_add_handoff_ready_count = 0
+
+### Consequence
+- Keep:
+  - same-day reentry blocked
+  - board gating mandatory
+  - add handoff not ready yet
+  - execution authority blocked
+- Start:
+  - using a concrete bridge state surface instead of only abstract bridge protocol
+- Stop:
+  - talking about reduce/add handoff as if current seeds are already add-consult ready
+
+## DEC-0407 Reentry-To-Add Handoff Fails On Two Explicit Gates
+
+Date: 2026-04-05
+
+### Decision
+Keep reentry-to-add handoff blocked until a post-lockout unlock context exists.
+
+### Evidence
+- v134gv_commercial_aerospace_reentry_unlock_handoff_readiness_audit_v1
+- v134gw_commercial_aerospace_gv_handoff_direction_triage_v1
+- seed_count = 3
+- handoff_ready_count = 0
+- lockout_overlap_block_count = 3
+- no_future_unlock_seed_count = 3
+
+### Consequence
+- Keep:
+  - handoff readiness audit
+  - add handoff blocked
+  - execution blocked
+- Explicit blockers:
+  - rebuild-watch date still overlaps lockout
+  - no future unlock seed exists after rebuild-watch date
+- Stop:
+  - treating current reentry seeds as if they are only waiting on symbol-level confirmation
+
+## DEC-0408 Post-Lockout Unlock Vacancy Is A Missing Board Surface
+
+Date: 2026-04-05
+
+### Decision
+Keep reentry-to-add handoff blocked until a post-lockout board-state surface exists.
+
+### Evidence
+- v134gx_commercial_aerospace_post_lockout_unlock_vacancy_audit_v1
+- v134gy_commercial_aerospace_gx_unlock_vacancy_direction_triage_v1
+- lockout_end_trade_date = 20260320
+- post_lockout_trade_date_count = 10
+- derived_board_surface_present_count = 0
+- raw_only_vacancy_count = 10
+- post_lockout_unlock_positive_count = 0
+- post_lockout_unlock_worthy_count = 0
+
+### Consequence
+- Keep:
+  - shadow replay lane open
+  - reentry/unlock bridge read-only
+  - add handoff blocked
+  - execution blocked
+- Explicit blocker refinement:
+  - post-lockout local intraday raw dates exist
+  - but no derived board-state surface exists after lockout end
+- Stop:
+  - treating the vacancy as if it were only a weak-board interpretation problem
+
+## DEC-0409 Board Surface Derivation Stops Exactly At Lockout End
+
+Date: 2026-04-05
+
+### Decision
+Keep the shadow bridge blocked until both board-level derived surfaces extend past lockout end.
+
+### Evidence
+- v134gz_commercial_aerospace_board_surface_derivation_gap_audit_v1
+- v134ha_commercial_aerospace_gz_derivation_gap_direction_triage_v1
+- raw_last_trade_date = 20260403
+- daily_last_trade_date = 20260320
+- phase_last_trade_date = 20260320
+- post_lockout_raw_trade_date_count = 10
+- daily_post_lockout_gap_count = 10
+- phase_post_lockout_gap_count = 10
+- synchronized_surface_stop = True
+
+### Consequence
+- Keep:
+  - raw intraday calendar
+  - shadow lane open
+  - reentry/add handoff blocked
+- Dominant reading:
+  - this is a synchronized derivation stop, not merely a negative unlock judgment
+- Stop:
+  - debating post-lockout unlock quality before the board-state surfaces themselves are extended
+
+## DEC-0410 The Current Stop Is A Lockout-Aligned Derivation Boundary
+
+Date: 2026-04-05
+
+### Decision
+Classify the current bridge blocker as a lockout-aligned derivation boundary and keep shadow handoff blocked until that boundary changes.
+
+### Evidence
+- v134hb_commercial_aerospace_derivation_boundary_classification_audit_v1
+- v134hc_commercial_aerospace_hb_boundary_direction_triage_v1
+- orders_last_trade_date = 20260227
+- grouped_actions_last_trade_date = 20260227
+- daily_state_last_trade_date = 20260320
+- phase_table_last_trade_date = 20260320
+- raw_daily_last_trade_date = 20260403
+- raw_intraday_last_trade_date = 20260403
+- derived_stop_matches_lockout_end = True
+- derived_stop_after_last_execution = True
+- raw_coverage_beyond_derived = True
+- boundary_classification = lockout_aligned_derivation_boundary
+
+### Consequence
+- Keep:
+  - raw coverage as sufficient
+  - shadow bridge blocked
+  - execution blocked
+- Dominant reading:
+  - current stop is not a raw-data gap
+  - current stop is not merely the last execution day
+  - current stop aligns exactly with the board lockout boundary
+- Stop:
+  - treating the next task as a better unlock classifier before the derivation-boundary policy itself is addressed
+
+## DEC-0411 Boundary Extension Must Be Explicit, Not Automatic
+
+Date: 2026-04-05
+
+### Decision
+Keep the lockout-aligned derivation boundary frozen by default; any post-lockout extension must be opened as an explicit shadow-only policy shift.
+
+### Evidence
+- v134hd_commercial_aerospace_derivation_boundary_policy_audit_v1
+- v134he_commercial_aerospace_hd_boundary_policy_direction_triage_v1
+- boundary_classification = lockout_aligned_derivation_boundary
+- post_lockout_trade_date_count = 10
+- raw_only_vacancy_count = 10
+- shadow_lane_state = opened_protocol_only
+- current_policy = retain_current_boundary
+- future_policy_option = explicit_boundary_extension_for_shadow_only
+
+### Consequence
+- Keep:
+  - current derivation boundary
+  - shadow bridge blocked
+  - execution blocked
+- Reject:
+  - implicit auto-extension from existing raw data
+  - debating unlock quality before boundary policy changes
+- Allow only:
+  - a future explicit shadow-only extension program
+
+## DEC-0412 Boundary Extension Now Has A Prelaunch Checklist, Not An Opening
+
+Date: 2026-04-05
+
+### Decision
+Freeze a shadow-boundary-extension opening checklist, but keep the current derivation boundary frozen.
+
+### Evidence
+- v134hf_commercial_aerospace_shadow_boundary_extension_opening_checklist_v1
+- v134hg_commercial_aerospace_hf_boundary_extension_opening_triage_v1
+- boundary_classification = lockout_aligned_derivation_boundary
+- current_policy = retain_current_boundary
+- future_policy_option = explicit_boundary_extension_for_shadow_only
+- shadow_lane_state = opened_protocol_only
+- opening_gate_count = 8
+
+### Consequence
+- Keep:
+  - current derivation boundary frozen
+  - shadow bridge blocked
+  - execution blocked
+- Add:
+  - a future-ready opening checklist for shadow-only boundary extension
+- Stop:
+  - treating raw coverage as permission to extend right now
+
+## DEC-0413 Boundary Extension Is Now Deferred-Prelaunch, Not Active
+
+Date: 2026-04-05
+
+### Decision
+Keep shadow-boundary-extension in deferred-prelaunch state and do not continue beyond status-card maintenance.
+
+### Evidence
+- v134hi_commercial_aerospace_shadow_boundary_extension_prelaunch_status_card_v1
+- v134hj_commercial_aerospace_hi_prelaunch_direction_triage_v1
+- frontier_state = deferred_prelaunch
+- opening_gate_count = 8
+- ready_to_open_now = False
+- silent_opening_allowed = False
+
+### Consequence
+- Keep:
+  - current derivation boundary frozen
+  - shadow bridge blocked
+  - execution blocked
+- Allow:
+  - future explicit frontier shift only
+- Stop:
+  - adding more speculative governance artifacts to the deferred boundary-extension line
+
+## DEC-0414 Named Strong Rebounds Stay Negative Unless Board Context Rebuilds
+
+Date: 2026-04-05
+
+### Decision
+Retain named strong rebound symbols as negative-label candidates and do not treat symbol-level strength as board restart evidence.
+
+### Evidence
+- v134hk_commercial_aerospace_named_local_rebound_counterexample_audit_v1
+- v134hl_commercial_aerospace_hk_named_counterexample_direction_triage_v1
+- 300342 = lockout_outlier_breakout_then_fade
+- 603601 = raw_only_post_lockout_breakout_without_board_context
+- 301306 = raw_only_near_high_rebound_without_breakout
+- 002361 = locked_board_weak_repair_only but near prior high
+
+### Consequence
+- Learn:
+  - local strength can cross or approach prior highs without reopening legal board participation
+- Keep:
+  - board unlock authority above symbol-level rebound evidence
+- Stop:
+  - reading named strong rebound symbols as sufficient restart proof
+
+## DEC-0415 Crowded Shelter Rebound Is A Separate Negative Label Family
+
+Date: 2026-04-05
+
+### Decision
+Retain crowded-shelter rebounds as a separate negative-label family distinct from ordinary weak repair and high-beta raw-only rebound.
+
+### Evidence
+- v134hm_commercial_aerospace_crowded_local_rebound_supervision_audit_v1
+- v134hn_commercial_aerospace_hm_crowded_rebound_direction_triage_v1
+- v134ho_commercial_aerospace_crowding_vs_weak_repair_contrast_audit_v1
+- v134hp_commercial_aerospace_ho_crowding_contrast_direction_triage_v1
+- crowding_like_shelter_rebound_count = 2
+- peak_proximity_gap = 0.16462719
+- avg_turnover_rate_f_gap = 3.89370098
+- max_turnover_rate_f_gap = 19.40105
+
+### Consequence
+- Learn:
+  - crowded symbol strength can run closer to prior highs and on heavier turnover than weak repair
+- Keep:
+  - crowded shelter rebound as board-negative context, not board unlock evidence
+- Separate:
+  - crowding_like_shelter_rebound
+  - high_beta_raw_only_rebound
+  - locked_board_weak_repair
+
+## DEC-0416 Training Route Shifts From Local Shape Toward Event-Attention-Capital Divergence
+
+Date: 2026-04-05
+
+### Decision
+Freeze a staged training route that moves the next mainline away from more local price-shape tuning and toward environment semantics plus event-attention-capital divergence supervision.
+
+### Evidence
+- v134hs_commercial_aerospace_training_target_route_audit_v1
+- v134ht_commercial_aerospace_hs_route_direction_triage_v1
+- roadmap_phase_count = 5
+- decisive_event_retained_count = 12
+- negative_module_member_count = 3
+- agent_consensus_count = 3
+
+### Consequence
+- Learn first:
+  - attention_distorted
+  - capital_misaligned_with_board
+  - board_fragile_divergence
+  - event_trigger_validity
+  - attention_anchor
+  - attention_decoy
+- Learn later:
+  - capital_true_selection
+  - followthrough_leader
+- Keep blocked:
+  - execution_authority
+  - unlock_confirmed
+  - future shadow modules until explicit shift
+
+## DEC-0417 Negative Environment Semantics Come Before Event-Attention Labels
+
+Date: 2026-04-05
+
+### Decision
+Retain three board-local negative environment semantics as the next main supervision frontier before building the explicit event-attention layer.
+
+### Evidence
+- v134hu_commercial_aerospace_negative_environment_semantics_registry_v1
+- v134hv_commercial_aerospace_hu_environment_direction_triage_v1
+- semantic_count = 3
+- local_only_rebound_seed_count = 10
+- false_bounce_only_count = 10
+- concentration_module_member_count = 3
+
+### Consequence
+- Promote:
+  - attention_distorted
+  - capital_misaligned_with_board
+  - board_fragile_divergence
+- Keep:
+  - all three as supervision_only and board_local
+- Defer:
+  - external policy/news context to the later event-attention layer
+
+## DEC-0418 First Event-Attention Supervision Layer Must Stay Conservative
+
+Date: 2026-04-05
+
+### Decision
+Retain the first event-attention supervision layer as a conservative seed registry containing event-trigger-validity rows plus the first hard attention-anchor and attention-decoy role case.
+
+### Evidence
+- v134hw_commercial_aerospace_event_attention_supervision_registry_v1
+- v134hx_commercial_aerospace_hw_event_attention_direction_triage_v1
+- registry_row_count = 8
+- event_seed_count = 6
+- symbol_role_seed_count = 2
+- attention_anchor_count = 1
+- attention_decoy_count = 1
+
+### Consequence
+- Keep:
+  - event_trigger_validity as the first event-layer supervision object
+  - 航天发展 on 2026-01-13 as the first hard attention-anchor / decoy case
+- Do not:
+  - pretend capital_true_selection is ready
+  - infer board restart from anchor heat
+- Continue:
+  - supervision_only
+
+## DEC-0419 Role Expansion Must Stay Asymmetric
+
+Date: 2026-04-05
+
+### Decision
+Retain only one hard event-attention role seed for now and expand the rest of the named symbols as soft role candidates rather than premature hard labels.
+
+### Evidence
+- v134hy_commercial_aerospace_event_attention_role_candidate_audit_v1
+- v134hz_commercial_aerospace_hy_role_candidate_direction_triage_v1
+- candidate_symbol_count = 5
+- hard_retained_count = 1
+- soft_candidate_count = 4
+
+### Consequence
+- Keep hard:
+  - 航天发展 = attention_anchor + attention_decoy
+- Keep soft:
+  - 再升科技 = crowded_attention_carrier_candidate
+  - 神剑股份 = crowding_only_role_candidate
+  - 天银机电 = outlier_breakout_concentration_candidate
+  - 西测测试 = high_beta_attention_follow_candidate
+- Keep blocked:
+  - capital_true_selection until role candidates are better separated
+
+## DEC-0420 Role Separation Comes Before True Selection
+
+Date: 2026-04-05
+
+### Decision
+Retain a separated soft-role layer before opening any capital_true_selection training.
+
+### Evidence
+- v134ia_commercial_aerospace_event_attention_role_separation_audit_v1
+- v134ib_commercial_aerospace_ia_role_separation_direction_triage_v1
+- soft_candidate_count = 4
+- event_backed_attention_carrier_count = 1
+- non_anchor_concentration_count = 2
+- high_beta_follow_count = 1
+
+### Consequence
+- Retain:
+  - 再升科技 as the best soft event-backed attention-carrier candidate
+  - 神剑股份 / 天银机电 as non-anchor concentration candidates
+  - 西测测试 as an event-backed high-beta follow candidate
+- Keep blocked:
+  - capital_true_selection until more than one carrier-grade soft case exists
+
+## DEC-0421 Carrier-Grade Promotion Requires Named Gap Closure
+
+Date: 2026-04-05
+
+### Decision
+Keep capital_true_selection blocked under an explicit carrier-grade evidence gap policy rather than under subjective caution.
+
+### Evidence
+- v134ic_commercial_aerospace_carrier_grade_evidence_gap_audit_v1
+- v134id_commercial_aerospace_ic_carrier_gap_direction_triage_v1
+- event_backed_attention_carrier_count = 1
+- hard_anchor_case_count = 1
+- active_gap_count = 4
+
+### Consequence
+- Name the blocking gaps:
+  - second_event_backed_carrier_case_missing
+  - anchor_decoy_counterpanel_too_thin
+  - carrier_followthrough_not_yet_labeled
+  - board_event_alignment_not_yet_explicit
+- Promote next:
+  - second carrier case search
+  - thicker anchor/decoy counterpanel
+- Keep blocked:
+  - capital_true_selection until gap closure becomes explicit
+
+## DEC-0422 The Second Carrier Case Is Still Missing
+
+Date: 2026-04-05
+
+### Decision
+Retain the negative result of the second-carrier search and keep capital_true_selection blocked.
+
+### Evidence
+- v134ie_commercial_aerospace_second_carrier_case_search_audit_v1
+- v134if_commercial_aerospace_ie_second_carrier_direction_triage_v1
+- searched_symbol_count = 5
+- current_primary_carrier_case_count = 1
+- second_carrier_case_found = False
+
+### Consequence
+- Keep:
+  - 再升科技 as the only current primary carrier-grade case
+- Keep blocked:
+  - capital_true_selection
+- Read:
+  - 航天发展 as anchor/decoy counterpanel
+  - 西测测试 as follow candidate
+  - 神剑股份 / 天银机电 as non-carrier concentration cases
+
+## DEC-0423 The Hard Anchor-Decoy Counterpanel Is Still Single-Case
+
+Date: 2026-04-05
+
+### Decision
+Retain 航天发展 as the only hard anchor-decoy counterpanel case and keep the rest below hard counterpanel promotion.
+
+### Evidence
+- v134ig_commercial_aerospace_anchor_decoy_counterpanel_search_audit_v1
+- v134ih_commercial_aerospace_ig_counterpanel_direction_triage_v1
+- current_hard_counterpanel_count = 1
+- second_hard_counterpanel_found = False
+- soft_decoy_only_candidate_count = 2
+
+### Consequence
+- Keep hard:
+  - 航天发展 as the only hard anchor-decoy reference
+- Keep soft-only:
+  - 神剑股份
+  - 天银机电
+- Keep outside counterpanel:
+  - 再升科技
+  - 西测测试
+
+## DEC-0424 Followthrough Gets Its Own Layer But Not Promotion Authority
+
+Date: 2026-04-05
+
+### Decision
+Retain a dedicated symbol-level followthrough supervision layer while continuing to block capital_true_selection promotion.
+
+### Evidence
+- v134ii_commercial_aerospace_symbol_followthrough_supervision_audit_v1
+- v134ij_commercial_aerospace_ii_followthrough_direction_triage_v1
+- symbol_count = 4
+- persistent_followthrough_count = 1
+- moderate_followthrough_count = 2
+- weak_followthrough_count = 1
+
+### Consequence
+- Learn:
+  - symbol-level persistence explicitly
+- Keep:
+  - persistent followthrough as symbol-level evidence only
+- Do not:
+  - read followthrough alone as board unlock
+  - read followthrough alone as capital_true_selection
+
+## DEC-0425 Board-Event Alignment Becomes Explicit Without Granting Promotion Authority
+
+Date: 2026-04-05
+
+### Decision
+Retain board-event alignment as its own supervision layer while continuing to block capital_true_selection promotion.
+
+### Evidence
+- v134ik_commercial_aerospace_board_event_alignment_supervision_audit_v1
+- v134il_commercial_aerospace_ik_board_event_alignment_direction_triage_v1
+- event_seed_count = 6
+- aligned_board_supportive_count = 1
+- turning_point_alignment_count = 1
+- pre_turn_watch_count = 1
+- lockout_misaligned_count = 2
+- raw_only_alignment_absent_count = 1
+
+### Consequence
+- Keep:
+  - board-event alignment as explicit supervision
+- Learn:
+  - supportive alignment
+  - turning-point overheat alignment
+  - lockout misalignment
+  - raw-only alignment absence
+- Do not:
+  - guess post-lockout raw-only alignment
+  - read alignment alone as capital_true_selection
+
+## DEC-0426 Partial Gap Closure Still Does Not Open Capital True Selection
+
+Date: 2026-04-05
+
+### Decision
+Freeze a true-selection readiness audit that records partial closure of the named gaps while keeping capital_true_selection blocked.
+
+### Evidence
+- v134im_commercial_aerospace_capital_true_selection_readiness_audit_v1
+- v134in_commercial_aerospace_im_true_selection_direction_triage_v1
+- named_gap_total = 4
+- explicitly_closed_gap_count = 2
+- remaining_hard_gap_count = 2
+- capital_true_selection_ready = False
+
+### Consequence
+- Treat as closed support layers:
+  - symbol_followthrough_surface
+  - board_event_alignment
+- Treat as remaining hard blockers:
+  - second_event_backed_carrier_case
+  - anchor_decoy_counterpanel
+- Keep:
+  - capital_true_selection blocked
+- Do not:
+  - synthesize a second carrier
+  - inflate soft decoy-only names into a hard counterpanel
+
+## DEC-0427 Shift True-Selection Progress Toward New Evidence Sources
+
+Date: 2026-04-05
+
+### Decision
+Freeze an evidence-source audit that treats the current named set as locally exhausted for true-selection promotion and shifts the next progress toward broader symbol and attention evidence.
+
+### Evidence
+- v134io_commercial_aerospace_true_selection_evidence_source_audit_v1
+- v134ip_commercial_aerospace_io_evidence_source_direction_triage_v1
+- remaining_hard_gap_count = 2
+- searched_symbol_count = 5
+- current_hard_counterpanel_count = 1
+- current_local_route_exhausted = True
+
+### Consequence
+- Promote next:
+  - expanded_symbol_universe
+  - attention_heat_evidence_expansion
+- Deprioritize:
+  - current named universe retuning
+- Keep:
+  - capital_true_selection blocked
+
+## DEC-0428 Open Expanded Carrier Search Conservatively Through Formal/Core Symbols
+
+Date: 2026-04-05
+
+### Decision
+Freeze the first expanded-universe carrier search pass and retain one priority outside-named candidate without promoting true selection.
+
+### Evidence
+- v134iq_commercial_aerospace_expanded_symbol_universe_carrier_search_audit_v1
+- v134ir_commercial_aerospace_iq_expanded_carrier_direction_triage_v1
+- expanded_formal_symbol_count = 3
+- outside_named_formal_symbol_count = 3
+- priority_second_carrier_candidate_count = 1
+- formal_strength_watch_count = 1
+
+### Consequence
+- Promote next:
+  - 000738 as the next outside-named second-carrier search target
+- Keep watch:
+  - 600118
+- Keep out:
+  - 002085
+- Do not:
+  - promote true selection
+  - force formal/core status into carrier status
+
+## DEC-0429 Retain 000738 As The Next Outside-Named Second-Carrier Watch
+
+Date: 2026-04-05
+
+### Decision
+Freeze 000738 as the next outside-named second-carrier supervision watch without promoting capital_true_selection.
+
+### Evidence
+- v134is_commercial_aerospace_outside_named_second_carrier_supervision_audit_v1
+- v134it_commercial_aerospace_is_outside_named_second_carrier_direction_triage_v1
+- outside_named_watch_count = 1
+- outside_named_watch_has_event_backing = False
+- outside_named_watch_local_top_day_count = 3
+
+### Consequence
+- Promote next:
+  - extend event backing to 000738
+  - extend followthrough labeling to 000738
+- Keep:
+  - 603601 as current primary reference
+- Do not:
+  - promote 000738 directly into capital_true_selection
+
+## DEC-0430 Hold 000738 At Watch Status Until Retained Event Backing Exists
+
+Date: 2026-04-05
+
+### Decision
+Freeze the 000738 extension audit and keep the symbol at watch status until retained event backing exists.
+
+### Evidence
+- v134iu_commercial_aerospace_000738_event_followthrough_extension_audit_v1
+- v134iv_commercial_aerospace_iu_000738_extension_direction_triage_v1
+- event_backing_present = False
+- local_rebound_leadership_day_count = 3
+- followthrough_extension_label = moderate_but_not_persistent
+
+### Consequence
+- Keep:
+  - 000738 as outside-named second-carrier watch
+- Promote next:
+  - retained event-backing search around 000738
+- Do not:
+  - read local leadership alone as carrier promotion
+  - read moderate followthrough alone as carrier promotion
+
+## DEC-0431 Downshift 000738 To Cross-Theme Contaminated Watch
+
+Date: 2026-04-05
+
+### Decision
+Freeze the 000738 contamination audit and downshift the symbol from a clean commercial-aerospace second-carrier watch to a cross-theme contaminated watch.
+
+### Evidence
+- v134iw_commercial_aerospace_000738_cross_theme_contamination_audit_v1
+- v134ix_commercial_aerospace_iw_cross_theme_direction_triage_v1
+- 000738 broader_context_mode = multi_day_reinforcement
+- 000738 broader_sector_names include defense/aerospace reinforcement context
+- comparator_absent_count = 2 for 002353 and 600875 in the current local commercial-aerospace surface
+
+### Consequence
+- Keep:
+  - 000738 only as a contaminated watch, not as clean commercial-aerospace carrier evidence
+- Promote next:
+  - concept-purity plus basic-business reference layer for future cross-theme label hygiene
+- Do not:
+  - use 000738 as second-carrier proof for commercial aerospace
+  - force gas-turbine same-plane conclusions before widening local comparator coverage
+
+## DEC-0432 Retain Board-Local Heat Proxy Layer Without Reopening True Selection
+
+Date: 2026-04-05
+
+### Decision
+Freeze the board-local event-attention heat proxy audit and retain it as a local role-clarity layer while keeping capital_true_selection blocked.
+
+### Evidence
+- v134iy_commercial_aerospace_event_attention_heat_proxy_audit_v1
+- v134iz_commercial_aerospace_iy_heat_proxy_direction_triage_v1
+- explicit_heat_anchor_seed_count = 1
+- event_backed_heat_carrier_proxy_count = 1
+- strongest_soft_heat_proxy_symbol = 603601
+- counterpanel_thickened = False
+
+### Consequence
+- Keep:
+  - 000547 as the only explicit local heat anchor seed
+  - 603601 as the strongest soft heat-carrier proxy
+  - 002361 / 300342 / 301306 as non-anchor heat proxies with distinct roles
+- Promote next:
+  - thicker attention evidence only when a second hard counterpanel or comparable anchor-grade case appears
+- Do not:
+  - read local heat-proxy clarity as hard anchor-counterpanel thickness
+  - reopen capital_true_selection from this layer alone
+
+## DEC-0433 Treat Source Hardness As The Current Hard Stopline
+
+Date: 2026-04-05
+
+### Decision
+Freeze the event-attention source-hardness audit and retain source hardness as the current hard stopline for counterpanel thickening.
+
+### Evidence
+- v134ja_commercial_aerospace_event_attention_source_hardness_audit_v1
+- v134jb_commercial_aerospace_ja_source_hardness_direction_triage_v1
+- hard_anchor_grade_source_count = 1
+- only_hard_anchor_symbol = 000547
+- 603601 and 301306 have retained but non-anchor source support
+- 300342 has discarded theme heat and 002361 has no retained event source
+
+### Consequence
+- Keep:
+  - 000547 as the only hard anchor-grade source and only hard anchor-decoy counterpanel
+  - 603601 / 301306 as retained-event but non-anchor source cases
+  - 300342 / 002361 outside hard-anchor promotion
+- Promote next:
+  - a second anchor-grade source only when a real symbol-named decisive heat source appears
+- Do not:
+  - read retained continuation validation as anchor-grade heat evidence
+  - reopen capital_true_selection while source hardness remains single-case
+
+## DEC-0434 Treat Event Inventory As Exhausted For Second Hard Heat Source Search
+
+Date: 2026-04-05
+
+### Decision
+Freeze the symbol-named heat-source search and treat the current local event inventory as exhausted for second hard heat-source expansion.
+
+### Evidence
+- v134jc_commercial_aerospace_symbol_named_heat_source_search_audit_v1
+- v134jd_commercial_aerospace_jc_heat_source_direction_triage_v1
+- retained_symbol_named_heat_source_count = 1
+- second_symbol_named_heat_source_found = False
+- ca_source_004 and ca_source_012 are discarded theme-heat lists
+- ca_anchor_004 is a forward unresolved manual anchor
+
+### Consequence
+- Keep:
+  - ca_source_007 as the only retained symbol-named hard heat source
+- Promote next:
+  - local event expansion only when a new retained symbol-named decisive heat source enters the commercial-aerospace registry
+- Do not:
+  - interpret discarded theme-heat lists as hard anchor evidence
+  - interpret unresolved forward anchors as historical hard counterpanel evidence
+
+## DEC-0435 Freeze Board-Local Event-Attention-Capital Route At Completion Stopline
+
+Date: 2026-04-05
+
+### Decision
+Freeze the board-local event-attention-capital route as locally complete enough and do not reopen it inside the same evidence inventory.
+
+### Evidence
+- v134je_commercial_aerospace_event_attention_capital_local_completion_audit_v1
+- v134jf_commercial_aerospace_je_local_completion_direction_triage_v1
+- negative_environment_ready = True
+- event_attention_local_stack_ready = True
+- capital_true_selection_still_blocked = True
+- single_hard_heat_source_stopline = True
+- current_local_route_exhausted = True
+
+### Consequence
+- Keep:
+  - the existing board-local environment, event-attention, role-separation, and heat-proxy stack as frozen supervision
+- Promote next:
+  - only future evidence expansion, not more local retuning
+- Do not:
+  - reopen local capital_true_selection inside the same local inventory
+  - continue mining the same event set for a second hard source
+
+## DEC-0436 Package Board-Local Event-Attention-Capital Route For Handoff
+
+Date: 2026-04-05
+
+### Decision
+Freeze the local event-attention-capital route into a handoff package and wait for a future evidence shift.
+
+### Evidence
+- v134jg_commercial_aerospace_event_attention_capital_local_handoff_package_v1
+- v134jh_commercial_aerospace_jg_local_handoff_direction_triage_v1
+- local_route_mainline_frozen = True
+- capital_true_selection_blocked = True
+- hard_heat_source_inventory_single_case = True
+- future_handoff_ready = True
+
+### Consequence
+- Keep:
+  - the local route as a fixed supervision package
+- Promote next:
+  - broader attention evidence or a new retained symbol-named hard heat source
+- Do not:
+  - drift inside the same local event-attention-capital inventory
+
+## DEC-0437 Open Broader-Attention-Evidence Frontier As Protocol Only
+
+Date: 2026-04-05
+
+### Decision
+Freeze the broader-attention-evidence opening as protocol-only and keep the exhausted local route read-only.
+
+### Evidence
+- v134ji_commercial_aerospace_broader_attention_evidence_frontier_opening_v1
+- v134jj_commercial_aerospace_ji_broader_attention_direction_triage_v1
+- frontier_state = opened_protocol_only
+- protocol_open_count = 3
+- capital_true_selection = still_blocked
+- execution_authority = blocked
+- concept_purity_business_reference_layer = deferred_until_future_full_a_share_info
+
+### Consequence
+- Keep:
+  - the board-local route as frozen input
+- Promote next:
+  - broader attention heat evidence
+  - expanded symbol attention carrier search
+  - symbol-named hard heat-source expansion
+- Do not:
+  - claim live new evidence before the broader frontier is actually populated
+  - reopen execution or true-selection promotion at frontier opening
+
+## DEC-0438 Broader Attention Evidence Is Now Backed By A Concrete Local Inventory
+
+### Evidence
+- v134jk_commercial_aerospace_broader_attention_evidence_source_inventory_audit_v1
+- v134jl_commercial_aerospace_jk_broader_attention_inventory_direction_triage_v1
+- ready_local_broader_source_count = 3
+- market_snapshot_row_count = 968
+- theme_snapshot_row_count = 3136
+- decisive_registry_retained_count = 12
+- concept_purity_business_reference_layer = deferred_until_future_full_a_share_coverage
+- capital_true_selection = continue_blocked_during_inventory_stage
+
+### Consequence
+- Treat the broader_attention_evidence frontier as populated enough to start real source-driven expansion work.
+- Use market snapshots, theme snapshots, and retained decisive-event registry as the first lawful evidence surfaces.
+- Keep concept-purity/business-reference deferred and keep capital_true_selection blocked until the new evidence frontier produces real incremental cases.
+
+## DEC-0439 Treat Snapshot Inventories As Priors And Decisive Registry As The First Same-Plane Expansion Source
+
+### Evidence
+- v134jm_commercial_aerospace_broader_attention_source_applicability_audit_v1
+- v134jn_commercial_aerospace_jm_source_applicability_direction_triage_v1
+- market_snapshot_temporal_alignment = misaligned_2024_only
+- theme_snapshot_temporal_alignment = misaligned_2024_only
+- market_snapshot_overlap_count = 3
+- theme_snapshot_overlap_count = 0
+- decisive_registry_temporal_alignment = aligned_2026_event_surface
+- same_plane_ready_source_count = 1
+
+### Consequence
+- Do not treat 2024 snapshot inventories as live 2026 same-plane evidence for broader_attention_evidence expansion.
+- Use decisive_event_registry_v1 as the first lawful same-plane expansion surface.
+- Keep snapshots as structural priors only, and keep capital_true_selection blocked while same-plane broader evidence remains thin.
+
+## DEC-0440 Use The Decisive Event Registry As A Utility-Split Expansion Surface Rather Than A Single Blob
+
+### Evidence
+- v134jo_commercial_aerospace_decisive_event_registry_expansion_utility_audit_v1
+- v134jp_commercial_aerospace_jo_event_registry_expansion_direction_triage_v1
+- retained_registry_row_count = 12
+- broader_symbol_pool_expander_count = 4
+- heat_axis_and_counterpanel_expander_count = 2
+- carrier_follow_search_expander_count = 3
+- event_context_alignment_expander_count = 2
+- risk_constraint_anchor_expander_count = 1
+
+### Consequence
+- Do not treat the retained decisive registry as a single undifferentiated source.
+- Use broader_symbol_pool_expander as the first live same-plane branch.
+- Keep heat-axis, carrier-follow, and environment/risk anchors as later or parallel branches.
+- Keep capital_true_selection blocked during registry expansion.
+
+## DEC-0441 Treat Name-To-Symbol Coverage As The Current Blocker For Broader Symbol Pool Materialization
+
+### Evidence
+- v134jq_commercial_aerospace_broader_symbol_pool_materialization_gap_audit_v1
+- v134jr_commercial_aerospace_jq_symbol_pool_gap_direction_triage_v1
+- broader_symbol_pool_expander_source_count = 4
+- broader_symbol_pool_extracted_candidate_total = 170
+- security_master_file_count = 12
+- security_master_target_hit_count = 0
+- materialized_symbol_count = 0
+- authoritative_gap = name_to_symbol_coverage_gap
+
+### Consequence
+- Keep broader_symbol_pool_expander as the first live same-plane branch in principle.
+- Do not claim a materialized broader symbol pool from the current local files.
+- Treat local security-master coverage as the operative blocker.
+- If progress continues without expanding symbol-coverage support, pivot next to the parallel heat-axis/counterpanel branch instead of faking symbol-pool expansion.
+
+## DEC-0442 Formalize The Heat-Axis Branch Without Pretending It Thickens The Hard Counterpanel
+
+### Evidence
+- v134js_commercial_aerospace_heat_axis_counterpanel_expansion_audit_v1
+- v134jt_commercial_aerospace_js_heat_axis_direction_triage_v1
+- retained_heat_axis_source_count = 2
+- realized_heat_axis_source_count = 1
+- forward_heat_axis_anchor_count = 1
+- current_hard_counterpanel_count = 1
+- counterpanel_thickened_now = False
+
+### Consequence
+- Treat the heat-axis/counterpanel branch as a lawful parallel same-plane branch.
+- Use ca_source_007 as singleton reinforcement only.
+- Treat ca_anchor_004 as future structure rather than current same-plane thickening evidence.
+- Keep the hard counterpanel singleton and keep capital_true_selection blocked.
+
+## DEC-0443 Formalize The Carrier-Follow Branch As Same-Plane Reinforcement Without Promotion
+
+### Evidence
+- v134ju_commercial_aerospace_carrier_follow_search_expansion_audit_v1
+- v134jv_commercial_aerospace_ju_carrier_follow_direction_triage_v1
+- retained_supply_chain_source_count = 3
+- linked_local_case_count = 2
+- persistent_link_count = 1
+- moderate_link_count = 1
+- outside_named_watch_count = 1
+- branch_promotive = False
+
+### Consequence
+- Treat the carrier-follow branch as a lawful same-plane branch.
+- Use it to reinforce 603601 as the linked carrier case and 301306 as the linked follow case.
+- Keep ca_source_009 as an outside-named supply-chain watch only.
+- Do not upgrade any of these into capital_true_selection while the branch remains reinforcement-only.
+
+## DEC-0444 Treat The Broader-Attention Frontier As Real But Non-Promotive
+
+### Evidence
+- v134jw_commercial_aerospace_broader_attention_frontier_status_audit_v1
+- v134jx_commercial_aerospace_jw_frontier_status_direction_triage_v1
+- formalized_same_plane_branch_count = 3
+- promotive_branch_count = 0
+- broader_symbol_pool_expander -> name_to_symbol_coverage_gap
+- heat_axis_and_counterpanel_expander -> counterpanel_not_thickened
+- carrier_follow_search_expander -> branch_not_promotive
+
+### Consequence
+- Keep the broader-attention frontier open as a real evidence frontier.
+- Do not force capital_true_selection from any current branch.
+- Treat the present state as structured but non-promotive until at least one live branch crosses its blocker.
+DEC-0445 | information-center | Build A-share unified information center master blueprint: 10-module stack, object chain, maturity stages, and repo coverage gaps; sequence identity/event/quality before shadow binding.
+DEC-0446 | information-center | Build storage lifecycle policy: treat storage exit as first-class, keep truth layers versioned, default intermediates to TTL/disposable, and archive high-cost raw detail asymmetrically.
+DEC-0447 | info-center-identity | Complete first identity workstream pass: materialized unified security master and entity alias map from 12 existing security-master sources; freeze identity as current SoT for taxonomy/event binding.
+DEC-0448 | info-center-taxonomy | Complete first taxonomy workstream pass: materialized concept and sector membership surfaces on top of canonical identity, and explicitly turned business-reference and concept-purity into backlog registries instead of fabricating labels.
+DEC-0449 | info-center-events | Complete first event workstream pass: bootstrap source/document/claim/event/evidence chain from 52 catalyst-registry rows across existing registries; freeze event chain as current ingestable foundation.
+DEC-0450 | info-center-quality | Complete first quality workstream pass: materialized source quality, event quality, repost control, and contradiction backlog registries on top of the bootstrapped event chain; freeze as current quality guardrail layer.
+DEC-0451 | info-center-attention | Complete first attention workstream pass: materialized a central attention registry with one hard case and four soft candidates; keep attention evidence bootstrap-only instead of over-claiming hard heat diversity.
+DEC-0452 | info-center-labels-features | Complete first semantic layer pass: materialized label registry, label assignments, feature registry, and feature surface; explicitly leave state/governance labels and representation features in backlog.
+DEC-0453 | info-center-pti | Complete first PTI workstream pass: materialized visible-time event ledger, time-slice surface, and state-transition journal; unresolved timestamped events stay as visibility backlog instead of receiving fabricated decision times.
+DEC-0454 | info-center-market | Complete first market workstream pass in storage-aware form: materialized daily symbol registry, index registry, and intraday raw-zip coverage registry; defer board-state and full minute symbol expansion to named backlog.
+DEC-0455 | info-center-replay | Complete first replay workstream pass: bind PTI time slices to market coverage in a read-only shadow replay surface; keep replay non-promotive and explicitly blocked from execution binding.
+DEC-0456 | info-center-serving | Complete first serving workstream pass: materialize research and shadow view registries plus serving routes; keep live-like serving deferred behind governance and automation gates.
+DEC-0457 | info-center-governance | Complete first governance workstream pass: materialize schema registry, dataset registry, workstream heartbeat, and promotion-gate registry as the information-center control plane.
+DEC-0458 | info-center-automation | Complete first automation workstream pass: materialize ingest, pipeline, review, retention, and orchestration job registries as contract-first automation surfaces rather than prematurely active jobs.
+DEC-0459 | info-center-completion | Freeze the 13-workstream information-center foundation as complete enough for review. Remaining work must now proceed via named backlog closure or explicit source-activation frontiers, not undirected expansion.
+DEC-0460 | info-center-business-purity | Close the first business-reference and concept-purity backlog using in-repo sector and concept surfaces; freeze business anchors and purity guardrails as bootstrap truth while retaining explicit residuals for future fundamental-text enrichment.
+DEC-0461 | info-center-contradiction-resolution | Close the first contradiction-resolution backlog by materializing a contradiction graph, duplicate-merge candidates, and a semantic-divergence review queue; stop treating all event rows as one flat unresolved quality backlog.

@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119t_cpo_same_family_deentangling_scan_v1",
+    "variant_count": 4,
+    "best_symbol_holdout_variant": "symbol_date_blend_033",
+    "best_close_leakage_variant": "date_resid",
+    "recommended_next_posture": "stop_same_family_micro_tuning_if_no_single_variant_improves_holdout_and_leakage_together"
+  },
+  "variant_rows": [
+    {
+      "variant_name": "base_score",
+      "best_add_pool_balanced_accuracy": 0.727273,
+      "time_split_mean": 0.597222,
+      "time_split_min": 0.375,
+      "symbol_holdout_mean": 0.4375,
+      "symbol_holdout_min": 0.375,
+      "role_holdout_mean": 0.440476,
+      "role_holdout_min": 0.333333,
+      "entry_leakage_rate": 0.375,
+      "close_leakage_rate": 0.666667
+    },
+    {
+      "variant_name": "date_resid",
+      "best_add_pool_balanced_accuracy": 0.554545,
+      "time_split_mean": 0.472222,
+      "time_split_min": 0.416667,
+      "symbol_holdout_mean": 0.385417,
+      "symbol_holdout_min": 0.333333,
+      "role_holdout_mean": 0.404762,
+      "role_holdout_min": 0.309524,
+      "entry_leakage_rate": 0.0,
+      "close_leakage_rate": 0.0
+    },
+    {
+      "variant_name": "symbol_resid",
+      "best_add_pool_balanced_accuracy": 0.772727,
+      "time_split_mean": 0.736111,
+      "time_split_min": 0.666667,
+      "symbol_holdout_mean": 0.572917,
+      "symbol_holdout_min": 0.5625,
+      "role_holdout_mean": 0.595238,
+      "role_holdout_min": 0.357143,
+      "entry_leakage_rate": 0.75,
+      "close_leakage_rate": 0.666667
+    },
+    {
+      "variant_name": "symbol_date_blend_033",
+      "best_add_pool_balanced_accuracy": 0.772727,
+      "time_split_mean": 0.736111,
+      "time_split_min": 0.666667,
+      "symbol_holdout_mean": 0.625,
+      "symbol_holdout_min": 0.5,
+      "role_holdout_mean": 0.595238,
+      "role_holdout_min": 0.357143,
+      "entry_leakage_rate": 0.75,
+      "close_leakage_rate": 0.333333
+    }
+  ],
+  "interpretation": [
+    "V1.19T scans narrow same-family de-entangling variants instead of opening another broad feature branch.",
+    "The purpose is to test whether simple residualization or relative-score transforms can simultaneously preserve chronology and reduce object/context leakage.",
+    "If no single narrow variant dominates on both axes, same-family micro-tuning should stop."
+  ]
+}

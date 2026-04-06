@@ -1,0 +1,188 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v131q_commercial_aerospace_local_5min_resample_feasibility_audit_v1",
+    "manifest_row_count": 4,
+    "ready_count": 4,
+    "local_5min_fully_ready": true,
+    "feasibility_csv": "data\\raw\\intraday_requests\\commercial_aerospace_local_5min_resample_rows_v1.csv",
+    "authoritative_rule": "if the retained override sessions can be resampled from local 1min archives into clean 5min bars, the narrow commercial-aerospace 5min prototype can open without external provider dependence"
+  },
+  "feasibility_rows": [
+    {
+      "failure_id": "20260113_601698",
+      "symbol": "601698",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "resample_status": "ready",
+      "one_minute_row_count": 241,
+      "five_minute_row_count": 50,
+      "sample_5min_head": [
+        {
+          "bucket": "2026-01-13 09:30",
+          "open": 53.87,
+          "high": 53.87,
+          "low": 48.49,
+          "close": 48.49,
+          "volume": 259218.0,
+          "amount": 1313521936.0
+        },
+        {
+          "bucket": "2026-01-13 09:35",
+          "open": 48.49,
+          "high": 48.49,
+          "low": 48.49,
+          "close": 48.49,
+          "volume": 75335.0,
+          "amount": 365299396.0
+        },
+        {
+          "bucket": "2026-01-13 09:40",
+          "open": 48.49,
+          "high": 48.49,
+          "low": 48.49,
+          "close": 48.49,
+          "volume": 34438.0,
+          "amount": 166989858.0
+        }
+      ]
+    },
+    {
+      "failure_id": "20260126_300342",
+      "symbol": "300342",
+      "failure_type": "intraday_collapse_override_required",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "high",
+      "resample_status": "ready",
+      "one_minute_row_count": 241,
+      "five_minute_row_count": 50,
+      "sample_5min_head": [
+        {
+          "bucket": "2026-01-26 09:30",
+          "open": 60.0,
+          "high": 60.18,
+          "low": 58.0,
+          "close": 58.79,
+          "volume": 118096.0,
+          "amount": 699056872.0
+        },
+        {
+          "bucket": "2026-01-26 09:35",
+          "open": 58.85,
+          "high": 60.5,
+          "low": 58.33,
+          "close": 60.5,
+          "volume": 52748.0,
+          "amount": 313431236.0
+        },
+        {
+          "bucket": "2026-01-26 09:40",
+          "open": 60.5,
+          "high": 60.8,
+          "low": 59.88,
+          "close": 60.4,
+          "volume": 43607.0,
+          "amount": 262894712.0
+        }
+      ]
+    },
+    {
+      "failure_id": "20260113_000738",
+      "symbol": "000738",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260112",
+      "execution_trade_date": "20260113",
+      "required_session_window": "20260113_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "resample_status": "ready",
+      "one_minute_row_count": 241,
+      "five_minute_row_count": 50,
+      "sample_5min_head": [
+        {
+          "bucket": "2026-01-13 09:30",
+          "open": 24.65,
+          "high": 24.65,
+          "low": 22.99,
+          "close": 23.03,
+          "volume": 90580.0,
+          "amount": 214831972.0
+        },
+        {
+          "bucket": "2026-01-13 09:35",
+          "open": 23.05,
+          "high": 23.37,
+          "low": 22.95,
+          "close": 23.28,
+          "volume": 77536.0,
+          "amount": 179194488.0
+        },
+        {
+          "bucket": "2026-01-13 09:40",
+          "open": 23.28,
+          "high": 23.45,
+          "low": 22.98,
+          "close": 22.98,
+          "volume": 50731.0,
+          "amount": 117903750.0
+        }
+      ]
+    },
+    {
+      "failure_id": "20260126_300045",
+      "symbol": "300045",
+      "failure_type": "intraday_reversal_watch",
+      "signal_trade_date": "20260123",
+      "execution_trade_date": "20260126",
+      "required_session_window": "20260126_0930_1500",
+      "required_use_case": "intraday_override_supervision",
+      "minimum_fields": "open,high,low,close,volume,amount",
+      "priority": "medium",
+      "resample_status": "ready",
+      "one_minute_row_count": 241,
+      "five_minute_row_count": 50,
+      "sample_5min_head": [
+        {
+          "bucket": "2026-01-26 09:30",
+          "open": 31.01,
+          "high": 31.01,
+          "low": 30.24,
+          "close": 30.59,
+          "volume": 95272.0,
+          "amount": 291924972.0
+        },
+        {
+          "bucket": "2026-01-26 09:35",
+          "open": 30.55,
+          "high": 31.21,
+          "low": 30.38,
+          "close": 30.85,
+          "volume": 60466.0,
+          "amount": 186528478.0
+        },
+        {
+          "bucket": "2026-01-26 09:40",
+          "open": 30.83,
+          "high": 31.01,
+          "low": 30.75,
+          "close": 31.0,
+          "volume": 37187.0,
+          "amount": 114946080.0
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "V1.31Q tests whether the newly available local 1-minute archive can be turned into 5-minute bars for the exact retained override sessions.",
+    "This bypasses Baostock and turns the commercial-aerospace 5-minute branch into a local-data question."
+  ]
+}

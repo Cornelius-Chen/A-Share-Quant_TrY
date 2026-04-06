@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119z_cpo_tushare_orthogonal_scan_stopline_v1",
+    "scan_candidate_count": 9,
+    "viable_increment_candidate_count": 0,
+    "parent_external_best_balanced_accuracy": 0.909091,
+    "parent_time_split_mean_balanced_accuracy": 0.875,
+    "parent_time_split_min_balanced_accuracy": 0.833333,
+    "orthogonal_scan_stopline_reached": true,
+    "recommended_next_posture": "stop_tushare_daily_orthogonal_micro_scan_and_shift_to_new_data_plane"
+  },
+  "scan_rows": [
+    {
+      "candidate_name": "base_parent",
+      "weights": {},
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.875,
+      "time_split_min_balanced_accuracy": 0.833333,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": true
+    },
+    {
+      "candidate_name": "plus_md_support",
+      "weights": {
+        "md_support_ratio": 0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.819444,
+      "time_split_min_balanced_accuracy": 0.666667,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    },
+    {
+      "candidate_name": "plus_net_flow_scaled",
+      "weights": {
+        "net_mf_scaled": 0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.805556,
+      "time_split_min_balanced_accuracy": 0.5,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    },
+    {
+      "candidate_name": "plus_lgelg_net_scaled",
+      "weights": {
+        "lgelg_net_scaled": 0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.875,
+      "time_split_min_balanced_accuracy": 0.833333,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": true
+    },
+    {
+      "candidate_name": "plus_free_share",
+      "weights": {
+        "free_share": 0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.819444,
+      "time_split_min_balanced_accuracy": 0.666667,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    },
+    {
+      "candidate_name": "minus_circ_mv",
+      "weights": {
+        "circ_mv": -0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.875,
+      "time_split_min_balanced_accuracy": 0.833333,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": true
+    },
+    {
+      "candidate_name": "plus_sm_buy_share",
+      "weights": {
+        "sm_buy_share": 0.25
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.819444,
+      "time_split_min_balanced_accuracy": 0.666667,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    },
+    {
+      "candidate_name": "minus_retail_crowding_ratio",
+      "weights": {
+        "retail_crowding_ratio": -0.25
+      },
+      "external_best_balanced_accuracy": 0.863636,
+      "time_split_mean_balanced_accuracy": 0.722222,
+      "time_split_min_balanced_accuracy": 0.5,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    },
+    {
+      "candidate_name": "limit_discipline_support",
+      "weights": {
+        "up_gap": 0.05,
+        "close_to_up_band": -0.05,
+        "high_to_up_band": -0.05
+      },
+      "external_best_balanced_accuracy": 0.909091,
+      "time_split_mean_balanced_accuracy": 0.819444,
+      "time_split_min_balanced_accuracy": 0.666667,
+      "matches_or_beats_parent_external": false,
+      "matches_or_beats_parent_time_split": false
+    }
+  ],
+  "interpretation": [
+    "V1.19Z is a stopline scan, not a new branch. It checks whether any remaining narrow orthogonal ideas inside the current Tushare daily_basic/moneyflow/stk_limit plane beat the parent ELG-supported combo.",
+    "The scan covers float/cap, medium-flow support, net-flow scaling, retail crowding, and limit-band discipline variants under the same evaluation surface.",
+    "If none of them clear the parent on both external and chronology surfaces, this data plane should be treated as locally exhausted rather than endlessly re-mined."
+  ]
+}

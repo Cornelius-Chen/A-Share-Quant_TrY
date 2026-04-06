@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134je_commercial_aerospace_event_attention_capital_local_completion_audit_v1",
+    "route_phase_count": 5,
+    "negative_environment_ready": true,
+    "event_attention_local_stack_ready": true,
+    "capital_true_selection_still_blocked": true,
+    "single_hard_heat_source_stopline": true,
+    "current_local_route_exhausted": true,
+    "completion_csv": "data\\training\\commercial_aerospace_event_attention_capital_local_completion_v1.csv",
+    "authoritative_output": "commercial_aerospace_event_attention_capital_local_completion_ready_for_direction_triage"
+  },
+  "status_rows": [
+    {
+      "component": "negative_environment_semantics",
+      "status": "frozen_complete_for_local_supervision",
+      "detail": "semantic_count = 3"
+    },
+    {
+      "component": "event_attention_registry",
+      "status": "frozen_complete_for_local_supervision",
+      "detail": "registry_row_count = 8"
+    },
+    {
+      "component": "role_separation_layer",
+      "status": "frozen_complete_for_local_supervision",
+      "detail": "soft_candidate_count = 4"
+    },
+    {
+      "component": "heat_proxy_layer",
+      "status": "retain_as_local_role_clarity_only",
+      "detail": "strongest_soft_heat_proxy_symbol = 603601"
+    },
+    {
+      "component": "capital_true_selection",
+      "status": "still_blocked",
+      "detail": "remaining_hard_gap_count = 2"
+    },
+    {
+      "component": "symbol_named_hard_heat_source_inventory",
+      "status": "single_case_stopline",
+      "detail": "retained_symbol_named_heat_source_count = 1"
+    },
+    {
+      "component": "local_evidence_source",
+      "status": "locally_exhausted",
+      "detail": "current_local_route_exhausted = True"
+    }
+  ],
+  "interpretation": [
+    "V1.34JE asks whether the board-local event-attention-capital branch is still in open exploration or has reached a supervision-level completion stopline.",
+    "The answer is that the local branch is complete enough to freeze: local role semantics are rich, but true-selection promotion remains blocked and the event inventory is locally exhausted."
+  ]
+}

@@ -1,0 +1,5 @@
+﻿component,status,detail
+broader_hit_widening_value,retain_with_refinement,"same_day_loss_avoided_total = 20525.3818, best_tier = severe_override_positive"
+predicted_mild_session_execution,tighten_next,block_execution_for_predicted_mild_sessions_inside_broader_hit_lane
+all_session_widening,still_blocked,"Broader-hit supervision remains useful, but it is not clean enough to justify all-session widening."
+phase3_replay_lane,still_blocked,The broader-hit branch remains a phase-2 shadow object and still cannot bind into replay.

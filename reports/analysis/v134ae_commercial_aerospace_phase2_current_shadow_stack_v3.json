@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ae_commercial_aerospace_phase2_current_shadow_stack_v3",
+    "current_phase2_wider_reference": "broader_hit_current_plus_reversal_100pct",
+    "current_phase2_narrow_reference": "canonical_seed_simulator",
+    "phase2_best_same_day_loss_avoided_total": 45929.005,
+    "phase2_best_simulated_order_count": 18,
+    "best_reversal_fraction": 1.0,
+    "stack_csv": "data\\training\\commercial_aerospace_phase2_current_shadow_stack_v3.csv",
+    "authoritative_output": "commercial_aerospace_phase2_current_shadow_stack_v3_ready_for_direction_triage"
+  },
+  "stack_rows": [
+    {
+      "variant": "canonical_seed_simulator",
+      "scope": "6 canonical sessions",
+      "same_day_loss_avoided_total": 3732.6954,
+      "simulated_order_count": 8,
+      "status": "retained_narrow_reference"
+    },
+    {
+      "variant": "broader_hit_base",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 20525.3818,
+      "simulated_order_count": 35,
+      "status": "superseded"
+    },
+    {
+      "variant": "broader_hit_mild_blocked",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 25934.8882,
+      "simulated_order_count": 30,
+      "status": "superseded"
+    },
+    {
+      "variant": "broader_hit_mild_blocked_plus_reversal_late_severe_block",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 26915.5372,
+      "simulated_order_count": 29,
+      "status": "superseded_by_reversal_fraction_refinement"
+    },
+    {
+      "variant": "broader_hit_current_plus_reversal_100pct",
+      "scope": "24 broader-hit sessions",
+      "same_day_loss_avoided_total": 45929.005,
+      "simulated_order_count": 18,
+      "status": "current_phase2_wider_reference"
+    }
+  ],
+  "interpretation": [
+    "V1.34AE freezes the next phase-2 stack after the reversal sell-fraction supervision pass.",
+    "This promotion is still same-day-shadow only: it refines the internal multi-stage sell ladder without authorizing replay binding or broader surface growth."
+  ]
+}

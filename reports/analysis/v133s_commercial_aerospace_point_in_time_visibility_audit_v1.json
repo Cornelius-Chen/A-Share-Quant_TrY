@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133s_commercial_aerospace_point_in_time_visibility_audit_v1",
+    "seed_session_count": 6,
+    "same_bar_violation_count": 0,
+    "path_cutoff_violation_count": 0,
+    "lineage_monotonic_violation_count": 0,
+    "event_visibility_violation_count": 0,
+    "warmup_nonnull_violation_count": 0,
+    "audit_csv": "data\\training\\commercial_aerospace_point_in_time_visibility_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_point_in_time_visibility_seed_audit_ready_for_direction_triage"
+  },
+  "session_rows": [
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "minute_row_count": 60,
+      "same_bar_violation_count": 0,
+      "path_cutoff_violation_count": 0,
+      "lineage_monotonic_violation_count": 0,
+      "event_visibility_violation_count": 0,
+      "warmup_nonnull_violation_count": 0
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "same_bar_activation",
+      "status": "pass",
+      "detail": "same_bar_violation_count = 0"
+    },
+    {
+      "acceptance_item": "path_cutoff_precedes_visibility",
+      "status": "pass",
+      "detail": "path_cutoff_violation_count = 0"
+    },
+    {
+      "acceptance_item": "lineage_monotonicity",
+      "status": "pass",
+      "detail": "lineage_monotonic_violation_count = 0"
+    },
+    {
+      "acceptance_item": "event_visibility_from_session_open_or_later",
+      "status": "pass",
+      "detail": "event_visibility_violation_count = 0"
+    },
+    {
+      "acceptance_item": "warmup_nulls_bounded",
+      "status": "pass",
+      "detail": "warmup_nonnull_violation_count = 0"
+    }
+  ],
+  "interpretation": [
+    "V1.33S audits whether the canonical seed visibility feed actually obeys the phase-1 point-in-time rules.",
+    "The goal is not performance but legality: same-bar activation, lagged-only path construction, and explicit lineage discipline."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127h_commercial_aerospace_ghi_primary_attribution_triage_v1",
+    "primary_variant": "v127e_broad_half_reference",
+    "primary_final_equity": 1261238.592,
+    "primary_max_drawdown": 0.12870312,
+    "authoritative_next_step": "symbol_phase_aware_derisk_budget",
+    "stop_doing": [
+      "do_not_open_another_downside_family_yet",
+      "do_not_shift_attention_to_aggressive_shadow_first",
+      "do_not_continue_same_family_grammar_micro_tuning"
+    ]
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "symbol_phase_aware_derisk_budget",
+      "reason": "v127e already de-risks more in the main drawdown window, so the next bottleneck is budget allocation by symbol and phase rather than willingness to sell."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "symbol_phase_aware_derisk_budget",
+      "reason": "The replay frontier is already improved; the next increment should come from better budget efficiency, not another downside grammar search."
+    },
+    {
+      "subagent": "James",
+      "vote": "symbol_phase_aware_derisk_budget",
+      "reason": "Window-level drawdown did not compress despite much larger reduce notional, so de-risk budget placement is now the right control problem."
+    }
+  ],
+  "interpretation": [
+    "V1.27H freezes the next-step direction after attribution: the new primary reference is good enough to stop discovery and start budget allocation work.",
+    "Commercial aerospace should now optimize how much to de-risk by symbol and phase, not whether to search another downside family."
+  ]
+}

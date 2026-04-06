@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v132u_commercial_aerospace_local_1min_state_transition_audit_v1",
+    "hit_row_count": 24,
+    "unique_transition_pattern_count": 6,
+    "top_transition_pattern": "neutral>mild_override_watch>reversal_watch>severe_override_positive",
+    "severe_hits_with_prior_reversal_share": 0.8,
+    "authoritative_rule": "the local 1min branch is stronger as a governance state machine when broader hit sessions show ordered intraday escalation rather than random isolated tier labels"
+  },
+  "tier_rows": [
+    {
+      "predicted_tier": "severe_override_positive",
+      "row_count": 5,
+      "max_state_same_as_tier_count": 5,
+      "reached_reversal_or_higher_count": 5,
+      "reached_severe_count": 5,
+      "mean_first_mild_minute": 21.0,
+      "mean_first_reversal_minute": 45.2,
+      "mean_first_severe_minute": 90.8
+    },
+    {
+      "predicted_tier": "reversal_watch",
+      "row_count": 13,
+      "max_state_same_as_tier_count": 5,
+      "reached_reversal_or_higher_count": 13,
+      "reached_severe_count": 8,
+      "mean_first_mild_minute": 16.67,
+      "mean_first_reversal_minute": 22.38,
+      "mean_first_severe_minute": 70.5
+    },
+    {
+      "predicted_tier": "mild_override_watch",
+      "row_count": 6,
+      "max_state_same_as_tier_count": 1,
+      "reached_reversal_or_higher_count": 5,
+      "reached_severe_count": 0,
+      "mean_first_mild_minute": 31.67,
+      "mean_first_reversal_minute": 45.6,
+      "mean_first_severe_minute": 0.0
+    }
+  ],
+  "pattern_rows": [
+    {
+      "transition_pattern": "neutral>mild_override_watch>reversal_watch>severe_override_positive",
+      "count": 11
+    },
+    {
+      "transition_pattern": "neutral>mild_override_watch>reversal_watch",
+      "count": 9
+    },
+    {
+      "transition_pattern": "neutral>mild_override_watch",
+      "count": 1
+    },
+    {
+      "transition_pattern": "neutral>reversal_watch",
+      "count": 1
+    },
+    {
+      "transition_pattern": "neutral>reversal_watch>severe_override_positive",
+      "count": 1
+    },
+    {
+      "transition_pattern": "neutral>severe_override_positive",
+      "count": 1
+    }
+  ],
+  "interpretation": [
+    "V1.32U studies whether the broader local 1-minute hit sessions evolve through ordered intraday state transitions.",
+    "The goal is to check whether severe / reversal / mild behave like a real escalation ladder over the session rather than only as terminal labels."
+  ]
+}

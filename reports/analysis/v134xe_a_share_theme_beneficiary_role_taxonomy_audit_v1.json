@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "role_variant_count": 15,
+    "normalized_role_family_count": 3,
+    "linkage_class_count": 3,
+    "authoritative_output": "a_share_theme_beneficiary_role_taxonomy_materialized"
+  },
+  "rows": [
+    {
+      "component": "beneficiary_role_taxonomy",
+      "component_state": "materialized",
+      "metric": "role_variant_count",
+      "value": "15"
+    },
+    {
+      "component": "beneficiary_role_taxonomy",
+      "component_state": "materialized",
+      "metric": "normalized_role_family_count",
+      "value": "3"
+    },
+    {
+      "component": "beneficiary_role_taxonomy",
+      "component_state": "materialized",
+      "metric": "linkage_class_count",
+      "value": "3"
+    }
+  ],
+  "interpretation": [
+    "The raw beneficiary-role strings are now normalized into a smaller taxonomy so downstream consumers do not depend on ad hoc adjacent_* variants.",
+    "Linkage class is now an intentional taxonomy output rather than an inline string heuristic only."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "decision_unit_count": 4,
+    "pending_manual_unit_count": 0,
+    "manual_decision_completed_count": 4,
+    "primary_host_family_count": 1,
+    "independent_host_count": 2,
+    "sibling_host_count": 1,
+    "promotable_now_count": 0,
+    "status_csv": "data\\training\\a_share_batch_one_decision_closure_gate_status_v1.csv",
+    "authoritative_output": "a_share_batch_one_decision_closure_completed_but_runtime_promotion_kept_closed"
+  },
+  "rows": [
+    {
+      "closure_component": "primary_host_family",
+      "closure_state": "manual_decision_completed",
+      "supporting_count": 1,
+      "blocking_reason": "primary batch-one host family manual approval is complete"
+    },
+    {
+      "closure_component": "independent_hosts",
+      "closure_state": "manual_decision_completed_after_primary",
+      "supporting_count": 2,
+      "blocking_reason": "independent T2 host manual approvals are complete"
+    },
+    {
+      "closure_component": "sibling_host_dependency",
+      "closure_state": "manual_decision_completed_after_primary_outcome",
+      "supporting_count": 1,
+      "blocking_reason": "sibling Sina host manual approval is complete after the primary family outcome"
+    },
+    {
+      "closure_component": "promotion_gate",
+      "closure_state": "closed_pending_runtime_promotion",
+      "supporting_count": 0,
+      "blocking_reason": "manual approvals are complete but runtime promotion remains closed"
+    }
+  ],
+  "interpretation": [
+    "Batch-one closure gate now shows that manual review is complete instead of pending.",
+    "The remaining block is runtime promotion, not another host-level decision step."
+  ]
+}

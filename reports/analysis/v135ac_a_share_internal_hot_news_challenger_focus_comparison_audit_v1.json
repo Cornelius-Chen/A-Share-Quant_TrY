@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "challenger_row_count": 5,
+    "current_primary_theme_slug": "defense_industry",
+    "current_primary_watch_symbol": "600760",
+    "top_challenger_theme_slug": "oil_gas",
+    "top_challenger_symbol": "601857",
+    "top_challenger_support_row_count": 4,
+    "top_challenger_source_family_count": 1,
+    "top_challenger_focus_total_score": 1.0633,
+    "authoritative_output": "a_share_internal_hot_news_challenger_focus_comparison_materialized"
+  },
+  "rows": [
+    {
+      "component": "challenger_focus_comparison",
+      "component_state": "materialized",
+      "metric": "challenger_row_count",
+      "value": "5"
+    },
+    {
+      "component": "challenger_focus_comparison",
+      "component_state": "materialized",
+      "metric": "top_challenger_theme_slug",
+      "value": "oil_gas"
+    },
+    {
+      "component": "challenger_focus_comparison",
+      "component_state": "materialized",
+      "metric": "top_challenger_symbol",
+      "value": "601857"
+    },
+    {
+      "component": "challenger_focus_comparison",
+      "component_state": "materialized",
+      "metric": "top_challenger_support_row_count",
+      "value": "4"
+    },
+    {
+      "component": "challenger_focus_comparison",
+      "component_state": "materialized",
+      "metric": "top_challenger_source_family_count",
+      "value": "1"
+    }
+  ],
+  "interpretation": [
+    "This comparison isolates the strongest non-current theme/symbol candidates that could challenge the accepted primary focus later.",
+    "It gives the next rotation decision a simpler challenger board instead of requiring a full reread of the entire controlled merge candidate lane."
+  ]
+}

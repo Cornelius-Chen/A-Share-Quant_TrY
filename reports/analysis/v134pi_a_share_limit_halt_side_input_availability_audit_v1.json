@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "retained_family_count": 4,
+    "board_symbol_count": 82,
+    "stk_limit_symbol_count": 51,
+    "namechange_symbol_count": 1,
+    "suspend_symbol_count": 3,
+    "status_csv": "data\\training\\a_share_limit_halt_side_input_availability_status_v1.csv",
+    "authoritative_output": "a_share_limit_halt_side_input_availability_surface_materialized"
+  },
+  "rows": [
+    {
+      "side_input_family": "board_identity",
+      "availability_state": "retained",
+      "symbol_count": 82,
+      "coverage_note": "board comes from security_master identity layer"
+    },
+    {
+      "side_input_family": "stk_limit_price_band",
+      "availability_state": "retained",
+      "symbol_count": 51,
+      "coverage_note": "up_limit/down_limit retained through 2026-04-03"
+    },
+    {
+      "side_input_family": "st_proxy_namechange",
+      "availability_state": "retained_sparse",
+      "symbol_count": 1,
+      "coverage_note": "namechange retained as first ST proxy family"
+    },
+    {
+      "side_input_family": "suspension_records",
+      "availability_state": "retained_sparse",
+      "symbol_count": 3,
+      "coverage_note": "suspend_d retained as first suspension family"
+    }
+  ],
+  "interpretation": [
+    "Replay-facing limit-halt derivation no longer lacks every side input family.",
+    "Board identity and price-band inputs are already retained, while ST and suspension have now been added as sparse but real retained families.",
+    "The remaining task is not source hunting; it is semantic materialization from uneven side-input families."
+  ]
+}

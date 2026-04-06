@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ji_commercial_aerospace_broader_attention_evidence_frontier_opening_v1",
+    "frontier_name": "broader_attention_evidence",
+    "frontier_state": "opened_protocol_only",
+    "frozen_input_route_count": 1,
+    "protocol_open_count": 3,
+    "deferred_component_count": 1,
+    "execution_blocked": true,
+    "opening_csv": "data\\training\\commercial_aerospace_broader_attention_evidence_frontier_opening_v1.csv",
+    "authoritative_rule": "the next lawful frontier after the frozen board-local route is broader attention evidence expansion: it opens as protocol-only, keeps the local route read-only, keeps capital_true_selection blocked, and defers concept-purity or full-A-share business-reference work until later coverage exists"
+  },
+  "frontier_rows": [
+    {
+      "component": "board_local_event_attention_capital_route",
+      "status": "frozen_input",
+      "detail": "freeze_board_local_event_attention_capital_route_and_wait_for_future_evidence_shift"
+    },
+    {
+      "component": "symbol_named_heat_source_expansion",
+      "status": "protocol_open",
+      "detail": "search for a second retained symbol-named hard heat source outside the exhausted local inventory"
+    },
+    {
+      "component": "broader_attention_heat_evidence_expansion",
+      "status": "protocol_open",
+      "detail": "expand beyond board-local proxy evidence into thicker attention and heat evidence while staying supervision-only"
+    },
+    {
+      "component": "expanded_symbol_attention_carrier_search",
+      "status": "protocol_open",
+      "detail": "expand candidate search beyond the current named local inventory without reopening execution or true selection"
+    },
+    {
+      "component": "concept_purity_business_reference_layer",
+      "status": "deferred_until_future_full_a_share_info",
+      "detail": "user explicitly deferred broader fundamentals and concept-purity integration until fuller A-share information exists"
+    },
+    {
+      "component": "capital_true_selection",
+      "status": "still_blocked",
+      "detail": "broader evidence frontier may support it later, but no promotion is allowed at opening"
+    },
+    {
+      "component": "execution_authority",
+      "status": "blocked",
+      "detail": "the new frontier is supervision-only and does not inherit any execution permission"
+    }
+  ],
+  "interpretation": [
+    "V1.34JI does not reopen the exhausted local route. It opens the next evidence frontier in protocol form only.",
+    "The core discipline is preserved: new evidence may expand the stack, but nothing here reactivates true-selection promotion or execution authority."
+  ]
+}

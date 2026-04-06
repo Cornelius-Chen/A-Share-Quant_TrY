@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129y_bk0480_aerospace_aviation_local_universe_expansion_audit_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "current_internal_owner_count": 2,
+    "timeline_native_candidate_count": 5,
+    "historical_snapshot_candidate_count": 3,
+    "confirmation_candidate_count": 1,
+    "quarantine_candidate_count": 2,
+    "reject_candidate_count": 1,
+    "confirmation_candidates": [
+      "600760"
+    ],
+    "quarantine_candidates": [
+      "002273",
+      "601989"
+    ],
+    "reject_candidates": [
+      "000099"
+    ],
+    "authoritative_rule": "expand_bk0480_locally_only_when_native_snapshot_or_native_timeline_evidence_is_strong_enough_and_keep_cross_version_names_out_of_control_authority_until_harmonized",
+    "recommended_next_posture": "refresh_role_surface_with_600760_as_confirmation_only_and_keep_002273_601989_quarantined"
+  },
+  "candidate_rows": [
+    {
+      "symbol": "600760",
+      "v5_snapshot_days": 42,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": 0.616179,
+      "v6_mean_non_junk": null,
+      "v5_mean_expected_upside": 0.580944,
+      "v6_mean_expected_upside": null,
+      "timeline_approval_days": 5,
+      "timeline_leader_core_days": 5,
+      "timeline_buy_days": 4,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": 0.673449,
+      "timeline_first_date": "2024-04-22",
+      "timeline_last_date": "2024-06-11",
+      "recommended_local_status": "confirmation_candidate_historical_strong",
+      "rationale": "historical_bk0480_snapshot_support_and_repeated_timeline_buys_make_this_the_best_local_expansion_name"
+    },
+    {
+      "symbol": "002273",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": null,
+      "v5_mean_expected_upside": null,
+      "v6_mean_expected_upside": null,
+      "timeline_approval_days": 5,
+      "timeline_leader_core_days": 4,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 1,
+      "timeline_mean_best_score": 0.510988,
+      "timeline_first_date": "2024-04-22",
+      "timeline_last_date": "2024-06-11",
+      "recommended_local_status": "quarantine_pending_local_confirmation",
+      "rationale": "timeline_support_exists_but_lacks_native_snapshot_reinforcement_so_this_stays_pending"
+    },
+    {
+      "symbol": "601989",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": null,
+      "v5_mean_expected_upside": null,
+      "v6_mean_expected_upside": null,
+      "timeline_approval_days": 5,
+      "timeline_leader_core_days": 4,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": 0.487602,
+      "timeline_first_date": "2024-04-22",
+      "timeline_last_date": "2024-06-11",
+      "recommended_local_status": "quarantine_pending_local_confirmation",
+      "rationale": "timeline_support_exists_but_lacks_native_snapshot_reinforcement_so_this_stays_pending"
+    },
+    {
+      "symbol": "000099",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 0,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": null,
+      "v5_mean_expected_upside": null,
+      "v6_mean_expected_upside": null,
+      "timeline_approval_days": 5,
+      "timeline_leader_core_days": 2,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 3,
+      "timeline_mean_best_score": 0.496822,
+      "timeline_first_date": "2024-04-22",
+      "timeline_last_date": "2024-06-11",
+      "recommended_local_status": "reject_or_mirror_pending",
+      "rationale": "evidence_is_too_mixed_or_too_weak_to_admit_even_as_pending_confirmation"
+    },
+    {
+      "symbol": "000738",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 85,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": 0.58752,
+      "v5_mean_expected_upside": null,
+      "v6_mean_expected_upside": 0.566877,
+      "timeline_approval_days": 0,
+      "timeline_leader_core_days": 0,
+      "timeline_buy_days": 0,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": null,
+      "timeline_first_date": null,
+      "timeline_last_date": null,
+      "recommended_local_status": "existing_internal_owner",
+      "rationale": "already_frozen_in_v129s"
+    },
+    {
+      "symbol": "600118",
+      "v5_snapshot_days": 0,
+      "v6_snapshot_days": 23,
+      "v5_mean_non_junk": null,
+      "v6_mean_non_junk": 0.573534,
+      "v5_mean_expected_upside": null,
+      "v6_mean_expected_upside": 0.471307,
+      "timeline_approval_days": 4,
+      "timeline_leader_core_days": 3,
+      "timeline_buy_days": 1,
+      "timeline_sell_days": 0,
+      "timeline_mean_best_score": 0.462511,
+      "timeline_first_date": "2024-07-10",
+      "timeline_last_date": "2024-08-22",
+      "recommended_local_status": "existing_internal_owner",
+      "rationale": "already_frozen_in_v129s"
+    }
+  ],
+  "interpretation": [
+    "V1.29Y audits BK0480-native expansion evidence without borrowing commercial-aerospace outer layers.",
+    "600760 is the only clear admission candidate because it has both historical BK0480 snapshot support and repeated BK0480-native timeline buys.",
+    "002273 and 601989 have enough local timeline evidence to stay under watch, but not enough native snapshot support to enter confirmation today."
+  ]
+}

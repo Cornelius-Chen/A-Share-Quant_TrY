@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134i_commercial_aerospace_phase2_seed_supervision_review_v1",
+    "seed_session_count": 6,
+    "same_day_loss_avoided_total": 3732.6954,
+    "top_tier_by_same_day_loss_avoided": "reversal_watch",
+    "top_transition_pattern": "neutral>mild_override_watch>reversal_watch>severe_override_positive",
+    "mild_execution_promotable": false,
+    "recommended_widening_surface": "broader_hit_sessions_only",
+    "recommended_widening_tiers": [
+      "reversal_watch",
+      "severe_override_positive"
+    ],
+    "phase2_supervision_verdict": "reasonable_with_targeted_optimization_space",
+    "review_csv": "data\\training\\commercial_aerospace_phase2_seed_supervision_review_v1.csv",
+    "authoritative_output": "commercial_aerospace_phase2_seed_supervision_review_ready_for_widening_protocol"
+  },
+  "component_rows": [
+    {
+      "component": "seed_determinism",
+      "status": "reasonable",
+      "detail": "double_run_exact_match = True, monotonic_fill_violation_count = 0"
+    },
+    {
+      "component": "seed_clock_honesty",
+      "status": "reasonable",
+      "detail": "duplicate_fill_violation_count = 0, post_flat_action_violation_count = 0"
+    },
+    {
+      "component": "reversal_tier_value",
+      "status": "strongest_phase2_candidate",
+      "detail": "same_day_loss_avoided_share = 0.818154, order_count = 5"
+    },
+    {
+      "component": "severe_tier_value",
+      "status": "retain_as_narrow_emergency_layer",
+      "detail": "same_day_loss_avoided_share = 0.181846, broader_hit_count = 5"
+    },
+    {
+      "component": "mild_tier_execution",
+      "status": "not_promotable_for_sell_execution",
+      "detail": "mean_forward_return_10 = 0.30285912, negative_forward_notional_share = 0.0"
+    },
+    {
+      "component": "broader_hit_surface",
+      "status": "sparse_enough_for_guarded_widening_review",
+      "detail": "expanded_hit_count = 24, expanded_session_count = 612, max_symbol_hit_rate = 0.05882353"
+    },
+    {
+      "component": "state_transition_alignment",
+      "status": "reasonable",
+      "detail": "top_transition_pattern = neutral>mild_override_watch>reversal_watch>severe_override_positive, severe_hits_with_prior_reversal_share = 0.8"
+    }
+  ],
+  "optimization_rows": [
+    {
+      "optimization_area": "reversal_first_widening",
+      "priority": "high",
+      "recommendation": "If phase 2 widens, widen reversal-trigger simulation before any other tier because reversal carries most same-day loss-avoidance in the canonical seed lane."
+    },
+    {
+      "optimization_area": "mild_as_no_trade_governance",
+      "priority": "high",
+      "recommendation": "Keep mild as do-not-readd or surveillance only; the mild tier still has positive forward expectancy and should not become an automatic sell trigger."
+    },
+    {
+      "optimization_area": "severe_as_terminal_guardrail",
+      "priority": "medium",
+      "recommendation": "Retain severe as the terminal emergency layer, but do not widen it alone without the earlier reversal step because most severe sessions arrive through an ordered escalation path."
+    },
+    {
+      "optimization_area": "widening_surface_control",
+      "priority": "high",
+      "recommendation": "If widening begins, use only broader-hit sessions first rather than the full 612-session surface; this preserves sparsity and avoids turning phase 2 into a generic weak-open filter."
+    }
+  ],
+  "interpretation": [
+    "V1.34I is a supervision review rather than another strategy search. It judges whether the current phase-2 seed training outcomes are internally reasonable and where the next lawful optimization room still exists.",
+    "The review concludes that the phase-2 seed simulator is credible as a narrow shadow object, that reversal handling is currently the most useful execution tier, and that mild should remain governance-only."
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117t_cpo_cooling_reacceleration_external_audit_v1",
+    "candidate_discriminator_name": "cooling_reacceleration_score_candidate",
+    "positive_mean_score": 979012800.0,
+    "negative_mean_score": 312535090.909091,
+    "mean_gap_positive_minus_negative": 666477709.090909,
+    "best_threshold": 572567000.0,
+    "best_balanced_accuracy": 0.727273,
+    "external_pool_signal_clear": true,
+    "recommended_next_posture": "time_split_validate_cooling_reacceleration_if_external_pool_gap_stays_positive"
+  },
+  "threshold_audit_rows": [
+    {
+      "threshold": 1654966000.0,
+      "tp": 0,
+      "fn": 5,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.0,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.454545
+    },
+    {
+      "threshold": 1449399000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 1,
+      "tn": 10,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.909091,
+      "balanced_accuracy": 0.554545
+    },
+    {
+      "threshold": 1447011000.0,
+      "tp": 1,
+      "fn": 4,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.2,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.509091
+    },
+    {
+      "threshold": 1198972000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 2,
+      "tn": 9,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.818182,
+      "balanced_accuracy": 0.609091
+    },
+    {
+      "threshold": 1189616000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 3,
+      "tn": 8,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.727273,
+      "balanced_accuracy": 0.563636
+    },
+    {
+      "threshold": 1138768000.0,
+      "tp": 2,
+      "fn": 3,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.4,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.518182
+    },
+    {
+      "threshold": 1008624000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 4,
+      "tn": 7,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.636364,
+      "balanced_accuracy": 0.618182
+    },
+    {
+      "threshold": 817964000.0,
+      "tp": 3,
+      "fn": 2,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.6,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.572727
+    },
+    {
+      "threshold": 665502000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 5,
+      "tn": 6,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.545455,
+      "balanced_accuracy": 0.672727
+    },
+    {
+      "threshold": 618915000.0,
+      "tp": 4,
+      "fn": 1,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 0.8,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.627273
+    },
+    {
+      "threshold": 572567000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 6,
+      "tn": 5,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.454545,
+      "balanced_accuracy": 0.727273
+    },
+    {
+      "threshold": -512324000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 7,
+      "tn": 4,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.363636,
+      "balanced_accuracy": 0.681818
+    },
+    {
+      "threshold": -589553000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 8,
+      "tn": 3,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.272727,
+      "balanced_accuracy": 0.636364
+    },
+    {
+      "threshold": -610189000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 9,
+      "tn": 2,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.181818,
+      "balanced_accuracy": 0.590909
+    },
+    {
+      "threshold": -716335000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 10,
+      "tn": 1,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.090909,
+      "balanced_accuracy": 0.545455
+    },
+    {
+      "threshold": -1000953000.0,
+      "tp": 5,
+      "fn": 0,
+      "fp": 11,
+      "tn": 0,
+      "positive_recall": 1.0,
+      "negative_reject_rate": 0.0,
+      "balanced_accuracy": 0.5
+    }
+  ],
+  "scored_rows": [
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "cooling_reacceleration_score": 1449399000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "cooling_reacceleration_score": 1198972000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "cooling_reacceleration_score": 1008624000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "cooling_reacceleration_score": 665502000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "cooling_reacceleration_score": 572567000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "cooling_reacceleration_score": 1654966000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "cooling_reacceleration_score": 1447011000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "cooling_reacceleration_score": 1189616000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "cooling_reacceleration_score": 1138768000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "cooling_reacceleration_score": 817964000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "cooling_reacceleration_score": 618915000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "cooling_reacceleration_score": -512324000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "cooling_reacceleration_score": -589553000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "cooling_reacceleration_score": -610189000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "cooling_reacceleration_score": -716335000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "cooling_reacceleration_score": -1000953000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17T is the first hard audit for the new cooling-reacceleration branch.",
+    "It asks the only question that matters at this stage: in the broader add pool, does the new score still rank positive add rows above the negative ones?",
+    "If this audit fails, the branch should die quickly instead of becoming another retained-set mirage."
+  ]
+}

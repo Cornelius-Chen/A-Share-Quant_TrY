@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127f_commercial_aerospace_def_orthogonal_downside_promotion_triage_v1",
+    "superseded_reference_variant": "v126o_economic_reference",
+    "cleaner_alternative_variant": "v126q_cleaner_reference",
+    "new_primary_reference_variant": "broad_half_reference",
+    "new_primary_reference_final_equity": 1261238.592,
+    "new_primary_reference_max_drawdown": 0.12870312,
+    "new_primary_reference_executed_order_count": 251,
+    "retained_aggressive_shadow_variant": "weak_drift_event_neutral_half",
+    "retained_aggressive_shadow_final_equity": 1314566.5548,
+    "retained_aggressive_shadow_max_drawdown": 0.1769551,
+    "retained_aggressive_shadow_executed_order_count": 84,
+    "blocked_variant": "overdrive_continuation_half",
+    "blocked_variant_final_equity": 1236159.6484,
+    "blocked_variant_max_drawdown": 0.21997867,
+    "broad_beats_old_reference": true,
+    "broad_beats_cleaner_reference": true,
+    "authoritative_status": "promote_v127e_broad_half_as_primary_reference_and_freeze_new_shadow_stack"
+  },
+  "interpretation": [
+    "V1.27F freezes the first commercial-aerospace orthogonal downside family that actually improves the replay frontier.",
+    "Broad-half with expanded downside semantics is promoted because it beats both the prior economic reference and the cleaner reference on return and drawdown simultaneously.",
+    "Weak-drift-event-neutral remains only the aggressive shadow; overdrive-continuation is blocked."
+  ]
+}

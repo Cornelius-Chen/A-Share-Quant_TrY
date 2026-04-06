@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126d_commercial_aerospace_score_direction_audit_v1",
+    "best_eligibility_direction": "low_pass",
+    "best_eligibility_spread": 0.07222306,
+    "best_de_risk_direction": "low_pass",
+    "best_de_risk_spread": 0.06737594,
+    "authoritative_status": "score_direction_audit_non_execution"
+  },
+  "direction_rows": [
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.2,
+      "pass_count": 1143,
+      "pass_rate": 0.92475728,
+      "pass_forward_mean": 0.04644442,
+      "fail_forward_mean": 0.05091585,
+      "economic_spread": -0.00447143
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.3,
+      "pass_count": 1099,
+      "pass_rate": 0.88915858,
+      "pass_forward_mean": 0.04575516,
+      "fail_forward_mean": 0.05500889,
+      "economic_spread": -0.00925372
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.4,
+      "pass_count": 1045,
+      "pass_rate": 0.84546926,
+      "pass_forward_mean": 0.04575671,
+      "fail_forward_mean": 0.05238418,
+      "economic_spread": -0.00662747
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.6,
+      "pass_count": 884,
+      "pass_rate": 0.71521036,
+      "pass_forward_mean": 0.03320754,
+      "fail_forward_mean": 0.0808684,
+      "economic_spread": -0.04766086
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.7,
+      "pass_count": 794,
+      "pass_rate": 0.64239482,
+      "pass_forward_mean": 0.02450508,
+      "fail_forward_mean": 0.08679662,
+      "economic_spread": -0.06229154
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.8,
+      "pass_count": 729,
+      "pass_rate": 0.58980583,
+      "pass_forward_mean": 0.01715538,
+      "fail_forward_mean": 0.08937844,
+      "economic_spread": -0.07222306
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.2,
+      "pass_count": 94,
+      "pass_rate": 0.07605178,
+      "pass_forward_mean": 0.05201486,
+      "fail_forward_mean": 0.04635004,
+      "economic_spread": 0.00566482
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.3,
+      "pass_count": 142,
+      "pass_rate": 0.11488673,
+      "pass_forward_mean": 0.05331187,
+      "fail_forward_mean": 0.04593314,
+      "economic_spread": 0.00737873
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.4,
+      "pass_count": 191,
+      "pass_rate": 0.15453074,
+      "pass_forward_mean": 0.05238418,
+      "fail_forward_mean": 0.04575671,
+      "economic_spread": 0.00662747
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.6,
+      "pass_count": 352,
+      "pass_rate": 0.28478964,
+      "pass_forward_mean": 0.0808684,
+      "fail_forward_mean": 0.03320754,
+      "economic_spread": 0.04766086
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.7,
+      "pass_count": 450,
+      "pass_rate": 0.36407767,
+      "pass_forward_mean": 0.08955777,
+      "fail_forward_mean": 0.02229026,
+      "economic_spread": 0.06726751
+    },
+    {
+      "task_name": "eligibility_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.8,
+      "pass_count": 507,
+      "pass_rate": 0.41019417,
+      "pass_forward_mean": 0.08937844,
+      "fail_forward_mean": 0.01715538,
+      "economic_spread": 0.07222306
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.2,
+      "pass_count": 1208,
+      "pass_rate": 0.97734628,
+      "pass_forward_mean": 0.04687476,
+      "fail_forward_mean": 0.04272966,
+      "economic_spread": -0.0041451
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.3,
+      "pass_count": 1133,
+      "pass_rate": 0.91666667,
+      "pass_forward_mean": 0.04841469,
+      "fail_forward_mean": 0.02880875,
+      "economic_spread": -0.01960594
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.4,
+      "pass_count": 1070,
+      "pass_rate": 0.86569579,
+      "pass_forward_mean": 0.04974476,
+      "fail_forward_mean": 0.0276762,
+      "economic_spread": -0.02206856
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.6,
+      "pass_count": 844,
+      "pass_rate": 0.6828479,
+      "pass_forward_mean": 0.05921276,
+      "fail_forward_mean": 0.02001421,
+      "economic_spread": -0.03919855
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.7,
+      "pass_count": 696,
+      "pass_rate": 0.5631068,
+      "pass_forward_mean": 0.07073036,
+      "fail_forward_mean": 0.01591262,
+      "economic_spread": -0.05481774
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "high_pass",
+      "threshold_quantile": 0.8,
+      "pass_count": 533,
+      "pass_rate": 0.43122977,
+      "pass_forward_mean": 0.08510229,
+      "fail_forward_mean": 0.01772635,
+      "economic_spread": -0.06737594
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.2,
+      "pass_count": 57,
+      "pass_rate": 0.0461165,
+      "pass_forward_mean": 0.03313198,
+      "fail_forward_mean": 0.04744073,
+      "economic_spread": 0.01430875
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.3,
+      "pass_count": 106,
+      "pass_rate": 0.08576052,
+      "pass_forward_mean": 0.02935948,
+      "fail_forward_mean": 0.04841508,
+      "economic_spread": 0.0190556
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.4,
+      "pass_count": 166,
+      "pass_rate": 0.13430421,
+      "pass_forward_mean": 0.0276762,
+      "fail_forward_mean": 0.04974476,
+      "economic_spread": 0.02206856
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.6,
+      "pass_count": 392,
+      "pass_rate": 0.3171521,
+      "pass_forward_mean": 0.02001421,
+      "fail_forward_mean": 0.05921276,
+      "economic_spread": 0.03919855
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.7,
+      "pass_count": 540,
+      "pass_rate": 0.4368932,
+      "pass_forward_mean": 0.01591262,
+      "fail_forward_mean": 0.07073036,
+      "economic_spread": 0.05481774
+    },
+    {
+      "task_name": "de_risk_binary_rc",
+      "direction": "low_pass",
+      "threshold_quantile": 0.8,
+      "pass_count": 703,
+      "pass_rate": 0.56877023,
+      "pass_forward_mean": 0.01772635,
+      "fail_forward_mean": 0.08510229,
+      "economic_spread": 0.06737594
+    }
+  ],
+  "interpretation": [
+    "V1.26D checks whether the lawful EOD score is directionally inverted, which can happen when label geometry and class imbalance diverge.",
+    "This decides whether replay is blocked by missing signal or just by wrong score orientation."
+  ]
+}

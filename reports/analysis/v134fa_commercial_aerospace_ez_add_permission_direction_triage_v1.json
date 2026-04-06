@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134fa_commercial_aerospace_ez_add_permission_direction_triage_v1",
+    "authoritative_status": "keep_positive_add_rules_seed_only_but_retain_point_in_time_permission_clues_as_local_supervision",
+    "best_point_in_time_broad_scenario": "contained_close15_plus_burst15_plus_posmin15",
+    "best_point_in_time_broad_ratio": 4.93333333,
+    "best_high_confidence_scenario": "slow_unlock_high_role_plus_contained_burst15",
+    "best_high_confidence_ratio": 3.8,
+    "authoritative_rule": "intraday add should keep positive rules seed-only, while retaining point-in-time quantity-price permission clues as local supervision inputs"
+  },
+  "triage_rows": [
+    {
+      "component": "positive_add_broader_promotion",
+      "status": "still_blocked",
+      "rationale": "point-in-time quantity-price moderation improves density, but broader positive add hits remain too crowded to authorize promotion"
+    },
+    {
+      "component": "narrow_high_confidence_permission_clue",
+      "status": "retain_as_local_supervision",
+      "rationale": "unlock-worthy, high-role symbols with contained first-15m amount usage form the cleanest current add-permission clue"
+    },
+    {
+      "component": "reduce_volume_price_appendix",
+      "status": "refresh_as_governance_only",
+      "rationale": "the reduce branch should carry its existing volume-price confirmation and local veto logic explicitly inside the frozen handoff package"
+    }
+  ],
+  "interpretation": [
+    "V1.34FA turns the first add-focused point-in-time quantity-price audit into the next governance verdict.",
+    "The branch should not broaden positive add promotion yet, but it now has a credible local permission clue worth keeping as supervision."
+  ]
+}

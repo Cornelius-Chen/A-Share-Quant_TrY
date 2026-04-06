@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134bq_commercial_aerospace_reduce_execution_binding_blocker_audit_v1",
+    "blocker_count": 4,
+    "sell_side_binding_blocker_count": 2,
+    "full_reduce_binding_blocker_count": 4,
+    "consensus_guardrail_count": 4,
+    "closure_stage_count": 5,
+    "blocker_csv": "data\\training\\commercial_aerospace_reduce_execution_binding_blocker_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_execution_binding_blockers_ready_for_direction_triage"
+  },
+  "blocker_rows": [
+    {
+      "blocker_order": 1,
+      "blocker_name": "point_in_time_intraday_visibility",
+      "status": "still_blocked",
+      "affects_stage": "intraday_sell_ladder",
+      "why_it_matters": "without minute-lawful visibility, sell ladder triggers cannot be execution-bound without leak risk",
+      "required_for": "sell-side binding",
+      "source": "v133c / v133m / v133n"
+    },
+    {
+      "blocker_order": 2,
+      "blocker_name": "intraday_execution_simulation_surface",
+      "status": "still_blocked",
+      "affects_stage": "intraday_sell_ladder_and_board_gate",
+      "why_it_matters": "board gate and sell ladder cannot be tested as a unified intraday action path without a deterministic fill model",
+      "required_for": "sell-plus-board binding",
+      "source": "v133c / v133m"
+    },
+    {
+      "blocker_order": 3,
+      "blocker_name": "separate_intraday_replay_lane",
+      "status": "still_blocked",
+      "affects_stage": "all_reduce_closure_stages",
+      "why_it_matters": "without a separate lane, sell, lockout, unlock, and reentry cannot be bound together without contaminating the frozen EOD primary",
+      "required_for": "full_reduce_binding",
+      "source": "v133c / v133m / v134bo"
+    },
+    {
+      "blocker_order": 4,
+      "blocker_name": "reentry_execution_surface",
+      "status": "not_started",
+      "affects_stage": "seed_reentry_ladder",
+      "why_it_matters": "reentry timing supervision exists, but no lawful simulator or fill policy exists for rebuild actions",
+      "required_for": "reentry binding",
+      "source": "v134bc / v134bo"
+    }
+  ],
+  "interpretation": [
+    "V1.34BQ stops speaking about execution binding abstractly and names the concrete missing surfaces.",
+    "The branch can now separate what blocks sell-side binding from what blocks full reduce closure binding across sell, board gate, and reentry."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v129v_bk0480_aerospace_aviation_uvw_control_seed_triage_v1",
+    "board_name": "航天航空",
+    "sector_id": "BK0480",
+    "authoritative_status": "freeze_bk0480_minimal_control_seed_and_move_to_control_seed_audit",
+    "worker_status": "freeze_bk0480_dual_core_role_grammar_and_move_to_control_seed_extraction",
+    "authoritative_rule": "bk0480_starts_with_minimal_local_control_seed_then_proves_control_quality_before_any_replay_or_universe_expansion"
+  },
+  "direction_rows": [
+    {
+      "direction": "minimal_dual_core_control_seed",
+      "status": "freeze_as_authoritative_kickoff_control_surface",
+      "reason": "BK0480 needs a narrow local control surface first, not a replay unlock or borrowed breadth expansion."
+    },
+    {
+      "direction": "borrowed_commercial_aerospace_control_surface",
+      "status": "blocked",
+      "reason": "The destination board must not inherit commercial-aerospace authority breadth or symbol facts."
+    },
+    {
+      "direction": "next_phase",
+      "status": "control_seed_audit",
+      "reason": "audit_this_minimal_control_seed_before_any_bk0480_replay_unlock"
+    }
+  ],
+  "interpretation": [
+    "V1.29V freezes the first BK0480 control surface as a deliberately narrow seed rather than a replay-ready system.",
+    "The next lawful step is control-seed audit, not replay or broad concept expansion."
+  ]
+}

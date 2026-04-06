@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "candidate_row_count": 1,
+    "same_timestamp_event_count": 2,
+    "nearest_prior_trade_date": "2026-03-27",
+    "status_csv": "data\\training\\a_share_shadow_calendar_alignment_candidate_status_v1.csv",
+    "authoritative_output": "a_share_shadow_calendar_alignment_candidate_surface_materialized"
+  },
+  "rows": [
+    {
+      "slice_id": "slice_20260328_194152",
+      "decision_ts": "2026-03-28 19:41:52",
+      "decision_trade_date": "2026-03-28",
+      "current_tradeable_context_state": "missing_tradeable_date_context",
+      "same_timestamp_event_count": 2,
+      "nearest_prior_trade_date": "2026-03-27",
+      "alignment_candidate_state": "auxiliary_effective_trade_date_candidate",
+      "candidate_effective_trade_date": "2026-03-27",
+      "timestamp_policy": "retain_visible_event_timestamp"
+    }
+  ],
+  "interpretation": [
+    "The off-calendar replay residual is not evidence that the event timestamp is wrong; it is evidence that the replay lane may need an auxiliary market-alignment date.",
+    "The current best candidate is to retain the visible Saturday timestamp while optionally mapping replay market context to the nearest prior trade date.",
+    "That keeps PTI legality intact while opening a narrow shadow-only calendar-alignment inspection lane."
+  ]
+}

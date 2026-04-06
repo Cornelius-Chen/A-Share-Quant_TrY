@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117f_cpo_cde_three_run_adversarial_triage_v1",
+    "triage_scope": "V117C_V117D_V117E",
+    "continuation_integrity_candidate_status": "degraded_to_explanatory_component_only",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "new_standalone_gate_allowed": false,
+    "authoritative_current_problem": "need_new_quality_side_discriminator_not_same_family_continuation_integrity_extension",
+    "recommended_next_posture": "stop_mainline_investment_in_continuation_integrity_and_retain_only_as_explanatory_audit_field"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "same_sample_explainer_not_new_constraint",
+      "key_reason": "V117D already shows standalone_threshold_usable_now=false and V117E retained internal gap is too weak to justify continued mainline investment."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "weak_increment_not_new_execution_axis",
+      "key_reason": "The candidate mostly re-encodes pc1-family quality features and does not create a genuinely new timing or execution discriminator."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "explanatory_gain_without_training_gain",
+      "key_reason": "The line can explain why q0.25 is cleaner than hot-only, but it does not reliably refine retained hits into better add decisions."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "degrade_now",
+      "key_reason": "V117C gap=1111069000.0, but V117D best standalone threshold still unusable and V117E retained mean gap only 12841500.0."
+    }
+  ],
+  "interpretation": [
+    "V1.17F is the scheduled three-run adversarial review over V117C/V117D/V117E.",
+    "All three reviewers converged on the same point: the continuation-integrity score has explanatory value but does not justify further mainline replay-facing investment.",
+    "This formally ends the current continuation-integrity branch as a candidate quality law. The score survives only as an explanatory audit component."
+  ]
+}

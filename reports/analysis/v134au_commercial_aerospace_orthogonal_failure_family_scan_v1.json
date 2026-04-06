@@ -1,0 +1,189 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134au_commercial_aerospace_orthogonal_failure_family_scan_v1",
+    "reversal_session_count": 12,
+    "rebound_cost_case_count": 4,
+    "strongest_family_name": "early_severe_reclaim",
+    "strongest_primary_gap": -2.933333,
+    "session_csv": "data\\training\\commercial_aerospace_orthogonal_failure_family_scan_v1.csv",
+    "authoritative_output": "commercial_aerospace_orthogonal_failure_family_scan_ready_for_direction_triage"
+  },
+  "family_rows": [
+    {
+      "family_name": "reversal_reclaim_churn",
+      "primary_feature": "post_reversal_reclaim_share_60",
+      "support_feature": "post_reversal_flip_count_60",
+      "primary_gap_rebound_minus_followthrough": -0.089583,
+      "support_gap_rebound_minus_followthrough": 0.625
+    },
+    {
+      "family_name": "early_severe_reclaim",
+      "primary_feature": "post_severe_neutral_minutes_60",
+      "support_feature": "post_severe_reversal_minutes_60",
+      "primary_gap_rebound_minus_followthrough": -2.933333,
+      "support_gap_rebound_minus_followthrough": 10.466667
+    }
+  ],
+  "session_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 14,
+      "post_reversal_neutral_minutes_60": 20,
+      "post_reversal_reclaim_share_60": 0.233333,
+      "first_severe_minute": 4,
+      "post_severe_neutral_minutes_60": 20,
+      "post_severe_reversal_minutes_60": 30,
+      "post_severe_reclaim_share_60": 0.233333
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "regime_label": "rebound_cost_case",
+      "post_reversal_flip_count_60": 9,
+      "post_reversal_neutral_minutes_60": 10,
+      "post_reversal_reclaim_share_60": 0.283333,
+      "first_severe_minute": "",
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 0,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "post_reversal_flip_count_60": 8,
+      "post_reversal_neutral_minutes_60": 16,
+      "post_reversal_reclaim_share_60": 0.083333,
+      "first_severe_minute": 25,
+      "post_severe_neutral_minutes_60": 15,
+      "post_severe_reversal_minutes_60": 44,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 7,
+      "post_reversal_neutral_minutes_60": 8,
+      "post_reversal_reclaim_share_60": 0.216667,
+      "first_severe_minute": 185,
+      "post_severe_neutral_minutes_60": 10,
+      "post_severe_reversal_minutes_60": 32,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 14,
+      "post_reversal_neutral_minutes_60": 19,
+      "post_reversal_reclaim_share_60": 0.333333,
+      "first_severe_minute": "",
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 0,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 10,
+      "post_reversal_neutral_minutes_60": 33,
+      "post_reversal_reclaim_share_60": 0.516667,
+      "first_severe_minute": 74,
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 25,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "post_reversal_flip_count_60": 12,
+      "post_reversal_neutral_minutes_60": 26,
+      "post_reversal_reclaim_share_60": 0.466667,
+      "first_severe_minute": 124,
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 41,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "post_reversal_flip_count_60": 12,
+      "post_reversal_neutral_minutes_60": 10,
+      "post_reversal_reclaim_share_60": 0.166667,
+      "first_severe_minute": 46,
+      "post_severe_neutral_minutes_60": 11,
+      "post_severe_reversal_minutes_60": 37,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 12,
+      "post_reversal_neutral_minutes_60": 37,
+      "post_reversal_reclaim_share_60": 0.65,
+      "first_severe_minute": "",
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 0,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 10,
+      "post_reversal_neutral_minutes_60": 2,
+      "post_reversal_reclaim_share_60": 0.083333,
+      "first_severe_minute": 47,
+      "post_severe_neutral_minutes_60": 3,
+      "post_severe_reversal_minutes_60": 33,
+      "post_severe_reclaim_share_60": 0.0
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 5,
+      "post_reversal_neutral_minutes_60": 29,
+      "post_reversal_reclaim_share_60": 0.616667,
+      "first_severe_minute": 59,
+      "post_severe_neutral_minutes_60": 25,
+      "post_severe_reversal_minutes_60": 31,
+      "post_severe_reclaim_share_60": 0.1
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "post_reversal_flip_count_60": 5,
+      "post_reversal_neutral_minutes_60": 5,
+      "post_reversal_reclaim_share_60": 0.066667,
+      "first_severe_minute": "",
+      "post_severe_neutral_minutes_60": 0,
+      "post_severe_reversal_minutes_60": 0,
+      "post_severe_reclaim_share_60": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.34AU does a quick orthogonal-family scan after the false-first-reversal family reached stopline.",
+    "The goal is not to open a new branch immediately, but to verify whether any other failure family has enough separation to justify a first audit."
+  ]
+}

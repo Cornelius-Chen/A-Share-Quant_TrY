@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v122f_cpo_1min_supportive_quality_time_split_audit_v1",
+    "split_count": 8,
+    "mean_test_balanced_accuracy": 0.50130119,
+    "min_test_balanced_accuracy": 0.49274286,
+    "recommended_next_posture": "continue_only_if_quality_score_remains_directional_under_date_split"
+  },
+  "split_rows": [
+    {
+      "train_end_date": "2026-03-24",
+      "test_start_date": "2026-03-25",
+      "test_row_count": 1920,
+      "threshold": 0.52524055,
+      "balanced_accuracy": 0.50946605
+    },
+    {
+      "train_end_date": "2026-03-25",
+      "test_start_date": "2026-03-26",
+      "test_row_count": 1682,
+      "threshold": 0.47240332,
+      "balanced_accuracy": 0.49946634
+    },
+    {
+      "train_end_date": "2026-03-26",
+      "test_start_date": "2026-03-27",
+      "test_row_count": 1441,
+      "threshold": 0.43202566,
+      "balanced_accuracy": 0.49599861
+    },
+    {
+      "train_end_date": "2026-03-27",
+      "test_start_date": "2026-03-30",
+      "test_row_count": 1185,
+      "threshold": 0.38317473,
+      "balanced_accuracy": 0.49274286
+    },
+    {
+      "train_end_date": "2026-03-30",
+      "test_start_date": "2026-03-31",
+      "test_row_count": 964,
+      "threshold": 0.36585525,
+      "balanced_accuracy": 0.49702263
+    },
+    {
+      "train_end_date": "2026-03-31",
+      "test_start_date": "2026-04-01",
+      "test_row_count": 758,
+      "threshold": 0.32676271,
+      "balanced_accuracy": 0.4998292
+    },
+    {
+      "train_end_date": "2026-04-01",
+      "test_start_date": "2026-04-02",
+      "test_row_count": 476,
+      "threshold": 0.32903316,
+      "balanced_accuracy": 0.50778428
+    },
+    {
+      "train_end_date": "2026-04-02",
+      "test_start_date": "2026-04-03",
+      "test_row_count": 256,
+      "threshold": 0.32222088,
+      "balanced_accuracy": 0.50809952
+    }
+  ],
+  "interpretation": [
+    "V1.22F checks whether the supportive quality score survives date splits on the recent 1-minute plane.",
+    "This is still a local chronology audit, but it is the minimum guardrail against same-window self-delusion.",
+    "The score should only continue if it keeps directional separation under date split."
+  ]
+}

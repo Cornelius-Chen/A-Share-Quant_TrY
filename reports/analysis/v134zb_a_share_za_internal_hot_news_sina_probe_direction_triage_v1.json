@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "fetch_row_count": 50,
+    "theme_hit_count": 13,
+    "theme_hit_with_symbol_route_count": 13,
+    "unique_primary_theme_count": 5,
+    "authoritative_status": "use_sina_probe_to_measure_live_theme-hit_lift_before_merging_second_source_into_primary_fastlane"
+  },
+  "triage_rows": [
+    {
+      "component": "second_source_probe",
+      "direction": "keep sina_7x24 as a parallel probe until its live theme-hit yield justifies merging into the primary fastlane"
+    },
+    {
+      "component": "theme_hit_measurement",
+      "direction": "compare real theme-hit density and symbol-route yield against the current cls-only sample rather than judging source value abstractly"
+    },
+    {
+      "component": "merge_gate",
+      "direction": "promote probe to primary-source merge only after it improves live theme/symbol diversity without unacceptable duplicate fan-out"
+    }
+  ],
+  "interpretation": [
+    "This direction card keeps source expansion empirical instead of speculative.",
+    "The probe should prove lift in real theme hits before it is allowed to affect the main consumer packet."
+  ]
+}

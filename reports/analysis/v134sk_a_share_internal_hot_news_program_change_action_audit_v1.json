@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "action_row_count": 1,
+    "top_risk_action": "maintain_risk_guardrail",
+    "top_opportunity_action": "maintain_top_opportunity_watch",
+    "global_program_action_mode": "dual_focus_risk_and_opportunity",
+    "session_handling_mode": "non_trading_day_watch_only",
+    "session_action_gate": "watch_only_non_trading_day",
+    "authoritative_output": "a_share_internal_hot_news_program_change_action_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "change_action_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "action_row_count",
+      "value": "1"
+    },
+    {
+      "component": "top_risk_action",
+      "component_state": "materialized",
+      "metric": "top_risk_action",
+      "value": "maintain_risk_guardrail"
+    },
+    {
+      "component": "top_opportunity_action",
+      "component_state": "materialized",
+      "metric": "top_opportunity_action",
+      "value": "maintain_top_opportunity_watch"
+    },
+    {
+      "component": "global_program_action_mode",
+      "component_state": "materialized",
+      "metric": "global_program_action_mode",
+      "value": "dual_focus_risk_and_opportunity"
+    },
+    {
+      "component": "session_action_gate",
+      "component_state": "materialized",
+      "metric": "session_action_gate",
+      "value": "watch_only_non_trading_day"
+    }
+  ],
+  "interpretation": [
+    "The program now receives action hints above the raw change signal.",
+    "This layer translates stable or shifting snapshot states into explicit handling suggestions for the downstream consumer, with session-aware gating."
+  ]
+}

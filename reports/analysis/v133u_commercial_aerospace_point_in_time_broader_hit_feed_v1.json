@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133u_commercial_aerospace_point_in_time_broader_hit_feed_v1",
+    "broader_hit_session_count": 24,
+    "feed_row_count": 1440,
+    "lineage_null_count": 0,
+    "lagged_null_count": 449,
+    "output_csv": "data\\training\\commercial_aerospace_point_in_time_broader_hit_feed_v1.csv",
+    "authoritative_output": "commercial_aerospace_point_in_time_broader_hit_feed_ready_for_phase_1_extension_audit"
+  },
+  "session_rows": [
+    {
+      "trade_date": "20251118",
+      "symbol": "688523",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2025-11"
+    },
+    {
+      "trade_date": "20251126",
+      "symbol": "300045",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2025-11"
+    },
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2025-12"
+    },
+    {
+      "trade_date": "20251217",
+      "symbol": "688066",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2025-12"
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2025-12"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "601698",
+      "predicted_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260116",
+      "symbol": "688066",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688066",
+      "predicted_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300342",
+      "predicted_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-01"
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "300342",
+      "predicted_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "month_bucket": "2026-03"
+    },
+    {
+      "trade_date": "20260303",
+      "symbol": "601698",
+      "predicted_tier": "severe_override_positive",
+      "minute_row_count": 60,
+      "month_bucket": "2026-03"
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "300342",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-04"
+    },
+    {
+      "trade_date": "20260401",
+      "symbol": "688523",
+      "predicted_tier": "mild_override_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-04"
+    },
+    {
+      "trade_date": "20260403",
+      "symbol": "688066",
+      "predicted_tier": "reversal_watch",
+      "minute_row_count": 60,
+      "month_bucket": "2026-04"
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "broader_hit_session_count",
+      "status": "pass",
+      "detail": "24 broader hit sessions materialized"
+    },
+    {
+      "acceptance_item": "lineage_fields_non_null",
+      "status": "pass",
+      "detail": "lineage_null_count = 0"
+    },
+    {
+      "acceptance_item": "warmup_nulls_expected",
+      "status": "pass",
+      "detail": "lagged_null_count = 449"
+    }
+  ],
+  "interpretation": [
+    "V1.33U extends phase_1_visibility from the canonical seed surface to the broader 24 hit sessions.",
+    "The broader feed is still shadow-only and keeps the same lineage discipline, but it deliberately does not reopen simulation or replay work."
+  ]
+}

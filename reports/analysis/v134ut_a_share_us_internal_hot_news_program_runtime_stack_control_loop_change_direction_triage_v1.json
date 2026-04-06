@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "runtime_stack_control_loop_signal_mode_change": "stable",
+    "signal_priority_change": "stable",
+    "reopen_target_change": "stable",
+    "interrupt_required_change": "stable",
+    "signal_priority": "p2",
+    "authoritative_status": "continue_serving_runtime-stack_control_loop_signal_change_above_the_runtime-stack_control_loop_signal_feed"
+  },
+  "triage_rows": [
+    {
+      "component": "stable_loop_signal_branch",
+      "direction": "keep_the_existing_outer runtime-stack control-loop routing when the loop-signal change layer remains stable"
+    },
+    {
+      "component": "loop_mode_rotation_branch",
+      "direction": "reconfigure_outer runtime-stack control-loop routing immediately when runtime_stack_control_loop_signal_mode_change flips state"
+    },
+    {
+      "component": "reopen_rotation_branch",
+      "direction": "refresh_the_requested target when reopen_target_change or interrupt_required_change flips state"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost change detector for the narrow runtime-stack control loop signal feed.",
+    "An outer controller can watch it to know when loop routing semantics changed without rereading the signal feed every cycle."
+  ]
+}

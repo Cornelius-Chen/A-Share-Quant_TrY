@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134ck_commercial_aerospace_cj_local_rebound_direction_triage_v1",
+    "authoritative_status": "retain_local_rebound_residue_registry_as_supervision_only_and_stop_broad_reduce_tuning",
+    "residue_seed_count": 4,
+    "triage_csv": "data\\training\\commercial_aerospace_cj_local_rebound_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "local_rebound_residue_registry",
+      "status": "retain_supervision_only",
+      "detail": "residue_seed_count = 4, top_residue_case = 20260120 300342"
+    },
+    {
+      "component": "persistent_vs_transient_split",
+      "status": "mandatory",
+      "detail": "persistent_rebound_residue_count = 2, transient_rebound_residue_count = 2"
+    },
+    {
+      "component": "next_real_work",
+      "status": "stay_local_case_supervision_only",
+      "detail": "If the branch keeps going, it should only inspect these residue cases locally; do not reopen broader sell-family tuning or replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34CK converts the remaining medium-short rebound residue into a narrow direction judgment.",
+    "The branch should now stop broad reduce tuning and only keep these residue cases as supervision if it needs any further local inspection."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hm_commercial_aerospace_crowded_local_rebound_supervision_audit_v1",
+    "analysis_symbol_count": 6,
+    "crowding_like_shelter_rebound_count": 2,
+    "high_beta_raw_only_rebound_count": 1,
+    "lockout_outlier_breakout_count": 1,
+    "authoritative_output": "commercial_aerospace_crowded_local_rebound_supervision_ready_for_direction_triage"
+  },
+  "symbol_rows": [
+    {
+      "symbol": "600343",
+      "display_name": "航天动力",
+      "named_counterexample_family": "coverage_gap_or_inactive",
+      "crowded_rebound_family": "coverage_gap_or_unclassified",
+      "post_lockout_max_vs_pre_lockout_peak": "",
+      "max_date_zone": "no_post_lockout_coverage",
+      "avg_turnover_rate_f": "",
+      "max_turnover_rate_f": "",
+      "avg_volume_ratio": "",
+      "max_volume_ratio": "",
+      "net_mf_amount_total": "",
+      "learning_reading": "keep as auxiliary negative evidence until better local path coverage exists"
+    },
+    {
+      "symbol": "000547",
+      "display_name": "航天发展",
+      "named_counterexample_family": "locked_board_weak_repair_only",
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "post_lockout_max_vs_pre_lockout_peak": -0.1585,
+      "max_date_zone": "lockout_window",
+      "avg_turnover_rate_f": 20.64860392,
+      "max_turnover_rate_f": 39.7029,
+      "avg_volume_ratio": 0.97352941,
+      "max_volume_ratio": 1.79,
+      "net_mf_amount_total": -74763.1,
+      "learning_reading": "local repair remains too weak versus prior peak and does not justify renewed board participation"
+    },
+    {
+      "symbol": "002361",
+      "display_name": "神剑股份",
+      "named_counterexample_family": "locked_board_weak_repair_only",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": -0.04580574,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "avg_turnover_rate_f": 22.9258,
+      "max_turnover_rate_f": 56.1441,
+      "avg_volume_ratio": 1.08411765,
+      "max_volume_ratio": 3.35,
+      "net_mf_amount_total": -127147.68,
+      "learning_reading": "near-high or breakout raw-only recovery with high turnover concentration fits crowding-like shelter rebound rather than board restart"
+    },
+    {
+      "symbol": "300342",
+      "display_name": "天银机电",
+      "named_counterexample_family": "lockout_outlier_breakout_then_fade",
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "post_lockout_max_vs_pre_lockout_peak": 0.1,
+      "max_date_zone": "lockout_window",
+      "avg_turnover_rate_f": 17.83263725,
+      "max_turnover_rate_f": 32.6589,
+      "avg_volume_ratio": 0.99686275,
+      "max_volume_ratio": 2.29,
+      "net_mf_amount_total": 75629.04,
+      "learning_reading": "breakout inside lockout still reads as local outlier strength under a closed board, not as legal board unlock"
+    },
+    {
+      "symbol": "301306",
+      "display_name": "西测测试",
+      "named_counterexample_family": "raw_only_near_high_rebound_without_breakout",
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": -0.0169697,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "avg_turnover_rate_f": 19.75018824,
+      "max_turnover_rate_f": 41.3251,
+      "avg_volume_ratio": 1.0354902,
+      "max_volume_ratio": 2.21,
+      "net_mf_amount_total": -38276.6,
+      "learning_reading": "strong raw-only rebound approaches prior peak but lacks the turnover-concentration signature of crowded shelter names"
+    },
+    {
+      "symbol": "603601",
+      "display_name": "再升科技",
+      "named_counterexample_family": "raw_only_post_lockout_breakout_without_board_context",
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "post_lockout_max_vs_pre_lockout_peak": 0.05806011,
+      "max_date_zone": "post_lockout_raw_only_window",
+      "avg_turnover_rate_f": 26.1588098,
+      "max_turnover_rate_f": 62.0638,
+      "avg_volume_ratio": 1.0727451,
+      "max_volume_ratio": 2.9,
+      "net_mf_amount_total": -631363.0,
+      "learning_reading": "near-high or breakout raw-only recovery with high turnover concentration fits crowding-like shelter rebound rather than board restart"
+    }
+  ],
+  "family_rows": [
+    {
+      "crowded_rebound_family": "crowding_like_shelter_rebound",
+      "symbol_count": 2
+    },
+    {
+      "crowded_rebound_family": "coverage_gap_or_unclassified",
+      "symbol_count": 1
+    },
+    {
+      "crowded_rebound_family": "high_beta_raw_only_rebound",
+      "symbol_count": 1
+    },
+    {
+      "crowded_rebound_family": "locked_board_weak_repair",
+      "symbol_count": 1
+    },
+    {
+      "crowded_rebound_family": "lockout_outlier_breakout",
+      "symbol_count": 1
+    }
+  ],
+  "interpretation": [
+    "V1.34HM asks whether named strong rebounds after lockout contain a crowding-like shelter subset rather than a board-wide restart signal.",
+    "This treats high-turnover near-high raw-only recoveries as negative-label candidates: symbol strength can concentrate in a few liquid names even while board unlock remains absent."
+  ]
+}

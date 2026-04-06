@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121f_cpo_close_context_time_split_audit_v1",
+    "split_count": 3,
+    "mean_test_balanced_accuracy": 0.644444,
+    "min_test_balanced_accuracy": 0.5,
+    "stability_posture": "candidate_stable_enough_inside_close_context",
+    "recommended_next_posture": "triage_EF_before_any_more_narrowing"
+  },
+  "split_rows": [
+    {
+      "split_name": "holdout_2023",
+      "holdout_years": [
+        "2023"
+      ],
+      "train_row_count": 58,
+      "test_row_count": 27,
+      "train_positive_count": 50,
+      "test_positive_count": 25,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.6875,
+      "test_balanced_accuracy": 0.5,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.0
+    },
+    {
+      "split_name": "holdout_2024",
+      "holdout_years": [
+        "2024"
+      ],
+      "train_row_count": 59,
+      "test_row_count": 26,
+      "train_positive_count": 54,
+      "test_positive_count": 21,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.7,
+      "test_balanced_accuracy": 0.6,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.2
+    },
+    {
+      "split_name": "holdout_2025_plus",
+      "holdout_years": [
+        "2025",
+        "2026"
+      ],
+      "train_row_count": 53,
+      "test_row_count": 32,
+      "train_positive_count": 46,
+      "test_positive_count": 29,
+      "train_best_threshold": -0.0,
+      "train_best_balanced_accuracy": 0.571429,
+      "test_balanced_accuracy": 0.833333,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": 0.666667
+    }
+  ],
+  "interpretation": [
+    "V1.21F asks the only chronology question that currently matters for this downside line: does it stay alive once the action context is fixed to close_vs_hold?",
+    "This is still not a replay or promotion step; it is only a narrowing audit.",
+    "If it survives here, the branch may justify one more non-replay refinement cycle."
+  ]
+}

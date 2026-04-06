@@ -1,0 +1,5 @@
+﻿policy_option,status,rationale
+implicit_auto_extension_from_raw,rejected,"raw post-lockout dates exist, but auto-deriving board state from raw alone would silently reopen a frozen lockout-aligned boundary without explicit governance approval"
+explicit_boundary_extension_for_shadow_only,deferred_until_explicit_shift,"extension is a legitimate future option, but only as an explicit shadow-lane policy change rather than an incidental refresh"
+retain_current_boundary,current_authoritative,"current boundary remains the default because the shadow lane is protocol-only, execution stays blocked, and post-lockout handoff still has zero lawful board-surface coverage"
+unlock_classifier_debate_before_extension,rejected_ordering,arguing about post-lockout unlock quality before extending the board surfaces would invert the causal order

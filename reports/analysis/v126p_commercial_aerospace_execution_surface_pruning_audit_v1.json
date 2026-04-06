@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v126p_commercial_aerospace_execution_surface_pruning_audit_v1",
+    "reference_final_equity": 1227143.0725,
+    "reference_max_drawdown": 0.14258108,
+    "reference_executed_order_count": 285,
+    "best_variant": "cap5_cap8_cd3_topup15k",
+    "best_variant_final_equity": 1189482.711,
+    "best_variant_max_drawdown": 0.13356069,
+    "best_variant_executed_order_count": 141,
+    "best_variant_peak_single_day_open_breadth": 5,
+    "best_variant_tiny_open_order_count_lt_10k": 0
+  },
+  "variant_rows": [
+    {
+      "variant": "cap4_cap6_cd3_topup20k",
+      "preheat_cap": 4,
+      "impulse_cap": 6,
+      "cooldown_days_after_sell": 3,
+      "min_increment_notional": 20000.0,
+      "executed_order_count": 129,
+      "open_order_count": 32,
+      "reduce_order_count": 97,
+      "final_equity": 1173447.3767,
+      "max_drawdown": 0.12657668,
+      "peak_single_day_open_count": 4,
+      "peak_single_day_open_breadth": 4,
+      "tiny_open_order_count_lt_10k": 0
+    },
+    {
+      "variant": "cap4_cap6_cd5_topup20k",
+      "preheat_cap": 4,
+      "impulse_cap": 6,
+      "cooldown_days_after_sell": 5,
+      "min_increment_notional": 20000.0,
+      "executed_order_count": 125,
+      "open_order_count": 30,
+      "reduce_order_count": 95,
+      "final_equity": 1169905.0153,
+      "max_drawdown": 0.12571769,
+      "peak_single_day_open_count": 4,
+      "peak_single_day_open_breadth": 4,
+      "tiny_open_order_count_lt_10k": 0
+    },
+    {
+      "variant": "cap3_cap5_cd5_topup20k",
+      "preheat_cap": 3,
+      "impulse_cap": 5,
+      "cooldown_days_after_sell": 5,
+      "min_increment_notional": 20000.0,
+      "executed_order_count": 124,
+      "open_order_count": 31,
+      "reduce_order_count": 93,
+      "final_equity": 1163735.7211,
+      "max_drawdown": 0.11479108,
+      "peak_single_day_open_count": 3,
+      "peak_single_day_open_breadth": 3,
+      "tiny_open_order_count_lt_10k": 0
+    },
+    {
+      "variant": "cap5_cap8_cd3_topup15k",
+      "preheat_cap": 5,
+      "impulse_cap": 8,
+      "cooldown_days_after_sell": 3,
+      "min_increment_notional": 15000.0,
+      "executed_order_count": 141,
+      "open_order_count": 39,
+      "reduce_order_count": 102,
+      "final_equity": 1189482.711,
+      "max_drawdown": 0.13356069,
+      "peak_single_day_open_count": 5,
+      "peak_single_day_open_breadth": 5,
+      "tiny_open_order_count_lt_10k": 0
+    }
+  ],
+  "interpretation": [
+    "V1.26P tests whether the main issue in V1.26O is execution-surface width and churn rather than factor or label legality.",
+    "Variants only change breadth cap, post-sell cooldown, and minimum top-up size; no factor or label geometry is altered."
+  ]
+}

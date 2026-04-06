@@ -1,0 +1,5 @@
+﻿opening_gate,gate_state,gate_reason
+new_raw_index_source_present,open,retained raw index source now extends beyond 2024-12-31
+new_raw_source_horizon_covers_shadow_window,open,retained index source horizon now reaches shadow_horizon_end = 2026-03-28
+index_daily_registry_materialization_reviewable,open,materialization review may reopen because new raw source is now present
+paired_surface_promotion_recheck,open,paired surface promotion may now be rechecked because index-daily source boundary moved

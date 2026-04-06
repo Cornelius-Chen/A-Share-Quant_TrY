@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134gv_commercial_aerospace_reentry_unlock_handoff_readiness_audit_v1",
+    "seed_count": 3,
+    "handoff_ready_count": 0,
+    "lockout_overlap_block_count": 3,
+    "no_future_unlock_seed_count": 3,
+    "unlock_positive_seed_count": 8,
+    "unlock_worthy_count": 8,
+    "readiness_csv": "data\\training\\commercial_aerospace_reentry_unlock_handoff_readiness_v1.csv",
+    "authoritative_rule": "current reentry seeds are not blocked by vague caution but by explicit handoff-readiness gaps: their rebuild-watch dates still sit inside the lockout regime and no future unlock seed exists after those dates"
+  },
+  "readiness_rows": [
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "reentry_family": "deep_washout_reentry_gap",
+      "board_gate_state": "pre_lockout_seed",
+      "rebuild_watch_trade_date": "20260120",
+      "lockout_window": "20260115->20260320",
+      "lockout_overlap": true,
+      "future_unlock_positive_count": 0,
+      "future_unlock_worthy_count": 0,
+      "first_future_unlock_positive_trade_date": "",
+      "first_future_unlock_worthy_trade_date": "",
+      "handoff_ready": false,
+      "blocker_family": "lockout_overlap_block|no_future_unlock_seed"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "board_gate_state": "in_lockout_seed",
+      "rebuild_watch_trade_date": "20260123",
+      "lockout_window": "20260115->20260320",
+      "lockout_overlap": true,
+      "future_unlock_positive_count": 0,
+      "future_unlock_worthy_count": 0,
+      "first_future_unlock_positive_trade_date": "",
+      "first_future_unlock_worthy_trade_date": "",
+      "handoff_ready": false,
+      "blocker_family": "lockout_overlap_block|no_future_unlock_seed"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "board_gate_state": "in_lockout_seed",
+      "rebuild_watch_trade_date": "20260123",
+      "lockout_window": "20260115->20260320",
+      "lockout_overlap": true,
+      "future_unlock_positive_count": 0,
+      "future_unlock_worthy_count": 0,
+      "first_future_unlock_positive_trade_date": "",
+      "first_future_unlock_worthy_trade_date": "",
+      "handoff_ready": false,
+      "blocker_family": "lockout_overlap_block|no_future_unlock_seed"
+    }
+  ],
+  "interpretation": [
+    "V1.34GV turns the first bridge state surface into an explicit handoff-readiness audit.",
+    "It asks the concrete next question: after rebuild watch begins, is there actually a later board-unlock context in which add permission could be consulted? For the current seeds, the answer is no."
+  ]
+}

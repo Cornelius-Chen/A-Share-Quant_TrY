@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119r_cpo_elg_support_out_of_set_false_positive_audit_v1",
+    "best_add_pool_threshold": 592782000.639792,
+    "best_add_pool_balanced_accuracy": 0.727273,
+    "entry_leakage_rate": 0.375,
+    "close_leakage_rate": 0.666667,
+    "reduce_leakage_rate": 0.0,
+    "recommended_next_posture": "send_PQR_to_three_run_adversarial_review_before_preserving_hard_candidate_status"
+  },
+  "context_rows": [
+    {
+      "action_context": "add_vs_hold",
+      "row_count": 16,
+      "pass_count": 11,
+      "pass_rate": 0.6875
+    },
+    {
+      "action_context": "close_vs_hold",
+      "row_count": 3,
+      "pass_count": 2,
+      "pass_rate": 0.666667
+    },
+    {
+      "action_context": "entry_vs_skip",
+      "row_count": 8,
+      "pass_count": 3,
+      "pass_rate": 0.375
+    },
+    {
+      "action_context": "reduce_vs_hold",
+      "row_count": 1,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    }
+  ],
+  "interpretation": [
+    "V1.19R checks whether the ELG-supported hard candidate leaks into non-add contexts.",
+    "A line that still fires too often on entry or exit contexts is not ready to keep hard-candidate language without another adversarial review.",
+    "This is the non-replay leakage audit for the current strongest CPO line."
+  ]
+}

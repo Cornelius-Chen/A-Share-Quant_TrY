@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134au_commercial_aerospace_next_orthogonal_family_scan_v1",
+    "remaining_rebound_cost_case_count": 3,
+    "best_transition_floor": 30,
+    "best_reversal_entry_floor": 15,
+    "best_severe_entry_floor": 4,
+    "best_remaining_rebound_cost_hit_count": 3,
+    "best_other_hit_count": 4,
+    "candidate_csv": "data\\training\\commercial_aerospace_next_orthogonal_family_scan_v1.csv",
+    "authoritative_output": "commercial_aerospace_next_orthogonal_family_scan_ready_for_direction_triage"
+  },
+  "candidate_rows": [
+    {
+      "transition_floor": 25,
+      "reversal_entry_floor": 10,
+      "severe_entry_floor": 2,
+      "matched_count": 8,
+      "remaining_rebound_cost_hit_count": 3,
+      "other_hit_count": 5
+    },
+    {
+      "transition_floor": 30,
+      "reversal_entry_floor": 15,
+      "severe_entry_floor": 4,
+      "matched_count": 7,
+      "remaining_rebound_cost_hit_count": 3,
+      "other_hit_count": 4
+    },
+    {
+      "transition_floor": 35,
+      "reversal_entry_floor": 18,
+      "severe_entry_floor": 6,
+      "matched_count": 5,
+      "remaining_rebound_cost_hit_count": 2,
+      "other_hit_count": 3
+    }
+  ],
+  "hit_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "is_remaining_rebound_cost": false,
+      "horizon_pnl_5d": -1587.0,
+      "transition_count": 47,
+      "reversal_entries": 23,
+      "severe_entries": 10,
+      "neutral_entries": 13
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": true,
+      "horizon_pnl_5d": 5000.0,
+      "transition_count": 30,
+      "reversal_entries": 15,
+      "severe_entries": 4,
+      "neutral_entries": 10
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": false,
+      "horizon_pnl_5d": -4531.0,
+      "transition_count": 38,
+      "reversal_entries": 18,
+      "severe_entries": 9,
+      "neutral_entries": 10
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": true,
+      "horizon_pnl_5d": 3077.0,
+      "transition_count": 39,
+      "reversal_entries": 19,
+      "severe_entries": 11,
+      "neutral_entries": 8
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": true,
+      "horizon_pnl_5d": 1920.0,
+      "transition_count": 39,
+      "reversal_entries": 19,
+      "severe_entries": 8,
+      "neutral_entries": 11
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": false,
+      "horizon_pnl_5d": -25254.0,
+      "transition_count": 34,
+      "reversal_entries": 17,
+      "severe_entries": 9,
+      "neutral_entries": 7
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "is_remaining_rebound_cost": false,
+      "horizon_pnl_5d": -10388.0,
+      "transition_count": 40,
+      "reversal_entries": 20,
+      "severe_entries": 9,
+      "neutral_entries": 10
+    }
+  ],
+  "interpretation": [
+    "V1.34AU scans for the next orthogonal supervision family after false-first-reversal reaches stopline.",
+    "The candidate family here is oscillatory breakdown churn: many state flips, many reversal re-entries, and repeated severe participation."
+  ]
+}

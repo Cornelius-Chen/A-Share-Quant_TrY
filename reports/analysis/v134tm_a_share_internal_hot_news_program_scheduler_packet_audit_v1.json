@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "packet_row_count": 1,
+    "scheduler_mode": "steady_schedule",
+    "contract_action": "keep_passive_polling",
+    "sleep_strategy_seconds": "300",
+    "contract_change_signal_priority": "p2",
+    "authoritative_output": "a_share_internal_hot_news_program_scheduler_packet_materialized"
+  },
+  "rows": [
+    {
+      "component": "scheduler_packet",
+      "component_state": "read_ready_internal_only",
+      "metric": "packet_row_count",
+      "value": "1"
+    },
+    {
+      "component": "scheduler_mode",
+      "component_state": "materialized",
+      "metric": "scheduler_mode",
+      "value": "steady_schedule"
+    },
+    {
+      "component": "contract_action",
+      "component_state": "materialized",
+      "metric": "contract_action",
+      "value": "keep_passive_polling"
+    },
+    {
+      "component": "sleep_strategy",
+      "component_state": "materialized",
+      "metric": "sleep_strategy_seconds",
+      "value": "300"
+    }
+  ],
+  "interpretation": [
+    "This packet is the scheduler-facing single-row packet above the runtime execution contract.",
+    "A scheduler can use it to decide whether to keep a steady cadence, tighten requeue cadence, or interrupt and requeue immediately."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "signal_row_count": 1,
+    "runtime_stack_control_loop_signal_mode": "steady_runtime_stack_control_loop",
+    "signal_priority": "p2",
+    "reopen_target": "none",
+    "authoritative_status": "continue_serving_runtime-stack_control_loop_signal_feed_above_the_single-row_runtime-stack_control_packet"
+  },
+  "triage_rows": [
+    {
+      "component": "steady_runtime_stack_control_loop_branch",
+      "direction": "keep_the_outer controller on steady lightweight polling when the runtime-stack control loop signal remains steady"
+    },
+    {
+      "component": "tight_runtime_stack_control_loop_branch",
+      "direction": "tighten_the_outer controller polling and reopen the requested target when the loop signal rotates into tight_runtime_stack_control_loop"
+    },
+    {
+      "component": "interrupt_runtime_stack_control_loop_branch",
+      "direction": "interrupt_the_outer controller immediately when the loop signal rotates into interrupt_runtime_stack_control_loop"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost loop-facing routing surface for the single-row runtime-stack control packet.",
+    "An outer controller can stop here without rereading the control packet unless it needs deeper diagnostics."
+  ]
+}

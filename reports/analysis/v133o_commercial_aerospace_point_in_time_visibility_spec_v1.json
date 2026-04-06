@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v133o_commercial_aerospace_point_in_time_visibility_spec_v1",
+    "protocol_workstream": "point_in_time_intraday_visibility",
+    "feed_column_count": 12,
+    "semantic_rule_count": 4,
+    "acceptance_item_count": 4,
+    "seed_session_count": 6,
+    "spec_csv": "data\\training\\commercial_aerospace_point_in_time_visibility_spec_v1.csv",
+    "authoritative_output": "commercial_aerospace_point_in_time_visibility_spec_ready_for_phase_1_implementation"
+  },
+  "feed_column_rows": [
+    {
+      "column": "minute_ts",
+      "domain": "identity",
+      "visibility_rule": "exact minute close timestamp of the current 1min bar",
+      "allowed_at_t": "yes",
+      "notes": "all other columns must be attributable to this timestamp or earlier"
+    },
+    {
+      "column": "symbol",
+      "domain": "identity",
+      "visibility_rule": "static session identity",
+      "allowed_at_t": "yes",
+      "notes": "used for joining minute bars to seed-session governance context"
+    },
+    {
+      "column": "open_px/high_px/low_px/close_px",
+      "domain": "bar_price",
+      "visibility_rule": "current bar OHLC is only available after the 1min bar closes",
+      "allowed_at_t": "close_of_bar_only",
+      "notes": "same-minute aggregates must not be visible before bar close"
+    },
+    {
+      "column": "bar_volume/bar_turnover",
+      "domain": "bar_volume",
+      "visibility_rule": "current bar aggregates are only available after the 1min bar closes",
+      "allowed_at_t": "close_of_bar_only",
+      "notes": "no mid-bar completion assumptions"
+    },
+    {
+      "column": "ret_1m_lag1/ret_3m_lag1/ret_5m_lag1",
+      "domain": "lagged_path",
+      "visibility_rule": "computed only from fully closed bars strictly earlier than minute t",
+      "allowed_at_t": "yes",
+      "notes": "prevents same-bar leakage inside path features"
+    },
+    {
+      "column": "draw_from_open_lag1/draw_15m_lag1/draw_30m_lag1",
+      "domain": "lagged_path",
+      "visibility_rule": "computed from the session path up to the last fully closed bar",
+      "allowed_at_t": "yes",
+      "notes": "used to reconstruct severe/reversal/mild escalation without same-bar peeking"
+    },
+    {
+      "column": "close_location_lag1",
+      "domain": "lagged_path",
+      "visibility_rule": "close-location over the last visible rolling window, ending at the prior closed bar",
+      "allowed_at_t": "yes",
+      "notes": "must not use the current minute range before bar close"
+    },
+    {
+      "column": "phase_state_visible",
+      "domain": "governance_context",
+      "visibility_rule": "session-level state inherited from frozen EOD/minute governance and visible from the open",
+      "allowed_at_t": "yes",
+      "notes": "examples: preheat_window, impulse_window, weak_drift proxy context"
+    },
+    {
+      "column": "event_state_visible",
+      "domain": "event_context",
+      "visibility_rule": "must carry first_visible_ts and only activate at or after that timestamp",
+      "allowed_at_t": "first_visible_ts_or_later",
+      "notes": "day-level events must be converted into minute-visible state updates, never backfilled earlier"
+    },
+    {
+      "column": "pre_open_event_status",
+      "domain": "event_context",
+      "visibility_rule": "session-level status frozen before the open",
+      "allowed_at_t": "yes",
+      "notes": "can be joined from the open because it is already decided before trading starts"
+    },
+    {
+      "column": "severity_tier_shadow",
+      "domain": "shadow_label",
+      "visibility_rule": "derived minute governance tier for supervision/shadow only",
+      "allowed_at_t": "shadow_only",
+      "notes": "cannot be bound into the authoritative EOD lane"
+    },
+    {
+      "column": "first_visible_ts/source_cutoff_ts",
+      "domain": "lineage_guardrail",
+      "visibility_rule": "mandatory lineage columns for every event/state field",
+      "allowed_at_t": "yes",
+      "notes": "core PIT audit fields; missing values fail the protocol"
+    }
+  ],
+  "semantics_rows": [
+    {
+      "semantic_rule": "close_bar_activation",
+      "detail": "same-minute OHLCV and any same-minute derived aggregate only become visible after the bar is complete"
+    },
+    {
+      "semantic_rule": "first_visible_ts_required",
+      "detail": "every event-derived or state-derived field must store the first timestamp at which it became lawful to see"
+    },
+    {
+      "semantic_rule": "one_way_read_only_boundary",
+      "detail": "the point-in-time feed may read frozen EOD context, but nothing in this feed may write back into the frozen EOD primary"
+    },
+    {
+      "semantic_rule": "tier_to_action_mapping",
+      "detail": "severe_override_positive -> emergency_exit_shadow_override; reversal_watch -> panic_derisk_watch; mild_override_watch -> do_not_readd_watch"
+    }
+  ],
+  "acceptance_rows": [
+    {
+      "acceptance_item": "seed_session_reconstructibility",
+      "status": "required",
+      "detail": "all 6 canonical seed sessions must be replayable minute by minute using only visible columns"
+    },
+    {
+      "acceptance_item": "lineage_completeness",
+      "status": "required",
+      "detail": "all event/state fields must include first_visible_ts and source_cutoff_ts; null lineage fails acceptance"
+    },
+    {
+      "acceptance_item": "same_bar_no_peek",
+      "status": "required",
+      "detail": "no path or bar aggregate may depend on the unfinished current bar before its close"
+    },
+    {
+      "acceptance_item": "shadow_only_binding",
+      "status": "required",
+      "detail": "the resulting visibility feed remains governance/shadow-only until a later simulator and separate replay lane exist"
+    }
+  ],
+  "interpretation": [
+    "V1.33O converts phase_1_visibility from a blocker label into a concrete minute-state specification.",
+    "The spec is intentionally narrow: it defines what minute columns may exist, when they become visible, and what lineage fields are mandatory before any simulator work starts."
+  ]
+}

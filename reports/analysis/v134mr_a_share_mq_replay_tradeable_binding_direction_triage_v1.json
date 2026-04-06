@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "date_level_bound_count": 14,
+    "missing_date_context_count": 3,
+    "authoritative_status": "replay_tradeable_context_bound_at_date_level_but_not_symbol_level"
+  },
+  "triage_rows": [
+    {
+      "component": "tradeable_context_binding",
+      "direction": "freeze_date_level_binding_and_shift_next_to_symbol_level_mapping"
+    },
+    {
+      "component": "missing_date_coverage",
+      "direction": "close_shadow_slice_market_context_gaps_before_attempting_unified_tradeable_binding"
+    }
+  ],
+  "interpretation": [
+    "Replay has an explicit coverage diagnosis rather than an implicit assumption about tradeable-state linkage.",
+    "Because date-level binding did not materialize on the current coverage window, the next step is coverage expansion before symbol-level linkage."
+  ]
+}

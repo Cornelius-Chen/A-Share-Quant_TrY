@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "contract_row_count": 1,
+    "supervisor_mode": "steady_supervision",
+    "supervision_loop_mode": "steady_supervision_loop",
+    "contract_action": "keep_steady_supervision",
+    "sleep_strategy_seconds": "300",
+    "backoff_mode": "steady_supervision_interval",
+    "authoritative_output": "a_share_internal_hot_news_program_runtime_stack_supervision_contract_materialized"
+  },
+  "rows": [
+    {
+      "component": "runtime_stack_supervision_contract",
+      "component_state": "read_ready_internal_only",
+      "metric": "contract_row_count",
+      "value": "1"
+    },
+    {
+      "component": "supervision_loop_mode",
+      "component_state": "materialized",
+      "metric": "supervision_loop_mode",
+      "value": "steady_supervision_loop"
+    },
+    {
+      "component": "contract_action",
+      "component_state": "materialized",
+      "metric": "contract_action",
+      "value": "keep_steady_supervision"
+    },
+    {
+      "component": "sleep_strategy_seconds",
+      "component_state": "materialized",
+      "metric": "sleep_strategy_seconds",
+      "value": "300"
+    }
+  ],
+  "interpretation": [
+    "This is the topmost supervision contract above the compact supervisor surface and supervisor-loop signal layers.",
+    "A supervising process can use it as the single-row instruction for its next cycle without rereading lower runtime-stack layers."
+  ]
+}

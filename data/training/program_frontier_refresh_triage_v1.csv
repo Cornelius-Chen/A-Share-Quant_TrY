@@ -1,0 +1,4 @@
+﻿component,status,detail
+commercial_aerospace_reduce,frozen_in_program_view,Program-level reading must now treat reduce as frozen and no longer as an open semantic branch.
+commercial_aerospace_intraday_add,next_but_deferred,"Program-level reading should mark intraday add as the next frontier, but still deferred until an explicit shift is authorized."
+current_instruction,respect_deferred_shift,Do not silently start intraday add simply because reduce is frozen; wait for the later deliberate opening.

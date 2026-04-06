@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "blocker_count": 6,
+    "governance_blocker_count": 2,
+    "replay_blocker_count": 2,
+    "authoritative_status": "execution_binding_still_blocked_by_named_stack"
+  },
+  "triage_rows": [
+    {
+      "component": "execution_binding",
+      "direction": "keep_blocked"
+    },
+    {
+      "component": "next_frontier",
+      "direction": "close_network_fetch_binding_and_replay_execution_cost_model_backlogs_before_reopening_execution_authority"
+    }
+  ],
+  "interpretation": [
+    "Execution authority should remain closed because the blocker stack is now explicit and still active.",
+    "The next useful work is not another promotion discussion; it is closing the named infrastructure blockers in order."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117a_cpo_quality_side_cooled_retention_v1",
+    "candidate_posture": "quality_side_cooled_candidate_only",
+    "retained_variant_name": "cooled_q_0p25",
+    "equivalent_shadow_variant_name": "cooled_q_0p33",
+    "effective_visible_axis": "pc1",
+    "pc2_axis_active_any_variant": true,
+    "recommended_next_posture": "keep_q_0p25_as_quality_side_reference_and_stop_regrinding_quantiles_inside_same_family"
+  },
+  "retained_variant_row": {
+    "variant_name": "cooled_q_0p25",
+    "quantile": 0.25,
+    "pc1_only": false,
+    "hit_row_count": 8,
+    "hit_day_count": 4,
+    "positive_expectancy_hit_rate": 0.75,
+    "avg_expectancy_proxy_3d": 0.098337,
+    "avg_max_adverse_return_3d": -0.027288,
+    "pc2_axis_active": false
+  },
+  "equivalent_shadow_row": {
+    "variant_name": "cooled_q_0p33",
+    "quantile": 0.33,
+    "pc1_only": false,
+    "hit_row_count": 8,
+    "hit_day_count": 4,
+    "positive_expectancy_hit_rate": 0.75,
+    "avg_expectancy_proxy_3d": 0.098337,
+    "avg_max_adverse_return_3d": -0.027288,
+    "pc2_axis_active": false
+  },
+  "rejected_variant_rows": [
+    {
+      "variant_name": "cooled_q_0p20",
+      "quantile": 0.2,
+      "pc1_only": false,
+      "hit_row_count": 6,
+      "hit_day_count": 4,
+      "positive_expectancy_hit_rate": 0.666667,
+      "avg_expectancy_proxy_3d": 0.062938,
+      "avg_max_adverse_return_3d": -0.030756,
+      "pc2_axis_active": false
+    },
+    {
+      "variant_name": "cooled_q_0p40",
+      "quantile": 0.4,
+      "pc1_only": false,
+      "hit_row_count": 11,
+      "hit_day_count": 7,
+      "positive_expectancy_hit_rate": 0.636364,
+      "avg_expectancy_proxy_3d": 0.066831,
+      "avg_max_adverse_return_3d": -0.040827,
+      "pc2_axis_active": true
+    },
+    {
+      "variant_name": "cooled_q_0p25_pc1_only",
+      "quantile": 0.25,
+      "pc1_only": true,
+      "hit_row_count": 8,
+      "hit_day_count": 4,
+      "positive_expectancy_hit_rate": 0.75,
+      "avg_expectancy_proxy_3d": 0.098337,
+      "avg_max_adverse_return_3d": -0.027288,
+      "pc2_axis_active": false
+    }
+  ],
+  "interpretation": [
+    "V1.17A freezes the first quality-side cooled refinement pass instead of letting the project re-argue the same quantile family repeatedly.",
+    "The retained quality-side reference remains q=0.25 because it dominates q=0.20 on coverage and equals q=0.33 on quality, while q=0.40 is clearly too hot.",
+    "The family is now effectively PC1-driven at this stage; there is no evidence that a PC2-led quality-side refinement is adding real signal."
+  ]
+}

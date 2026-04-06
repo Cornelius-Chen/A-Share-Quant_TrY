@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117w_cpo_cooling_reacceleration_false_positive_control_discovery_v1",
+    "candidate_name": "cooling_reacceleration_overheat_control_candidate",
+    "row_count": 16,
+    "positive_row_count": 5,
+    "negative_row_count": 11,
+    "base_gap_positive_minus_negative": 666477709.090909,
+    "controlled_gap_positive_minus_negative": 727155309.090909,
+    "penalty_gap_negative_minus_positive": 60677600.0,
+    "control_helpful": true,
+    "recommended_next_posture": "externally_audit_controlled_score_on_same_add_pool_and_keep_candidate_only"
+  },
+  "control_rows": [
+    {
+      "signal_trade_date": "2024-02-05",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.258901,
+      "max_adverse_return_3d": -0.007772,
+      "base_score": 1449399000.0,
+      "overheat_penalty": 3781000.0,
+      "controlled_score": 1445618000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.296191,
+      "max_adverse_return_3d": -0.01419,
+      "base_score": 1198972000.0,
+      "overheat_penalty": 9178000.0,
+      "controlled_score": 1189794000.0
+    },
+    {
+      "signal_trade_date": "2025-06-03",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.198983,
+      "max_adverse_return_3d": 0.0,
+      "base_score": 665502000.0,
+      "overheat_penalty": 1733000.0,
+      "controlled_score": 663769000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300308",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.34476,
+      "max_adverse_return_3d": -0.012266,
+      "base_score": 1008624000.0,
+      "overheat_penalty": 400000000.0,
+      "controlled_score": 608624000.0
+    },
+    {
+      "signal_trade_date": "2024-02-06",
+      "symbol": "300502",
+      "positive_add_label": true,
+      "expectancy_proxy_3d": 0.419088,
+      "max_adverse_return_3d": -0.007604,
+      "base_score": 572567000.0,
+      "overheat_penalty": 83165000.0,
+      "controlled_score": 489402000.0
+    },
+    {
+      "signal_trade_date": "2023-06-14",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.196261,
+      "max_adverse_return_3d": -0.07478,
+      "base_score": 1654966000.0,
+      "overheat_penalty": 280357000.0,
+      "controlled_score": 1374609000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.028585,
+      "max_adverse_return_3d": -0.040377,
+      "base_score": 1447011000.0,
+      "overheat_penalty": 300754000.0,
+      "controlled_score": 1146257000.0
+    },
+    {
+      "signal_trade_date": "2025-07-31",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.044831,
+      "max_adverse_return_3d": -0.047748,
+      "base_score": 1138768000.0,
+      "overheat_penalty": 1157000.0,
+      "controlled_score": 1137611000.0
+    },
+    {
+      "signal_trade_date": "2023-12-08",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.05928,
+      "max_adverse_return_3d": -0.044695,
+      "base_score": 1189616000.0,
+      "overheat_penalty": 258388000.0,
+      "controlled_score": 931228000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300308",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.011433,
+      "max_adverse_return_3d": -0.038531,
+      "base_score": 817964000.0,
+      "overheat_penalty": 282700000.0,
+      "controlled_score": 535264000.0
+    },
+    {
+      "signal_trade_date": "2023-09-22",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": 0.014756,
+      "max_adverse_return_3d": -0.036322,
+      "base_score": 618915000.0,
+      "overheat_penalty": 322330000.0,
+      "controlled_score": 296585000.0
+    },
+    {
+      "signal_trade_date": "2026-01-06",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.163783,
+      "max_adverse_return_3d": -0.103188,
+      "base_score": -512324000.0,
+      "overheat_penalty": 2981000.0,
+      "controlled_score": -515305000.0
+    },
+    {
+      "signal_trade_date": "2024-04-17",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.195929,
+      "max_adverse_return_3d": -0.147198,
+      "base_score": -589553000.0,
+      "overheat_penalty": 543000.0,
+      "controlled_score": -590096000.0
+    },
+    {
+      "signal_trade_date": "2025-07-02",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.035473,
+      "max_adverse_return_3d": -0.047245,
+      "base_score": -610189000.0,
+      "overheat_penalty": 13529000.0,
+      "controlled_score": -623718000.0
+    },
+    {
+      "signal_trade_date": "2025-08-25",
+      "symbol": "300757",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.068626,
+      "max_adverse_return_3d": -0.062234,
+      "base_score": -716335000.0,
+      "overheat_penalty": 150000000.0,
+      "controlled_score": -866335000.0
+    },
+    {
+      "signal_trade_date": "2023-05-18",
+      "symbol": "300502",
+      "positive_add_label": false,
+      "expectancy_proxy_3d": -0.239755,
+      "max_adverse_return_3d": -0.144064,
+      "base_score": -1000953000.0,
+      "overheat_penalty": 150000000.0,
+      "controlled_score": -1150953000.0
+    }
+  ],
+  "interpretation": [
+    "V1.17W adds one narrow false-positive control idea to the cooling-reacceleration branch: punish rows that are still too overheated to count as real cooling before reacceleration.",
+    "The penalty is intentionally simple and visible-only: too-hot recent bar, too-high session occupancy, and too-stretched close location.",
+    "This is still discovery only. If the controlled score does not improve the broader add-pool separation, the control idea should die quickly."
+  ]
+}

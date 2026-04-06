@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134hd_commercial_aerospace_derivation_boundary_policy_audit_v1",
+    "boundary_classification": "lockout_aligned_derivation_boundary",
+    "post_lockout_trade_date_count": 10,
+    "raw_only_vacancy_count": 10,
+    "shadow_lane_state": "opened_protocol_only",
+    "bridge_stage_count": 8,
+    "current_policy": "retain_current_boundary",
+    "future_policy_option": "explicit_boundary_extension_for_shadow_only",
+    "policy_csv": "data\\training\\commercial_aerospace_derivation_boundary_policy_audit_v1.csv",
+    "authoritative_rule": "the current derivation boundary should remain frozen by default; any extension beyond lockout end must be an explicit shadow-only policy shift rather than an automatic refresh from existing raw data"
+  },
+  "policy_rows": [
+    {
+      "policy_option": "implicit_auto_extension_from_raw",
+      "status": "rejected",
+      "rationale": "raw post-lockout dates exist, but auto-deriving board state from raw alone would silently reopen a frozen lockout-aligned boundary without explicit governance approval"
+    },
+    {
+      "policy_option": "explicit_boundary_extension_for_shadow_only",
+      "status": "deferred_until_explicit_shift",
+      "rationale": "extension is a legitimate future option, but only as an explicit shadow-lane policy change rather than an incidental refresh"
+    },
+    {
+      "policy_option": "retain_current_boundary",
+      "status": "current_authoritative",
+      "rationale": "current boundary remains the default because the shadow lane is protocol-only, execution stays blocked, and post-lockout handoff still has zero lawful board-surface coverage"
+    },
+    {
+      "policy_option": "unlock_classifier_debate_before_extension",
+      "status": "rejected_ordering",
+      "rationale": "arguing about post-lockout unlock quality before extending the board surfaces would invert the causal order"
+    }
+  ],
+  "interpretation": [
+    "V1.34HD converts the boundary classification into an explicit policy question.",
+    "The conclusion is conservative by design: post-lockout extension is a possible future action, but only as an explicit shadow-lane boundary change, not as a silent continuation from raw coverage."
+  ]
+}

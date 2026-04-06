@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134as_commercial_aerospace_local_deferral_cluster_singularity_audit_v1",
+    "reversal_session_count": 12,
+    "rebound_cost_case_count": 4,
+    "matched_local_deferral_count": 1,
+    "matched_local_deferral_share_of_reversal": 0.08333333,
+    "matched_local_deferral_share_of_rebound_cost": 0.25,
+    "cluster_csv": "data\\training\\commercial_aerospace_local_deferral_cluster_singularity_audit_v1.csv",
+    "authoritative_output": "commercial_aerospace_local_deferral_cluster_singularity_audit_ready_for_direction_triage"
+  },
+  "cluster_rows": [
+    {
+      "trade_date": "20251216",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -1587.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20251219",
+      "symbol": "688523",
+      "month_bucket": "2025-12",
+      "regime_label": "rebound_cost_case",
+      "horizon_pnl_5d": 3036.0,
+      "matched_local_deferral": true
+    },
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "horizon_pnl_5d": 5000.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -5550.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "601698",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -2898.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260115",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -4531.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "horizon_pnl_5d": 3077.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "regime_label": "rebound_cost_case",
+      "horizon_pnl_5d": 1920.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "300045",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -8512.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688066",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -25254.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260126",
+      "symbol": "688523",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -10388.0,
+      "matched_local_deferral": false
+    },
+    {
+      "trade_date": "20260128",
+      "symbol": "300342",
+      "month_bucket": "2026-01",
+      "regime_label": "followthrough_benefit_case",
+      "horizon_pnl_5d": -1819.0,
+      "matched_local_deferral": false
+    }
+  ],
+  "interpretation": [
+    "V1.34AS checks whether the promoted local reversal-deferral expression is a broad failure cluster or only a single narrow residue.",
+    "If the hit share is tiny, the right posture is to freeze the local expression and stop searching the same family for more refinements."
+  ]
+}

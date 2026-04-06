@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "date_level_bound_count": 14,
+    "daily_gap_count": 3,
+    "intraday_present_daily_missing_count": 0,
+    "authoritative_status": "replay_market_coverage_gap_narrowed_to_residual_missing_date_contexts"
+  },
+  "triage_rows": [
+    {
+      "component": "daily_market_coverage",
+      "direction": "close_only_the_residual_missing_date_contexts_instead_of_repeating_full_market_extension"
+    },
+    {
+      "component": "replay_tradeable_context",
+      "direction": "retain_date_level_binding_and_shift_next_attention_to_symbol_level_or_residual_date_closure"
+    }
+  ],
+  "interpretation": [
+    "The replay-side blocker is now narrower than before because most shadow slices already have date-level tradeable context.",
+    "More bulk market-surface rebuilding would now drift; the next move is residual date closure or controlled symbol-level escalation."
+  ]
+}

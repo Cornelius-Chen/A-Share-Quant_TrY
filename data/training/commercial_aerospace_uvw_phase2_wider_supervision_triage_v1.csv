@@ -1,0 +1,6 @@
+﻿component,status,detail
+current_wider_reference,retain,"same_day_loss_avoided_total = 25934.8882, best_symbol = 688066"
+failure_shape,concentrated_enough_for_local_supervision,"negative_session_count = 1, top_failure_cluster = reversal_watch|2026-01"
+next_optimization_direction,supervise_local_clusters,The next step should stay inside the current wider reference and inspect the top failure cluster before any further widening.
+all_session_widening,still_blocked,The branch still does not have a reason to leave the bounded broader-hit surface.
+phase3_replay_lane,still_blocked,Nothing in the current wider supervision review authorizes replay binding.

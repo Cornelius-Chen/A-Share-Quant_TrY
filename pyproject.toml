@@ -19,6 +19,10 @@ dev = [
 free-data = [
   "akshare>=1.18.40",
 ]
+tushare-data = [
+  "tushare>=1.4.24",
+  "python-dotenv>=1.0.1",
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

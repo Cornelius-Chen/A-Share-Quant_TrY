@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v117z_cpo_wxy_three_run_adversarial_triage_v1",
+    "triage_scope": "V117W_V117X_V117Y",
+    "cooling_reacceleration_branch_status": "retain_candidate_only_continue_without_shadow_replay",
+    "promotion_allowed": false,
+    "replay_facing_expansion_allowed": false,
+    "shadow_replay_allowed": false,
+    "mainline_investment_allowed": false,
+    "candidate_only_allowed": true,
+    "authoritative_current_problem": "small_sample_threshold_stability_and_false_positive_rejection_strength",
+    "recommended_next_posture": "continue_candidate_only_with_non_replay_out_of_set_false_positive_control_audit"
+  },
+  "triage_rows": [
+    {
+      "reviewer": "Pauli",
+      "hard_conclusion": "real_improvement_but_boundary_not_hard_enough",
+      "key_reason": "This is the first version that improves both external-pool separation and time-split stability, but small-sample threshold stability and weak negative rejection still block replay-facing use."
+    },
+    {
+      "reviewer": "Tesla",
+      "hard_conclusion": "candidate_only_continue_not_shadow_replay_ready",
+      "key_reason": "The branch is materially cleaner than pre-control cooling-reacceleration, yet it still admits too many negatives and should stay candidate-only until false positives are thinner."
+    },
+    {
+      "reviewer": "James",
+      "hard_conclusion": "worth_continuing_but_only_inside_non_replay_triage",
+      "key_reason": "The control layer has training value and survives time split much better, but the add-pool is still too small to justify replay-facing work."
+    },
+    {
+      "reviewer": "Codex",
+      "hard_conclusion": "retain_candidate_only_and_keep_replay_ban",
+      "key_reason": "V117X best_bal_acc=0.772727, V117Y mean_test_bal_acc=0.736111, V117Y min_test_bal_acc=0.666667."
+    }
+  ],
+  "interpretation": [
+    "V1.17Z is the scheduled three-run adversarial review over the false-positive-control refinement of the cooling-reacceleration branch.",
+    "All three reviewers converged that W/X/Y materially improved the branch relative to the pre-control candidate, because external-pool discrimination rose and crude time-split stability no longer collapsed.",
+    "They also converged that the branch still does not deserve any replay-facing or shadow-replay expansion. The remaining issue is no longer directionality, but boundary hardness: sample count is still small and negative rejection is not yet strong enough."
+  ]
+}

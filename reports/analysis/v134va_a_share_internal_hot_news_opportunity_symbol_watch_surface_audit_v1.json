@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "symbol_watch_row_count": 1,
+    "unique_symbol_count": 1,
+    "opportunity_event_count": 1,
+    "top_symbol": "601899",
+    "top_theme": "gold",
+    "top_mapping_confidence": "medium",
+    "top_linkage_class": "direct_beneficiary",
+    "authoritative_output": "a_share_internal_hot_news_opportunity_symbol_watch_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "opportunity_symbol_watch_surface",
+      "component_state": "read_ready_internal_only",
+      "metric": "symbol_watch_row_count",
+      "value": "1"
+    },
+    {
+      "component": "unique_symbols",
+      "component_state": "materialized",
+      "metric": "unique_symbol_count",
+      "value": "1"
+    },
+    {
+      "component": "opportunity_events",
+      "component_state": "materialized",
+      "metric": "opportunity_event_count",
+      "value": "1"
+    },
+    {
+      "component": "top_mapping_confidence",
+      "component_state": "materialized",
+      "metric": "top_mapping_confidence",
+      "value": "medium"
+    },
+    {
+      "component": "top_linkage_class",
+      "component_state": "materialized",
+      "metric": "top_linkage_class",
+      "value": "direct_beneficiary"
+    },
+    {
+      "component": "top_theme",
+      "component_state": "materialized",
+      "metric": "top_theme",
+      "value": "gold"
+    }
+  ],
+  "interpretation": [
+    "This surface explodes opportunity-feed beneficiary symbols into symbol-level watch rows for direct downstream consumption.",
+    "The trading program no longer needs to split comma-separated beneficiary strings when it wants a symbol watchlist.",
+    "The top symbol watch row now inherits the governed primary theme so overlap handling is already resolved before symbol-level delivery.",
+    "It also carries linkage class so symbol-first consumers can distinguish direct beneficiaries from weaker proxies."
+  ]
+}

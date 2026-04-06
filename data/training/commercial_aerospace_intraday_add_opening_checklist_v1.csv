@@ -1,0 +1,10 @@
+﻿opening_gate,status,detail
+explicit_frontier_shift,mandatory,"Intraday add may open only after a deliberate frontier shift, not because reduce is already finished."
+reduce_mainline_remains_frozen,mandatory,Reduce must stay frozen_mainline and may not quietly reopen during add startup.
+reduce_residue_stays_local_only,mandatory,The four local rebound-residue seeds remain maintenance only and must not expand into fresh reduce tuning.
+board_lockout_stays_upstream,mandatory,Board cooling lockout remains an upstream veto before any intraday add exploration can claim permission.
+local_only_rebound_guard_stays_upstream,mandatory,Local-only rebound remains negative evidence and cannot be repackaged as add authorization.
+board_revival_unlock_required_for_add_authority,mandatory,"Even after add research begins, board revival unlock is still required before any stronger authority claims."
+add_starts_as_supervision_frontier,mandatory,Intraday add opens as a new supervision frontier rather than an execution-facing lane.
+no_reduce_execution_authority_inheritance,mandatory,Intraday add must not inherit reduce execution authority or sell-side binding claims.
+program_status_refresh,mandatory,Program master status must be refreshed when the frontier eventually shifts from deferred to opened.

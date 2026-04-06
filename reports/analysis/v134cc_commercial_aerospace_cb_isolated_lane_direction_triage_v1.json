@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cc_commercial_aerospace_cb_isolated_lane_direction_triage_v1",
+    "authoritative_status": "retain_isolated_sell_side_shadow_lane_and_audit_binding_quality_next",
+    "executed_session_count": 12,
+    "clipped_reconciliation_count": 2,
+    "triage_csv": "data\\training\\commercial_aerospace_cb_isolated_lane_direction_triage_v1.csv"
+  },
+  "triage_rows": [
+    {
+      "component": "isolated_sell_side_shadow_lane",
+      "status": "retained_shadow_binding_surface",
+      "detail": "Keep the lane as the first holdings-aware sell-side binding surface; it now consumes only carried start-of-day inventory."
+    },
+    {
+      "component": "same_day_reconciliation",
+      "status": "explicit_and_mandatory",
+      "detail": "Preserve reconciliation rows and clipping behavior so later EOD reduce/close actions cannot double-consume carried inventory."
+    },
+    {
+      "component": "next_real_work",
+      "status": "stop_lane_expansion_and_audit_binding_quality",
+      "detail": "Do not widen scope yet; next justified work is attribution and quality audit of this isolated lane, not replay binding."
+    },
+    {
+      "component": "scope_guardrail",
+      "status": "mandatory",
+      "detail": "Keep the branch sell-side only and continue excluding reentry execution and full replay binding."
+    }
+  ],
+  "interpretation": [
+    "V1.34CC converts the first isolated sell-side lane into a practical direction judgment.",
+    "The lane should be retained as the first holdings-aware binding surface, but the next step is quality audit rather than replay expansion."
+  ]
+}

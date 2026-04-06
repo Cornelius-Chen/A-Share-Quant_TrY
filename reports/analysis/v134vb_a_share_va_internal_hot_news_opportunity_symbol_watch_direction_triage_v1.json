@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "symbol_watch_row_count": 1,
+    "unique_symbol_count": 1,
+    "opportunity_event_count": 1,
+    "top_symbol": "601899",
+    "top_theme": "gold",
+    "top_mapping_confidence": "medium",
+    "top_linkage_class": "direct_beneficiary",
+    "authoritative_status": "continue_serving_symbol_level_opportunity_watch_rows_downstream"
+  },
+  "triage_rows": [
+    {
+      "component": "symbol_level_consumer",
+      "direction": "prefer_this_surface_when_the_consumer_needs_a_ready_to_route_symbol_watchlist_instead_of_a_theme-level_opportunity_row"
+    },
+    {
+      "component": "theme_level_consumer",
+      "direction": "stay_on_the_opportunity_feed_when_the_consumer_only_needs_theme-level_priority_and_gate_information"
+    }
+  ],
+  "interpretation": [
+    "This surface is a downstream convenience layer under the opportunity feed, not a replacement for the higher-level routing views.",
+    "Its purpose is to let a trading consumer move directly from opportunity events to symbol watch rows with no string parsing.",
+    "The theme carried here is already the governed primary theme, so symbol-level consumers do not need to resolve overlap again."
+  ]
+}

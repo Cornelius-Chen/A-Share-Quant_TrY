@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "stub_row_count": 17,
+    "lane_overlay_row_count": 15,
+    "excluded_boundary_count": 2,
+    "authoritative_status": "shadow_execution_stub_replacement_lane_is_ready_for_internal_replay_progress_but_not_for_global_stub_replacement"
+  },
+  "triage_rows": [
+    {
+      "component": "stub_replacement_lane",
+      "direction": "retain_as_the_internal_replay_progress_lane_for_the_15_overlay_rows"
+    },
+    {
+      "component": "base_stub_registry",
+      "direction": "keep_base_stub_unchanged_until_a_later_explicit_promotion_decision_exists"
+    },
+    {
+      "component": "boundary_exclusions",
+      "direction": "retain_the_2_external_boundary_rows_outside_the_replacement_lane_and_do_not_force_them_into_the_stub_replacement_scope"
+    }
+  ],
+  "interpretation": [
+    "The replacement lane is now explicit enough to guide further replay-internal progress without pretending that the base stub has already been globally replaced.",
+    "That keeps the boundary between shadow-only improvement and execution-facing promotion clean."
+  ]
+}

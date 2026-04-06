@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "backlog_count": 6,
+    "source_runtime_count": 1,
+    "internal_build_count": 1,
+    "external_source_count": 2,
+    "governance_hold_count": 2,
+    "global_state_count": 7,
+    "status_csv": "data\\training\\a_share_information_center_global_residual_backlog_v1.csv",
+    "authoritative_output": "a_share_information_center_global_residual_backlog_materialized"
+  },
+  "backlog_rows": [
+    {
+      "backlog_id": "bg_001",
+      "backlog_group": "source_runtime_followthrough",
+      "backlog_item": "runtime_scheduler_governance_opening_followthrough_for_html_article_fetch",
+      "current_state": "single_opening_review_lane_pending_scheduler_and_governance_movement",
+      "blocking_reason": "runtime binding still remains scheduler_stub_not_activated; governance and automation bindings must exist before live_like serving opens; information center remains research-shadow only",
+      "closure_mode": "activate_scheduler_runtime_binding_first_then_reaudit_live_like_and_execution_governance_without_reopening_excluded_adapters"
+    },
+    {
+      "backlog_id": "bg_002",
+      "backlog_group": "replay_internal_build",
+      "backlog_item": "shadow_execution_journal_replace_stub_from_eligible_subset",
+      "current_state": "narrowed_to_shadow_eligible_subset_lane",
+      "blocking_reason": "execution_journal_stub_count = 17; eligible_subset_count = 15; excluded_boundary_count = 2",
+      "closure_mode": "replace_stub_from_the_15_row_shadow_eligible_subset_without_forcing_boundary_rows_inside"
+    },
+    {
+      "backlog_id": "bg_003",
+      "backlog_group": "replay_external_source",
+      "backlog_item": "index_daily_raw_source_extension",
+      "current_state": "deferred_prelaunch",
+      "blocking_reason": "retained raw index source now extends beyond 2024-12-31",
+      "closure_mode": "acquire_new_raw_index_source_then_reopen_extension"
+    },
+    {
+      "backlog_id": "bg_004",
+      "backlog_group": "replay_external_source",
+      "backlog_item": "index_daily_source_horizon_match_shadow_window",
+      "current_state": "deferred_prelaunch",
+      "blocking_reason": "retained index source horizon now reaches shadow_horizon_end = 2026-03-28",
+      "closure_mode": "extend_raw_index_horizon_to_cover_shadow_window"
+    },
+    {
+      "backlog_id": "bg_005",
+      "backlog_group": "governance_hold",
+      "backlog_item": "live_like_opening_gate",
+      "current_state": "closed",
+      "blocking_reason": "governance and automation bindings must exist before live_like serving opens",
+      "closure_mode": "keep_closed_until_source_and_replay_backlogs_shrink"
+    },
+    {
+      "backlog_id": "bg_006",
+      "backlog_group": "governance_hold",
+      "backlog_item": "execution_authority_gate",
+      "current_state": "closed",
+      "blocking_reason": "information center remains research-shadow only",
+      "closure_mode": "retain_research_shadow_only"
+    }
+  ],
+  "interpretation": [
+    "The remaining work is now consolidated into one global backlog instead of being dispersed across source, replay, and governance registries.",
+    "What remains is not a generic buildout: it is a mixed queue of source runtime followthrough, replay build closure from a 15-row shadow-eligible subset, external source acquisition, and explicit governance holds."
+  ]
+}

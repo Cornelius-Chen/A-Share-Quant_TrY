@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "acceptance_posture": "build_v134gt_commercial_aerospace_reentry_unlock_shadow_state_surface_v1",
+    "seed_count": 3,
+    "pre_lockout_seed_count": 1,
+    "in_lockout_seed_count": 2,
+    "current_add_handoff_ready_count": 0,
+    "same_day_block_seed_count": 3,
+    "bridge_stage_count": 8,
+    "state_csv": "data\\training\\commercial_aerospace_reentry_unlock_shadow_state_surface_v1.csv",
+    "authoritative_output": "commercial_aerospace_reentry_unlock_shadow_state_surface_ready_for_direction_triage"
+  },
+  "state_rows": [
+    {
+      "trade_date": "20260113",
+      "symbol": "000738",
+      "reentry_family": "deep_washout_reentry_gap",
+      "board_gate_state": "pre_lockout_seed",
+      "same_day_state": "same_day_chase_blocked",
+      "observation_only_through_day": 4,
+      "rebuild_watch_start_day": 5,
+      "rebuild_watch_label": "base_then_rebuild_watch",
+      "confirmation_state": "late_only_recovery",
+      "confirmation_positive_3d": false,
+      "confirmation_positive_5d": true,
+      "add_handoff_state": "blocked_until_board_unlock",
+      "add_permission_consult_ready": false,
+      "lockout_window": "20260115->20260320"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "300342",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "board_gate_state": "in_lockout_seed",
+      "same_day_state": "same_day_chase_blocked",
+      "observation_only_through_day": 2,
+      "rebuild_watch_start_day": 3,
+      "rebuild_watch_label": "reclaim_rebuild_watch",
+      "confirmation_state": "persistent_recovery",
+      "confirmation_positive_3d": true,
+      "confirmation_positive_5d": true,
+      "add_handoff_state": "blocked_until_board_unlock",
+      "add_permission_consult_ready": false,
+      "lockout_window": "20260115->20260320"
+    },
+    {
+      "trade_date": "20260120",
+      "symbol": "688523",
+      "reentry_family": "delayed_rebound_reentry_gap",
+      "board_gate_state": "in_lockout_seed",
+      "same_day_state": "same_day_chase_blocked",
+      "observation_only_through_day": 2,
+      "rebuild_watch_start_day": 3,
+      "rebuild_watch_label": "reclaim_rebuild_watch",
+      "confirmation_state": "persistent_recovery",
+      "confirmation_positive_3d": true,
+      "confirmation_positive_5d": true,
+      "add_handoff_state": "blocked_until_board_unlock",
+      "add_permission_consult_ready": false,
+      "lockout_window": "20260115->20260320"
+    }
+  ],
+  "interpretation": [
+    "V1.34GT is the first concrete state surface for the new reentry/unlock shadow bridge.",
+    "It does not simulate execution. It simply enumerates where each current reentry seed sits inside board gating, same-day blocking, rebuild-watch timing, later confirmation, and handoff readiness to frozen add supervision."
+  ]
+}

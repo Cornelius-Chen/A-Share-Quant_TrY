@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127l_commercial_aerospace_jkl_drag_veto_triage_v1",
+    "reference_variant": "broad_half_reference",
+    "reference_final_equity": 1261238.592,
+    "reference_max_drawdown": 0.12870312,
+    "veto_trio_variant": "veto_688066_002085_688523",
+    "veto_trio_final_equity": 1251943.1718,
+    "veto_trio_max_drawdown": 0.11423466,
+    "authoritative_status": "blocked_do_not_replace_cleaner_slot",
+    "next_step": "phase_conditioned_drag_veto_audit"
+  },
+  "subagent_rows": [
+    {
+      "subagent": "Pauli",
+      "vote": "blocked",
+      "reason": "Global chronic-drag veto gives up too much economic participation and does not beat the existing cleaner slot."
+    },
+    {
+      "subagent": "Tesla",
+      "vote": "retain_cleaner_candidate",
+      "reason": "The full drag-trio veto offers a real drawdown improvement for a small equity give-back and is at least cleaner-slot worthy."
+    },
+    {
+      "subagent": "James",
+      "vote": "blocked",
+      "reason": "The veto is too blunt; it removes symbols that still help in some phases and should not replace the cleaner reference."
+    }
+  ],
+  "interpretation": [
+    "V1.27L freezes the global chronic-drag veto as blocked after a 2:1 subagent vote.",
+    "The next attribution-driven branch is phase-conditioned drag veto, not full-symbol exclusion."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "window_count": 10,
+    "released_count": 9,
+    "hold_count": 1,
+    "under_review_count": 0
+  },
+  "triage_rows": [
+    {
+      "sample_window_id": "ca_train_window_001",
+      "training_admission_class": "positive_support_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_002",
+      "training_admission_class": "policy_gate_hold",
+      "recommendation": "keep_hold_and_continue_policy_wording_lock"
+    },
+    {
+      "sample_window_id": "ca_train_window_003",
+      "training_admission_class": "negative_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_004",
+      "training_admission_class": "negative_support_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_005",
+      "training_admission_class": "negative_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_006",
+      "training_admission_class": "negative_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_007",
+      "training_admission_class": "positive_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_008",
+      "training_admission_class": "subwindow_learning_only",
+      "recommendation": "allow_subwindow_learning_only"
+    },
+    {
+      "sample_window_id": "ca_train_window_009",
+      "training_admission_class": "bridge_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    },
+    {
+      "sample_window_id": "ca_train_window_010",
+      "training_admission_class": "negative_sample_ready",
+      "recommendation": "allow_training_under_current_role"
+    }
+  ]
+}

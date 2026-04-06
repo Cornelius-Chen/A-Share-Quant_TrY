@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134u_commercial_aerospace_phase2_wider_reference_attribution_v1",
+    "session_count": 24,
+    "same_day_loss_avoided_total": 25934.8882,
+    "best_symbol": "688066",
+    "worst_symbol": "300045",
+    "best_month_bucket": "2026-01",
+    "worst_month_bucket": "2025-11",
+    "attribution_csv": "data\\training\\commercial_aerospace_phase2_wider_reference_attribution_v1.csv",
+    "authoritative_output": "commercial_aerospace_phase2_wider_reference_attribution_ready_for_failure_cluster_review"
+  },
+  "tier_rows": [
+    {
+      "predicted_tier": "mild_override_watch",
+      "session_count": 6,
+      "same_day_loss_avoided_total": 0.0,
+      "same_day_loss_avoided_share": 0.0,
+      "positive_session_count": 0,
+      "zero_session_count": 6,
+      "negative_session_count": 0
+    },
+    {
+      "predicted_tier": "reversal_watch",
+      "session_count": 13,
+      "same_day_loss_avoided_total": 12634.4056,
+      "same_day_loss_avoided_share": 0.48715867,
+      "positive_session_count": 12,
+      "zero_session_count": 0,
+      "negative_session_count": 1
+    },
+    {
+      "predicted_tier": "severe_override_positive",
+      "session_count": 5,
+      "same_day_loss_avoided_total": 13300.4826,
+      "same_day_loss_avoided_share": 0.51284133,
+      "positive_session_count": 5,
+      "zero_session_count": 0,
+      "negative_session_count": 0
+    }
+  ],
+  "symbol_rows": [
+    {
+      "symbol": "000738",
+      "session_count": 1,
+      "same_day_loss_avoided_total": 774.724,
+      "same_day_loss_avoided_share": 0.02987189,
+      "positive_session_count": 1,
+      "zero_session_count": 0,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "300045",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 573.2112,
+      "same_day_loss_avoided_share": 0.02210193,
+      "positive_session_count": 1,
+      "zero_session_count": 1,
+      "negative_session_count": 1
+    },
+    {
+      "symbol": "300342",
+      "session_count": 5,
+      "same_day_loss_avoided_total": 8349.0252,
+      "same_day_loss_avoided_share": 0.32192254,
+      "positive_session_count": 4,
+      "zero_session_count": 1,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "601698",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 3304.3536,
+      "same_day_loss_avoided_share": 0.12740959,
+      "positive_session_count": 3,
+      "zero_session_count": 0,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "688066",
+      "session_count": 6,
+      "same_day_loss_avoided_total": 8791.9392,
+      "same_day_loss_avoided_share": 0.33900047,
+      "positive_session_count": 4,
+      "zero_session_count": 2,
+      "negative_session_count": 0
+    },
+    {
+      "symbol": "688523",
+      "session_count": 6,
+      "same_day_loss_avoided_total": 4141.635,
+      "same_day_loss_avoided_share": 0.15969357,
+      "positive_session_count": 4,
+      "zero_session_count": 2,
+      "negative_session_count": 0
+    }
+  ],
+  "month_rows": [
+    {
+      "month_bucket": "2025-11",
+      "session_count": 2,
+      "same_day_loss_avoided_total": 0.0,
+      "same_day_loss_avoided_share": 0.0,
+      "positive_session_count": 0,
+      "zero_session_count": 2,
+      "negative_session_count": 0
+    },
+    {
+      "month_bucket": "2025-12",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 1218.7512,
+      "same_day_loss_avoided_share": 0.04699273,
+      "positive_session_count": 2,
+      "zero_session_count": 1,
+      "negative_session_count": 0
+    },
+    {
+      "month_bucket": "2026-01",
+      "session_count": 14,
+      "same_day_loss_avoided_total": 18472.7752,
+      "same_day_loss_avoided_share": 0.7122751,
+      "positive_session_count": 12,
+      "zero_session_count": 1,
+      "negative_session_count": 1
+    },
+    {
+      "month_bucket": "2026-03",
+      "session_count": 2,
+      "same_day_loss_avoided_total": 5571.3426,
+      "same_day_loss_avoided_share": 0.21482038,
+      "positive_session_count": 2,
+      "zero_session_count": 0,
+      "negative_session_count": 0
+    },
+    {
+      "month_bucket": "2026-04",
+      "session_count": 3,
+      "same_day_loss_avoided_total": 672.0192,
+      "same_day_loss_avoided_share": 0.02591178,
+      "positive_session_count": 1,
+      "zero_session_count": 2,
+      "negative_session_count": 0
+    }
+  ],
+  "interpretation": [
+    "V1.34U attributes the current phase-2 wider reference after the mild-block refinement.",
+    "The point is to identify where the current wider reference is genuinely earning its retained status and where any remaining drag is still concentrated."
+  ]
+}

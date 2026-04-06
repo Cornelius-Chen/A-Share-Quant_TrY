@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130r_bk0808_600118_near_surface_watch_window_audit_v1",
+    "symbol": "600118",
+    "watch_status": "nearest_same_plane_watch",
+    "timeline_approval_days": 10,
+    "timeline_leader_core_days": 9,
+    "near_surface_watch_day_count": 8,
+    "near_surface_watch_first_date": "2024-07-16",
+    "near_surface_watch_last_date": "2024-09-30",
+    "authoritative_status": "600118_has_real_near_surface_watch_windows_but_still_not_same_plane_support",
+    "authoritative_rule": "use_near_surface_watch_windows_for_monitoring_only_until_v6_same_plane_snapshot_support_appears"
+  },
+  "watch_rows": [
+    {
+      "trade_date": "2024-07-16",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.566719,
+      "board_composite": 0.976585,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-18",
+      "symbol": "600118",
+      "assignment_layer": "core",
+      "assignment_score": 0.533446,
+      "board_composite": 0.783029,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-19",
+      "symbol": "600118",
+      "assignment_layer": "core",
+      "assignment_score": 0.523847,
+      "board_composite": 0.931191,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-24",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.696973,
+      "board_composite": 0.786505,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-07-25",
+      "symbol": "600118",
+      "assignment_layer": "junk",
+      "assignment_score": 0.511242,
+      "board_composite": 0.566406,
+      "leader_core": false,
+      "board_strong": true,
+      "near_surface_watch_active": false
+    },
+    {
+      "trade_date": "2024-08-15",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.459496,
+      "board_composite": 0.502405,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-08-16",
+      "symbol": "600118",
+      "assignment_layer": "junk",
+      "assignment_score": 0.516982,
+      "board_composite": 0.466192,
+      "leader_core": false,
+      "board_strong": true,
+      "near_surface_watch_active": false
+    },
+    {
+      "trade_date": "2024-08-19",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.451081,
+      "board_composite": 0.649884,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-09-25",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.636655,
+      "board_composite": 0.68059,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    },
+    {
+      "trade_date": "2024-09-30",
+      "symbol": "600118",
+      "assignment_layer": "leader",
+      "assignment_score": 0.810773,
+      "board_composite": 0.925639,
+      "leader_core": true,
+      "board_strong": true,
+      "near_surface_watch_active": true
+    }
+  ],
+  "interpretation": [
+    "V1.30R upgrades the BK0808 watch from a static candidate list into dated near-surface watch windows.",
+    "600118 does not just have abstract timeline support; it has concrete windows where BK0808 board strength and leader/core status align.",
+    "That still does not equal same-plane support, so the worker remains frozen."
+  ]
+}

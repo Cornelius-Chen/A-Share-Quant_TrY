@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v121o_cpo_lmn_three_run_adversarial_triage_v1",
+    "related_runs": [
+      "V121L",
+      "V121M",
+      "V121N"
+    ],
+    "candidate_discriminator_name": "board_risk_off_reduce_score_candidate",
+    "prior_status": "candidate_only",
+    "symbol_holdout_posture": "candidate_survives_symbol_holdout",
+    "reduce_pass_rate": 1.0,
+    "add_leakage_rate": 1.0,
+    "entry_leakage_rate": 1.0,
+    "close_leakage_rate": 1.0,
+    "authoritative_status": "candidate_only",
+    "replay_facing_allowed": false
+  },
+  "reviewer_rows": [
+    {
+      "reviewer": "Pauli",
+      "classification": "candidate_only",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "Symbol holdout survives, which keeps the line above soft-component status.",
+        "Out-of-set leakage must still be treated as a blocker for replay-facing use."
+      ]
+    },
+    {
+      "reviewer": "Tesla",
+      "classification": "candidate_only",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "This is still the first live reduce-side branch with nontrivial chronology and symbol survival.",
+        "Leakage across action contexts means it is not yet a clean reduce law."
+      ]
+    },
+    {
+      "reviewer": "James",
+      "classification": "soft_component",
+      "replay_facing_allowed": false,
+      "hard_reasons": [
+        "If leakage stays broad, the branch is closer to a generic risk prior than a discrete action trigger.",
+        "The correct posture is still no replay."
+      ]
+    }
+  ],
+  "authoritative_conclusion": {
+    "branch_name": "board_risk_off_reduce_score_candidate",
+    "authoritative_status": "candidate_only",
+    "replay_facing_allowed": false,
+    "shadow_replay_allowed": false,
+    "majority_vote": {
+      "candidate_only": 2,
+      "soft_component": 1
+    },
+    "why_not_hard_candidate": [
+      "symbol holdout survives but is not dominant enough to justify promotion",
+      "cross-context leakage still prevents execution use",
+      "the branch remains broad and needs narrower reduce-only conditioning"
+    ],
+    "next_posture": "continue_non_replay_reduce_narrowing_and_context_separation"
+  },
+  "interpretation": [
+    "V1.21O freezes the second adversarial verdict for the first formal reduce-side branch.",
+    "Symbol holdout survival keeps the line alive, but action-context leakage blocks any attempt to use it as an execution rule.",
+    "The branch remains candidate-only and should only continue through non-replay narrowing."
+  ]
+}

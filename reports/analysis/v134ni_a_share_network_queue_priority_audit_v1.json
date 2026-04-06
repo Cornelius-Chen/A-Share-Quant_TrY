@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "allowlist_row_count": 20,
+    "allowlist_batch_one_count": 6,
+    "allowlist_batch_two_count": 10,
+    "allowlist_deferred_count": 4,
+    "runtime_row_count": 3,
+    "status_csv": "data\\training\\a_share_network_queue_priority_status_v1.csv",
+    "authoritative_output": "a_share_network_queue_priority_surface_materialized"
+  },
+  "allowlist_rows": [
+    {
+      "source_id": "src_0002",
+      "host": "finance.sina.com.cn",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 3,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0003",
+      "host": "news.10jqka.com.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 3,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0004",
+      "host": "news.10jqka.com.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 3,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0005",
+      "host": "finance.sina.com.cn",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 3,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0006",
+      "host": "www.jiuyangongshe.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "deferred_manual_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0007",
+      "host": "news.10jqka.com.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 3,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0008",
+      "host": "www.egsea.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0009",
+      "host": "k.sina.com.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0010",
+      "host": "www.sohu.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 2,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0011",
+      "host": "finance.sina.com.cn",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 3,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0012",
+      "host": "www.futurephecda.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "deferred_manual_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0017",
+      "host": "www.senn.com.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "deferred_manual_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0018",
+      "host": "stock.finance.sina.com.cn",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 1,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0019",
+      "host": "www.yicai.com",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 1,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0021",
+      "host": "www.cnfin.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0022",
+      "host": "finance.sina.cn",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0023",
+      "host": "stcn.com",
+      "source_tier": "T2_reliable_media",
+      "host_source_count": 1,
+      "queue_priority": "batch_one_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0024",
+      "host": "www.c-fol.net",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0025",
+      "host": "www.forbeschina.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 1,
+      "queue_priority": "deferred_manual_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    },
+    {
+      "source_id": "src_0026",
+      "host": "www.sohu.com",
+      "source_tier": "T3_aggregator_or_secondary",
+      "host_source_count": 2,
+      "queue_priority": "batch_two_manual_license_review",
+      "decision_scope": "selective_candidate_after_allowlist"
+    }
+  ],
+  "runtime_rows": [
+    {
+      "adapter_id": "network_html_article_fetch",
+      "flow_id": "daily_bootstrap_cycle",
+      "queue_priority": "first_runtime_candidate_after_batch_one_allowlist",
+      "deployment_scope": "selective_after_license_review"
+    },
+    {
+      "adapter_id": "network_social_column_fetch",
+      "flow_id": "daily_bootstrap_cycle",
+      "queue_priority": "keep_review_only_deferred",
+      "deployment_scope": "review_only_deferred"
+    },
+    {
+      "adapter_id": "network_official_source_fetch",
+      "flow_id": "daily_bootstrap_cycle",
+      "queue_priority": "reserve_until_primary_official_hosts_exist",
+      "deployment_scope": "reserved_for_future_primary_sources"
+    }
+  ],
+  "interpretation": [
+    "Source-side queue processing is now ordered rather than flat; not every pending host should be reviewed or activated in the same batch.",
+    "Mainstream T2 media hosts form the first manual review batch, secondary hosts form batch two, and a small set of unclear hosts remains deferred.",
+    "Runtime deployment should only consider html-article fetch after batch-one allowlist review; social-column and official-source adapters remain deferred or reserved."
+  ]
+}

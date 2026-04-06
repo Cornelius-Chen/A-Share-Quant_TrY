@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cn_commercial_aerospace_reduce_handoff_package_v1",
+    "reduce_mainline_frozen": true,
+    "local_residue_supervision_only": true,
+    "execution_blocker_count": 4,
+    "future_handoff_ready": true,
+    "handoff_csv": "data\\training\\commercial_aerospace_reduce_handoff_package_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_handoff_package_ready_for_direction_triage"
+  },
+  "package_rows": [
+    {
+      "component": "reduce_mainline_completion",
+      "status": "frozen_for_handoff",
+      "detail": "freeze_reduce_mainline_as_research_complete_and_leave_only_local_residue_maintenance"
+    },
+    {
+      "component": "reduce_governance_stack",
+      "status": "retained",
+      "detail": "closure_stage_count = 5"
+    },
+    {
+      "component": "sell_side_binding_reference",
+      "status": "retained",
+      "detail": "retain_isolated_sell_side_binding_surface_and_audit_horizon_quality_next"
+    },
+    {
+      "component": "sell_side_horizon_caveat",
+      "status": "retained",
+      "detail": "retain_isolated_sell_side_binding_surface_with_horizon_caveat_and_audit_local_binding_attribution_next"
+    },
+    {
+      "component": "local_residue_registry",
+      "status": "supervision_only",
+      "detail": "retain_local_rebound_residue_registry_as_supervision_only_and_stop_broad_reduce_tuning"
+    },
+    {
+      "component": "execution_blockers",
+      "status": "still_open",
+      "detail": "remaining_execution_blocker_count = 4"
+    },
+    {
+      "component": "next_frontier_gate",
+      "status": "ready_for_future_handoff_only",
+      "detail": "Reduce mainline is frozen; any later shift to intraday add should treat reduce as fixed except for local residue maintenance."
+    }
+  ],
+  "interpretation": [
+    "V1.34CN packages the reduce branch for handoff without pretending that execution closure is finished.",
+    "The point is to freeze what is learned, preserve what remains only as local residue maintenance, and make the next frontier explicitly conditional rather than emotionally implicit."
+  ]
+}

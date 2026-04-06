@@ -1,0 +1,5 @@
+﻿component,status,detail
+sell_side_binding,not_ready,Still blocked by point_in_time_intraday_visibility and intraday_execution_simulation_surface.
+board_gate_binding,not_ready,Board expectancy and lockout/unlock remain governance-only until the intraday simulator exists.
+reentry_binding,not_started,Seed reentry ladder has supervision only; no reentry execution surface exists yet.
+full_reduce_closure,execution_gap_only,Conceptual closure largely exists; the remaining gap is execution infrastructure rather than semantic ambiguity.

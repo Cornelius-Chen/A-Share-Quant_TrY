@@ -1,0 +1,69 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v125i_commercial_aerospace_event_conditioned_control_surface_refresh_v1",
+    "variant_count": 4,
+    "control_core_count": 12,
+    "confirmation_count": 11,
+    "best_variant": "quality_event_gate",
+    "best_eligibility_year_spread_mean": 0.17870564,
+    "best_de_risk_year_spread_mean": 0.00760836,
+    "positive_support_q50": 0.16982067,
+    "positive_support_q75": 0.32752522,
+    "event_drought_q50": 1.0
+  },
+  "variant_rows": [
+    {
+      "variant": "quality_event_gate",
+      "eligibility_forward_spread_10": 0.15448044,
+      "de_risk_avoidance_spread_10": -0.00264155,
+      "eligibility_year_spread_mean": 0.17870564,
+      "eligibility_year_spread_min": -0.03551163,
+      "de_risk_year_spread_mean": 0.00760836,
+      "de_risk_year_spread_min": -0.00253385,
+      "eligibility_flag_count": 36,
+      "de_risk_flag_count": 1716,
+      "objective_score": 0.186314
+    },
+    {
+      "variant": "event_active_reference",
+      "eligibility_forward_spread_10": -0.01494005,
+      "de_risk_avoidance_spread_10": -0.00264155,
+      "eligibility_year_spread_mean": 0.03615535,
+      "eligibility_year_spread_min": -0.02372347,
+      "de_risk_year_spread_mean": 0.00760836,
+      "de_risk_year_spread_min": -0.00253385,
+      "eligibility_flag_count": 192,
+      "de_risk_flag_count": 1716,
+      "objective_score": 0.0437637
+    },
+    {
+      "variant": "capital_supply_gate",
+      "eligibility_forward_spread_10": -0.06620014,
+      "de_risk_avoidance_spread_10": -0.00264155,
+      "eligibility_year_spread_mean": -5.4e-06,
+      "eligibility_year_spread_min": -5.4e-06,
+      "de_risk_year_spread_mean": 0.00760836,
+      "de_risk_year_spread_min": -0.00253385,
+      "eligibility_flag_count": 14,
+      "de_risk_flag_count": 1716,
+      "objective_score": 0.00760296
+    },
+    {
+      "variant": "clean_core_reference",
+      "eligibility_forward_spread_10": 0.00677486,
+      "de_risk_avoidance_spread_10": -0.00230172,
+      "eligibility_year_spread_mean": -0.0024955,
+      "eligibility_year_spread_min": -0.02974733,
+      "de_risk_year_spread_mean": -0.00672069,
+      "de_risk_year_spread_min": -0.01888307,
+      "eligibility_flag_count": 1545,
+      "de_risk_flag_count": 2060,
+      "objective_score": -0.00921619
+    }
+  ],
+  "interpretation": [
+    "V1.25I rebuilds the commercial-aerospace control surface by binding the clean formal core to the bounded catalyst/event registry.",
+    "The event layer is allowed to do two lawful jobs only: date-level gating and symbol-level support ranking when a name is explicitly present inside the bounded source set.",
+    "This is still a paper-control rebuild; replay remains blocked until chronology is re-audited."
+  ]
+}

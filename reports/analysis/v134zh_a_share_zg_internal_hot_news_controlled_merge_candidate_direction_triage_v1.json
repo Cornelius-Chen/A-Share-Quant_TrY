@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "candidate_row_count": 30,
+    "cls_primary_count": 17,
+    "sina_additive_count": 13,
+    "unique_theme_count": 6,
+    "unique_symbol_count": 6,
+    "authoritative_output": "a_share_internal_hot_news_controlled_merge_candidate_surface_materialized",
+    "authoritative_status": "keep_cls_primary_fastlane_and_stage_sina_additive_theme_symbol_rows_through_controlled_candidate_surface"
+  },
+  "triage_rows": [
+    {
+      "component": "cls_primary_lane",
+      "direction": "retain cls primary rows as the anchor stream while second-source merge stays controlled"
+    },
+    {
+      "component": "sina_additive_lane",
+      "direction": "treat additive sina themed rows as the highest-priority second-source candidate set"
+    },
+    {
+      "component": "promotion_gate",
+      "direction": "promote from the candidate surface only after duplicate review and downstream consumer checks remain stable"
+    }
+  ],
+  "interpretation": [
+    "The merge question has moved from source value to controlled promotion sequencing.",
+    "This lane adds thematic diversity without replacing the current cls anchor stream."
+  ]
+}

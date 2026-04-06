@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v127i_commercial_aerospace_symbol_phase_aware_derisk_budget_audit_v1",
+    "reference_variant": "broad_half_reference",
+    "reference_final_equity": 1261238.592,
+    "reference_max_drawdown": 0.12870312,
+    "best_variant": "broad_half_reference",
+    "best_variant_final_equity": 1261238.592,
+    "best_variant_max_drawdown": 0.12870312
+  },
+  "variant_rows": [
+    {
+      "variant": "broad_half_reference",
+      "executed_order_count": 251,
+      "final_equity": 1261238.592,
+      "max_drawdown": 0.12870312,
+      "reduce_order_count": 197
+    },
+    {
+      "variant": "broad_half_reference_light",
+      "executed_order_count": 296,
+      "final_equity": 1233385.044,
+      "max_drawdown": 0.16901543,
+      "reduce_order_count": 256
+    },
+    {
+      "variant": "broad_half_reference_balanced",
+      "executed_order_count": 296,
+      "final_equity": 1233385.044,
+      "max_drawdown": 0.16901543,
+      "reduce_order_count": 256
+    },
+    {
+      "variant": "broad_half_reference_strict",
+      "executed_order_count": 284,
+      "final_equity": 1261363.8304,
+      "max_drawdown": 0.16416258,
+      "reduce_order_count": 241
+    }
+  ],
+  "interpretation": [
+    "V1.27I tests whether the promoted broad-half primary reference can improve by reallocating de-risk budget across symbols and phases rather than by inventing a new downside family.",
+    "Sell ratios are still lawful-shadow only: they use matured downside history inside the current replay chronology."
+  ]
+}

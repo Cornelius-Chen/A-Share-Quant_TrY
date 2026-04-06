@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134cp_commercial_aerospace_reduce_to_intraday_add_transition_protocol_v1",
+    "reduce_handoff_status": "freeze_reduce_handoff_package_and_do_not_reopen_reduce_mainline_before_future_frontier_shift",
+    "intraday_add_frontier_status": "approved_but_not_opened_in_this_step",
+    "protocol_csv": "data\\training\\commercial_aerospace_reduce_to_intraday_add_transition_protocol_v1.csv",
+    "authoritative_output": "commercial_aerospace_reduce_to_intraday_add_transition_protocol_ready_for_direction_triage"
+  },
+  "protocol_rows": [
+    {
+      "transition_stage": "freeze_reduce_mainline",
+      "status": "mandatory",
+      "detail": "Treat reduce as frozen handoff package; no broad reduce tuning may continue during add frontier startup."
+    },
+    {
+      "transition_stage": "allow_only_local_reduce_residue_maintenance",
+      "status": "mandatory",
+      "detail": "If any reduce work reappears, it must stay strictly inside the four local rebound-residue seeds."
+    },
+    {
+      "transition_stage": "start_intraday_add_as_new_frontier",
+      "status": "approved_but_deferred",
+      "detail": "The next frontier should be intraday add, but only as a separate frontier rather than an extension of reduce."
+    },
+    {
+      "transition_stage": "carry_forward_environment_and_board_governance",
+      "status": "mandatory",
+      "detail": "Board lockout, local-only rebound guard, and board revival unlock remain upstream vetoes when add research later begins."
+    },
+    {
+      "transition_stage": "do_not_reuse_reduce_execution_claims",
+      "status": "mandatory",
+      "detail": "Intraday add must not inherit execution-facing authority from reduce; it starts as a new supervision frontier."
+    }
+  ],
+  "interpretation": [
+    "V1.34CP does not start intraday add research yet; it formalizes how the program should cross the frontier without reopening reduce.",
+    "The point is to make the handoff explicit so that later intraday add work begins on clean scope rather than as a leak from reduce."
+  ]
+}

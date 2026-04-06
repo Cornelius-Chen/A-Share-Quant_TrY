@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v119q_cpo_elg_support_role_holdout_audit_v1",
+    "holdout_count": 4,
+    "evaluable_holdout_count": 2,
+    "mean_evaluable_test_balanced_accuracy": 0.440476,
+    "min_evaluable_test_balanced_accuracy": 0.333333,
+    "recommended_next_posture": "combine_with_symbol_holdout_and_out_of_set_false_positive_audit_before_reclassification"
+  },
+  "holdout_rows": [
+    {
+      "holdout_role_family": "core_module_leader",
+      "train_best_threshold": 592782000.639792,
+      "train_best_balanced_accuracy": 0.727273,
+      "test_positive_add_count": 1,
+      "test_negative_add_count": 0,
+      "test_positive_recall": 1.0,
+      "test_negative_reject_rate": null,
+      "test_balanced_accuracy": null
+    },
+    {
+      "holdout_role_family": "high_beta_core_module",
+      "train_best_threshold": 1003343001.406184,
+      "train_best_balanced_accuracy": 0.6875,
+      "test_positive_add_count": 1,
+      "test_negative_add_count": 3,
+      "test_positive_recall": 0.0,
+      "test_negative_reject_rate": 0.666667,
+      "test_balanced_accuracy": 0.333333
+    },
+    {
+      "holdout_role_family": "packaging_process_enabler",
+      "train_best_threshold": 592782000.639792,
+      "train_best_balanced_accuracy": 0.7,
+      "test_positive_add_count": 0,
+      "test_negative_add_count": 1,
+      "test_positive_recall": null,
+      "test_negative_reject_rate": 1.0,
+      "test_balanced_accuracy": null
+    },
+    {
+      "holdout_role_family": "repaired_miss_window",
+      "train_best_threshold": 787409002.119531,
+      "train_best_balanced_accuracy": 0.875,
+      "test_positive_add_count": 3,
+      "test_negative_add_count": 7,
+      "test_positive_recall": 0.666667,
+      "test_negative_reject_rate": 0.428571,
+      "test_balanced_accuracy": 0.547619
+    }
+  ],
+  "interpretation": [
+    "V1.19Q checks whether the ELG-supported hard candidate survives role-family holdouts.",
+    "If role holdouts break, hard-candidate language may already be too optimistic.",
+    "This remains a non-replay adversarial audit only."
+  ]
+}

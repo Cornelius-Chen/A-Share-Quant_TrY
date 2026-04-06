@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v118a_cpo_cooling_reacceleration_out_of_set_false_positive_audit_v1",
+    "candidate_name": "cooling_reacceleration_overheat_control_candidate",
+    "audit_threshold": 489402000.0,
+    "add_pass_rate": 0.647059,
+    "entry_leakage_rate": 0.5,
+    "reduce_leakage_rate": 0.0,
+    "close_leakage_rate": 0.023529,
+    "authoritative_current_problem": "add_vs_entry_separation_not_reduce_or_close_contamination",
+    "recommended_next_posture": "focus_next_quality_audit_on_add_vs_strong_entry_discrimination"
+  },
+  "context_rows": [
+    {
+      "action_context": "add_vs_hold",
+      "row_count": 17,
+      "pass_count": 11,
+      "pass_rate": 0.647059
+    },
+    {
+      "action_context": "close_vs_hold",
+      "row_count": 85,
+      "pass_count": 2,
+      "pass_rate": 0.023529
+    },
+    {
+      "action_context": "entry_vs_skip",
+      "row_count": 8,
+      "pass_count": 4,
+      "pass_rate": 0.5
+    },
+    {
+      "action_context": "reduce_vs_hold",
+      "row_count": 340,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    }
+  ],
+  "leaked_entry_rows": [
+    {
+      "signal_trade_date": "2023-04-28",
+      "symbol": "300502",
+      "board_phase": "main_markup",
+      "role_family": "high_beta_core_module",
+      "expectancy_proxy_3d": -0.210379,
+      "controlled_score": 1043868000.0
+    },
+    {
+      "signal_trade_date": "2023-06-07",
+      "symbol": "300308",
+      "board_phase": "main_markup",
+      "role_family": "core_module_leader",
+      "expectancy_proxy_3d": 0.196418,
+      "controlled_score": 1094549000.0
+    },
+    {
+      "signal_trade_date": "2024-04-18",
+      "symbol": "300757",
+      "board_phase": "main_markup",
+      "role_family": "packaging_process_enabler",
+      "expectancy_proxy_3d": -0.132278,
+      "controlled_score": 759685000.0
+    },
+    {
+      "signal_trade_date": "2025-09-08",
+      "symbol": "688498",
+      "board_phase": "diffusion",
+      "role_family": "laser_chip_component",
+      "expectancy_proxy_3d": 0.315625,
+      "controlled_score": 538714000.0
+    }
+  ],
+  "interpretation": [
+    "V1.18A is an out-of-set false-positive audit over non-add contexts using the retained W/X/Y controlled score and threshold.",
+    "The retained score does not mainly leak into reduce or close contexts. The real contamination is entry-like: some strong entry windows look similar to add windows under the current quality language.",
+    "That means the next discriminator should not be another generic false-positive filter. It should specifically separate add-from-strong-entry."
+  ]
+}

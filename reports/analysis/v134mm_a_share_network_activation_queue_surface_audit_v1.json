@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "allowlist_queue_count": 20,
+    "runtime_queue_count": 3,
+    "status_csv": "data\\training\\a_share_network_activation_queue_surface_status_v1.csv",
+    "authoritative_output": "a_share_network_activation_queue_surface_materialized"
+  },
+  "rows": [
+    {
+      "component": "allowlist_decision_queue",
+      "component_state": "materialized_pending_queue",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_network_allowlist_decision_queue_v1.csv",
+      "coverage_note": "allowlist_queue_count = 20"
+    },
+    {
+      "component": "runtime_deployment_queue",
+      "component_state": "materialized_pending_queue",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_network_runtime_deployment_queue_v1.csv",
+      "coverage_note": "runtime_queue_count = 3"
+    },
+    {
+      "component": "queue_residual",
+      "component_state": "materialized_named_residuals",
+      "artifact_path": "data\\temp\\info_center\\review_queue\\a_share_network_activation_queue_residual_v1.csv",
+      "coverage_note": "all queued items remain undecided"
+    }
+  ],
+  "interpretation": [
+    "Source-side activation is now staged as explicit queues rather than implicit future work.",
+    "The next remaining work is queue processing, not additional scaffolding."
+  ]
+}

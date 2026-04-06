@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130x_transfer_program_change_detection_protocol_v1",
+    "artifact_count": 5,
+    "authoritative_status": "transfer_program_frozen_until_monitored_artifacts_change",
+    "authoritative_rule": "do_not_restart_board_transfer_analysis_under_static_artifacts; rerun_only_after_a_monitored_source_file_changes"
+  },
+  "artifact_rows": [
+    {
+      "artifact_role": "v6_stock_snapshot",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\derived\\stock_snapshots\\market_research_stock_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "exists": true,
+      "size_bytes": 292550,
+      "modified_epoch": 1774849232.335533,
+      "sha256": "e5f79b8a9be823b35286dc86115200bf359eb5325c6fc50c88adf5edda5c4018",
+      "rerun_chain": "v130g_to_v130w"
+    },
+    {
+      "artifact_role": "v5_stock_snapshot",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\derived\\stock_snapshots\\market_research_stock_snapshots_v5_carry_row_diversity_refresh.csv",
+      "exists": true,
+      "size_bytes": 304697,
+      "modified_epoch": 1774843981.371929,
+      "sha256": "4c3efbac4b2e9d8e7bacd94cb84aa63b00d5d817949f92c83934301b2d2e6952",
+      "rerun_chain": "v129y_to_v130w"
+    },
+    {
+      "artifact_role": "v6_sector_snapshot",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\data\\derived\\sector_snapshots\\market_research_sector_snapshots_v6_catalyst_supported_carry_persistence_refresh.csv",
+      "exists": true,
+      "size_bytes": 67514,
+      "modified_epoch": 1774849232.316538,
+      "sha256": "b505a7ab3465a0ce20bede53f5caafc48a04b911edacf572a24b743f4cfd5d54",
+      "rerun_chain": "v130g_to_v130w"
+    },
+    {
+      "artifact_role": "bk0808_watch_timeline_600118",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\reports\\analysis\\market_v6_q3_symbol_timeline_600118_capture_c_v1.json",
+      "exists": true,
+      "size_bytes": 154412,
+      "modified_epoch": 1774849677.091674,
+      "sha256": "bafdc9d578f285621e0b333a4293c53b563fca8ae0120ce5bd06ccb9fc620d56",
+      "rerun_chain": "v130n_to_v130w"
+    },
+    {
+      "artifact_role": "bk0808_bridge_timeline_600760",
+      "path": "D:\\Creativity\\A-Share-Quant_TrY\\reports\\analysis\\market_v5_q2_symbol_timeline_600760_capture_b_v1.json",
+      "exists": true,
+      "size_bytes": 142676,
+      "modified_epoch": 1774846920.595416,
+      "sha256": "a930b5914de4a7287105621998d5c875ec91f2d22ec7a9074a96777506b55fa3",
+      "rerun_chain": "v130n_to_v130w"
+    }
+  ],
+  "interpretation": [
+    "V1.30X turns the transfer freeze into a concrete change-detection protocol.",
+    "The point is to stop discretionary re-analysis under unchanged data and to make the rerun boundary explicit and mechanical."
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v134et_commercial_aerospace_local_add_rule_candidate_audit_v1",
+    "registry_row_count": 55,
+    "matched_count": 55,
+    "match_rate": 1.0,
+    "unmatched_count": 0,
+    "authoritative_rule": "the first local add rule candidates are acceptable only as governed seed rules if they preserve the frozen four-tier add ordering on the current supervision registry"
+  },
+  "candidate_rows": [
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "003009",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688523",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688568",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "688066",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251117",
+      "symbol": "300045",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "003009",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688523",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688066",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "688568",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251118",
+      "symbol": "000738",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "300342",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "000738",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "600879",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "601698",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251119",
+      "symbol": "600118",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "300342",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "601698",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "600879",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "002465",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251120",
+      "symbol": "002085",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "002465",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "002085",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251121",
+      "symbol": "600118",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251128",
+      "symbol": "688523",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251201",
+      "symbol": "688568",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251202",
+      "symbol": "688568",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "688066",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "300342",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251204",
+      "symbol": "000738",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "600879",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "688066",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "300342",
+      "action": "add",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251205",
+      "symbol": "601698",
+      "action": "open",
+      "seed_family": "preheat_probe_add",
+      "label_tier": "allowed_preheat_probe_add",
+      "predicted_label_tier": "allowed_preheat_probe_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "002465",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "600879",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "003009",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "688523",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251208",
+      "symbol": "601698",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251209",
+      "symbol": "300045",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251209",
+      "symbol": "600118",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251210",
+      "symbol": "002465",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251210",
+      "symbol": "600879",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251211",
+      "symbol": "300342",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251216",
+      "symbol": "688568",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251217",
+      "symbol": "688066",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251218",
+      "symbol": "000738",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251219",
+      "symbol": "000738",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251219",
+      "symbol": "002085",
+      "action": "open",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20251222",
+      "symbol": "002085",
+      "action": "add",
+      "seed_family": "preheat_full_add",
+      "label_tier": "allowed_preheat_full_add",
+      "predicted_label_tier": "allowed_preheat_full_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "000738",
+      "action": "open",
+      "seed_family": "impulse_full_add",
+      "label_tier": "failed_impulse_chase_add",
+      "predicted_label_tier": "failed_impulse_chase_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260113",
+      "symbol": "601698",
+      "action": "add",
+      "seed_family": "impulse_full_add",
+      "label_tier": "failed_impulse_chase_add",
+      "predicted_label_tier": "failed_impulse_chase_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "000738",
+      "action": "open",
+      "seed_family": "impulse_full_add",
+      "label_tier": "blocked_board_lockout_add",
+      "predicted_label_tier": "blocked_board_lockout_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300045",
+      "action": "add",
+      "seed_family": "impulse_full_add",
+      "label_tier": "blocked_board_lockout_add",
+      "predicted_label_tier": "blocked_board_lockout_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "300342",
+      "action": "add",
+      "seed_family": "impulse_full_add",
+      "label_tier": "blocked_board_lockout_add",
+      "predicted_label_tier": "blocked_board_lockout_add",
+      "matched": true
+    },
+    {
+      "execution_trade_date": "20260126",
+      "symbol": "601698",
+      "action": "add",
+      "seed_family": "impulse_full_add",
+      "label_tier": "blocked_board_lockout_add",
+      "predicted_label_tier": "blocked_board_lockout_add",
+      "matched": true
+    }
+  ],
+  "interpretation": [
+    "V1.34ET applies the first explicit local add rules back onto the frozen 55-row add seed surface.",
+    "This is a seed-side audit only: the question is whether the rules preserve the allowed/failed/blocked ordering before any broader expansion is attempted."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "acceptance_posture": "freeze_v130p_bk0808_second_symbol_emergence_trigger_protocol_v1",
+    "nearest_second_symbol_count": 1,
+    "single_symbol_emergence_sufficient_count": 1,
+    "authoritative_status": "bk0808_can_only_move_from_frozen_to_reopen_candidate_if_600118_or_an_equivalent_watch_name_appears_in_v6_same_plane_support",
+    "authoritative_rule": "do_not_reopen_the_worker_on_timeline_support_alone; require_actual_v6_same_plane_emergence"
+  },
+  "trigger_rows": [
+    {
+      "symbol": "600118",
+      "watch_status": "nearest_same_plane_watch",
+      "timeline_approval_days": 10,
+      "timeline_leader_core_days": 9,
+      "timeline_first_date": "2024-07-16",
+      "timeline_last_date": "2024-09-30",
+      "current_v6_snapshot_days": 0,
+      "current_board_composite": 0.473136,
+      "emergence_requirement": "gain_any_v6_same_plane_snapshot_support_inside_BK0808",
+      "emergence_would_close_same_plane_gap": true,
+      "emergence_would_clear_bridge_only": true,
+      "board_strength_already_sufficient": true,
+      "reopen_candidate_if_emerged": true
+    }
+  ],
+  "interpretation": [
+    "V1.30P converts the BK0808 watchlist into an explicit symbol-emergence trigger.",
+    "The important point is that 600118 is not merely interesting; if it gains real v6 same-plane support while board strength holds, BK0808 would become a reopen candidate without any additional narrative stretch."
+  ]
+}
